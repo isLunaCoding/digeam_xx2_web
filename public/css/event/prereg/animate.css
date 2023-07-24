@@ -1,0 +1,74 @@
+@keyframes flybird{
+    0%{
+        top: -144px;
+        right: 57%;
+        scale: 1;
+        rotate: 30deg;
+    }
+    27%{
+        top: 18px;
+        right: 45%;
+    }
+    50%{
+        top: 25px;
+        right: 34%;
+        rotate: 10deg;
+    }
+    75%{
+        top: 50px;
+        right: 22%;
+    }
+    100%{
+        top: 80px;
+        right: 20%;
+        scale: 1.5;
+        rotate: -10deg;
+    }
+}
+
+@keyframes downbtnfloat{
+    0%{
+        transform: translateY(0px);
+        filter: none;
+    }
+    100%{
+        transform: translateY(10px);
+        filter: drop-shadow(0 0 3px #FFF);
+    }
+}
+
+@keyframes p5arrowLfloat {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes p5arrowRfloat {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(20px);
+    }
+}
+
+@keyframes p6cloud1 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    100%{
+        transform: translateX(5%) translateY(2%);
+    }
+}
+
+@keyframes p6cloud2 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    100%{
+        transform: translateX(-5%) translateY(-3%);
+    }
+}
