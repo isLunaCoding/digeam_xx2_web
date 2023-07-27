@@ -22,7 +22,7 @@ function rainDot() {
 		}
 		gap++
 		rain.style.top = `${parseInt(rain.style.top)+gap}px`;
-	}, 10)
+	}, 0)
 }
 setInterval(() => {
 	rainDot();

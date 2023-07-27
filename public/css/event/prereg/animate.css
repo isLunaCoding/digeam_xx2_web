@@ -1,4 +1,4 @@
-@keyframes flybird{
+@keyframes flybird1{
     0%{
         top: -144px;
         right: 57%;
@@ -26,6 +26,90 @@
     }
 }
 
+@keyframes flybird2{
+    0%{
+        top: -144px;
+        right: 35%;
+        scale: 1;
+        rotate: 30deg;
+    }
+    27%{
+        top: 18px;
+        right: 30%;
+    }
+    50%{
+        top: 25px;
+        right: 25%;
+        rotate: 10deg;
+    }
+    75%{
+        top: 80px;
+        right: 20%;
+    }
+    100%{
+        top: 200px;
+        right: 18%;
+        scale: 1.5;
+        rotate: -10deg;
+    }
+}
+
+@keyframes flybird1_m{
+    0%{
+        top: 40vh;
+        left: -200px;
+        scale: 1;
+        rotate: 30deg;
+    }
+    27%{
+        top: 48vh;
+        left: 0;
+    }
+    50%{
+        top: 52vh;
+        left: 3vw;
+        rotate: 10deg;
+    }
+    75%{
+        top: 56vh;
+        left: 7vw;
+    }
+    100%{
+        top: 60vh;
+        left: 10vw;
+        scale: 1.5;
+        rotate: -10deg;
+    }
+}
+
+@keyframes flybird2_m{
+    0%{
+        top: 30vh;
+        left: -100px;
+        scale: 1;
+        rotate: 30deg;
+    }
+    27%{
+        top: 35vh;
+        left: 0;
+    }
+    50%{
+        top: 40vh;
+        left: 1vw;
+        rotate: 10deg;
+    }
+    75%{
+        top: 50vh;
+        left: 3vw;
+    }
+    100%{
+        top: 55vh;
+        left: 7vw;
+        scale: 1.5;
+        rotate: -10deg;
+    }
+}
+
 @keyframes downbtnfloat{
     0%{
         transform: translateY(0px);
@@ -34,6 +118,66 @@
     100%{
         transform: translateY(10px);
         filter: drop-shadow(0 0 3px #FFF);
+    }
+}
+
+@keyframes p4cloud {
+    0%{
+        background-position: bottom left;
+    }
+    100%{
+        background-position: bottom right;
+    }
+}
+
+@keyframes p4leave1 {
+    0%{
+        top: -100vh;
+        left: 0vw;
+    }
+    25%{
+        left: 5vw;
+    }
+    50%{
+        left: -5vw;
+    }
+    75%{
+        left: 5vw;
+    }
+    100%{
+        top: 100vh;
+        left: -10vw;
+    }
+}
+
+@keyframes p4leave2 {
+    0%{
+        top: -100vh;
+        left: 0vw;
+    }
+    25%{
+        left: -5vw;
+    }
+    50%{
+        left: 10vw;
+    }
+    75%{
+        left: 5vw;
+    }
+    100%{
+        top: 100vh;
+        left: 30vw;
+    }
+}
+
+@keyframes p4leave3 {
+    0%{
+        top: -100vh;
+        left: 0vw;
+    }
+    100%{
+        top: 100vh;
+        left: -30vw;
     }
 }
 

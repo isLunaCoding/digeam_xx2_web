@@ -10,6 +10,68 @@ var swiper = new Swiper(".mainSwiper", {
     }
 });
 
+
+
+//4熊貓賽跑
+$('.panda1btn,.panda2btn,.panda3btn').on("click",function(){
+    $('.pandas').animate({
+        top: '-=15px'
+    },400)
+    $('.pandas').animate({
+        top: '+=15px'
+    },400)
+
+    if(screen.width <= 820){
+        $('.pandasValue').delay(100).animate({
+            top: '-=15px'
+        },400)
+        $('.pandasValue').animate({
+            top: '+=15px'
+        },400)
+    }else{
+        $('.pandasValue').animate({
+            left: '+=15px'
+        },400)
+        $('.pandasValue').animate({
+            left: '-=15px'
+        },400)
+    }
+
+})
+$('.panda1btn').on("click",function(){
+    $('.panda1').delay(500).fadeIn(200)
+    $('.panda2').delay(500).fadeOut(200)
+    $('.panda3').delay(500).fadeOut(200)
+    $('.panda1Value').fadeIn(400)
+    $('.panda2Value').fadeOut(400)
+    $('.panda3Value').fadeOut(400)
+    $('.panda1btn').addClass('panda1btn_2')
+    $('.panda2btn').removeClass('panda2btn_2')
+    $('.panda3btn').removeClass('panda3btn_2')
+})
+$('.panda2btn').on("click",function(){
+    $('.panda1').delay(500).fadeOut(200)
+    $('.panda2').delay(500).fadeIn(200)
+    $('.panda3').delay(500).fadeOut(200)
+    $('.panda1Value').fadeOut(400)
+    $('.panda2Value').fadeIn(400)
+    $('.panda3Value').fadeOut(400)
+    $('.panda1btn').removeClass('panda1btn_2')
+    $('.panda2btn').addClass('panda2btn_2')
+    $('.panda3btn').removeClass('panda3btn_2')
+})
+$('.panda3btn').on("click",function(){
+    $('.panda1').delay(500).fadeOut(200)
+    $('.panda2').delay(500).fadeOut(200)
+    $('.panda3').delay(500).fadeIn(200)
+    $('.panda1Value').fadeOut(400)
+    $('.panda2Value').fadeOut(400)
+    $('.panda3Value').fadeIn(400)
+    $('.panda1btn').removeClass('panda1btn_2')
+    $('.panda2btn').removeClass('panda2btn_2')
+    $('.panda3btn').addClass('panda3btn_2')
+})
+
 //p5遊戲特色輪播
 $('.p5slider').slick({
     dots: true,
@@ -49,11 +111,11 @@ $('.slick-next').on("click",function(){
 
 //6職業介紹
 $('.p6btn1,.p6btn2,.p6btn3,.p6btn4,.p6btn5').on("click",function(){
-    $('.p6text,.arm').animate({
+    $('.p6text').animate({
         opacity: '0',
         top: '-=5px'
     },200)
-    $('.p6text,.arm').animate({
+    $('.p6text').animate({
         opacity: '1',
         top: '+=5px'
     },500)
@@ -130,6 +192,14 @@ $('.p2noticebtn').on("click",function(){
     $('.pop').fadeIn(200);
     p2noticeIn();
 })
+$('.p4informationbtn').on("click",function(){
+    $('.pop').fadeIn(200);
+    p4informationIn();
+})
+$('.p4noticebtn').on("click",function(){
+    $('.pop').fadeIn(200);
+    p4noticeIn();
+})
 
 //小彈窗
 $('.popScheckBtn').on("click",function(){
@@ -191,34 +261,3 @@ $('.swiper-pagination').on("click",function(){
     });
     $('.bar').fadeOut(200);
 })
-
-//footer隱藏按鈕
-let c = 0;
-$('.footer-btnbox').on('click',function(){
-    //入
-    if(c == 0){
-        c += 1;
-        $('footer').fadeIn(500);
-        $('.footer-btnbox').css({
-            "background-color":"rgba(169, 211, 235, 1)"
-        });
-        $('.footer-btn p').delay(150).fadeOut(500);
-        $('.footer-btnball').animate({
-            marginLeft:'29px',
-            rotate:'90deg'
-        },500);
-    }
-    //出
-    else{
-        c -= 1;
-        $('footer').fadeOut(500);
-        $('.footer-btnbox').css({
-            "background-color":"rgba(169, 211, 235, .5)"
-        });
-        $('.footer-btn p').fadeIn(500);
-        $('.footer-btnball').animate({
-            marginLeft:'3px',
-            rotate:'0deg'
-        },500);
-    }
-});
