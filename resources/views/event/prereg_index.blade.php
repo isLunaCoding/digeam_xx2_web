@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta property="og:title" content="首頁 &#038;《仙俠世界貳Online》; 《仙俠世界貳》" />
+        <meta property="og:title" content="首頁 &#038;《仙俠世界貳》事前預約" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="《仙俠世界貳Online》" />
+        <meta property="og:description" content="人人皆可恣意飛行的修仙大世界，打造屬於自己的修仙之路，2023年度仙俠鉅作【仙俠世界貳】事前預約中！" />
         <meta property="og:url" content="" />
         <meta property="og:site_name" content="" />
         <meta property="og:locale" content="zh_tw" />
@@ -17,7 +17,7 @@
         <meta name="author" content="DiGeam" />
         <meta name="Resource-type" content="Document" />
         <link rel="icon" sizes="192x192" href="img/event/prereg/favicon.ico">
-        <meta name="description" content="首頁 &#8211; 《仙俠世界貳》" />
+        <meta name="description" content="人人皆可恣意飛行的修仙大世界，打造屬於自己的修仙之路，2023年度仙俠鉅作【仙俠世界貳】事前預約中！" />
         <link rel="pingback" href="" />
 
         <title>《仙俠世界貳》事前預約</title>
@@ -64,13 +64,34 @@
                 <!-- 2初出江湖 -->
                 <div class="swiper-slide page2">
                     <div class="bg2animate">
-                        <div class="bird"></div>
-                        <div class="leaveR"></div>
+                        <div class="bird1"></div>
+                        <div class="bird2"></div>
+                        <div class="leave1"></div>
+                        <div class="leave2"></div>
                     </div>
+                    <div class="p2title"></div>
                     <div class="p2main">
                         <div class="p2steps">
-                            <div class="p2title"></div>
                             <div class="step1"></div>
+                            <div class="loginbtn"><a href="https://www.digeam.com/login" target="blank">登入</a></div>
+                            <p class="register">※沒有會員嗎?<a href="https://www.digeam.com/register" target="blank">前往註冊</a></p>
+                            <div class="step2"></div>
+                            <div class="step2checkbox">
+                                <form action="" method="get" target="_blank">
+                                    <div>
+                                        <select name="country">
+                                            <option>台灣+886</option>
+                                            <option>香港+852</option>
+                                            <option>澳門+853</option>
+                                        </select>
+                                        <input type="text" name="phone_num" placeholder="請輸入電話號碼(不含符號)">
+                                    </div>
+
+                                    <p><input type="checkbox" id="checkbox" name="noticecheck">
+                                    我已經閱讀且同意<a href="https://www.digeam.com/terms2" target="blank">隱私權政策</a>與活動相關注意事項</p>
+                                </form>
+                            </div>
+                            <div class="checkbtn" id="checkbtn">初出江湖</div>
                         </div>
                         <div class="p2awards">
                             <div class="awardbox"></div>
@@ -90,6 +111,43 @@
 
                 <!-- 4熊貓賽跑 -->
                 <div class="swiper-slide page4">
+                    <div class="bg4animate">
+                        <div class="bamboo"></div>
+                        <div class="cloud"></div>
+                        <div class="leave1"></div>
+                        <div class="leave2"></div>
+                        <div class="leave3"></div>
+                    </div>
+                    <div class="p4title"></div>
+                    <div class="p4main">
+                        <div class="p4info">
+                            <p>每日00:00將會開啟新一輪的賽事，選擇下方熊貓進行比賽，累計猜對次數將可以獲得獎勵。</p>
+                            <div class="p4btns">
+                                <div class="p4informationbtn">活動說明</div>
+                                <div class="p4noticebtn">注意事項</div>
+                            </div>
+                        </div>
+                        <div class="pandas">
+                            <div class="panda1"></div>
+                            <div class="panda2"></div>
+                            <div class="panda3"></div>
+                        </div>
+                        <div class="pandasValue">
+                            <div class="panda1Value"></div>
+                            <div class="panda2Value"></div>
+                            <div class="panda3Value"></div>
+                        </div>
+                        <div class="pandaMenu">
+                            <div class="panda1btn panda1btn_2"></div>
+                            <div class="panda2btn"></div>
+                            <div class="panda3btn"></div>
+                        </div>
+                        <div class="pandaGobtn">競猜支持</div>
+                        <div class="p4awards">獎勵列表</div>
+                        <div class="times">
+                            <p>累計猜對:10次<br>累計競猜:20次</p>
+                        </div>
+                    </div>
                     <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
                 </div>
 
@@ -119,20 +177,25 @@
                 <div class="swiper-slide page6">
                     <div class="p6title"></div>
                     <div class="roles">
-                        <div class="human"></div>
-                        <div class="name"></div>
+                        <div class="humen">
+                            <div class="human1"></div>
+                            <div class="human2"></div>
+                            <div class="human3"></div>
+                            <div class="human4"></div>
+                            <div class="human5"></div>
+                        </div>
+                        <div class="names">
+                            <div class="name1"></div>
+                            <div class="name2"></div>
+                            <div class="name3"></div>
+                            <div class="name4"></div>
+                            <div class="name5"></div>
+                        </div>
                         <div class="arm">劍</div>
                     </div>
                     <div class="bgclouds">
                         <div class="bgcloud1"></div>
                         <div class="bgcloud2"></div>
-                    </div>
-                    <div class="p6menu">
-                        <div class="p6btn5"></div>
-                        <div class="p6btn4"></div>
-                        <div class="p6btn3"></div>
-                        <div class="p6btn2"></div>
-                        <div class="p6btn1"></div>
                     </div>
                     <div class="p6features p6feature1">
                         <div class="p6subtitle">職業特色</div>
@@ -142,11 +205,50 @@
                         <div class="p6subtitle">團隊定位</div>
                         <div class="p6text">遠程法系輸出，可以控制大量敵人，並給予傷害，但是血防較為薄弱，容易被擊火擊殺。</div>
                     </div>
+                    <div class="p6menu">
+                        <div class="p6btn5"></div>
+                        <div class="p6btn4"></div>
+                        <div class="p6btn3"></div>
+                        <div class="p6btn2"></div>
+                        <div class="p6btn1 p6btn1_2"></div>
+                    </div>
                     <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
                 </div>
 
                 <!-- 7活動規則 -->
                 <div class="swiper-slide page7">
+                    <div class="p7title"></div>
+
+
+
+
+
+
+
+
+
+
+                    <div class="footer">
+                        <div class="wrap">
+                            <div class="digeamlogo"></div>
+                            <div class="giantlogo"></div>
+                            <div class="copyright">
+                                <a href="https://www.digeam.com/terms">會員服務條款</a>
+                                <a href="https://www.digeam.com/terms2">隱私條款</a>
+                                <a href="https://www.digeam.com/cs">客服中心</a>
+                                <p>掘夢網股份有限公司©2023<br/>Copyright©DiGeam Corporation.<br/>All Rights Reserved.</p>
+                            </div>
+                            <div class="plus">
+                                <div class="lv"></div>
+                                <div class="footernotice">
+                                    <p>本遊戲為免費使用，部分內容涉及暴力情節。</p>
+                                    <p>遊戲內另提供購買虛擬遊戲幣、物品等付費服務。</p>
+                                    <p>請注意遊戲時間，避免沉迷。​</p>
+                                    <p>本遊戲服務區域包含台灣、香港、澳門。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
                 </div>
             </div>
@@ -169,37 +271,6 @@
                 <div class="popScheckBtn"></div>
             </div>
         </div>
-
-        <!----- 版權聲明開關 --------->
-        <div class="footer-btn">
-            <p>版權訊息</p>
-            <div class="footer-btnbox">
-                <div class="footer-btnball">©</div>
-            </div>
-        </div>
-
-        <!----------footer---------->
-        <footer>
-            <div class="wrap">
-                <div class="digeamlogo"></div>
-                <div class="giantlogo"></div>
-                <div class="copyright">
-                    <a href="https://www.digeam.com/terms">會員服務條款</a>
-                    <a href="https://www.digeam.com/terms2">隱私條款</a>
-                    <a href="https://www.digeam.com/cs">客服中心</a>
-                    <p>掘夢網股份有限公司©2023<br/>Copyright©DiGeam Corporation.<br/>All Rights Reserved.</p>
-                </div>
-                <div class="plus">
-                    <div class="lv"></div>
-                    <div class="footernotice">
-                        <p>本遊戲為免費使用，部分內容涉及暴力情節。</p>
-                        <p>遊戲內另提供購買虛擬遊戲幣、物品等付費服務。</p>
-                        <p>請注意遊戲時間，避免沉迷。​</p>
-                        <p>本遊戲服務區域包含台灣、香港、澳門。</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
