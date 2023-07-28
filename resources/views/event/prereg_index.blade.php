@@ -106,6 +106,51 @@
 
                 <!-- 3結交名士 -->
                 <div class="swiper-slide page3">
+                    <div class="bgclouds">
+                        <div class="bgcloud1"></div>
+                        <div class="bgcloud2"></div>
+                    </div>
+                    <div class="p3title"></div>
+                    <div class="p3main">
+                        <div class="corner">
+                            <div class="corner_LT"></div>
+                            <div class="corner_RT"></div>
+                            <div class="corner_LB"></div>
+                            <div class="corner_RB"></div>
+                        </div>
+                        <div class="p3info">
+                            <p>累計拜訪30次可任選【仙道盟主沈仲陽】、【七花獸百花仙靈】、【愛之紅娘】其中一位作為結義名士</p>
+                            <div class="p3listbtns">名士一覽</div>
+                        </div>
+                        <div class="p3btns">
+                            <div class="p3informationbtn">活動說明</div>
+                            <div class="p3missionbtn">任務佈告</div>
+                            <div class="p3noticebtn">注意事項</div>
+                        </div>
+                        <div class="lanternbox">
+                            <div class="lantern_light"></div>
+                            <div class="lantern"></div>
+                            <div class="lantern_line"></div>
+                            <p>距離<br>自選名士<br>0/30</p>
+                        </div>
+                        <div class="p3text">
+                            <ul class="samplerules"></ul>
+                        </div>
+                        <div class="card">
+                            <div class="nocard">
+                                <div class="card_bg"></div>
+                                <div class="card_cloud1"></div>
+                                <div class="card_cloud2"></div>
+                                <div class="card_frame"></div>
+                            </div>
+                            <div class="nowcard">
+                                <!-- <img src="/img/event/prereg/p3/purple/card1_L.png"> -->
+                            </div>
+                            <div class="getcardbtn"></div>
+                            <p>您尚可拜訪5次</p>
+                        </div>
+                        <div class="pandaGobtn">與他結義</div>
+                    </div>
                     <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
                 </div>
 
@@ -218,25 +263,17 @@
                 <!-- 7活動規則 -->
                 <div class="swiper-slide page7">
                     <div class="p7title"></div>
-
-
-
-
-
-
-
-
-
-
+                    <ul class="p7rules"></ul>
                     <div class="footer">
                         <div class="wrap">
                             <div class="digeamlogo"></div>
                             <div class="giantlogo"></div>
                             <div class="copyright">
-                                <a href="https://www.digeam.com/terms">會員服務條款</a>
-                                <a href="https://www.digeam.com/terms2">隱私條款</a>
-                                <a href="https://www.digeam.com/cs">客服中心</a>
-                                <p>掘夢網股份有限公司©2023<br/>Copyright©DiGeam Corporation.<br/>All Rights Reserved.</p>
+                                <div>
+                                    <a href="https://www.digeam.com/terms">會員服務條款</a>
+                                    <a href="https://www.digeam.com/terms2">隱私條款</a>
+                                    <p>掘夢網股份有限公司©2023<br/>Copyright©DiGeam Corporation.<br/>All Rights Reserved.</p>
+                                </div>
                             </div>
                             <div class="plus">
                                 <div class="lv"></div>
@@ -254,11 +291,22 @@
             </div>
         </div>
 
+        <!-- 結交名士任務板 -->
+        <div class="p3missionpop">
+            <div class="p3missionpopframe">
+                <div class="XX"></div>
+                <div class="p3missionpoptitle"></div>
+                <ul class="p3missionpopText"></ul>
+            </div>
+        </div>
+
+
         <!-- 大彈窗 -->
         <div class="pop">
             <div class="popframe">
                 <div class="XX"></div>
                 <div class="poptitle"></div>
+                <div class="popTable"></div>
                 <ul class="popText"></ul>
             </div>
         </div>

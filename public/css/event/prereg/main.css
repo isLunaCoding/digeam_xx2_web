@@ -392,7 +392,436 @@ body{
         }
     }
     .page3{
-        background-color: #96c9bd;
+        background: url(/img/event/prereg/p3/bg3.jpg)no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        .bgclouds{
+            .bgcloud1{
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                opacity: 0.7;
+                background: url(/img/event/prereg/p3/bg_cloud1.png)no-repeat;
+                background-position: bottom right;
+                background-size: contain;
+                animation: p6cloud1 10s infinite alternate ease-in;
+            }
+            .bgcloud2{
+                position: absolute;
+                top: 5%;
+                left: -50%;
+                width: 100vw;
+                height: 100vh;
+                opacity: 0.8;
+                background: url(/img/event/prereg/p3/bg_cloud2.png)no-repeat;
+                background-position: bottom left;
+                background-size: contain;
+                animation: p6cloud2 12s infinite alternate ease-in;
+            }
+        }
+
+        .p3title{
+            position: absolute;
+            top: 12vh;
+            left: 16vw;
+            width: 30vw;
+            height: 10vw;
+            background: url(/img/event/prereg/p3/title.png)no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .p3main{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 66vw;
+            height: 66vh;
+            background: url(/img/event/prereg/p3/mainBG3.png)no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            &::before{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: url(/img/event/prereg/p3/mainBG.png)no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            .corner{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                
+                & div{
+                    position: absolute;
+                    width: 80px;
+                    height: 81px;
+                    background: url(/img/event/prereg/p3/mainBG2.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .corner_LT{
+                    top: 50px;
+                    left: 65px;
+                    rotate: -90deg;
+                }
+
+                .corner_RT{
+                    top: 50px;
+                    right: 65px;
+                    rotate: 0deg;
+                }
+
+                .corner_LB{
+                    bottom: 50px;
+                    left: 65px;
+                    rotate: -180deg;
+                }
+
+                .corner_RB{
+                    bottom: 50px;
+                    right: 65px;
+                    rotate: 90deg;
+                }
+            }
+
+            .p3info{
+                position: absolute;
+                top: -22%;
+                right: 0%;
+                width: 35%;
+                z-index: 1;
+
+                & p{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #21345d;
+                }
+            
+                .p3listbtns{
+                    position: absolute;
+                    top: 75%;
+                    right: -4%;
+                    translate: 0%;
+                    color: #ffffff;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    text-align: center;
+                    width: 202px;
+                    height: 54px;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    background: url(/img/event/prereg/p3/btn3.png)no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    text-shadow: 0 0 5px #010101;
+                    filter: drop-shadow(0 0 5px #2d3447);
+                    cursor: pointer;
+                    transition: 0.3s;
+                    scale: 0.95;
+    
+                    &::before, &::after{
+                        position: absolute;
+                        content: '';
+                        width: 32px;
+                        height: 54px;
+                        transition: 0.3s;
+                    }
+    
+                    &::before{
+                        left: 0px;
+                        background: url(/img/event/prereg/p3/btn3_hover1.png)no-repeat;
+                        background-position: center;
+                    }
+    
+                    &::after{
+                        right: 0px;
+                        background: url(/img/event/prereg/p3/btn3_hover2.png)no-repeat;
+                        background-position: center;
+                    }
+    
+                    &:hover::before{
+                        transform: translateX(-5px);
+                    }
+    
+                    &:hover::after{
+                        transform: translateX(5px);
+                    }
+    
+                    &:hover{
+                        letter-spacing: 3px;
+                    }
+    
+                }
+            }
+
+            .p3btns{
+                position: absolute;
+                top: 65%;
+                right: 2%;
+                translate: 100%;
+                width: 202px;
+                height: auto;
+                color: #ffffff;
+                font-size: 1.6rem;
+                font-weight: bold;
+                display: block;
+                justify-content: flex-end;
+                text-align: center;
+                text-shadow: 0 0 5px #010101;
+                filter: drop-shadow(0 0 5px #2d3447);
+
+                .p3informationbtn, .p3missionbtn, .p3noticebtn{
+                    position: relative;
+                    width: 202px;
+                    height: 60px;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    background: url(/img/event/prereg/p3/btn5.png)no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    scale: 0.95;
+
+                    &::before, &::after{
+                        position: absolute;
+                        content: '';
+                        width: 32px;
+                        height: 54px;
+                        transition: 0.3s;
+                    }
+
+                    &::before{
+                        left: 0px;
+                        background: url(/img/event/prereg/p3/btn3_hover1.png)no-repeat;
+                        background-position: center;
+                    }
+
+                    &::after{
+                        right: 0px;
+                        background: url(/img/event/prereg/p3/btn3_hover2.png)no-repeat;
+                        background-position: center;
+                    }
+
+                    &:hover::before{
+                        transform: translateX(-5px);
+                    }
+
+                    &:hover::after{
+                        transform: translateX(5px);
+                    }
+
+                    &:hover{
+                        letter-spacing: 3px;
+                    }
+                }
+
+            }
+
+            .lanternbox{
+                position: absolute;
+                top: 38px;
+                left: -70px;
+                translate: 0%;
+                width: calc(286px * 0.95);
+                height: calc(627px * 0.95);
+                transform-origin: calc(144px * 0.9) 0px;
+                rotate: -20deg;
+                opacity: 0;
+                z-index: 1;
+                pointer-events: none;
+
+                .lantern_light{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: url(/img/event/prereg/p3/lantern_light.png)no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+
+                .lantern{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: url(/img/event/prereg/p3/lantern.png)no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+
+                .lantern_line{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: url(/img/event/prereg/p3/lantern_line.png)no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    transform-origin: calc(146px * 0.9) calc(470px * 0.9);
+                }
+
+                & p{
+                    position: absolute;
+                    top: 46%;
+                    left: 50%;
+                    translate: -50%;
+                    color: #a38a46;
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+
+            }
+
+            .p3text{
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                translate: 100% -50%;
+                width: 40%;
+                height: 90%;
+
+                .samplerules{
+                    position: absolute;
+                    top: 50%;
+                    translate: 0 -50%;
+                    width: 80%;
+                    height: auto;
+
+                    & li{
+                        list-style-image:url(/img/event/prereg/p3/li.png);
+                        color: #000;
+                        font-size: 21px;
+                        font-weight: bold;
+                        margin: 8px auto;
+                        
+                        & span{
+                            color: #FFF;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+            }
+
+            .card{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -100% -50%;
+                width: 40%;
+                height: 90%;
+
+                .nocard,.nowcard{
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    width: 411px;
+                    height: 411px;
+                    
+                    .card_bg{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: url(/img/event/prereg/p3/card_bg.png)no-repeat;
+                        background-size: 100%;
+                        background-position: center;
+                        -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                    }
+                    
+                    .card_cloud1{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: url(/img/event/prereg/p3/card_cloud1.png)no-repeat;
+                        background-size: cover;
+                        background-position: left;
+                        -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                        animation: p3cloud1 2s infinite alternate ease-in-out;
+                    }
+                    
+                    .card_cloud2{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: url(/img/event/prereg/p3/card_cloud2.png)no-repeat;
+                        background-size: cover;
+                        background-position: right;
+                        -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                        animation: p3cloud2 2s infinite alternate ease-in-out;
+                    }
+
+                    .card_frame{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: url(/img/event/prereg/p3/card_frame.png)no-repeat;
+                        background-position: center;
+
+                    }
+                }
+
+                .getcardbtn{
+                    position: absolute;
+                    top: 72%;
+                    left: 50%;
+                    translate: -50%;
+                    width: 185px;
+                    height: 74px;
+                    background: url(/img/event/prereg/p3/btn2.png)no-repeat;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
+                }
+
+                & p{
+                    position: absolute;
+                    top: 80%;
+                    left: 50%;
+                    translate: -50%;
+                    color: #FFF;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+            }
+
+            .pandaGobtn{
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                translate: -50%;
+                width: 260px;
+                height: 101px;
+                background: url(/img/event/prereg/p3/btn1.png)no-repeat;
+                transition: 0.5s;
+                cursor: pointer;
+                color: #FFF;
+                text-shadow: 0 0 10px #000;
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 101px;
+                filter: drop-shadow(0 0 5px #2d3447);
+
+                &:hover{
+                    background: url(/img/event/prereg/p3/btn1_hover.png)no-repeat;
+                }
+
+            }
+        }
     }
     .page4{
         background: url(/img/event/prereg/p4/bg4.png);
@@ -483,7 +912,6 @@ body{
                     font-weight: bold;
                     color: #21345d;
                 }
-
 
                 .p4btns{
                     width: auto;
@@ -1325,10 +1753,9 @@ body{
         }
     }
     .page7{
-        background-color: #96c9bd;
-
-
-        
+        background: url(/img/event/prereg/p7/bg7.png);
+        background-size: cover;
+        background-position: center;
 
         .p7title{
             position: absolute;
@@ -1341,14 +1768,57 @@ body{
             background-position: center;
         }
 
+        .p7rules{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 60vw;
+            height: 60vh;
+            list-style: decimal;
+            color: #000000;
+            font-size: 1.3rem;
+            font-weight: bold;
+            overflow-y: scroll;
+            background-color: #ffffff00;
 
+            & li{
+                margin: 5px 0;
+                padding-right: 3%;
 
-        
+                & span{
+                    color: #91006a;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            &::-webkit-scrollbar-button {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-track-piece {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 6px;
+                background-color: #385a8d;
+                box-shadow: 0 0 2px #000;
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: none;
+            }
+        }
+
         .footer{
             width: 100vw;
             height: 100px;
             bottom: 0;
-            background-color: #424d68;
+            background-image: linear-gradient(to top, rgba(4, 17, 64, 0.9), rgba(47, 85, 118, 0.9));
             position: absolute;
             left: 0px;
 
@@ -1356,7 +1826,7 @@ body{
                 position: absolute;
                 left: 50%;
                 translate: -50%;
-                width: 80%;
+                width: 100%;
                 height: 100%;
                 color: #ffffff;
                 text-align: center;
@@ -1372,9 +1842,10 @@ body{
                 .digeamlogo{
                     width: 12%;
                     height: 40%;
-                    background: url(/img/event/prereg/footer/LOGO_white.png)no-repeat;
+                    background: url(/img/event/prereg/footer/digeam_logo.png)no-repeat;
                     background-size: contain;
                     background-position: center;
+                    filter: drop-shadow(0 1px 2px #000);
                 }
 
                 .giantlogo{
@@ -1386,18 +1857,24 @@ body{
                 }
 
                 .copyright{
-                    width: 25%;
+                    width: 15%;
                     height: 70%;
-                     text-align: left;
-                   font-size: 11pt;
 
-                    & a{
-                        color: #fff100;
-                        margin-right: 1%;
-                    }
-
-                    & p{
+                    & div{
+                        width: fit-content;
+                        text-align: left;
+                        font-size: 11pt;
                         margin: auto;
+
+                        & a{
+                            color: #9ed5ff;
+                            margin-right: 1%;
+                        }
+    
+                        & p{
+                            margin: auto;
+                        }
+
                     }
                 }
                 .plus{
@@ -1407,7 +1884,7 @@ body{
                     .lv{
                         width: 60px;
                         height: 100%;
-                        background: url(/img/event/prereg/footer/12plus.png)no-repeat;
+                        background: url(/img/event/prereg/footer/15plus.png)no-repeat;
                         background-size: contain;
                         background-position: center;
                     }
@@ -1418,7 +1895,7 @@ body{
                         line-height: 3px;
                         font-size: 9pt;
                         & p:nth-child(4){
-                            color: #fff100;
+                            color: #9ed5ff;
                         }
                     }
                 }
@@ -1443,6 +1920,20 @@ body{
             .bird2{
                 animation: flybird2 6s 1 linear;
                 animation-fill-mode: forwards;
+            }
+        }
+        
+        .lanternbox{
+            animation: p3lantern 5s 1 ease-in-out;
+            animation-fill-mode: forwards;
+
+            .lantern_light{
+                opacity: 0;
+                animation: p3lanternLight 10s infinite linear;
+            }
+
+            .lantern_line{
+                animation: p3lantern2 5s 1 ease-in-out,p3lanternLine 6s 5s infinite ease-in-out;
             }
         }
     }
@@ -1690,6 +2181,60 @@ body{
             &::after{
                 right: -30%;
                 scale: -1;
+            }
+        }
+
+        .popTable{
+            margin: auto;
+            margin-top: 18%;
+            width: 80%;
+            height: 73%;
+            list-style: decimal;
+            color: #15386c;
+            font-size: 1rem;
+            overflow-y: scroll;
+            display: none;
+
+            .toptable{
+                width: 80%;
+                margin: auto;
+
+                & tr{
+                    .tableimg{
+                        width: 40%;
+                        & img{
+                            width: 90%;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                & span{
+                    color: #6782ae;
+                }
+            }
+
+
+
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-button {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-track-piece {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 2px;
+                background-color: #385a8d;
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: none;
             }
         }
 

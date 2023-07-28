@@ -13,7 +13,8 @@ function p2informationIn(){
     }
 
     $('.poptitle').html('活動說明');
-    $('.popText').html(p2information);
+    $('.popTable').hide();
+    $('.popText').show().html(p2information);
 }
 
 //p2"初出江湖"注意事項
@@ -34,7 +35,8 @@ function p2noticeIn(){
     }
 
     $('.poptitle').html('注意事項');
-    $('.popText').html(p2noticestr);
+    $('.popTable').hide();
+    $('.popText').show().html(p2noticestr);
 }
 
 //p2"初出江湖"預約成功彈窗
@@ -153,7 +155,8 @@ function p3informationIn(){
     }
 
     $('.poptitle').html('活動說明');
-    $('.popText').html(p3information);
+    $('.popTable').hide();
+    $('.popText').show().html(p3information);
 }
 
 //p3"結交名士"注意事項
@@ -176,7 +179,190 @@ function p3noticeIn(){
     }
 
     $('.poptitle').html('注意事項');
-    $('.popText').html(p3noticestr);
+    $('.popTable').hide();
+    $('.popText').show().html(p3noticestr);
+}
+
+//p3"結交名士"遊戲玩法
+var p3samplerulesarray = [
+    '完成<span onclick="missionpop()">指定任務</span>，可取得拜訪次數。',
+    '點選拜訪名士，取得名士卡片。<span class="listpop">名士一覽</span>',
+    '拜訪名士後，將會顯示該名士的能力值等相關介紹。',
+    '若抽取的名士不符合需求，可透過完成各項指定任務，取得拜訪次數後重複抽取。',
+    '可與拜訪的名士進行結義，進行結義後即為最終結果，不可變更。']
+
+var p3samplerulesstr = '';
+
+for(count = 0 ; count < 5 ; count++){
+    p3samplerulesstr += '<li>'+p3samplerulesarray[count]+'</li>';
+}
+
+$('.samplerules').html(p3samplerulesstr);
+
+//p3"結交名士"名士一覽
+function p3listIn(){
+    var p3listarray = {
+        name:[
+            '七花獸百花仙靈',
+            '仙道盟主沈仲陽',
+            '愛之紅娘'],
+        value:[
+            '體質<span>+245</span>',
+            '精神<span>+245</span>',
+            '耐力<span>+245</span>',
+            '罡氣<span>+4480</span>',
+            '物理防禦<span>+204</span>',
+            '法術防禦<span>+204</span>',
+            '生命值<span>+10181</span>',
+            '',
+            '力量<span>+204</span>',
+            '智力<span>+204</span>',
+            '攻擊力<span>+285</span>',
+            '罡氣攻擊<span>+244</span>',
+            '物理攻擊<span>+244</span>',
+            '法術攻擊<span>+244</span>',
+            '',
+            '',
+            '體質<span>+245</span>',
+            '精神<span>+245</span>',
+            '耐力<span>+245</span>',
+            '罡氣<span>+4480</span>',
+            '物理防禦<span>+204</span>',
+            '法術防禦<span>+204</span>',
+            '生命值<span>+10181</span>',
+            ''
+        ],
+        skill:[
+            '煉獄火海',
+            '兩儀反轉',
+            '快跑女孩',
+            '對前方區域造成傷害，該區域中會出現火海持續燃燒10秒。',
+            '使用兩儀反轉後，所有受到的傷害將轉變為恢復生命，持續20秒。',
+            '將目標變為毫無還手之力的小女孩。'
+        ],
+        others:[
+            '仙道盟掌刑長老',
+            '仙道盟執法長老',
+            '仙道盟訓誡長老',
+            '仙道盟傳功長老',
+            '天魔計都',
+            '天魔影煞',
+            '齊天大聖',
+            '吞靈獸',
+            '愛之月老',
+            '愛之禮官',
+            '愛之花童',
+            '愛之隨從']
+    }
+
+    var p3liststr = '';
+
+    for(j = 0 ; j < 12 ; j+=3){
+        p3liststr += '<tr><td>'+p3listarray.others[j]+'</td><td>'+p3listarray.others[j+1]+'</td><td>'+p3listarray.others[j+2]+'</td></tr>';
+    }
+
+    var p3listtopstr = '';
+
+    for(a = 0 ; a < 3 ; a++ ){
+        p3listtopstr += `
+        <table class="toptable">
+            <tr>
+                <td class="tableimg">
+                    <img src="/img/event/prereg/p3/cardlist`+(a+1)+`.png">
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td colspan=2  style="font-weight: bold;font-size: 30px;text-align: center;">`+p3listarray.name[a]+`</td>
+                        </tr>
+                        <tr>
+                            <td colspan=2 style="font-weight: bold;font-size: 1.3rem;">卡片屬性</td>
+                        </tr>`
+
+        
+        if(a == 0){
+            p3listtopstr += `
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+0]+`</td>
+                <td>`+p3listarray.value[a+1]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+2]+`</td>
+                <td>`+p3listarray.value[a+3]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+4]+`</td>
+                <td>`+p3listarray.value[a+5]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+6]+`</td>
+                <td>`+p3listarray.value[a+7]+`</td>
+            </tr>`
+        }
+        if(a == 1){
+            p3listtopstr += `
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+7]+`</td>
+                <td>`+p3listarray.value[a+8]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+9]+`</td>
+                <td>`+p3listarray.value[a+10]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+11]+`</td>
+                <td>`+p3listarray.value[a+12]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+13]+`</td>
+                <td>`+p3listarray.value[a+14]+`</td>
+            </tr>`
+        }
+        if(a == 2){
+            p3listtopstr += `
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+14]+`</td>
+                <td>`+p3listarray.value[a+15]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+16]+`</td>
+                <td>`+p3listarray.value[a+17]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+18]+`</td>
+                <td>`+p3listarray.value[a+19]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+20]+`</td>
+                <td>`+p3listarray.value[a+21]+`</td>
+            </tr>`
+        }
+        
+        p3listtopstr += `
+        <tr>
+            <td colspan=2 style="font-weight: bold;font-size: 1.3rem;">羈絆技能</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="color: #6782ae">`+p3listarray.skill[a]+`</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="color: #000">`+p3listarray.skill[a+3]+`</td>
+        </tr>
+        </table>
+        </td>
+        </tr>
+        </table>`
+    }
+
+    $('.poptitle').html('名士一覽');
+    $('.popTable').show().html(p3listtopstr + `
+        <table><tr><td colspan=3 >名稱</td></tr>` + p3liststr +`</table>`);
+    console.log(p3listtopstr)
+    $('.popText').hide();
+}
+
+//p3"結交名士"任務佈告
+function p3missionIn(){
 }
 
 //p4"熊貓賽跑"活動說明
@@ -194,7 +380,8 @@ function p4informationIn(){
     }  
 
     $('.poptitle').html('活動說明');
-    $('.popText').html(p4information);
+    $('.popTable').hide();
+    $('.popText').show().html(p4information);
 }
 
 //p4"熊貓賽跑"注意事項
@@ -214,27 +401,24 @@ function p4noticeIn(){
     }
 
     $('.poptitle').html('注意事項');
-    $('.popText').html(p4noticestr);
+    $('.popTable').hide();
+    $('.popText').show().html(p4noticestr);
 }
 
 //p4"熊貓賽跑"獎勵列表
 function p4awardIn(){
     var p4awardarray = [
-        '此活動需完成事前預約活動才可參加。',
-        '熊貓賽跑活動將於每日00:00開啟一輪新的賽事，每日登入活動頁面僅可遊玩一次熊貓賽跑 。',
-        '本活動所提供之虛寶獎勵，皆為不可交易之性質，實際到距限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。',
-        '若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參與，活動將照常舉行，不另做補償。',
-        '本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多比參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。',
-        '本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。']
+        '此活動需完成事前預約活動才可參加。']
 
-    var p4noticestr = '';
+    var p4awardstr = '';
 
     for(j = 0 ; j < 6 ; j++){
-        p4noticestr += '<li>'+p4noticearray[j]+'</li>';
+        p4awardstr += '<li>'+p4awardarray[j]+'</li>';
     }
 
-    $('.poptitle').html('注意事項');
-    $('.popText').html(p4noticestr);
+    $('.poptitle').html('獎勵列表');
+    $('.popTable').hide();
+    $('.popText').show().html(p4awardstr);
 }
 
 //p6職業介紹資料
@@ -440,6 +624,26 @@ function role5(c){
         },300)
     }
 }
+
+
+
+//p7"活動規則"注意事項
+var p7rulesarray = [
+    '活動時間：即日起至《仙俠世界貳》上市後一週15:00截止。',
+    '本活動所提供之虛寶獎勵，皆為不可交易之性質，實際道具限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。',
+    '各項活動獎勵需於遊戲正式開服後，於官網內的「領獎專區」進行領取，獎勵才會發送至對應角色信箱內。',
+    '各項活動參加、得獎資格與獎項不得轉讓或贈與第三人。',
+    '若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參與，活動將照常舉行，不另做補償。',
+    '本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多比參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。',
+    '本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。']
+
+var p7rulesstr = '';
+
+for(j = 0 ; j < 7 ; j++){
+    p7rulesstr += '<li>'+p7rulesarray[j]+'</li>';
+}
+
+$('.p7rules').html(p7rulesstr);
 
 				
 				

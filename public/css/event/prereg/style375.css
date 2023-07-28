@@ -1362,7 +1362,159 @@
             }
         }
         .page7{
-            background-color: #96c9bd;
+            background: url(/img/event/prereg/p7/bg7_m.png);
+            background-size: cover;
+            background-position: center;
+
+            .p7title{
+                position: absolute;
+                top: 5vh;
+                left: 50%;
+                translate: -50%;
+                width: 51vw;
+                height: 17vw;
+                background: url(/img/event/prereg/p7/title.png)no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            .p7rules{
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 80vw;
+                height: 60vh;
+                list-style: decimal;
+                color: #000000;
+                font-size: 1.3rem;
+                font-weight: bold;
+                overflow-y: scroll;
+    
+                & li{
+                    margin: 5px 0;
+                    padding-right: 3%;
+    
+                    & span{
+                        color: #91006a;
+                    }
+                }
+    
+                &::-webkit-scrollbar {
+                    width: 8px;
+                }
+    
+                &::-webkit-scrollbar-button {
+                    background: transparent;
+                }
+    
+                &::-webkit-scrollbar-track-piece {
+                    background: transparent;
+                }
+    
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 6px;
+                    background-color: #385a8d;
+                    box-shadow: 0 0 2px #000;
+                }
+    
+                &::-webkit-scrollbar-track {
+                    box-shadow: none;
+                }
+            }
+            
+            .footer{
+                width: 100vw;
+                height: 150px;
+                bottom: 0;
+                background-image: linear-gradient(to top, rgba(4, 17, 64, 0.9), rgba(47, 85, 118, 0.9));
+                position: absolute;
+                left: 0px;
+
+                .wrap{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    width: 100%;
+                    height: 95%;
+                    color: #ffffff;
+                    text-align: center;
+                    overflow: hidden;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+
+                    & div{
+                        margin: auto 1vw;
+                    }
+
+                    .digeamlogo{
+                        width: 40%;
+                        height: 15%;
+                        background: url(/img/event/prereg/footer/digeam_logo.png)no-repeat;
+                        background-size: contain;
+                        background-position: right;
+                        filter: drop-shadow(0 1px 2px #000);
+                    }
+
+                    .giantlogo{
+                        width: 40%;
+                        height: 20%;
+                        background: url(/img/event/prereg/footer/GIANT-LOGO.png)no-repeat;
+                        background-size: contain;
+                        background-position: left;
+                    }
+
+                    .copyright{
+                        width: 50%;
+                        height: 40%;
+
+                        & div{
+                            width: fit-content;
+                            text-align: center;
+                            font-size: 9pt;
+                            margin: auto;
+                            scale: .6;
+
+                            & a{
+                                color: #9ed5ff;
+                                margin-right: 1%;
+                            }
+    
+                            & p{
+                                margin: auto;
+                            }
+
+                        }
+                    }
+                    .plus{
+                        height: 50%;
+                        display: flex;
+                        scale: .6;
+
+                        .lv{
+                            width: 60px;
+                            height: 100%;
+                            background: url(/img/event/prereg/footer/15plus.png)no-repeat;
+                            background-size: contain;
+                            background-position: center;
+                        }
+
+                        .footernotice{
+                            text-align: left;
+                            vertical-align: top;
+                            line-height: 3px;
+                            font-size: 9pt;
+                            & p:nth-child(4){
+                                color: #9ed5ff;
+                            }
+                        }
+                    }
+                }
+            }
+            
         }
       
         .swiper-slide-active{
