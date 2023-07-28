@@ -77,17 +77,19 @@
                     <div class="p2steps">
                         <div class="step1"></div>
                         @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
+                        <!-- 已登入 -->
                             <form id="logout-form" action="https://www.digeam.com/logout" method="POST"
                                 style="display: none;">
                                 <input type="hidden" name="return_url" id="return_url"
                                     value={{ base64_encode('https://xx2.digeam.com/prereg') }}>
                             </form>
                         @else
+                        <!-- 未登入 -->
                         <form id="logout-form" action="https://www.digeam.com/logout" method="POST"
                         style="display: none;">
                         <input type="hidden" name="return_url" id="return_url"
                             value={{ base64_encode('https://xx2.digeam.com/prereg') }}>
-                    </form>
+                        </form>
                         @endif
                         <div class="loginbtn"><a href="https://www.digeam.com/login">登入</a></div>
                         <p class="register">※沒有會員嗎?<a href="https://www.digeam.com/register" target="blank">前往註冊</a></p>
