@@ -306,6 +306,7 @@
             <div class="popframe">
                 <div class="XX"></div>
                 <div class="poptitle"></div>
+                <div class="popTable"></div>
                 <ul class="popText"></ul>
             </div>
         </div>

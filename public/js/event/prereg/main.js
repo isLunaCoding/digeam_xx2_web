@@ -195,6 +195,10 @@ $('.p2noticebtn').on("click",function(){
     p2noticeIn();
 })
 //p3結交名士資訊彈窗
+$('.p3listbtns').on("click",function(){
+    $('.pop').fadeIn(200);
+    p3listIn();
+})
 $('.p3informationbtn').on("click",function(){
     $('.pop').fadeIn(200);
     p3informationIn();

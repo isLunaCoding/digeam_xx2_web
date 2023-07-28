@@ -2184,6 +2184,41 @@ body{
             }
         }
 
+        .popTable{
+            margin: auto;
+            margin-top: 18%;
+            width: 80%;
+            height: 73%;
+            list-style: decimal;
+            color: #15386c;
+            font-size: 1.3rem;
+            overflow-y: scroll;
+            display: none;
+
+            
+
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-button {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-track-piece {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 2px;
+                background-color: #385a8d;
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: none;
+            }
+        }
+
         .popText{
             margin: auto;
             margin-top: 18%;

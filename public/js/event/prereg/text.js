@@ -13,7 +13,8 @@ function p2informationIn(){
     }
 
     $('.poptitle').html('活動說明');
-    $('.popText').html(p2information);
+    $('.popTable').hide();
+    $('.popText').show().html(p2information);
 }
 
 //p2"初出江湖"注意事項
@@ -34,7 +35,8 @@ function p2noticeIn(){
     }
 
     $('.poptitle').html('注意事項');
-    $('.popText').html(p2noticestr);
+    $('.popTable').hide();
+    $('.popText').show().html(p2noticestr);
 }
 
 //p2"初出江湖"預約成功彈窗
@@ -153,7 +155,8 @@ function p3informationIn(){
     }
 
     $('.poptitle').html('活動說明');
-    $('.popText').html(p3information);
+    $('.popTable').hide();
+    $('.popText').show().html(p3information);
 }
 
 //p3"結交名士"注意事項
@@ -176,7 +179,8 @@ function p3noticeIn(){
     }
 
     $('.poptitle').html('注意事項');
-    $('.popText').html(p3noticestr);
+    $('.popTable').hide();
+    $('.popText').show().html(p3noticestr);
 }
 
 //p3"結交名士"遊戲玩法
@@ -197,26 +201,126 @@ $('.samplerules').html(p3samplerulesstr);
 
 //p3"結交名士"名士一覽
 function p3listIn(){
-    $('.pop').fadeIn(200);
-    var p3listarray = [
-        '此活動需完成事前預約活動才可參加。 ',
-        '此活動的抽獎為機會中獎獎勵，玩家參與活動不代表即可獲得指定獎勵。',
-        '玩家在拜訪名士後，若不選擇保留將視為放棄該次抽取到的名士。',
-        '結交名士活動最多只可獲得一次獎勵，且進行結義後即視為最終選定結果，無法再進行保留名士更改。',
-        '本活動需要於主畫面點選結義按鈕選定最終獎勵，僅保留拜訪結果不視為完成活動。若因沒有進行結義導致無法取得獎勵，恕不進行補償。',
-        '本活動所提供之虛寶獎勵，皆為不可交易之性質，實際到距限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。',
-        '若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參與，活動將照常舉行，不另做補償。',
-        '本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多比參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。',
-        '本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。']
+    var p3listarray = {
+        name:[
+        '七花獸百花仙靈',
+        '仙道盟執法長老',
+        '仙道盟訓誡長老'],
+        others:[
+            '仙道盟掌刑長老',
+            '仙道盟執法長老',
+            '仙道盟訓誡長老',
+            '仙道盟傳功長老',
+            '天魔計都',
+            '天魔影煞',
+            '齊天大聖',
+            '吞靈獸',
+            '愛之月老',
+            '愛之禮官',
+            '愛之花童',
+            '愛之隨從']
+    }
 
     var p3liststr = '';
 
-    for(j = 0 ; j < 9 ; j++){
-        p3liststr += '<li>'+p3listarray[j]+'</li>';
+    for(j = 0 ; j < 12 ; j+=3){
+        p3liststr += '<tr><td>'+p3listarray[j]+'</td><td>'+p3listarray[j+1]+'</td><td>'+p3listarray[j+2]+'</td></tr>';
+    }
+
+    var p3listtopstr = '';
+
+    for(a = 0 ; a < 3 ; a++ ){
+        p3listtopstr += '<table><tr colspan=2><td><img src="/img/event/prereg/p3/cardlist'+a+'.png"></td>'
     }
 
     $('.poptitle').html('名士一覽');
-    $('.popText').html(p3liststr);
+    $('.popTable').show().html(`
+    <table>
+        <tr colspan=2> 
+            <td>
+                <img src="/img/event/prereg/p3/cardlist1.png">
+            </td> 
+            <td>
+                <table>
+                    <tr colspan=2>
+                        <td>七花獸百花仙靈</td>
+                    </tr>
+                    <tr colspan=2>
+                        <td>卡片屬性</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr colspan=2>
+                        <td>羈絆技能</td>
+                    </tr>
+                    <tr colspan=2>
+                        <td>煉獄火海</td>
+                    </tr>
+                    <tr colspan=2>
+                        <td>羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr colspan=2> 
+            <td>
+                <img src="/img/event/prereg/p3/cardlist1.png">
+            </td> 
+            <td>
+                <table>
+                    <tr colspan=2>
+                        <td>七花獸百花仙靈</td>
+                    </tr>
+                    <tr colspan=2>
+                        <td>卡片屬性</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                    </tr>
+                    <tr colspan=2>
+                        <td>羈絆技能</td>
+                    </tr>
+                    <tr colspan=2>
+                        <td>煉獄火海</td>
+                    </tr>
+                    <tr colspan=2>
+                        <td>羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr colspan=3 ><td>名稱</td></tr>` + p3liststr +
+    `</table>`);
+    $('.popText').hide();
 }
 
 //p3"結交名士"任務佈告
@@ -238,7 +342,8 @@ function p4informationIn(){
     }  
 
     $('.poptitle').html('活動說明');
-    $('.popText').html(p4information);
+    $('.popTable').hide();
+    $('.popText').show().html(p4information);
 }
 
 //p4"熊貓賽跑"注意事項
@@ -258,7 +363,8 @@ function p4noticeIn(){
     }
 
     $('.poptitle').html('注意事項');
-    $('.popText').html(p4noticestr);
+    $('.popTable').hide();
+    $('.popText').show().html(p4noticestr);
 }
 
 //p4"熊貓賽跑"獎勵列表
@@ -273,7 +379,8 @@ function p4awardIn(){
     }
 
     $('.poptitle').html('獎勵列表');
-    $('.popText').html(p4awardstr);
+    $('.popTable').hide();
+    $('.popText').show().html(p4awardstr);
 }
 
 //p6職業介紹資料
