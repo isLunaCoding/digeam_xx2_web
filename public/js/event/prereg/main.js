@@ -203,6 +203,9 @@ $('.p3informationbtn').on("click",function(){
     $('.pop').fadeIn(200);
     p3informationIn();
 })
+$('.p3missionbtn').on("click",function(){
+    p3missionIn();
+})
 $('.p3noticebtn').on("click",function(){
     $('.pop').fadeIn(200);
     p3noticeIn();
