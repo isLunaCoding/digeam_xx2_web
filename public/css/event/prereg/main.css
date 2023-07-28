@@ -2191,25 +2191,20 @@ body{
             height: 73%;
             list-style: decimal;
             color: #15386c;
-            font-size: 1.3rem;
+            font-size: 1rem;
             overflow-y: scroll;
             display: none;
 
             .toptable{
-                width: 100%;
+                width: 80%;
+                margin: auto;
 
                 & tr{
-
                     .tableimg{
                         width: 40%;
                         & img{
-                            width: 80%;
-                        }
-                    }
-
-                    & td{
-                        & table{
-
+                            width: 90%;
+                            margin: auto;
                         }
                     }
                 }

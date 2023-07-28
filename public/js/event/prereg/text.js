@@ -276,7 +276,7 @@ function p3listIn(){
                             <td colspan=2  style="font-weight: bold;font-size: 30px;text-align: center;">`+p3listarray.name[a]+`</td>
                         </tr>
                         <tr>
-                            <td colspan=2>卡片屬性</td>
+                            <td colspan=2 style="font-weight: bold;font-size: 1.3rem;">卡片屬性</td>
                         </tr>`
 
         
@@ -340,7 +340,7 @@ function p3listIn(){
         
         p3listtopstr += `
         <tr>
-            <td colspan=2>羈絆技能</td>
+            <td colspan=2 style="font-weight: bold;font-size: 1.3rem;">羈絆技能</td>
         </tr>
         <tr>
             <td colspan=2 style="color: #6782ae">`+p3listarray.skill[a]+`</td>
