@@ -16,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('prereg','event\preregController@index');
+Route::middleware(['setReturnUrl'])->group(function () {
+    // 事前預約
+    Route::get('/prereg', function () {
+        return view('event/prereg_index');
+    });
+});
