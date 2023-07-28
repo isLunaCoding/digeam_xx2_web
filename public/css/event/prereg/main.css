@@ -2195,7 +2195,31 @@ body{
             overflow-y: scroll;
             display: none;
 
-            
+            .toptable{
+                width: 100%;
+
+                & tr{
+
+                    .tableimg{
+                        width: 40%;
+                        & img{
+                            width: 80%;
+                        }
+                    }
+
+                    & td{
+                        & table{
+
+                        }
+                    }
+                }
+
+                & span{
+                    color: #6782ae;
+                }
+            }
+
+
 
             &::-webkit-scrollbar {
                 width: 5px;

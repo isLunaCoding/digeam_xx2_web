@@ -203,9 +203,43 @@ $('.samplerules').html(p3samplerulesstr);
 function p3listIn(){
     var p3listarray = {
         name:[
-        '七花獸百花仙靈',
-        '仙道盟執法長老',
-        '仙道盟訓誡長老'],
+            '七花獸百花仙靈',
+            '仙道盟主沈仲陽',
+            '愛之紅娘'],
+        value:[
+            '體質<span>+245</span>',
+            '精神<span>+245</span>',
+            '耐力<span>+245</span>',
+            '罡氣<span>+4480</span>',
+            '物理防禦<span>+204</span>',
+            '法術防禦<span>+204</span>',
+            '生命值<span>+10181</span>',
+            '',
+            '力量<span>+204</span>',
+            '智力<span>+204</span>',
+            '攻擊力<span>+285</span>',
+            '罡氣攻擊<span>+244</span>',
+            '物理攻擊<span>+244</span>',
+            '法術攻擊<span>+244</span>',
+            '',
+            '',
+            '體質<span>+245</span>',
+            '精神<span>+245</span>',
+            '耐力<span>+245</span>',
+            '罡氣<span>+4480</span>',
+            '物理防禦<span>+204</span>',
+            '法術防禦<span>+204</span>',
+            '生命值<span>+10181</span>',
+            ''
+        ],
+        skill:[
+            '煉獄火海',
+            '兩儀反轉',
+            '快跑女孩',
+            '對前方區域造成傷害，該區域中會出現火海持續燃燒10秒。',
+            '使用兩儀反轉後，所有受到的傷害將轉變為恢復生命，持續20秒。',
+            '將目標變為毫無還手之力的小女孩。'
+        ],
         others:[
             '仙道盟掌刑長老',
             '仙道盟執法長老',
@@ -224,102 +258,106 @@ function p3listIn(){
     var p3liststr = '';
 
     for(j = 0 ; j < 12 ; j+=3){
-        p3liststr += '<tr><td>'+p3listarray[j]+'</td><td>'+p3listarray[j+1]+'</td><td>'+p3listarray[j+2]+'</td></tr>';
+        p3liststr += '<tr><td>'+p3listarray.others[j]+'</td><td>'+p3listarray.others[j+1]+'</td><td>'+p3listarray.others[j+2]+'</td></tr>';
     }
 
     var p3listtopstr = '';
 
     for(a = 0 ; a < 3 ; a++ ){
-        p3listtopstr += '<table><tr colspan=2><td><img src="/img/event/prereg/p3/cardlist'+a+'.png"></td>'
+        p3listtopstr += `
+        <table class="toptable">
+            <tr>
+                <td class="tableimg">
+                    <img src="/img/event/prereg/p3/cardlist`+(a+1)+`.png">
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td colspan=2  style="font-weight: bold;font-size: 30px;text-align: center;">`+p3listarray.name[a]+`</td>
+                        </tr>
+                        <tr>
+                            <td colspan=2>卡片屬性</td>
+                        </tr>`
+
+        
+        if(a == 0){
+            p3listtopstr += `
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+0]+`</td>
+                <td>`+p3listarray.value[a+1]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+2]+`</td>
+                <td>`+p3listarray.value[a+3]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+4]+`</td>
+                <td>`+p3listarray.value[a+5]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+6]+`</td>
+                <td>`+p3listarray.value[a+7]+`</td>
+            </tr>`
+        }
+        if(a == 1){
+            p3listtopstr += `
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+7]+`</td>
+                <td>`+p3listarray.value[a+8]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+9]+`</td>
+                <td>`+p3listarray.value[a+10]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+11]+`</td>
+                <td>`+p3listarray.value[a+12]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+13]+`</td>
+                <td>`+p3listarray.value[a+14]+`</td>
+            </tr>`
+        }
+        if(a == 2){
+            p3listtopstr += `
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+14]+`</td>
+                <td>`+p3listarray.value[a+15]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+16]+`</td>
+                <td>`+p3listarray.value[a+17]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+18]+`</td>
+                <td>`+p3listarray.value[a+19]+`</td>
+            </tr>
+            <tr style="color: #000">
+                <td>`+p3listarray.value[a+20]+`</td>
+                <td>`+p3listarray.value[a+21]+`</td>
+            </tr>`
+        }
+        
+        p3listtopstr += `
+        <tr>
+            <td colspan=2>羈絆技能</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="color: #6782ae">`+p3listarray.skill[a]+`</td>
+        </tr>
+        <tr>
+            <td colspan=2 style="color: #000">`+p3listarray.skill[a+3]+`</td>
+        </tr>
+        </table>
+        </td>
+        </tr>
+        </table>`
     }
 
     $('.poptitle').html('名士一覽');
-    $('.popTable').show().html(`
-    <table>
-        <tr colspan=2> 
-            <td>
-                <img src="/img/event/prereg/p3/cardlist1.png">
-            </td> 
-            <td>
-                <table>
-                    <tr colspan=2>
-                        <td>七花獸百花仙靈</td>
-                    </tr>
-                    <tr colspan=2>
-                        <td>卡片屬性</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                    <tr colspan=2>
-                        <td>羈絆技能</td>
-                    </tr>
-                    <tr colspan=2>
-                        <td>煉獄火海</td>
-                    </tr>
-                    <tr colspan=2>
-                        <td>羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr colspan=2> 
-            <td>
-                <img src="/img/event/prereg/p3/cardlist1.png">
-            </td> 
-            <td>
-                <table>
-                    <tr colspan=2>
-                        <td>七花獸百花仙靈</td>
-                    </tr>
-                    <tr colspan=2>
-                        <td>卡片屬性</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                    </tr>
-                    <tr colspan=2>
-                        <td>羈絆技能</td>
-                    </tr>
-                    <tr colspan=2>
-                        <td>煉獄火海</td>
-                    </tr>
-                    <tr colspan=2>
-                        <td>羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能羈絆技能</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr colspan=3 ><td>名稱</td></tr>` + p3liststr +
-    `</table>`);
+    $('.popTable').show().html(p3listtopstr + `
+        <table><tr><td colspan=3 >名稱</td></tr>` + p3liststr +`</table>`);
+    console.log(p3listtopstr)
     $('.popText').hide();
 }
 
