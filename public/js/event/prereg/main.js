@@ -3,6 +3,7 @@ var swiper = new Swiper(".mainSwiper", {
     direction: "vertical", //垂直輪播
     keyboard : true, //鍵盤上下換頁
     mousewheel: true,
+    loop: false,
     speed: 500,
     pagination: {
       el: ".swiper-pagination",
@@ -184,6 +185,7 @@ $('.soundbtn').on('click',function () {
 $('.XX').on("click",function(){
     $('.pop').fadeOut(200);
 })
+//p2初出江湖資訊彈窗
 $('.p2informationbtn').on("click",function(){
     $('.pop').fadeIn(200);
     p2informationIn();
@@ -192,6 +194,16 @@ $('.p2noticebtn').on("click",function(){
     $('.pop').fadeIn(200);
     p2noticeIn();
 })
+//p3結交名士資訊彈窗
+$('.p3informationbtn').on("click",function(){
+    $('.pop').fadeIn(200);
+    p3informationIn();
+})
+$('.p3noticebtn').on("click",function(){
+    $('.pop').fadeIn(200);
+    p3noticeIn();
+})
+//p4熊貓賽跑資訊彈窗
 $('.p4informationbtn').on("click",function(){
     $('.pop').fadeIn(200);
     p4informationIn();
@@ -200,8 +212,17 @@ $('.p4noticebtn').on("click",function(){
     $('.pop').fadeIn(200);
     p4noticeIn();
 })
+$('.p4awards').on("click",function(){
+    $('.pop').fadeIn(200);
+    p4awardIn();
+})
 
 //小彈窗
+//p2初出江湖綁定結果窗
+$('.page2 .checkbtn').on("click",function(){
+    $('.popS').fadeIn(200);
+})
+
 $('.popScheckBtn').on("click",function(){
     $('.popS').fadeOut(200);
 })

@@ -121,6 +121,111 @@
     }
 }
 
+@keyframes p3lantern {
+    0%{
+        opacity: 0;
+        rotate: -12deg;
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        rotate: 12deg;
+    }
+    40%{
+        rotate: -9deg;
+    }
+    60%{
+        rotate: 6deg;
+    }
+    80%{
+        rotate: -3deg;
+    }
+    100%{
+        opacity: 1;
+        rotate: 0deg;
+    }
+}
+
+@keyframes p3lantern2 {
+    0%{
+        rotate: -20deg;
+    }
+    20%{
+        rotate: 20deg;
+    }
+    40%{
+        rotate: -15deg;
+    }
+    60%{
+        rotate: 10deg;
+    }
+    80%{
+        rotate: -5deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes p3lanternLine {
+    0%{
+        rotate: 0deg;
+    }
+    20%{
+        rotate: -2deg;
+    }
+    40%{
+        rotate: 0deg;
+    }
+    50%{
+        rotate: -5deg;
+    }
+    65%{
+        rotate: 0deg;
+    }
+    80%{
+        rotate: -3deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes p3lanternLight {
+    0%{
+        opacity: 0;
+    }
+    2%{
+        opacity: 0.8;
+    }
+    4%{
+        opacity: 0.4;
+    }
+    6%,100%{
+        opacity: 1;
+    }
+}
+
+@keyframes p3cloud1 {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+@keyframes p3cloud2 {
+    0%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
 @keyframes p4cloud {
     0%{
         background-position: bottom left;
