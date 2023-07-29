@@ -42,21 +42,22 @@ function p2noticeIn() {
 }
 
 //p2"初出江湖"預約成功彈窗
-$(".popStitle").html("已完成初出江湖");
-$(".popSText")
-    .html(
-        "由衷地感謝您參與初出江湖活動，前往下一步完成更多任務，將有機會解鎖更多的獎勵。"
-    )
-    .css({
-        fontSize: "1.3rem",
-    });
-if (screen.width <= 425) {
-    $(".popSText").css({
-        fontSize: "1rem",
-    });
+function p2_success() {
+    $(".popStitle").html("已完成初出江湖");
+    $(".popSText")
+        .html(
+            "由衷地感謝您參與初出江湖活動，前往下一步完成更多任務，將有機會解鎖更多的獎勵。"
+        )
+        .css({
+            fontSize: "1.3rem",
+        });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
 }
-$(".popScheckBtn").html("確認");
-
 //p2"初出江湖"預約失敗彈窗-未登入
 function p2_not_login() {
     $(".popStitle").html("");

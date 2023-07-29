@@ -18,7 +18,6 @@ class CreatePreregUserTable extends Migration
             $table->string('user_id');
             $table->string('user_mobile')->nullable();
             $table->string('user_ip')->nullable();
-            $table->string('user_area')->nullable();
             $table->integer('celebrity')->nullable();
             $table->integer('race_total_answer');
             $table->dateTime('pre_time')->nullable();
