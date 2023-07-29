@@ -16,10 +16,12 @@ class CreatePreregUserTable extends Migration
         Schema::create('prereg_user', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
-            $table->string('user_mobile');
-            $table->string('user_ip');
-            $table->string('user_area');
-            $table->dateTime('pre_time');
+            $table->string('user_mobile')->nullable();
+            $table->string('user_ip')->nullable();
+            $table->string('user_area')->nullable();
+            $table->integer('celebrity')->nullable();
+            $table->integer('race_total_answer');
+            $table->dateTime('pre_time')->nullable();
             $table->timestamps();
         });
     }

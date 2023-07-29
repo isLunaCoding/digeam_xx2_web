@@ -393,10 +393,10 @@ function p3listIn(){
             </table>`
 
         }
-        
+
     }
 
-    
+
     $('.pop').fadeIn(200);
     $('.poptitle').html('名士一覽');
     $('.popTable').show().html(p3listtopstr + `
@@ -451,7 +451,7 @@ function p3cardinfo(){
     var p3cardinfostr = '';
     if(result == orange){
         if(result.num == 1){
-            
+
             $('.result_new').html(`<img src="/img/event/prereg/p3/orange/card1_M.png">`)
 
             var newinfostr = '';
@@ -489,7 +489,7 @@ function p3cardinfo(){
                     <td colspan=2>`+p3cardinfoarray.Ocard1[10]+`</td>
                 </tr>
             </table>`
-            
+
             $('.newinfo').html(newinfostr);
             $('.choosenew').on("click",function(){
                 p3cardinfostr += `
@@ -522,7 +522,7 @@ function p3cardinfo(){
                         <td colspan=2>`+p3cardinfoarray.Ocard1[10]+`</td>
                     </tr>
                 </table>`
-    
+
                 $('.nowcard').html(`<img src="/img/event/prereg/p3/orange/card1_L.png">`)
                 $('.cardinfo').html(p3cardinfostr);
                 $('.result_now').html(`<img src="/img/event/prereg/p3/orange/card1_S.png">`)
@@ -563,7 +563,7 @@ function p3cardinfo(){
 
             $('.nowcard').html(`<img src="/img/event/prereg/p3/orange/card2_L.png">`)
             $('.cardinfo').html(p3cardinfostr);
-            
+
         }
         if(result.num == 3){
             p3cardinfostr += `
@@ -599,11 +599,11 @@ function p3cardinfo(){
 
             $('.nowcard').html(`<img src="/img/event/prereg/p3/orange/card3_L.png">`)
             $('.cardinfo').html(p3cardinfostr);
-            
+
         }
     }
 
-    
+
     $('.samplerules').hide();
     $('.cardinfo').show();
     $('.keepnow').on("click",function(){
@@ -646,7 +646,7 @@ function p4informationIn(){
 
     for(j = 0 ; j < 4 ; j++){
         p4information += '<li>'+p4informationarray[j]+'</li>';
-    }  
+    }
 
     $('.poptitle').html('活動說明');
     $('.popTable').hide();
@@ -966,13 +966,3 @@ for(j = 0 ; j < 7 ; j++){
 }
 
 $('.p7rules').html(p7rulesstr);
-
-				
-				
-				
-				
-				
-				
-				
-				
-				
