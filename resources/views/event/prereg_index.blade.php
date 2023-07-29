@@ -99,9 +99,9 @@
                             <form action="" method="get" target="_blank">
                                 <div>
                                     <select name="country">
-                                        <option>台灣+886</option>
-                                        <option>香港+852</option>
-                                        <option>澳門+853</option>
+                                        <option value="+886">台灣+886</option>
+                                        <option value="+852">香港+852</option>
+                                        <option value="+853">澳門+853</option>
                                     </select>
                                     <input type="text" name="phone_num" placeholder="請輸入電話號碼(不含符號)">
                                 </div>
@@ -153,9 +153,6 @@
                         <div class="lantern_line"></div>
                         <p>距離<br>自選名士<br>0/30</p>
                     </div>
-                    <div class="p3text">
-                        <ul class="samplerules"></ul>
-                    </div>
                     <div class="card">
                         <div class="nocard">
                             <div class="card_bg"></div>
@@ -163,13 +160,15 @@
                             <div class="card_cloud2"></div>
                             <div class="card_frame"></div>
                         </div>
-                        <div class="nowcard">
-                            <!-- <img src="/img/event/prereg/p3/purple/card1_L.png"> -->
-                        </div>
+                        <div class="nowcard"></div>
                         <div class="getcardbtn"></div>
                         <p>您尚可拜訪5次</p>
                     </div>
-                    <div class="pandaGobtn">與他結義</div>
+                    <div class="p3text">
+                        <ul class="samplerules"></ul>
+                        <div class="cardinfo"></div>
+                    </div>
+                    <div class="p4Gobtn">與他結義</div>
                 </div>
                 <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
             </div>
@@ -314,12 +313,102 @@
     <!-- 結交名士任務板 -->
     <div class="p3missionpop">
         <div class="p3missionpopframe">
-            <div class="XX"></div>
+            <div class="p3XX"></div>
             <div class="p3missionpoptitle"></div>
-            <ul class="p3missionpopText"></ul>
+            <ul class="p3missionpopText">
+                <li>
+                    <div class="missiontext">每日首次登入頁面</div>
+                    <div class="missiontimes">拜訪次數+1</div>
+                    <div class="missionbtn"></div>
+                </li>
+                <li>
+                    <div class="missiontext">每日首次分享FB</div>
+                    <div class="missiontimes">拜訪次數+2</div>
+                    <div class="missionbtn"></div>
+                </li>
+                <li>
+                    <div class="missiontext">FB粉絲團按讚追蹤<span>(僅一次)</span></div>
+                    <div class="missiontimes">拜訪次數+2</div>
+                    <div class="missionbtn"></div>
+                </li>
+                <li>
+                    <div class="missiontext">進入官方DC群<span>(僅一次)</span></div>
+                    <div class="missiontimes">拜訪次數+2</div>
+                    <div class="missionbtn"></div>
+                </li>
+                <li>
+                    <div class="missiontext">進入CB活動頁面<span>(僅一次)</span></div>
+                    <div class="missiontimes">拜訪次數+2</div>
+                    <div class="missionbtn"></div>
+                </li>
+                <li>
+                    <div class="missiontext">進入官方網站<span>(僅一次)</span></div>
+                    <div class="missiontimes">拜訪次數+2</div>
+                    <div class="missionbtn"></div>
+                </li>
+                <li>
+                    <div class="missiontext">進入OB活動頁面<span>(僅一次)</span></div>
+                    <div class="missiontimes">拜訪次數+2</div>
+                    <div class="missionbtn"></div>
+                </li>
+            </ul>
         </div>
     </div>
 
+    <!-- 結交名士結果彈窗 -->
+    <div class="p3resultpop">
+        <div class="p3resultpopframe">
+            <div class="p3resultpoptitle">拜訪結果</div>
+            <div class="result_new">
+                <img src="/img/event/prereg/p3/purple/card1_M.png">
+            </div>
+            <div class="newinfo"></div>
+            <div class="p3subtitle">本次獲得</div>
+            <div class="result_now">
+                <img src="/img/event/prereg/p3/purple/card1_S.png">
+            </div>
+            <div class="nowinfo">
+                <table class="nowinfotable">
+                    <tr>
+                        <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>七花獸百花仙靈</td>
+                    </tr>
+                    <tr>
+                        <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
+                    </tr>
+                    <tr>
+                        <td>體質<span>+245</span></td>
+                        <td>體質<span>+245</span></td>
+                    </tr>
+                    <tr>
+                        <td>體質<span>+245</span></td>
+                        <td>體質<span>+245</span></td>
+                    </tr>
+                    <tr>
+                        <td>體質<span>+245</span></td>
+                        <td>體質<span>+245</span></td>
+                    </tr>
+                    <tr>
+                        <td>體質<span>+245</span></td>
+                        <td>體質<span>+245</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
+                    </tr>
+                    <tr>
+                        <td colspan=2><span>煉獄火海</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan=2>技能技能技能技能技能技能技能技能技能技能技能技能</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="p3subtitle">目前名士</div>
+            <div class="p3resultbtns">
+                <div class="choosenew">選擇本次獲得名士</div>
+                <div class="keepnow">保留目前名士</div>
+            </div>
+        </div>
+    </div>
 
     <!-- 大彈窗 -->
     <div class="pop">

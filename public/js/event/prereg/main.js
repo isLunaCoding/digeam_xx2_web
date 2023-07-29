@@ -206,10 +206,29 @@ $('.p3informationbtn').on("click",function(){
 $('.p3missionbtn').on("click",function(){
     p3missionIn();
 })
+$('.p3XX').on("click",function(){
+    $('.p3missionpop').fadeOut(200);
+})
 $('.p3noticebtn').on("click",function(){
     $('.pop').fadeIn(200);
     p3noticeIn();
 })
+$('.getcardbtn').on("click",function(){
+    $('.p3resultpop').fadeIn(200);
+    $('.result_new').hover(function(){
+        $('.newinfo').css({display:'block'})
+    },function(){
+        $('.newinfo').css({display:'none'})
+    });
+    $('.result_now').hover(function(){
+        $('.nowinfo').css({display:'block'})
+    },function(){
+        $('.nowinfo').css({display:'none'})
+    });
+    p3cardinfo();
+    
+})
+
 //p4熊貓賽跑資訊彈窗
 $('.p4informationbtn').on("click",function(){
     $('.pop').fadeIn(200);
