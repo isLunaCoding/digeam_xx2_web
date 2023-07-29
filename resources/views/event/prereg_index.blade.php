@@ -83,6 +83,8 @@
                                 <input type="hidden" name="return_url" id="return_url"
                                     value={{ base64_encode('https://xx2.digeam.com/prereg') }}>
                             </form>
+                            <div class ='login_user_id' style = 'text-align:center' data-val={{$_COOKIE['StrID']}}>目前登入的帳號是:{{$_COOKIE['StrID']}}</div>
+                            <button class="loginbtn" style = 'text-align:center' onclick="logout_dg()">登 出</button>
                         @else
                         <!-- 未登入 -->
                         <form id="logout-form" action="https://www.digeam.com/logout" method="POST"
@@ -90,20 +92,21 @@
                         <input type="hidden" name="return_url" id="return_url"
                             value={{ base64_encode('https://xx2.digeam.com/prereg') }}>
                         </form>
-                        @endif
+                        <div class ='login_user_id' style = 'text-align:center' data-val='null'></div>
                         <div class="loginbtn"><a href="https://www.digeam.com/login">登入</a></div>
                         <p class="register">※沒有會員嗎?<a href="https://www.digeam.com/register" target="blank">前往註冊</a></p>
+                        @endif
 
                         <div class="step2"></div>
                         <div class="step2checkbox">
                             <form action="" method="get" target="_blank">
                                 <div>
-                                    <select name="country">
+                                    <select class = 'mobile_area' name="country">
                                         <option value="+886">台灣+886</option>
                                         <option value="+852">香港+852</option>
                                         <option value="+853">澳門+853</option>
                                     </select>
-                                    <input type="text" name="phone_num" placeholder="請輸入電話號碼(不含符號)">
+                                    <input type="text" name="phone_num" class = 'mobile' placeholder="請輸入電話號碼(不含符號)">
                                 </div>
 
                                 <p><input type="checkbox" id="checkbox" name="noticecheck">
@@ -111,7 +114,7 @@
                                 </p>
                             </form>
                         </div>
-                        <div class="checkbtn" id="checkbtn">初出江湖</div>
+                        <div class="checkbtn check_p2" id="checkbtn">初出江湖</div>
                     </div>
                     <div class="p2awards">
                         <div class="awardbox"></div>
@@ -402,6 +405,7 @@
     <script src="js/event/prereg/main.js" type="text/javascript"></script>
     <script src="js/event/prereg/text.js" type="text/javascript"></script>
     <script src="js/event/prereg/rain.js" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js" type="text/javascript"></script>
 </body>
 
 </html>

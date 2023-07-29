@@ -226,7 +226,7 @@ $('.getcardbtn').on("click",function(){
         $('.nowinfo').css({display:'none'})
     });
     p3cardinfo();
-    
+
 })
 
 //p4熊貓賽跑資訊彈窗
@@ -245,9 +245,9 @@ $('.p4awards').on("click",function(){
 
 //小彈窗
 //p2初出江湖綁定結果窗
-$('.page2 .checkbtn').on("click",function(){
-    $('.popS').fadeIn(200);
-})
+// $('.page2 .checkbtn').on("click",function(){
+//     $('.popS').fadeIn(200);
+// })
 
 $('.popScheckBtn').on("click",function(){
     $('.popS').fadeOut(200);
