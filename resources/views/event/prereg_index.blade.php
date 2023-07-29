@@ -359,49 +359,11 @@
     <div class="p3resultpop">
         <div class="p3resultpopframe">
             <div class="p3resultpoptitle">拜訪結果</div>
-            <div class="result_new">
-                <img src="/img/event/prereg/p3/purple/card1_M.png">
-            </div>
+            <div class="result_new"></div>
             <div class="newinfo"></div>
             <div class="p3subtitle">本次獲得</div>
-            <div class="result_now">
-                <img src="/img/event/prereg/p3/purple/card1_S.png">
-            </div>
-            <div class="nowinfo">
-                <table class="nowinfotable">
-                    <tr>
-                        <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>七花獸百花仙靈</td>
-                    </tr>
-                    <tr>
-                        <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
-                    </tr>
-                    <tr>
-                        <td>體質<span>+245</span></td>
-                        <td>體質<span>+245</span></td>
-                    </tr>
-                    <tr>
-                        <td>體質<span>+245</span></td>
-                        <td>體質<span>+245</span></td>
-                    </tr>
-                    <tr>
-                        <td>體質<span>+245</span></td>
-                        <td>體質<span>+245</span></td>
-                    </tr>
-                    <tr>
-                        <td>體質<span>+245</span></td>
-                        <td>體質<span>+245</span></td>
-                    </tr>
-                    <tr>
-                        <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
-                    </tr>
-                    <tr>
-                        <td colspan=2><span>煉獄火海</span></td>
-                    </tr>
-                    <tr>
-                        <td colspan=2>技能技能技能技能技能技能技能技能技能技能技能技能</td>
-                    </tr>
-                </table>
-            </div>
+            <div class="result_now"></div>
+            <div class="nowinfo"></div>
             <div class="p3subtitle">目前名士</div>
             <div class="p3resultbtns">
                 <div class="choosenew">選擇本次獲得名士</div>

@@ -250,6 +250,11 @@ function p3listIn(){
             '齊天大聖',
             '吞靈獸',
             '愛之月老',
+            '不死冰骷髏',
+            '不死霜骷髏',
+            '開明獸',
+            '冰麒麟',
+            '寒冰巨甲',
             '愛之禮官',
             '愛之花童',
             '愛之隨從']
@@ -257,29 +262,46 @@ function p3listIn(){
 
     var p3liststr = '';
 
-    for(j = 0 ; j < 12 ; j+=3){
+    for(j = 0 ; j < 15 ; j+=3){
         p3liststr += '<tr><td>'+p3listarray.others[j]+'</td><td>'+p3listarray.others[j+1]+'</td><td>'+p3listarray.others[j+2]+'</td></tr>';
     }
 
     var p3listtopstr = '';
 
     for(a = 0 ; a < 3 ; a++ ){
-        p3listtopstr += `
-        <table class="toptable">
-            <tr>
-                <td class="tableimg">
-                    <img src="/img/event/prereg/p3/cardlist`+(a+1)+`.png">
-                </td>
-                <td>
-                    <table>
-                        <tr>
-                            <td colspan=2  style="font-weight: bold;font-size: 30px;text-align: center;">`+p3listarray.name[a]+`</td>
-                        </tr>
-                        <tr>
-                            <td colspan=2 style="font-weight: bold;font-size: 1.3rem;">卡片屬性</td>
-                        </tr>`
 
-        
+        if(screen.width <= 425){
+            p3listtopstr += `
+            <table class="toptable">
+                <tr>
+                    <td class="tableimg">
+                        <img src="/img/event/prereg/p3/cardlist`+(a+1)+`.png">
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td colspan=2  style="font-weight: bold;font-size: 1.2rem;text-align: center;">`+p3listarray.name[a]+`</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="font-weight: bold;font-size: 1.1rem;">卡片屬性</td>
+                            </tr>`
+        }else{
+            p3listtopstr += `
+            <table class="toptable">
+                <tr>
+                    <td class="tableimg">
+                        <img src="/img/event/prereg/p3/cardlist`+(a+1)+`.png">
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td colspan=2  style="font-weight: bold;font-size: 30px;text-align: center;">`+p3listarray.name[a]+`</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="font-weight: bold;font-size: 1.3rem;">卡片屬性</td>
+                            </tr>`
+        }
+
         if(a == 0){
             p3listtopstr += `
             <tr style="color: #000">
@@ -337,21 +359,41 @@ function p3listIn(){
                 <td>`+p3listarray.value[a+21]+`</td>
             </tr>`
         }
+
+        if(screen.width <= 425){
+            p3listtopstr += `
+            <tr>
+                <td colspan=2 style="font-weight: bold;font-size: 1.1rem;">羈絆技能</td>
+            </tr>
+            <tr>
+                <td colspan=2 style="color: #6782ae">`+p3listarray.skill[a]+`</td>
+            </tr>
+            <tr>
+                <td colspan=2 style="color: #000">`+p3listarray.skill[a+3]+`</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+            </table>`
+
+        }else{
+            p3listtopstr += `
+            <tr>
+                <td colspan=2 style="font-weight: bold;font-size: 1.3rem;">羈絆技能</td>
+            </tr>
+            <tr>
+                <td colspan=2 style="color: #6782ae">`+p3listarray.skill[a]+`</td>
+            </tr>
+            <tr>
+                <td colspan=2 style="color: #000">`+p3listarray.skill[a+3]+`</td>
+            </tr>
+            </table>
+            </td>
+            </tr>
+            </table>`
+
+        }
         
-        p3listtopstr += `
-        <tr>
-            <td colspan=2 style="font-weight: bold;font-size: 1.3rem;">羈絆技能</td>
-        </tr>
-        <tr>
-            <td colspan=2 style="color: #6782ae">`+p3listarray.skill[a]+`</td>
-        </tr>
-        <tr>
-            <td colspan=2 style="color: #000">`+p3listarray.skill[a+3]+`</td>
-        </tr>
-        </table>
-        </td>
-        </tr>
-        </table>`
     }
 
     
