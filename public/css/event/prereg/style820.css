@@ -385,7 +385,512 @@
             }
         }
         .page3{
-            background-color: #96c9bd;
+            background: url(/img/event/prereg/p3/bg3_m.jpg)no-repeat;
+            background-position: center;
+            background-size: cover;
+    
+            .bgclouds{
+                .bgcloud1{
+                    position: absolute;
+                    width: 100vw;
+                    height: 100vh;
+                    opacity: 0.7;
+                    background: url(/img/event/prereg/p3/bg_cloud1.png)no-repeat;
+                    background-position: bottom right;
+                    background-size: contain;
+                    animation: p6cloud1 10s infinite alternate ease-in;
+                }
+                .bgcloud2{
+                    position: absolute;
+                    top: 5%;
+                    left: -50%;
+                    width: 100vw;
+                    height: 100vh;
+                    opacity: 0.8;
+                    background: url(/img/event/prereg/p3/bg_cloud2.png)no-repeat;
+                    background-position: bottom left;
+                    background-size: contain;
+                    animation: p6cloud2 12s infinite alternate ease-in;
+                }
+            }
+    
+            .p3title{
+                position: absolute;
+                top: 5vh;
+                left: 50%;
+                translate: -50%;
+                width: 51vw;
+                height: 17vw;
+                background: url(/img/event/prereg/p3/title.png)no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+    
+            .p3main{
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 80vw;
+                height: 66vh;
+                background: url(/img/event/prereg/p3/mainBG3_m.png)no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+    
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: url(/img/event/prereg/p3/mainBG_m.png)no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                }
+    
+                .corner{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    
+                    & div{
+                        position: absolute;
+                        width: 80px;
+                        height: 81px;
+                        background: url(/img/event/prereg/p3/mainBG2.png)no-repeat;
+                        background-size: contain;
+                    }
+    
+                    .corner_LT{
+                        top: 25px;
+                        left: 45px;
+                        rotate: -90deg;
+                    }
+    
+                    .corner_RT{
+                        top: 25px;
+                        right: 45px;
+                        rotate: 0deg;
+                    }
+    
+                    .corner_LB{
+                        bottom: 25px;
+                        left: 45px;
+                        rotate: -180deg;
+                    }
+    
+                    .corner_RB{
+                        bottom: 25px;
+                        right: 45px;
+                        rotate: 90deg;
+                    }
+                }
+    
+                .p3info{
+                    position: absolute;
+                    top: -22%;
+                    right: 50%;
+                    translate: 50%;
+                    width: 100%;
+                    z-index: 1;
+    
+                    & p{
+                        font-size: 25px;
+                        font-weight: bold;
+                        color: #21345d;
+                    }
+                
+                    .p3listbtns{
+                        position: absolute;
+                        top: 75%;
+                        right: 0%;
+                        translate: 0%;
+                        color: #ffffff;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        text-align: center;
+                        width: 202px;
+                        height: 54px;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        background: url(/img/event/prereg/p3/btn3.png)no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        text-shadow: 0 0 5px #010101;
+                        filter: drop-shadow(0 0 5px #2d3447);
+                        cursor: pointer;
+                        transition: 0.3s;
+                        scale: 0.95;
+        
+                        &::before, &::after{
+                            position: absolute;
+                            content: '';
+                            width: 32px;
+                            height: 54px;
+                            transition: 0.3s;
+                        }
+        
+                        &::before{
+                            left: 0px;
+                            background: url(/img/event/prereg/p3/btn3_hover1.png)no-repeat;
+                            background-position: center;
+                        }
+        
+                        &::after{
+                            right: 0px;
+                            background: url(/img/event/prereg/p3/btn3_hover2.png)no-repeat;
+                            background-position: center;
+                        }
+        
+                        &:hover::before{
+                            transform: translateX(-5px);
+                        }
+        
+                        &:hover::after{
+                            transform: translateX(5px);
+                        }
+        
+                        &:hover{
+                            letter-spacing: 3px;
+                        }
+        
+                    }
+                }
+    
+                .p3btns{
+                    position: absolute;
+                    top: 100%;
+                    right: 50%;
+                    translate: 50%;
+                    width: 100%;
+                    height: auto;
+                    color: #ffffff;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    text-shadow: 0 0 5px #010101;
+                    filter: drop-shadow(0 0 5px #2d3447);
+                    scale: 1.1;
+    
+                    .p3informationbtn, .p3missionbtn, .p3noticebtn{
+                        position: relative;
+                        width: 202px;
+                        height: 60px;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        background: url(/img/event/prereg/p3/btn5.png)no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        scale: 0.95;
+    
+                        &::before, &::after{
+                            position: absolute;
+                            content: '';
+                            width: 32px;
+                            height: 54px;
+                            transition: 0.3s;
+                        }
+    
+                        &::before{
+                            left: 0px;
+                            background: url(/img/event/prereg/p3/btn3_hover1.png)no-repeat;
+                            background-position: center;
+                        }
+    
+                        &::after{
+                            right: 0px;
+                            background: url(/img/event/prereg/p3/btn3_hover2.png)no-repeat;
+                            background-position: center;
+                        }
+    
+                        &:hover::before{
+                            transform: translateX(-5px);
+                        }
+    
+                        &:hover::after{
+                            transform: translateX(5px);
+                        }
+    
+                        &:hover{
+                            letter-spacing: 3px;
+                        }
+                    }
+    
+                }
+    
+                .lanternbox{
+                    position: absolute;
+                    top: 0px;
+                    left: -90px;
+                    translate: 0%;
+                    width: calc(286px * 0.8);
+                    height: calc(627px * 0.8);
+                    transform-origin: calc(144px * 0.8) 0px;
+                    rotate: -20deg;
+                    opacity: 0;
+                    z-index: 1;
+                    pointer-events: none;
+    
+                    .lantern_light{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: url(/img/event/prereg/p3/lantern_light.png)no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                    }
+    
+                    .lantern{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: url(/img/event/prereg/p3/lantern.png)no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                    }
+    
+                    .lantern_line{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: url(/img/event/prereg/p3/lantern_line.png)no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        transform-origin: calc(146px * 0.8) calc(470px * 0.8);
+                    }
+    
+                    & p{
+                        position: absolute;
+                        top: 46%;
+                        left: 50%;
+                        translate: -50%;
+                        color: #a38a46;
+                        text-align: center;
+                        font-size: 19px;
+                        font-weight: bold;
+                    }
+    
+                }
+    
+                .p3text{
+                    position: absolute;
+                    top: 65%;
+                    right: 46%;
+                    translate: 50% -50%;
+                    width: 75%;
+                    height: 45%;
+    
+                    .samplerules{
+                        position: absolute;
+                        top: 50%;
+                        translate: 0 -50%;
+                        width: 80%;
+                        height: auto;
+    
+                        & li{
+                            list-style-image:url(/img/event/prereg/p3/li.png);
+                            color: #000;
+                            font-size: 21px;
+                            font-weight: bold;
+                            margin: 8px auto;
+                            
+                            & span{
+                                color: #FFF;
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+    
+                    }
+                    
+                    .cardinfo{
+                        position: absolute;
+                        top: 50%;
+                        translate: 0 -50%;
+                        width: 100%;
+                        height: 100%;
+                        display: none;
+    
+                        .cardname{
+                            position: absolute;
+                            top: 15%;
+                            width: 100%;
+                            height: auto;
+                            font-size: 55px;
+                            color: #FFF;
+                            font-family: 'Noto Serif TC', serif;
+                            text-shadow: 0 0 10px #103aa3;
+                            text-align: center
+                        }
+                        .cardname::before,.cardname::after{
+                            position: absolute;
+                            content: '';
+                            top: 6%;
+                            width: 35px;
+                            height: 100%;
+                            background: url(/img/event/prereg/p3/card_flower.png)no-repeat;
+                            background-position: center;
+                        }
+                        .cardname::before{
+                            left: 5%;
+                        }
+                        .cardname::after{
+                            right: 5%;
+                            scale: -1;
+                        }
+    
+                        .value,.skill{
+                            width: fit-content;
+                            height: auto;
+                            padding: 5px 15px;
+                            color: #FFF;
+                            font-size: 22px;
+                            font-weight: bold;
+                            background-color: #21345d;
+                            border-radius: 100px;
+                            margin-left: 10%;
+                        }
+    
+                        .value{
+                            margin-top: 35%;
+                        }
+    
+                        .valuetable,.skilltable{
+                            margin: 10px auto 15px auto;
+                            width: 70%;
+                            border-collapse: collapse;
+                            font-size: 21px;
+                            font-weight: bold;
+    
+                            & td{
+                                width: 50%;
+    
+                                & span{
+                                    color: #eaf4ff;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .card{
+                    position: absolute;
+                    top: 26%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    width: 40%;
+                    height: 90%;
+                    scale: 0.7;
+    
+                    .nocard,.nowcard{
+                        position: absolute;
+                        top: 45%;
+                        left: 50%;
+                        translate: -50% -50%;
+                        width: 411px;
+                        height: 411px;
+                        
+                        .card_bg{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background: url(/img/event/prereg/p3/card_bg.png)no-repeat;
+                            background-size: 100%;
+                            background-position: center;
+                            -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                        }
+                        
+                        .card_cloud1{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background: url(/img/event/prereg/p3/card_cloud1.png)no-repeat;
+                            background-size: cover;
+                            background-position: left;
+                            -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                            animation: p3cloud1 2s infinite alternate ease-in-out;
+                        }
+                        
+                        .card_cloud2{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background: url(/img/event/prereg/p3/card_cloud2.png)no-repeat;
+                            background-size: cover;
+                            background-position: right;
+                            -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                            animation: p3cloud2 2s infinite alternate ease-in-out;
+                        }
+    
+                        .card_frame{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background: url(/img/event/prereg/p3/card_frame.png)no-repeat;
+                            background-position: center;
+    
+                        }
+                    }
+    
+                    .getcardbtn{
+                        position: absolute;
+                        top: 65%;
+                        left: 50%;
+                        translate: -50%;
+                        width: 185px;
+                        height: 74px;
+                        background: url(/img/event/prereg/p3/btn2.png)no-repeat;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        scale: 1.1;
+    
+                        &:hover{
+                            transform: translateY(-5px);
+                        }
+                    }
+    
+                    & p{
+                        position: absolute;
+                        width: 100%;
+                        text-align: center;
+                        top: 74%;
+                        left: 50%;
+                        translate: -50%;
+                        color: #FFF;
+                        font-size: 28px;
+                        font-weight: bold;
+                    }
+                }
+    
+                .p4Gobtn{
+                    position: absolute;
+                    top: 85%;
+                    left: 50%;
+                    translate: -50%;
+                    width: 260px;
+                    height: 101px;
+                    background: url(/img/event/prereg/p3/btn1.png)no-repeat;
+                    transition: 0.5s;
+                    cursor: pointer;
+                    color: #FFF;
+                    text-shadow: 0 0 10px #000;
+                    font-size: 32px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 101px;
+                    filter: drop-shadow(0 0 5px #2d3447);
+    
+                    &:hover{
+                        background: url(/img/event/prereg/p3/btn1_hover.png)no-repeat;
+                    }
+    
+                }
+            }
         }
         .page4{
             background: url(/img/event/prereg/p4/bg4.png);
@@ -1656,6 +2161,332 @@
             }
         }
     }
+
+    /*結交名士任務板*/
+    .p3missionpop{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        font-family: 'Noto Serif TC', serif;
+        z-index: 10;
+        display: none;
+    
+        .p3missionpopframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 90vw;
+            height: 90vw;
+            background: url(/img/event/prereg/p3/missionBG_m.png)no-repeat;
+            background-size: contain;
+            background-position: center;
+    
+            .p3XX{
+                position: absolute;
+                top: 110%;
+                right: 50%;
+                translate: 50%;
+                width: 4vw;
+                height: 4vw;
+                cursor: pointer;
+                background: url(/img/event/prereg/p3/XX.png)no-repeat;
+                background-size: contain;
+                transition: 0.3s;
+                scale: 2.5;
+    
+                &:hover{
+                    rotate: 90deg;
+                }
+            }
+    
+            .p3missionpoptitle{
+                position: absolute;
+                top: 17%;
+                left: 52%;
+                translate: -50%;
+                width: 100%;
+                height: 53px;
+                background: url(/img/event/prereg/p3/missiontitle.png)no-repeat;
+                background-position: center;
+            }
+            .p3missionpopText{
+                margin: auto;
+                margin-top: 27%;
+                width: 70%;
+                height: 73%;
+                list-style: decimal;
+                color: #15386c;
+                font-size: 1.3rem;
+                overflow-y: scroll;
+                padding: 0;
+    
+                & li{
+                    list-style: none;
+                    margin: 10px 0;
+                    padding-left: 8%;
+                    height: 50px;
+                    background-color: #dfeaf5;
+                    line-height: 50px;
+                    display: flex;
+    
+                    .missiontext{
+                        width: 55%;
+                        height: 100%;
+                        & span{
+                            font-size: 1rem;
+                            color: #67729b;
+                        }
+                    }
+                    .missiontimes{
+                        width:20%;
+                        height: 100%;
+                        font-size: 1rem;
+                        text-align: end;
+                    }
+                    .missionbtn{
+                        width: 25%;
+                        height: 100%;
+                        background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        
+                        &:hover{
+                            background-position: right;
+                        }
+                    }
+    
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        left: 16%;
+                        width: 22px;
+                        height: 50px;
+                        background: url(/img/event/prereg/p3/mission_li.png) no-repeat center;
+                    }
+    
+                    &:nth-child(2n){
+                        background-color: #b7cee6;
+    
+                    }
+                }
+    
+                &::-webkit-scrollbar {
+                    width: 5px;
+                }
+    
+                &::-webkit-scrollbar-button {
+                    background: transparent;
+                }
+    
+                &::-webkit-scrollbar-track-piece {
+                    background: transparent;
+                }
+    
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 2px;
+                    background-color: #385a8d;
+                }
+    
+                &::-webkit-scrollbar-track {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    /*結交名士結果彈窗*/
+    .p3resultpop{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(127, 140, 149, 0.5);
+        font-family: 'Noto Serif TC', serif;
+        z-index: 10;
+        display: none;
+    
+        .p3resultpopframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 60vh;
+            height: 80vh;
+            background: url(/img/event/prereg/p3/resultpopBG.png)no-repeat;
+            background-size: contain;
+            background-position: center;
+    
+            .p3resultpoptitle{
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                translate: -50%;
+                font-size: 1.8rem;
+                color: #15386c;
+                text-align: center;
+    
+                &::before,&::after{
+                    position: absolute;
+                    content: '';
+                    top: 6%;
+                    width: 28px;
+                    height: 100%;
+                    background: url(/img/event/prereg/pop_l/popLtitle_icon.png)no-repeat;
+                    background-position: center;
+                }
+                &::before{
+                    left: -30%;
+                }
+                &::after{
+                    right: -30%;
+                    scale: -1;
+                }
+            }
+    
+            .p3subtitle{
+                position: relative;
+                margin: 57px auto;
+                width: calc(165px * 1);
+                height: calc(37px * 1);
+                background: url(/img/event/prereg/p3/subtitleBG.png)no-repeat;
+                background-position: top;
+                background-size: contain;
+                font-family: 'Noto Serif TC', serif;
+                color: #FFF;
+                font-size: 15pt;
+                text-align: center;
+                line-height: calc(37px * 1);
+                letter-spacing: 1px;
+                scale: 1.3;
+            }
+    
+            .result_new{
+                position: relative;
+                margin-top: 25%;
+                left: 50%;
+                translate: -50%;
+                width: 148px;
+                height: 214px;
+                background: url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                background-position: center;
+                background-size: contain;
+                box-shadow: 0 0 20px #ffdf9d; 
+                scale: 1.3;
+    
+                & img{
+                    width: 100%;
+                }
+            }
+    
+            .result_now{
+                position: relative;
+                left: 50%;
+                translate: -50%;
+                width: 130px;
+                height: 130px;
+                background: url(/img/event/prereg/p3/card1_S_frame.png)no-repeat;
+                background-position: center;
+                background-size: contain;
+                filter: drop-shadow(0 0 20px #ffdf9d);
+                scale: 1.3;
+    
+                & img{
+                    width: 100%;
+                }
+    
+            }
+    
+            .newinfo{
+                position: absolute;
+                top: 20%;
+                left: 70%;
+                translate: -50%;
+                width: 200px;
+                height: 300px;
+                background-image: linear-gradient(to bottom, rgba(156, 179, 206, 0.75), rgba(112, 157, 202, 0.75));
+                border: 1px solid #003098;
+                z-index: 1;
+                display: none;
+                pointer-events: none;
+                scale: 1.3;
+            }
+    
+            .nowinfo{
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                translate: -50%;
+                width: 200px;
+                height: 300px;
+                background-image: linear-gradient(to bottom, rgba(156, 179, 206, 0.75), rgba(112, 157, 202, 0.75));
+                border: 1px solid #003098;
+                z-index: 1;
+                display: none;
+                pointer-events: none;
+                scale: 1.3;
+            }
+                    
+            .newinfotable,.nowinfotable{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 90%;
+                height: 100%;
+                font-weight: bold;
+    
+                & tr{
+                    font-size: 15px;
+    
+                    & td{
+                        width: 50%;
+    
+                        & span{
+                            color: #eaf4ff;
+                        }
+                    }
+                }
+            }
+    
+            .p3resultbtns{
+                position: relative;
+                left: 50%;
+                translate: -50%;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                scale: 1.1;
+    
+                .choosenew,.keepnow{
+                    cursor: pointer;
+                    text-align: center;
+                    color: #FFF;
+                    line-height: 50px;
+                    letter-spacing: 2px;
+                    margin: auto 2%;
+                    background-image: linear-gradient(to bottom, #606994, #21466a);
+                    transition: 0.3s;
+    
+                    &:hover{
+                        transform: translateY(-2px);
+                    }
+                }
+    
+                .choosenew{
+                    width: 40%;
+                    height: 50px;
+                }
+                .keepnow{
+                    width: 30%;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    
 
     /*大彈窗*/
     .pop{
