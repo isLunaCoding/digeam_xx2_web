@@ -12,7 +12,7 @@ class preregController extends Controller
         if ($request->type == 'login') {
             $result = preregController::login($request);
             return $result;
-        } else if ($request->type == 'mobile_login ') {
+        } else if ($request->type == 'mobile_login') {
             $result = preregController::MobileLogin($request);
             return $result;
         } else if ($request->type == 'play_lottery') {
@@ -65,14 +65,23 @@ class preregController extends Controller
         ]);
     }
     public function MobileLogin($request){
-        $checkUser = PreregUser::where('user_id',$request->user)->first();
-        if(!$checkUser){
-            $newUser = new PreregUser();
-            $newUser->user_id = $request->user;
-            $newUser->user_ip = $real_ip;
-            $newUser->save();
+        $checkPhoneAlreadyUser = PreregUser::where('user_mobile',$request->phone)->first();
+        if($checkPhoneAlreadyUser){
+            return response()->json([
+                'status' => -98,
+            ]);
         }
         $findUser = PreregUser::where('user_id',$request->user)->first();
-        return $findUser;
+        if($findUser->user_mobile !=''){
+            return response()->json([
+                'status' => -99,
+            ]);
+        }else{
+            $findUser->user_mobile = $request->phone;
+            $findUser->save();
+            return response()->json([
+                'status' => 1,
+            ]);
+        }
     }
 }

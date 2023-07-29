@@ -60,7 +60,16 @@ $(".check_p2").on("click", function () {
                 phone: _phone,
             },
             function (res) {
-                console.log(res);
+                if(res.status==-99){
+                    p2_already_pre();
+                    $(".popS").fadeIn(200);
+                }else if(res.status==-98){
+                    p2_mobile_already_use();
+                    $(".popS").fadeIn(200);
+                }else{
+                    p2_success();
+                    $(".popS").fadeIn(200);
+                }
             }
         );
     }
