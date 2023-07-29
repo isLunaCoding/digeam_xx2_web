@@ -185,8 +185,8 @@ function p3noticeIn(){
 
 //p3"結交名士"遊戲玩法
 var p3samplerulesarray = [
-    '完成<span onclick="missionpop()">指定任務</span>，可取得拜訪次數。',
-    '點選拜訪名士，取得名士卡片。<span class="listpop">名士一覽</span>',
+    '完成<span onclick="p3missionIn()" >指定任務</span>，可取得拜訪次數。',
+    '點選拜訪名士，取得名士卡片。<span class="listpop" onclick="p3listIn()">名士一覽</span>',
     '拜訪名士後，將會顯示該名士的能力值等相關介紹。',
     '若抽取的名士不符合需求，可透過完成各項指定任務，取得拜訪次數後重複抽取。',
     '可與拜訪的名士進行結義，進行結義後即為最終結果，不可變更。']
@@ -354,16 +354,243 @@ function p3listIn(){
         </table>`
     }
 
+    
+    $('.pop').fadeIn(200);
     $('.poptitle').html('名士一覽');
     $('.popTable').show().html(p3listtopstr + `
-        <table><tr><td colspan=3 >名稱</td></tr>` + p3liststr +`</table>`);
-    console.log(p3listtopstr)
+        <table class="othertable"><tr><td colspan=3 style="font-weight: bold;background-color: #627eac;color: #FFF;">名稱</td></tr>` + p3liststr +`</table>`);
     $('.popText').hide();
 }
 
+//p3"結交名士"結果資訊
+function p3cardinfo(){
+    var p3cardinfoarray = {
+        Ocard1:[
+            '七花獸百花仙靈',
+            '體質<span>+245</span>',
+            '精神<span>+245</span>',
+            '耐力<span>+245</span>',
+            '罡氣<span>+4480</span>',
+            '物理防禦<span>+204</span>',
+            '法術防禦<span>+204</span>',
+            '生命值<span>+10181</span>',
+            '',
+            '煉獄火海',
+            '對前方區域造成傷害，該區域中會出現火海持續燃燒10秒。'
+        ],
+        Ocard2:[
+            '仙道盟主沈仲陽',
+            '力量<span>+204</span>',
+            '智力<span>+204</span>',
+            '攻擊力<span>+285</span>',
+            '罡氣攻擊<span>+244</span>',
+            '物理攻擊<span>+244</span>',
+            '法術攻擊<span>+244</span>',
+            '',
+            '',
+            '兩儀反轉',
+            '使用兩儀反轉後，所有受到的傷害將轉變為恢復生命，持續20秒。'
+        ],
+        Ocard3:[
+            '愛之紅娘',
+            '體質<span>+245</span>',
+            '精神<span>+245</span>',
+            '耐力<span>+245</span>',
+            '罡氣<span>+4480</span>',
+            '物理防禦<span>+204</span>',
+            '法術防禦<span>+204</span>',
+            '生命值<span>+10181</span>',
+            '',
+            '快跑女孩',
+            '將目標變為毫無還手之力的小女孩。'
+        ]
+    }
+
+    var p3cardinfostr = '';
+    if(result == orange){
+        if(result.num == 1){
+            
+            $('.result_new').html(`<img src="/img/event/prereg/p3/orange/card1_M.png">`)
+
+            var newinfostr = '';
+            newinfostr += `
+            <table class="nowinfotable">
+                <tr>
+                    <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>`+p3cardinfoarray.Ocard1[0]+`</td>
+                </tr>
+                <tr>
+                    <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard1[1]+`</td>
+                    <td>`+p3cardinfoarray.Ocard1[2]+`</td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard1[3]+`</td>
+                    <td>`+p3cardinfoarray.Ocard1[4]+`</td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard1[5]+`</td>
+                    <td>`+p3cardinfoarray.Ocard1[6]+`</td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard1[7]+`</td>
+                    <td>`+p3cardinfoarray.Ocard1[8]+`</td>
+                </tr>
+                <tr>
+                    <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
+                </tr>
+                <tr>
+                    <td colspan=2><span>`+p3cardinfoarray.Ocard1[9]+`</span></td>
+                </tr>
+                <tr>
+                    <td colspan=2>`+p3cardinfoarray.Ocard1[10]+`</td>
+                </tr>
+            </table>`
+            
+            $('.newinfo').html(newinfostr);
+            $('.choosenew').on("click",function(){
+                p3cardinfostr += `
+                <div class="cardname">`+p3cardinfoarray.Ocard1[0]+`</div>
+                <div class="value">卡片屬性</div>
+                <table class="valuetable">
+                    <tr>
+                        <td>`+p3cardinfoarray.Ocard1[1]+`</td>
+                        <td>`+p3cardinfoarray.Ocard1[2]+`</td>
+                    </tr>
+                    <tr>
+                        <td>`+p3cardinfoarray.Ocard1[3]+`</td>
+                        <td>`+p3cardinfoarray.Ocard1[4]+`</td>
+                    </tr>
+                    <tr>
+                        <td>`+p3cardinfoarray.Ocard1[5]+`</td>
+                        <td>`+p3cardinfoarray.Ocard1[6]+`</td>
+                    </tr>
+                    <tr>
+                        <td>`+p3cardinfoarray.Ocard1[7]+`</td>
+                        <td>`+p3cardinfoarray.Ocard1[8]+`</td>
+                    </tr>
+                </table>
+                <div class="skill">羈絆技能</div>
+                <table class="skilltable">
+                    <tr>
+                        <td colspan=2><span>`+p3cardinfoarray.Ocard1[9]+`</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan=2>`+p3cardinfoarray.Ocard1[10]+`</td>
+                    </tr>
+                </table>`
+    
+                $('.nowcard').html(`<img src="/img/event/prereg/p3/orange/card1_L.png">`)
+                $('.cardinfo').html(p3cardinfostr);
+                $('.result_now').html(`<img src="/img/event/prereg/p3/orange/card1_S.png">`)
+                $('.nowinfo').html(newinfostr);
+            })
+        }
+        if(result.num == 2){
+            p3cardinfostr += `
+            <div class="cardname">`+p3cardinfoarray.Ocard2[0]+`</div>
+            <div class="value">卡片屬性</div>
+            <table class="valuetable">
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard2[1]+`</td>
+                    <td>`+p3cardinfoarray.Ocard2[2]+`</td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard2[3]+`</span></td>
+                    <td>`+p3cardinfoarray.Ocard2[4]+`</span></td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard2[5]+`</span></td>
+                    <td>`+p3cardinfoarray.Ocard2[6]+`</span></td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard2[7]+`</span></td>
+                    <td>`+p3cardinfoarray.Ocard2[8]+`</span></td>
+                </tr>
+            </table>
+            <div class="skill">羈絆技能</div>
+            <table class="skilltable">
+                <tr>
+                    <td colspan=2><span>`+p3cardinfoarray.Ocard2[9]+`</span></td>
+                </tr>
+                <tr>
+                    <td colspan=2>`+p3cardinfoarray.Ocard2[10]+`</td>
+                </tr>
+            </table>`
+
+            $('.nowcard').html(`<img src="/img/event/prereg/p3/orange/card2_L.png">`)
+            $('.cardinfo').html(p3cardinfostr);
+            
+        }
+        if(result.num == 3){
+            p3cardinfostr += `
+            <div class="cardname">`+p3cardinfoarray.Ocard3[0]+`</div>
+            <div class="value">卡片屬性</div>
+            <table class="valuetable">
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard3[1]+`</td>
+                    <td>`+p3cardinfoarray.Ocard3[2]+`</td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard3[3]+`</span></td>
+                    <td>`+p3cardinfoarray.Ocard3[4]+`</span></td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard3[5]+`</span></td>
+                    <td>`+p3cardinfoarray.Ocard3[6]+`</span></td>
+                </tr>
+                <tr>
+                    <td>`+p3cardinfoarray.Ocard3[7]+`</span></td>
+                    <td>`+p3cardinfoarray.Ocard3[8]+`</span></td>
+                </tr>
+            </table>
+            <div class="skill">羈絆技能</div>
+            <table class="skilltable">
+                <tr>
+                    <td colspan=2><span>`+p3cardinfoarray.Ocard3[9]+`</span></td>
+                </tr>
+                <tr>
+                    <td colspan=2>`+p3cardinfoarray.Ocard3[10]+`</td>
+                </tr>
+            </table>`
+
+            $('.nowcard').html(`<img src="/img/event/prereg/p3/orange/card3_L.png">`)
+            $('.cardinfo').html(p3cardinfostr);
+            
+        }
+    }
+
+    
+    $('.samplerules').hide();
+    $('.cardinfo').show();
+    $('.keepnow').on("click",function(){
+        $('.p3resultpop').fadeOut(200)
+    })
+
+}
+
+
+$('.popStitle').html('是否要選擇這位名士取代原先保留的名士?');
+$('.popSText').html('※請注意，本次選擇將會放棄原先保留之獎勵，是否要以這位名士取代原本結果?​').css({
+    fontSize: '1.3rem'
+});
+if(screen.width <= 425){
+    $('.popSText').css({
+        fontSize: '1rem'
+    });
+}
+$('.popScheckBtn').html('確認');
+
 //p3"結交名士"任務佈告
 function p3missionIn(){
+    $('.p3missionpop').fadeIn(200);
 }
+
+//若任務完成時
+// $('.missionbtn').css({
+//     background: 'url(/img/event/prereg/p3/seal.png) no-repeat center'
+// });
 
 //p4"熊貓賽跑"活動說明
 function p4informationIn(){
@@ -407,18 +634,71 @@ function p4noticeIn(){
 
 //p4"熊貓賽跑"獎勵列表
 function p4awardIn(){
-    var p4awardarray = [
-        '此活動需完成事前預約活動才可參加。']
+    var p4award1array = {
+        times:[
+            '猜對次數',
+            '1',
+            '3',
+            '5',
+            '7',
+            '10'],
+        award:[
+            '獎勵',
+            '玄獸技能升級寶典x10',
+            '根骨丹x10',
+            '隨機熊貓元靈x1',
+            '強骨丹x10',
+            '隨機熊貓元靈x1'
+        ],
+        info:[
+            '獎勵說明',
+            '玄獸技能升級消耗的道具',
+            '用以強化玄獸/仙尊/仙童根骨等級，最高提升至10',
+            '與另一隻熊貓元靈一起孕育可獲得玄獸熊貓，孕育出的熊貓可協助玩家戰鬥',
+            '用以強化玄獸/仙尊/仙童根骨等級，從10開始最高可提升至16',
+            '與另一隻熊貓元靈一起孕育可獲得玄獸熊貓，孕育出的熊貓可協助玩家戰鬥'
+        ]
+    }
+    var p4award2array = {
+        times:[
+            '競猜次數',
+            '5',
+            '10',
+            '15',
+            '20',
+            '30'],
+        award:[
+            '獎勵數量',
+            '三級體質玄石',
+            '三級防禦玄石',
+            '新手玄獸經驗丹',
+            '濺射',
+            '靈界精魄*200'
+        ],
+        info:[
+            '獎勵說明',
+            '鑲嵌效果：體質+90，可鑲嵌至玄獸護甲、腰帶、護腿、護足上，三個三級體質玄石可以合成一個四級體質玄石',
+            '鑲嵌效果：耐力+90 精神+90，可鑲嵌至玄獸護甲、腰帶、護腿、護足上，三個三級防禦玄石可以合成一個四級防禦玄石',
+            '使用後可增加玄獸經驗值',
+            '玄獸技能書，可以讓玄獸學會技能濺射，以特殊身法攻擊目標及其周圍半徑16米內最多8個敵人，造成50%的特攻傷害，如果目標是怪物，造成的傷害提高400%',
+            '用於兌換玄獸裝備'
+        ]
+    }
 
-    var p4awardstr = '';
+    var p4award1str = '',p4award2str = '';
 
     for(j = 0 ; j < 6 ; j++){
-        p4awardstr += '<li>'+p4awardarray[j]+'</li>';
+        p4award1str += '<tr><td>'+p4award1array.times[j]+'</td><td>'+p4award1array.award[j]+'</td><td>'+p4award1array.info[j]+'</td></tr>';
+    }
+
+    for(j = 0 ; j < 6 ; j++){
+        p4award2str += '<tr><td style="width: 10%;">'+p4award2array.times[j]+'</td><td style="width: 30%;">'+p4award2array.award[j]+'</td><td style="width:60%;">'+p4award2array.info[j]+'</td></tr>';
     }
 
     $('.poptitle').html('獎勵列表');
-    $('.popTable').hide();
-    $('.popText').show().html(p4awardstr);
+    $('.popTable').show().html(`<table class="othertable"><tr><td colspan=3 style="font-weight: bold;background-color: #627eac;color: #FFF;">累計猜對獎勵</td></tr>`+p4award1str + `</table><p style="text-align: center;">備註:每隻熊貓勝出的機率均為33%</p>`+
+    `<table class="othertable"><tr><td colspan=3 style="font-weight: bold;background-color: #627eac;color: #FFF;">累計猜對獎勵</td></tr>`+p4award2str + `</table>`);;
+    $('.popText').hide();
 }
 
 //p6職業介紹資料
