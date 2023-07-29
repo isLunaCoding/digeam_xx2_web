@@ -41,6 +41,11 @@ class preregController extends Controller
     }
 
     public function login($request){
+        if($request->user == null){
+            return response()->json([
+                'status' => -99,
+            ]);
+        }
         if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
             $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
         } else {
@@ -55,7 +60,9 @@ class preregController extends Controller
             $newUser->save();
         }
         $findUser = PreregUser::where('user_id',$request->user)->first();
-        return $findUser;
+        return response()->json([
+            'status' => 1,
+        ]);
     }
     public function MobileLogin($request){
         $checkUser = PreregUser::where('user_id',$request->user)->first();
