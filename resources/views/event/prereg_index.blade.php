@@ -1,6 +1,3 @@
-<?php
-$_COOKIE['StrID'] = 'jacky0996';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
