@@ -517,7 +517,8 @@ function p3listIn() {
 }
 
 //p3"結交名士"結果資訊
-function p3cardinfo() {
+function p3cardinfo(color,num) {
+    console.log(color,num)
     var p3cardinfoarray = {
         Ocard1: [
             "七花獸百花仙靈",
@@ -782,7 +783,7 @@ function p3cardinfo() {
     };
 
     var p3cardinfostr = "";
-    if (result == orange) {
+    if (color == 'orange') {
         if (result.num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/orange/card1_M.png">`
@@ -1165,8 +1166,8 @@ function p3cardinfo() {
                 $(".nowinfo").html(newinfostr);
             });
         }
-    }else if (result == purple) {
-        if (result.num == 1) {
+    }else if (color == 'purple') {
+        if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card1_M.png">`
             );
@@ -1293,7 +1294,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 2) {
+        }else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card2_M.png">`
             );
@@ -1420,7 +1421,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 3) {
+        }else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card3_M.png">`
             );
@@ -1547,7 +1548,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 4) {
+        }else if (num == 4) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card4_M.png">`
             );
@@ -1674,7 +1675,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 5) {
+        }else if (num == 5) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card5_M.png">`
             );
@@ -1801,7 +1802,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 6) {
+        }else if (num == 6) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card6_M.png">`
             );
@@ -1929,8 +1930,8 @@ function p3cardinfo() {
                 $(".nowinfo").html(newinfostr);
             });
         }
-    }else if (result == blue) {
-        if (result.num == 1) {
+    }else if (color == 'blue') {
+        if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/blue/card1_M.png">`
             );
@@ -2057,7 +2058,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 2) {
+        }else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/blue/card2_M.png">`
             );
@@ -2184,7 +2185,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 3) {
+        }else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/blue/card3_M.png">`
             );
@@ -2312,8 +2313,8 @@ function p3cardinfo() {
                 $(".nowinfo").html(newinfostr);
             });
         }
-    }else if (result == green) {
-        if (result.num == 1) {
+    }else if (color == 'green') {
+        if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card1_M.png">`
             );
@@ -2440,7 +2441,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 2) {
+        }else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card2_M.png">`
             );
@@ -2567,7 +2568,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 3) {
+        }else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card3_M.png">`
             );
@@ -2694,7 +2695,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 4) {
+        }else if (num == 4) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card4_M.png">`
             );
@@ -2821,7 +2822,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 5) {
+        }else if (num == 5) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card5_M.png">`
             );
@@ -2949,8 +2950,8 @@ function p3cardinfo() {
                 $(".nowinfo").html(newinfostr);
             });
         }
-    }else if (result == white) {
-        if (result.num == 1) {
+    }else if (color == 'white') {
+        if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/white/card1_M.png">`
             );
@@ -3077,7 +3078,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 2) {
+        }else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/white/card2_M.png">`
             );
@@ -3204,7 +3205,7 @@ function p3cardinfo() {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 3) {
+        }else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/white/card3_M.png">`
             );
@@ -3339,6 +3340,77 @@ function p3cardinfo() {
     $(".keepnow").on("click", function () {
         $(".p3resultpop").fadeOut(200);
     });
+
+}
+
+//p3"結交名士"次數不夠
+function p3_error_not_enough() {
+    $(".popStitle").html("");
+    $(".popSText").html("拜訪次數不足,請先完成任務獲取拜訪機會").css({
+        fontSize: "1.8rem",
+    });
+    if (screen.width <= 820) {
+        $(".popSText").css({
+            fontSize: "1.6rem",
+        });
+    }
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1.2rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
+}
+//p3"結交名士"已領取過
+function p3_already_get() {
+    $(".popStitle").html("您已領取過了！​");
+    $(".popSText")
+        .html(
+            ""
+        )
+        .css({
+            fontSize: "1.3rem",
+        });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
+}
+//p3"結交名士"未完成預約
+function p3_please_pre() {
+    $(".popStitle").html("請先完成預約");
+    $(".popSText")
+        .html(
+            ""
+        )
+        .css({
+            fontSize: "1.3rem",
+        });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
+}
+//p3"結交名士"未完成預約
+function p3_success() {
+    $(".popStitle").html("已完成任務");
+    $(".popSText")
+        .html(
+            ""
+        )
+        .css({
+            fontSize: "1.3rem",
+        });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
 }
 
 function p3choose(){
