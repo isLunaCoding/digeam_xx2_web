@@ -3341,6 +3341,43 @@ function p3cardinfo() {
     });
 }
 
+function p3choose(){
+    $(".p3choosepop").fadeIn(200);
+    $(".card1").on("click",function(){
+        $(".card1").css({
+            boxShadow: '0 0 20px #ff1919'
+        })
+        $(".card2").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+        $(".card3").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+    })
+    $(".card2").on("click",function(){
+        $(".card2").css({
+            boxShadow: '0 0 20px #ff1919'
+        })
+        $(".card1").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+        $(".card3").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+    })
+    $(".card3").on("click",function(){
+        $(".card3").css({
+            boxShadow: '0 0 20px #ff1919'
+        })
+        $(".card2").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+        $(".card1").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+    })
+}
+
 $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
 $(".popSText")
     .html(

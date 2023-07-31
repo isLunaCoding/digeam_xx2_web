@@ -228,6 +228,21 @@ $('.getcardbtn').on("click",function(){
     p3cardinfo();
 
 })
+$('.card1').hover(function(){
+    $('.card1info').css({display:'block'})
+},function(){
+    $('.card1info').css({display:'none'})
+});
+$('.card2').hover(function(){
+    $('.card2info').css({display:'block'})
+},function(){
+    $('.card2info').css({display:'none'})
+});
+$('.card3').hover(function(){
+    $('.card3info').css({display:'block'})
+},function(){
+    $('.card3info').css({display:'none'})
+});
 
 //p4熊貓賽跑資訊彈窗
 $('.p4informationbtn').on("click",function(){
