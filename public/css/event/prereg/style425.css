@@ -1367,7 +1367,7 @@
                         border-radius: 30px;
                         width: calc(70vw - 60px);
                         height: calc(103vw - 60px);
-                        background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                         background-size: cover;
                         background-position: center;
                     }
@@ -1392,19 +1392,19 @@
                     }
     
                     .p5slide1{
-                        background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                     }
     
                     .p5slide2{
-                        background: url(/img/event/prereg/p5/slide2.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide2_m.jpg)no-repeat;
                     }
     
                     .p5slide3{
-                        background: url(/img/event/prereg/p5/slide3.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide3_m.jpg)no-repeat;
                     }
     
                     .p5slide4{
-                        background: url(/img/event/prereg/p5/slide4.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide4_m.jpg)no-repeat;
                     }
         
                     .p5slide1,.p5slide2,.p5slide3,.p5slide4{

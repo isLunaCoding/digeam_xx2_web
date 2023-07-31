@@ -1,7 +1,7 @@
 //輪播主體設定
 var swiper = new Swiper(".mainSwiper", {
     direction: "vertical", //垂直輪播
-    keyboard : true, //鍵盤上下換頁
+    keyboard : false, //鍵盤上下換頁
     mousewheel: true,
     loop: false,
     speed: 500,
@@ -259,6 +259,19 @@ let k = 0;
 if(screen.width <= 820){
     $('.menubtn').addClass("menubtn2");
     $('.menubtn').removeClass("menubtn1");
+
+    $('.swiper-pagination').on("click",function(){
+        k -= 1;
+        $('.menubtn1,.menubtn2').removeClass("menubtnOpen");
+        $('.menubtn2').css({
+            backgroundImage: 'linear-gradient(to bottom, #98a8cb, #424e7e)'
+        })
+        $('.barLine').delay(200).animate({
+            top: '-100vh',
+            opacity: '0'
+        });
+        $('.bar').fadeOut(200);
+    })
 }else{
     $('.menubtn').addClass("menubtn1");
     $('.menubtn').removeClass("menubtn2");
@@ -294,17 +307,4 @@ $('.menubtn1,.menubtn2').on("click",function(){
         });
         $('.bar').fadeOut(200);
     }
-})
-
-$('.swiper-pagination').on("click",function(){
-    k -= 1;
-    $('.menubtn1,.menubtn2').removeClass("menubtnOpen");
-    $('.menubtn2').css({
-        backgroundImage: 'linear-gradient(to bottom, #98a8cb, #424e7e)'
-    })
-    $('.barLine').delay(200).animate({
-        top: '-100vh',
-        opacity: '0'
-    });
-    $('.bar').fadeOut(200);
 })

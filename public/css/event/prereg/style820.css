@@ -1356,7 +1356,7 @@
                         border-radius: 30px;
                         width: calc(70vw - 60px);
                         height: calc(103vw - 60px);
-                        background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                         /* background: none; */
                         background-size: cover;
                         background-position: center;
@@ -1382,19 +1382,19 @@
                     }
     
                     .p5slide1{
-                        background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                     }
     
                     .p5slide2{
-                        background: url(/img/event/prereg/p5/slide2.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide2_m.jpg)no-repeat;
                     }
     
                     .p5slide3{
-                        background: url(/img/event/prereg/p5/slide3.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide3_m.jpg)no-repeat;
                     }
     
                     .p5slide4{
-                        background: url(/img/event/prereg/p5/slide4.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide4_m.jpg)no-repeat;
                     }
         
                     .p5slide1,.p5slide2,.p5slide3,.p5slide4{
@@ -2486,7 +2486,6 @@
             }
         }
     }
-    
 
     /*大彈窗*/
     .pop{
@@ -2675,6 +2674,48 @@
             }
         }
     }
+    
+    /*熊貓賽跑影片窗*/
+    .p4resultpop{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 9;
+        display: none;
+    
+        .p4resultpopframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 90vw;
+            height: 90vw;
+    
+            .pandavideo{
+                position: absolute;
+                width: 70%;
+                height: 70%;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+            }
+    
+            .booframe{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: url(/img/event/prereg/p4/resultframe.png)no-repeat;
+                background-size: contain;
+                background-position: center;
+                z-index: 1;
+            }
+        }
+    }
+
+    
     
 }
 
@@ -2920,8 +2961,7 @@
                         border-radius: 30px;
                         width: calc(70vw - 60px);
                         height: calc(103vw - 60px);
-                        background: url(/img/event/prereg/p5/slide1.png)no-repeat;
-                        /* background: none; */
+                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                         background-size: cover;
                         background-position: center;
                     }
@@ -2946,19 +2986,19 @@
                     }
     
                     .p5slide1{
-                        background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                     }
     
                     .p5slide2{
-                        background: url(/img/event/prereg/p5/slide2.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide2_m.jpg)no-repeat;
                     }
     
                     .p5slide3{
-                        background: url(/img/event/prereg/p5/slide3.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide3_m.jpg)no-repeat;
                     }
     
                     .p5slide4{
-                        background: url(/img/event/prereg/p5/slide4.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide4_m.jpg)no-repeat;
                     }
         
                     .p5slide1,.p5slide2,.p5slide3,.p5slide4{

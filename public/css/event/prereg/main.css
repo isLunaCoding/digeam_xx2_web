@@ -495,7 +495,7 @@ body{
                 position: absolute;
                 top: -22%;
                 right: 0%;
-                width: 35%;
+                width: 32%;
                 z-index: 1;
 
                 & p{
@@ -506,7 +506,7 @@ body{
             
                 .p3listbtns{
                     position: absolute;
-                    top: 75%;
+                    top: 80%;
                     right: -4%;
                     translate: 0%;
                     color: #ffffff;
@@ -973,7 +973,7 @@ body{
                 position: absolute;
                 top: -8%;
                 right: 0%;
-                width: 35%;
+                width: 40%;
                 z-index: 1;
 
                 & p{
@@ -1337,7 +1337,7 @@ body{
                     border-radius: 30px;
                     width: calc(50vw - 60px);
                     height: calc(27.5vw - 60px);
-                    background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide1.jpg)no-repeat;
                     background-size: cover;
                     background-position: center;
                 }
@@ -1362,19 +1362,19 @@ body{
                 }
 
                 .p5slide1{
-                    background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide1.jpg)no-repeat;
                 }
 
                 .p5slide2{
-                    background: url(/img/event/prereg/p5/slide2.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide2.jpg)no-repeat;
                 }
 
                 .p5slide3{
-                    background: url(/img/event/prereg/p5/slide3.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide3.jpg)no-repeat;
                 }
 
                 .p5slide4{
-                    background: url(/img/event/prereg/p5/slide4.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide4.jpg)no-repeat;
                 }
 
                 .p5slide1,.p5slide2,.p5slide3,.p5slide4{
@@ -1915,6 +1915,12 @@ body{
                     background-size: contain;
                     background-position: center;
                     filter: drop-shadow(0 1px 2px #000);
+
+                    & a{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 .giantlogo{
@@ -2012,7 +2018,7 @@ body{
 
     .menubtn{
         position: absolute;
-        z-index: 99;
+        z-index: 10;
         width: 60px;
         height: 60px;
         border-radius: 30px;
@@ -2061,7 +2067,7 @@ body{
         top: 0;
         left: 0;
         display: none;
-        z-index: 99;
+        z-index: 10;
         width: 15vw;
         height: 100vh;
         background-image: linear-gradient(to bottom, rgba(179, 166, 211, 0.55), rgba(104, 145, 180, 0.55));
@@ -2071,7 +2077,7 @@ body{
         position: absolute;
         top: -100vh;
         left: 15vw;
-        z-index: 99;
+        z-index: 10;
         height: 100vh;
         border-right-width: 2px;
         border-right-color: #ffffff;
@@ -2762,4 +2768,43 @@ body{
     }
 }
 
+/*熊貓賽跑影片窗*/
+.p4resultpop{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+    display: none;
+
+    .p4resultpopframe{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 50vw;
+        height: 50vw;
+
+        .pandavideo{
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+
+        .booframe{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url(/img/event/prereg/p4/resultframe.png)no-repeat;
+            background-size: contain;
+            background-position: center;
+            z-index: 1;
+        }
+    }
+}
 
