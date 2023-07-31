@@ -6,6 +6,8 @@ if (_CheckLogin != "null") {
     _user = null;
 }
 
+// 設定防連點
+
 // 登出
 function logout_dg() {
     $("#logout-form").submit();
@@ -22,7 +24,14 @@ function login() {
             if (res.status == -99) {
                 console.log("未登入");
             } else {
-                console.log("已登入");
+                $(".visit_frequency").html(res.visit_frequency);
+                $(".visit_frequency").attr("data-val", res.visit_frequency);
+                $(".distance_30").html(res.distance_30);
+                $(".distance_30").attr("data-val", res.distance_30);
+                // if (res.celebrity != null) {
+                //     p3cardinfo(res.celebrity[0], res.celebrity[1]);
+                //     setTimeout($(".choosenew").click(), 2);
+                // }
             }
         }
     );
@@ -60,13 +69,13 @@ $(".check_p2").on("click", function () {
                 phone: _phone,
             },
             function (res) {
-                if(res.status==-99){
+                if (res.status == -99) {
                     p2_already_pre();
                     $(".popS").fadeIn(200);
-                }else if(res.status==-98){
+                } else if (res.status == -98) {
                     p2_mobile_already_use();
                     $(".popS").fadeIn(200);
-                }else{
+                } else {
                     p2_success();
                     $(".popS").fadeIn(200);
                 }
@@ -104,3 +113,104 @@ function checkMobile() {
         return -99;
     }
 }
+
+// 結交名士
+$(".check_p3").on("click", function () {
+    let _chance = $(".visit_frequency").data("val");
+    var _send = true;
+    if (_user == null) {
+        p2_not_login();
+        $(".popS").fadeIn(200);
+        var _send = false;
+        exit;
+    }
+    if (_chance == 0) {
+        p3_error_not_enough();
+        $(".popS").fadeIn(200);
+        var _send = false;
+        exit;
+    }
+    if (_send == true) {
+        $.post(
+            _api,
+            {
+                type: "play_lottery",
+                user: _user,
+            },
+            function (res) {
+                if (res.status == 1) {
+                    $(".p3resultpop").fadeIn(200);
+                    $(".result_new").hover(
+                        function () {
+                            $(".newinfo").css({ display: "block" });
+                        },
+                        function () {
+                            $(".newinfo").css({ display: "none" });
+                        }
+                    );
+                    $(".result_now").hover(
+                        function () {
+                            $(".nowinfo").css({ display: "block" });
+                        },
+                        function () {
+                            $(".nowinfo").css({ display: "none" });
+                        }
+                    );
+                    $(".result_new").attr("data-color", res.color);
+                    $(".result_new").attr("data-rand", res.rand);
+                    p3cardinfo(res.color, res.rand);
+                }
+            }
+        );
+    }
+});
+
+// 名士選擇
+$(".popScheckBtn").on("click", function () {
+    let _color = $(".result_new").attr("data-color");
+    let _rand = $(".result_new").attr("data-rand");
+    if (_color || _rand) {
+        $.post(
+            _api,
+            {
+                type: "play_choose",
+                user: _user,
+                color: _color,
+                rand: _rand,
+            },
+            function (res) {
+                if (res.status == 1) {
+                    // location.reload()
+                }
+            }
+        );
+    }
+});
+
+// 任務佈告
+$(".missionbtn").on("click", function () {
+    let _type = $(this).attr("data-val");
+    let _send = true;
+    if (_send == true) {
+        $.post(
+            _api,
+            {
+                type: "mission",
+                user: _user,
+                mission_type: _type,
+            },
+            function (res) {
+                if (res.status == -99) {
+                    p3_already_get();
+                    $(".popS").fadeIn(200);
+                } else if (res.status == -98) {
+                    p3_please_pre();
+                    $(".popS").fadeIn(200);
+                } else {
+                    p3_success();
+                    $(".popS").fadeIn(200);
+                }
+            }
+        );
+    }
+});

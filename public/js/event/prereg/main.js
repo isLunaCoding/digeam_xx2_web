@@ -213,7 +213,8 @@ $('.p3noticebtn').on("click",function(){
     $('.pop').fadeIn(200);
     p3noticeIn();
 })
-$('.getcardbtn').on("click",function(){
+// 名士成功抽取
+function p3_success(){
     $('.p3resultpop').fadeIn(200);
     $('.result_new').hover(function(){
         $('.newinfo').css({display:'block'})
@@ -226,8 +227,8 @@ $('.getcardbtn').on("click",function(){
         $('.nowinfo').css({display:'none'})
     });
     p3cardinfo();
+}
 
-})
 
 //p4熊貓賽跑資訊彈窗
 $('.p4informationbtn').on("click",function(){
