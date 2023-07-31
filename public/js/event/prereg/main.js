@@ -1,3 +1,5 @@
+$('.p3choosepop').hide()
+
 //輪播主體設定
 var swiper = new Swiper(".mainSwiper", {
     direction: "vertical", //垂直輪播
@@ -228,8 +230,6 @@ function p3_success(){
     });
     p3cardinfo();
 }
-
-})
 $('.card1').hover(function(){
     $('.card1info').css({display:'block'})
 },function(){

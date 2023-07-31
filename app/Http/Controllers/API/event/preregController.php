@@ -61,12 +61,18 @@ class preregController extends Controller
         }else{
             $celebrity = null;
         }
+        if($findUser->keep_celebrity !=''){
+            $keep_celebrity = $findUser->keep_celebrity;
+        }else{
+            $keep_celebrity =null;
+        }
         return response()->json([
             'status' => 1,
             'race_total_answer'=>$findUser->race_total_answer,
             'visit_frequency'=>$findUser->visit_frequency,
             'distance_30'=>$findUser->distance_30,
             'celebrity'=>$celebrity,
+            'keep_celebrity'=>$keep_celebrity,
         ]);
     }
     public function MobileLogin($request){
@@ -200,6 +206,15 @@ class preregController extends Controller
         $checkUser = PreregUser::where('user_id',$request->user)->first();
         $checkUser->celebrity = $request->color.'_'.$request->rand;
         $checkUser->save();
+        return response()->json([
+            'status' => 1,
+        ]);
+    }
+    public function PlayKeep($request){
+        $finUser = PreregUser::where('user_id',$request->user)->first();
+        $finUser->keep_celebrity =  $finUser->celebrity;
+        $finUser->save();
+
         return response()->json([
             'status' => 1,
         ]);

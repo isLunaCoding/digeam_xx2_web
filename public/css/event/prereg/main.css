@@ -2522,7 +2522,7 @@ body{
     background-color: rgba(127, 140, 149, 0.5);
     font-family: 'Noto Serif TC', serif;
     z-index: 10;
-    /* display: none; */
+    display: none;
 
     .p3choosepopframe{
         position: absolute;
@@ -3026,6 +3026,37 @@ body{
             line-height: 50px;
             letter-spacing: 5px;
             cursor: pointer;
+        }
+
+        .popScheckBtn2{
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            translate: -50%;
+            width: 60%;
+            height: 50px;
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 50px;
+            letter-spacing: 5px;
+            display: flex;
+
+            .yes,.no{
+                position: absolute;
+                width: 120px;
+                height: 50px;
+                cursor: pointer;
+                background-color: #FFF;
+            }
+
+            .yes{
+                left: 25%;
+                translate: -50%;
+            }
+            .no{
+                left: 75%;
+                translate: -50%;
+            }
         }
     }
 }

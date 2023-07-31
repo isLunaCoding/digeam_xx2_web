@@ -24,14 +24,22 @@ function login() {
             if (res.status == -99) {
                 console.log("未登入");
             } else {
-                $(".visit_frequency").html(res.visit_frequency);
-                $(".visit_frequency").attr("data-val", res.visit_frequency);
-                $(".distance_30").html(res.distance_30);
-                $(".distance_30").attr("data-val", res.distance_30);
-                // if (res.celebrity != null) {
-                //     p3cardinfo(res.celebrity[0], res.celebrity[1]);
-                //     setTimeout($(".choosenew").click(), 2);
-                // }
+                if (res.keep_celebrity == null) {
+                    $(".visit_frequency").html(res.visit_frequency);
+                    $(".visit_frequency").attr("data-val", res.visit_frequency);
+                    $(".distance_30").html(res.distance_30);
+                    $(".distance_30").attr("data-val", res.distance_30);
+                } else {
+                    $('.check_p3').hide()
+                    $('.p4Gobtn').hide()
+                    $('.distance_area').hide()
+                    $('.p3_chance').hide()
+
+                }
+                if (res.celebrity != null) {
+                    p3cardinfo(res.celebrity[0], res.celebrity[1]);
+                    setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
+                }
             }
         }
     );
@@ -166,6 +174,10 @@ $(".check_p3").on("click", function () {
 });
 
 // 名士選擇
+$(".choosenew").on("click", function () {
+    p3_replace();
+    $(".popS").fadeIn(200);
+});
 $(".popScheckBtn").on("click", function () {
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
@@ -180,7 +192,8 @@ $(".popScheckBtn").on("click", function () {
             },
             function (res) {
                 if (res.status == 1) {
-                    // location.reload()
+                    $(".p3resultpop").fadeOut(200);
+                    location.reload();
                 }
             }
         );
@@ -213,4 +226,37 @@ $(".missionbtn").on("click", function () {
             }
         );
     }
+});
+//與他結義
+$(".p4Gobtn").on("click", function () {
+    p3_last();
+    $(".yes").attr("data-val", "play_keep");
+    $(".popS").fadeIn(200);
+});
+
+$(".yes").on("click", function () {
+    let _type = $(this).attr("data-val");
+    $.post(
+        _api,
+        {
+            type: _type,
+            user: _user,
+        },
+        function (res) {
+            if (res.status == 1) {
+                p3_last_success();
+                $(".yes").hide();
+                $(".no").hide();
+                $(".popS").fadeIn(200);
+                if (_type == "play_keep") {
+                    $(".popScheckBtn").on("click", function () {
+                        location.reload();
+                    });
+                }
+            }
+        }
+    );
+});
+$(".no").on("click", function () {
+    $(".popS").fadeOut(200);
 });

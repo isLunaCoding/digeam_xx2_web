@@ -160,7 +160,7 @@ $_COOKIE['StrID'] = 'jacky0996';
                         <div class="lantern_light"></div>
                         <div class="lantern"></div>
                         <div class="lantern_line"></div>
-                        <p>距離<br>自選名士<br><span class='distance_30' data-val=0></span>/30</p>
+                        <p class = 'distance_area'>距離<br>自選名士<br><span class='distance_30' data-val=0></span>/30</p>
                     </div>
                     <div class="card">
                         <div class="nocard">
@@ -171,13 +171,13 @@ $_COOKIE['StrID'] = 'jacky0996';
                         </div>
                         <div class="nowcard"></div>
                         <div class="getcardbtn check_p3"></div>
-                        <p>您尚可拜訪<span class='visit_frequency' data-val=0></span>次</p>
+                        <p class = 'p3_chance'>您尚可拜訪<span class='visit_frequency' data-val=0></span>次</p>
                     </div>
                     <div class="p3text">
                         <ul class="samplerules"></ul>
                         <div class="cardinfo"></div>
                     </div>
-                    <div class="p4Gobtn check_p2">與他結義</div>
+                    <div class="p4Gobtn">與他結義</div>
                 </div>
                 <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
             </div>
@@ -529,6 +529,10 @@ $_COOKIE['StrID'] = 'jacky0996';
             <div class="popStitle"></div>
             <div class="popSText"></div>
             <div class="popScheckBtn"></div>
+            <div class="popScheckBtn2">
+                <div class="yes">確認</div>
+                <div class="no">取消</div>
+            </div>
         </div>
     </div>
     <!-- 熊貓賽跑影片窗 -->

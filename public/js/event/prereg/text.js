@@ -10,7 +10,8 @@ function p2informationIn() {
     var p2information = "";
 
     for (j = 0; j < 4; j++) {
-        p2information += '<li style="margin-left: 11%;">' + p2informationarray[j] + "</li>";
+        p2information +=
+            '<li style="margin-left: 11%;">' + p2informationarray[j] + "</li>";
     }
 
     $(".poptitle").html("活動說明");
@@ -201,7 +202,7 @@ function p3noticeIn() {
         "本活動所提供之虛寶獎勵，皆為不可交易之性質，實際道具限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。",
         "若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參噢，活動將照常舉行，不另做補償。",
         "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
-        "本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主"
+        "本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主",
     ];
 
     var p3noticestr = "";
@@ -288,7 +289,7 @@ function p3listIn() {
             "愛之禮官",
             "愛之花童",
             "愛之隨從",
-            ""
+            "",
         ],
     };
 
@@ -517,8 +518,8 @@ function p3listIn() {
 }
 
 //p3"結交名士"結果資訊
-function p3cardinfo(color,num) {
-    console.log(color,num)
+function p3cardinfo(color, num) {
+    console.log(color, num);
     var p3cardinfoarray = {
         Ocard1: [
             "七花獸百花仙靈",
@@ -783,122 +784,124 @@ function p3cardinfo(color,num) {
     };
 
     var p3cardinfostr = "";
-    if (color == 'orange') {
+    if (color == "orange") {
         if (result.num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/orange/card1_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Ocard1[0] +
-                    `</td>
+                p3cardinfoarray.Ocard1[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard1[1] +
-                    `</td>
+                p3cardinfoarray.Ocard1[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard1[2] +
-                    `</td>
+                p3cardinfoarray.Ocard1[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard1[3] +
-                    `</td>
+                p3cardinfoarray.Ocard1[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard1[4] +
-                    `</td>
+                p3cardinfoarray.Ocard1[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard1[5] +
-                    `</td>
+                p3cardinfoarray.Ocard1[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard1[6] +
-                    `</td>
+                p3cardinfoarray.Ocard1[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard1[7] +
-                    `</td>
+                p3cardinfoarray.Ocard1[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard1[8] +
-                    `</td>
+                p3cardinfoarray.Ocard1[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Ocard1[9] +
-                    `</span></td>
+                p3cardinfoarray.Ocard1[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Ocard1[10] +
-                    `</td>
+                p3cardinfoarray.Ocard1[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Ocard1[0] +
+                    p3cardinfoarray.Ocard1[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard1[1] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard1[2] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard1[3] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard1[4] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard1[5] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard1[6] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard1[7] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard1[8] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Ocard1[9] +
-                            `</span></td>
+                    p3cardinfoarray.Ocard1[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Ocard1[10] +
-                            `</td>
+                    p3cardinfoarray.Ocard1[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -911,121 +914,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 2) {
+        } else if (result.num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/orange/card2_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Ocard2[0] +
-                    `</td>
+                p3cardinfoarray.Ocard2[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard2[1] +
-                    `</td>
+                p3cardinfoarray.Ocard2[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard2[2] +
-                    `</td>
+                p3cardinfoarray.Ocard2[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard2[3] +
-                    `</td>
+                p3cardinfoarray.Ocard2[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard2[4] +
-                    `</td>
+                p3cardinfoarray.Ocard2[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard2[5] +
-                    `</td>
+                p3cardinfoarray.Ocard2[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard2[6] +
-                    `</td>
+                p3cardinfoarray.Ocard2[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard2[7] +
-                    `</td>
+                p3cardinfoarray.Ocard2[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard2[8] +
-                    `</td>
+                p3cardinfoarray.Ocard2[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Ocard2[9] +
-                    `</span></td>
+                p3cardinfoarray.Ocard2[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Ocard2[10] +
-                    `</td>
+                p3cardinfoarray.Ocard2[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Ocard2[0] +
+                    p3cardinfoarray.Ocard2[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard2[1] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard2[2] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard2[3] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard2[4] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard2[5] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard2[6] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard2[7] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard2[8] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Ocard2[9] +
-                            `</span></td>
+                    p3cardinfoarray.Ocard2[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Ocard2[10] +
-                            `</td>
+                    p3cardinfoarray.Ocard2[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -1038,121 +1043,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (result.num == 3) {
+        } else if (result.num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/orange/card3_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Ocard3[0] +
-                    `</td>
+                p3cardinfoarray.Ocard3[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard3[1] +
-                    `</td>
+                p3cardinfoarray.Ocard3[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard3[2] +
-                    `</td>
+                p3cardinfoarray.Ocard3[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard3[3] +
-                    `</td>
+                p3cardinfoarray.Ocard3[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard3[4] +
-                    `</td>
+                p3cardinfoarray.Ocard3[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard3[5] +
-                    `</td>
+                p3cardinfoarray.Ocard3[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard3[6] +
-                    `</td>
+                p3cardinfoarray.Ocard3[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Ocard3[7] +
-                    `</td>
+                p3cardinfoarray.Ocard3[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Ocard3[8] +
-                    `</td>
+                p3cardinfoarray.Ocard3[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Ocard3[9] +
-                    `</span></td>
+                p3cardinfoarray.Ocard3[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Ocard3[10] +
-                    `</td>
+                p3cardinfoarray.Ocard3[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Ocard3[0] +
+                    p3cardinfoarray.Ocard3[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard3[1] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard3[2] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard3[3] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard3[4] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard3[5] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard3[6] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Ocard3[7] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Ocard3[8] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Ocard3[9] +
-                            `</span></td>
+                    p3cardinfoarray.Ocard3[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Ocard3[10] +
-                            `</td>
+                    p3cardinfoarray.Ocard3[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -1166,122 +1173,124 @@ function p3cardinfo(color,num) {
                 $(".nowinfo").html(newinfostr);
             });
         }
-    }else if (color == 'purple') {
+    } else if (color == "purple") {
         if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card1_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Pcard1[0] +
-                    `</td>
+                p3cardinfoarray.Pcard1[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard1[1] +
-                    `</td>
+                p3cardinfoarray.Pcard1[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard1[2] +
-                    `</td>
+                p3cardinfoarray.Pcard1[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard1[3] +
-                    `</td>
+                p3cardinfoarray.Pcard1[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard1[4] +
-                    `</td>
+                p3cardinfoarray.Pcard1[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard1[5] +
-                    `</td>
+                p3cardinfoarray.Pcard1[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard1[6] +
-                    `</td>
+                p3cardinfoarray.Pcard1[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard1[7] +
-                    `</td>
+                p3cardinfoarray.Pcard1[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard1[8] +
-                    `</td>
+                p3cardinfoarray.Pcard1[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Pcard1[9] +
-                    `</span></td>
+                p3cardinfoarray.Pcard1[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Pcard1[10] +
-                    `</td>
+                p3cardinfoarray.Pcard1[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Pcard1[0] +
+                    p3cardinfoarray.Pcard1[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard1[1] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard1[2] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard1[3] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard1[4] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard1[5] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard1[6] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard1[7] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard1[8] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Pcard1[9] +
-                            `</span></td>
+                    p3cardinfoarray.Pcard1[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Pcard1[10] +
-                            `</td>
+                    p3cardinfoarray.Pcard1[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -1294,121 +1303,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 2) {
+        } else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card2_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Pcard2[0] +
-                    `</td>
+                p3cardinfoarray.Pcard2[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard2[1] +
-                    `</td>
+                p3cardinfoarray.Pcard2[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard2[2] +
-                    `</td>
+                p3cardinfoarray.Pcard2[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard2[3] +
-                    `</td>
+                p3cardinfoarray.Pcard2[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard2[4] +
-                    `</td>
+                p3cardinfoarray.Pcard2[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard2[5] +
-                    `</td>
+                p3cardinfoarray.Pcard2[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard2[6] +
-                    `</td>
+                p3cardinfoarray.Pcard2[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard2[7] +
-                    `</td>
+                p3cardinfoarray.Pcard2[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard2[8] +
-                    `</td>
+                p3cardinfoarray.Pcard2[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Pcard2[9] +
-                    `</span></td>
+                p3cardinfoarray.Pcard2[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Pcard2[10] +
-                    `</td>
+                p3cardinfoarray.Pcard2[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Pcard2[0] +
+                    p3cardinfoarray.Pcard2[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard2[1] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard2[2] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard2[3] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard2[4] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard2[5] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard2[6] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard2[7] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard2[8] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Pcard2[9] +
-                            `</span></td>
+                    p3cardinfoarray.Pcard2[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Pcard2[10] +
-                            `</td>
+                    p3cardinfoarray.Pcard2[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -1421,121 +1432,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 3) {
+        } else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card3_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Pcard3[0] +
-                    `</td>
+                p3cardinfoarray.Pcard3[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard3[1] +
-                    `</td>
+                p3cardinfoarray.Pcard3[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard3[2] +
-                    `</td>
+                p3cardinfoarray.Pcard3[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard3[3] +
-                    `</td>
+                p3cardinfoarray.Pcard3[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard3[4] +
-                    `</td>
+                p3cardinfoarray.Pcard3[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard3[5] +
-                    `</td>
+                p3cardinfoarray.Pcard3[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard3[6] +
-                    `</td>
+                p3cardinfoarray.Pcard3[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard3[7] +
-                    `</td>
+                p3cardinfoarray.Pcard3[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard3[8] +
-                    `</td>
+                p3cardinfoarray.Pcard3[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Pcard3[9] +
-                    `</span></td>
+                p3cardinfoarray.Pcard3[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Pcard3[10] +
-                    `</td>
+                p3cardinfoarray.Pcard3[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Pcard3[0] +
+                    p3cardinfoarray.Pcard3[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard3[1] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard3[2] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard3[3] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard3[4] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard3[5] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard3[6] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard3[7] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard3[8] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Pcard3[9] +
-                            `</span></td>
+                    p3cardinfoarray.Pcard3[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Pcard3[10] +
-                            `</td>
+                    p3cardinfoarray.Pcard3[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -1548,121 +1561,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 4) {
+        } else if (num == 4) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card4_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Pcard4[0] +
-                    `</td>
+                p3cardinfoarray.Pcard4[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard4[1] +
-                    `</td>
+                p3cardinfoarray.Pcard4[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard4[2] +
-                    `</td>
+                p3cardinfoarray.Pcard4[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard4[3] +
-                    `</td>
+                p3cardinfoarray.Pcard4[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard4[4] +
-                    `</td>
+                p3cardinfoarray.Pcard4[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard4[5] +
-                    `</td>
+                p3cardinfoarray.Pcard4[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard4[6] +
-                    `</td>
+                p3cardinfoarray.Pcard4[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard4[7] +
-                    `</td>
+                p3cardinfoarray.Pcard4[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard4[8] +
-                    `</td>
+                p3cardinfoarray.Pcard4[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Pcard4[9] +
-                    `</span></td>
+                p3cardinfoarray.Pcard4[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Pcard4[10] +
-                    `</td>
+                p3cardinfoarray.Pcard4[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Pcard4[0] +
+                    p3cardinfoarray.Pcard4[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard4[1] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard4[2] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard4[3] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard4[4] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard4[5] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard4[6] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard4[7] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard4[8] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Pcard4[9] +
-                            `</span></td>
+                    p3cardinfoarray.Pcard4[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Pcard4[10] +
-                            `</td>
+                    p3cardinfoarray.Pcard4[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -1675,121 +1690,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 5) {
+        } else if (num == 5) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card5_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Pcard5[0] +
-                    `</td>
+                p3cardinfoarray.Pcard5[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard5[1] +
-                    `</td>
+                p3cardinfoarray.Pcard5[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard5[2] +
-                    `</td>
+                p3cardinfoarray.Pcard5[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard5[3] +
-                    `</td>
+                p3cardinfoarray.Pcard5[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard5[4] +
-                    `</td>
+                p3cardinfoarray.Pcard5[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard5[5] +
-                    `</td>
+                p3cardinfoarray.Pcard5[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard5[6] +
-                    `</td>
+                p3cardinfoarray.Pcard5[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard5[7] +
-                    `</td>
+                p3cardinfoarray.Pcard5[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard5[8] +
-                    `</td>
+                p3cardinfoarray.Pcard5[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Pcard5[9] +
-                    `</span></td>
+                p3cardinfoarray.Pcard5[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Pcard5[10] +
-                    `</td>
+                p3cardinfoarray.Pcard5[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Pcard5[0] +
+                    p3cardinfoarray.Pcard5[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard5[1] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard5[2] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard5[3] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard5[4] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard5[5] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard5[6] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard5[7] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard5[8] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Pcard5[9] +
-                            `</span></td>
+                    p3cardinfoarray.Pcard5[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Pcard5[10] +
-                            `</td>
+                    p3cardinfoarray.Pcard5[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -1802,121 +1819,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 6) {
+        } else if (num == 6) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/purple/card6_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Pcard6[0] +
-                    `</td>
+                p3cardinfoarray.Pcard6[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard6[1] +
-                    `</td>
+                p3cardinfoarray.Pcard6[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard6[2] +
-                    `</td>
+                p3cardinfoarray.Pcard6[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard6[3] +
-                    `</td>
+                p3cardinfoarray.Pcard6[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard6[4] +
-                    `</td>
+                p3cardinfoarray.Pcard6[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard6[5] +
-                    `</td>
+                p3cardinfoarray.Pcard6[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard6[6] +
-                    `</td>
+                p3cardinfoarray.Pcard6[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Pcard6[7] +
-                    `</td>
+                p3cardinfoarray.Pcard6[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Pcard6[8] +
-                    `</td>
+                p3cardinfoarray.Pcard6[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Pcard6[9] +
-                    `</span></td>
+                p3cardinfoarray.Pcard6[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Pcard6[10] +
-                    `</td>
+                p3cardinfoarray.Pcard6[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Pcard6[0] +
+                    p3cardinfoarray.Pcard6[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard6[1] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard6[2] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard6[3] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard6[4] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard6[5] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard6[6] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Pcard6[7] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Pcard6[8] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Pcard6[9] +
-                            `</span></td>
+                    p3cardinfoarray.Pcard6[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Pcard6[10] +
-                            `</td>
+                    p3cardinfoarray.Pcard6[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -1930,122 +1949,124 @@ function p3cardinfo(color,num) {
                 $(".nowinfo").html(newinfostr);
             });
         }
-    }else if (color == 'blue') {
+    } else if (color == "blue") {
         if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/blue/card1_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Bcard1[0] +
-                    `</td>
+                p3cardinfoarray.Bcard1[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard1[1] +
-                    `</td>
+                p3cardinfoarray.Bcard1[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard1[2] +
-                    `</td>
+                p3cardinfoarray.Bcard1[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard1[3] +
-                    `</td>
+                p3cardinfoarray.Bcard1[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard1[4] +
-                    `</td>
+                p3cardinfoarray.Bcard1[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard1[5] +
-                    `</td>
+                p3cardinfoarray.Bcard1[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard1[6] +
-                    `</td>
+                p3cardinfoarray.Bcard1[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard1[7] +
-                    `</td>
+                p3cardinfoarray.Bcard1[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard1[8] +
-                    `</td>
+                p3cardinfoarray.Bcard1[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Bcard1[9] +
-                    `</span></td>
+                p3cardinfoarray.Bcard1[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Bcard1[10] +
-                    `</td>
+                p3cardinfoarray.Bcard1[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Bcard1[0] +
+                    p3cardinfoarray.Bcard1[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard1[1] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard1[2] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard1[3] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard1[4] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard1[5] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard1[6] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard1[7] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard1[8] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Bcard1[9] +
-                            `</span></td>
+                    p3cardinfoarray.Bcard1[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Bcard1[10] +
-                            `</td>
+                    p3cardinfoarray.Bcard1[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -2058,121 +2079,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 2) {
+        } else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/blue/card2_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Bcard2[0] +
-                    `</td>
+                p3cardinfoarray.Bcard2[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard2[1] +
-                    `</td>
+                p3cardinfoarray.Bcard2[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard2[2] +
-                    `</td>
+                p3cardinfoarray.Bcard2[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard2[3] +
-                    `</td>
+                p3cardinfoarray.Bcard2[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard2[4] +
-                    `</td>
+                p3cardinfoarray.Bcard2[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard2[5] +
-                    `</td>
+                p3cardinfoarray.Bcard2[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard2[6] +
-                    `</td>
+                p3cardinfoarray.Bcard2[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard2[7] +
-                    `</td>
+                p3cardinfoarray.Bcard2[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard2[8] +
-                    `</td>
+                p3cardinfoarray.Bcard2[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Bcard2[9] +
-                    `</span></td>
+                p3cardinfoarray.Bcard2[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Bcard2[10] +
-                    `</td>
+                p3cardinfoarray.Bcard2[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Bcard2[0] +
+                    p3cardinfoarray.Bcard2[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard2[1] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard2[2] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard2[3] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard2[4] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard2[5] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard2[6] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard2[7] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard2[8] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Bcard2[9] +
-                            `</span></td>
+                    p3cardinfoarray.Bcard2[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Bcard2[10] +
-                            `</td>
+                    p3cardinfoarray.Bcard2[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -2185,121 +2208,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 3) {
+        } else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/blue/card3_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Bcard3[0] +
-                    `</td>
+                p3cardinfoarray.Bcard3[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard3[1] +
-                    `</td>
+                p3cardinfoarray.Bcard3[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard3[2] +
-                    `</td>
+                p3cardinfoarray.Bcard3[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard3[3] +
-                    `</td>
+                p3cardinfoarray.Bcard3[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard3[4] +
-                    `</td>
+                p3cardinfoarray.Bcard3[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard3[5] +
-                    `</td>
+                p3cardinfoarray.Bcard3[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard3[6] +
-                    `</td>
+                p3cardinfoarray.Bcard3[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Bcard3[7] +
-                    `</td>
+                p3cardinfoarray.Bcard3[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Bcard3[8] +
-                    `</td>
+                p3cardinfoarray.Bcard3[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Bcard3[9] +
-                    `</span></td>
+                p3cardinfoarray.Bcard3[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Bcard3[10] +
-                    `</td>
+                p3cardinfoarray.Bcard3[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Bcard3[0] +
+                    p3cardinfoarray.Bcard3[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard3[1] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard3[2] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard3[3] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard3[4] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard3[5] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard3[6] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Bcard3[7] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Bcard3[8] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Bcard3[9] +
-                            `</span></td>
+                    p3cardinfoarray.Bcard3[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Bcard3[10] +
-                            `</td>
+                    p3cardinfoarray.Bcard3[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -2313,122 +2338,124 @@ function p3cardinfo(color,num) {
                 $(".nowinfo").html(newinfostr);
             });
         }
-    }else if (color == 'green') {
+    } else if (color == "green") {
         if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card1_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Gcard1[0] +
-                    `</td>
+                p3cardinfoarray.Gcard1[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard1[1] +
-                    `</td>
+                p3cardinfoarray.Gcard1[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard1[2] +
-                    `</td>
+                p3cardinfoarray.Gcard1[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard1[3] +
-                    `</td>
+                p3cardinfoarray.Gcard1[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard1[4] +
-                    `</td>
+                p3cardinfoarray.Gcard1[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard1[5] +
-                    `</td>
+                p3cardinfoarray.Gcard1[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard1[6] +
-                    `</td>
+                p3cardinfoarray.Gcard1[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard1[7] +
-                    `</td>
+                p3cardinfoarray.Gcard1[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard1[8] +
-                    `</td>
+                p3cardinfoarray.Gcard1[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Gcard1[9] +
-                    `</span></td>
+                p3cardinfoarray.Gcard1[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Gcard1[10] +
-                    `</td>
+                p3cardinfoarray.Gcard1[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Gcard1[0] +
+                    p3cardinfoarray.Gcard1[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard1[1] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard1[2] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard1[3] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard1[4] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard1[5] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard1[6] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard1[7] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard1[8] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Gcard1[9] +
-                            `</span></td>
+                    p3cardinfoarray.Gcard1[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Gcard1[10] +
-                            `</td>
+                    p3cardinfoarray.Gcard1[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -2441,121 +2468,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 2) {
+        } else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card2_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Gcard2[0] +
-                    `</td>
+                p3cardinfoarray.Gcard2[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard2[1] +
-                    `</td>
+                p3cardinfoarray.Gcard2[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard2[2] +
-                    `</td>
+                p3cardinfoarray.Gcard2[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard2[3] +
-                    `</td>
+                p3cardinfoarray.Gcard2[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard2[4] +
-                    `</td>
+                p3cardinfoarray.Gcard2[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard2[5] +
-                    `</td>
+                p3cardinfoarray.Gcard2[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard2[6] +
-                    `</td>
+                p3cardinfoarray.Gcard2[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard2[7] +
-                    `</td>
+                p3cardinfoarray.Gcard2[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard2[8] +
-                    `</td>
+                p3cardinfoarray.Gcard2[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Gcard2[9] +
-                    `</span></td>
+                p3cardinfoarray.Gcard2[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Gcard2[10] +
-                    `</td>
+                p3cardinfoarray.Gcard2[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Gcard2[0] +
+                    p3cardinfoarray.Gcard2[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard2[1] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard2[2] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard2[3] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard2[4] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard2[5] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard2[6] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard2[7] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard2[8] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Gcard2[9] +
-                            `</span></td>
+                    p3cardinfoarray.Gcard2[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Gcard2[10] +
-                            `</td>
+                    p3cardinfoarray.Gcard2[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -2568,121 +2597,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 3) {
+        } else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card3_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Gcard3[0] +
-                    `</td>
+                p3cardinfoarray.Gcard3[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard3[1] +
-                    `</td>
+                p3cardinfoarray.Gcard3[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard3[2] +
-                    `</td>
+                p3cardinfoarray.Gcard3[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard3[3] +
-                    `</td>
+                p3cardinfoarray.Gcard3[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard3[4] +
-                    `</td>
+                p3cardinfoarray.Gcard3[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard3[5] +
-                    `</td>
+                p3cardinfoarray.Gcard3[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard3[6] +
-                    `</td>
+                p3cardinfoarray.Gcard3[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard3[7] +
-                    `</td>
+                p3cardinfoarray.Gcard3[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard3[8] +
-                    `</td>
+                p3cardinfoarray.Gcard3[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Gcard3[9] +
-                    `</span></td>
+                p3cardinfoarray.Gcard3[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Gcard3[10] +
-                    `</td>
+                p3cardinfoarray.Gcard3[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Gcard3[0] +
+                    p3cardinfoarray.Gcard3[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard3[1] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard3[2] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard3[3] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard3[4] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard3[5] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard3[6] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard3[7] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard3[8] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Gcard3[9] +
-                            `</span></td>
+                    p3cardinfoarray.Gcard3[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Gcard3[10] +
-                            `</td>
+                    p3cardinfoarray.Gcard3[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -2695,121 +2726,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 4) {
+        } else if (num == 4) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card4_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Gcard4[0] +
-                    `</td>
+                p3cardinfoarray.Gcard4[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard4[1] +
-                    `</td>
+                p3cardinfoarray.Gcard4[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard4[2] +
-                    `</td>
+                p3cardinfoarray.Gcard4[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard4[3] +
-                    `</td>
+                p3cardinfoarray.Gcard4[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard4[4] +
-                    `</td>
+                p3cardinfoarray.Gcard4[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard4[5] +
-                    `</td>
+                p3cardinfoarray.Gcard4[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard4[6] +
-                    `</td>
+                p3cardinfoarray.Gcard4[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard4[7] +
-                    `</td>
+                p3cardinfoarray.Gcard4[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard4[8] +
-                    `</td>
+                p3cardinfoarray.Gcard4[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Gcard4[9] +
-                    `</span></td>
+                p3cardinfoarray.Gcard4[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Gcard4[10] +
-                    `</td>
+                p3cardinfoarray.Gcard4[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Gcard4[0] +
+                    p3cardinfoarray.Gcard4[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard4[1] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard4[2] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard4[3] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard4[4] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard4[5] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard4[6] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard4[7] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard4[8] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Gcard4[9] +
-                            `</span></td>
+                    p3cardinfoarray.Gcard4[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Gcard4[10] +
-                            `</td>
+                    p3cardinfoarray.Gcard4[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -2822,121 +2855,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 5) {
+        } else if (num == 5) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/green/card5_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Gcard5[0] +
-                    `</td>
+                p3cardinfoarray.Gcard5[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard5[1] +
-                    `</td>
+                p3cardinfoarray.Gcard5[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard5[2] +
-                    `</td>
+                p3cardinfoarray.Gcard5[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard5[3] +
-                    `</td>
+                p3cardinfoarray.Gcard5[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard5[4] +
-                    `</td>
+                p3cardinfoarray.Gcard5[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard5[5] +
-                    `</td>
+                p3cardinfoarray.Gcard5[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard5[6] +
-                    `</td>
+                p3cardinfoarray.Gcard5[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Gcard5[7] +
-                    `</td>
+                p3cardinfoarray.Gcard5[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Gcard5[8] +
-                    `</td>
+                p3cardinfoarray.Gcard5[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Gcard5[9] +
-                    `</span></td>
+                p3cardinfoarray.Gcard5[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Gcard5[10] +
-                    `</td>
+                p3cardinfoarray.Gcard5[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Gcard5[0] +
+                    p3cardinfoarray.Gcard5[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard5[1] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard5[2] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard5[3] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard5[4] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard5[5] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard5[6] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Gcard5[7] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Gcard5[8] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Gcard5[9] +
-                            `</span></td>
+                    p3cardinfoarray.Gcard5[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Gcard5[10] +
-                            `</td>
+                    p3cardinfoarray.Gcard5[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -2950,122 +2985,124 @@ function p3cardinfo(color,num) {
                 $(".nowinfo").html(newinfostr);
             });
         }
-    }else if (color == 'white') {
+    } else if (color == "white") {
         if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/white/card1_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Wcard1[0] +
-                    `</td>
+                p3cardinfoarray.Wcard1[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard1[1] +
-                    `</td>
+                p3cardinfoarray.Wcard1[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard1[2] +
-                    `</td>
+                p3cardinfoarray.Wcard1[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard1[3] +
-                    `</td>
+                p3cardinfoarray.Wcard1[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard1[4] +
-                    `</td>
+                p3cardinfoarray.Wcard1[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard1[5] +
-                    `</td>
+                p3cardinfoarray.Wcard1[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard1[6] +
-                    `</td>
+                p3cardinfoarray.Wcard1[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard1[7] +
-                    `</td>
+                p3cardinfoarray.Wcard1[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard1[8] +
-                    `</td>
+                p3cardinfoarray.Wcard1[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Wcard1[9] +
-                    `</span></td>
+                p3cardinfoarray.Wcard1[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Wcard1[10] +
-                    `</td>
+                p3cardinfoarray.Wcard1[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Wcard1[0] +
+                    p3cardinfoarray.Wcard1[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard1[1] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard1[2] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard1[3] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard1[4] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard1[5] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard1[6] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard1[7] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard1[8] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Wcard1[9] +
-                            `</span></td>
+                    p3cardinfoarray.Wcard1[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Wcard1[10] +
-                            `</td>
+                    p3cardinfoarray.Wcard1[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -3078,121 +3115,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 2) {
+        } else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/white/card2_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Wcard2[0] +
-                    `</td>
+                p3cardinfoarray.Wcard2[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard2[1] +
-                    `</td>
+                p3cardinfoarray.Wcard2[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard2[2] +
-                    `</td>
+                p3cardinfoarray.Wcard2[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard2[3] +
-                    `</td>
+                p3cardinfoarray.Wcard2[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard2[4] +
-                    `</td>
+                p3cardinfoarray.Wcard2[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard2[5] +
-                    `</td>
+                p3cardinfoarray.Wcard2[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard2[6] +
-                    `</td>
+                p3cardinfoarray.Wcard2[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard2[7] +
-                    `</td>
+                p3cardinfoarray.Wcard2[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard2[8] +
-                    `</td>
+                p3cardinfoarray.Wcard2[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Wcard2[9] +
-                    `</span></td>
+                p3cardinfoarray.Wcard2[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Wcard2[10] +
-                    `</td>
+                p3cardinfoarray.Wcard2[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Wcard2[0] +
+                    p3cardinfoarray.Wcard2[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard2[1] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard2[2] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard2[3] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard2[4] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard2[5] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard2[6] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard2[7] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard2[8] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Wcard2[9] +
-                            `</span></td>
+                    p3cardinfoarray.Wcard2[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Wcard2[10] +
-                            `</td>
+                    p3cardinfoarray.Wcard2[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -3205,121 +3244,123 @@ function p3cardinfo(color,num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        }else if (num == 3) {
+        } else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/white/card3_M.png">`
             );
 
             var newinfostr = "";
-            newinfostr +=`
+            newinfostr +=
+                `
             <table class="nowinfotable">
                 <tr>
                     <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center" colspan=2>` +
-                        p3cardinfoarray.Wcard3[0] +
-                    `</td>
+                p3cardinfoarray.Wcard3[0] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard3[1] +
-                    `</td>
+                p3cardinfoarray.Wcard3[1] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard3[2] +
-                    `</td>
+                p3cardinfoarray.Wcard3[2] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard3[3] +
-                    `</td>
+                p3cardinfoarray.Wcard3[3] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard3[4] +
-                    `</td>
+                p3cardinfoarray.Wcard3[4] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard3[5] +
-                    `</td>
+                p3cardinfoarray.Wcard3[5] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard3[6] +
-                    `</td>
+                p3cardinfoarray.Wcard3[6] +
+                `</td>
                 </tr>
                 <tr>
                     <td>` +
-                        p3cardinfoarray.Wcard3[7] +
-                    `</td>
+                p3cardinfoarray.Wcard3[7] +
+                `</td>
                     <td>` +
-                        p3cardinfoarray.Wcard3[8] +
-                    `</td>
+                p3cardinfoarray.Wcard3[8] +
+                `</td>
                 </tr>
                 <tr>
                     <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
                 </tr>
                 <tr>
                     <td colspan=2><span>` +
-                        p3cardinfoarray.Wcard3[9] +
-                    `</span></td>
+                p3cardinfoarray.Wcard3[9] +
+                `</span></td>
                 </tr>
                 <tr>
                     <td colspan=2>` +
-                        p3cardinfoarray.Wcard3[10] +
-                    `</td>
+                p3cardinfoarray.Wcard3[10] +
+                `</td>
                 </tr>
             </table>`;
 
             $(".newinfo").html(newinfostr);
             $(".choosenew").on("click", function () {
-                p3cardinfostr += `
+                p3cardinfostr +=
+                    `
                     <div class="cardname">` +
-                        p3cardinfoarray.Wcard3[0] +
+                    p3cardinfoarray.Wcard3[0] +
                     `</div>
                     <div class="value">卡片屬性</div>
                     <table class="valuetable">
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard3[1] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[1] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard3[2] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[2] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard3[3] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[3] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard3[4] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[4] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard3[5] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[5] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard3[6] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[6] +
+                    `</td>
                         </tr>
                         <tr>
                             <td>` +
-                                p3cardinfoarray.Wcard3[7] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[7] +
+                    `</td>
                             <td>` +
-                                p3cardinfoarray.Wcard3[8] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[8] +
+                    `</td>
                         </tr>
                     </table>
                     <div class="skill">羈絆技能</div>
                     <table class="skilltable">
                         <tr>
                             <td colspan=2><span>` +
-                                p3cardinfoarray.Wcard3[9] +
-                            `</span></td>
+                    p3cardinfoarray.Wcard3[9] +
+                    `</span></td>
                         </tr>
                         <tr>
                             <td colspan=2>` +
-                                p3cardinfoarray.Wcard3[10] +
-                            `</td>
+                    p3cardinfoarray.Wcard3[10] +
+                    `</td>
                         </tr>
                     </table>`;
 
@@ -3340,7 +3381,6 @@ function p3cardinfo(color,num) {
     $(".keepnow").on("click", function () {
         $(".p3resultpop").fadeOut(200);
     });
-
 }
 
 //p3"結交名士"次數不夠
@@ -3364,13 +3404,9 @@ function p3_error_not_enough() {
 //p3"結交名士"已領取過
 function p3_already_get() {
     $(".popStitle").html("您已領取過了！​");
-    $(".popSText")
-        .html(
-            ""
-        )
-        .css({
-            fontSize: "1.3rem",
-        });
+    $(".popSText").html("").css({
+        fontSize: "1.3rem",
+    });
     if (screen.width <= 425) {
         $(".popSText").css({
             fontSize: "1rem",
@@ -3381,13 +3417,9 @@ function p3_already_get() {
 //p3"結交名士"未完成預約
 function p3_please_pre() {
     $(".popStitle").html("請先完成預約");
-    $(".popSText")
-        .html(
-            ""
-        )
-        .css({
-            fontSize: "1.3rem",
-        });
+    $(".popSText").html("").css({
+        fontSize: "1.3rem",
+    });
     if (screen.width <= 425) {
         $(".popSText").css({
             fontSize: "1rem",
@@ -3398,9 +3430,58 @@ function p3_please_pre() {
 //p3"結交名士"未完成預約
 function p3_success() {
     $(".popStitle").html("已完成任務");
+    $(".popSText").html("").css({
+        fontSize: "1.3rem",
+    });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
+}
+
+function p3choose() {
+    $(".p3choosepop").fadeIn(200);
+    $(".card1").on("click", function () {
+        $(".card1").css({
+            boxShadow: "0 0 20px #ff1919",
+        });
+        $(".card2").css({
+            boxShadow: "0 0 20px #ffdf9d",
+        });
+        $(".card3").css({
+            boxShadow: "0 0 20px #ffdf9d",
+        });
+    });
+    $(".card2").on("click", function () {
+        $(".card2").css({
+            boxShadow: "0 0 20px #ff1919",
+        });
+        $(".card1").css({
+            boxShadow: "0 0 20px #ffdf9d",
+        });
+        $(".card3").css({
+            boxShadow: "0 0 20px #ffdf9d",
+        });
+    });
+    $(".card3").on("click", function () {
+        $(".card3").css({
+            boxShadow: "0 0 20px #ff1919",
+        });
+        $(".card2").css({
+            boxShadow: "0 0 20px #ffdf9d",
+        });
+        $(".card1").css({
+            boxShadow: "0 0 20px #ffdf9d",
+        });
+    });
+}
+function p3_replace() {
+    $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
     $(".popSText")
         .html(
-            ""
+            "※請注意，本次選擇將會放棄原先保留之獎勵，是否要以這位名士取代原本結果?​"
         )
         .css({
             fontSize: "1.3rem",
@@ -3412,58 +3493,42 @@ function p3_success() {
     }
     $(".popScheckBtn").html("確認");
 }
-
-function p3choose(){
-    $(".p3choosepop").fadeIn(200);
-    $(".card1").on("click",function(){
-        $(".card1").css({
-            boxShadow: '0 0 20px #ff1919'
-        })
-        $(".card2").css({
-            boxShadow: '0 0 20px #ffdf9d'
-        })
-        $(".card3").css({
-            boxShadow: '0 0 20px #ffdf9d'
-        })
-    })
-    $(".card2").on("click",function(){
-        $(".card2").css({
-            boxShadow: '0 0 20px #ff1919'
-        })
-        $(".card1").css({
-            boxShadow: '0 0 20px #ffdf9d'
-        })
-        $(".card3").css({
-            boxShadow: '0 0 20px #ffdf9d'
-        })
-    })
-    $(".card3").on("click",function(){
-        $(".card3").css({
-            boxShadow: '0 0 20px #ff1919'
-        })
-        $(".card2").css({
-            boxShadow: '0 0 20px #ffdf9d'
-        })
-        $(".card1").css({
-            boxShadow: '0 0 20px #ffdf9d'
-        })
-    })
-}
-
-$(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
-$(".popSText")
-    .html(
-        "※請注意，本次選擇將會放棄原先保留之獎勵，是否要以這位名士取代原本結果?​"
-    )
-    .css({
+function p3_last() {
+    //與他結義
+    $(".popStitle").html("是否要選擇這位名士為最終結義名士?");
+    $(".popSText").html("※請注意，選定結果後將無法進行更改").css({
         fontSize: "1.3rem",
     });
-if (screen.width <= 425) {
-    $(".popSText").css({
-        fontSize: "1rem",
-    });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+
+    $(".popScheckBtn").hide();
+
+    $(".popScheckBtn2").show();
 }
-$(".popScheckBtn").html("確認");
+
+function p3_last_success() {
+    $(".popStitle").html("");
+    $(".popSText").html("完成結義 ").css({
+        fontSize: "1.8rem",
+    });
+    if (screen.width <= 820) {
+        $(".popSText").css({
+            fontSize: "1.6rem",
+        });
+    }
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1.2rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn2").hide();
+    $(".popScheckBtn").show();
+}
 
 //p3"結交名士"任務佈告
 function p3missionIn() {
@@ -3562,7 +3627,7 @@ function p4awardIn() {
         p4award2str = "";
 
     for (j = 0; j < 6; j++) {
-        if(j == 0){
+        if (j == 0) {
             p4award1str +=
                 '<tr><td style="width: 10%;background-color:#d9ebff;">' +
                 p4award1array.times[j] +
@@ -3570,8 +3635,8 @@ function p4awardIn() {
                 p4award1array.award[j] +
                 '</td><td style="width:60%;background-color:#d9ebff;">' +
                 p4award1array.info[j] +
-                '</td></tr>';
-        }else{
+                "</td></tr>";
+        } else {
             p4award1str +=
                 '<tr><td style="width: 10%;">' +
                 p4award1array.times[j] +
@@ -3579,12 +3644,12 @@ function p4awardIn() {
                 p4award1array.award[j] +
                 '</td><td style="width:60%;">' +
                 p4award1array.info[j] +
-                '</td></tr>';
+                "</td></tr>";
         }
     }
 
     for (j = 0; j < 6; j++) {
-        if(j == 0){
+        if (j == 0) {
             p4award2str +=
                 '<tr><td style="width: 10%;background-color:#d9ebff;">' +
                 p4award2array.times[j] +
@@ -3592,8 +3657,8 @@ function p4awardIn() {
                 p4award2array.award[j] +
                 '</td><td style="width:60%;background-color:#d9ebff;">' +
                 p4award2array.info[j] +
-                '</td></tr>';
-        }else{
+                "</td></tr>";
+        } else {
             p4award2str +=
                 '<tr><td style="width: 10%;">' +
                 p4award2array.times[j] +
@@ -3601,7 +3666,7 @@ function p4awardIn() {
                 p4award2array.award[j] +
                 '</td><td style="width:60%;">' +
                 p4award2array.info[j] +
-                '</td></tr>';
+                "</td></tr>";
         }
     }
 
@@ -3620,27 +3685,33 @@ function p4awardIn() {
 }
 
 //p4"熊貓賽跑"結果
-function p4pandaresult(i){
+function p4pandaresult(i) {
     //i是隨機數字，用於隨機選獲勝熊貓的影片
-    if(i == 1){
-        $(".pandavideo").html(`<source src="/img/event/prereg/p4/panda1win.mp4">`)
+    if (i == 1) {
+        $(".pandavideo").html(
+            `<source src="/img/event/prereg/p4/panda1win.mp4">`
+        );
         $(".p4resultpop").fadeIn(200);
-        $('.popS').delay(7500).fadeIn(200);
+        $(".popS").delay(7500).fadeIn(200);
         p4_panda1_win();
-    }else if(i == 2){
-        $(".pandavideo").html(`<source src="/img/event/prereg/p4/panda2win.mp4">`)
+    } else if (i == 2) {
+        $(".pandavideo").html(
+            `<source src="/img/event/prereg/p4/panda2win.mp4">`
+        );
         $(".p4resultpop").fadeIn(200);
-        $('.popS').delay(7500).fadeIn(200);
+        $(".popS").delay(7500).fadeIn(200);
         p4_panda2_win();
-    }else if(i == 3){
-        $(".pandavideo").html(`<source src="/img/event/prereg/p4/panda3win.mp4">`)
+    } else if (i == 3) {
+        $(".pandavideo").html(
+            `<source src="/img/event/prereg/p4/panda3win.mp4">`
+        );
         $(".p4resultpop").fadeIn(200);
-        $('.popS').delay(7500).fadeIn(200);
+        $(".popS").delay(7500).fadeIn(200);
         p4_panda3_win();
     }
-    $('.popScheckBtn').on("click",function(){
-        $('.p4resultpop').fadeOut(200);
-    })
+    $(".popScheckBtn").on("click", function () {
+        $(".p4resultpop").fadeOut(200);
+    });
 }
 
 //p4"熊貓賽跑"獲勝彈窗-熊貓船長
@@ -3983,4 +4054,6 @@ for (j = 0; j < 7; j++) {
 
 $(".p7rules").html(p7rulesstr);
 
-$(".digeamlogo").html(`<a href="https://www.digeam.com/index" target="blank"></a>`)
+$(".digeamlogo").html(
+    `<a href="https://www.digeam.com/index" target="blank"></a>`
+);
