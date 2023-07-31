@@ -495,7 +495,7 @@ body{
                 position: absolute;
                 top: -22%;
                 right: 0%;
-                width: 35%;
+                width: 32%;
                 z-index: 1;
 
                 & p{
@@ -506,7 +506,7 @@ body{
             
                 .p3listbtns{
                     position: absolute;
-                    top: 75%;
+                    top: 80%;
                     right: -4%;
                     translate: 0%;
                     color: #ffffff;
@@ -973,7 +973,7 @@ body{
                 position: absolute;
                 top: -8%;
                 right: 0%;
-                width: 35%;
+                width: 40%;
                 z-index: 1;
 
                 & p{
@@ -1337,7 +1337,7 @@ body{
                     border-radius: 30px;
                     width: calc(50vw - 60px);
                     height: calc(27.5vw - 60px);
-                    background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide1.jpg)no-repeat;
                     background-size: cover;
                     background-position: center;
                 }
@@ -1362,19 +1362,19 @@ body{
                 }
 
                 .p5slide1{
-                    background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide1.jpg)no-repeat;
                 }
 
                 .p5slide2{
-                    background: url(/img/event/prereg/p5/slide2.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide2.jpg)no-repeat;
                 }
 
                 .p5slide3{
-                    background: url(/img/event/prereg/p5/slide3.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide3.jpg)no-repeat;
                 }
 
                 .p5slide4{
-                    background: url(/img/event/prereg/p5/slide4.png)no-repeat;
+                    background: url(/img/event/prereg/p5/slide4.jpg)no-repeat;
                 }
 
                 .p5slide1,.p5slide2,.p5slide3,.p5slide4{
@@ -1915,6 +1915,12 @@ body{
                     background-size: contain;
                     background-position: center;
                     filter: drop-shadow(0 1px 2px #000);
+
+                    & a{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 .giantlogo{
@@ -2012,7 +2018,7 @@ body{
 
     .menubtn{
         position: absolute;
-        z-index: 99;
+        z-index: 10;
         width: 60px;
         height: 60px;
         border-radius: 30px;
@@ -2061,7 +2067,7 @@ body{
         top: 0;
         left: 0;
         display: none;
-        z-index: 99;
+        z-index: 10;
         width: 15vw;
         height: 100vh;
         background-image: linear-gradient(to bottom, rgba(179, 166, 211, 0.55), rgba(104, 145, 180, 0.55));
@@ -2071,7 +2077,7 @@ body{
         position: absolute;
         top: -100vh;
         left: 15vw;
-        z-index: 99;
+        z-index: 10;
         height: 100vh;
         border-right-width: 2px;
         border-right-color: #ffffff;
@@ -2507,6 +2513,268 @@ body{
     }
 }
 
+/*結交名士自選彈窗*/
+.p3choosepop{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(127, 140, 149, 0.5);
+    font-family: 'Noto Serif TC', serif;
+    z-index: 10;
+    /* display: none; */
+
+    .p3choosepopframe{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 100vh;
+        height: 75vh;
+        background: url(/img/event/prereg/p3/choosepopBG.png)no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        .p3choosepoptitle{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            translate: -50%;
+            font-size: 1.8rem;
+            color: #15386c;
+            text-align: center;
+
+            &::before,&::after{
+                position: absolute;
+                content: '';
+                top: 6%;
+                width: 28px;
+                height: 100%;
+                background: url(/img/event/prereg/pop_l/popLtitle_icon.png)no-repeat;
+                background-position: center;
+            }
+            &::before{
+                left: -30%;
+            }
+            &::after{
+                right: -30%;
+                scale: -1;
+            }
+        }
+
+        .p3subtitle{
+            position: relative;
+            margin: 20px auto;
+            width: calc(165px * 1.2);
+            height: calc(37px * 1.2);
+            background: url(/img/event/prereg/p3/subtitleBG.png)no-repeat;
+            background-position: top;
+            background-size: contain;
+            font-family: 'Noto Serif TC', serif;
+            color: #FFF;
+            font-size: 13pt;
+            text-align: center;
+            line-height: calc(37px * 1.2);
+            letter-spacing: 1px;
+        }
+
+        .cards{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 90%;
+            height: 65%;
+            display: flex;
+            justify-content: center;
+
+            .card1_frame{
+                width: 33%;
+                height: 100%;
+
+                .card1{
+                    position: relative;
+                    margin-top: 25%;
+                    left: 50%;
+                    translate: -50%;
+                    width: calc(148px * 1.2);
+                    height: calc(214px * 1.2);
+                    background:url(/img/event/prereg/p3/orange/card1_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    box-shadow: 0 0 20px #ffdf9d; 
+                    cursor: pointer;
+                }
+        
+                .card1info{
+                    position: absolute;
+                    top: 50%;
+                    left: 0%;
+                    translate: -50%;
+                    width: 250px;
+                    height: 300px;
+                    background-image: linear-gradient(to bottom, rgba(156, 179, 206, 0.75), rgba(112, 157, 202, 0.75));
+                    border: 1px solid #003098;
+                    z-index: 1;
+                    display: none;
+                    pointer-events: none;
+                }
+                        
+                .cardinfotable{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    width: 90%;
+                    height: 100%;
+                    font-weight: bold;
+        
+                    & tr{
+                        font-size: 15px;
+        
+                        & td{
+                            width: 50%;
+        
+                            & span{
+                                color: #eaf4ff;
+                            }
+                        }
+                    }
+                }
+            }
+            .card2_frame{
+                width: 33%;
+                height: 100%;
+
+                .card2{
+                    position: relative;
+                    margin-top: 25%;
+                    left: 50%;
+                    translate: -50%;
+                    width: calc(148px * 1.2);
+                    height: calc(214px * 1.2);
+                    background:url(/img/event/prereg/p3/orange/card2_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    box-shadow: 0 0 20px #ffdf9d; 
+                    cursor: pointer;
+                }
+        
+                .card2info{
+                    position: absolute;
+                    top: 50%;
+                    left: 33%;
+                    translate: -50%;
+                    width: 250px;
+                    height: 300px;
+                    background-image: linear-gradient(to bottom, rgba(156, 179, 206, 0.75), rgba(112, 157, 202, 0.75));
+                    border: 1px solid #003098;
+                    z-index: 1;
+                    display: none;
+                    pointer-events: none;
+                }
+                        
+                .cardinfotable{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    width: 90%;
+                    height: 100%;
+                    font-weight: bold;
+        
+                    & tr{
+                        font-size: 15px;
+        
+                        & td{
+                            width: 50%;
+        
+                            & span{
+                                color: #eaf4ff;
+                            }
+                        }
+                    }
+                }
+            }
+            .card3_frame{
+                width: 33%;
+                height: 100%;
+
+                .card3{
+                    position: relative;
+                    margin-top: 25%;
+                    left: 50%;
+                    translate: -50%;
+                    width: calc(148px * 1.2);
+                    height: calc(214px * 1.2);
+                    background:url(/img/event/prereg/p3/orange/card3_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    box-shadow: 0 0 20px #ffdf9d; 
+                    cursor: pointer;
+                }
+        
+                .card3info{
+                    position: absolute;
+                    top: 50%;
+                    left:66%;
+                    translate: -50%;
+                    width: 250px;
+                    height: 300px;
+                    background-image: linear-gradient(to bottom, rgba(156, 179, 206, 0.75), rgba(112, 157, 202, 0.75));
+                    border: 1px solid #003098;
+                    z-index: 1;
+                    display: none;
+                    pointer-events: none;
+                }
+                        
+                .cardinfotable{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    width: 90%;
+                    height: 100%;
+                    font-weight: bold;
+        
+                    & tr{
+                        font-size: 15px;
+        
+                        & td{
+                            width: 50%;
+        
+                            & span{
+                                color: #eaf4ff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .p3choosebtn{
+            position: relative;
+            top: 15%;
+            left: 50%;
+            translate: -50%;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            text-align: center;
+            color: #FFF;
+            line-height: 50px;
+            letter-spacing: 2px;
+            background-image: linear-gradient(to bottom, #606994, #21466a);
+            transition: 0.3s;
+
+            &:hover{
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
 /*大彈窗*/
 .pop{
     position: fixed;
@@ -2762,4 +3030,43 @@ body{
     }
 }
 
+/*熊貓賽跑影片窗*/
+.p4resultpop{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+    display: none;
+
+    .p4resultpopframe{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 50vw;
+        height: 50vw;
+
+        .pandavideo{
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+
+        .booframe{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url(/img/event/prereg/p4/resultframe.png)no-repeat;
+            background-size: contain;
+            background-position: center;
+            z-index: 1;
+        }
+    }
+}
 

@@ -10,7 +10,7 @@ function p2informationIn() {
     var p2information = "";
 
     for (j = 0; j < 4; j++) {
-        p2information += "<li>" + p2informationarray[j] + "</li>";
+        p2information += '<li style="margin-left: 11%;">' + p2informationarray[j] + "</li>";
     }
 
     $(".poptitle").html("活動說明");
@@ -24,9 +24,9 @@ function p2noticeIn() {
         "每組掘夢網會員帳號僅限參加一次事前預約活動。本活動僅限台港澳地區玩家參與。",
         "請確認您填寫的手機號碼是否正確，每個手機號碼僅可申請一次事前預約活動。",
         "此活動的抽獎為機會中獎獎勵，玩家參與活動不代表即可獲得指定獎勵。",
-        "本活動所提供之虛寶獎勵，皆為不可交易之性質，實際到距限制依遊戲內為準。<span>領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。</span>",
+        "本活動所提供之虛寶獎勵，皆為不可交易之性質，實際道具限制依遊戲內為準。<span>領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。</span>",
         "若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參與，活動將照常舉行，不另做補償。",
-        "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多比參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
+        "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
         "本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。",
     ];
 
@@ -193,15 +193,15 @@ function p3informationIn() {
 //p3"結交名士"注意事項
 function p3noticeIn() {
     var p3noticearray = [
-        "此活動需完成事前預約活動才可參加。 ",
+        "此活動需完成事前預約活動才可參加。",
         "此活動的抽獎為機會中獎獎勵，玩家參與活動不代表即可獲得指定獎勵。",
-        "玩家在拜訪名士後，若不選擇保留將視為放棄該次抽取到的名士。",
-        "結交名士活動最多只可獲得一次獎勵，且進行結義後即視為最終選定結果，無法再進行保留名士更改。",
-        "本活動需要於主畫面點選結義按鈕選定最終獎勵，僅保留拜訪結果不視為完成活動。若因沒有進行結義導致無法取得獎勵，恕不進行補償。",
-        "本活動所提供之虛寶獎勵，皆為不可交易之性質，實際到距限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。",
-        "若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參與，活動將照常舉行，不另做補償。",
-        "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多比參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
-        "本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。",
+        "玩家在拜訪名士後，再次進行拜訪名士將放棄前次抽取到的名士。",
+        "結交名士活動最多只可獲得一次獎勵，且進行結義後即視為最終選定結果，無法再進行拜訪名士。",
+        "本活動需要於主畫面點選結義按鈕選定最終獎勵，若因沒有進行結義導致無法取得獎勵，恕不進行補償。",
+        "本活動所提供之虛寶獎勵，皆為不可交易之性質，實際道具限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。",
+        "若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參噢，活動將照常舉行，不另做補償。",
+        "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
+        "本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主"
     ];
 
     var p3noticestr = "";
@@ -288,12 +288,13 @@ function p3listIn() {
             "愛之禮官",
             "愛之花童",
             "愛之隨從",
+            ""
         ],
     };
 
     var p3liststr = "";
 
-    for (j = 0; j < 15; j += 3) {
+    for (j = 0; j < 18; j += 3) {
         p3liststr +=
             "<tr><td>" +
             p3listarray.others[j] +
@@ -510,7 +511,7 @@ function p3listIn() {
                 `
         <table class="othertable"><tr><td colspan=3 style="font-weight: bold;background-color: #627eac;color: #FFF;">名稱</td></tr>` +
                 p3liststr +
-                `</table>`
+                `</table><br/>`
         );
     $(".popText").hide();
 }
@@ -3412,6 +3413,43 @@ function p3_success() {
     $(".popScheckBtn").html("確認");
 }
 
+function p3choose(){
+    $(".p3choosepop").fadeIn(200);
+    $(".card1").on("click",function(){
+        $(".card1").css({
+            boxShadow: '0 0 20px #ff1919'
+        })
+        $(".card2").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+        $(".card3").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+    })
+    $(".card2").on("click",function(){
+        $(".card2").css({
+            boxShadow: '0 0 20px #ff1919'
+        })
+        $(".card1").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+        $(".card3").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+    })
+    $(".card3").on("click",function(){
+        $(".card3").css({
+            boxShadow: '0 0 20px #ff1919'
+        })
+        $(".card2").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+        $(".card1").css({
+            boxShadow: '0 0 20px #ffdf9d'
+        })
+    })
+}
+
 $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
 $(".popSText")
     .html(
@@ -3462,9 +3500,9 @@ function p4noticeIn() {
     var p4noticearray = [
         "此活動需完成事前預約活動才可參加。",
         "熊貓賽跑活動將於每日00:00開啟一輪新的賽事，每日登入活動頁面僅可遊玩一次熊貓賽跑 。",
-        "本活動所提供之虛寶獎勵，皆為不可交易之性質，實際到距限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。",
+        "本活動所提供之虛寶獎勵，皆為不可交易之性質，實際道具限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。",
         "若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參與，活動將照常舉行，不另做補償。",
-        "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多比參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
+        "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
         "本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。",
     ];
 
@@ -3495,9 +3533,9 @@ function p4awardIn() {
             "獎勵說明",
             "玄獸技能升級消耗的道具",
             "用以強化玄獸/仙尊/仙童根骨等級，最高提升至10",
-            "與另一隻熊貓元靈一起孕育可獲得玄獸熊貓，孕育出的熊貓可協助玩家戰鬥",
+            "獲得琉璃竹後，可至遊戲中跟NPC馴靈小仙兌換",
             "用以強化玄獸/仙尊/仙童根骨等級，從10開始最高可提升至16",
-            "與另一隻熊貓元靈一起孕育可獲得玄獸熊貓，孕育出的熊貓可協助玩家戰鬥",
+            "獲得琉璃竹後，可至遊戲中跟NPC馴靈小仙兌換",
         ],
     };
     var p4award2array = {
@@ -3524,25 +3562,47 @@ function p4awardIn() {
         p4award2str = "";
 
     for (j = 0; j < 6; j++) {
-        p4award1str +=
-            "<tr><td>" +
-            p4award1array.times[j] +
-            "</td><td>" +
-            p4award1array.award[j] +
-            "</td><td>" +
-            p4award1array.info[j] +
-            "</td></tr>";
+        if(j == 0){
+            p4award1str +=
+                '<tr><td style="width: 10%;background-color:#d9ebff;">' +
+                p4award1array.times[j] +
+                '</td><td style="width: 30%;background-color:#d9ebff;">' +
+                p4award1array.award[j] +
+                '</td><td style="width:60%;background-color:#d9ebff;">' +
+                p4award1array.info[j] +
+                '</td></tr>';
+        }else{
+            p4award1str +=
+                '<tr><td style="width: 10%;">' +
+                p4award1array.times[j] +
+                '</td><td style="width: 30%;">' +
+                p4award1array.award[j] +
+                '</td><td style="width:60%;">' +
+                p4award1array.info[j] +
+                '</td></tr>';
+        }
     }
 
     for (j = 0; j < 6; j++) {
-        p4award2str +=
-            '<tr><td style="width: 10%;">' +
-            p4award2array.times[j] +
-            '</td><td style="width: 30%;">' +
-            p4award2array.award[j] +
-            '</td><td style="width:60%;">' +
-            p4award2array.info[j] +
-            "</td></tr>";
+        if(j == 0){
+            p4award2str +=
+                '<tr><td style="width: 10%;background-color:#d9ebff;">' +
+                p4award2array.times[j] +
+                '</td><td style="width: 30%;background-color:#d9ebff;">' +
+                p4award2array.award[j] +
+                '</td><td style="width:60%;background-color:#d9ebff;">' +
+                p4award2array.info[j] +
+                '</td></tr>';
+        }else{
+            p4award2str +=
+                '<tr><td style="width: 10%;">' +
+                p4award2array.times[j] +
+                '</td><td style="width: 30%;">' +
+                p4award2array.award[j] +
+                '</td><td style="width:60%;">' +
+                p4award2array.info[j] +
+                '</td></tr>';
+        }
     }
 
     $(".poptitle").html("獎勵列表");
@@ -3557,6 +3617,85 @@ function p4awardIn() {
                 `</table>`
         );
     $(".popText").hide();
+}
+
+//p4"熊貓賽跑"結果
+function p4pandaresult(i){
+    //i是隨機數字，用於隨機選獲勝熊貓的影片
+    if(i == 1){
+        $(".pandavideo").html(`<source src="/img/event/prereg/p4/panda1win.mp4">`)
+        $(".p4resultpop").fadeIn(200);
+        $('.popS').delay(7500).fadeIn(200);
+        p4_panda1_win();
+    }else if(i == 2){
+        $(".pandavideo").html(`<source src="/img/event/prereg/p4/panda2win.mp4">`)
+        $(".p4resultpop").fadeIn(200);
+        $('.popS').delay(7500).fadeIn(200);
+        p4_panda2_win();
+    }else if(i == 3){
+        $(".pandavideo").html(`<source src="/img/event/prereg/p4/panda3win.mp4">`)
+        $(".p4resultpop").fadeIn(200);
+        $('.popS').delay(7500).fadeIn(200);
+        p4_panda3_win();
+    }
+    $('.popScheckBtn').on("click",function(){
+        $('.p4resultpop').fadeOut(200);
+    })
+}
+
+//p4"熊貓賽跑"獲勝彈窗-熊貓船長
+function p4_panda1_win() {
+    $(".popStitle").html("");
+    $(".popSText").html("本次獲勝的是熊貓船長").css({
+        fontSize: "1.8rem",
+    });
+    if (screen.width <= 820) {
+        $(".popSText").css({
+            fontSize: "1.6rem",
+        });
+    }
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1.2rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
+}
+//p4"熊貓賽跑"獲勝彈窗-熊貓酒仙
+function p4_panda2_win() {
+    $(".popStitle").html("");
+    $(".popSText").html("本次獲勝的是熊貓酒仙").css({
+        fontSize: "1.8rem",
+    });
+    if (screen.width <= 820) {
+        $(".popSText").css({
+            fontSize: "1.6rem",
+        });
+    }
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1.2rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
+}
+//p4"熊貓賽跑"獲勝彈窗-熊貓少林
+function p4_panda3_win() {
+    $(".popStitle").html("");
+    $(".popSText").html("本次獲勝的是熊貓少林").css({
+        fontSize: "1.8rem",
+    });
+    if (screen.width <= 820) {
+        $(".popSText").css({
+            fontSize: "1.6rem",
+        });
+    }
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1.2rem",
+        });
+    }
+    $(".popScheckBtn").html("確認");
 }
 
 //p6職業介紹資料
@@ -3832,7 +3971,7 @@ var p7rulesarray = [
     "各項活動獎勵需於遊戲正式開服後，於官網內的「領獎專區」進行領取，獎勵才會發送至對應角色信箱內。",
     "各項活動參加、得獎資格與獎項不得轉讓或贈與第三人。",
     "若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參與，活動將照常舉行，不另做補償。",
-    "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多比參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
+    "本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
     "本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。",
 ];
 
@@ -3843,3 +3982,5 @@ for (j = 0; j < 7; j++) {
 }
 
 $(".p7rules").html(p7rulesstr);
+
+$(".digeamlogo").html(`<a href="https://www.digeam.com/index" target="blank"></a>`)
