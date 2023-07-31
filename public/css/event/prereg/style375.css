@@ -1367,7 +1367,7 @@
                         border-radius: 30px;
                         width: calc(70vw - 60px);
                         height: calc(103vw - 60px);
-                        background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                         background-size: cover;
                         background-position: center;
                     }
@@ -1392,19 +1392,19 @@
                     }
     
                     .p5slide1{
-                        background: url(/img/event/prereg/p5/slide1.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                     }
     
                     .p5slide2{
-                        background: url(/img/event/prereg/p5/slide2.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide2_m.jpg)no-repeat;
                     }
     
                     .p5slide3{
-                        background: url(/img/event/prereg/p5/slide3.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide3_m.jpg)no-repeat;
                     }
     
                     .p5slide4{
-                        background: url(/img/event/prereg/p5/slide4.png)no-repeat;
+                        background: url(/img/event/prereg/p5/slide4_m.jpg)no-repeat;
                     }
         
                     .p5slide1,.p5slide2,.p5slide3,.p5slide4{
@@ -2496,6 +2496,271 @@
                 .keepnow{
                     width: 30%;
                     height: 35px;
+                }
+            }
+        }
+    }
+
+    /*結交名士自選彈窗*/
+    .p3choosepop{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(127, 140, 149, 0.5);
+        font-family: 'Noto Serif TC', serif;
+        z-index: 10;
+        /* display: none; */
+    
+        .p3choosepopframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 90vw;
+            height: 67.5vw;
+            background: url(/img/event/prereg/p3/choosepopBG.png)no-repeat;
+            background-size: contain;
+            background-position: center;
+    
+            .p3choosepoptitle{
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                translate: -50%;
+                font-size: 1.8rem;
+                color: #15386c;
+                text-align: center;
+    
+                &::before,&::after{
+                    position: absolute;
+                    content: '';
+                    top: 6%;
+                    width: 28px;
+                    height: 100%;
+                    background: url(/img/event/prereg/pop_l/popLtitle_icon.png)no-repeat;
+                    background-position: center;
+                }
+                &::before{
+                    left: -30%;
+                }
+                &::after{
+                    right: -30%;
+                    scale: -1;
+                }
+            }
+    
+            .p3subtitle{
+                position: relative;
+                margin: 7px auto;
+                width: calc(165px * 1.2);
+                height: calc(37px * 1.2);
+                background: url(/img/event/prereg/p3/subtitleBG.png)no-repeat;
+                background-position: top;
+                background-size: contain;
+                font-family: 'Noto Serif TC', serif;
+                color: #FFF;
+                font-size: 13pt;
+                text-align: center;
+                line-height: calc(37px * 1.2);
+                letter-spacing: 1px;
+                scale: 0.5;
+                translate: -25%;
+            }
+    
+            .cards{
+                position: relative;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 90%;
+                height: 65%;
+                display: flex;
+                justify-content: center;
+    
+                .card1_frame{
+                    width: 33%;
+                    height: 100%;
+    
+                    .card1{
+                        position: relative;
+                        margin-top: 25%;
+                        left: 50%;
+                        translate: -50%;
+                        width: calc(148px * 0.5);
+                        height: calc(214px * 0.5);
+                        background:url(/img/event/prereg/p3/orange/card1_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        box-shadow: 0 0 20px #ffdf9d; 
+                        cursor: pointer;
+                    }
+            
+                    .card1info{
+                        position: absolute;
+                        top: 50%;
+                        left: 33%;
+                        translate: -50%;
+                        width: 250px;
+                        height: 300px;
+                        background-image: linear-gradient(to bottom, rgba(156, 179, 206, 0.75), rgba(112, 157, 202, 0.75));
+                        border: 1px solid #003098;
+                        z-index: 1;
+                        display: none;
+                        pointer-events: none;
+                    }
+                            
+                    .cardinfotable{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        translate: -50% -50%;
+                        width: 90%;
+                        height: 100%;
+                        font-weight: bold;
+            
+                        & tr{
+                            font-size: 15px;
+            
+                            & td{
+                                width: 50%;
+            
+                                & span{
+                                    color: #eaf4ff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .card2_frame{
+                    width: 33%;
+                    height: 100%;
+    
+                    .card2{
+                        position: relative;
+                        margin-top: 25%;
+                        left: 50%;
+                        translate: -50%;
+                        width: calc(148px * 0.5);
+                        height: calc(214px * 0.5);
+                        background:url(/img/event/prereg/p3/orange/card2_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        box-shadow: 0 0 20px #ffdf9d; 
+                        cursor: pointer;
+                    }
+            
+                    .card2info{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        translate: -50%;
+                        width: 250px;
+                        height: 300px;
+                        background-image: linear-gradient(to bottom, rgba(156, 179, 206, 0.75), rgba(112, 157, 202, 0.75));
+                        border: 1px solid #003098;
+                        z-index: 1;
+                        display: none;
+                        pointer-events: none;
+                    }
+                            
+                    .cardinfotable{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        translate: -50% -50%;
+                        width: 90%;
+                        height: 100%;
+                        font-weight: bold;
+            
+                        & tr{
+                            font-size: 15px;
+            
+                            & td{
+                                width: 50%;
+            
+                                & span{
+                                    color: #eaf4ff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .card3_frame{
+                    width: 33%;
+                    height: 100%;
+    
+                    .card3{
+                        position: relative;
+                        margin-top: 25%;
+                        left: 50%;
+                        translate: -50%;
+                        width: calc(148px * 0.5);
+                        height: calc(214px * 0.5);
+                        background:url(/img/event/prereg/p3/orange/card3_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        box-shadow: 0 0 20px #ffdf9d; 
+                        cursor: pointer;
+                    }
+            
+                    .card3info{
+                        position: absolute;
+                        top: 50%;
+                        left:66%;
+                        translate: -50%;
+                        width: 250px;
+                        height: 300px;
+                        background-image: linear-gradient(to bottom, rgba(156, 179, 206, 0.75), rgba(112, 157, 202, 0.75));
+                        border: 1px solid #003098;
+                        z-index: 1;
+                        display: none;
+                        pointer-events: none;
+                    }
+                            
+                    .cardinfotable{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        translate: -50% -50%;
+                        width: 90%;
+                        height: 100%;
+                        font-weight: bold;
+            
+                        & tr{
+                            font-size: 15px;
+            
+                            & td{
+                                width: 50%;
+            
+                                & span{
+                                    color: #eaf4ff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .p3choosebtn{
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                translate: -50%;
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                text-align: center;
+                color: #FFF;
+                line-height: 50px;
+                letter-spacing: 2px;
+                background-image: linear-gradient(to bottom, #606994, #21466a);
+                transition: 0.3s;
+                scale: 0.8;
+    
+                &:hover{
+                    transform: translateY(-2px);
                 }
             }
         }

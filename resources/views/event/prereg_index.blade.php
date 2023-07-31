@@ -77,36 +77,39 @@
                     <div class="p2steps">
                         <div class="step1"></div>
                         @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
-                        <!-- 已登入 -->
+                            <!-- 已登入 -->
                             <form id="logout-form" action="https://www.digeam.com/logout" method="POST"
                                 style="display: none;">
                                 <input type="hidden" name="return_url" id="return_url"
                                     value={{ base64_encode('https://xx2.digeam.com/prereg') }}>
                             </form>
-                            <div class ='login_user_id' style = 'text-align:center' data-val={{$_COOKIE['StrID']}}>目前登入的帳號是:{{$_COOKIE['StrID']}}</div>
-                            <button class="loginbtn" style = 'text-align:center' onclick="logout_dg()">登 出</button>
+                            <div class='login_user_id' style='text-align:center' data-val={{ $_COOKIE['StrID'] }}>
+                                目前登入的帳號是:{{ $_COOKIE['StrID'] }}</div>
+                            <button class="loginbtn" style='text-align:center' onclick="logout_dg()">登 出</button>
                         @else
-                        <!-- 未登入 -->
-                        <form id="logout-form" action="https://www.digeam.com/logout" method="POST"
-                        style="display: none;">
-                        <input type="hidden" name="return_url" id="return_url"
-                            value={{ base64_encode('https://xx2.digeam.com/prereg') }}>
-                        </form>
-                        <div class ='login_user_id' style = 'text-align:center' data-val='null'></div>
-                        <div class="loginbtn"><a href="https://www.digeam.com/login">登入</a></div>
-                        <p class="register">※沒有會員嗎?<a href="https://www.digeam.com/register" target="blank">前往註冊</a></p>
+                            <!-- 未登入 -->
+                            <form id="logout-form" action="https://www.digeam.com/logout" method="POST"
+                                style="display: none;">
+                                <input type="hidden" name="return_url" id="return_url"
+                                    value={{ base64_encode('https://xx2.digeam.com/prereg') }}>
+                            </form>
+                            <div class='login_user_id' style='text-align:center' data-val='null'></div>
+                            <div class="loginbtn"><a href="https://www.digeam.com/login">登入</a></div>
+                            <p class="register">※沒有會員嗎?<a href="https://www.digeam.com/register"
+                                    target="blank">前往註冊</a></p>
                         @endif
 
                         <div class="step2"></div>
                         <div class="step2checkbox">
                             <form action="" method="get" target="_blank">
                                 <div>
-                                    <select class = 'mobile_area' name="country">
+                                    <select class='mobile_area' name="country">
                                         <option value="+886">台灣+886</option>
                                         <option value="+852">香港+852</option>
                                         <option value="+853">澳門+853</option>
                                     </select>
-                                    <input type="text" name="phone_num" class = 'mobile' placeholder="請輸入電話號碼(不含符號)">
+                                    <input type="text" name="phone_num" class='mobile'
+                                        placeholder="請輸入電話號碼(不含符號)">
                                 </div>
 
                                 <p><input type="checkbox" id="checkbox" name="noticecheck">
@@ -154,7 +157,7 @@
                         <div class="lantern_light"></div>
                         <div class="lantern"></div>
                         <div class="lantern_line"></div>
-                        <p>距離<br>自選名士<br>0/30</p>
+                        <p class = 'distance_area'>距離<br>自選名士<br><span class='distance_30' data-val=0></span>/30</p>
                     </div>
                     <div class="card">
                         <div class="nocard">
@@ -164,8 +167,8 @@
                             <div class="card_frame"></div>
                         </div>
                         <div class="nowcard"></div>
-                        <div class="getcardbtn"></div>
-                        <p>您尚可拜訪5次</p>
+                        <div class="getcardbtn check_p3"></div>
+                        <p class = 'p3_chance'>您尚可拜訪<span class='visit_frequency' data-val=0></span>次</p>
                     </div>
                     <div class="p3text">
                         <ul class="samplerules"></ul>
@@ -322,37 +325,37 @@
                 <li>
                     <div class="missiontext">每日首次登入頁面</div>
                     <div class="missiontimes">拜訪次數+1</div>
-                    <div class="missionbtn"></div>
+                    <div class="missionbtn" data-val='daily_login'></div>
                 </li>
                 <li>
                     <div class="missiontext">每日首次分享FB</div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn"></div>
+                    <div class="missionbtn" data-val='daily_FB'></div>
                 </li>
                 <li>
                     <div class="missiontext">FB粉絲團按讚追蹤<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn"></div>
+                    <div class="missionbtn" data-val='fb_fans_click'></div>
                 </li>
                 <li>
                     <div class="missiontext">進入官方DC群<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn"></div>
+                    <div class="missionbtn" data-val='join_dc'></div>
                 </li>
                 <li>
                     <div class="missiontext">進入CB活動頁面<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn"></div>
+                    <div class="missionbtn" data-val='go_cb'></div>
                 </li>
                 <li>
                     <div class="missiontext">進入官方網站<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn"></div>
+                    <div class="missionbtn" data-val='go_index'></div>
                 </li>
                 <li>
                     <div class="missiontext">進入OB活動頁面<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn"></div>
+                    <div class="missionbtn" data-val='go_ob'></div>
                 </li>
             </ul>
         </div>
@@ -374,6 +377,138 @@
             </div>
         </div>
     </div>
+    <!-- 結交名士-自選名士彈窗 -->
+    <div class="p3choosepop">
+        <div class="p3choosepopframe">
+            <div class="p3choosepoptitle">自選名士</div>
+            <div class="p3choosebtn">選擇名士</div>
+            <div class="cards">
+                <div class="card1_frame">
+                    <div class="card1"></div>
+                    <div class="card1info">
+                        <table class="cardinfotable">
+                            <tr>
+                                <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center"
+                                    colspan=2>七花獸百花仙靈</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
+                            </tr>
+                            <tr>
+                                <td>體質<span>+245</span></td>
+                                <td>精神<span>+245</span></td>
+                            </tr>
+                            <tr>
+                                <td>耐力<span>+245</span></td>
+                                <td>罡氣<span>+4480</span></td>
+                            </tr>
+                            <tr>
+                                <td>物理防禦<span>+204</span></td>
+                                <td>法術防禦<span>+204</span></td>
+                            </tr>
+                            <tr>
+                                <td>生命值<span>+10181</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2><span>煉獄火海</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan=2>對前方區域造成傷害，該區域中會出現火海持續燃燒10秒。</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="p3subtitle">七花獸百花仙靈</div>
+                </div>
+                <div class="card2_frame">
+                    <div class="card2"></div>
+                    <div class="card2info">
+                        <table class="cardinfotable">
+                            <tr>
+                                <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center"
+                                    colspan=2>仙道盟主沈仲陽</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
+                            </tr>
+                            <tr>
+                                <td>力量<span>+204</span></td>
+                                <td>智力<span>+204</span></td>
+                            </tr>
+                            <tr>
+                                <td>攻擊力<span>+285</span></td>
+                                <td>罡氣攻擊<span>+244</span></td>
+                            </tr>
+                            <tr>
+                                <td>物理攻擊<span>+244</span></td>
+                                <td>法術攻擊<span>+244</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2><span>兩儀反轉</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan=2>使用兩儀反轉後，所有受到的傷害將轉變為恢復生命，持續20秒。</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="p3subtitle">仙道盟主沈仲陽</div>
+                </div>
+                <div class="card3_frame">
+                    <div class="card3"></div>
+                    <div class="card3info">
+                        <table class="cardinfotable">
+                            <tr>
+                                <td style="font-size: 19px;color: #FFF;text-shadow: 0 0 10px #103aa3;text-align: center"
+                                    colspan=2>愛之紅娘</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="color: #21345d;font-size: 16px;">卡片屬性</td>
+                            </tr>
+                            <tr>
+                                <td>體質<span>+245</span></td>
+                                <td>精神<span>+245</span></td>
+                            </tr>
+                            <tr>
+                                <td>耐力<span>+245</span></td>
+                                <td>罡氣<span>+4480</span></td>
+                            </tr>
+                            <tr>
+                                <td>物理防禦<span>+204</span></td>
+                                <td>法術防禦<span>+204</span></td>
+                            </tr>
+                            <tr>
+                                <td>生命值<span>+10181</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan=2 style="color: #21345d;font-size: 16px;">羈絆技能</td>
+                            </tr>
+                            <tr>
+                                <td colspan=2><span>快跑女孩</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan=2>將目標變為毫無還手之力的小女孩。</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="p3subtitle">愛之紅娘</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {{-- 具有快顯功能表撰寫段落 --}}
 
     <!-- 大彈窗 -->
     <div class="pop">
@@ -391,9 +526,20 @@
             <div class="popStitle"></div>
             <div class="popSText"></div>
             <div class="popScheckBtn"></div>
+            <div class="popScheckBtn2">
+                <div class="yes">確認</div>
+                <div class="no">取消</div>
+            </div>
         </div>
     </div>
-
+    <!-- 熊貓賽跑影片窗 -->
+    <div class="p4resultpop">
+        <div class="p4resultpopframe">
+            <video class="pandavideo" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+            </video>
+            <div class="booframe"></div>
+        </div>
+    </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 

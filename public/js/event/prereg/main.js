@@ -1,7 +1,9 @@
+$('.p3choosepop').hide()
+
 //輪播主體設定
 var swiper = new Swiper(".mainSwiper", {
     direction: "vertical", //垂直輪播
-    keyboard : true, //鍵盤上下換頁
+    keyboard : false, //鍵盤上下換頁
     mousewheel: true,
     loop: false,
     speed: 500,
@@ -213,7 +215,8 @@ $('.p3noticebtn').on("click",function(){
     $('.pop').fadeIn(200);
     p3noticeIn();
 })
-$('.getcardbtn').on("click",function(){
+// 名士成功抽取
+function p3_success(){
     $('.p3resultpop').fadeIn(200);
     $('.result_new').hover(function(){
         $('.newinfo').css({display:'block'})
@@ -226,8 +229,22 @@ $('.getcardbtn').on("click",function(){
         $('.nowinfo').css({display:'none'})
     });
     p3cardinfo();
-
-})
+}
+$('.card1').hover(function(){
+    $('.card1info').css({display:'block'})
+},function(){
+    $('.card1info').css({display:'none'})
+});
+$('.card2').hover(function(){
+    $('.card2info').css({display:'block'})
+},function(){
+    $('.card2info').css({display:'none'})
+});
+$('.card3').hover(function(){
+    $('.card3info').css({display:'block'})
+},function(){
+    $('.card3info').css({display:'none'})
+});
 
 //p4熊貓賽跑資訊彈窗
 $('.p4informationbtn').on("click",function(){
@@ -259,6 +276,19 @@ let k = 0;
 if(screen.width <= 820){
     $('.menubtn').addClass("menubtn2");
     $('.menubtn').removeClass("menubtn1");
+
+    $('.swiper-pagination').on("click",function(){
+        k -= 1;
+        $('.menubtn1,.menubtn2').removeClass("menubtnOpen");
+        $('.menubtn2').css({
+            backgroundImage: 'linear-gradient(to bottom, #98a8cb, #424e7e)'
+        })
+        $('.barLine').delay(200).animate({
+            top: '-100vh',
+            opacity: '0'
+        });
+        $('.bar').fadeOut(200);
+    })
 }else{
     $('.menubtn').addClass("menubtn1");
     $('.menubtn').removeClass("menubtn2");
@@ -294,17 +324,4 @@ $('.menubtn1,.menubtn2').on("click",function(){
         });
         $('.bar').fadeOut(200);
     }
-})
-
-$('.swiper-pagination').on("click",function(){
-    k -= 1;
-    $('.menubtn1,.menubtn2').removeClass("menubtnOpen");
-    $('.menubtn2').css({
-        backgroundImage: 'linear-gradient(to bottom, #98a8cb, #424e7e)'
-    })
-    $('.barLine').delay(200).animate({
-        top: '-100vh',
-        opacity: '0'
-    });
-    $('.bar').fadeOut(200);
 })
