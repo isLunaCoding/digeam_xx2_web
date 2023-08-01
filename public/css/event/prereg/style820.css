@@ -36,15 +36,6 @@
                 object-fit: cover;
             }
     
-            .soundbtn{
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                top: 0;
-                right: 0;
-                background-color: #cb0c0c;
-            }
-    
             .XX2_logo{
                 position: absolute;
                 top: 5vh;
@@ -2496,7 +2487,7 @@
         background-color: rgba(127, 140, 149, 0.5);
         font-family: 'Noto Serif TC', serif;
         z-index: 10;
-        /* display: none; */
+        display: none;
     
         .p3choosepopframe{
             position: absolute;
@@ -2554,7 +2545,7 @@
     
             .cards{
                 position: relative;
-                top: 45%;
+                top: 34%;
                 left: 50%;
                 translate: -50% -50%;
                 width: 90%;
@@ -2728,7 +2719,7 @@
     
             .p3choosebtn{
                 position: relative;
-                top: 20%;
+                top: 80%;
                 left: 50%;
                 translate: -50%;
                 width: 20%;
@@ -3018,15 +3009,7 @@
                 height: 100%;
                 object-fit: cover;
             }
-    
-            .soundbtn{
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                top: 0;
-                right: 0;
-                background-color: #cb0c0c;
-            }
+
     
             .XX2_logo{
                 position: absolute;
