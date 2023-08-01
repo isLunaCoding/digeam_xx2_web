@@ -156,6 +156,20 @@ $_COOKIE['StrID'] = 'jacky0996'
                         <div class="p3noticebtn">注意事項</div>
                     </div>
                     <div class="lanternbox">
+                        <div class="fire">
+                            <div class="righttop">
+                                <div class="sparks">
+                                    <div class="spark s1"></div>
+                                    <div class="spark s2"></div>
+                                    <div class="spark s3"></div>
+                                    <div class="spark s4"></div>
+                                    <div class="spark s5"></div>
+                                    <div class="spark s6"></div>
+                                    <div class="spark s7"></div>
+                                    <div class="spark s8"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="lantern_light"></div>
                         <div class="lantern"></div>
                         <div class="lantern_line"></div>

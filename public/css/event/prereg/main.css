@@ -641,7 +641,7 @@ body{
                 rotate: -20deg;
                 opacity: 0;
                 z-index: 1;
-                pointer-events: none;
+                cursor: auto;
 
                 .lantern_light{
                     position: absolute;
@@ -681,7 +681,55 @@ body{
                     font-size: 22px;
                     font-weight: bold;
                 }
+                .fire {
+                    position: absolute;
+                    top: 380px;
+                    left: 128px;
+                    width: 50px;
+                    height: 50px;
+                    display: none;
 
+                    .righttop{
+                        transform: translateY(-132.5px) translateX(-132.5px);
+
+                        .spark {
+                            width: 3px;
+                            height: 3px;
+                            background-color: orangered;
+                            border-radius: 50%;
+                            box-shadow: 0 0 5px 3px orange;
+                            position: absolute;
+                            top: 150px;
+                            left: 150px;
+                            opacity: 0;
+                        }
+                
+                        .s1 {
+                            animation: fadein 3s ease infinite, floatup 3s ease infinite,left 3s ease infinite, rotate 3s ease infinite;
+                        }
+                        .s2 {
+                            animation: fadein 3s 0.3s ease infinite, floatup 3s 0.3s ease infinite,	right 3s 0.3s ease infinite, rotate 3s 0.3s ease infinite;
+                        }
+                        .s3 {
+                            animation: fadein 3s .6s ease infinite, floatup 3s .6s ease infinite,farleft 3s .6s ease infinite, rotate 3s .6s ease infinite;
+                        }
+                        .s4 {
+                            animation: fadein 3s 1.2s ease infinite, floatup 3s 1.2s ease infinite,	farright 3s 1.2s ease infinite, rotate 3s 1.2s ease infinite;
+                        }
+                        .s5 {
+                            animation: fadein 3s 1.8s linear infinite, floatup 3s 1.8s linear infinite, rotate 3s 1.8s ease infinite;
+                        }
+                        .s6 {
+                            animation: fadein 3s 1.5s ease infinite, floatup 3s 1.5s ease infinite,	left 3s 1.5s ease infinite, rotate 3s 1.5s ease infinite;
+                        }
+                        .s7 {
+                            animation: fadein 3s 2.1s ease infinite, floatup 3s 2.1s ease infinite,	right 3s 2.1s ease infinite, rotate 3s 2.1s ease infinite;
+                        }
+                        .s8 {
+                            animation: fadein 3s 2.4s ease infinite, floatup 3s 2.4s ease infinite, farleft 3s 2.4s ease infinite, rotate 3s 2.4s ease infinite
+                        }
+                    }
+                }
             }
 
             .p3text{
