@@ -225,6 +225,63 @@
     }
 }
 
+@keyframes fadein {
+	0%,
+	100% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 100%;
+	}
+}
+@keyframes floatup {
+	0% {
+		top: 150px;
+	}
+	100% {
+		top: 50px;
+	}
+}
+@keyframes rotate{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(360deg);
+	}
+}
+@keyframes left {
+	0% {
+		left: 150px;
+	}
+	100% {
+		left: 100px;
+	}
+}
+@keyframes right {
+	0% {
+		left: 150px;
+	}
+	100% {
+		left: 200px;
+	}
+}
+@keyframes farleft {
+	0% {
+		left: 150px;
+	}
+	100% {
+		left: 50px;
+	}
+}
+@keyframes farright {
+	0% {
+		left: 150px;
+	}
+	100% {
+		left: 250px;
+	}
+}
 
 @keyframes p4cloud {
     0%{

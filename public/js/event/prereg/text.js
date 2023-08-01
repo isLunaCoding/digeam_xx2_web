@@ -3447,6 +3447,21 @@ function p3_success() {
     $(".popScheckBtn2").hide();
 }
 
+//p3"結交名士"開啟自選名士
+function p3_choose_open(){
+    $('.fire').show()
+    $('.lanternbox').css({
+        cursor: 'pointer'
+    })
+}
+
+//p3"結交名士"關閉自選名士
+function p3_choose_close(){
+    $('.fire').hide()
+    $('.lanternbox').css({
+        cursor: 'auto'
+    })
+}
 function p3choose() {
     $(".p3choosepop").fadeIn(200);
     $(".card1").on("click", function () {

@@ -632,7 +632,6 @@
                     rotate: -20deg;
                     opacity: 0;
                     z-index: 1;
-                    pointer-events: none;
     
                     .lantern_light{
                         position: absolute;
