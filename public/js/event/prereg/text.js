@@ -921,7 +921,7 @@ function p3cardinfo(color, num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        } else if (result.num == 2) {
+        } else if (num == 2) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/orange/card2_M.png">`
             );
@@ -1050,7 +1050,7 @@ function p3cardinfo(color, num) {
                 );
                 $(".nowinfo").html(newinfostr);
             });
-        } else if (result.num == 3) {
+        } else if (num == 3) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/orange/card3_M.png">`
             );

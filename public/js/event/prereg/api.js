@@ -179,7 +179,6 @@ $(".choosenew").on("click", function () {
     $(".popS").fadeIn(200);
 });
 $('.keepnow').on('click',function(){
-
     var _origin_visit_frequency = $('.visit_frequency').attr('data-val')
     var _origin_distance_30 = $('.distance_30').attr('data-val')
     var _new_visit_frequency =(_origin_visit_frequency-1)
@@ -281,3 +280,56 @@ $(".yes").on("click", function () {
 $(".no").on("click", function () {
     $(".popS").fadeOut(200);
 });
+
+
+$('.distance_area').on('click',function(){
+    var _distance_30=$('.distance_30').attr('data-val')
+    if(_distance_30>=30){
+        p3_choose_open()
+        $(".p3choosepop").fadeIn(200);
+        p3choose()
+    }
+})
+$('.p3choosebtn').on('click',function(){
+    $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
+    $(".popSText")
+        .html(
+            "※請注意，本次選擇將會放棄原先保留之獎勵，是否要以這位名士取代原本結果?​"
+        )
+        .css({
+            fontSize: "1.3rem",
+        });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
+    $(".popS").fadeIn(200);
+
+
+     $('.popScheckBtn').on('click',function(){
+        let _choose = $('.choose').attr('data-val')
+        let _color = $(".choose").attr("data-color");
+        console.log(_choose,_color)
+        if(_choose == ''){
+            alert('請先選擇名士')
+        }else{
+            $.post(
+                _api,
+                {
+                    type: "play_choose",
+                    user: _user,
+                    color: _color,
+                    rand: _choose,
+                },
+                function (res) {
+                    if (res.status == 1) {
+                        location.reload();
+                    }
+                }
+            );
+        }
+     })
+})
