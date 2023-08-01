@@ -1,3 +1,6 @@
+<?php
+$_COOKIE['StrID'] = 'jacky0996'
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -324,37 +327,37 @@
                 <li>
                     <div class="missiontext">每日首次登入頁面</div>
                     <div class="missiontimes">拜訪次數+1</div>
-                    <div class="missionbtn" data-val='daily_login'></div>
+                    <div class="missionbtn daily_login" data-val='daily_login'></div>
                 </li>
                 <li>
                     <div class="missiontext">每日首次分享FB</div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn" data-val='daily_FB'></div>
+                    <div class="missionbtn daily_FB" data-val='daily_FB'></div>
                 </li>
                 <li>
                     <div class="missiontext">FB粉絲團按讚追蹤<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn" data-val='fb_fans_click'></div>
+                    <div class="missionbtn fb_fans_click" data-val='fb_fans_click'></div>
                 </li>
                 <li>
                     <div class="missiontext">進入官方DC群<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn" data-val='join_dc'></div>
+                    <div class="missionbtn join_dc" data-val='join_dc'></div>
                 </li>
                 <li>
                     <div class="missiontext">進入CB活動頁面<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn" data-val='go_cb'></div>
+                    <div class="missionbtn go_cb" data-val='go_cb'></div>
                 </li>
                 <li>
                     <div class="missiontext">進入官方網站<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn" data-val='go_index'></div>
+                    <div class="missionbtn go_index" data-val='go_index'></div>
                 </li>
                 <li>
                     <div class="missiontext">進入OB活動頁面<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn" data-val='go_ob'></div>
+                    <div class="missionbtn go_ob" data-val='go_ob'></div>
                 </li>
             </ul>
         </div>

@@ -527,7 +527,6 @@ function p3listIn() {
 
 //p3"結交名士"結果資訊
 function p3cardinfo(color, num) {
-    console.log(color, num);
     var p3cardinfoarray = {
         Ocard1: [
             "七花獸百花仙靈",
@@ -793,7 +792,7 @@ function p3cardinfo(color, num) {
 
     var p3cardinfostr = "";
     if (color == "orange") {
-        if (result.num == 1) {
+        if (num == 1) {
             $(".result_new").html(
                 `<img src="/img/event/prereg/p3/orange/card1_M.png">`
             );
@@ -3537,9 +3536,11 @@ function p3missionIn() {
 }
 
 //若任務完成時
-// $('.missionbtn').css({
-//     background: 'url(/img/event/prereg/p3/seal.png) no-repeat center'
-// });
+function mission_success(){
+    $('.missionbtn').css({
+            background: 'url(/img/event/prereg/p3/seal.png) no-repeat center'
+        });
+}
 
 //p4"熊貓賽跑"活動說明
 function p4informationIn() {
