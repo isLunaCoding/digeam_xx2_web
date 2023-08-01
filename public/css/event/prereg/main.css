@@ -204,10 +204,6 @@ body{
                 .loginbtn{
                     margin: auto;
                     margin-top: 2%;
-                    position: relative;
-                    left: 50%;
-                    top: 2%;
-                    translate: -50%;
                     width: 100px;
                     height: 40px;
                     background-color: #FFF;
@@ -220,6 +216,14 @@ body{
                         color: #274f72;
                         text-decoration: none;
                     }
+                }
+
+                .logoutbtn{
+                    position: relative;
+                    left: 50%;
+                    top: 2%;
+                    translate: -50%;
+                    border: none;
                 }
 
                 .login_user_id{
