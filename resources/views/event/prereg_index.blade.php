@@ -84,7 +84,7 @@
                             </form>
                             <div class='login_user_id' style='text-align:center' data-val={{ $_COOKIE['StrID'] }}>
                                 目前登入的帳號是:{{ $_COOKIE['StrID'] }}</div>
-                            <button class="loginbtn" style='text-align:center' onclick="logout_dg()">登 出</button>
+                            <button class="loginbtn logoutbtn" style='text-align:center' onclick="logout_dg()">登 出</button>
                         @else
                             <!-- 未登入 -->
                             <form id="logout-form" action="https://www.digeam.com/logout" method="POST"
