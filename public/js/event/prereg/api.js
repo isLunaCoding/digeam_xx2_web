@@ -178,6 +178,23 @@ $(".choosenew").on("click", function () {
     p3_replace();
     $(".popS").fadeIn(200);
 });
+$('.keepnow').on('click',function(){
+
+    var _origin_visit_frequency = $('.visit_frequency').attr('data-val')
+    var _origin_distance_30 = $('.distance_30').attr('data-val')
+    var _new_visit_frequency =(_origin_visit_frequency-1)
+    var _new_distance_30 =((parseInt(_origin_distance_30))+1)
+    if(_new_visit_frequency <= 0){
+        location.reload();
+    }else{
+        $('.visit_frequency').attr('data-val',(_new_visit_frequency))
+        $('.visit_frequency').html(_new_visit_frequency)
+        $('.distance_30').attr('data-val',(_new_distance_30))
+        $('.distance_30').html(_new_distance_30)
+    }
+
+    console.log(_origin_visit_frequency,_origin_distance_30,_new_visit_frequency,_new_distance_30)
+})
 $(".popScheckBtn").on("click", function () {
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
@@ -220,6 +237,10 @@ $(".missionbtn").on("click", function () {
                     p3_please_pre();
                     $(".popS").fadeIn(200);
                 } else {
+                    let _finish = document.getElementsByClassName(_type)
+                    $(_finish).css({
+                        background: 'url(/img/event/prereg/p3/seal.png) no-repeat center'
+                    });
                     p3_success();
                     $(".popS").fadeIn(200);
                 }
