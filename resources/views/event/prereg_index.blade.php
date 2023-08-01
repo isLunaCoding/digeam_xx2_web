@@ -56,7 +56,6 @@
             <div class="swiper-slide page1">
                 <video poster="/img/event/prereg/p1/bg1.png" class="videoBG" src="/img/event/prereg/p1/bgvideo.mp4"
                     autoplay loop muted></video>
-                <!-- <button class="soundbtn"></button> -->
                 <div class="XX2_logo"></div>
                 <div class="maintitle"></div>
                 <div class="slogan"></div>
@@ -532,6 +531,7 @@
             </div>
         </div>
     </div>
+
     <!-- 熊貓賽跑影片窗 -->
     <div class="p4resultpop">
         <div class="p4resultpopframe">

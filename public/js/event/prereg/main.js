@@ -1,4 +1,4 @@
-$('.p3choosepop').hide()
+
 
 //輪播主體設定
 var swiper = new Swiper(".mainSwiper", {
@@ -169,19 +169,6 @@ $('.p6btn5').on("click",function(){
 //8/31要拿掉
 // $('.swiper-pagination').append(`<span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label=""></span>`)
 
-//背景影片音樂開關
-var x = document.getElementsByClassName('.videoBG');
-let soundbtn = 0;
-$('.soundbtn').on('click',function () {
-    if(soundbtn == 0){
-        $('.videoBG').prop('muted', true);
-        soundbtn += 1;
-    }
-    else{
-        $('.videoBG').prop('muted', false);
-        soundbtn -= 1;
-    }
-})
 
 //大彈窗內容
 $('.XX').on("click",function(){
@@ -261,11 +248,6 @@ $('.p4awards').on("click",function(){
 })
 
 //小彈窗
-//p2初出江湖綁定結果窗
-// $('.page2 .checkbtn').on("click",function(){
-//     $('.popS').fadeIn(200);
-// })
-
 $('.popScheckBtn').on("click",function(){
     $('.popS').fadeOut(200);
 })

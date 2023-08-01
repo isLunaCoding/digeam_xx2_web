@@ -35,14 +35,6 @@
                 object-fit: cover;
             }
     
-            .soundbtn{
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                top: 0;
-                right: 0;
-                background-color: #cb0c0c;
-            }
     
             .XX2_logo{
                 position: absolute;
@@ -2510,7 +2502,7 @@
         background-color: rgba(127, 140, 149, 0.5);
         font-family: 'Noto Serif TC', serif;
         z-index: 10;
-        /* display: none; */
+        display: none;
     
         .p3choosepopframe{
             position: absolute;

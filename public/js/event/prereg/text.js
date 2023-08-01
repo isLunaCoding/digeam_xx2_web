@@ -57,7 +57,9 @@ function p2_success() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn2").hide();
+    $(".popScheckBtn").show().html("確認");
+
 }
 //p2"初出江湖"預約失敗彈窗-未登入
 function p2_not_login() {
@@ -75,7 +77,8 @@ function p2_not_login() {
             fontSize: "1.2rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 
 //p2"初出江湖"預約失敗彈窗-手機號碼錯誤
@@ -93,7 +96,8 @@ function p2_number_error() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 
 //p2"初出江湖"預約失敗彈窗-門號已使用
@@ -112,7 +116,8 @@ function p2_mobile_already_use() {
             fontSize: "1.2rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 // //p2"初出江湖"預約失敗彈窗-已完成
 function p2_already_pre() {
@@ -129,7 +134,8 @@ function p2_already_pre() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 
 //p2"初出江湖"預約失敗彈窗-未勾選
@@ -152,7 +158,8 @@ function p2_pre_safe_error() {
             fontSize: "1.2rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 
 //p2"初出江湖"預約活動結束彈窗
@@ -166,7 +173,8 @@ function p2_active_done() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("前往官網");
+    $(".popScheckBtn").show().html("前往官網");
+    $(".popScheckBtn2").hide();
 }
 
 //p3"結交名士"活動說明
@@ -3385,21 +3393,17 @@ function p3cardinfo(color, num) {
 
 //p3"結交名士"次數不夠
 function p3_error_not_enough() {
-    $(".popStitle").html("");
-    $(".popSText").html("拜訪次數不足,請先完成任務獲取拜訪機會").css({
-        fontSize: "1.8rem",
+    $(".popStitle").html("拜訪次數不足");
+    $(".popSText").html("請先完成任務獲取拜訪次數後再進行抽獎。​").css({
+        fontSize: "1.3rem",
     });
-    if (screen.width <= 820) {
-        $(".popSText").css({
-            fontSize: "1.6rem",
-        });
-    }
     if (screen.width <= 425) {
         $(".popSText").css({
-            fontSize: "1.2rem",
+            fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 //p3"結交名士"已領取過
 function p3_already_get() {
@@ -3412,7 +3416,8 @@ function p3_already_get() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 //p3"結交名士"未完成預約
 function p3_please_pre() {
@@ -3425,9 +3430,10 @@ function p3_please_pre() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
-//p3"結交名士"未完成預約
+//p3"結交名士"任務完成
 function p3_success() {
     $(".popStitle").html("已完成任務");
     $(".popSText").html("").css({
@@ -3438,7 +3444,8 @@ function p3_success() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 
 function p3choose() {
@@ -3491,7 +3498,8 @@ function p3_replace() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 function p3_last() {
     //與他結義
@@ -3506,28 +3514,21 @@ function p3_last() {
     }
 
     $(".popScheckBtn").hide();
-
     $(".popScheckBtn2").show();
 }
 
 function p3_last_success() {
-    $(".popStitle").html("");
-    $(".popSText").html("完成結義 ").css({
-        fontSize: "1.8rem",
+    $(".popStitle").html("已完成結交名士​");
+    $(".popSText").html("您已經與選定的名士結義，由衷感謝您的參與​").css({
+        fontSize: "1.3rem",
     });
-    if (screen.width <= 820) {
-        $(".popSText").css({
-            fontSize: "1.6rem",
-        });
-    }
     if (screen.width <= 425) {
         $(".popSText").css({
-            fontSize: "1.2rem",
+            fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
-    $(".popScheckBtn").show();
 }
 
 //p3"結交名士"任務佈告
@@ -3730,7 +3731,8 @@ function p4_panda1_win() {
             fontSize: "1.2rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 //p4"熊貓賽跑"獲勝彈窗-熊貓酒仙
 function p4_panda2_win() {
@@ -3748,7 +3750,8 @@ function p4_panda2_win() {
             fontSize: "1.2rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
 }
 //p4"熊貓賽跑"獲勝彈窗-熊貓少林
 function p4_panda3_win() {
@@ -3766,7 +3769,65 @@ function p4_panda3_win() {
             fontSize: "1.2rem",
         });
     }
-    $(".popScheckBtn").html("確認");
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
+}
+//p4"熊貓賽跑"確認支持熊貓-熊貓船長
+function p4_support_panda1() {
+    $(".popStitle").html("");
+    $(".popSText").html("確認支持熊貓船長嗎?").css({
+        fontSize: "1.8rem",
+    });
+    if (screen.width <= 820) {
+        $(".popSText").css({
+            fontSize: "1.6rem",
+        });
+    }
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1.2rem",
+        });
+    }
+    $(".popScheckBtn2").show();
+    $(".popScheckBtn").hide();
+}
+//p4"熊貓賽跑"確認支持熊貓-熊貓酒仙
+function p4_support_panda2() {
+    $(".popStitle").html("");
+    $(".popSText").html("確認支持熊貓酒仙嗎?").css({
+        fontSize: "1.8rem",
+    });
+    if (screen.width <= 820) {
+        $(".popSText").css({
+            fontSize: "1.6rem",
+        });
+    }
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1.2rem",
+        });
+    }
+    $(".popScheckBtn2").show();
+    $(".popScheckBtn").hide();
+}
+//p4"熊貓賽跑"確認支持熊貓-熊貓少林
+function p4_support_panda3() {
+    $(".popStitle").html("");
+    $(".popSText").html("確認支持熊貓少林嗎?").css({
+        fontSize: "1.8rem",
+    });
+    if (screen.width <= 820) {
+        $(".popSText").css({
+            fontSize: "1.6rem",
+        });
+    }
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1.2rem",
+        });
+    }
+    $(".popScheckBtn2").show();
+    $(".popScheckBtn").hide();
 }
 
 //p6職業介紹資料
