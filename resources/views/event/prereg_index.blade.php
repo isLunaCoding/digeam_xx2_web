@@ -397,10 +397,11 @@ $_COOKIE['StrID'] = 'jacky0996'
     <div class="p3choosepop">
         <div class="p3choosepopframe">
             <div class="p3choosepoptitle">自選名士</div>
+            <div class ='choose' data-color ='orange' data-val=''></div>
             <div class="p3choosebtn">選擇名士</div>
             <div class="cards">
                 <div class="card1_frame">
-                    <div class="card1"></div>
+                    <div class="card1" data-val='orange_1'></div>
                     <div class="card1info">
                         <table class="cardinfotable">
                             <tr>
@@ -437,10 +438,10 @@ $_COOKIE['StrID'] = 'jacky0996'
                             </tr>
                         </table>
                     </div>
-                    <div class="p3subtitle">七花獸百花仙靈</div>
+                    <div class="p3subtitle" >七花獸百花仙靈</div>
                 </div>
                 <div class="card2_frame">
-                    <div class="card2"></div>
+                    <div class="card2"  data-val = 'orange_2'></div>
                     <div class="card2info">
                         <table class="cardinfotable">
                             <tr>
@@ -480,7 +481,7 @@ $_COOKIE['StrID'] = 'jacky0996'
                     <div class="p3subtitle">仙道盟主沈仲陽</div>
                 </div>
                 <div class="card3_frame">
-                    <div class="card3"></div>
+                    <div class="card3" data-val ='orange_3'></div>
                     <div class="card3info">
                         <table class="cardinfotable">
                             <tr>
@@ -570,5 +571,15 @@ $_COOKIE['StrID'] = 'jacky0996'
     <script src="js/event/prereg/rain.js?v1.1" type="text/javascript"></script>
     <script src="js/event/prereg/api.js?v1.1" type="text/javascript"></script>
 </body>
-
+<script>
+    $('.card1').on('click',function(){
+        $('.choose').attr('data-val','1')
+    })
+    $('.card2').on('click',function(){
+        $('.choose').attr('data-val','2')
+    })
+    $('.card3').on('click',function(){
+        $('.choose').attr('data-val','3')
+    })
+</script>
 </html>
