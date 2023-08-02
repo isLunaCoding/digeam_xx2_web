@@ -1,4 +1,7 @@
 
+<?php
+$_COOKIE['StrID'] = 'jacky0996';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -242,8 +245,8 @@
                     <div class="pandaGobtn">競猜支持</div>
                     <div class="p4awards">獎勵列表</div>
                     <div class="times">
-                        <p>累計猜對:10次</p>
-                        <p>累計競猜:20次</p>
+                        <p>累計猜對:<span class= 'total_correct'></span>次</p>
+                        <p>累計競猜:<span class= 'total_guess'></span>次</p>
                     </div>
                 </div>
                 <div class="cloudmask"></div>
@@ -366,22 +369,26 @@
                     <div class="missionbtn fb_fans_click" data-val='fb_fans_click'><a href="https://www.facebook.com/DiGeamXianXia2/" target="blank"></a></div>
                 </li>
                 <li>
-                    <div class="missiontext">進入官方DC群<span>(僅一次)</span></div>
+                    {{-- <div class="missiontext">進入官方DC群<span>(僅一次)</span></div> --}}
+                    <div class="missiontext">尚未開放</div>
                     <div class="missiontimes">拜訪次數+2</div>
                     <div class="missionbtn join_dc" data-val='join_dc'><a href="#" target="blank"></a></div>
                 </li>
                 <li>
-                    <div class="missiontext">進入CB活動頁面<span>(僅一次)</span></div>
+                    {{-- <div class="missiontext">進入CB活動頁面<span>(僅一次)</span></div> --}}
+                    <div class="missiontext">尚未開放</div>
                     <div class="missiontimes">拜訪次數+2</div>
                     <div class="missionbtn go_cb" data-val='go_cb'><a href="https://xx2.digeam.com/cbt" target="blank"></a></div>
                 </li>
                 <li>
-                    <div class="missiontext">進入官方網站<span>(僅一次)</span></div>
+                    {{-- <div class="missiontext">進入官方網站<span>(僅一次)</span></div> --}}
+                    <div class="missiontext">尚未開放</div>
                     <div class="missiontimes">拜訪次數+2</div>
                     <div class="missionbtn go_index" data-val='go_index'><a href="https://xx2.digeam.com/" target="blank"></a></div>
                 </li>
                 <li>
-                    <div class="missiontext">進入OB活動頁面<span>(僅一次)</span></div>
+                    {{-- <div class="missiontext">進入OB活動頁面<span>(僅一次)</span></div> --}}
+                    <div class="missiontext">尚未開放</div>
                     <div class="missiontimes">拜訪次數+2</div>
                     <div class="missionbtn go_ob" data-val='go_ob'><a href="https://xx2.digeam.com/obt" target="blank"></a></div>
                 </li>
