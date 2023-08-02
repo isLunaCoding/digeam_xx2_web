@@ -243,7 +243,7 @@ body{
                         color: #3e69be;
                     }
                 }
-                
+
                 .step2{
                     margin: auto;
                     margin-top: 7%;
@@ -262,7 +262,7 @@ body{
                     font-size: 20px;
                     font-weight: bold;
                     color: #274f72;
-    
+
                     & form{
                         & div{
                             & select{
@@ -291,14 +291,14 @@ body{
                                 width: 19px;
                                 height: 19px;
                             }
-    
+
                             & a{
                                 color: #3e69be;
                             }
 
                         }
                     }
-    
+
                 }
 
                 .checkbtn{
@@ -460,7 +460,7 @@ body{
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                
+
                 & div{
                     position: absolute;
                     width: 80px;
@@ -506,7 +506,7 @@ body{
                     font-weight: bold;
                     color: #21345d;
                 }
-            
+
                 .p3listbtns{
                     position: absolute;
                     top: 80%;
@@ -529,7 +529,7 @@ body{
                     cursor: pointer;
                     transition: 0.3s;
                     scale: 0.95;
-    
+
                     &::before, &::after{
                         position: absolute;
                         content: '';
@@ -537,31 +537,31 @@ body{
                         height: 54px;
                         transition: 0.3s;
                     }
-    
+
                     &::before{
                         left: 0px;
                         background: url(/img/event/prereg/p3/btn3_hover1.png)no-repeat;
                         background-position: center;
                     }
-    
+
                     &::after{
                         right: 0px;
                         background: url(/img/event/prereg/p3/btn3_hover2.png)no-repeat;
                         background-position: center;
                     }
-    
+
                     &:hover::before{
                         transform: translateX(-5px);
                     }
-    
+
                     &:hover::after{
                         transform: translateX(5px);
                     }
-    
+
                     &:hover{
                         letter-spacing: 3px;
                     }
-    
+
                 }
             }
 
@@ -703,7 +703,7 @@ body{
                             left: 150px;
                             opacity: 0;
                         }
-                
+
                         .s1 {
                             animation: fadein 3s ease infinite, floatup 3s ease infinite,left 3s ease infinite, rotate 3s ease infinite;
                         }
@@ -756,7 +756,7 @@ body{
                         font-size: 21px;
                         font-weight: bold;
                         margin: 8px auto;
-                        
+
                         & span{
                             color: #FFF;
                             text-decoration: underline;
@@ -765,7 +765,7 @@ body{
                     }
 
                 }
-                
+
                 .cardinfo{
                     position: absolute;
                     top: 50%;
@@ -851,7 +851,7 @@ body{
                     translate: -50% -50%;
                     width: 411px;
                     height: 411px;
-                    
+
                     .card_bg{
                         position: absolute;
                         width: 100%;
@@ -861,7 +861,7 @@ body{
                         background-position: center;
                         -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                     }
-                    
+
                     .card_cloud1{
                         position: absolute;
                         width: 100%;
@@ -872,7 +872,7 @@ body{
                         -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                         animation: p3cloud1 2s infinite alternate ease-in-out;
                     }
-                    
+
                     .card_cloud2{
                         position: absolute;
                         width: 100%;
@@ -1106,7 +1106,7 @@ body{
                 left: 47%;
                 translate: -50% -50%;
                 pointer-events: none;
-                
+
                 .panda1{
                     position: absolute;
                     bottom: 0%;
@@ -1267,7 +1267,7 @@ body{
                 }
 
             }
-            
+
             .p4awards{
                 position: absolute;
                 top: 100.5%;
@@ -1569,7 +1569,7 @@ body{
             width: 50vw;
             height: 100vh;
             left: 50%;
-            
+
             .humen{
                 position: absolute;
                 width: 100%;
@@ -2000,7 +2000,7 @@ body{
                             color: #9ed5ff;
                             margin-right: 1%;
                         }
-    
+
                         & p{
                             margin: auto;
                         }
@@ -2046,13 +2046,13 @@ body{
                 animation: flybird1 6s 1 linear;
                 animation-fill-mode: forwards;
             }
-            
+
             .bird2{
                 animation: flybird2 6s 1 linear;
                 animation-fill-mode: forwards;
             }
         }
-        
+
         .lanternbox{
             animation: p3lantern 5s 1 ease-in-out;
             animation-fill-mode: forwards;
@@ -2338,7 +2338,7 @@ body{
                     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
                     cursor: pointer;
                     transition: 0.3s;
-                    
+
                     &:hover{
                         background-position: right;
                     }
@@ -2349,7 +2349,12 @@ body{
                         height: 100%;
                     }
                 }
-
+                              /*9/15開放任務後記得關掉*/
+                              .join_dc,.go_cb,.go_ob,.go_index{
+                                filter: grayscale(1) brightness(1.5);
+                                pointer-events: none;
+                                cursor: auto;
+                            }
                 &::before{
                     position: absolute;
                     content: '';
@@ -2465,7 +2470,7 @@ body{
             background: url(/img/event/prereg/p3/card1_frame.png)no-repeat;
             background-position: center;
             background-size: contain;
-            box-shadow: 0 0 20px #ffdf9d; 
+            box-shadow: 0 0 20px #ffdf9d;
 
             & img{
                 width: 100%;
@@ -2516,7 +2521,7 @@ body{
             display: none;
             pointer-events: none;
         }
-                
+
         .newinfotable,.nowinfotable{
             position: absolute;
             top: 50%;
@@ -2663,10 +2668,10 @@ body{
                     background:url(/img/event/prereg/p3/orange/card1_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
                     background-position: center;
                     background-size: contain;
-                    box-shadow: 0 0 20px #ffdf9d; 
+                    box-shadow: 0 0 20px #ffdf9d;
                     cursor: pointer;
                 }
-        
+
                 .card1info{
                     position: absolute;
                     top: 50%;
@@ -2680,7 +2685,7 @@ body{
                     display: none;
                     pointer-events: none;
                 }
-                        
+
                 .cardinfotable{
                     position: absolute;
                     top: 50%;
@@ -2689,13 +2694,13 @@ body{
                     width: 90%;
                     height: 100%;
                     font-weight: bold;
-        
+
                     & tr{
                         font-size: 15px;
-        
+
                         & td{
                             width: 50%;
-        
+
                             & span{
                                 color: #eaf4ff;
                             }
@@ -2717,10 +2722,10 @@ body{
                     background:url(/img/event/prereg/p3/orange/card2_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
                     background-position: center;
                     background-size: contain;
-                    box-shadow: 0 0 20px #ffdf9d; 
+                    box-shadow: 0 0 20px #ffdf9d;
                     cursor: pointer;
                 }
-        
+
                 .card2info{
                     position: absolute;
                     top: 50%;
@@ -2734,7 +2739,7 @@ body{
                     display: none;
                     pointer-events: none;
                 }
-                        
+
                 .cardinfotable{
                     position: absolute;
                     top: 50%;
@@ -2743,13 +2748,13 @@ body{
                     width: 90%;
                     height: 100%;
                     font-weight: bold;
-        
+
                     & tr{
                         font-size: 15px;
-        
+
                         & td{
                             width: 50%;
-        
+
                             & span{
                                 color: #eaf4ff;
                             }
@@ -2771,10 +2776,10 @@ body{
                     background:url(/img/event/prereg/p3/orange/card3_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
                     background-position: center;
                     background-size: contain;
-                    box-shadow: 0 0 20px #ffdf9d; 
+                    box-shadow: 0 0 20px #ffdf9d;
                     cursor: pointer;
                 }
-        
+
                 .card3info{
                     position: absolute;
                     top: 50%;
@@ -2788,7 +2793,7 @@ body{
                     display: none;
                     pointer-events: none;
                 }
-                        
+
                 .cardinfotable{
                     position: absolute;
                     top: 50%;
@@ -2797,13 +2802,13 @@ body{
                     width: 90%;
                     height: 100%;
                     font-weight: bold;
-        
+
                     & tr{
                         font-size: 15px;
-        
+
                         & td{
                             width: 50%;
-        
+
                             & span{
                                 color: #eaf4ff;
                             }

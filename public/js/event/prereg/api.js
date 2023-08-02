@@ -24,18 +24,24 @@ function login() {
             if (res.status == -99) {
                 console.log("未登入");
             } else {
+                if(res.user_mobile !='' && res.user_mobile !=null){
+                    _pre = true
+                }else{
+                    _pre = false
+                }
                 if (res.keep_celebrity == null) {
                     $(".visit_frequency").html(res.visit_frequency);
                     $(".visit_frequency").attr("data-val", res.visit_frequency);
                     $(".distance_30").html(res.distance_30);
                     $(".distance_30").attr("data-val", res.distance_30);
                 } else {
-                    $('.check_p3').hide()
-                    $('.p4Gobtn').hide()
-                    $('.distance_area').hide()
-                    $('.p3_chance').hide()
-
+                    $(".check_p3").hide();
+                    $(".p4Gobtn").hide();
+                    $(".distance_area").hide();
+                    $(".p3_chance").hide();
                 }
+                $(".total_correct").html(res.race_correct);
+                $(".total_guess").html(res.race_total_answer);
                 if (res.celebrity != null) {
                     p3cardinfo(res.celebrity[0], res.celebrity[1]);
                     setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
@@ -178,22 +184,27 @@ $(".choosenew").on("click", function () {
     p3_replace();
     $(".popS").fadeIn(200);
 });
-$('.keepnow').on('click',function(){
-    var _origin_visit_frequency = $('.visit_frequency').attr('data-val')
-    var _origin_distance_30 = $('.distance_30').attr('data-val')
-    var _new_visit_frequency =(_origin_visit_frequency-1)
-    var _new_distance_30 =((parseInt(_origin_distance_30))+1)
-    if(_new_visit_frequency <= 0){
+$(".keepnow").on("click", function () {
+    var _origin_visit_frequency = $(".visit_frequency").attr("data-val");
+    var _origin_distance_30 = $(".distance_30").attr("data-val");
+    var _new_visit_frequency = _origin_visit_frequency - 1;
+    var _new_distance_30 = parseInt(_origin_distance_30) + 1;
+    if (_new_visit_frequency <= 0) {
         location.reload();
-    }else{
-        $('.visit_frequency').attr('data-val',(_new_visit_frequency))
-        $('.visit_frequency').html(_new_visit_frequency)
-        $('.distance_30').attr('data-val',(_new_distance_30))
-        $('.distance_30').html(_new_distance_30)
+    } else {
+        $(".visit_frequency").attr("data-val", _new_visit_frequency);
+        $(".visit_frequency").html(_new_visit_frequency);
+        $(".distance_30").attr("data-val", _new_distance_30);
+        $(".distance_30").html(_new_distance_30);
     }
 
-    console.log(_origin_visit_frequency,_origin_distance_30,_new_visit_frequency,_new_distance_30)
-})
+    console.log(
+        _origin_visit_frequency,
+        _origin_distance_30,
+        _new_visit_frequency,
+        _new_distance_30
+    );
+});
 $(".popScheckBtn").on("click", function () {
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
@@ -236,10 +247,11 @@ $(".missionbtn").on("click", function () {
                     p3_please_pre();
                     $(".popS").fadeIn(200);
                 } else {
-                    let _finish = document.getElementsByClassName(_type)
+                    let _finish = document.getElementsByClassName(_type);
                     $(_finish).css({
-                        background: 'url(/img/event/prereg/p3/seal.png) no-repeat center',
-                        backgroundPosition: 'center'
+                        background:
+                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        backgroundPosition: "center",
                     });
                     p3_success();
                     $(".popS").fadeIn(200);
@@ -282,16 +294,15 @@ $(".no").on("click", function () {
     $(".popS").fadeOut(200);
 });
 
-
-$('.distance_area').on('click',function(){
-    var _distance_30=$('.distance_30').attr('data-val')
-    if(_distance_30>=30){
-        p3_choose_open()
+$(".distance_area").on("click", function () {
+    var _distance_30 = $(".distance_30").attr("data-val");
+    if (_distance_30 >= 30) {
+        p3_choose_open();
         $(".p3choosepop").fadeIn(200);
-        p3choose()
+        p3choose();
     }
-})
-$('.p3choosebtn').on('click',function(){
+});
+$(".p3choosebtn").on("click", function () {
     $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
     $(".popSText")
         .html(
@@ -309,14 +320,13 @@ $('.p3choosebtn').on('click',function(){
     $(".popScheckBtn2").hide();
     $(".popS").fadeIn(200);
 
-
-     $('.popScheckBtn').on('click',function(){
-        let _choose = $('.choose').attr('data-val')
+    $(".popScheckBtn").on("click", function () {
+        let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
-        console.log(_choose,_color)
-        if(_choose == ''){
-            alert('請先選擇名士')
-        }else{
+        console.log(_choose, _color);
+        if (_choose == "") {
+            alert("請先選擇名士");
+        } else {
             $.post(
                 _api,
                 {
@@ -332,5 +342,79 @@ $('.p3choosebtn').on('click',function(){
                 }
             );
         }
-     })
-})
+    });
+});
+//p4熊貓競猜支持
+$(".pandaGobtn").on("click", function () {
+    console.log(_pre)
+    if (_user == null) {
+        p2_not_login();
+        $(".popS").fadeIn(200);
+    } else if(_pre == false){
+        p3_please_pre();
+        $(".popS").fadeIn(200);
+    }else{
+        $(".popS").fadeIn(200);
+        if (p4_panda_choose_num == 1) {
+            p4_support_panda1();
+        } else if (p4_panda_choose_num == 2) {
+            p4_support_panda2();
+        } else if (p4_panda_choose_num == 3) {
+            p4_support_panda3();
+        }
+        $(".yes").off("click");
+        $(".yes").on("click", function () {
+            p4pandaresult(p4_panda_choose_num);
+        });
+    }
+});
+
+//p4"熊貓賽跑"結果
+function p4pandaresult(user_guess) {
+    var i = Math.floor(Math.random() * 3) + 1;
+    $.post(
+        _api,
+        {
+            type: "play_panda",
+            user: _user,
+            user_guess: user_guess,
+            answer: i,
+        },
+        function (res) {
+            if (res.status == -99) {
+                p4_today_done();
+                $(".popS").fadeIn(200);
+            }else{
+                $(".popS").fadeOut(200);
+                if (i == 1) {
+                    $(".panda1win").show();
+                    $(".panda2win").hide();
+                    $(".panda3win").hide();
+                    $(".pandavideo").trigger("play");
+                    $(".p4resultpop").fadeIn(200);
+                    setTimeout(function () {
+                        p4_panda1_win();
+                    }, 7000);
+                } else if (i == 2) {
+                    $(".panda2win").show();
+                    $(".panda1win").hide();
+                    $(".panda3win").hide();
+                    $(".pandavideo").trigger("play");
+                    $(".p4resultpop").fadeIn(200);
+                    setTimeout(function () {
+                        p4_panda2_win();
+                    }, 7000);
+                } else if (i == 3) {
+                    $(".panda3win").show();
+                    $(".panda2win").hide();
+                    $(".panda1win").hide();
+                    $(".pandavideo").trigger("play");
+                    $(".p4resultpop").fadeIn(200);
+                    setTimeout(function () {
+                        p4_panda3_win();
+                    }, 7000);
+                }
+            }
+        }
+    );
+}

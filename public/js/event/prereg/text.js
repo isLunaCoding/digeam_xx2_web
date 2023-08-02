@@ -3600,6 +3600,21 @@ function p4noticeIn() {
     $(".popText").show().html(p4noticestr);
 }
 
+//p4"熊貓賽跑"今日已完成
+function p4_today_done() {
+    $(".popStitle").html("今日已參加過活動");
+    $(".popSText").html("").css({
+        fontSize: "1.3rem",
+    });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
+}
+
 //p4"熊貓賽跑"獎勵列表
 function p4awardIn() {
     var p4award1array = {
@@ -3702,39 +3717,7 @@ function p4awardIn() {
     $(".popText").hide();
 }
 
-//p4"熊貓賽跑"結果
-function p4pandaresult() {
-    var i = Math.floor(Math.random()*3)+1;
-    $(".popS").fadeOut(200);
-    if (i == 1) {
-        $('.panda1win').show();
-        $('.panda2win').hide();
-        $('.panda3win').hide();
-        $(".pandavideo").trigger('play');
-        $(".p4resultpop").fadeIn(200);
-        setTimeout(function(){
-            p4_panda1_win();
-        },7000)
-    } else if (i == 2) {
-        $('.panda2win').show();
-        $('.panda1win').hide();
-        $('.panda3win').hide();
-        $(".pandavideo").trigger('play');
-        $(".p4resultpop").fadeIn(200);
-        setTimeout(function(){
-            p4_panda2_win();
-        },7000)
-    } else if (i == 3) {
-        $('.panda3win').show();
-        $('.panda2win').hide();
-        $('.panda1win').hide();
-        $(".pandavideo").trigger('play');
-        $(".p4resultpop").fadeIn(200);
-        setTimeout(function(){
-            p4_panda3_win();
-        },7000)
-    }
-}
+
 
 //p4"熊貓賽跑"獲勝彈窗-熊貓船長
 function p4_panda1_win() {

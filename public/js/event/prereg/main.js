@@ -246,21 +246,7 @@ $('.p4awards').on("click",function(){
     $('.pop').fadeIn(200);
     p4awardIn();
 })
-//p4熊貓競猜支持
-$('.pandaGobtn').on("click", function(){
-    $(".popS").fadeIn(200);
-    if(p4_panda_choose_num == 1){
-        p4_support_panda1()
-    }else if(p4_panda_choose_num == 2){
-        p4_support_panda2()
-    }else if(p4_panda_choose_num == 3){
-        p4_support_panda3()
-    }
-    $('.yes').off('click')
-    $('.yes').on("click",function(){
-        p4pandaresult();
-    })
-})
+
 
 //小彈窗
 $('.popScheckBtn').on("click",function(){
