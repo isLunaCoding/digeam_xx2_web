@@ -3512,8 +3512,8 @@ function p3_replace() {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").show().html("確認");
-    $(".popScheckBtn2").hide();
+    $(".popScheckBtn").hide();
+    $(".popScheckBtn2").show();
 }
 function p3_last() {
     //與他結義
@@ -3553,8 +3553,9 @@ function p3missionIn() {
 //若任務完成時
 function mission_success(){
     $('.missionbtn').css({
-            background: 'url(/img/event/prereg/p3/seal.png) no-repeat center'
-        });
+        background: 'url(/img/event/prereg/p3/seal.png) no-repeat center',
+        backgroundPosition: 'center'
+    });
 }
 
 //p4"熊貓賽跑"活動說明
@@ -3702,37 +3703,42 @@ function p4awardIn() {
 }
 
 //p4"熊貓賽跑"結果
-function p4pandaresult(i) {
-    //i是隨機數字，用於隨機選獲勝熊貓的影片
+function p4pandaresult() {
+    var i = Math.floor(Math.random()*3)+1;
+    $(".popS").fadeOut(200);
     if (i == 1) {
-        $(".pandavideo").html(
-            `<source src="/img/event/prereg/p4/panda1win.mp4">`
-        );
+        $('.panda1win').show();
+        $('.panda2win').hide();
+        $('.panda3win').hide();
+        $(".pandavideo").trigger('play');
         $(".p4resultpop").fadeIn(200);
-        $(".popS").delay(7500).fadeIn(200);
-        p4_panda1_win();
+        setTimeout(function(){
+            p4_panda1_win();
+        },7000)
     } else if (i == 2) {
-        $(".pandavideo").html(
-            `<source src="/img/event/prereg/p4/panda2win.mp4">`
-        );
+        $('.panda2win').show();
+        $('.panda1win').hide();
+        $('.panda3win').hide();
+        $(".pandavideo").trigger('play');
         $(".p4resultpop").fadeIn(200);
-        $(".popS").delay(7500).fadeIn(200);
-        p4_panda2_win();
+        setTimeout(function(){
+            p4_panda2_win();
+        },7000)
     } else if (i == 3) {
-        $(".pandavideo").html(
-            `<source src="/img/event/prereg/p4/panda3win.mp4">`
-        );
+        $('.panda3win').show();
+        $('.panda2win').hide();
+        $('.panda1win').hide();
+        $(".pandavideo").trigger('play');
         $(".p4resultpop").fadeIn(200);
-        $(".popS").delay(7500).fadeIn(200);
-        p4_panda3_win();
+        setTimeout(function(){
+            p4_panda3_win();
+        },7000)
     }
-    $(".popScheckBtn").on("click", function () {
-        $(".p4resultpop").fadeOut(200);
-    });
 }
 
 //p4"熊貓賽跑"獲勝彈窗-熊貓船長
 function p4_panda1_win() {
+    $('.popS').fadeIn(200);
     $(".popStitle").html("");
     $(".popSText").html("本次獲勝的是熊貓船長").css({
         fontSize: "1.8rem",
@@ -3749,9 +3755,13 @@ function p4_panda1_win() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn").on("click", function () {
+        $(".p4resultpop").fadeOut(200);
+    });
 }
 //p4"熊貓賽跑"獲勝彈窗-熊貓酒仙
 function p4_panda2_win() {
+    $('.popS').fadeIn(200);
     $(".popStitle").html("");
     $(".popSText").html("本次獲勝的是熊貓酒仙").css({
         fontSize: "1.8rem",
@@ -3768,9 +3778,13 @@ function p4_panda2_win() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn").on("click", function () {
+        $(".p4resultpop").fadeOut(200);
+    });
 }
 //p4"熊貓賽跑"獲勝彈窗-熊貓少林
 function p4_panda3_win() {
+    $('.popS').fadeIn(200);
     $(".popStitle").html("");
     $(".popSText").html("本次獲勝的是熊貓少林").css({
         fontSize: "1.8rem",
@@ -3787,6 +3801,9 @@ function p4_panda3_win() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn").on("click", function () {
+        $(".p4resultpop").fadeOut(200);
+    });
 }
 //p4"熊貓賽跑"確認支持熊貓-熊貓船長
 function p4_support_panda1() {
@@ -3854,7 +3871,7 @@ var p6textarray = {
         "嫉惡如仇，心存大是非。視軍令如山，在戰場上抵禦千軍，斬妖除魔。配合無所畏懼的決心，對敵人造成心靈與肉體的雙重傷害。",
         "悲天憫人者，以普渡蒼生為己念。善使琴音震撼軍心，精用仙法救死扶傷。通過各種輔助能力，助戰友立於不敗之地。",
         "善觀星卜卦，奇門遁甲。常肩負長弓行走世間，以三尺玄羽懲惡揚善。在戰場上無論是拒敵還是追殺，都有著絕對的掌控權。",
-        "天生具有皇者霸氣，是與生俱來的強者。每次逢敵都是以命養戰，鬼神賤之都要避讓。一但開戰，必定至死方休。",
+        "天生具有皇者霸氣，是與生俱來的強者。每次逢敵都是以命養戰，鬼神見之都要避讓。一旦開戰，必定至死方休。",
     ],
     text2: [
         "遠程法系輸出，可以控制大量敵人，並給予傷害，但是血防較為薄弱，容易被擊火擊殺。",

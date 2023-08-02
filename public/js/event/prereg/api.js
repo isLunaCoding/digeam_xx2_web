@@ -238,7 +238,8 @@ $(".missionbtn").on("click", function () {
                 } else {
                     let _finish = document.getElementsByClassName(_type)
                     $(_finish).css({
-                        background: 'url(/img/event/prereg/p3/seal.png) no-repeat center'
+                        background: 'url(/img/event/prereg/p3/seal.png) no-repeat center',
+                        backgroundPosition: 'center'
                     });
                     p3_success();
                     $(".popS").fadeIn(200);

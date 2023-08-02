@@ -638,7 +638,7 @@ body{
                 width: calc(286px * 0.95);
                 height: calc(627px * 0.95);
                 transform-origin: calc(144px * 0.9) 0px;
-                rotate: -20deg;
+                rotate: 0deg;
                 opacity: 0;
                 z-index: 1;
                 cursor: auto;
@@ -690,7 +690,7 @@ body{
                     display: none;
 
                     .righttop{
-                        transform: translateY(-132.5px) translateX(-132.5px);
+                        transform: translateY(-156.5px) translateX(159.5px) rotate(90deg);
 
                         .spark {
                             width: 3px;
@@ -728,6 +728,9 @@ body{
                         .s8 {
                             animation: fadein 3s 2.4s ease infinite, floatup 3s 2.4s ease infinite, farleft 3s 2.4s ease infinite, rotate 3s 2.4s ease infinite
                         }
+                    }
+                    .lefttop{
+                        transform: translateY(81.5px) translateX(-175.5px) rotate(-90deg);
                     }
                 }
             }
@@ -1338,6 +1341,7 @@ body{
                 line-height: 25px;
                 & p{
                     padding-right: 50px;
+                    line-height: 10px;
                 }
             }
         }
@@ -2337,6 +2341,12 @@ body{
                     
                     &:hover{
                         background-position: right;
+                    }
+
+                    & a{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
                     }
                 }
 
