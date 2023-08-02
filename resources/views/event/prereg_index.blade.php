@@ -13,7 +13,7 @@
     <meta property="og:site_name" content="" />
     <meta property="og:locale" content="zh_tw" />
     <meta property="article:author" content="" />
-    <meta property="og:image" content="img/fb_share.jpg" />
+    <meta property="og:image" content="img/event/prereg/fb_share.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta name="author" content="DiGeam" />
@@ -29,18 +29,19 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="css/event/prereg/main.css?v1.2">
-    <link rel="stylesheet" href="css/event/prereg/style1440.css?v1.2">
-    <link rel="stylesheet" href="css/event/prereg/style820.css?v1.2">
-    <link rel="stylesheet" href="css/event/prereg/style425.css?v1.2">
-    <link rel="stylesheet" href="css/event/prereg/style375.css?v1.2">
-    <link rel="stylesheet" href="css/event/prereg/animate.css?v1.2">
+    <link rel="stylesheet" href="css/event/prereg/main.css?v1.3">
+    <link rel="stylesheet" href="css/event/prereg/style1440.css?v1.3">
+    <link rel="stylesheet" href="css/event/prereg/style820.css?v1.3">
+    <link rel="stylesheet" href="css/event/prereg/style425.css?v1.3">
+    <link rel="stylesheet" href="css/event/prereg/style375.css?v1.3">
+    <link rel="stylesheet" href="css/event/prereg/animate.css?v1.3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="wJwApEf5"></script>
     <!-- 側bar -->
     <div class="menubar">
         <div class="barLine"></div>
@@ -61,7 +62,7 @@
                 <div class="maintitle"></div>
                 <div class="slogan"></div>
                 <div class="downbtn"></div>
-                <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
+                <div class="cloudmask"></div>
             </div>
 
             <!-- 2初出江湖 -->
@@ -127,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
+                <div class="cloudmask"></div>
             </div>
 
             <!-- 3結交名士 -->
@@ -167,6 +168,18 @@
                                     <div class="spark s8"></div>
                                 </div>
                             </div>
+                            <div class="righttop lefttop">
+                                <div class="sparks">
+                                    <div class="spark s1"></div>
+                                    <div class="spark s2"></div>
+                                    <div class="spark s3"></div>
+                                    <div class="spark s4"></div>
+                                    <div class="spark s5"></div>
+                                    <div class="spark s6"></div>
+                                    <div class="spark s7"></div>
+                                    <div class="spark s8"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="lantern_light"></div>
                         <div class="lantern"></div>
@@ -190,7 +203,7 @@
                     </div>
                     <div class="p4Gobtn">與他結義</div>
                 </div>
-                <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
+                <div class="cloudmask"></div>
             </div>
 
             <!-- 4熊貓賽跑 -->
@@ -229,10 +242,11 @@
                     <div class="pandaGobtn">競猜支持</div>
                     <div class="p4awards">獎勵列表</div>
                     <div class="times">
-                        <p>累計猜對:10次<br>累計競猜:20次</p>
+                        <p>累計猜對:10次</p>
+                        <p>累計競猜:20次</p>
                     </div>
                 </div>
-                <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
+                <div class="cloudmask"></div>
             </div>
 
             <!-- 5遊戲特色 -->
@@ -254,7 +268,7 @@
                         <div></div>
                     </div>
                 </div>
-                <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
+                <div class="cloudmask"></div>
             </div>
 
             <!-- 6職業介紹 -->
@@ -296,7 +310,7 @@
                     <div class="p6btn2"></div>
                     <div class="p6btn1 p6btn1_2"></div>
                 </div>
-                <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
+                <div class="cloudmask"></div>
             </div>
 
             <!-- 7活動規則 -->
@@ -325,7 +339,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cloudmask"></div><!-- 這行一定要放在這區的最後一條 -->
+                <div class="cloudmask"></div>
             </div>
         </div>
     </div>
@@ -344,32 +358,32 @@
                 <li>
                     <div class="missiontext">每日首次分享FB</div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn daily_FB" data-val='daily_FB'></div>
+                    <div class="missionbtn daily_FB" data-val='daily_FB' data-href="https://xx2.digeam.com/prereg" id="fb-root"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fxx2.digeam.com%2Fprereg&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" target="blank"></a></div>
                 </li>
                 <li>
                     <div class="missiontext">FB粉絲團按讚追蹤<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn fb_fans_click" data-val='fb_fans_click'></div>
+                    <div class="missionbtn fb_fans_click" data-val='fb_fans_click'><a href="https://www.facebook.com/DiGeamXianXia2/" target="blank"></a></div>
                 </li>
                 <li>
                     <div class="missiontext">進入官方DC群<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn join_dc" data-val='join_dc'></div>
+                    <div class="missionbtn join_dc" data-val='join_dc'><a href="#" target="blank"></a></div>
                 </li>
                 <li>
                     <div class="missiontext">進入CB活動頁面<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn go_cb" data-val='go_cb'></div>
+                    <div class="missionbtn go_cb" data-val='go_cb'><a href="https://xx2.digeam.com/cbt" target="blank"></a></div>
                 </li>
                 <li>
                     <div class="missiontext">進入官方網站<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn go_index" data-val='go_index'></div>
+                    <div class="missionbtn go_index" data-val='go_index'><a href="https://xx2.digeam.com/" target="blank"></a></div>
                 </li>
                 <li>
                     <div class="missiontext">進入OB活動頁面<span>(僅一次)</span></div>
                     <div class="missiontimes">拜訪次數+2</div>
-                    <div class="missionbtn go_ob" data-val='go_ob'></div>
+                    <div class="missionbtn go_ob" data-val='go_ob'><a href="https://xx2.digeam.com/obt" target="blank"></a></div>
                 </li>
             </ul>
         </div>
@@ -551,7 +565,14 @@
     <!-- 熊貓賽跑影片窗 -->
     <div class="p4resultpop">
         <div class="p4resultpopframe">
-            <video class="pandavideo" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+            <video class="pandavideo panda1win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+                <source src="/img/event/prereg/p4/panda1win.mp4">
+            </video>
+            <video class="pandavideo panda2win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+                <source src="/img/event/prereg/p4/panda2win.mp4">
+            </video>
+            <video class="pandavideo panda3win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+                <source src="/img/event/prereg/p4/panda3win.mp4">
             </video>
             <div class="booframe"></div>
         </div>

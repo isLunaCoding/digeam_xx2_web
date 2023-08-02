@@ -16,6 +16,7 @@ var swiper = new Swiper(".mainSwiper", {
 
 
 //4熊貓賽跑
+var p4_panda_choose_num = 1;
 $('.panda1btn,.panda2btn,.panda3btn').on("click",function(){
     $('.pandas').animate({
         top: '-=15px'
@@ -51,6 +52,7 @@ $('.panda1btn').on("click",function(){
     $('.panda1btn').addClass('panda1btn_2')
     $('.panda2btn').removeClass('panda2btn_2')
     $('.panda3btn').removeClass('panda3btn_2')
+    p4_panda_choose_num = 1;
 })
 $('.panda2btn').on("click",function(){
     $('.panda1').delay(500).fadeOut(200)
@@ -62,6 +64,7 @@ $('.panda2btn').on("click",function(){
     $('.panda1btn').removeClass('panda1btn_2')
     $('.panda2btn').addClass('panda2btn_2')
     $('.panda3btn').removeClass('panda3btn_2')
+    p4_panda_choose_num = 2;
 })
 $('.panda3btn').on("click",function(){
     $('.panda1').delay(500).fadeOut(200)
@@ -73,6 +76,7 @@ $('.panda3btn').on("click",function(){
     $('.panda1btn').removeClass('panda1btn_2')
     $('.panda2btn').removeClass('panda2btn_2')
     $('.panda3btn').addClass('panda3btn_2')
+    p4_panda_choose_num = 3;
 })
 
 //p5遊戲特色輪播
@@ -165,10 +169,6 @@ $('.p6btn5').on("click",function(){
 })
 
 
-//側bar最尾端+上敬請期待
-//8/31要拿掉
-// $('.swiper-pagination').append(`<span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label=""></span>`)
-
 
 //大彈窗內容
 $('.XX').on("click",function(){
@@ -245,6 +245,21 @@ $('.p4noticebtn').on("click",function(){
 $('.p4awards').on("click",function(){
     $('.pop').fadeIn(200);
     p4awardIn();
+})
+//p4熊貓競猜支持
+$('.pandaGobtn').on("click", function(){
+    $(".popS").fadeIn(200);
+    if(p4_panda_choose_num == 1){
+        p4_support_panda1()
+    }else if(p4_panda_choose_num == 2){
+        p4_support_panda2()
+    }else if(p4_panda_choose_num == 3){
+        p4_support_panda3()
+    }
+    $('.yes').off('click')
+    $('.yes').on("click",function(){
+        p4pandaresult();
+    })
 })
 
 //小彈窗
