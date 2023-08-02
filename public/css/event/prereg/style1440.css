@@ -287,7 +287,7 @@
                     width: calc(286px * 0.95);
                     height: calc(627px * 0.95);
                     transform-origin: calc(144px * 0.9) 0px;
-                    rotate: -20deg;
+                    rotate: 0deg;
                     opacity: 0;
                     z-index: 1;
     
