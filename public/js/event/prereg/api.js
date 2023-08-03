@@ -155,26 +155,24 @@ function checkMobile() {
         return -99;
     }
 }
-_send = true;
+_p3_send = true;
 // 結交名士
 $(".check_p3").on("click", function () {
-    console.log(_send)
     let _chance = $(".visit_frequency").data("val");
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
-        _send = false;
+        _p3_send = false;
         exit;
     }
     if (_chance == 0) {
         p3_error_not_enough();
         $(".popS").fadeIn(200);
-        _send = false;
+        _p3_send = false;
         exit;
     }
-    if (_send == true) {
-        _send = false;
-        console.log(_send)
+    if (_p3_send == true) {
+        _p3_send = false;
         $.post(
             _api,
             {
@@ -390,6 +388,7 @@ $(".p3choosebtn").on("click", function () {
     });
 });
 //p4熊貓競猜支持
+_p4_send = true;
 $(".pandaGobtn").on("click", function () {
     if (_user == null) {
         p2_not_login();
@@ -408,7 +407,10 @@ $(".pandaGobtn").on("click", function () {
         }
         $(".yes").off("click");
         $(".yes").on("click", function () {
-            p4pandaresult(p4_panda_choose_num);
+            if(_p4_send == true){
+                _p4_send = false
+                p4pandaresult(p4_panda_choose_num);
+            }
         });
     }
 });
