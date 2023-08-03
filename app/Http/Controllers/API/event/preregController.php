@@ -28,6 +28,9 @@ class preregController extends Controller
         } else if ($request->type == 'play_choose') {
             $result = preregController::PlayChoose($request);
             return $result;
+        } else if ($request->type == 'play_choose30') {
+            $result = preregController::PlayChoose($request);
+            return $result;
         } else if ($request->type == 'play_contect') {
 
         } else if ($request->type == 'mission') {
@@ -225,6 +228,23 @@ class preregController extends Controller
         return response()->json([
             'status' => 1,
         ]);
+    }
+    public function PlayChoose30($request)
+    {
+        $checkUser = PreregUser::where('user_id', $request->user)->first();
+        if($checkUser->visit_frequency>=0){
+            $checkUser->celebrity = $request->color . '_' . $request->rand;
+            $checkUser->visit_frequency -= 1;
+            $checkUser->distance_30 = 0;
+            $checkUser->save();
+            return response()->json([
+                'status' => 1,
+            ]);
+        }else{
+            return response()->json([
+                'status' => -99,
+            ]);
+        }
     }
     public function PlayKeep($request)
     {

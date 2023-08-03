@@ -642,7 +642,7 @@
     <script src="js/event/prereg/main.js?v1.5" type="text/javascript"></script>
     <script src="js/event/prereg/text.js?v1.5" type="text/javascript"></script>
     <script src="js/event/prereg/rain.js?v1.5" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.7" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.8" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){
