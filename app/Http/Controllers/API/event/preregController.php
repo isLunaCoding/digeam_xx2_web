@@ -73,6 +73,10 @@ class preregController extends Controller
         } else {
             $keep_celebrity = null;
         }
+
+        $today = Carbon::today();
+        $check = DrawCardChance::where('user_id', $request->user)->wherein('add_reason',('daily_login,daily_fb'))->orderby('created_at', 'desc')->first();
+        dd($check);
         return response()->json([
             'status' => 1,
             'race_total_answer' => $findUser->race_total_answer,
