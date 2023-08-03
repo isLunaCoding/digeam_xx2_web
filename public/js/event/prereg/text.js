@@ -3412,6 +3412,21 @@ function p3_error_not_enough() {
     $(".popScheckBtn2").hide();
     $(".popScheckBtn3").hide();
 }
+//p3"結交名士"先拜訪
+function p3_please_start() {
+    $(".popStitle").html("請先拜訪名士");
+    $(".popSText").html("").css({
+        fontSize: "1.3rem",
+    });
+    if (screen.width <= 425) {
+        $(".popSText").css({
+            fontSize: "1rem",
+        });
+    }
+    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
+}
 //p3"結交名士"已領取過
 function p3_already_get() {
     $(".popStitle").html("您已領取過了！​");
@@ -3530,7 +3545,7 @@ function p3_replace() {
 function p3_last() {
     //與他結義
     $(".popStitle").html("是否要選擇這位名士為最終結義名士?");
-    $(".popSText").html("※請注意，選定結果後將無法進行更改").css({
+    $(".popSText").html("").css({
         fontSize: "1.3rem",
     });
     if (screen.width <= 425) {

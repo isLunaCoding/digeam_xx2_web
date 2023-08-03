@@ -320,6 +320,9 @@ $(".yes").on("click", function () {
                         location.reload();
                     });
                 }
+            }else{
+                p3_please_start();
+                $(".popS").fadeIn(200);
             }
         }
     );

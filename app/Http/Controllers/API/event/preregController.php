@@ -255,8 +255,14 @@ class preregController extends Controller
     public function PlayKeep($request)
     {
         $finUser = PreregUser::where('user_id', $request->user)->first();
-        $finUser->keep_celebrity = $finUser->celebrity;
-        $finUser->save();
+        if($finUser->celebrity == null || $finUser->celebrity == ''){
+            return response()->json([
+                'status' => -99,
+            ]);
+        }else{
+            $finUser->keep_celebrity = $finUser->celebrity;
+            $finUser->save();
+        }
 
         return response()->json([
             'status' => 1,
