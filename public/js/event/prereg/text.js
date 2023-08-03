@@ -59,6 +59,7 @@ function p2_success() {
     }
     $(".popScheckBtn2").hide();
     $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn3").hide();
 
 }
 //p2"初出江湖"預約失敗彈窗-未登入
@@ -79,6 +80,7 @@ function p2_not_login() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p2"初出江湖"預約失敗彈窗-手機號碼錯誤
@@ -98,6 +100,7 @@ function p2_number_error() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p2"初出江湖"預約失敗彈窗-門號已使用
@@ -118,6 +121,7 @@ function p2_mobile_already_use() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 // //p2"初出江湖"預約失敗彈窗-已完成
 function p2_already_pre() {
@@ -136,6 +140,7 @@ function p2_already_pre() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p2"初出江湖"預約失敗彈窗-未勾選
@@ -160,6 +165,7 @@ function p2_pre_safe_error() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p2"初出江湖"預約活動結束彈窗
@@ -175,6 +181,7 @@ function p2_active_done() {
     }
     $(".popScheckBtn").show().html("前往官網");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p3"結交名士"活動說明
@@ -3403,6 +3410,7 @@ function p3_error_not_enough() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 //p3"結交名士"已領取過
 function p3_already_get() {
@@ -3417,6 +3425,7 @@ function p3_already_get() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 //p3"結交名士"未完成預約
 function p3_please_pre() {
@@ -3431,6 +3440,7 @@ function p3_please_pre() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 //p3"結交名士"任務完成
 function p3_success() {
@@ -3445,6 +3455,7 @@ function p3_success() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p3"結交名士"開啟自選名士
@@ -3530,6 +3541,7 @@ function p3_last() {
 
     $(".popScheckBtn").hide();
     $(".popScheckBtn2").show();
+    $(".popScheckBtn3").hide();
 }
 
 function p3_last_success() {
@@ -3544,6 +3556,7 @@ function p3_last_success() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p3"結交名士"任務佈告
@@ -3614,6 +3627,7 @@ function p4_today_done() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p4"熊貓賽跑"獎勵列表
@@ -3739,6 +3753,7 @@ function p4_panda1_win() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
     $(".popScheckBtn").on("click", function () {
         $(".p4resultpop").fadeOut(200);
     });
@@ -3762,6 +3777,7 @@ function p4_panda2_win() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
     $(".popScheckBtn").on("click", function () {
         $(".p4resultpop").fadeOut(200);
     });
@@ -3785,6 +3801,7 @@ function p4_panda3_win() {
     }
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
     $(".popScheckBtn").on("click", function () {
         $(".p4resultpop").fadeOut(200);
     });
@@ -3807,6 +3824,7 @@ function p4_support_panda1() {
     }
     $(".popScheckBtn2").show();
     $(".popScheckBtn").hide();
+    $(".popScheckBtn3").hide();
 }
 //p4"熊貓賽跑"確認支持熊貓-熊貓酒仙
 function p4_support_panda2() {
@@ -3826,6 +3844,7 @@ function p4_support_panda2() {
     }
     $(".popScheckBtn2").show();
     $(".popScheckBtn").hide();
+    $(".popScheckBtn3").hide();
 }
 //p4"熊貓賽跑"確認支持熊貓-熊貓少林
 function p4_support_panda3() {
@@ -3845,6 +3864,7 @@ function p4_support_panda3() {
     }
     $(".popScheckBtn2").show();
     $(".popScheckBtn").hide();
+    $(".popScheckBtn3").hide();
 }
 
 //p6職業介紹資料
