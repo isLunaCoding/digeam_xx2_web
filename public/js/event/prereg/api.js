@@ -208,12 +208,13 @@ $(".check_p3").on("click", function () {
 });
 
 // 名士選擇
-$(".choosenew").on("click", function () {
-    p3_replace();
-    $(".popS").fadeIn(200);
-    $(".yes").attr("data-val", "play_choose");
+// $(".choosenew").on("click", function () {
+//     p3_replace();
+//     $(".popS").fadeIn(200);
+//     $(".yes").attr("data-val", "play_choose");
+// });
 
-});
+
 $(".keepnow").on("click", function () {
     location.reload();
     var _origin_visit_frequency = $(".visit_frequency").attr("data-val");
@@ -230,7 +231,7 @@ $(".keepnow").on("click", function () {
     }
 });
 _send = true
-$(".new_yes").on("click", function () {
+$(".choosenew").on("click", function () {
     // $(".yes").attr("data-val", "play_choose");
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
@@ -386,6 +387,7 @@ $(".p3choosebtn").on("click", function () {
         }
     });
 });
+_guess = true
 //p4熊貓競猜支持
 $(".pandaGobtn").on("click", function () {
     if (_user == null) {
@@ -404,8 +406,15 @@ $(".pandaGobtn").on("click", function () {
             p4_support_panda3();
         }
         $(".yes").off("click");
+
         $(".yes").on("click", function () {
-            p4pandaresult(p4_panda_choose_num);
+            if(_guess == true){
+                _guess = false
+                setTimeout(
+                    _guess = true,10
+                )
+                p4pandaresult(p4_panda_choose_num);
+            }
         });
     }
 });
