@@ -159,20 +159,23 @@ function checkMobile() {
 // 結交名士
 $(".check_p3").on("click", function () {
     let _chance = $(".visit_frequency").data("val");
-    var _send = true;
+    _send = true;
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
-        var _send = false;
+        _send = false;
         exit;
     }
     if (_chance == 0) {
         p3_error_not_enough();
         $(".popS").fadeIn(200);
-        var _send = false;
+        _send = false;
         exit;
     }
     if (_send == true) {
+        setTimeout(
+            _send = false,2
+        )
         $.post(
             _api,
             {
@@ -230,9 +233,8 @@ $(".keepnow").on("click", function () {
         $(".distance_30").html(_new_distance_30);
     }
 });
-$(".choosenew").on("click", function () {
 var _drop = true
-
+$(".choosenew").on("click", function () {
     // $(".yes").attr("data-val", "play_choose");
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
@@ -406,13 +408,8 @@ $(".pandaGobtn").on("click", function () {
             p4_support_panda3();
         }
         $(".yes").off("click");
-        var _guess = 1
         $(".yes").on("click", function () {
-            console.log(_guess)
-            if(_guess == 1){
-                var _guess = 2
-                p4pandaresult(p4_panda_choose_num);
-            }
+            p4pandaresult(p4_panda_choose_num);
         });
     }
 });
