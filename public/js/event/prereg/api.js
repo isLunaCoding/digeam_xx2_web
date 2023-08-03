@@ -173,6 +173,8 @@ $(".check_p3").on("click", function () {
         exit;
     }
     if (_send == true) {
+        _send = false;
+        console.log(_send)
         $.post(
             _api,
             {
