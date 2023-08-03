@@ -75,8 +75,9 @@ class preregController extends Controller
         }
 
         $today = Carbon::today();
-        $check = DrawCardChance::where('user_id', $request->user)->wherein('add_reason',('daily_login,daily_fb'))->orderby('created_at', 'desc')->first();
-        dd($check);
+        $daily_login = DrawCardChance::where('user_id', $request->user)->where('add_reason','daily_login')->where('created_at','>',$today)->first();
+        $daily_FB = DrawCardChance::where('user_id', $request->user)->where('add_reason','daily_FB')->where('created_at','>',$today)->first();
+        $fb_fans_click = DrawCardChance::where('user_id', $request->user)->where('add_reason','fb_fans_click')->first();
         return response()->json([
             'status' => 1,
             'race_total_answer' => $findUser->race_total_answer,
@@ -87,6 +88,9 @@ class preregController extends Controller
             'race_total_answer' => $findUser->race_total_answer,
             'race_correct' => $findUser->race_correct,
             'user_mobile'=>$findUser->user_mobile,
+            'daily_login'=>$daily_login,
+            'daily_FB'=>$daily_FB,
+            'fb_fans_click'=>$fb_fans_click,
         ]);
     }
     public function MobileLogin($request)

@@ -46,6 +46,27 @@ function login() {
                     p3cardinfo(res.celebrity[0], res.celebrity[1]);
                     setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
                 }
+                if(res.daily_login != null){
+                    $('.daily_login').css({
+                        background:
+                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        backgroundPosition: "center",
+                    });
+                }
+                if(res.daily_FB != null){
+                    $('.daily_FB').css({
+                        background:
+                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        backgroundPosition: "center",
+                    });
+                }
+                if(res.fb_fans_click != null){
+                    $('.fb_fans_click').css({
+                        background:
+                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        backgroundPosition: "center",
+                    });
+                }
             }
         }
     );
