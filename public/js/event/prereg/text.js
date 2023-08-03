@@ -128,7 +128,7 @@ function p2_already_pre() {
     $(".popStitle").html("您已經完成初出江湖！​");
     $(".popSText")
         .html(
-            "由衷地感謝您參與初出江湖活動，前往下一步完成更多任務，將有機會解鎖更多的獎勵。​"
+            "此帳號已經完成驗證了"
         )
         .css({
             fontSize: "1.3rem",
