@@ -28,12 +28,12 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="css/event/prereg/main.css?v1.4">
-    <link rel="stylesheet" href="css/event/prereg/style1440.css?v1.4">
-    <link rel="stylesheet" href="css/event/prereg/style820.css?v1.4">
-    <link rel="stylesheet" href="css/event/prereg/style425.css?v1.4">
-    <link rel="stylesheet" href="css/event/prereg/style375.css?v1.4">
-    <link rel="stylesheet" href="css/event/prereg/animate.css?v1.4">
+    <link rel="stylesheet" href="css/event/prereg/main.css?v1.5">
+    <link rel="stylesheet" href="css/event/prereg/style1440.css?v1.5">
+    <link rel="stylesheet" href="css/event/prereg/style820.css?v1.5">
+    <link rel="stylesheet" href="css/event/prereg/style425.css?v1.5">
+    <link rel="stylesheet" href="css/event/prereg/style375.css?v1.5">
+    <link rel="stylesheet" href="css/event/prereg/animate.css?v1.5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -639,10 +639,10 @@
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/event/prereg/main.js?v1.5" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v1.5" type="text/javascript"></script>
-    <script src="js/event/prereg/rain.js?v1.5" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.8" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v1.6" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v1.6" type="text/javascript"></script>
+    <script src="js/event/prereg/rain.js?v1.6" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.9" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){
