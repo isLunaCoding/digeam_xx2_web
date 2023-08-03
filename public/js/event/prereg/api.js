@@ -230,18 +230,12 @@ $(".keepnow").on("click", function () {
         $(".distance_30").html(_new_distance_30);
     }
 });
-var _drop = true
 $(".choosenew").on("click", function () {
     // $(".yes").attr("data-val", "play_choose");
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
 
     if (_color || _rand) {
-        if(_drop == true){
-            var _drop = false
-            setTimeout(
-                _drop = true,2
-            )
         $.post(
             _api,
             {
