@@ -407,8 +407,8 @@ $(".pandaGobtn").on("click", function () {
         }
         $(".yes").off("click");
 
+        var _guess = true
         $(".yes").on("click", function () {
-            var _guess = true
             if(_guess == true){
                 var _guess = false
                 p4pandaresult(p4_panda_choose_num);
