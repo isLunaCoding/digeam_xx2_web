@@ -46,7 +46,6 @@ function login() {
                     p3cardinfo(res.celebrity[0], res.celebrity[1]);
                     setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
                 }
-                console.log(res.daily_login)
                 if(res.daily_login != null){
                     console.log(123)
                     $('.daily_login').css({
@@ -55,7 +54,6 @@ function login() {
                         backgroundPosition: "center",
                     });
                 }
-                console.log(res.daily_FB)
                 if(res.daily_FB != null){
                     console.log(456)
 
@@ -217,6 +215,7 @@ $(".choosenew").on("click", function () {
 
 });
 $(".keepnow").on("click", function () {
+    location.reload();
     var _origin_visit_frequency = $(".visit_frequency").attr("data-val");
     var _origin_distance_30 = $(".distance_30").attr("data-val");
     var _new_visit_frequency = _origin_visit_frequency - 1;

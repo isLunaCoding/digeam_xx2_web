@@ -3394,6 +3394,7 @@ function p3cardinfo(color, num) {
     $(".cardinfo").show();
     $(".keepnow").on("click", function () {
         $(".p3resultpop").fadeOut(200);
+        
     });
 }
 
