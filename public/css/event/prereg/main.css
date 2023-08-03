@@ -860,6 +860,7 @@ body{
                         background-size: 100%;
                         background-position: center;
                         -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                        mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                     }
 
                     .card_cloud1{
@@ -870,6 +871,7 @@ body{
                         background-size: cover;
                         background-position: left;
                         -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                        mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                         animation: p3cloud1 2s infinite alternate ease-in-out;
                     }
 
@@ -881,6 +883,7 @@ body{
                         background-size: cover;
                         background-position: right;
                         -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                        mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                         animation: p3cloud2 2s infinite alternate ease-in-out;
                     }
 

@@ -678,7 +678,7 @@
                 .p3text{
                     position: absolute;
                     top: 72%;
-                    right: 52%;
+                    right: 50%;
                     translate: 50% -50%;
                     width: 75%;
                     height: 45%;
@@ -686,6 +686,7 @@
                     .samplerules{
                         position: absolute;
                         top: 34%;
+                        left: 0%;
                         translate: 0 -50%;
                         width: 85%;
                         height: auto;
@@ -709,7 +710,7 @@
                     .cardinfo{
                         position: absolute;
                         top: 50%;
-                        translate: 0 -50%;
+                        translate: 0 -85%;
                         width: 100%;
                         height: 100%;
                         display: none;
@@ -719,7 +720,7 @@
                             top: 15%;
                             width: 100%;
                             height: auto;
-                            font-size: 55px;
+                            font-size: 28px;
                             color: #FFF;
                             font-family: 'Noto Serif TC', serif;
                             text-shadow: 0 0 10px #103aa3;
@@ -735,10 +736,10 @@
                             background-position: center;
                         }
                         .cardname::before{
-                            left: 5%;
+                            left: -13%;
                         }
                         .cardname::after{
-                            right: 5%;
+                            right: -13%;
                             scale: -1;
                         }
     
@@ -747,11 +748,11 @@
                             height: auto;
                             padding: 5px 15px;
                             color: #FFF;
-                            font-size: 22px;
+                            font-size: 15px;
                             font-weight: bold;
                             background-color: #21345d;
                             border-radius: 100px;
-                            margin-left: 10%;
+                            margin-left: 4%;
                         }
     
                         .value{
@@ -760,9 +761,9 @@
     
                         .valuetable,.skilltable{
                             margin: 10px auto 15px auto;
-                            width: 70%;
+                            width: 90%;
                             border-collapse: collapse;
-                            font-size: 21px;
+                            font-size: 15px;
                             font-weight: bold;
     
                             & td{
@@ -801,6 +802,7 @@
                             background-size: 100%;
                             background-position: center;
                             -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                            mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                         }
                         
                         .card_cloud1{
@@ -811,6 +813,7 @@
                             background-size: cover;
                             background-position: left;
                             -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                            mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                             animation: p3cloud1 2s infinite alternate ease-in-out;
                         }
                         
@@ -822,6 +825,7 @@
                             background-size: cover;
                             background-position: right;
                             -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                            mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                             animation: p3cloud2 2s infinite alternate ease-in-out;
                         }
     
