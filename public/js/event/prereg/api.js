@@ -155,11 +155,11 @@ function checkMobile() {
         return -99;
     }
 }
-
+_send = true;
 // 結交名士
 $(".check_p3").on("click", function () {
+    console.log(_send)
     let _chance = $(".visit_frequency").data("val");
-    _send = true;
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
@@ -173,9 +173,6 @@ $(".check_p3").on("click", function () {
         exit;
     }
     if (_send == true) {
-        setTimeout(
-            _send = false,2
-        )
         $.post(
             _api,
             {
