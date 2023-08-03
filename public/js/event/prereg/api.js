@@ -230,8 +230,9 @@ $(".keepnow").on("click", function () {
         $(".distance_30").html(_new_distance_30);
     }
 });
-var _drop = true
 $(".choosenew").on("click", function () {
+var _drop = true
+
     // $(".yes").attr("data-val", "play_choose");
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
@@ -387,7 +388,6 @@ $(".p3choosebtn").on("click", function () {
         }
     });
 });
-var _guess = true
 //p4熊貓競猜支持
 $(".pandaGobtn").on("click", function () {
     if (_user == null) {
@@ -408,6 +408,7 @@ $(".pandaGobtn").on("click", function () {
         $(".yes").off("click");
 
         $(".yes").on("click", function () {
+            var _guess = true
             if(_guess == true){
                 var _guess = false
                 p4pandaresult(p4_panda_choose_num);
