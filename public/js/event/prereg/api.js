@@ -230,17 +230,17 @@ $(".keepnow").on("click", function () {
         $(".distance_30").html(_new_distance_30);
     }
 });
-var _send = true
+var _drop = true
 $(".choosenew").on("click", function () {
     // $(".yes").attr("data-val", "play_choose");
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
 
     if (_color || _rand) {
-        if(_send == true){
-            _send = false
+        if(_drop == true){
+            var _drop = false
             setTimeout(
-                _send = true,2
+                _drop = true,2
             )
         $.post(
             _api,
@@ -409,10 +409,7 @@ $(".pandaGobtn").on("click", function () {
 
         $(".yes").on("click", function () {
             if(_guess == true){
-                _guess = false
-                setTimeout(
-                    _guess = true,10
-                )
+                var _guess = false
                 p4pandaresult(p4_panda_choose_num);
             }
         });
