@@ -3097,7 +3097,7 @@ body{
             cursor: pointer;
         }
 
-        .popScheckBtn2{
+        .popScheckBtn2,.popScheckBtn3,.popScheckBtn4{
             position: absolute;
             bottom: 15%;
             left: 50%;
@@ -3110,7 +3110,7 @@ body{
             letter-spacing: 5px;
             display: flex;
 
-            .yes,.no{
+            .yes,.no,.new_yes,.yes_30{
                 position: absolute;
                 width: 120px;
                 height: 50px;
@@ -3118,7 +3118,7 @@ body{
                 background-color: #FFF;
             }
 
-            .yes{
+            .yes,.new_yes,.yes_30{
                 left: 25%;
                 translate: -50%;
             }
