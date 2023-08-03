@@ -3513,7 +3513,8 @@ function p3_replace() {
         });
     }
     $(".popScheckBtn").hide();
-    $(".popScheckBtn2").show();
+    $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").show();
 }
 function p3_last() {
     //與他結義

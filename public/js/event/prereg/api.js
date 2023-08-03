@@ -197,16 +197,9 @@ $(".keepnow").on("click", function () {
         $(".distance_30").attr("data-val", _new_distance_30);
         $(".distance_30").html(_new_distance_30);
     }
-
-    console.log(
-        _origin_visit_frequency,
-        _origin_distance_30,
-        _new_visit_frequency,
-        _new_distance_30
-    );
 });
 _send = true
-$(".popScheckBtn").on("click", function () {
+$(".new_yes").on("click", function () {
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
 
