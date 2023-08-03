@@ -241,7 +241,7 @@ class preregController extends Controller
         if($checkUser->visit_frequency>=0){
             $checkUser->celebrity = $request->color . '_' . $request->rand;
             $checkUser->visit_frequency -= 1;
-            $checkUser->distance_30 = 0;
+            $checkUser->distance_30 -= 30;
             $checkUser->save();
             return response()->json([
                 'status' => 1,
