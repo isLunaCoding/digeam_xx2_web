@@ -386,8 +386,6 @@ $(".p3choosebtn").on("click", function () {
 });
 //p4熊貓競猜支持
 $(".pandaGobtn").on("click", function () {
-    _pre = true
-    console.log(_pre)
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
