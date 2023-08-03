@@ -312,7 +312,7 @@ $(".p3choosebtn").on("click", function () {
     $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
     $(".popSText")
         .html(
-            "※請注意，本次選擇將會放棄原先保留之獎勵，是否要以這位名士取代原本結果?​"
+            "​"
         )
         .css({
             fontSize: "1.3rem",
@@ -322,17 +322,21 @@ $(".p3choosebtn").on("click", function () {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").show().html("確認");
-    $(".popScheckBtn2").hide();
+    $(".popScheckBtn").hide()
+    $(".popScheckBtn2").show();
+    $(".popScheckBtn3").hide();
     $(".popS").fadeIn(200);
 
     $(".popScheckBtn").on("click", function () {
         let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
-        console.log(_choose, _color);
+        var _math  = $(".visit_frequency").attr("data-val");
         if (_choose == "") {
             alert("請先選擇名士");
-        } else {
+        } else if(_math<=0){
+            p3_error_not_enough();
+            $(".popS").fadeIn(200);
+        }else{
             $.post(
                 _api,
                 {
