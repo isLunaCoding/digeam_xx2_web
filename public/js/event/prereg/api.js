@@ -230,7 +230,7 @@ $(".keepnow").on("click", function () {
         $(".distance_30").html(_new_distance_30);
     }
 });
-_send = true
+var _send = true
 $(".choosenew").on("click", function () {
     // $(".yes").attr("data-val", "play_choose");
     let _color = $(".result_new").attr("data-color");
@@ -387,7 +387,7 @@ $(".p3choosebtn").on("click", function () {
         }
     });
 });
-_guess = true
+var _guess = true
 //p4熊貓競猜支持
 $(".pandaGobtn").on("click", function () {
     if (_user == null) {
