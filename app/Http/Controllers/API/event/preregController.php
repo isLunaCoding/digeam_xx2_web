@@ -222,8 +222,6 @@ class preregController extends Controller
     {
         $checkUser = PreregUser::where('user_id', $request->user)->first();
         $checkUser->celebrity = $request->color . '_' . $request->rand;
-        $checkUser->visit_frequency -= 1;
-        $checkUser->distance_30 += 1;
         $checkUser->save();
         return response()->json([
             'status' => 1,

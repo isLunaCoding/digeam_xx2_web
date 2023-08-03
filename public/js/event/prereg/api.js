@@ -428,3 +428,6 @@ function p4pandaresult(user_guess) {
         }
     );
 }
+$('.popScheckBtn').on('click',function(){
+    location.reload();
+})

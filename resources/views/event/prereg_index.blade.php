@@ -1,6 +1,3 @@
-<?
-$_COOKIE['StrID'] = 'jscky0996'
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -655,10 +652,10 @@ $_COOKIE['StrID'] = 'jscky0996'
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/event/prereg/main.js?v1.64" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v1.64" type="text/javascript"></script>
-    <script src="js/event/prereg/rain.js?v1.64" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.94" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v1.65" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v1.65" type="text/javascript"></script>
+    <script src="js/event/prereg/rain.js?v1.65" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.95" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){
