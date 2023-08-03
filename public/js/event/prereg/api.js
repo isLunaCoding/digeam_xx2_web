@@ -92,6 +92,7 @@ $(".check_p2").on("click", function () {
                 } else {
                     p2_success();
                     $(".popS").fadeIn(200);
+
                 }
             }
         );
@@ -199,7 +200,8 @@ $(".keepnow").on("click", function () {
     }
 });
 _send = true
-$(".new_yes").on("click", function () {
+$(".yes").on("click", function () {
+    $(".yes").attr("data-val", "play_choose");
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
 
@@ -266,31 +268,31 @@ $(".p4Gobtn").on("click", function () {
     p3_last();
     $(".yes").attr("data-val", "play_keep");
     $(".popS").fadeIn(200);
-});
-
-$(".yes").on("click", function () {
-    let _type = $(this).attr("data-val");
-    $.post(
-        _api,
-        {
-            type: _type,
-            user: _user,
-        },
-        function (res) {
-            if (res.status == 1) {
-                p3_last_success();
-                $(".yes").hide();
-                $(".no").hide();
-                $(".popS").fadeIn(200);
-                if (_type == "play_keep") {
-                    $(".popScheckBtn").on("click", function () {
-                        location.reload();
-                    });
+    $(".yes").on("click", function () {
+        let _type = $(this).attr("data-val");
+        $.post(
+            _api,
+            {
+                type: _type,
+                user: _user,
+            },
+            function (res) {
+                if (res.status == 1) {
+                    p3_last_success();
+                    $(".yes").hide();
+                    $(".no").hide();
+                    $(".popS").fadeIn(200);
+                    if (_type == "play_keep") {
+                        $(".popScheckBtn").on("click", function () {
+                            location.reload();
+                        });
+                    }
                 }
             }
-        }
-    );
+        );
+    });
 });
+
 $(".no").on("click", function () {
     $(".popS").fadeOut(200);
 });
