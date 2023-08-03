@@ -336,7 +336,7 @@ $(".p3choosebtn").on("click", function () {
         console.log(_math)
         if (_choose == "") {
             alert("請先選擇名士");
-        } else if(_math=0){
+        } else if(_math == 0){
         p3_error_not_enough();
         $(".popS").fadeIn(200);
         }else{
