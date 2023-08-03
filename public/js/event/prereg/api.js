@@ -253,7 +253,7 @@ $(".choosenew").on("click", function () {
         );
     }
     }
-});
+);
 
 // 任務佈告
 $(".missionbtn").on("click", function () {
