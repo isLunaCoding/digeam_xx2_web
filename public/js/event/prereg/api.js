@@ -205,10 +205,17 @@ $(".keepnow").on("click", function () {
         _new_distance_30
     );
 });
+_send = true
 $(".popScheckBtn").on("click", function () {
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
+
     if (_color || _rand) {
+        if(_send == true){
+            _send = false
+            setTimeout(
+                _send = true,2
+            )
         $.post(
             _api,
             {
@@ -224,6 +231,7 @@ $(".popScheckBtn").on("click", function () {
                 }
             }
         );
+    }
     }
 });
 
@@ -330,7 +338,7 @@ $(".p3choosebtn").on("click", function () {
             $.post(
                 _api,
                 {
-                    type: "play_choose",
+                    type: "play_choose_30",
                     user: _user,
                     color: _color,
                     rand: _choose,
@@ -338,6 +346,9 @@ $(".p3choosebtn").on("click", function () {
                 function (res) {
                     if (res.status == 1) {
                         location.reload();
+                    }else{
+                        p3_error_not_enough();
+                        $(".popS").fadeIn(200);
                     }
                 }
             );
