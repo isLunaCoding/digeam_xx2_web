@@ -29,7 +29,7 @@ class preregController extends Controller
             $result = preregController::PlayChoose($request);
             return $result;
         } else if ($request->type == 'play_choose_30') {
-            $result = preregController::PlayChoose($request);
+            $result = preregController::PlayChoose30($request);
             return $result;
         } else if ($request->type == 'play_contect') {
 
