@@ -184,6 +184,8 @@ $(".check_p3").on("click", function () {
 $(".choosenew").on("click", function () {
     p3_replace();
     $(".popS").fadeIn(200);
+    $(".yes").attr("data-val", "play_choose");
+
 });
 $(".keepnow").on("click", function () {
     var _origin_visit_frequency = $(".visit_frequency").attr("data-val");
@@ -200,8 +202,8 @@ $(".keepnow").on("click", function () {
     }
 });
 _send = true
-$(".yes").on("click", function () {
-    $(".yes").attr("data-val", "play_choose");
+$(".new_yes").on("click", function () {
+    // $(".yes").attr("data-val", "play_choose");
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
 
@@ -269,6 +271,7 @@ $(".p4Gobtn").on("click", function () {
     $(".yes").attr("data-val", "play_keep");
     $(".popS").fadeIn(200);
 });
+
 $(".yes").on("click", function () {
     let _type = $(this).attr("data-val");
     $.post(
