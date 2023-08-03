@@ -333,6 +333,7 @@ $(".p3choosebtn").on("click", function () {
         let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
         var _math  = $(".visit_frequency").attr("data-val");
+        console.log(_math)
         if (_choose == "") {
             alert("請先選擇名士");
         } else if(_math<=0){
