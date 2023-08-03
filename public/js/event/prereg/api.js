@@ -46,21 +46,29 @@ function login() {
                     p3cardinfo(res.celebrity[0], res.celebrity[1]);
                     setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
                 }
+                console.log(res.daily_login)
                 if(res.daily_login != null){
+                    console.log(123)
                     $('.daily_login').css({
                         background:
                             "url(/img/event/prereg/p3/seal.png) no-repeat center",
                         backgroundPosition: "center",
                     });
                 }
+                console.log(res.daily_FB)
                 if(res.daily_FB != null){
+                    console.log(456)
+
                     $('.daily_FB').css({
                         background:
                             "url(/img/event/prereg/p3/seal.png) no-repeat center",
                         backgroundPosition: "center",
                     });
                 }
+                console.log(res.fb_fans_click)
                 if(res.fb_fans_click != null){
+                    console.log(789)
+
                     $('.fb_fans_click').css({
                         background:
                             "url(/img/event/prereg/p3/seal.png) no-repeat center",
