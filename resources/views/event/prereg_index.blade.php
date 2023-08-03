@@ -627,7 +627,7 @@
                 <div class="no">取消</div>
             </div>
             <div class="popScheckBtn4" style="display:none">
-                <div class="30_yes">確認</div>
+                <div class="yes_30">確認</div>
                 <div class="no">取消</div>
             </div>
         </div>

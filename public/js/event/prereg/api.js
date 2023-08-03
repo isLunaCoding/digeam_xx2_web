@@ -358,7 +358,7 @@ $(".p3choosebtn").on("click", function () {
 
     $(".popS").fadeIn(200);
 
-    $(".30_yes").on("click", function () {
+    $(".yes_30").on("click", function () {
         let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
         if (_choose == "") {
