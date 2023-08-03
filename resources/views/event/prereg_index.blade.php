@@ -52,7 +52,7 @@ $_COOKIE['StrID'] = 'jscky0996'
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '195255256613754');
     fbq('track', 'PageView');
-    @php 
+    @php
         if(isset($_COOKIE['xx2_login'])) {
             if($_COOKIE['xx2_login'] == '1') {
     @endphp
@@ -655,10 +655,10 @@ $_COOKIE['StrID'] = 'jscky0996'
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/event/prereg/main.js?v1.61" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v1.61" type="text/javascript"></script>
-    <script src="js/event/prereg/rain.js?v1.61" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.91" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v1.63" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v1.63" type="text/javascript"></script>
+    <script src="js/event/prereg/rain.js?v1.63" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.93" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){
