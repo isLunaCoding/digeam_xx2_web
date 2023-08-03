@@ -407,10 +407,10 @@ $(".pandaGobtn").on("click", function () {
         }
         $(".yes").off("click");
 
-        var _guess = true
+        _guess = true
         $(".yes").on("click", function () {
             if(_guess == true){
-                var _guess = false
+                _guess = false
                 p4pandaresult(p4_panda_choose_num);
             }
         });
