@@ -406,11 +406,11 @@ $(".pandaGobtn").on("click", function () {
             p4_support_panda3();
         }
         $(".yes").off("click");
-
-        _guess = true
+        var _guess = 1
         $(".yes").on("click", function () {
-            if(_guess == true){
-                _guess = false
+            console.log(_guess)
+            if(_guess == 1){
+                var _guess = 2
                 p4pandaresult(p4_panda_choose_num);
             }
         });
