@@ -626,6 +626,10 @@
                 <div class="new_yes">確認</div>
                 <div class="no">取消</div>
             </div>
+            <div class="popScheckBtn4" style="display:none">
+                <div class="30_yes">確認</div>
+                <div class="no">取消</div>
+            </div>
         </div>
     </div>
 
@@ -652,10 +656,10 @@
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/event/prereg/main.js?v1.67" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v1.67" type="text/javascript"></script>
-    <script src="js/event/prereg/rain.js?v1.67" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.97" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v1.68" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v1.68" type="text/javascript"></script>
+    <script src="js/event/prereg/rain.js?v1.68" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.68" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){

@@ -3542,6 +3542,7 @@ function p3_last() {
     $(".popScheckBtn").hide();
     $(".popScheckBtn2").show();
     $(".popScheckBtn3").hide();
+    $(".popScheckBtn4").hide();
 }
 
 function p3_last_success() {

@@ -323,19 +323,21 @@ $(".p3choosebtn").on("click", function () {
         });
     }
     $(".popScheckBtn").hide()
-    $(".popScheckBtn2").show();
+    $(".popScheckBtn2").hide();
     $(".popScheckBtn3").hide();
+    $(".popScheckBtn4").show();
+
     $(".popS").fadeIn(200);
 
-    $(".popScheckBtn").on("click", function () {
+    $(".30_yes").on("click", function () {
         let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
         var _math  = $(".visit_frequency").attr("data-val");
         if (_choose == "") {
             alert("請先選擇名士");
         } else if(_math<=0){
-            p3_error_not_enough();
-            $(".popS").fadeIn(200);
+        p3_error_not_enough();
+        $(".popS").fadeIn(200);
         }else{
             $.post(
                 _api,
