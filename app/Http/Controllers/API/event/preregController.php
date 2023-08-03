@@ -240,7 +240,7 @@ class preregController extends Controller
     {
         $today = Carbon::today();
         $check = PandaGuessLog::where('user_id', $request->user)->where('created_at', '>', $today)->first();
-        if ($check) {
+        if (1>2) {
             return response()->json([
                 'status' => -99,
             ]);
