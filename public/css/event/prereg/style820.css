@@ -670,7 +670,7 @@
                 .p3text{
                     position: absolute;
                     top: 65%;
-                    right: 46%;
+                    right: 50%;
                     translate: 50% -50%;
                     width: 75%;
                     height: 45%;
@@ -678,6 +678,7 @@
                     .samplerules{
                         position: absolute;
                         top: 50%;
+                        left: 4%;
                         translate: 0 -50%;
                         width: 80%;
                         height: auto;
@@ -701,10 +702,11 @@
                     .cardinfo{
                         position: absolute;
                         top: 50%;
-                        translate: 0 -50%;
+                        translate: 0 -65%;
                         width: 100%;
                         height: 100%;
                         display: none;
+                        scale: 0.65;
     
                         .cardname{
                             position: absolute;
@@ -793,6 +795,7 @@
                             background-size: 100%;
                             background-position: center;
                             -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                            mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                         }
                         
                         .card_cloud1{
@@ -803,6 +806,7 @@
                             background-size: cover;
                             background-position: left;
                             -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                            mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                             animation: p3cloud1 2s infinite alternate ease-in-out;
                         }
                         
@@ -814,6 +818,7 @@
                             background-size: cover;
                             background-position: right;
                             -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
+                            mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                             animation: p3cloud2 2s infinite alternate ease-in-out;
                         }
     

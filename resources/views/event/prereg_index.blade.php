@@ -216,7 +216,36 @@
                     </div>
                     <div class="p3text">
                         <ul class="samplerules"></ul>
-                        <div class="cardinfo"></div>
+                        <div class="cardinfo"><div class="cardname">七花獸百花仙靈</div>
+                    <div class="value">卡片屬性</div>
+                    <table class="valuetable">
+                        <tr>
+                            <td>體質<span>+245</span></td>
+                            <td>體質<span>+245</span></td>
+                        </tr>
+                        <tr>
+                            <td>體質<span>+245</span></td>
+                            <td>體質<span>+2450</span></td>
+                        </tr>
+                        <tr>
+                            <td>物理防禦<span>+204</span></td>
+                            <td>物理防禦<span>+204</span></td>
+                        </tr>
+                        <tr>
+                            <td>物理防禦<span>+204</span></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="skill">羈絆技能</div>
+                    <table class="skilltable">
+                        <tr>
+                            <td colspan=2><span>煉獄火海</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan=2>對前方區域造成傷害，該區域中會出現火海持續燃燒10秒。</td>
+                        </tr>
+                    </table>
+                </div>
                     </div>
                     <div class="p4Gobtn">與他結義</div>
                 </div>
@@ -385,25 +414,29 @@
                 <li>
                     {{-- <div class="missiontext">進入官方DC群<span>(僅一次)</span></div> --}}
                     <div class="missiontext">尚未開放</div>
-                    <div class="missiontimes">拜訪次數+2</div>
+                    <!-- <div class="missiontimes">拜訪次數+2</div> -->
+                    <div class="missiontimes"></div>
                     <div class="missionbtn join_dc" data-val='join_dc'><a href="#" target="blank"></a></div>
                 </li>
                 <li>
                     {{-- <div class="missiontext">進入CB活動頁面<span>(僅一次)</span></div> --}}
                     <div class="missiontext">尚未開放</div>
-                    <div class="missiontimes">拜訪次數+2</div>
+                    <!-- <div class="missiontimes">拜訪次數+2</div> -->
+                    <div class="missiontimes"></div>
                     <div class="missionbtn go_cb" data-val='go_cb'><a href="https://xx2.digeam.com/cbt" target="blank"></a></div>
                 </li>
                 <li>
                     {{-- <div class="missiontext">進入官方網站<span>(僅一次)</span></div> --}}
                     <div class="missiontext">尚未開放</div>
-                    <div class="missiontimes">拜訪次數+2</div>
+                    <!-- <div class="missiontimes">拜訪次數+2</div> -->
+                    <div class="missiontimes"></div>
                     <div class="missionbtn go_index" data-val='go_index'><a href="https://xx2.digeam.com/" target="blank"></a></div>
                 </li>
                 <li>
                     {{-- <div class="missiontext">進入OB活動頁面<span>(僅一次)</span></div> --}}
                     <div class="missiontext">尚未開放</div>
-                    <div class="missiontimes">拜訪次數+2</div>
+                    <!-- <div class="missiontimes">拜訪次數+2</div> -->
+                    <div class="missiontimes"></div>
                     <div class="missionbtn go_ob" data-val='go_ob'><a href="https://xx2.digeam.com/obt" target="blank"></a></div>
                 </li>
             </ul>
