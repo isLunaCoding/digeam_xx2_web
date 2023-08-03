@@ -3502,7 +3502,7 @@ function p3_replace() {
     $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
     $(".popSText")
         .html(
-            "※請注意，本次選擇將會放棄原先保留之獎勵，是否要以這位名士取代原本結果?​"
+            "​"
         )
         .css({
             fontSize: "1.3rem",

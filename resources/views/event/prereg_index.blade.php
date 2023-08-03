@@ -52,7 +52,16 @@ $_COOKIE['StrID'] = 'jscky0996'
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '195255256613754');
     fbq('track', 'PageView');
-    fbq('track', 'CompleteRegistration');
+    @php 
+        if(isset($_COOKIE['xx2_login'])) {
+            if($_COOKIE['xx2_login'] == '1') {
+    @endphp
+                fbq('track', 'Login');
+    @php
+                $_COOKIE['xx2_login'] = "";
+            }
+        }
+    @endphp
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=195255256613754&ev=PageView&noscript=1"
@@ -616,6 +625,10 @@ $_COOKIE['StrID'] = 'jscky0996'
                 <div class="yes">確認</div>
                 <div class="no">取消</div>
             </div>
+            <div class="popScheckBtn3" style="display:none">
+                <div class="new_yes">確認</div>
+                <div class="no">取消</div>
+            </div>
         </div>
     </div>
 
@@ -642,10 +655,10 @@ $_COOKIE['StrID'] = 'jscky0996'
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/event/prereg/main.js?v1.62" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v1.62" type="text/javascript"></script>
-    <script src="js/event/prereg/rain.js?v1.62" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.92" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v1.61" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v1.61" type="text/javascript"></script>
+    <script src="js/event/prereg/rain.js?v1.61" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.91" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){
