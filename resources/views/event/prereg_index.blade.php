@@ -79,20 +79,37 @@
         <div class="menubtn"></div>
     </div> --}}
     <div class="menubar">
+
         <div class="barLine"></div>
+
         <div class="bar ">
+
             <!-- <div class="swiper-pagination"></div> -->
+
             <ul>
+
                 <li class="SUB SUB1"><a href="">首　　頁</a></li>
+
                 <li class="SUB SUB2"><a href="">初出江湖</a></li>
+
                 <li class="SUB SUB3"><a href="">結交名士</a></li>
-                <li class="SUB SUB4"><a href="">遊戲特色</a></li>
-                <li class="SUB SUB5"><a href="">職業介紹</a></li>
-                <li class="SUB SUB6"><a href="">活動規則</a></li>
-                <li class="SUB SUB7"><a href="">敬請期待</a></li>
+
+                <!-- <li class="SUB SUB4"><a href="">熊貓賽跑</a></li> -->
+
+                <li class="SUB SUB5"><a href="">遊戲特色</a></li>
+
+                <li class="SUB SUB6"><a href="">職業介紹</a></li>
+
+                <li class="SUB SUB7"><a href="">活動規則</a></li>
+
+                <li class="SUB SUB8"><a href="">敬請期待</a></li>
+
             </ul>
+
         </div>
+
         <div class="menubtn"></div>
+
     </div>
     <!-- 主內容Swiper -->
     <div class="swiper mainSwiper">
@@ -680,11 +697,11 @@
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/event/prereg/main.js?v1.993" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v1.993" type="text/javascript"></script>
-    <script src="js/event/prereg/rain.js?v1.993" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.993" type="text/javascript"></script>
-    <script src="js/event/prereg/menu.js?v1.993" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v1.994" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v1.994" type="text/javascript"></script>
+    <script src="js/event/prereg/rain.js?v1.994" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.994" type="text/javascript"></script>
+    <script src="js/event/prereg/menu.js?v1.994" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){

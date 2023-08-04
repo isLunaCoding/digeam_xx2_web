@@ -39,15 +39,15 @@ $('.SUB3 a').click(function() {
 
 });
 
-$('.SUB4 a').click(function() {
+// $('.SUB4 a').click(function() {
 
-    $('html,body').animate({
+//     $('html,body').animate({
 
-        scrollTop: $('.page4').offset().top
+//         scrollTop: $('.page4').offset().top
 
-    }, 10);
+//     }, 10);
 
-});
+// });
 
 $('.SUB5 a').click(function() {
 
@@ -64,6 +64,16 @@ $('.SUB6 a').click(function() {
     $('html,body').animate({
 
         scrollTop: $('.page6').offset().top
+
+    }, 10);
+
+});
+
+$('.SUB7 a').click(function() {
+
+    $('html,body').animate({
+
+        scrollTop: $('.page7').offset().top
 
     }, 10);
 
