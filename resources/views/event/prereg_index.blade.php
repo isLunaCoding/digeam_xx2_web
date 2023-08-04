@@ -308,7 +308,7 @@
 
             <!-- 5遊戲特色 -->
             <div class="swiper-slide page5">
-                <div id="rainBox"></div>
+                {{-- <div id="rainBox"></div> --}}
                 <div class="p5title"></div>
                 <div class="p5slideBox">
                     <div class="p5slidebg"></div>
