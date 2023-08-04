@@ -654,14 +654,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> --}}
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/event/prereg/main.js?v1.97" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v1.97" type="text/javascript"></script>
-    <script src="js/event/prereg/rain.js?v1.97" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.97" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v1.98" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v1.98" type="text/javascript"></script>
+    <script src="js/event/prereg/rain.js?v1.98" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.98" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){
