@@ -205,11 +205,11 @@ $(".check_p3").on("click", function () {
 );
 
 // 名士選擇
-$(".choosenew").on("click", function () {
-    $(".cardinfo").show();
-    p3_replace();
-    $(".popS").fadeIn(200);
-});
+// $(".choosenew").on("click", function () {
+//     $(".cardinfo").show();
+//     p3_replace();
+//     $(".popS").fadeIn(200);
+// });
 $(".keepnow").on("click", function () {
     var _origin_visit_frequency = $(".visit_frequency").attr("data-val");
     var _origin_distance_30 = $(".distance_30").attr("data-val");
@@ -225,7 +225,7 @@ $(".keepnow").on("click", function () {
     }
 });
 _send = true;
-$(".new_yes").on("click", function () {
+$(".choosenew").on("click", function () {
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
 
