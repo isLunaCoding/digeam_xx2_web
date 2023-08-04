@@ -32,7 +32,7 @@ function p2noticeIn() {
 
     var p2noticestr = "";
 
-    for (j = 0; j < 7; j++) {
+    for (j = 0; j < 6; j++) {
         p2noticestr += "<li>" + p2noticearray[j] + "</li>";
     }
 
