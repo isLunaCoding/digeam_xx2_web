@@ -751,22 +751,22 @@ body {
 }
 .swiper .page3 .p3main .corner .corner_LT {
   top: 50px;
-  left: 65px;
+  left: 28px;
   rotate: -90deg;
 }
 .swiper .page3 .p3main .corner .corner_RT {
-  top: 50px;
-  right: 65px;
+  top: 53px;
+  right: 28px;
   rotate: 0deg;
 }
 .swiper .page3 .p3main .corner .corner_LB {
   bottom: 50px;
-  left: 65px;
+  left: 28px;
   rotate: -180deg;
 }
 .swiper .page3 .p3main .corner .corner_RB {
-  bottom: 50px;
-  right: 65px;
+  bottom: 48px;
+  right: 32px;
   rotate: 90deg;
 }
 .swiper .page3 .p3main .p3info {
@@ -1144,11 +1144,11 @@ body {
 }
 .swiper .page3 .p3main .card p {
   position: absolute;
-  top: 80%;
+  top: 84%;
   left: 50%;
   translate: -50%;
   color: #FFF;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
 }
 .swiper .page3 .p3main .p4Gobtn {
