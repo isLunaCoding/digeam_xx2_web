@@ -3476,7 +3476,7 @@ function p3cardinfo(color, num) {
             });
         }
     }
-
+    $('.cardinfo').show();
     $(".samplerules").hide();
     $(".keepnow").on("click", function () {
         $(".p3resultpop").fadeOut(200);
