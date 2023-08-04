@@ -254,6 +254,11 @@ $(".choosenew").on("click", function () {
 
 // 任務佈告
 $(".missionbtn").on("click", function () {
+    if (_user == null) {
+        p2_not_login();
+        $(".popS").fadeIn(200);
+        exit;
+    }
     let _type = $(this).attr("data-val");
     let _send = true;
     if (_send == true) {
@@ -293,6 +298,11 @@ $(".p4Gobtn").on("click", function () {
 });
 
 $(".yes").on("click", function () {
+    if (_user == null) {
+        p2_not_login();
+        $(".popS").fadeIn(200);
+        exit;
+    }
     let _type = $(this).attr("data-val");
     $.post(
         _api,
@@ -398,6 +408,11 @@ $(".pandaGobtn").on("click", function () {
         }
         $(".yes").off("click");
         $(".yes").on("click", function () {
+            if (_user == null) {
+                p2_not_login();
+                $(".popS").fadeIn(200);
+                exit;
+            }
             if (_p4_send == true) {
                 _p4_send = false;
                 p4pandaresult(p4_panda_choose_num);
