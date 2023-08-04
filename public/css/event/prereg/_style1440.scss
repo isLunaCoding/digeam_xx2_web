@@ -281,8 +281,8 @@
 
                 .lanternbox{
                     position: absolute;
-                    top: 38px;
-                    left: -100px;
+                    top: 34px;
+                    left: -60px;
                     translate: 0%;
                     width: calc(286px * 0.95);
                     height: calc(627px * 0.95);
@@ -1614,7 +1614,7 @@
                         .footernotice{
                             text-align: left;
                             vertical-align: top;
-                            line-height: 3px;
+                            line-height: 16px;
                             font-size: 9pt;
                             & p:nth-child(4){
                                 color: #9ed5ff;
@@ -1859,7 +1859,7 @@
                     &::before{
                         position: absolute;
                         content: '';
-                        left: 16%;
+                        left: 3%;
                         width: 22px;
                         height: 50px;
                         background: url(/img/event/prereg/p3/mission_li.png) no-repeat center;

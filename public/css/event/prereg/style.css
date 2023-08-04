@@ -3716,8 +3716,8 @@ body {
   }
   .swiper .page3 .p3main .lanternbox {
     position: absolute;
-    top: 38px;
-    left: -100px;
+    top: 34px;
+    left: -60px;
     translate: 0%;
     width: 271.7px;
     height: 595.65px;
@@ -4892,7 +4892,7 @@ body {
   .swiper .page7 .footer .wrap .plus .footernotice {
     text-align: left;
     vertical-align: top;
-    line-height: 3px;
+    line-height: 16px;
     font-size: 9pt;
   }
   .swiper .page7 .footer .wrap .plus .footernotice p:nth-child(4) {
@@ -5105,7 +5105,7 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li::before {
     position: absolute;
     content: "";
-    left: 16%;
+    left: 3%;
     width: 22px;
     height: 50px;
     background: url(/img/event/prereg/p3/mission_li.png) no-repeat center;
