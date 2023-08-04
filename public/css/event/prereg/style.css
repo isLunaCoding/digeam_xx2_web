@@ -3577,23 +3577,23 @@ body {
     background-size: contain;
   }
   .swiper .page3 .p3main .corner .corner_LT {
-    top: 95px;
-    left: 45px;
+    top: 30px;
+    left: 52px;
     rotate: -90deg;
   }
   .swiper .page3 .p3main .corner .corner_RT {
-    top: 95px;
-    right: 45px;
+    top: 32px;
+    right: 52px;
     rotate: 0deg;
   }
   .swiper .page3 .p3main .corner .corner_LB {
-    bottom: 95px;
-    left: 45px;
+    bottom: 27px;
+    left: 51px;
     rotate: -180deg;
   }
   .swiper .page3 .p3main .corner .corner_RB {
-    bottom: 95px;
-    right: 45px;
+    bottom: 25px;
+    right: 53px;
     rotate: 90deg;
   }
   .swiper .page3 .p3main .p3info {
@@ -3923,11 +3923,11 @@ body {
   }
   .swiper .page3 .p3main .card p {
     position: absolute;
-    top: 80%;
+    top: 88%;
     left: 50%;
     translate: -50%;
     color: #FFF;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
   }
   .swiper .page3 .p3main .p4Gobtn {
@@ -12273,7 +12273,6 @@ body {
   }
   .swiper .page2 .p2main .p2steps .checkbtn {
     margin: auto;
-    margin-top: -13%;
     width: 260px;
     height: 101px;
     background: url(/img/event/prereg/p2/btn1.png) no-repeat;
@@ -12607,7 +12606,7 @@ body {
   .swiper .page3 .p3main .p3text {
     position: absolute;
     top: 72%;
-    right: 50%;
+    right: 40%;
     translate: 50% -50%;
     width: 75%;
     height: 45%;
@@ -13903,7 +13902,7 @@ body {
   .swiper-pagination .swiper-pagination-bullet-active::before {
     position: absolute;
     content: "";
-    left: 23%;
+    left: -487%;
     translate: 0% 8%;
     width: 37px;
     height: 40px;
@@ -14678,7 +14677,7 @@ body {
   /*選單連結(放進bar的css裡面會跑版所以放外面)*/
   .swiper-pagination {
     top: 50% !important;
-    left: 3% !important;
+    left: 51% !important;
     translate: 0%;
     scale: 1.2;
   }
@@ -14748,6 +14747,7 @@ body {
     overflow: hidden;
   }
   .swiper .swiper-slide .cloudmask {
+    display: none;
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -14998,7 +14998,7 @@ body {
   }
   .swiper .page2 .p2main .p2steps .checkbtn {
     margin: auto;
-    margin-top: -13%;
+    margin-top: -9%;
     width: 260px;
     height: 101px;
     background: url(/img/event/prereg/p2/btn1.png) no-repeat;
@@ -15019,6 +15019,7 @@ body {
     scale: 1;
     width: 100%;
     height: 40vh;
+    margin-top: 18px;
   }
   .swiper .page2 .p2main .p2awards .awardbox {
     position: absolute;
@@ -15168,7 +15169,7 @@ body {
     top: -22%;
     right: 50%;
     translate: 50%;
-    width: 100%;
+    width: 78%;
     z-index: 1;
   }
   .swiper .page3 .p3main .p3info p {
@@ -15339,8 +15340,8 @@ body {
   }
   .swiper .page3 .p3main .p3text .samplerules {
     position: absolute;
-    top: 34%;
-    left: 0%;
+    top: 41%;
+    left: 15%;
     translate: 0 -50%;
     width: 85%;
     height: auto;
@@ -15906,7 +15907,7 @@ body {
     left: 50%;
     translate: -50%;
     width: 51vw;
-    height: 17vw;
+    height: 58vw;
     background: url(/img/event/prereg/p5/title.png) no-repeat;
     background-size: contain;
     background-position: center;
@@ -16522,10 +16523,7 @@ body {
     color: #9ed5ff;
   }
   .swiper .swiper-slide-active .cloudmask {
-    scale: 2;
-    opacity: 0;
-    transition: 3s;
-    transition-delay: 0s;
+    display: none;
   }
   .swiper .swiper-slide-active .bg2animate .bird {
     animation: flybird 6s 1 linear;

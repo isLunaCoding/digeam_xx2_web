@@ -22,11 +22,12 @@ function login() {
         },
         function (res) {
             if (res.status == -99) {
+                console.log("未登入");
             } else {
-                if (res.user_mobile != "" && res.user_mobile != null) {
-                    _pre = true;
-                } else {
-                    _pre = false;
+                if(res.user_mobile !='' && res.user_mobile !=null){
+                    _pre = true
+                }else{
+                    _pre = false
                 }
                 if (res.keep_celebrity == null) {
                     $(".visit_frequency").html(res.visit_frequency);
@@ -44,33 +45,6 @@ function login() {
                 if (res.celebrity != null) {
                     p3cardinfo(res.celebrity[0], res.celebrity[1]);
                     setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
-                }
-                if (res.daily_login != null) {
-                    console.log(123);
-                    $(".daily_login").css({
-                        background:
-                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        backgroundPosition: "center",
-                    });
-                }
-                if (res.daily_FB != null) {
-                    console.log(456);
-
-                    $(".daily_FB").css({
-                        background:
-                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        backgroundPosition: "center",
-                    });
-                }
-                console.log(res.fb_fans_click);
-                if (res.fb_fans_click != null) {
-                    console.log(789);
-
-                    $(".fb_fans_click").css({
-                        background:
-                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        backgroundPosition: "center",
-                    });
                 }
             }
         }
@@ -116,7 +90,6 @@ $(".check_p2").on("click", function () {
                     p2_mobile_already_use();
                     $(".popS").fadeIn(200);
                 } else {
-                    fbq('track', 'AddToWishlist');
                     p2_success();
                     $(".popS").fadeIn(200);
                 }
@@ -154,24 +127,24 @@ function checkMobile() {
         return -99;
     }
 }
-_p3_send = true;
+
 // 結交名士
 $(".check_p3").on("click", function () {
     let _chance = $(".visit_frequency").data("val");
+    var _send = true;
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
-        _p3_send = false;
+        var _send = false;
         exit;
     }
     if (_chance == 0) {
         p3_error_not_enough();
         $(".popS").fadeIn(200);
-        _p3_send = false;
+        var _send = false;
         exit;
     }
-    if (_p3_send == true) {
-        _p3_send = false;
+    if (_send == true) {
         $.post(
             _api,
             {
@@ -207,20 +180,17 @@ $(".check_p3").on("click", function () {
 });
 
 // 名士選擇
-// $(".choosenew").on("click", function () {
-//     p3_replace();
-//     $(".popS").fadeIn(200);
-//     $(".yes").attr("data-val", "play_choose");
-// });
-
+$(".choosenew").on("click", function () {
+    p3_replace();
+    $(".popS").fadeIn(200);
+});
 $(".keepnow").on("click", function () {
-    location.reload();
     var _origin_visit_frequency = $(".visit_frequency").attr("data-val");
     var _origin_distance_30 = $(".distance_30").attr("data-val");
     var _new_visit_frequency = _origin_visit_frequency - 1;
     var _new_distance_30 = parseInt(_origin_distance_30) + 1;
     if (_new_visit_frequency <= 0) {
-        location.reload();
+        login();
     } else {
         $(".visit_frequency").attr("data-val", _new_visit_frequency);
         $(".visit_frequency").html(_new_visit_frequency);
@@ -228,12 +198,17 @@ $(".keepnow").on("click", function () {
         $(".distance_30").html(_new_distance_30);
     }
 });
-$(".choosenew").on("click", function () {
-    // $(".yes").attr("data-val", "play_choose");
+_send = true
+$(".new_yes").on("click", function () {
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
 
     if (_color || _rand) {
+        if(_send == true){
+            _send = false
+            setTimeout(
+                _send = true,2
+            )
         $.post(
             _api,
             {
@@ -245,20 +220,16 @@ $(".choosenew").on("click", function () {
             function (res) {
                 if (res.status == 1) {
                     $(".p3resultpop").fadeOut(200);
-                    location.reload();
+                    login();
                 }
             }
         );
+    }
     }
 });
 
 // 任務佈告
 $(".missionbtn").on("click", function () {
-    if (_user == null) {
-        p2_not_login();
-        $(".popS").fadeIn(200);
-        exit;
-    }
     let _type = $(this).attr("data-val");
     let _send = true;
     if (_send == true) {
@@ -298,11 +269,6 @@ $(".p4Gobtn").on("click", function () {
 });
 
 $(".yes").on("click", function () {
-    if (_user == null) {
-        p2_not_login();
-        $(".popS").fadeIn(200);
-        exit;
-    }
     let _type = $(this).attr("data-val");
     $.post(
         _api,
@@ -318,17 +284,13 @@ $(".yes").on("click", function () {
                 $(".popS").fadeIn(200);
                 if (_type == "play_keep") {
                     $(".popScheckBtn").on("click", function () {
-                        location.reload();
+                        login();
                     });
                 }
-            } else {
-                p3_please_start();
-                $(".popS").fadeIn(200);
             }
         }
     );
 });
-
 $(".no").on("click", function () {
     $(".popS").fadeOut(200);
 });
@@ -343,61 +305,60 @@ $(".distance_area").on("click", function () {
 });
 $(".p3choosebtn").on("click", function () {
     $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
-    $(".popSText").html("​").css({
-        fontSize: "1.3rem",
-    });
+    $(".popSText")
+        .html(
+            "※請注意，本次選擇將會放棄原先保留之獎勵，是否要以這位名士取代原本結果?​"
+        )
+        .css({
+            fontSize: "1.3rem",
+        });
     if (screen.width <= 425) {
         $(".popSText").css({
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").hide();
+    $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn2").hide();
-    $(".popScheckBtn3").hide();
-    $(".popScheckBtn4").show();
-
     $(".popS").fadeIn(200);
-    var _30_send = true;
-    $(".yes_30").on("click", function () {
+
+    $(".popScheckBtn").on("click", function () {
         let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
+        console.log(_choose, _color);
         if (_choose == "") {
             alert("請先選擇名士");
         } else {
-            if (_30_send == true) {
-                _30_send = false;
-
-                $.post(
-                    _api,
-                    {
-                        type: "play_choose_30",
-                        user: _user,
-                        color: _color,
-                        rand: _choose,
-                    },
-                    function (res) {
-                        if (res.status == 1) {
-                            location.reload();
-                        } else {
-                            p3_error_not_enough();
-                            $(".popS").fadeIn(200);
-                        }
+            $.post(
+                _api,
+                {
+                    type: "play_choose_30",
+                    user: _user,
+                    color: _color,
+                    rand: _choose,
+                },
+                function (res) {
+                    if (res.status == 1) {
+                        login();
+                    }else{
+                        p3_error_not_enough();
+                        $(".popS").fadeIn(200);
                     }
-                );
-            }
+                }
+            );
         }
     });
 });
 //p4熊貓競猜支持
-_p4_send = true;
 $(".pandaGobtn").on("click", function () {
+    _pre = true
+    console.log(_pre)
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
-    } else if (_pre == false) {
+    } else if(_pre == false){
         p3_please_pre();
         $(".popS").fadeIn(200);
-    } else {
+    }else{
         $(".popS").fadeIn(200);
         if (p4_panda_choose_num == 1) {
             p4_support_panda1();
@@ -408,15 +369,7 @@ $(".pandaGobtn").on("click", function () {
         }
         $(".yes").off("click");
         $(".yes").on("click", function () {
-            if (_user == null) {
-                p2_not_login();
-                $(".popS").fadeIn(200);
-                exit;
-            }
-            if (_p4_send == true) {
-                _p4_send = false;
-                p4pandaresult(p4_panda_choose_num);
-            }
+            p4pandaresult(p4_panda_choose_num);
         });
     }
 });
@@ -436,7 +389,7 @@ function p4pandaresult(user_guess) {
             if (res.status == -99) {
                 p4_today_done();
                 $(".popS").fadeIn(200);
-            } else {
+            }else{
                 $(".popS").fadeOut(200);
                 if (i == 1) {
                     $(".panda1win").show();
@@ -470,6 +423,3 @@ function p4pandaresult(user_guess) {
         }
     );
 }
-$(".popScheckBtn").on("click", function () {
-    location.reload();
-});

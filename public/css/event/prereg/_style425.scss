@@ -292,7 +292,7 @@
 
                     .checkbtn{
                         margin: auto;
-                        margin-top: -13%;
+                        // margin-top: -13%;
                         width: 260px;
                         height: 101px;
                         background: url(/img/event/prereg/p2/btn1.png)no-repeat;
@@ -677,7 +677,7 @@
                 .p3text{
                     position: absolute;
                     top: 72%;
-                    right: 50%;
+                    right: 40%;
                     translate: 50% -50%;
                     width: 75%;
                     height: 45%;
@@ -2147,7 +2147,7 @@
             &::before{
                 position: absolute;
                 content: '';
-                left: 23%;
+                left: -487%;
                 translate: 0% 8%;
                 width: 37px;
                 height: 40px;
@@ -3024,7 +3024,7 @@
     /*選單連結(放進bar的css裡面會跑版所以放外面)*/
     .swiper-pagination{
         top: 50% !important;
-        left: 3% !important;
+        left: 51% !important;
         translate: 0%;
         scale: 1.2;
     }
