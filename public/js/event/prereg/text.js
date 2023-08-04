@@ -186,7 +186,7 @@ function p2_active_done() {
 //p3"結交名士"活動說明
 function p3informationIn() {
     var p3informationarray = [
-        "活動時間：2023/08/03 12:00 (四)  ~上市後一週",
+        "活動時間：即日起 ~ 《仙俠世界貳》上市後一週。",
         "活動期間內完成指定任務可獲得對應拜訪次數，部分任務於活動期間內僅可完成一次，可重複完成的任務將於每日00:00重置。",
         "完成任務取得拜訪次數後，點選【拜訪名士】即可進行結交名士。",
         "拜訪名士後，可確認該名士的能力值等相關介紹。",
@@ -3591,7 +3591,7 @@ function mission_success(){
 //p4"熊貓賽跑"活動說明
 function p4informationIn() {
     var p4informationarray = [
-        "活動時間：2023/08/31 12:00 (四)  ~上市後一週",
+        "活動時間：即日起 ~ 《仙俠世界貳》上市後一週。",
         "活動期間內，<span>將於每日00:00開啟一輪新的賽事，每日登入活動頁面都可以遊玩一次熊貓賽跑。</span>",
         "進行熊貓賽跑時，將從熊貓酒仙、熊貓少林、熊貓船長三隻熊貓中選出一隻心儀的熊貓，若預測成功則可累計一次猜對次數，累計猜對達指定次數，可獲得對應獎勵。",
         "預測失敗也不用灰心，每日參與熊貓賽跑競猜活動，不論是否預測成功皆可累計競猜次數，累計參與活動達指定次數，可獲得對應獎勵。",
@@ -3670,7 +3670,7 @@ function p4awardIn() {
     var p4award2array = {
         times: ["競猜次數", "5", "10", "15", "20", "30"],
         award: [
-            "累計競猜獎勵",
+            "獎勵數量",
             "三級體質玄石",
             "三級防禦玄石",
             "新手玄獸經驗丹",
@@ -3741,7 +3741,7 @@ function p4awardIn() {
             `<table class="othertable"><tr><td colspan=3 style="font-weight: bold;background-color: #627eac;color: #FFF;">累計猜對獎勵</td></tr>` +
                 p4award1str +
                 `</table><p style="text-align: center;">備註:每隻熊貓勝出的機率均為33%</p>` +
-                `<table class="othertable"><tr><td colspan=3 style="font-weight: bold;background-color: #627eac;color: #FFF;">累計猜對獎勵</td></tr>` +
+                `<table class="othertable"><tr><td colspan=3 style="font-weight: bold;background-color: #627eac;color: #FFF;">累計競猜獎勵</td></tr>` +
                 p4award2str +
                 `</table>`
         );
