@@ -1,17 +1,17 @@
 
 
 //輪播主體設定
-// var swiper = new Swiper(".mainSwiper", {
-//     direction: "vertical", //垂直輪播
-//     keyboard : false, //鍵盤上下換頁
-//     mousewheel: true,
-//     loop: false,
-//     speed: 500,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     }
-// });
+var swiper = new Swiper(".mainSwiper", {
+    direction: "vertical", //垂直輪播
+    keyboard : false, //鍵盤上下換頁
+    mousewheel: true,
+    loop: false,
+    speed: 500,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
+});
 
 
 
