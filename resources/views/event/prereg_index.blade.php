@@ -79,65 +79,20 @@
         <div class="menubtn"></div>
     </div> --}}
     <div class="menubar">
-
-
-
         <div class="barLine"></div>
-
-
-
         <div class="bar ">
-
-
-
             <!-- <div class="swiper-pagination"></div> -->
-
-
-
             <ul>
-
-
-
                 <li class="SUB SUB1"><a href="">首　　頁</a></li>
-
-
-
                 <li class="SUB SUB2"><a href="">初出江湖</a></li>
-
-
-
                 <li class="SUB SUB3"><a href="">結交名士</a></li>
-
-
-
                 <li class="SUB SUB4"><a href="">遊戲特色</a></li>
-
-
-
                 <li class="SUB SUB5"><a href="">職業介紹</a></li>
-
-
-
                 <li class="SUB SUB6"><a href="">活動規則</a></li>
-
-
-
                 <li class="SUB SUB7"><a href="">敬請期待</a></li>
-
-
-
             </ul>
-
-
-
         </div>
-
-
-
         <div class="menubtn"></div>
-
-
-
     </div>
     <!-- 主內容Swiper -->
     <div class="swiper mainSwiper">

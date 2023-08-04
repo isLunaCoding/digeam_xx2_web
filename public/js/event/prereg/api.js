@@ -24,10 +24,10 @@ function login() {
             if (res.status == -99) {
                 console.log("未登入");
             } else {
-                if(res.user_mobile !='' && res.user_mobile !=null){
-                    _pre = true
-                }else{
-                    _pre = false
+                if (res.user_mobile != "" && res.user_mobile != null) {
+                    _pre = true;
+                } else {
+                    _pre = false;
                 }
                 if (res.keep_celebrity == null) {
                     $(".visit_frequency").html(res.visit_frequency);
@@ -45,6 +45,30 @@ function login() {
                 if (res.celebrity != null) {
                     p3cardinfo(res.celebrity[0], res.celebrity[1]);
                     setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
+                }
+
+                if (res.daily_login != null) {
+                    $(".daily_login").css({
+                        background:
+                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        backgroundPosition: "center",
+                    });
+                }
+
+                if (res.daily_FB != null) {
+                    $(".daily_FB").css({
+                        background:
+                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        backgroundPosition: "center",
+                    });
+                }
+
+                if (res.fb_fans_click != null) {
+                    $(".fb_fans_click").css({
+                        background:
+                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        backgroundPosition: "center",
+                    });
                 }
             }
         }
@@ -198,33 +222,31 @@ $(".keepnow").on("click", function () {
         $(".distance_30").html(_new_distance_30);
     }
 });
-_send = true
+_send = true;
 $(".new_yes").on("click", function () {
     let _color = $(".result_new").attr("data-color");
     let _rand = $(".result_new").attr("data-rand");
 
     if (_color || _rand) {
-        if(_send == true){
-            _send = false
-            setTimeout(
-                _send = true,2
-            )
-        $.post(
-            _api,
-            {
-                type: "play_choose",
-                user: _user,
-                color: _color,
-                rand: _rand,
-            },
-            function (res) {
-                if (res.status == 1) {
-                    $(".p3resultpop").fadeOut(200);
-                    login();
+        if (_send == true) {
+            _send = false;
+            setTimeout((_send = true), 2);
+            $.post(
+                _api,
+                {
+                    type: "play_choose",
+                    user: _user,
+                    color: _color,
+                    rand: _rand,
+                },
+                function (res) {
+                    if (res.status == 1) {
+                        $(".p3resultpop").fadeOut(200);
+                        login();
+                    }
                 }
-            }
-        );
-    }
+            );
+        }
     }
 });
 
@@ -339,7 +361,7 @@ $(".p3choosebtn").on("click", function () {
                 function (res) {
                     if (res.status == 1) {
                         login();
-                    }else{
+                    } else {
                         p3_error_not_enough();
                         $(".popS").fadeIn(200);
                     }
@@ -350,15 +372,15 @@ $(".p3choosebtn").on("click", function () {
 });
 //p4熊貓競猜支持
 $(".pandaGobtn").on("click", function () {
-    _pre = true
-    console.log(_pre)
+    _pre = true;
+    console.log(_pre);
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
-    } else if(_pre == false){
+    } else if (_pre == false) {
         p3_please_pre();
         $(".popS").fadeIn(200);
-    }else{
+    } else {
         $(".popS").fadeIn(200);
         if (p4_panda_choose_num == 1) {
             p4_support_panda1();
@@ -389,7 +411,7 @@ function p4pandaresult(user_guess) {
             if (res.status == -99) {
                 p4_today_done();
                 $(".popS").fadeIn(200);
-            }else{
+            } else {
                 $(".popS").fadeOut(200);
                 if (i == 1) {
                     $(".panda1win").show();
