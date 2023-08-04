@@ -201,8 +201,7 @@ $(".check_p3").on("click", function () {
             }
         );
     }
-}
-);
+});
 
 // 名士選擇
 // $(".choosenew").on("click", function () {
@@ -348,31 +347,34 @@ $(".p3choosebtn").on("click", function () {
     $(".popScheckBtn4").show();
     $(".popS").fadeIn(200);
 
+    var _30_send = true;
     $(".yes_30").on("click", function () {
         let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
-        console.log(_choose, _color);
         if (_choose == "") {
             alert("請先選擇名士");
         } else {
-            $.post(
-                _api,
-                {
-                    type: "play_choose_30",
-                    user: _user,
-                    color: _color,
-                    rand: _choose,
-                },
-                function (res) {
-                    if (res.status == 1) {
-                        login();
-                        location.reload()
-                    } else {
-                        p3_error_not_enough();
-                        $(".popS").fadeIn(200);
+            if (_30_send == true) {
+                _30_send = false;
+                $.post(
+                    _api,
+                    {
+                        type: "play_choose_30",
+                        user: _user,
+                        color: _color,
+                        rand: _choose,
+                    },
+                    function (res) {
+                        if (res.status == 1) {
+                            login();
+                            location.reload();
+                        } else {
+                            p3_error_not_enough();
+                            $(".popS").fadeIn(200);
+                        }
                     }
-                }
-            );
+                );
+            }
         }
     });
 });
