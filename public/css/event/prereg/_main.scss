@@ -1944,7 +1944,7 @@ body{
 
         .footer{
             width: 100vw;
-            height: 100px;
+            height: 125px;
             bottom: 0;
             background-image: linear-gradient(to top, rgba(4, 17, 64, 0.9), rgba(47, 85, 118, 0.9));
             position: absolute;
@@ -2026,7 +2026,7 @@ body{
                     .footernotice{
                         text-align: left;
                         vertical-align: top;
-                        line-height: 3px;
+                        line-height: 17px;
                         font-size: 9pt;
                         & p:nth-child(4){
                             color: #9ed5ff;
