@@ -340,7 +340,7 @@
                         display: flex;
                         text-align: center;
                         text-shadow: 0 0 5px #010101;
-
+                        top: -12%;
                         .p2informationbtn, .p2noticebtn{
                             width: 50%;
                             background: url(/img/event/prereg/p2/btn2.png)no-repeat;
@@ -1872,7 +1872,7 @@
 
             .p7title{
                 position: absolute;
-                top: 5vh;
+                top: 3vh;
                 left: 50%;
                 translate: -50%;
                 width: 51vw;
@@ -2009,7 +2009,7 @@
                         .footernotice{
                             text-align: left;
                             vertical-align: top;
-                            line-height: 3px;
+                            line-height: 16px;
                             font-size: 9pt;
                             & p:nth-child(4){
                                 color: #9ed5ff;
@@ -2266,7 +2266,7 @@
                     &::before{
                         position: absolute;
                         content: '';
-                        left: 10%;
+                        left: 1%;
                         width: 22px;
                         height: 25px;
                         background: url(/img/event/prereg/p3/mission_li.png) no-repeat center;

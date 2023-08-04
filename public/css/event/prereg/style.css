@@ -11262,7 +11262,7 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li::before {
     position: absolute;
     content: "";
-    left: 10%;
+    left: 1%;
     width: 22px;
     height: 25px;
     background: url(/img/event/prereg/p3/mission_li.png) no-repeat center;
@@ -12285,6 +12285,7 @@ body {
     display: flex;
     text-align: center;
     text-shadow: 0 0 5px #010101;
+    top: -12%;
   }
   .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn {
     width: 50%;
@@ -13633,7 +13634,7 @@ body {
   }
   .swiper .page7 .p7title {
     position: absolute;
-    top: 5vh;
+    top: 3vh;
     left: 50%;
     translate: -50%;
     width: 51vw;
@@ -13754,7 +13755,7 @@ body {
   .swiper .page7 .footer .wrap .plus .footernotice {
     text-align: left;
     vertical-align: top;
-    line-height: 3px;
+    line-height: 16px;
     font-size: 9pt;
   }
   .swiper .page7 .footer .wrap .plus .footernotice p:nth-child(4) {
@@ -13979,7 +13980,7 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li::before {
     position: absolute;
     content: "";
-    left: 10%;
+    left: 1%;
     width: 22px;
     height: 25px;
     background: url(/img/event/prereg/p3/mission_li.png) no-repeat center;
@@ -14703,7 +14704,7 @@ body {
     overflow-y: scroll;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 374px) {
   .swiper {
     width: 100vw;
     height: 100%;
