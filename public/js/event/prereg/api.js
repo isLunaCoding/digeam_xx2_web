@@ -342,11 +342,13 @@ $(".p3choosebtn").on("click", function () {
             fontSize: "1rem",
         });
     }
-    $(".popScheckBtn").show().html("確認");
+    $(".popScheckBtn").hide();
     $(".popScheckBtn2").hide();
+    $(".popScheckBtn3").hide();
+    $(".popScheckBtn4").show();
     $(".popS").fadeIn(200);
 
-    $(".popScheckBtn").on("click", function () {
+    $(".yes_30").on("click", function () {
         let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
         console.log(_choose, _color);
@@ -364,6 +366,7 @@ $(".p3choosebtn").on("click", function () {
                 function (res) {
                     if (res.status == 1) {
                         login();
+                        location.reload()
                     } else {
                         p3_error_not_enough();
                         $(".popS").fadeIn(200);

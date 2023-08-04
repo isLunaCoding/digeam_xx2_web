@@ -29,7 +29,7 @@
 
 
     {{-- <link rel="stylesheet" href="css/event/prereg/main.css?v2.04"> --}}
-    <link rel="stylesheet" href="css/event/prereg/style.css?v2.06">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v2.07">
     {{-- <link rel="stylesheet" href="css/event/prereg/style1440.css?v2.04">
     <link rel="stylesheet" href="css/event/prereg/style820.css?v2.04">
     <link rel="stylesheet" href="css/event/prereg/style600.css?v2.04">
@@ -698,10 +698,10 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     {{-- <script src="js/event/prereg/rain.js?v1.994" type="text/javascript"></script> --}}
-    <script src="js/event/prereg/main.js?v2.0" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v2.0" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v2.0" type="text/javascript"></script>
-    <script src="js/event/prereg/menu.js?v2.0" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v2.01" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v2.01" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v2.01" type="text/javascript"></script>
+    <script src="js/event/prereg/menu.js?v2.01" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){
