@@ -22,7 +22,6 @@ function login() {
         },
         function (res) {
             if (res.status == -99) {
-                console.log("未登入");
             } else {
                 if (res.user_mobile != "" && res.user_mobile != null) {
                     _pre = true;
@@ -117,6 +116,7 @@ $(".check_p2").on("click", function () {
                     p2_mobile_already_use();
                     $(".popS").fadeIn(200);
                 } else {
+                    fbq('track', 'AddToWishlist');
                     p2_success();
                     $(".popS").fadeIn(200);
                 }
