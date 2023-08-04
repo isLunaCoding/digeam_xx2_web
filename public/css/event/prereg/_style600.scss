@@ -251,6 +251,7 @@
                         font-size: 15px;
                         font-weight: bold;
                         color: #274f72;
+                        height: 42%;
 
                         & form{
                             & div{
@@ -485,7 +486,7 @@
 
                 .p3info{
                     position: absolute;
-                    top: -22%;
+                    top: -16%;
                     right: 50%;
                     translate: 50%;
                     width: 100%;
@@ -1671,7 +1672,7 @@
 
             .p6menu{
                 position: absolute;
-                top: 100vh;
+                top: 107vh;
                 left: 0vw;
                 width: 100vw;
                 height: 20vw;
@@ -1872,7 +1873,7 @@
 
             .p7title{
                 position: absolute;
-                top: 5vh;
+                top: 1vh;
                 left: 50%;
                 translate: -50%;
                 width: 51vw;
@@ -2009,7 +2010,7 @@
                         .footernotice{
                             text-align: left;
                             vertical-align: top;
-                            line-height: 3px;
+                            line-height: 16px;
                             font-size: 9pt;
                             & p:nth-child(4){
                                 color: #9ed5ff;

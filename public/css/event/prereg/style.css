@@ -9497,6 +9497,7 @@ body {
     font-size: 15px;
     font-weight: bold;
     color: #274f72;
+    height: 42%;
   }
   .swiper .page2 .p2main .p2steps .step2checkbox form div select {
     width: 20%;
@@ -9689,7 +9690,7 @@ body {
   }
   .swiper .page3 .p3main .p3info {
     position: absolute;
-    top: -22%;
+    top: -16%;
     right: 50%;
     translate: 50%;
     width: 100%;
@@ -10737,7 +10738,7 @@ body {
   }
   .swiper .page6 .p6menu {
     position: absolute;
-    top: 100vh;
+    top: 107vh;
     left: 0vw;
     width: 100vw;
     height: 20vw;
@@ -10915,7 +10916,7 @@ body {
   }
   .swiper .page7 .p7title {
     position: absolute;
-    top: 5vh;
+    top: 1vh;
     left: 50%;
     translate: -50%;
     width: 51vw;
@@ -11036,7 +11037,7 @@ body {
   .swiper .page7 .footer .wrap .plus .footernotice {
     text-align: left;
     vertical-align: top;
-    line-height: 3px;
+    line-height: 16px;
     font-size: 9pt;
   }
   .swiper .page7 .footer .wrap .plus .footernotice p:nth-child(4) {
