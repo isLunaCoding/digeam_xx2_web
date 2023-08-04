@@ -12273,6 +12273,7 @@ body {
     text-align: center;
     line-height: 101px;
     scale: 0.5;
+    top: -20%;
   }
   .swiper .page2 .p2main .p2steps .checkbtn:hover {
     background: url(/img/event/prereg/p2/btn1_hover.png) no-repeat;
@@ -12303,7 +12304,7 @@ body {
     display: flex;
     text-align: center;
     text-shadow: 0 0 5px #010101;
-    top: -20%;
+    top: -2%;
   }
   .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn {
     width: 50%;

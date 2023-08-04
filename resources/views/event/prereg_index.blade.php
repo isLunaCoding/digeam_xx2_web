@@ -29,7 +29,7 @@
 
 
     {{-- <link rel="stylesheet" href="css/event/prereg/main.css?v2.04"> --}}
-    <link rel="stylesheet" href="css/event/prereg/style.css?v2.05">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v2.06">
     {{-- <link rel="stylesheet" href="css/event/prereg/style1440.css?v2.04">
     <link rel="stylesheet" href="css/event/prereg/style820.css?v2.04">
     <link rel="stylesheet" href="css/event/prereg/style600.css?v2.04">
