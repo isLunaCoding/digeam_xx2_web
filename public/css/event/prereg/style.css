@@ -2266,40 +2266,40 @@ body {
 .swiper-pagination .swiper-pagination-bullet:nth-child(1)::after {
   position: absolute;
   content: "首　　頁";
-  width: 125px;
+  width: 140px;
   height: 10px;
 }
 .swiper-pagination .swiper-pagination-bullet:nth-child(2)::after {
   position: absolute;
   content: "初出江湖";
-  width: 125px;
+  width: 140px;
   height: 10px;
 }
 .swiper-pagination .swiper-pagination-bullet:nth-child(3)::after {
   position: absolute;
   content: "結交名士";
-  width: 125px;
+  width: 140px;
   height: 10px;
 }
 .swiper-pagination .swiper-pagination-bullet:nth-child(4)::after {
   position: absolute;
   content: "遊戲特色";
   /* content: '熊貓賽跑'; */
-  width: 125px;
+  width: 140px;
   height: 10px;
 }
 .swiper-pagination .swiper-pagination-bullet:nth-child(5)::after {
   position: absolute;
   content: "職業介紹";
   /* content: '遊戲特色'; */
-  width: 125px;
+  width: 140px;
   height: 10px;
 }
 .swiper-pagination .swiper-pagination-bullet:nth-last-child(1)::after {
   position: absolute;
   content: "活動規則";
   content: "職業介紹";
-  width: 125px;
+  width: 140px;
   height: 10px;
 }
 .swiper-pagination .swiper-pagination-bullet:last-child {
@@ -2309,7 +2309,7 @@ body {
   position: absolute;
   content: "敬請期待";
   content: "活動規則";
-  width: 125px;
+  width: 140px;
   height: 10px;
 }
 
