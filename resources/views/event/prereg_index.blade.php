@@ -31,7 +31,8 @@
     <link rel="stylesheet" href="css/event/prereg/main.css?v1.7">
     <link rel="stylesheet" href="css/event/prereg/style1440.css?v1.7">
     <link rel="stylesheet" href="css/event/prereg/style820.css?v1.7">
-    <link rel="stylesheet" href="css/event/prereg/style425.css?v1.7">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v1.7">
+    <link rel="stylesheet" href="css/event/prereg/style425.css?v1.8">
     <link rel="stylesheet" href="css/event/prereg/style375.css?v1.7">
     <link rel="stylesheet" href="css/event/prereg/animate.css?v1.7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
