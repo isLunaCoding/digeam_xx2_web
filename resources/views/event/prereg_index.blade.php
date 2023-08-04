@@ -172,7 +172,7 @@
                         <div class="corner_RB"></div>
                     </div>
                     <div class="p3info">
-                        <p>累計拜訪30次可任選【仙道盟主沈仲陽】、【七花獸百花仙靈】、【愛之紅娘】其中一位作為結義名士</p>
+                        <p>累計拜訪30次可任選【仙道盟主沈仲陽】、【七花獸百花仙靈】、【愛之紅娘】其中一位作為結義名士。</p>
                         <div class="p3listbtns">名士一覽</div>
                     </div>
                     <div class="p3btns">
