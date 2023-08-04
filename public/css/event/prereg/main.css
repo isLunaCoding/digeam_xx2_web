@@ -2218,7 +2218,7 @@ body{
         &::after{
             position: absolute;
             content: '遊戲特色';
-            content: '熊貓賽跑';
+            /* content: '熊貓賽跑'; */
             width: fit-content;
             height: 10px;
         }
@@ -2227,12 +2227,12 @@ body{
         &::after{
             position: absolute;
             content: '職業介紹';
-            content: '遊戲特色';
+            /* content: '遊戲特色'; */
             width: fit-content;
             height: 10px;
         }
     }
-    .swiper-pagination-bullet:nth-last-child(2){
+    .swiper-pagination-bullet:nth-last-child(1){
         &::after{
             position: absolute;
             content: '活動規則';

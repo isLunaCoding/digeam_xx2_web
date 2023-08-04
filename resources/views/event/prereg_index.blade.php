@@ -262,7 +262,7 @@
             </div>
 
             <!-- 4熊貓賽跑 -->
-            <div class="swiper-slide page4">
+            {{-- <div class="swiper-slide page4">
                 <div class="bg4animate">
                     <div class="bamboo"></div>
                     <div class="cloud"></div>
@@ -302,7 +302,7 @@
                     </div>
                 </div>
                 <div class="cloudmask"></div>
-            </div>
+            </div> --}}
 
             <!-- 5遊戲特色 -->
             <div class="swiper-slide page5">
