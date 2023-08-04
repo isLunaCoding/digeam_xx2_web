@@ -28,14 +28,14 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="css/event/prereg/main.css?v2.02">
-    <link rel="stylesheet" href="css/event/prereg/style.css?v2.02">
-    <link rel="stylesheet" href="css/event/prereg/style1440.css?v2.02">
-    <link rel="stylesheet" href="css/event/prereg/style820.css?v2.02">
-    <link rel="stylesheet" href="css/event/prereg/style600.css?v2.02">
-    <link rel="stylesheet" href="css/event/prereg/style425.css?v2.02">
-    <link rel="stylesheet" href="css/event/prereg/style375.css?v2.02">
-    <link rel="stylesheet" href="css/event/prereg/animate.css?v2.02">
+    <link rel="stylesheet" href="css/event/prereg/main.css?v2.03">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v2.03">
+    <link rel="stylesheet" href="css/event/prereg/style1440.css?v2.03">
+    <link rel="stylesheet" href="css/event/prereg/style820.css?v2.03">
+    <link rel="stylesheet" href="css/event/prereg/style600.css?v2.03">
+    <link rel="stylesheet" href="css/event/prereg/style425.css?v2.03">
+    <link rel="stylesheet" href="css/event/prereg/style375.css?v2.03">
+    <link rel="stylesheet" href="css/event/prereg/animate.css?v2.03">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -71,12 +71,73 @@
 <body>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="wJwApEf5"></script>
     <!-- 側bar -->
-    <div class="menubar">
+    {{-- <div class="menubar">
         <div class="barLine"></div>
         <div class="bar ">
             <div class="swiper-pagination"></div>
         </div>
         <div class="menubtn"></div>
+    </div> --}}
+    <div class="menubar">
+
+
+
+        <div class="barLine"></div>
+
+
+
+        <div class="bar ">
+
+
+
+            <!-- <div class="swiper-pagination"></div> -->
+
+
+
+            <ul>
+
+
+
+                <li class="SUB SUB1"><a href="">首　　頁</a></li>
+
+
+
+                <li class="SUB SUB2"><a href="">初出江湖</a></li>
+
+
+
+                <li class="SUB SUB3"><a href="">結交名士</a></li>
+
+
+
+                <li class="SUB SUB4"><a href="">遊戲特色</a></li>
+
+
+
+                <li class="SUB SUB5"><a href="">職業介紹</a></li>
+
+
+
+                <li class="SUB SUB6"><a href="">活動規則</a></li>
+
+
+
+                <li class="SUB SUB7"><a href="">敬請期待</a></li>
+
+
+
+            </ul>
+
+
+
+        </div>
+
+
+
+        <div class="menubtn"></div>
+
+
+
     </div>
     <!-- 主內容Swiper -->
     <div class="swiper mainSwiper">
@@ -405,7 +466,13 @@
     <div class="p3missionpop">
         <div class="p3missionpopframe">
             <div class="p3XX"></div>
-            <div class="p3missionpoptitle"></div>
+            <div class="p3missionpoptitle"><br>
+                <div class = 'p3_desc'>
+                    完成下方任務後需重整頁面，<br>「拜訪名士」次數才可正確取得。
+                </div>
+
+            </div>
+
             <ul class="p3missionpopText">
                 <li>
                     <div class="missiontext">每日首次登入頁面</div>
@@ -658,10 +725,11 @@
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/event/prereg/main.js?v1.991" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v1.991" type="text/javascript"></script>
-    <script src="js/event/prereg/rain.js?v1.991" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v1.991" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v1.992" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v1.992" type="text/javascript"></script>
+    <script src="js/event/prereg/rain.js?v1.992" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v1.992" type="text/javascript"></script>
+    <script src="js/event/prereg/menu.js?v1.992" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){

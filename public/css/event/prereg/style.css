@@ -2352,7 +2352,7 @@ body {
 }
 .p3missionpop .p3missionpopframe .p3missionpopText {
   margin: auto;
-  margin-top: 18%;
+  margin-top: 20%;
   width: 70%;
   height: 73%;
   list-style: decimal;
@@ -3118,6 +3118,16 @@ body {
   background-size: contain;
   background-position: center;
   z-index: 1;
+}
+
+.charbox img {
+  width: 100%;
+}
+
+.p3_desc {
+  text-align: center;
+  top: 58%;
+  font-size: 14px;
 }
 
 @keyframes flybird1 {
@@ -5047,7 +5057,7 @@ body {
   }
   .p3missionpop .p3missionpopframe .p3missionpopText {
     margin: auto;
-    margin-top: 18%;
+    margin-top: 20%;
     width: 70%;
     height: 73%;
     list-style: decimal;
@@ -5927,6 +5937,13 @@ body {
     color: #91006a;
   }
 }
+.p3_desc {
+  text-align: center;
+  top: 58%;
+  font-size: 14px;
+  padding-right: 4%;
+}
+
 @media (max-width: 820px) {
   .swiper {
     width: 100vw;
@@ -11216,7 +11233,7 @@ body {
   }
   .p3missionpop .p3missionpopframe .p3missionpopText {
     margin: auto;
-    margin-top: 27%;
+    margin-top: 33%;
     width: 80%;
     height: 68%;
     list-style: decimal;
@@ -13934,7 +13951,7 @@ body {
   }
   .p3missionpop .p3missionpopframe .p3missionpopText {
     margin: auto;
-    margin-top: 27%;
+    margin-top: 35%;
     width: 80%;
     height: 68%;
     list-style: decimal;
@@ -14704,6 +14721,12 @@ body {
     overflow-y: scroll;
   }
 }
+.p3_desc {
+  text-align: center;
+  top: 58%;
+  font-size: 12px;
+}
+
 @media (max-width: 374px) {
   .swiper {
     width: 100vw;
@@ -16651,7 +16674,7 @@ body {
   }
   .p3missionpop .p3missionpopframe .p3missionpopText {
     margin: auto;
-    margin-top: 27%;
+    margin-top: 37%;
     width: 80%;
     height: 68%;
     list-style: decimal;
@@ -17355,4 +17378,112 @@ body {
     cursor: pointer;
     scale: 0.8;
   }
+}
+.menubar {
+  z-index: 100;
+}
+.menubar .menubtn {
+  position: fixed;
+  top: 60px;
+  left: 115px;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-image: linear-gradient(to bottom, #98a8cb, #424e7e);
+  cursor: pointer;
+}
+@media all and (max-width: 1440px) {
+  .menubar .menubtn {
+    left: 76px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .menubar .menubtn {
+    left: 76px;
+  }
+}
+.menubar .menubtn::before, .menubar .menubtn::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  translate: -50%;
+  width: 50%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+.menubar .menubtn::after {
+  top: 35%;
+}
+.menubar .menubtn::before {
+  top: 55%;
+}
+.menubar .menubtn1 {
+  top: 10%;
+  left: 5vw;
+  translate: -50%;
+}
+.menubar .menubtnOpen::after, .menubar .menubtnOpen::before {
+  width: 60%;
+  top: 45%;
+}
+.menubar .menubtnOpen::after {
+  rotate: 45deg;
+}
+.menubar .menubtnOpen::before {
+  rotate: -45deg;
+}
+.menubar .bar {
+  width: 15vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(179, 166, 211, 0.55), rgba(104, 145, 180, 0.55));
+}
+@media all and (max-width: 768px) {
+  .menubar .bar {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+.menubar .bar ul {
+  margin-top: 66%;
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  .menubar .bar ul {
+    margin-top: 26%;
+  }
+}
+.menubar .bar ul li {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 30px 0;
+  text-shadow: 0 0 10px #4b6898;
+}
+.menubar .bar ul li a {
+  color: #fff;
+}
+.menubar .bar ul li .active {
+  filter: drop-shadow(0 0 13px #4b6898);
+  color: #ffe49e;
+  cursor: pointer;
+}
+.menubar .bar ul li:hover {
+  filter: drop-shadow(0 0 13px #4b6898);
+  color: #ffe49e;
+  cursor: pointer;
+}
+.menubar .barLine {
+  position: absolute;
+  top: -100vh;
+  left: 15vw;
+  z-index: 10;
+  height: 100vh;
+  border-right-width: 2px;
+  border-right-color: #ffffff;
+  border-right-style: solid;
 }/*# sourceMappingURL=style.css.map */
