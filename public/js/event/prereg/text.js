@@ -59,7 +59,6 @@ function p2_success() {
     $(".popScheckBtn2").hide();
     $(".popScheckBtn").show().html("確認");
     $(".popScheckBtn3").hide();
-
 }
 //p2"初出江湖"預約失敗彈窗-未登入
 function p2_not_login() {
@@ -125,13 +124,9 @@ function p2_mobile_already_use() {
 // //p2"初出江湖"預約失敗彈窗-已完成
 function p2_already_pre() {
     $(".popStitle").html("您已經完成初出江湖！​");
-    $(".popSText")
-        .html(
-            "此帳號已經完成驗證了"
-        )
-        .css({
-            fontSize: "1.3rem",
-        });
+    $(".popSText").html("此帳號已經完成驗證了").css({
+        fontSize: "1.3rem",
+    });
     if (screen.width <= 425) {
         $(".popSText").css({
             fontSize: "1rem",
@@ -216,7 +211,7 @@ function p3noticeIn() {
         "6.本活動所提供之虛寶獎勵，皆為不可交易之性質，實際道具限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。",
         "7.若因觸犯遊戲規章遭受凍結處分、個人線路不穩、個人操作不慎等，導致斷線、連線失敗等問題影響活動參噢，活動將照常舉行，不另做補償。",
         "8.本公司有權檢視各參加者之活動參與行為及得獎情形是否涉嫌：人為操作、蓄意偽造、多開(重)帳號、短時間異常多筆參與行為、透過任何電腦程式參與活動、詐欺、任何違反會員系統服務合約及停權管理規章之情事者，或以任何其他不正常的方式意圖進行不實或虛偽活動參與行為，參加者因上述情形所獲得之活動資格及獎項，本公司得一概取消之。",
-        "9.本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。"
+        "9.本活動各項辦法及規定，以活動網站公告及本公司官方最新說明為準。掘夢網股份有限公司擁有活動最終保留、變更、修正或撤回、取消獎項發送之權利，若因不可抗力之因素，本活動將有權隨時補充或修正，並以最新公告為主。",
     ];
 
     var p3noticestr = "";
@@ -533,64 +528,64 @@ $(".samplerules").html(p3samplerulesstr);
 
 function p3listIn() {
     var p3listarray = {
-                name: ["七花獸百花仙靈", "仙道盟主沈仲陽", "愛之紅娘"],
-                value: [
-                    "體質<span>+245</span>",
-                    "精神<span>+245</span>",
-                    "耐力<span>+245</span>",
-                    "罡氣<span>+4480</span>",
-                    "物理防禦<span>+204</span>",
-                    "法術防禦<span>+204</span>",
-                    "生命值<span>+10181</span>",
-                    "",
-                    "力量<span>+204</span>",
-                    "智力<span>+204</span>",
-                    "攻擊力<span>+285</span>",
-                    "罡氣攻擊<span>+244</span>",
-                    "物理攻擊<span>+244</span>",
-                    "法術攻擊<span>+244</span>",
-                    "",
-                    "",
-                    "體質<span>+245</span>",
-                    "精神<span>+245</span>",
-                    "耐力<span>+245</span>",
-                    "罡氣<span>+4480</span>",
-                    "物理防禦<span>+204</span>",
-                    "法術防禦<span>+204</span>",
-                    "生命值<span>+10181</span>",
-                    "",
-                ],
-                skill: [
-                    "煉獄火海",
-                    "兩儀反轉",
-                    "快跑女孩",
-                    "對前方區域造成傷害，該區域中會出現火海持續燃燒10秒。",
-                    "使用兩儀反轉後，所有受到的傷害將轉變為恢復生命，持續20秒。",
-                    "將目標變為毫無還手之力的小女孩。",
-                ],
-                others: [
-                    "仙道盟掌刑長老",
-                    "仙道盟執法長老",
-                    "仙道盟訓誡長老",
-                    "仙道盟傳功長老",
-                    "天魔計都",
-                    "天魔影煞",
-                    "齊天大聖",
-                    "吞靈獸",
-                    "愛之月老",
-                    "不死冰骷髏",
-                    "不死霜骷髏",
-                    "開明獸",
-                    "冰麒麟",
-                    "寒冰巨甲",
-                    "愛之禮官",
-                    "愛之花童",
-                    "愛之隨從",
-                    "",
-                ],
-            };
+        name: ["七花獸百花仙靈", "仙道盟主沈仲陽", "愛之紅娘"],
+        value: [
+            "體質<span>+245</span>",
+            "精神<span>+245</span>",
+            "耐力<span>+245</span>",
+            "罡氣<span>+4480</span>",
+            "物理防禦<span>+204</span>",
+            "法術防禦<span>+204</span>",
+            "生命值<span>+10181</span>",
+            "",
+            "力量<span>+204</span>",
+            "智力<span>+204</span>",
+            "攻擊力<span>+285</span>",
+            "罡氣攻擊<span>+244</span>",
+            "物理攻擊<span>+244</span>",
+            "法術攻擊<span>+244</span>",
+            "",
+            "",
+            "體質<span>+245</span>",
+            "精神<span>+245</span>",
+            "耐力<span>+245</span>",
+            "罡氣<span>+4480</span>",
+            "物理防禦<span>+204</span>",
+            "法術防禦<span>+204</span>",
+            "生命值<span>+10181</span>",
+            "",
+        ],
+        skill: [
+            "煉獄火海",
+            "兩儀反轉",
+            "快跑女孩",
+            "對前方區域造成傷害，該區域中會出現火海持續燃燒10秒。",
+            "使用兩儀反轉後，所有受到的傷害將轉變為恢復生命，持續20秒。",
+            "將目標變為毫無還手之力的小女孩。",
+        ],
+        others: [
+            "仙道盟掌刑長老",
+            "仙道盟執法長老",
+            "仙道盟訓誡長老",
+            "仙道盟傳功長老",
+            "天魔計都",
+            "天魔影煞",
+            "齊天大聖",
+            "吞靈獸",
+            "愛之月老",
+            "不死冰骷髏",
+            "不死霜骷髏",
+            "開明獸",
+            "冰麒麟",
+            "寒冰巨甲",
+            "愛之禮官",
+            "愛之花童",
+            "愛之隨從",
+            "",
+        ],
+    };
 
-                var p3liststr = "";
+    var p3liststr = "";
 
     for (j = 0; j < 18; j += 3) {
         p3liststr +=
@@ -605,33 +600,27 @@ function p3listIn() {
     $(".pop").fadeIn(200);
     $(".poptitle").html("名士一覽");
     $(".popTable")
+        .show()
 
-    .show()
-
-    .html(
-
-        `<div class="charbox">
+        .html(
+            `<div class="charbox">
 
         <img src="/img/event/prereg/p3/cardList.png">
 
-        </div>`+
-
-        `
+        </div>` +
+                `
 
     <table class="othertable"><tr><td colspan=3 style="font-weight: bold;background-color: #627eac;color: #FFF;">一般名士</td></tr>` +
-
-        p3liststr +
-
-        `</table><br/>`
-
-    );
-
+                p3liststr +
+                `</table><br/>`
+        );
 
     $(".popText").hide();
 }
 
 //p3"結交名士"結果資訊
 function p3cardinfo(color, num) {
+
     var p3cardinfoarray = {
         Ocard1: [
             "七花獸百花仙靈",
@@ -894,8 +883,8 @@ function p3cardinfo(color, num) {
             "將目標變為毫無還手之力的小女孩。",
         ],
     };
-
     var p3cardinfostr = "";
+
     if (color == "orange") {
         if (num == 1) {
             $(".result_new").html(
@@ -3489,10 +3478,8 @@ function p3cardinfo(color, num) {
     }
 
     $(".samplerules").hide();
-    $(".cardinfo").show();
     $(".keepnow").on("click", function () {
         $(".p3resultpop").fadeOut(200);
-
     });
 }
 
@@ -3573,19 +3560,19 @@ function p3_success() {
 }
 
 //p3"結交名士"開啟自選名士
-function p3_choose_open(){
-    $('.fire').show()
-    $('.lanternbox').css({
-        cursor: 'pointer'
-    })
+function p3_choose_open() {
+    $(".fire").show();
+    $(".lanternbox").css({
+        cursor: "pointer",
+    });
 }
 
 //p3"結交名士"關閉自選名士
-function p3_choose_close(){
-    $('.fire').hide()
-    $('.lanternbox').css({
-        cursor: 'auto'
-    })
+function p3_choose_close() {
+    $(".fire").hide();
+    $(".lanternbox").css({
+        cursor: "auto",
+    });
 }
 function p3choose() {
     $(".p3choosepop").fadeIn(200);
@@ -3625,13 +3612,9 @@ function p3choose() {
 }
 function p3_replace() {
     $(".popStitle").html("是否要選擇這位名士取代原先保留的名士?");
-    $(".popSText")
-        .html(
-            "​"
-        )
-        .css({
-            fontSize: "1.3rem",
-        });
+    $(".popSText").html("​").css({
+        fontSize: "1.3rem",
+    });
     if (screen.width <= 425) {
         $(".popSText").css({
             fontSize: "1rem",
@@ -3680,10 +3663,10 @@ function p3missionIn() {
 }
 
 //若任務完成時
-function mission_success(){
-    $('.missionbtn').css({
-        background: 'url(/img/event/prereg/p3/seal.png) no-repeat center',
-        backgroundPosition: 'center'
+function mission_success() {
+    $(".missionbtn").css({
+        background: "url(/img/event/prereg/p3/seal.png) no-repeat center",
+        backgroundPosition: "center",
     });
 }
 
@@ -3847,11 +3830,9 @@ function p4awardIn() {
     $(".popText").hide();
 }
 
-
-
 //p4"熊貓賽跑"獲勝彈窗-熊貓船長
 function p4_panda1_win() {
-    $('.popS').fadeIn(200);
+    $(".popS").fadeIn(200);
     $(".popStitle").html("");
     $(".popSText").html("本次獲勝的是熊貓船長").css({
         fontSize: "1.8rem",
@@ -3875,7 +3856,7 @@ function p4_panda1_win() {
 }
 //p4"熊貓賽跑"獲勝彈窗-熊貓酒仙
 function p4_panda2_win() {
-    $('.popS').fadeIn(200);
+    $(".popS").fadeIn(200);
     $(".popStitle").html("");
     $(".popSText").html("本次獲勝的是熊貓酒仙").css({
         fontSize: "1.8rem",
@@ -3899,7 +3880,7 @@ function p4_panda2_win() {
 }
 //p4"熊貓賽跑"獲勝彈窗-熊貓少林
 function p4_panda3_win() {
-    $('.popS').fadeIn(200);
+    $(".popS").fadeIn(200);
     $(".popStitle").html("");
     $(".popSText").html("本次獲勝的是熊貓少林").css({
         fontSize: "1.8rem",

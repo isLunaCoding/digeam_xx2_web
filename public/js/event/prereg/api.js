@@ -201,10 +201,12 @@ $(".check_p3").on("click", function () {
             }
         );
     }
-});
+}
+);
 
 // 名士選擇
 $(".choosenew").on("click", function () {
+    $(".cardinfo").show();
     p3_replace();
     $(".popS").fadeIn(200);
 });
@@ -278,6 +280,7 @@ $(".missionbtn").on("click", function () {
                     });
                     p3_success();
                     $(".popS").fadeIn(200);
+                    login();
                 }
             }
         );
