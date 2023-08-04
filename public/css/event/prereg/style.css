@@ -361,7 +361,6 @@ body {
   pointer-events: none;
   transition: 1s;
   transition-delay: 0.2s;
-  opacity: 1;
   scale: 1;
 }
 .swiper .page1 {
@@ -689,7 +688,6 @@ body {
   width: 100vw;
   height: 100vh;
   opacity: 0.7;
-  background: url(/img/event/prereg/p3/bg_cloud1.png) no-repeat;
   background-position: bottom right;
   background-size: contain;
   animation: p6cloud1 10s infinite alternate ease-in;
@@ -701,7 +699,6 @@ body {
   width: 100vw;
   height: 100vh;
   opacity: 0.8;
-  background: url(/img/event/prereg/p3/bg_cloud2.png) no-repeat;
   background-position: bottom left;
   background-size: contain;
   animation: p6cloud2 12s infinite alternate ease-in;
@@ -712,7 +709,6 @@ body {
   left: 16vw;
   width: 30vw;
   height: 10vw;
-  background: url(/img/event/prereg/p3/title.png) no-repeat;
   background-size: contain;
   background-position: center;
 }
@@ -1936,7 +1932,6 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: url(/img/event/prereg/p6/bg_cloud1.png) no-repeat;
   background-position: bottom right;
   background-size: contain;
   animation: p6cloud1 10s infinite alternate ease-in;
@@ -1947,7 +1942,6 @@ body {
   left: -50%;
   width: 100vw;
   height: 100vh;
-  background: url(/img/event/prereg/p6/bg_cloud2.png) no-repeat;
   background-position: bottom left;
   background-size: contain;
   animation: p6cloud2 12s infinite alternate ease-in;
@@ -3515,7 +3509,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.7;
-    background: url(/img/event/prereg/p3/bg_cloud1.png) no-repeat;
     background-position: bottom right;
     background-size: contain;
     animation: p6cloud1 10s infinite alternate ease-in;
@@ -3527,7 +3520,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.8;
-    background: url(/img/event/prereg/p3/bg_cloud2.png) no-repeat;
     background-position: bottom left;
     background-size: contain;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -3721,7 +3713,6 @@ body {
     height: 595.65px;
     transform-origin: 129.6px 0px;
     rotate: 0deg;
-    opacity: 0;
     z-index: 1;
   }
   .swiper .page3 .p3main .lanternbox .lantern_light {
@@ -4709,7 +4700,6 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: url(/img/event/prereg/p6/bg_cloud1.png) no-repeat;
     background-position: bottom right;
     background-size: contain;
     animation: p6cloud1 10s infinite alternate ease-in;
@@ -4720,7 +4710,6 @@ body {
     left: -50%;
     width: 100vw;
     height: 100vh;
-    background: url(/img/event/prereg/p6/bg_cloud2.png) no-repeat;
     background-position: bottom left;
     background-size: contain;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -6272,7 +6261,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.7;
-    background: url(/img/event/prereg/p3/bg_cloud1.png) no-repeat;
     background-position: bottom right;
     background-size: contain;
     animation: p6cloud1 10s infinite alternate ease-in;
@@ -6284,7 +6272,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.8;
-    background: url(/img/event/prereg/p3/bg_cloud2.png) no-repeat;
     background-position: bottom left;
     background-size: contain;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -6480,7 +6467,6 @@ body {
     height: 501.6px;
     transform-origin: 115.2px 0px;
     rotate: 0deg;
-    opacity: 0;
     z-index: 1;
   }
   .swiper .page3 .p3main .lanternbox .lantern_light {
@@ -7514,7 +7500,6 @@ body {
     width: 200vw;
     height: 100vh;
     left: -100%;
-    background: url(/img/event/prereg/p6/bg_cloud1.png) no-repeat;
     background-size: cover;
     animation: p6cloud1 10s infinite alternate ease-in;
   }
@@ -7524,7 +7509,6 @@ body {
     left: -50%;
     width: 200vw;
     height: 100vh;
-    background: url(/img/event/prereg/p6/bg_cloud2.png) no-repeat;
     background-position: left;
     background-size: cover;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -8572,7 +8556,6 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: url(/img/event/prereg/cloudmask.png) no-repeat;
     background-size: cover;
     background-position: center;
     pointer-events: none;
@@ -9158,7 +9141,6 @@ body {
     width: 200vw;
     height: 100vh;
     left: -100%;
-    background: url(/img/event/prereg/p6/bg_cloud1.png) no-repeat;
     background-size: cover;
     animation: p6cloud1 10s infinite alternate ease-in;
   }
@@ -9168,7 +9150,6 @@ body {
     left: -50%;
     width: 200vw;
     height: 100vh;
-    background: url(/img/event/prereg/p6/bg_cloud2.png) no-repeat;
     background-position: left;
     background-size: cover;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -9624,7 +9605,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.7;
-    background: url(/img/event/prereg/p3/bg_cloud1.png) no-repeat;
     background-position: bottom right;
     background-size: contain;
     animation: p6cloud1 10s infinite alternate ease-in;
@@ -9636,7 +9616,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.8;
-    background: url(/img/event/prereg/p3/bg_cloud2.png) no-repeat;
     background-position: bottom left;
     background-size: contain;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -10872,7 +10851,6 @@ body {
     width: 200vw;
     height: 100vh;
     left: -100%;
-    background: url(/img/event/prereg/p6/bg_cloud1.png) no-repeat;
     background-size: cover;
     animation: p6cloud1 10s infinite alternate ease-in;
   }
@@ -10882,7 +10860,6 @@ body {
     left: -50%;
     width: 200vw;
     height: 100vh;
-    background: url(/img/event/prereg/p6/bg_cloud2.png) no-repeat;
     background-position: left;
     background-size: cover;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -12345,7 +12322,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.7;
-    background: url(/img/event/prereg/p3/bg_cloud1.png) no-repeat;
     background-position: bottom right;
     background-size: contain;
     animation: p6cloud1 10s infinite alternate ease-in;
@@ -12357,7 +12333,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.8;
-    background: url(/img/event/prereg/p3/bg_cloud2.png) no-repeat;
     background-position: bottom left;
     background-size: contain;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -12557,7 +12532,6 @@ body {
     height: 313.5px;
     transform-origin: 72px 0px;
     rotate: 0deg;
-    opacity: 0;
     z-index: 1;
   }
   .swiper .page3 .p3main .lanternbox .lantern_light {
@@ -13594,7 +13568,6 @@ body {
     width: 200vw;
     height: 100vh;
     left: -100%;
-    background: url(/img/event/prereg/p6/bg_cloud1.png) no-repeat;
     background-size: cover;
     animation: p6cloud1 10s infinite alternate ease-in;
   }
@@ -13604,7 +13577,6 @@ body {
     left: -50%;
     width: 200vw;
     height: 100vh;
-    background: url(/img/event/prereg/p6/bg_cloud2.png) no-repeat;
     background-position: left;
     background-size: cover;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -15070,7 +15042,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.7;
-    background: url(/img/event/prereg/p3/bg_cloud1.png) no-repeat;
     background-position: bottom right;
     background-size: contain;
     animation: p6cloud1 10s infinite alternate ease-in;
@@ -15082,7 +15053,6 @@ body {
     width: 100vw;
     height: 100vh;
     opacity: 0.8;
-    background: url(/img/event/prereg/p3/bg_cloud2.png) no-repeat;
     background-position: bottom left;
     background-size: contain;
     animation: p6cloud2 12s infinite alternate ease-in;
@@ -15282,7 +15252,6 @@ body {
     height: 313.5px;
     transform-origin: 72px 0px;
     rotate: 0deg;
-    opacity: 0;
     z-index: 1;
   }
   .swiper .page3 .p3main .lanternbox .lantern_light {
@@ -16319,7 +16288,6 @@ body {
     width: 200vw;
     height: 100vh;
     left: -100%;
-    background: url(/img/event/prereg/p6/bg_cloud1.png) no-repeat;
     background-size: cover;
     animation: p6cloud1 10s infinite alternate ease-in;
   }
@@ -16329,7 +16297,6 @@ body {
     left: -50%;
     width: 200vw;
     height: 100vh;
-    background: url(/img/event/prereg/p6/bg_cloud2.png) no-repeat;
     background-position: left;
     background-size: cover;
     animation: p6cloud2 12s infinite alternate ease-in;
