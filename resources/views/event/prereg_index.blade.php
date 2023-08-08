@@ -29,7 +29,7 @@
 
 
     {{-- <link rel="stylesheet" href="css/event/prereg/main.css?v2.04"> --}}
-    <link rel="stylesheet" href="css/event/prereg/style.css?v2.07">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v2.26">
     {{-- <link rel="stylesheet" href="css/event/prereg/style1440.css?v2.04">
     <link rel="stylesheet" href="css/event/prereg/style820.css?v2.04">
     <link rel="stylesheet" href="css/event/prereg/style600.css?v2.04">
@@ -39,6 +39,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PB8RXNM');</script>
+<!-- End Google Tag Manager -->
+
     <!-- Meta Pixel Code -->
 <script>
     !function(f,b,e,v,n,t,s)
@@ -67,8 +76,12 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
-<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-9X24KQ6L74"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-9X24KQ6L74'); </script>
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLY7B58FCM"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FLY7B58FCM'); </script>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB8RXNM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="wJwApEf5"></script>
     <!-- 側bar -->
     {{-- <div class="menubar">
@@ -171,7 +184,7 @@
                                         <option value="+853">澳門+853</option>
                                     </select>
                                     <input type="text" name="phone_num" class='mobile'
-                                        placeholder="請輸入電話號碼(不含符號)">
+                                        placeholder="請輸入電話號碼">
                                 </div>
 
                                 <p><input type="checkbox" id="checkbox" name="noticecheck">
@@ -698,10 +711,10 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     {{-- <script src="js/event/prereg/rain.js?v1.994" type="text/javascript"></script> --}}
-    <script src="js/event/prereg/main.js?v2.04" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v2.04" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v2.04" type="text/javascript"></script>
-    <script src="js/event/prereg/menu.js?v2.04" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v2.14" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v2.14" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v2.15" type="text/javascript"></script>
+    <script src="js/event/prereg/menu.js?v2.14" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){

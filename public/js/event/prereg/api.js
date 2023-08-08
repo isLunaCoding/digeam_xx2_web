@@ -23,6 +23,9 @@ function login() {
         function (res) {
             if (res.status == -99) {
                 console.log("未登入");
+                $(".visit_frequency").html(0);
+
+                $(".distance_30").html(0);
             } else {
                 if (res.user_mobile != "" && res.user_mobile != null) {
                     _pre = true;
@@ -49,25 +52,22 @@ function login() {
 
                 if (res.daily_login != null) {
                     $(".daily_login").css({
-                        background:
-                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        backgroundPosition: "center",
+                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        "background-size": "contain"
                     });
                 }
 
                 if (res.daily_FB != null) {
                     $(".daily_FB").css({
-                        background:
-                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        backgroundPosition: "center",
+                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        "background-size": "contain"
                     });
                 }
 
                 if (res.fb_fans_click != null) {
                     $(".fb_fans_click").css({
-                        background:
-                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        backgroundPosition: "center",
+                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        "background-size": "contain"
                     });
                 }
             }
@@ -116,6 +116,7 @@ $(".check_p2").on("click", function () {
                 } else {
                     p2_success();
                     $(".popS").fadeIn(200);
+                    fbq('track', 'AddToWishlist');
                 }
             }
         );
@@ -243,7 +244,7 @@ $(".choosenew").on("click", function () {
                 function (res) {
                     if (res.status == 1) {
                         $(".p3resultpop").fadeOut(200);
-                        login();
+                        location.reload();
                     }
                 }
             );
@@ -273,9 +274,8 @@ $(".missionbtn").on("click", function () {
                 } else {
                     let _finish = document.getElementsByClassName(_type);
                     $(_finish).css({
-                        background:
-                            "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        backgroundPosition: "center",
+                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
+                        "background-size": "contain"
                     });
                     p3_success();
                     $(".popS").fadeIn(200);
@@ -347,7 +347,7 @@ $(".p3choosebtn").on("click", function () {
     $(".popScheckBtn4").show();
     $(".popS").fadeIn(200);
 
-    var _30_send = true;
+    _30_send = true;
     $(".yes_30").on("click", function () {
         let _choose = $(".choose").attr("data-val");
         let _color = $(".choose").attr("data-color");
@@ -366,7 +366,6 @@ $(".p3choosebtn").on("click", function () {
                     },
                     function (res) {
                         if (res.status == 1) {
-                            login();
                             location.reload();
                         } else {
                             p3_error_not_enough();

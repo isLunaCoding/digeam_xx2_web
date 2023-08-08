@@ -22,8 +22,10 @@ class PreregUserController extends AdminController
 
     protected function grid()
     {
+        $array = ['k5832241','sex687459','ffdigeam10','jason860121','digeamkotw24','digeamdpotw08','jacky0996','raeyang02','digeamdpotw07','digeamktotw24','digeamsrotw07','hauyi1984 ','hauyi1234 ','hauyi5555','mo0408rris','xx2digeam09','xx2digeam10','xx2digeam11','xx2digeam12','xx2digeam13','vicky811104','cogi1230','sean123362000','ken9957ken','digeamdpotw06','ffdigeam01','ffdigeam02','ffdigeam03','ffdigeam04','ffdigeam05','zhenhuile0802','jefferykuo0906','digeamsrotw03','digeamsrotw04','digeamsrotw05','digeamsrotw06','digeamsrotw07','beebee14','ghostsoul2','ghostsoul3','ghostsoul4','misty0521','misty05211'];
+        
         $grid = new Grid(new PreregUser());
-        $grid->model()->orderBy('created_at','desc');
+        $grid->model()->whereNotIn('user_id',$array)->where('user_mobile','!=','')->orderBy('created_at','desc');
         $grid->column('user_id', __('帳號'));
         $grid->column('user_mobile', __('預約電話'));
         $grid->column('pre_time', __('預約時間'));

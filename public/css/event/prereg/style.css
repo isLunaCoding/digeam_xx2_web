@@ -921,7 +921,7 @@ body {
 }
 .swiper .page3 .p3main .lanternbox p {
   position: absolute;
-  top: 46%;
+  top: 50%;
   left: 50%;
   translate: -50%;
   color: #a38a46;
@@ -7407,7 +7407,7 @@ body {
     top: 100vh;
     left: 0vw;
     width: 100vw;
-    height: 20vw;
+    height: 25vw;
     translate: 0 -100%;
     background: none;
     background-size: contain;
@@ -9048,7 +9048,7 @@ body {
     top: 100vh;
     left: 0vw;
     width: 100vw;
-    height: 20vw;
+    height: 25vw;
     translate: 0 -100%;
     background: none;
     background-size: contain;
@@ -9715,7 +9715,7 @@ body {
     z-index: 1;
   }
   .swiper .page3 .p3main .p3info p {
-    font-size: 5px;
+    font-size: 10px;
     font-weight: bold;
     color: #21345d;
   }
@@ -9863,7 +9863,7 @@ body {
   }
   .swiper .page3 .p3main .lanternbox p {
     position: absolute;
-    top: 46%;
+    top: 49%;
     left: 50%;
     translate: -50%;
     color: #a38a46;
@@ -10037,7 +10037,7 @@ body {
     position: absolute;
     width: 200%;
     text-align: center;
-    top: 61%;
+    top: 95%;
     left: 50%;
     translate: -50%;
     color: #000;
@@ -10759,7 +10759,7 @@ body {
     top: 107vh;
     left: 0vw;
     width: 100vw;
-    height: 20vw;
+    height: 25vw;
     translate: 0 -120%;
     background: none;
     background-size: contain;
@@ -11234,7 +11234,7 @@ body {
   }
   .p3missionpop .p3missionpopframe .p3missionpopText {
     margin: auto;
-    margin-top: 33%;
+    margin-top: 36%;
     width: 80%;
     height: 68%;
     list-style: decimal;
@@ -11263,7 +11263,7 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
     width: 30%;
     height: 100%;
-    font-size: 0.1rem;
+    font-size: 0.5rem;
     text-align: end;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn {
@@ -11893,6 +11893,7 @@ body {
     width: 80%;
     color: #e4efff;
     text-align: center;
+    padding: 0 20px;
   }
   .popS .popSframe .popStitle::before, .popS .popSframe .popStitle::after {
     position: absolute;
@@ -12434,7 +12435,7 @@ body {
     z-index: 1;
   }
   .swiper .page3 .p3main .p3info p {
-    font-size: 5px;
+    font-size: 10px;
     font-weight: bold;
     color: #21345d;
   }
@@ -12582,7 +12583,7 @@ body {
   }
   .swiper .page3 .p3main .lanternbox p {
     position: absolute;
-    top: 46%;
+    top: 49%;
     left: 50%;
     translate: -50%;
     color: #a38a46;
@@ -12593,7 +12594,7 @@ body {
   .swiper .page3 .p3main .p3text {
     position: absolute;
     top: 72%;
-    right: 40%;
+    right: 49%;
     translate: 50% -50%;
     width: 75%;
     height: 45%;
@@ -12603,7 +12604,7 @@ body {
     top: 34%;
     left: 0%;
     translate: 0 -50%;
-    width: 85%;
+    width: 95%;
     height: auto;
   }
   .swiper .page3 .p3main .p3text .samplerules li {
@@ -12756,7 +12757,7 @@ body {
     position: absolute;
     width: 200%;
     text-align: center;
-    top: 61%;
+    top: 95%;
     left: 50%;
     translate: -50%;
     color: #000;
@@ -13478,7 +13479,7 @@ body {
     top: 100vh;
     left: 0vw;
     width: 100vw;
-    height: 20vw;
+    height: 25vw;
     translate: 0 -120%;
     background: none;
     background-size: contain;
@@ -13953,7 +13954,7 @@ body {
   }
   .p3missionpop .p3missionpopframe .p3missionpopText {
     margin: auto;
-    margin-top: 35%;
+    margin-top: 36%;
     width: 80%;
     height: 68%;
     list-style: decimal;
@@ -13972,7 +13973,7 @@ body {
     display: flex;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
-    width: 55%;
+    width: 60%;
     height: 100%;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
@@ -13980,9 +13981,9 @@ body {
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
-    width: 30%;
+    width: 25%;
     height: 100%;
-    font-size: 0.1rem;
+    font-size: 0.5rem;
     text-align: end;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn {
@@ -14059,7 +14060,7 @@ body {
   .p3resultpop .p3resultpopframe .p3resultpoptitle::before, .p3resultpop .p3resultpopframe .p3resultpoptitle::after {
     position: absolute;
     content: "";
-    top: 6%;
+    top: 3%;
     width: 28px;
     height: 100%;
     background: url(/img/event/prereg/pop_l/popLtitle_icon.png) no-repeat;
@@ -14074,7 +14075,7 @@ body {
   }
   .p3resultpop .p3resultpopframe .p3subtitle {
     position: relative;
-    margin: -10px auto;
+    margin: -17px auto;
     width: 165px;
     height: 37px;
     background: url(/img/event/prereg/p3/subtitleBG.png) no-repeat;
@@ -14191,10 +14192,12 @@ body {
   .p3resultpop .p3resultpopframe .p3resultbtns .choosenew {
     width: 40%;
     height: 35px;
+    font-size: 13px;
   }
   .p3resultpop .p3resultpopframe .p3resultbtns .keepnow {
     width: 30%;
     height: 35px;
+    font-size: 13px;
   }
   /*結交名士自選彈窗*/
   .p3choosepop {
@@ -14612,6 +14615,7 @@ body {
     width: 80%;
     color: #e4efff;
     text-align: center;
+    padding: 0 20px;
   }
   .popS .popSframe .popStitle::before, .popS .popSframe .popStitle::after {
     position: absolute;
@@ -15160,7 +15164,7 @@ body {
     z-index: 1;
   }
   .swiper .page3 .p3main .p3info p {
-    font-size: 5px;
+    font-size: 10px;
     font-weight: bold;
     color: #21345d;
   }
@@ -15308,7 +15312,7 @@ body {
   }
   .swiper .page3 .p3main .lanternbox p {
     position: absolute;
-    top: 46%;
+    top: 49%;
     left: 50%;
     translate: -50%;
     color: #a38a46;
@@ -15329,7 +15333,7 @@ body {
     top: 41%;
     left: 15%;
     translate: 0 -50%;
-    width: 85%;
+    width: 95%;
     height: auto;
   }
   .swiper .page3 .p3main .p3text .samplerules li {
@@ -16695,7 +16699,7 @@ body {
     display: flex;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
-    width: 55%;
+    width: 60%;
     height: 100%;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
@@ -16703,9 +16707,9 @@ body {
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
-    width: 30%;
+    width: 25%;
     height: 100%;
-    font-size: 0.1rem;
+    font-size: 0.5rem;
     text-align: end;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn {
@@ -16772,7 +16776,7 @@ body {
   }
   .p3resultpop .p3resultpopframe .p3resultpoptitle {
     position: absolute;
-    top: 6%;
+    top: 3%;
     left: 50%;
     translate: -50%;
     font-size: 1.8rem;
@@ -16797,7 +16801,7 @@ body {
   }
   .p3resultpop .p3resultpopframe .p3subtitle {
     position: relative;
-    margin: -10px auto;
+    margin: -17px auto;
     width: 165px;
     height: 37px;
     background: url(/img/event/prereg/p3/subtitleBG.png) no-repeat;
@@ -16813,7 +16817,7 @@ body {
   }
   .p3resultpop .p3resultpopframe .result_new {
     position: relative;
-    margin-top: 17%;
+    margin-top: 15%;
     left: 50%;
     translate: -50%;
     width: 148px;
@@ -16914,10 +16918,12 @@ body {
   .p3resultpop .p3resultpopframe .p3resultbtns .choosenew {
     width: 40%;
     height: 35px;
+    font-size: 13px;
   }
   .p3resultpop .p3resultpopframe .p3resultbtns .keepnow {
     width: 30%;
     height: 35px;
+    font-size: 13px;
   }
   /*結交名士自選彈窗*/
   .p3choosepop {
@@ -17335,6 +17341,7 @@ body {
     width: 80%;
     color: #e4efff;
     text-align: center;
+    padding: 0 20px;
   }
   .popS .popSframe .popStitle::before, .popS .popSframe .popStitle::after {
     position: absolute;
@@ -17405,6 +17412,43 @@ body {
     left: 76px;
   }
 }
+@media all and (max-width: 600px) {
+  .menubar .menubtn {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media all and (max-width: 425px) {
+  .menubar .menubtn {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media all and (max-width: 375px) {
+  .menubar .menubtn {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media all and (max-width: 600px) {
+  .popS .popSframe .popScheckBtn2 .yes, .popS .popSframe .popScheckBtn2 .no, .popS .popSframe .popScheckBtn2 .new_yes, .popS .popSframe .popScheckBtn2 .yes_30, .popS .popSframe .popScheckBtn3 .yes, .popS .popSframe .popScheckBtn3 .no, .popS .popSframe .popScheckBtn3 .new_yes, .popS .popSframe .popScheckBtn3 .yes_30, .popS .popSframe .popScheckBtn4 .yes, .popS .popSframe .popScheckBtn4 .no, .popS .popSframe .popScheckBtn4 .new_yes, .popS .popSframe .popScheckBtn4 .yes_30 {
+    width: 80px;
+  }
+}
+@media all and (max-width: 425px) {
+  .popS .popSframe .popScheckBtn2 .yes, .popS .popSframe .popScheckBtn2 .no, .popS .popSframe .popScheckBtn2 .new_yes, .popS .popSframe .popScheckBtn2 .yes_30, .popS .popSframe .popScheckBtn3 .yes, .popS .popSframe .popScheckBtn3 .no, .popS .popSframe .popScheckBtn3 .new_yes, .popS .popSframe .popScheckBtn3 .yes_30, .popS .popSframe .popScheckBtn4 .yes, .popS .popSframe .popScheckBtn4 .no, .popS .popSframe .popScheckBtn4 .new_yes, .popS .popSframe .popScheckBtn4 .yes_30 {
+    width: 80px;
+  }
+}
+@media all and (max-width: 375px) {
+  .popS .popSframe .popScheckBtn2 .yes, .popS .popSframe .popScheckBtn2 .no, .popS .popSframe .popScheckBtn2 .new_yes, .popS .popSframe .popScheckBtn2 .yes_30, .popS .popSframe .popScheckBtn3 .yes, .popS .popSframe .popScheckBtn3 .no, .popS .popSframe .popScheckBtn3 .new_yes, .popS .popSframe .popScheckBtn3 .yes_30, .popS .popSframe .popScheckBtn4 .yes, .popS .popSframe .popScheckBtn4 .no, .popS .popSframe .popScheckBtn4 .new_yes, .popS .popSframe .popScheckBtn4 .yes_30 {
+    width: 80px;
+  }
+}
+
 .menubar .menubtn::before, .menubar .menubtn::after {
   position: absolute;
   content: "";
@@ -17489,3 +17533,4 @@ body {
   border-right-color: #ffffff;
   border-right-style: solid;
 }/*# sourceMappingURL=style.css.map */
+

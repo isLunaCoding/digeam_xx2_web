@@ -3665,8 +3665,8 @@ function p3missionIn() {
 //若任務完成時
 function mission_success() {
     $(".missionbtn").css({
-        background: "url(/img/event/prereg/p3/seal.png) no-repeat center",
-        backgroundPosition: "center",
+        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
+        "background-size": "contain"
     });
 }
 
@@ -3970,7 +3970,7 @@ var p6textarray = {
         "神脈正統，天器傳人，善借五行之力，幻化出無形劍式，配合靈動的身法，給予敵人致命打擊。",
         "嫉惡如仇，心存大是非。視軍令如山，在戰場上抵禦千軍，斬妖除魔。配合無所畏懼的決心，對敵人造成心靈與肉體的雙重傷害。",
         "悲天憫人者，以普渡蒼生為己念。善使琴音震撼軍心，精用仙法救死扶傷。通過各種輔助能力，助戰友立於不敗之地。",
-        "善觀星卜卦，奇門遁甲。常肩負長弓行走世間，以三尺玄羽懲惡揚善。在戰場上無論是拒敵還是追殺，都有著絕對的掌控權。",
+        "常肩負長弓行走世間，以三尺玄羽懲惡揚善。在戰場上無論是拒敵還是追殺，都有著絕對的掌控權。",
         "天生具有皇者霸氣，是與生俱來的強者。每次逢敵都是以命養戰，鬼神見之都要避讓。一旦開戰，必定至死方休。",
     ],
     text2: [
