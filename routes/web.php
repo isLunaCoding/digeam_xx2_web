@@ -22,3 +22,7 @@ Route::middleware(['setReturnUrl'])->group(function () {
         return view('event/prereg_index');
     });
 });
+
+//後台圖片上傳
+Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
+Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
