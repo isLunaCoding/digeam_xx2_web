@@ -19,8 +19,7 @@ class CreateCategory extends Migration
             $table->string('open');
             $table->string('type');
             $table->integer('sort');
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamps();
         });
     }
 
