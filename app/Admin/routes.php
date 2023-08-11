@@ -15,5 +15,7 @@ Route::group([
     $router->resource('/prereg_user', 'prereg\PreregUserController');
     $router->resource('/draw_card_chance_log', 'prereg\DrawCardChanceLogController');
     $router->resource('/panda_guess_log', 'prereg\PandaGuessLogController');
-
+    $router->resource('category', 'CategoryController');
+    $router->resource('wiki', 'WikiController');
+    $router->resource('announcement', 'AnnouncementController');
 });
