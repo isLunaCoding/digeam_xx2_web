@@ -18,4 +18,6 @@ Route::group([
     $router->resource('category', 'CategoryController');
     $router->resource('wiki', 'WikiController');
     $router->resource('announcement', 'AnnouncementController');
+    $router->resource('suspension_lists', 'SuspensionController');
+    $router->resource('image', 'ImageController');
 });
