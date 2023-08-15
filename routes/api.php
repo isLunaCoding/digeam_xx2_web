@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::post('prereg', 'API\event\preregController@index');
 Route::get('service_api', 'Services\ServicesController@index');
+
