@@ -1,0 +1,63 @@
+.footer{
+    // background-image: linear-gradient(#fff,#d2e2ff);
+    background: #e9f1ff;
+    width: 1920px;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    .footerBox{
+        max-width: 1200px;
+
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footerbox_logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .digeamlogo{
+            margin-right: -10px;
+            width: 235px;
+            height: 56px;
+            scale: .8;
+        }
+        .giantlogo{
+            margin-right: 10px;
+            width: 232px;
+            height: 83px;
+            scale: .7;
+        }
+    }
+    .copyright{
+        margin-right: 35px;
+        font-size: 12px;
+        a{
+            color: #1f48ba;
+            font-weight: 600;
+            display: inline-block;
+            border-bottom: #1f48ba 1px solid;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+    }
+    .plus{
+
+        display: flex;
+        .plus15{
+            margin-right: 10px;
+            width: 60px;
+            height: 60px;
+        }
+        p{
+            font-size: 12px;
+            line-height: 15px;
+            .blue{
+                color: #1f48ba;
+            }
+        }
+    }
+}

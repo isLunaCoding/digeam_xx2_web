@@ -22,3 +22,11 @@ Route::middleware(['setReturnUrl'])->group(function () {
         return view('event/prereg_index');
     });
 });
+
+// 官網
+Route::get('/index', function () {
+    return view('front/index');
+});
+Route::get('/announcement', function () {
+    return view('front/announcement');
+});
