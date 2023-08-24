@@ -15,12 +15,13 @@ class CreateCategory extends Migration
     {
         Schema::create('category', function (Blueprint $table) {
             $table->id();
+            $table->integer('parent_id');
+            $table->integer('cate_id');
             $table->string('title');
             $table->string('open');
             $table->string('type');
-            $table->integer('sort');
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->integer('sort')->default(0);
+            $table->timestamps();
         });
     }
 

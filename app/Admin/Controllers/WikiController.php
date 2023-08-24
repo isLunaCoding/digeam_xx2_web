@@ -26,23 +26,24 @@ class WikiController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Page());
-        $grid->model()->where('type','=','wiki')->orderBy('sec_sort','asc');
-        $grid->column('title', __('標題'));
-        $grid->column('cate_id', __('類別'))->display(function () {
-            if ($this->cate_id != 0) {
-                $cateName = Category::where('id', $this->cate_id)->first();
-                return $cateName['title'];
+        $grid->model()
+            ->where('type', 'wiki')
+            ->orderBy('open', 'desc')
+            ->orderBy('cate_id', 'asc')
+            ->orderBy('sec_sort', 'asc');
+        $grid->column('cate_id', __('中分類'))->display(function () {
+            $cateName = Category::where('type', 'wiki')->where('cate_id', $this->cate_id)->first();
+            $count = Category::where('type', 'wiki')->where('cate_id', $this->cate_id)->count();
+            if ($cateName->parent_id == 0) {
+                return '';
             }
+            return $cateName['title'];
         });
-        $grid->column('open', __('是否開啟'));
-        $grid->column('main_sort', __('排序'));
+        $grid->column('title', __('標題'));
+        $grid->column('open', __('是否開啟'))->label(['N' => 'default', 'Y' => 'danger']);
         $grid->column('sec_sort', __('次要排序'));
-        $grid->actions(function ($actions) {
-            //關閉show(view)
-            $actions->disableView();
-        });
-        $grid->disableExport();
         $grid->disableRowSelector();
+
         return $grid;
     }
 
@@ -75,15 +76,15 @@ class WikiController extends AdminController
      */
     protected function form()
     {
-        $cate = category::where('open', 'Y')->where('type', 'wiki')->pluck('title', 'id');
+        $cate = category::where('open', 'Y')->where('type', 'wiki')->where('parent_id', '!=', 0)->pluck('title', 'id');
         $cate[0] = '無';
         $form = new Form(new Page());
         $form->text('title', __('標題'));
-        $form->select('cate_id', __('類別'))->options($cate);
-        $form->ckeditor('content', __('內文'));
+        $form->number('cate_id', __('分類編號'));
         $form->text('type', __('類型'))->default('wiki')->readonly();
-        $form->radio('open', __('是否開啟'))->options(['Y' => '是', 'N'=> '否'])->default('N');
-        $form->number('main_sort', __('排序'));
+        $form->ckeditor('content', __('內容'));
+        $form->text('open', __('是否開啟'))->default('N');
+        $form->number('main_sort', __('主要排序'));
         $form->number('sec_sort', __('次要排序'));
 
         return $form;
