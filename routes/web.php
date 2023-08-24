@@ -30,3 +30,9 @@ Route::get('/index', function () {
 Route::get('/announcement', function () {
     return view('front/announcement');
 });
+
+
+
+//後台圖片上傳
+Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
+Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
