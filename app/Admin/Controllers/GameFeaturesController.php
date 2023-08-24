@@ -8,14 +8,14 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class ImageController extends AdminController
+class GameFeaturesController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = '首頁照片輪播管理';
+    protected $title = '遊戲特色照片管理';
 
     /**
      * Make a grid builder.
@@ -25,9 +25,8 @@ class ImageController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Image());
-        $grid->model()->orderBy('status', 'desc')->orderBy('sort', 'asc');
+        $grid->model()->where('type', 'game_features')->orderBy('status', 'desc')->orderBy('sort', 'asc');
         $grid->column('file_name', __('圖片'))->image();
-        $grid->column('url', __('網址'));
         $grid->column('sort', __('排序'));
         $grid->column('status', __('是否開啟'))->using(['Y' => '開啟', 'N' => '關閉']);
         $grid->disableRowSelector();
@@ -51,7 +50,6 @@ class ImageController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('file_name', __('File name'));
-        $show->field('url', __('Url'));
         $show->field('type', __('Type'));
         $show->field('sort', __('Sort'));
         $show->field('status', __('Status'));
@@ -68,13 +66,13 @@ class ImageController extends AdminController
      */
     protected function form()
     {
-
         $form = new Form(new Image());
-        $form->image('file_name', __('圖片'))->uniqueName()->move('upload/index');
-        $form->url('url', __('網址'));
+        $form->image('file_name', __('圖片'))->name(function ($file) {
+            return $file->getClientOriginalName();
+        })->move('upload/game_features');
         $form->select('status', __('狀態'))->options(['N' => '關閉', 'Y' => '開啟'])->default('N');
         $form->number('sort', __('排序'));
-        $form->text('type', __('類型'))->default('index')->readonly();
+        $form->text('type', __('類型'))->default('game_features')->readonly();
         return $form;
     }
 }
