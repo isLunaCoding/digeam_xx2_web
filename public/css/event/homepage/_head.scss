@@ -1,0 +1,87 @@
+.logo{
+    position: absolute;
+    top: 242px;
+    left: 669px;
+    z-index: 1;
+}
+
+.navBox {
+    font-size: 22.5px;
+    font-weight: 500;
+    background: linear-gradient(#001562be, #08399acb);
+    height: 80px;
+    width: 1920px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    @include xl{
+        position: absolute;
+    }
+
+    nav {
+        width: 942px;
+        height: 80px;
+
+        .menuBox {
+            display: flex;
+
+            .menu {
+                a {
+                    width: 157px;
+                    display: grid;
+                    place-items: center;
+                    height: 80px;
+
+                    &:hover {
+                        background-color: #142454c2;
+                    }
+                }
+
+                a {
+                    color: #fff;
+                }
+            }
+            .menu6, .menu1, .menu3{
+
+                .menu1_open,
+                .menu3_open,
+                .menu6_open {
+                    display: none;
+                    width: 157px;
+
+                    li {
+                        display: grid;
+                        place-items: center;
+                        height: 80px;
+                        background-color: #1c2d62c2;
+                    }
+                }
+
+                &:hover {
+                    background-color: #1c2d62c2;
+                }
+            }
+        }
+
+    }
+
+    .iconBox {
+        height: 80px;
+        width: 180px;
+
+        ul {
+            display: flex;
+
+            li {
+                height: 80px;
+                width: 60px;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

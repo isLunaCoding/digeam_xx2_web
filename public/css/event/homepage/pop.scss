@@ -1,0 +1,95 @@
+.mask {
+    background-color: #000000c6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    display: none;
+
+}
+
+
+.popBG {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(#001562df, #08399ae3);
+    // opacity: .7;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+
+    .popBox {
+        .popTitle {
+            font-size: 30px;
+            font-weight: 550;
+            color: #fff;
+            // margin: 0 auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .popContainer {
+            margin: 30px 15px 0;
+            padding: 0px 30px 30px;
+            // background-color: #ffffff49;
+            height: 400px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background: #fff;
+                border: 1px solid #c3d9ff00;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 5px;
+                background-image: linear-gradient(#001562df, #08399ae3);
+            }
+
+            .title,
+            .text {
+                color: #fff;
+            }
+
+            .title {
+                margin: 15px 0;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                // background-color: #ffffff44;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+
+            .text {
+                // background-color: #ffffff44;
+                line-height: 25px;
+                margin-bottom: 25px;
+            }
+            
+            .line {
+                width: 100%;
+                height: 1px;
+                background-color: #4382ffe3;
+            }
+        }
+    }
+}
+
+.popX {
+    background-image: none;
+    background-color: #ffffff00;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    right: -40px;
+    padding: 10px;
+}
