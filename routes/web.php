@@ -23,6 +23,16 @@ Route::middleware(['setReturnUrl'])->group(function () {
     });
 });
 
+// 官網
+Route::get('/index', function () {
+    return view('front/index');
+});
+Route::get('/announcement', function () {
+    return view('front/announcement');
+});
+
+
+
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');

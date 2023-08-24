@@ -1,0 +1,125 @@
+.section2 {
+    .sectionBG {
+        background: url('../../../img/event/homepage/section2BG.jpg');
+        background-size: 1920px 950px;
+        background-position: center center;
+        height: 950px;
+        width: 1920px;
+        // overflow: auto;
+
+        .btnBox {
+            display: flex;
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .charBox {
+            display: flex;
+            justify-content: center;
+
+            .btnBox {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: 100px;
+
+                .charBtn {
+                    width: 57px;
+                    height: 57px;
+                    border: 2px solid #0b3792;
+                    rotate: 45deg;
+                    margin: 18px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover{
+                        border: 4px solid #5981b7;
+                        background-color: #0b3792;
+
+                        img {
+                            filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
+                        }
+                    }
+
+                }
+                .active {
+                    border: 4px solid #5981b7;
+                    background-color: #0b3792;
+
+                    img {
+                        filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
+                    }
+                }
+            }
+
+            .cha {
+                background: url('../../../img/event/homepage/char_3.png');
+                background-size: 1458px 950px;
+                background-position: center center;
+                height: 950px;
+                width: 1458px;
+                display: flex;
+                align-items: center;
+
+                .textBox {
+                    width: 550px;
+                    height: 246px;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 18px;
+                    font-weight: 550;
+                    line-height: 30px;
+                    margin-top: -260px;
+                    align-items: flex-end;
+
+                    p {
+                        margin-top: 40px;
+                    }
+
+                    .skillInt {
+                        margin-top: 25px;
+                        background-color: #3c68c3;
+                        border: none;
+                        color: #fff;
+                        font-weight: 550;
+                        font-size: 18px;
+                        width: 132px;
+                        height: 27px;
+                        text-align: center;
+                        vertical-align: middle;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .cha1 {
+                background: url('../../../img/event/homepage/char_1.png');
+            }
+            .cha2 {
+                background: url('../../../img/event/homepage/char_2.png');
+            }
+            .cha3 {
+                background: url('../../../img/event/homepage/char_3.png');
+            }
+            .cha4 {
+                background: url('../../../img/event/homepage/char_4.png');
+            }
+            .cha5 {
+                background: url('../../../img/event/homepage/char_5.png');
+            }
+            .cha6 {
+                background: url('../../../img/event/homepage/char_6.png');
+            }
+            .cha7 {
+                background: url('../../../img/event/homepage/char_7.png');
+            }
+            .cha8 {
+                background: url('../../../img/event/homepage/char_8.png');
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+.backHome {
+  position: fixed;
+  top: 30px;
+  left: 90px;
+  color: #fff26b;
+}
+
+.sectionPage {
+  position: relative;
+  width: 1920px;
+}
+.sectionPage .sectionBG {
+  background-image: linear-gradient(#fff, #d2e2ff);
+}
+.sectionPage .sectionBG .container {
+  width: 1270px;
+  margin: 0 auto;
+  display: flex;
+}
+.sectionPage .sectionBG .container .btnBoxLeft {
+  margin-top: -403px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 22.5px;
+  font-weight: 500;
+  width: 245px;
+  height: 350px;
+  text-align: center;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .buttonDownload {
+  transition: filter 0.3s ease-in-out;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .buttonDownload:hover {
+  filter: brightness(120%);
+}
+.sectionPage .sectionBG .container .btnBoxLeft .buttonDownload:not(:hover) {
+  filter: brightness(100%);
+}
+.sectionPage .sectionBG .container .btnBoxLeft a {
+  color: #153d97;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 {
+  display: flex;
+  flex-direction: column;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .register,
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .addValue,
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .OTP,
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .customerService {
+  height: 86px;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .register:hover,
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .addValue:hover,
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .OTP:hover,
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .customerService:hover {
+  background-color: rgba(238, 245, 255, 0.5764705882);
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .register,
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .addValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1.9px solid;
+  -o-border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 3%, rgb(31, 48, 107) 4%, rgb(31, 48, 107) 96%, rgba(255, 255, 255, 0) 97%) 100% 0;
+     border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 3%, rgb(31, 48, 107) 4%, rgb(31, 48, 107) 96%, rgba(255, 255, 255, 0) 97%) 100% 0;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .register img,
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .addValue img {
+  margin-right: 10px;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .btnBox3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .btnBox3 a {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 122.5px;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .btnBox3 a img {
+  margin-bottom: 10px;
+}
+.sectionPage .sectionBG .container .btnBoxLeft .btnBox2 .btnBox3 .line {
+  width: 1px;
+  background-color: #153d97;
+  height: 65px;
+}
+.sectionPage .sectionBG .container .boxRight {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 1025px;
+  height: 100%;
+  margin-top: -403px;
+  border: 1px solid #1a48a8;
+}
+.sectionPage .sectionBG .container .boxRight .textTitle {
+  font-size: 36px;
+  color: #002578;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 27px;
+  border-bottom: #002578 1px solid;
+}
+.sectionPage .sectionBG .container .boxRight .textBox {
+  padding: 40px 70px;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat {
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  font-family: "微軟正黑體";
+  font-size: 15px;
+  font-weight: bold;
+  color: #696969;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat a {
+  color: #696969;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat a:hover {
+  color: #1a48a8;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat a .currentLocation {
+  color: #1a48a8;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat a .currentLocation:hover {
+  color: #1b63ff;
+}
+
+.footer {
+  background: #d2e2ff;
+}/*# sourceMappingURL=pageBase.css.map */

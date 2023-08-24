@@ -1,0 +1,243 @@
+.section1 {
+    .sectionBG {
+        background: url('../../../img/event/homepage/section1BG.jpg');
+        background-size: 1920px 950px;
+        background-position: center center;
+        height: 950px;
+        width: 1920px;
+        overflow: auto;
+
+        .container {
+            width: 1270px;
+            height: 350px;
+            position: absolute;
+            top: 76%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, .85);
+            display: flex;
+
+            .btnBox1 {
+                font-size: 22.5px;
+                font-weight: 500;
+                width: 245px;
+                height: 350px;
+                text-align: center;
+
+                .buttonDownload {
+                    transition: filter 0.3s ease-in-out;
+
+                    &:hover {
+                        filter: brightness(120%);
+                    }
+
+                    &:not(:hover) {
+                        filter: brightness(100%);
+                    }
+                }
+
+                a {
+                    color: #153d97;
+                }
+
+                .btnBox2 {
+                    display: flex;
+                    flex-direction: column;
+
+                    .register,
+                    .addValue,
+                    .OTP,
+                    .customerService {
+                        height: 86px;
+
+                        &:hover {
+                            background-color: #eef5ff93;
+                        }
+                    }
+
+                    .register,
+                    .addValue {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-bottom: 1.9px solid;
+                        border-image: linear-gradient(90deg,
+                                rgba(255, 255, 255, 0) 3%,
+                                rgb(31, 48, 107)4%,
+                                rgb(31, 48, 107)96%,
+                                rgba(255, 255, 255, 0)97%) 100% 0;
+
+                        img {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .btnBox3 {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        a {
+                            display: grid;
+                            place-items: center;
+                            align-content: center;
+                            width: 122.5px;
+
+                            img {
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .line {
+                            width: 1px;
+                            background-color: #153d97;
+                            height: 65px;
+                        }
+                    }
+                }
+            }
+
+            .swiper {
+                width: 530px;
+                height: 350px;
+                background-color: rgb(135, 135, 135);
+
+                .slick-dots{
+                    position: absolute;
+                    bottom: 0px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    display: flex;
+                    li {
+                        button{
+                            scale: .5;
+                            color: #ffffff00;
+                            opacity: 1;
+                            background: #fff;
+                            border: 1px solid #fff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .news {
+                width: 495px;
+                height: 350px;
+                padding: 20px;
+
+                .newsBtnBox {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .newsTab {
+                        display: flex;
+
+                        .newsBtn {
+                            background-color: #fff;
+                            border: 1px solid #2c3765;
+                            font-size: 20px;
+                            color: #153d97;
+                            width: 80px;
+                            height: 35px;
+                            font-weight: 500;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 5px;
+
+                            &:hover {
+                                background-image: linear-gradient(#08389a, #001562);
+                                color: #fff;
+                            }
+                        }
+
+                        .active {
+                            background-image: linear-gradient(#08389a, #001562);
+                            color: #fff;
+                        }
+
+                        .newsBtnNA {
+                            // align-items: flex-end;
+                            padding-top: 4px;
+                        }
+                    }
+                }
+
+                .btnMore {
+                    font-size: 20px;
+                    color: #153d97;
+                    font-weight: 550;
+                }
+
+                .line {
+                    width: 100%;
+                    height: 1px;
+                    background-color: #001562;
+                    margin-top: -1px;
+                }
+
+                .newsContainer {
+                    .text {
+                        margin-top: 10px;
+
+                        ul {
+                            line-height: 36px;
+
+                            li {
+                                font-size: 18px;
+
+                                a {
+                                    display: flex;
+
+                                    .textBox {
+                                        width: 420px;
+                                        display: flex;
+                                        justify-content: space-between;
+
+                                        .textTitle,
+                                        .textTime {
+                                            color: #153d97;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .TOP {
+                                &::before {
+                                    content: "TOP";
+                                    font-style: italic;
+                                    color: #ff4901;
+                                    margin-right: 19px;
+                                    margin-left: 6px;
+                                    letter-spacing: 1px;
+                                }
+                            }
+
+                            .NEW {
+                                &::before {
+                                    content: "NEW";
+                                    font-style: italic;
+                                    color: #ff4901;
+                                    margin-right: 20px;
+                                }
+                            }
+
+                            .normal {
+                                &::before {
+                                    content: "  ▶ ";
+                                    color: #153d97;
+                                    margin-right: 31px;
+                                    margin-left: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
