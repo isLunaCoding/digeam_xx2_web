@@ -1,3 +1,11 @@
+@charset "UTF-8";
+.backHome {
+  position: fixed;
+  top: 30px;
+  left: 90px;
+  color: #fff26b;
+}
+
 .sectionPage {
   position: relative;
   width: 1920px;
@@ -95,7 +103,31 @@
   padding: 27px;
   border-bottom: #002578 1px solid;
 }
+.sectionPage .sectionBG .container .boxRight .textBox {
+  padding: 40px 70px;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat {
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  font-family: "微軟正黑體";
+  font-size: 15px;
+  font-weight: bold;
+  color: #696969;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat a {
+  color: #696969;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat a:hover {
+  color: #1a48a8;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat a .currentLocation {
+  color: #1a48a8;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .seat a .currentLocation:hover {
+  color: #1b63ff;
+}
 
 .footer {
   background: #d2e2ff;
-}/*# sourceMappingURL=pageStyle.css.map */
+}/*# sourceMappingURL=pageBase.css.map */

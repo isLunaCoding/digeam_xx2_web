@@ -39,6 +39,7 @@
     <div class="wrap">
         <header class="logo"><img src="/img/event/homepage/LOGO.png"></header>
         <div class="navBox">
+            @yield('backHome')
             <nav>
                 <ul class="menuBox">
                     <li class="menu menu1" data-menuaction="menu1_open">

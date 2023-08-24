@@ -1,3 +1,12 @@
+.backHome{
+    position: fixed;
+    top: 30px;
+    left: 90px;
+    color: #fff26b;
+}
+
+
+
 .sectionPage {
     position: relative;
     width: 1920px;
@@ -92,14 +101,15 @@
                 }
             }
 
-            .boxRight{
+            .boxRight {
                 background-color: rgba(255, 255, 255, .9);
                 width: 1025px;
                 height: 100%;
                 margin-top: -403px;
                 border: 1px solid #1a48a8;
+
                 // padding: 50px;
-                .textTitle{
+                .textTitle {
                     font-size: 36px;
                     color: #002578;
                     font-weight: 600;
@@ -108,10 +118,44 @@
                     padding: 27px;
                     border-bottom: #002578 1px solid;
                 }
+
+                .textBox {
+                    padding: 40px 70px;
+
+                    .seat {
+                        position: absolute;
+                        top: 15px;
+                        right: 45px;
+                        font-family: "微軟正黑體";
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: #696969;
+
+                        a {
+                            color: #696969;
+
+                            &:hover {
+                                color: #1a48a8;
+                            }
+
+                            .currentLocation {
+                                color: #1a48a8;
+
+                                &:hover {
+                                    color: #1b63ff;
+                                }
+                            }
+
+                        }
+                    }
+                }
             }
         }
     }
 }
+
+
+
 
 .footer {
     background: #d2e2ff;
