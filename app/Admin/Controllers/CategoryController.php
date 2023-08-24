@@ -25,15 +25,22 @@ class CategoryController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Category());
-        $grid->model()->where('type','=','wiki')->orderBy('sort','asc');
-        $grid->column('title', __('標題'));
-        $grid->column('open', __('是否開啟'));
-        $grid->column('sort', __('順序'));
-        $grid->actions(function ($actions) {
-            $actions->disableDelete();
+        $grid->model()->where('type', 'wiki')->orderby('parent_id', 'asc')->orderby('cate_id', 'asc');
+        $grid->column('parent_id', __('父標題'))->display(function () {
+            if ($this->parent_id != 0) {
+                $cateName = Category::where('id', $this->parent_id)->first();
+                return $cateName['title'];
+            } else {
+                return '無';
+            }
         });
-        $grid->disableExport();
+        $grid->column('title', __('標題'));
+        $grid->column('cate_id', __('分類編號(不可重複)'));
+        $grid->column('open', __('是否開啟'))->label(['N' => 'default', 'Y' => 'danger']);
+        $grid->column('sort', __('順序'));
         $grid->disableRowSelector();
+        $grid->disableExport();
+
         return $grid;
     }
 
@@ -50,7 +57,6 @@ class CategoryController extends AdminController
         $show->field('open', __('是否開啟'));
         $show->field('type', __('分類'));
         $show->field('sort', __('排序'));
-        $show->field('created_at', __('建立時間'));
         return $show;
     }
 
@@ -61,13 +67,16 @@ class CategoryController extends AdminController
      */
     protected function form()
     {
+        $cate = Category::where('open', 'Y')->where('type', 'wiki')->where('parent_id', 0)->pluck('title', 'id');
+        $cate[0] = '無';
         $form = new Form(new Category());
-
+        $form->select('parent_id', __('大標題'))->options($cate);
+        $max_cateid = Category::where('type', 'wiki')->orderby('cate_id', 'desc')->first();
+        $form->number('cate_id', __('標題編號(不可重複)'))->default($max_cateid->cate_id+1);
         $form->text('title', __('標題'));
         $form->text('open', __('是否開啟'))->default('N');
-        $form->text('type', __('類型'))->default('wiki');
         $form->number('sort', __('排序'));
-
+        $form->text('type', __('類型'))->default('wiki')->readonly();
         return $form;
     }
 }
