@@ -1,0 +1,81 @@
+@charset "UTF-8";
+.sectionPage .sectionBG .container .boxRight .textBox .tabBox {
+  margin-top: 50px;
+  width: 252px;
+  display: flex;
+  justify-content: space-between;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .tabBox .newsBtn {
+  font-weight: 600;
+  width: 80px;
+  height: 35px;
+  background-color: #fff;
+  border: #002578 1px solid;
+  font-size: 20px;
+  color: #002578;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .tabBox .newsBtn:hover, .sectionPage .sectionBG .container .boxRight .textBox .tabBox .newsBtn.active {
+  color: #fff;
+  background-image: linear-gradient(#08389a, #001562);
+}
+.sectionPage .sectionBG .container .boxRight .textBox .tabBox .newsBtnNA {
+  font-weight: 500;
+  padding-top: 4px;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .line {
+  width: 878px;
+  height: 1px;
+  background-color: #002578;
+  margin: -1px 0 40px;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer {
+  margin-bottom: 60px;
+  background-color: #728dcc;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer ul .newsLine {
+  width: 878px;
+  height: 1px;
+  background-color: #728dcc;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer ul li a {
+  display: flex;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer ul li .TOP::before {
+  content: "TOP";
+  font-style: italic;
+  color: #ff4901;
+  margin-right: 19px;
+  margin-left: 6px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer ul li .NEW::before {
+  content: "NEW";
+  font-style: italic;
+  color: #ff4901;
+  margin-right: 20px;
+  font-weight: 600;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer ul li .normal::before {
+  content: "  ▶ ";
+  color: #153d97;
+  margin-right: 31px;
+  margin-left: 17px;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer ul li .newsTextBox {
+  width: 790px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer ul li .newsTextBox .newsTextTitle {
+  font-size: 16px;
+  color: #002578;
+  font-weight: 600;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .newsContainer ul li .newsTextBox .newsTextTime {
+  font-size: 12px;
+  color: #728dcc;
+}/*# sourceMappingURL=pageAnnouncement.css.map */
