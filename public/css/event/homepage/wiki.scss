@@ -1,0 +1,30 @@
+@import '../base/reset';
+@import '../base/placeholder';
+@import '../base/setting';
+
+
+
+.mainBG{
+    background-image: url('/img/event/wiki/wikiBG.jpg');
+    background-size: contain;
+    width: 1920px;
+    height: 950px;
+    top: 0px;
+    left: 0px;
+    .mainBox{
+        background-color: #fff;
+        width: 1550px;
+        height: 775px;
+        display: flex;
+        .menu{
+            background-color: #fff;
+            width: 242px;
+            height: 775px;
+        }
+        .mainTextBox{
+            background-color: #fff;
+            width: 1308px;
+            height: 775px;
+        }
+    }
+}

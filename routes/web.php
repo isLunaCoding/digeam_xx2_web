@@ -46,6 +46,14 @@ Route::get('/exchange', function () {
 Route::get('/download', function () {
     return view('front/download');
 });
+// 遊戲規章
+Route::get('/regulations', function () {
+    return view('front/regulations');
+});
+// 百科
+Route::get('/wiki', function () {
+    return view('front/wiki');
+});
 
 
 
