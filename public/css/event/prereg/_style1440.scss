@@ -91,7 +91,7 @@
                 width: 70vw;
                 height: 66vh;
                 background: url(/img/event/prereg/p3/mainBG3.png)no-repeat;
-                background-size: contain;
+                background-size: 100% 100%;
                 background-position: center;
 
                 &::before{
@@ -100,7 +100,7 @@
                     width: 100%;
                     height: 100%;
                     background: url(/img/event/prereg/p3/mainBG.png)no-repeat;
-                    background-size: contain;
+                    background-size: 100% 100%;
                     background-position: center;
                 }
 
@@ -118,26 +118,26 @@
                     }
 
                     .corner_LT{
-                        top: 30px;
-                        left: 52px;
+                        top: 35px;
+                        left: 24px;
                         rotate: -90deg;
                     }
 
                     .corner_RT{
-                        top: 32px;
-                        right: 52px;
+                        top: 35px;
+                        right: 24px;
                         rotate: 0deg;
                     }
 
                     .corner_LB{
-                        bottom: 27px;
-                        left: 51px;
+                        bottom: 35px;
+                        left: 24px;
                         rotate: -180deg;
                     }
 
                     .corner_RB{
-                        bottom: 25px;
-                        right: 53px;
+                        bottom: 35px;
+                        right: 24px;
                         rotate: 90deg;
                     }
                 }
@@ -282,7 +282,7 @@
                 .lanternbox{
                     position: absolute;
                     top: 34px;
-                    left: -60px;
+                    left: -100px;
                     translate: 0%;
                     width: calc(286px * 0.95);
                     height: calc(627px * 0.95);
@@ -290,6 +290,7 @@
                     rotate: 0deg;
                     // opacity: 0;
                     z-index: 1;
+                    scale: 0.8;
 
                     .lantern_light{
                         position: absolute;
@@ -321,7 +322,7 @@
 
                     & p{
                         position: absolute;
-                        top: 46%;
+                        top: 50%;
                         left: 50%;
                         translate: -50%;
                         color: #a38a46;
@@ -335,7 +336,7 @@
                 .p3text{
                     position: absolute;
                     top: 50%;
-                    right: 50%;
+                    right: 43%;
                     translate: 100% -50%;
                     width: 40%;
                     height: 90%;
@@ -704,6 +705,7 @@
                     top: 50%;
                     left: 47%;
                     translate: -50% -50%;
+                    scale: 0.9;
 
                     .panda1{
                         position: absolute;
@@ -938,6 +940,7 @@
                     line-height: 25px;
                     & p{
                         padding-right: 50px;
+                        line-height: 40px;
                     }
                 }
             }
@@ -1579,8 +1582,8 @@
                     }
 
                     .copyright{
-                        width: 20%;
-                        height: 70%;
+                        // width: 20%;
+                        // height: 70%;
 
                         & div{
                             width: fit-content;
@@ -2078,8 +2081,8 @@
 
             .p6menu{
                 position: absolute;
-                top: 48vh;
-                left: 40vw;
+                top: 42%;
+                left: 48%;
                 width: 542px;
                 height: 417px;
                 background: url(/img/event/prereg/p6/menuBG.png)no-repeat;
@@ -2219,7 +2222,7 @@
                     position: absolute;
                     width: 70%;
                     height: auto;
-                    top: 30%;
+                    top: 35%;
                     left: 50%;
                     translate: -50%;
                     color: #000;
@@ -2229,13 +2232,13 @@
             }
 
             .p6feature1{
-                left: 19%;
+                left: 15%;
                 top: 33%;
             }
 
             .p6feature2{
-                left: 30%;
-                top: calc(33% + 11.75vw);
+                left: 20%;
+                top: 60%;
             }
         }
     }

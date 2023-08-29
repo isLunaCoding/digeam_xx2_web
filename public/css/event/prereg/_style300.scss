@@ -1,4 +1,4 @@
-@media(max-width:425px){
+@media(max-width:300px){
     .swiper{
         width: 100vw;
         height: 100%;
@@ -7,6 +7,7 @@
             overflow: hidden;
 
             .cloudmask{
+                display: none;
                 position: relative;
                 width: 100vw;
                 height: 100vh;
@@ -34,6 +35,7 @@
                 height: 100%;
                 object-fit: cover;
             }
+
 
             .XX2_logo{
                 position: absolute;
@@ -110,7 +112,6 @@
             background: url(/img/event/prereg/p2/bg2_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
-            height: 800px;
 
             .bg2animate{
 
@@ -171,10 +172,8 @@
                 top: 5vh;
                 left: 50%;
                 translate: -50%;
-                // width: 51vw;
-                // height: 17vw;
-                width: 216px;
-                height: 72px;
+                width: 51vw;
+                height: 17vw;
                 background: url(/img/event/prereg/p2/title.png)no-repeat;
                 background-size: contain;
                 background-position: center;
@@ -191,7 +190,7 @@
 
                 .p2steps{
                     width: 100%;
-                    height: 340px;
+                    height: 40vh;
 
                     .step1{
                         margin: auto;
@@ -295,7 +294,7 @@
 
                     .checkbtn{
                         margin: auto;
-                        // margin-top: -13%;
+                        margin-top: -9%;
                         width: 260px;
                         height: 101px;
                         background: url(/img/event/prereg/p2/btn1.png)no-repeat;
@@ -308,7 +307,7 @@
                         text-align: center;
                         line-height: 101px;
                         scale: 0.5;
-                        top:-20%;
+
                         &:hover{
                             background: url(/img/event/prereg/p2/btn1_hover.png)no-repeat;
                         }
@@ -319,7 +318,8 @@
                 .p2awards{
                     scale: 1;
                     width: 100%;
-                    height: 340px;
+                    height: 40vh;
+                    margin-top: 18px;
 
                     .awardbox{
                         position: absolute;
@@ -343,7 +343,7 @@
                         display: flex;
                         text-align: center;
                         text-shadow: 0 0 5px #010101;
-                        top: -2%;
+
                         .p2informationbtn, .p2noticebtn{
                             width: 50%;
                             background: url(/img/event/prereg/p2/btn2.png)no-repeat;
@@ -382,7 +382,6 @@
             }
         }
         .page3{
-            height: 844px;
             background: url(/img/event/prereg/p3/bg3_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
@@ -429,8 +428,8 @@
                 top: 56%;
                 left: 50%;
                 translate: -50% -50%;
-                width: 100%;
-                height: 523px;
+                width: 80vw;
+                height: 62vh;
                 background: url(/img/event/prereg/p3/mainBG3_m.png)no-repeat;
                 background-size: 100% 100%;
                 background-position: center;
@@ -492,11 +491,11 @@
                     top: -22%;
                     right: 50%;
                     translate: 50%;
-                    width: 85%;
+                    width: 78%;
                     z-index: 1;
 
                     & p{
-                        font-size: 16px;
+                        font-size: 5px;
                         font-weight: bold;
                         color: #21345d;
                     }
@@ -628,7 +627,7 @@
                 .lanternbox{
                     position: absolute;
                     top: 0px;
-                    left: -28px;
+                    left: -54px;
                     translate: 0%;
                     width: calc(286px * 0.5);
                     height: calc(627px * 0.5);
@@ -680,24 +679,24 @@
 
                 .p3text{
                     position: absolute;
-                    top: 75%;
-                    right: 43%;
+                    top: 72%;
+                    right: 50%;
                     translate: 50% -50%;
                     width: 75%;
-                    height: 24%;
+                    height: 45%;
 
                     .samplerules{
                         position: absolute;
-                        top: 34%;
-                        left: 0%;
+                        top: 41%;
+                        left: 15%;
                         translate: 0 -50%;
-                        width: 91%;
+                        width: 85%;
                         height: auto;
 
                         & li{
                             list-style-image:url(/img/event/prereg/p3/li.png);
                             color: #000;
-                            font-size: 16px;
+                            font-size: 12px;
                             font-weight: bold;
                             margin: 0px auto;
 
@@ -787,7 +786,7 @@
                     translate: -50% -50%;
                     width: 40%;
                     height: 90%;
-                    scale: 0.5;
+                    scale: 0.4;
 
                     .nocard,.nowcard{
                         position: absolute;
@@ -867,7 +866,7 @@
                         left: 50%;
                         translate: -50%;
                         color: #000;
-                        font-size: 34px;
+                        font-size: 26px;
                         font-weight: bold;
                     }
                 }
@@ -902,7 +901,6 @@
             background: url(/img/event/prereg/p4/bg4.png);
             background-size: cover;
             background-position: center;
-            height: 844px;
 
             .bg4animate{
                 .bamboo{
@@ -919,7 +917,7 @@
                 .cloud{
                     position: absolute;
                     width: 100vw;
-                    height: 130vh;
+                    height: 100vh;
                     background: url(/img/event/prereg/p4/cloud.png)no-repeat;
                     background-position: bottom left;
                     animation: p4cloud 60s infinite alternate ease-in-out;
@@ -980,11 +978,9 @@
                 left: 50%;
                 translate: -50% -100%;
                 width: 85vw;
-                height: 675px;
+                height: 80vh;
 
                 .p4info{
-              
-      
                     position: absolute;
                     top: -12%;
                     right: 0%;
@@ -1009,7 +1005,7 @@
                         text-align: center;
                         text-shadow: 0 0 5px #010101;
                         filter: drop-shadow(0 0 3px #2d3447);
-                        margin-top: 0%;
+                        margin-top: -5%;
 
                         .p4informationbtn, .p4noticebtn{
                             position: relative;
@@ -1065,10 +1061,10 @@
                     position: absolute;
                     width: 100%;
                     height: 30%;
-                    top: 20%;
+                    top: 28%;
                     left: 47%;
                     translate: -50% 0%;
-                    scale: 0.5;
+                    scale: 0.4;
 
                     .panda1{
                         position: absolute;
@@ -1106,8 +1102,8 @@
                     top: 42%;
                     right: 50%;
                     translate: 50% 0%;
-                    width: calc(365px * 0.65);
-                    height: calc(214px * 0.65);
+                    width: calc(365px * 0.5);
+                    height: calc(214px * 0.5);
 
                     .panda1Value{
                         position: absolute;
@@ -1136,7 +1132,7 @@
 
                 .pandaMenu{
                     position: absolute;
-                    top: 60%;
+                    top: 58%;
                     left: 50%;
                     translate: -50% 0%;
                     width: 100%;
@@ -1219,7 +1215,7 @@
 
                 .pandaGobtn{
                     position: absolute;
-                    top: 75%;
+                    top: 73%;
                     left: 50%;
                     translate: -50%;
                     width: 260px;
@@ -1234,7 +1230,7 @@
                     text-align: center;
                     line-height: 101px;
                     filter: drop-shadow(0 0 5px #2d3447);
-                    scale: 0.75;
+                    scale: 0.6;
 
                     &:hover{
                         background: url(/img/event/prereg/p4/btn1_hover.png)no-repeat;
@@ -1263,7 +1259,7 @@
                     filter: drop-shadow(0 0 5px #2d3447);
                     cursor: pointer;
                     transition: 0.3s;
-                    scale: 0.8;
+                    scale: 0.6;
 
                     &::before, &::after{
                         position: absolute;
@@ -1303,7 +1299,7 @@
                     position: absolute;
                     top: 26%;
                     right: 0%;
-                    left: -24%;
+                    left: -28%;
                     translate: 0% 0%;
                     width: calc(292px * 0.85);
                     height: calc(123px * 0.85);
@@ -1313,12 +1309,11 @@
                     font-size: 20px;
                     font-weight: bold;
                     text-align: right;
-                    scale: 0.65;
-                    padding-top: 20px;
+                    line-height: 25px;
+                    scale: 0.5;
 
                     & p{
-                        padding-right: 60px;
-                        line-height: normal;
+                        padding-right: 50px;
                     }
                 }
             }
@@ -1327,7 +1322,6 @@
             background: url(/img/event/prereg/p5/bg5_m.png)no-repeat;
             background-size: cover;
             background-position: center;
-            height: 595px;
 
             .p5title{
                 position: absolute;
@@ -1335,7 +1329,7 @@
                 left: 50%;
                 translate: -50%;
                 width: 51vw;
-                height: 17vw;
+                height: 58vw;
                 background: url(/img/event/prereg/p5/title.png)no-repeat;
                 background-size: contain;
                 background-position: center;
@@ -1531,7 +1525,6 @@
             background: url(/img/event/prereg/p6/bg6_m.jpg);
             background-size: cover;
             background-position: center;
-            height: 844px;
 
             .p6title{
                 position: absolute;
@@ -1550,7 +1543,7 @@
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
-                left: -27%;
+                left: -35%;
                 top: -15vh;
                 scale: 0.6;
 
@@ -1681,11 +1674,11 @@
 
             .p6menu{
                 position: absolute;
-                bottom:0px;
+                top: 100vh;
                 left: 0vw;
                 width: 100vw;
                 height: 20vw;
-                translate: 0 0%;
+                translate: 0 -120%;
                 background: none;
                 background-size: contain;
                 background-position: top;
@@ -1855,24 +1848,24 @@
                     position: absolute;
                     width: 70%;
                     height: auto;
-                    top: 26%;
+                    top: 25%;
                     left: 50%;
                     translate: -50%;
                     color: #000;
                     font-weight: bolder;
-                    font-size: 14px;
+                    font-size: 13px;
                     letter-spacing: -1px;
                 }
             }
 
             .p6feature1{
                 left: 45%;
-                top: 55%;
+                top: 50%;
             }
 
             .p6feature2{
                 left: 55%;
-                top: 73%;
+                top: calc(50% + 32vw);
             }
         }
         .page7{
@@ -1882,7 +1875,7 @@
 
             .p7title{
                 position: absolute;
-                top: 3vh;
+                top: 5vh;
                 left: 50%;
                 translate: -50%;
                 width: 51vw;
@@ -1901,7 +1894,7 @@
                 height: 60vh;
                 list-style: decimal;
                 color: #000000;
-                font-size: 16px;
+                font-size: 1.3rem;
                 font-weight: bold;
                 overflow-y: scroll;
 
@@ -1982,8 +1975,8 @@
                     }
 
                     .copyright{
-                        // width: 50%;
-                        // height: 40%;
+                        width: 50%;
+                        height: 40%;
 
                         & div{
                             width: fit-content;
@@ -2019,7 +2012,7 @@
                         .footernotice{
                             text-align: left;
                             vertical-align: top;
-                            line-height: 16px;
+                            line-height: 3px;
                             font-size: 9pt;
                             & p:nth-child(4){
                                 color: #9ed5ff;
@@ -2033,10 +2026,11 @@
 
         .swiper-slide-active{
             .cloudmask{
-                scale: 2;
-                opacity: 0;
-                transition: 3s;
-                transition-delay: 0s;
+                // scale: 2;
+                // opacity: 0;
+                // transition: 3s;
+                // transition-delay: 0s;
+                display: none;
             }
             .bg2animate{
 
@@ -2157,7 +2151,7 @@
             &::before{
                 position: absolute;
                 content: '';
-                left: -487%;
+                left: 23%;
                 translate: 0% 8%;
                 width: 37px;
                 height: 40px;
@@ -2228,7 +2222,7 @@
             }
             .p3missionpopText{
                 margin: auto;
-                margin-top: 35%;
+                margin-top: 37%;
                 width: 80%;
                 height: 68%;
                 list-style: decimal;
@@ -2276,7 +2270,7 @@
                     &::before{
                         position: absolute;
                         content: '';
-                        left: 1%;
+                        left: 10%;
                         width: 22px;
                         height: 25px;
                         background: url(/img/event/prereg/p3/mission_li.png) no-repeat center;
@@ -2330,8 +2324,8 @@
             top: 50%;
             left: 50%;
             translate: -50% -50%;
-            width: 90vw;
-            height: 62vh;
+            width: 60vh;
+            height: 80vh;
             background: url(/img/event/prereg/p3/resultpopBG.png)no-repeat;
             background-size: contain;
             background-position: center;
@@ -2504,6 +2498,7 @@
             }
         }
     }
+
     /*結交名士自選彈窗*/
     .p3choosepop{
         position: fixed;
@@ -2834,6 +2829,7 @@
                     scale: -1;
                 }
             }
+
             .popTable{
                 margin: auto;
                 margin-top: 18%;
@@ -2991,14 +2987,14 @@
                     left: 0%;
                 }
                 &::after{
-                    right: 00%;
+                    right: 0%;
                     scale: -1;
                 }
             }
 
             .popSText{
                 margin: auto;
-                margin-top: 25%;
+                margin-top: 30%;
                 width: 70%;
                 height: 73%;
                 list-style: decimal;
@@ -3027,83 +3023,4 @@
             }
         }
     }
-
-}
-
-@media(max-width:495px){
-    /*選單連結(放進bar的css裡面會跑版所以放外面)*/
-    .swiper-pagination{
-        top: 50% !important;
-        left: 51% !important;
-        translate: 0%;
-        scale: 1.2;
-    }
-
-    /*大彈窗*/
-    .pop{
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(127, 140, 149, 0.5);
-        font-family: 'Noto Serif TC', serif;
-        z-index: 10;
-        display: none;
-
-        .popframe{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            width: 90vw;
-            height: 90vw;
-            background: url(/img/event/prereg/pop_l/popL_frame.png)no-repeat;
-            background-size: contain;
-
-            .XX{
-                position: absolute;
-                top: 110%;
-                right: 50%;
-                translate: 50%;
-                width: 4vw;
-                height: 4vw;
-                cursor: pointer;
-                background: url(/img/event/prereg/pop_l/XX.png)no-repeat;
-                background-size: contain;
-                transition: 0.3s;
-                scale: 3;
-
-                &:hover{
-                    rotate: 90deg;
-                }
-            }
-
-            .poptitle{
-                position: absolute;
-                top: 8%;
-                left: 50%;
-                translate: -50%;
-                font-size: 27px;
-                color: #15386c;
-                text-align: center;
-            }
-
-            .popText{
-                margin: auto;
-                margin-top: 22%;
-                width: 75%;
-                height: 70%;
-                list-style: decimal;
-                color: #15386c;
-                font-size: 16px;
-                overflow-y: scroll;
-            }
-        }
-    }
-}
-
-.p3_desc {
-    text-align: center;
-    top: 58%;
-    font-size: 12px;
 }

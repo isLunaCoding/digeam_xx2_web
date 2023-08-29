@@ -1,10 +1,12 @@
 @media(max-width:374px){
     .swiper{
         width: 100vw;
-        height: 100%;
+        height: 100vh;
 
         .swiper-slide{
-            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            // overflow: hidden;
 
             .cloudmask{
                 display: none;
@@ -112,6 +114,7 @@
             background: url(/img/event/prereg/p2/bg2_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
+            height: 800px;
 
             .bg2animate{
 
@@ -168,29 +171,23 @@
             }
 
             .p2title{
-                position: absolute;
-                top: 5vh;
-                left: 50%;
-                translate: -50%;
-                width: 51vw;
-                height: 17vw;
-                background: url(/img/event/prereg/p2/title.png)no-repeat;
-                background-size: contain;
-                background-position: center;
+                position: relative;
+                top: 0px;
+                left: 0%;
+                translate: 0%;
+                margin: 0 auto;
             }
 
             .p2main{
-                position: absolute;
-                top: 15vh;
-                left: 50%;
-                translate: -50%;
-                width: 80vw;
-                height: 80vh;
-                display: block;
+                position: relative;
+                top: 0%;
+                left: 0%;
+                translate: 0%;
+                margin: 0 auto;
 
                 .p2steps{
                     width: 100%;
-                    height: 40vh;
+                    height: 350px;
 
                     .step1{
                         margin: auto;
@@ -293,8 +290,8 @@
                     }
 
                     .checkbtn{
+                        position: relative;
                         margin: auto;
-                        margin-top: -9%;
                         width: 260px;
                         height: 101px;
                         background: url(/img/event/prereg/p2/btn1.png)no-repeat;
@@ -307,10 +304,7 @@
                         text-align: center;
                         line-height: 101px;
                         scale: 0.5;
-
-                        &:hover{
-                            background: url(/img/event/prereg/p2/btn1_hover.png)no-repeat;
-                        }
+                        top: -69px;
                     }
 
                 }
@@ -322,19 +316,19 @@
                     margin-top: 18px;
 
                     .awardbox{
-                        position: absolute;
+                        position: relative;
                         bottom: 0%;
                         width: 100%;
-                        height: 80%;
+                        height: 220px;
                         background: url(/img/event/prereg/p2/award_m.png)no-repeat;
                         background-position: center;
                         background-size: contain;
                     }
 
                     .p2btns{
-                        position: absolute;
-                        left: 50%;
-                        translate: -50%;
+                        position: relative;
+                        left: 0%;
+                        translate: 0%;
                         width: 70%;
                         height: 20%;
                         color: #ffffff;
@@ -494,8 +488,8 @@
                     width: 78%;
                     z-index: 1;
 
-                    & p{
-                        font-size: 5px;
+                    p{
+                        font-size: 15px;
                         font-weight: bold;
                         color: #21345d;
                     }
@@ -664,7 +658,7 @@
                         transform-origin: calc(146px * 0.5) calc(470px * 0.5);
                     }
 
-                    & p{
+                    p{
                         position: absolute;
                         top: 46%;
                         left: 50%;
@@ -768,10 +762,10 @@
                             font-size: 15px;
                             font-weight: bold;
 
-                            & td{
+                            td{
                                 width: 50%;
 
-                                & span{
+                                span{
                                     color: #eaf4ff;
                                 }
                             }
@@ -1975,8 +1969,8 @@
                     }
 
                     .copyright{
-                        width: 50%;
-                        height: 40%;
+                        // width: 50%;
+                        // height: 40%;
 
                         & div{
                             width: fit-content;
@@ -2010,10 +2004,11 @@
                         }
 
                         .footernotice{
+                            margin-top: 10px;
                             text-align: left;
                             vertical-align: top;
-                            line-height: 3px;
-                            font-size: 9pt;
+                            line-height: 20px;
+                            font-size: 9px;
                             & p:nth-child(4){
                                 color: #9ed5ff;
                             }

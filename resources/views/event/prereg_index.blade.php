@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="css/event/prereg/style.css?v3.02">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v3.19">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -303,7 +303,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <!-- 4熊貓賽跑 -->
-            {{-- <div class="swiper-slide page4">
+
+
+            {{-- @dd($_SERVER) --}}
+            @if($_SERVER["HTTP_X_FORWARDED_FOR"] == '211.23.144.219')
+            <div class="swiper-slide page4">
                 <div class="bg4animate">
                     <div class="bamboo"></div>
                     <div class="cloud"></div>
@@ -343,8 +347,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="cloudmask"></div>
-            </div> --}}
-
+            </div>
+            @endif
             <!-- 5遊戲特色 -->
             <div class="swiper-slide page5">
                 {{-- <div id="rainBox"></div> --}}

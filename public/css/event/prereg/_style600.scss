@@ -493,7 +493,7 @@
                     z-index: 1;
 
                     & p{
-                        font-size: 5px;
+                        font-size: 20px;
                         font-weight: bold;
                         color: #21345d;
                     }
@@ -519,7 +519,7 @@
                         filter: drop-shadow(0 0 5px #2d3447);
                         cursor: pointer;
                         transition: 0.3s;
-                        scale: 0.5;
+                        scale: 0.7;
 
                         &::before, &::after{
                             position: absolute;
@@ -571,7 +571,7 @@
                     text-align: center;
                     text-shadow: 0 0 5px #010101;
                     filter: drop-shadow(0 0 5px #2d3447);
-                    scale: 1;
+                    // scale: 1;
 
                     .p3informationbtn, .p3missionbtn, .p3noticebtn{
                         position: relative;
@@ -633,6 +633,7 @@
                     rotate: 0deg;
                     // opacity: 0;
                     z-index: 1;
+                    scale:1.1;
 
                     .lantern_light{
                         position: absolute;
@@ -694,7 +695,7 @@
                         & li{
                             list-style-image:url(/img/event/prereg/p3/li.png);
                             color: #000;
-                            font-size: 12px;
+                            font-size: 16px;
                             font-weight: bold;
                             margin: 0px auto;
 
@@ -784,7 +785,7 @@
                     translate: -50% -50%;
                     width: 40%;
                     height: 90%;
-                    scale: 0.4;
+                    scale: 0.5;
 
                     .nocard,.nowcard{
                         position: absolute;
@@ -849,7 +850,7 @@
                         background: url(/img/event/prereg/p3/btn2.png)no-repeat;
                         cursor: pointer;
                         transition: 0.3s;
-                        scale: 1;
+                        scale: 1.5;
 
                         &:hover{
                             transform: translateY(-5px);
@@ -864,7 +865,7 @@
                         left: 50%;
                         translate: -50%;
                         color: #000;
-                        font-size: 26px;
+                        font-size: 30px;
                         font-weight: bold;
                     }
                 }
@@ -886,7 +887,7 @@
                     text-align: center;
                     line-height: 101px;
                     filter: drop-shadow(0 0 5px #2d3447);
-                    scale: 0.5;
+                    scale: 0.7;
 
                     &:hover{
                         background: url(/img/event/prereg/p3/btn1_hover.png)no-repeat;
@@ -1541,7 +1542,7 @@
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
-                left: -27%;
+                // left: -27%;
                 top: -15vh;
                 scale: 0.6;
 
@@ -1672,7 +1673,7 @@
 
             .p6menu{
                 position: absolute;
-                top: 107vh;
+                // top: 107vh;
                 left: 0vw;
                 width: 100vw;
                 height: 20vw;
@@ -1858,7 +1859,7 @@
 
             .p6feature1{
                 left: 45%;
-                top: 50%;
+                // top: 50%;
             }
 
             .p6feature2{
@@ -1930,7 +1931,7 @@
 
             .footer{
                 width: 100vw;
-                height: 150px;
+                height: 200px;
                 bottom: 0;
                 background-image: linear-gradient(to top, rgba(4, 17, 64, 0.9), rgba(47, 85, 118, 0.9));
                 position: absolute;
@@ -1981,7 +1982,7 @@
                             text-align: center;
                             font-size: 9pt;
                             margin: auto;
-                            scale: .6;
+                            // scale: .6;
 
                             & a{
                                 color: #9ed5ff;
@@ -1997,7 +1998,7 @@
                     .plus{
                         height: 50%;
                         display: flex;
-                        scale: .6;
+                        // scale: .6;
 
                         .lv{
                             width: 60px;
@@ -2072,7 +2073,7 @@
         .menubtn2{
             top: 5vw;
             right: 5vw;
-            translate: 0%;
+            translate: -50%;
         }
 
         .menubtnOpen{

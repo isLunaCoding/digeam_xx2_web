@@ -185,13 +185,21 @@
         border-radius: 30px;
         background-image: linear-gradient(to bottom, #98a8cb, #424e7e);
         cursor: pointer;
-        @include xl{
+
+        @include xl {
             left: 76px;
         }
-        @include lg{
-            left: 76px;
+
+        @include lg {
+            top: 2%;
+            left: 8%;
         }
-        @include sm{
+
+        @include xs {
+            width: 40px;
+            height: 40px;
+            left: 3%;
+            top: 1%;
         }
 
         &::before,
@@ -246,8 +254,9 @@
         // display: none;
         z-index: 10;
         height: 100vh;
-        background-image: linear-gradient(to bottom, rgba(179, 166, 211, 0.55), rgba(104, 145, 180, 0.55));
-        @include sm{
+        background-image: linear-gradient(to bottom, rgba(179, 166, 211, ), rgba(104, 145, 180, ));
+
+        @include sm {
             width: 100vw;
             height: 100vh;
         }
@@ -255,7 +264,8 @@
         ul {
             margin-top: 66%;
             text-align: center;
-            @include sm{
+
+            @include sm {
                 margin-top: 26%;
             }
 
@@ -264,16 +274,18 @@
                 font-weight: bold;
                 margin: 30px 0;
                 text-shadow: 0 0 10px #4b6898;
-                a{
+
+                a {
                     color: #fff;
                 }
-                .active{
+
+                .active {
                     filter: drop-shadow(0 0 13px #4b6898);
                     color: #ffe49e;
                     cursor: pointer;
                 }
 
-                &:hover{
+                &:hover {
                     filter: drop-shadow(0 0 13px #4b6898);
                     color: #ffe49e;
                     cursor: pointer;
