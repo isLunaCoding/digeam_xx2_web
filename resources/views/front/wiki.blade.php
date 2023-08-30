@@ -119,7 +119,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
-
         // menu點擊、hover
         $(document).ready(function() {
             $('.frontTitle').on('click', function() {
@@ -140,6 +139,16 @@
 
                     })
                 });
+            });
+        });
+
+        // serch 按下enter發送資訊
+        $(document).ready(function() {
+            $('#serchForm input[name="serch"]').on('keypress', function(event) {
+                if (event.which === 13) {
+                    event.preventDefault(); 
+                    $('#serchForm').submit(); 
+                }
             });
         });
     </script>
