@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Model\page;
+use App\Model\Page;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -50,7 +50,7 @@ class AnnouncementController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(page::findOrFail($id));
+        $show = new Show(Page::findOrFail($id));
 
         $show->field('title', __('標題'));
         $show->field('cate_id', __('分類'));
