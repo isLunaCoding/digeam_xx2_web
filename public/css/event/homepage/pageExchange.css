@@ -1,0 +1,89 @@
+.exchangePlayerInfo {
+  display: flex;
+  align-items: center;
+  margin: 50px 0 10px;
+}
+.exchangePlayerInfo .account {
+  display: flex;
+  align-items: center;
+  color: #234fac;
+  font-size: 20px;
+  width: 250px;
+  height: 29px;
+}
+.exchangePlayerInfo .account span {
+  color: #234fac;
+}
+.exchangePlayerInfo .logout,
+.exchangePlayerInfo .login {
+  color: #fff;
+  font-size: 20px;
+  width: 66px;
+  height: 29px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.exchangePlayerInfo .logout {
+  background-color: #94a7d7;
+  border: 1px solid #94a7d7;
+}
+.exchangePlayerInfo .login {
+  background-color: #153d97;
+  border: 1px solid #153d97;
+}
+
+#exchangeForm {
+  margin-top: 15px;
+}
+#exchangeForm .serchBox {
+  display: flex;
+}
+#exchangeForm input {
+  height: 29px;
+  width: 300px;
+  font-size: 20px;
+  border: 1px solid #234fac;
+  margin-right: 5px;
+}
+#exchangeForm select {
+  font-size: 20px;
+  width: 157px;
+  height: 29px;
+  color: #728dcc;
+  border-radius: 0px;
+  border: 1px solid #153d97;
+  line-height: 20px;
+  margin-right: 5px;
+}
+#exchangeForm .submit {
+  background-color: #153d97;
+  border: 1px solid #153d97;
+  color: #fff;
+  font-size: 20px;
+  width: 66px;
+  height: 29px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.exchangeLine {
+  background-color: #153d97;
+  width: 878px;
+  height: 1px;
+  margin: 35px 0;
+}
+
+.exchangePoint {
+  color: #959595;
+  font-size: 20px;
+  line-height: 33px;
+  margin-bottom: 50px;
+}
+.exchangePoint a {
+  color: #1049cd;
+}
+.exchangePoint a:hover {
+  font-weight: 600;
+}/*# sourceMappingURL=pageExchange.css.map */

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.regulationsTextBox {
+  font-family: "微軟正黑";
+  font-size: 16px;
+  position: relative;
+  line-height: 30px;
+  font-weight: 900;
+}
+.regulationsTextBox .red {
+  color: rgb(0, 103, 214);
+  border: none;
+  display: contents;
+}
+.regulationsTextBox h2 {
+  text-align: center;
+}
+.regulationsTextBox .table {
+  border-collapse: collapse;
+}
+.regulationsTextBox .table th {
+  border: 1px solid #002578;
+  background-color: #234fac;
+  height: 45px;
+  text-align: center;
+  line-height: 43px;
+  color: #fff;
+}
+.regulationsTextBox .table td {
+  border: 0.5px solid #002578;
+  font-weight: 400;
+  padding: 12px;
+  text-align: center;
+  color: #000;
+}
+.regulationsTextBox .table .textLeft {
+  text-align: left;
+}
+.regulationsTextBox .textRight {
+  width: 878px;
+  text-align: right;
+  font-family: "微軟正黑體";
+}/*# sourceMappingURL=pageRegulations.css.map */

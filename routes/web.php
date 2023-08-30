@@ -27,8 +27,32 @@ Route::middleware(['setReturnUrl'])->group(function () {
 Route::get('/index', function () {
     return view('front/index');
 });
+// 公告
 Route::get('/announcement', function () {
     return view('front/announcement');
+});
+Route::get('/announcementContent', function () {
+    return view('front/announcementContent');
+});
+// 領獎專區
+Route::get('/receiveAward', function () {
+    return view('front/receiveAward');
+});
+// 序號兌換
+Route::get('/exchange', function () {
+    return view('front/exchange');
+});
+// 下載
+Route::get('/download', function () {
+    return view('front/download');
+});
+// 遊戲規章
+Route::get('/regulations', function () {
+    return view('front/regulations');
+});
+// 百科
+Route::get('/wiki', function () {
+    return view('front/wiki');
 });
 
 

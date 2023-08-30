@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* 將大部分標籤的預設樣式重製成以下的內容 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@500;600;700;900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: #000;
+  position: relative;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 將 body 也就是整體的文字行高預設成 1 */
+body {
+  line-height: 1;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* 取消項目列表預設的輔助符號 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 隱藏引用標籤預設的引號(部分瀏覽器有) */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 重置引用標籤的偽元素 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* 將表格初始化 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 將連結初始化 */
+a {
+  text-decoration: none;
+}
+
+.loading-spinner .dots {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  font-family: "微軟正黑體";
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 1px solid #c3d9ff;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.appear {
+  transition: 0.5s linear;
+}
+.appear:hover {
+  transition: 0.5s linear;
+}
+
+.appear {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+.loading-spinner .dots {
+  width: 3.5em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.loading-spinner .dots div {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: #fc2f70;
+  animation: fade 0.8s ease-in-out alternate infinite;
+}
+.loading-spinner .dots div:nth-of-type(1) {
+  animation-delay: -0.4s;
+}
+.loading-spinner .dots div:nth-of-type(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.mainBG {
+  background-image: url("/img/event/wiki/wikiBG.jpg");
+  background-size: contain;
+  width: 1920px;
+  height: 950px;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mainBG .topBox {
+  width: 1550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-top: 25px;
+}
+.mainBG .topBox .leftBox {
+  display: flex;
+  align-items: center;
+}
+.mainBG .topBox .leftBox a {
+  margin-right: 30px;
+}
+.mainBG .topBox .leftBox .serch input {
+  width: 385.6px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #c8c8c8;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.mainBG .topBox .iconBox {
+  display: flex;
+}
+.mainBG .topBox .iconBox a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 2px solid #82a3d4;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+}
+.mainBG .topBox .iconBox a:nth-child(1) {
+  margin-right: 10px;
+}
+.mainBG .topBox .iconBox a img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.mainBG .mainBox {
+  margin: 0 auto;
+  width: 1550px;
+  height: 775px;
+  display: flex;
+}
+.mainBG .mainBox .menu {
+  background-color: #fff;
+  width: 242px;
+  height: 775px;
+}
+.mainBG .mainBox .menu .menuBox {
+  height: 600px;
+  width: 170px;
+  margin: 95px auto;
+  overflow-y: scroll;
+}
+.mainBG .mainBox .menu .menuBox::-webkit-scrollbar-thumb {
+  background: #bac5da;
+  border: 1px solid #bac5da;
+  border-radius: 5px;
+}
+.mainBG .mainBox .menu .frontTitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 19px;
+  cursor: pointer;
+}
+.mainBG .mainBox .menu .frontTitle:hover {
+  color: #004dc1;
+}
+.mainBG .mainBox .menu .frontTitle .liMiddle {
+  display: none;
+  font-size: 14px;
+  padding-left: 18px;
+  padding-top: 5px;
+}
+.mainBG .mainBox .menu .frontTitle .liMiddle a:hover {
+  color: #004dc1;
+}
+.mainBG .mainBox .menu .frontTitle .liMiddle .liSamll {
+  display: none;
+  padding-left: 14px;
+}
+.mainBG .mainBox .menu .frontTitle .liMiddle .liSamll:hover {
+  color: #004dc1;
+}
+.mainBG .mainBox .rightBox {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 1308px;
+  height: 775px;
+  padding: 50px 60.5px;
+}
+.mainBG .mainBox .rightBox .mainTextBox {
+  margin: 0 auto 10px;
+  width: 1187px;
+  height: 640px;
+}
+.mainBG .mainBox .rightBox .mainTextBox .title {
+  font-size: 36px;
+  font-weight: 600;
+}
+.mainBG .mainBox .rightBox .mainTextBox .line {
+  margin: 10px 0;
+  width: 1187px;
+  height: 1px;
+  background-color: rgba(151, 151, 151, 0.5176470588);
+}
+.mainBG .mainBox .rightBox .mainTextBox .text {
+  font-size: 18px;
+}
+.mainBG .mainBox .rightBox .mainTextBox .continueBtn {
+  background-color: #82a3d4;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #82a3d4;
+  padding: 0 10px;
+  margin: 30px 0 50px;
+}
+
+.footer {
+  border-top: #979797 1px solid;
+}
+.footer .footerBox {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footerBox .footerbox_logo img {
+  margin-right: 20px;
+}
+.footer .footerBox .copyright,
+.footer .footerBox .plus {
+  font-size: 10px;
+  line-height: 15px;
+}
+.footer .footerBox .copyright {
+  margin-right: 20px;
+}
+.footer .footerBox .copyright a {
+  color: #004dc1;
+  border-bottom: 1px solid #004dc1;
+}
+.footer .footerBox .plus {
+  display: flex;
+  align-items: center;
+}
+.footer .footerBox .plus img {
+  max-width: 34px;
+  max-height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=wiki.css.map */
