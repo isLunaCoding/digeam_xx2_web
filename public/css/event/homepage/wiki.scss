@@ -4,27 +4,214 @@
 
 
 
-.mainBG{
+.mainBG {
     background-image: url('/img/event/wiki/wikiBG.jpg');
     background-size: contain;
     width: 1920px;
     height: 950px;
     top: 0px;
     left: 0px;
-    .mainBox{
-        background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .topBox {
+        width: 1550px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding-top: 25px;
+
+        .leftBox {
+            display: flex;
+            align-items: center;
+
+            a {
+                margin-right: 30px;
+            }
+
+            .serch {
+                input {
+                    width: 385.6px;
+                    height: 40px;
+                    border-radius: 5px;
+                    border: 2px solid #c8c8c8;
+                    font-size: 16px;
+                    padding-left: 10px;
+                    padding-top: 5px;
+                }
+            }
+        }
+
+        .iconBox {
+            display: flex;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                border: 2px solid #82a3d4;
+                width: 40px;
+                height: 40px;
+                background-color: #fff;
+
+                &:nth-child(1) {
+                    margin-right: 10px;
+                }
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+
+            }
+        }
+    }
+
+    .mainBox {
+        margin: 0 auto;
         width: 1550px;
         height: 775px;
         display: flex;
-        .menu{
+
+        .menu {
             background-color: #fff;
             width: 242px;
             height: 775px;
+
+            .menuBox {
+                // background-color: #004dc1;
+                height: 600px;
+                width: 170px;
+                margin: 95px auto;
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar-thumb {
+                    background: #bac5da;
+                    border: 1px solid #bac5da;
+                    border-radius: 5px;
+                }
+            }
+
+            .frontTitle {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 19px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #004dc1;
+                }
+
+                .liMiddle {
+                    display: none;
+                    font-size: 14px;
+                    padding-left: 18px;
+                    padding-top: 5px;
+
+                    a:hover {
+                        color: #004dc1;
+                    }
+
+                    .liSamll {
+                        display: none;
+                        padding-left: 14px;
+
+                        &:hover {
+                            color: #004dc1;
+                        }
+                    }
+                }
+            }
         }
-        .mainTextBox{
-            background-color: #fff;
+
+        .rightBox {
+            background-color: rgba(255, 255, 255, .8);
             width: 1308px;
             height: 775px;
+            padding: 50px 60.5px;
+
+            .mainTextBox {
+                margin: 0 auto 10px;
+                width: 1187px;
+                height: 640px;
+                // background-color: #97979784;
+
+                .title {
+                    font-size: 36px;
+                    font-weight: 600;
+                }
+
+                .line {
+                    margin: 10px 0;
+                    width: 1187px;
+                    height: 1px;
+                    background-color: #97979784;
+
+                }
+
+                .text {
+                    font-size: 18px;
+                }
+
+                .continueBtn{
+                    background-color: #82a3d4;
+                    height: 40px;
+                    font-size: 18px;
+                    color: #fff;
+                    border: 1px solid #82a3d4;
+                    padding: 0 10px;
+                    margin: 30px 0 50px;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    border-top: #979797 1px solid;
+
+    .footerBox {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .footerbox_logo {
+            img {
+                margin-right: 20px;
+            }
+        }
+
+        .copyright,
+        .plus {
+            font-size: 10px;
+            line-height: 15px;
+        }
+
+        .copyright {
+            margin-right: 20px;
+
+            a {
+                color: #004dc1;
+                border-bottom: 1px solid #004dc1;
+            }
+        }
+
+        .plus {
+            display: flex;
+            align-items: center;
+
+
+            img {
+                max-width: 34px;
+                max-height: 35px;
+                object-fit: contain;
+            }
         }
     }
 }

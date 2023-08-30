@@ -36,44 +36,56 @@
             <div class="mainBG">
                 <div class="topBox">
                     <nav class="leftBox">
-                        <ul>
-                            <li><a href="#"><img src="/img/event/wiki/LOGO.png"></a></li>
-                            <li>
-                                <div class="serch">
-                                    <form id="serchForm" action=".php" method="post">
-                                        <input type="text" name="serch" placeholder="搜尋...">
-                                    </form>
-                                </div>
-                            </li>
-                        </ul>
+                        <a href="#"><img src="/img/event/wiki/LOGO.png"></a>
+
+                        <div class="serch">
+                            <form id="serchForm" action=".php" method="post">
+                                <input type="text" name="serch" placeholder="搜尋...">
+                            </form>
+                        </div>
+
                     </nav>
                     <nav class="iconBox">
-                        <ul>
-                            <li><a href="#"><img src="/img/event/wiki/social_icon_fb.png"></a></li>
-                            <li><a href="#"><img src="/img/event/wiki/social_icon_dc.png"></a></li>
-                        </ul>
+                        <a href="#"><img src="/img/event/wiki/social_icon_dc.png"></a>
+                        <a href="#"><img src="/img/event/wiki/social_icon_fb.png"></a>
                     </nav>
                 </div>
 
                 <div class="mainBox">
                     <menu class="menu">
-                        <ul>
-                            <li><a href="">回到官網</a></li>
-                            <li>
-                                <a href="">大標題</a>
-                                <ul>
-                                    <li>
-                                        <a href="">中標題</a>
-                                        <ul>
-                                            <li><a href="">小標題</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <div class="menuBox">
+                            <ul class="frontTitle">
+                                大標題題
+                                <li class="liMiddle">
+                                    <a href="">中標題題</a>
+                                    <ul>
+                                        <li class="liSamll"><a href="#">小標題題1</a></li>
+                                        <li class="liSamll"><a href="#">小標題題2</a></li>
+                                        <li class="liSamll"><a href="#">小標題題3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="frontTitle">
+                                大標題題
+                                <li class="liMiddle">
+                                    <a href="">中標題題</a>
+                                    <ul>
+                                        <li class="liSamll"><a href="#">小標題題1</a></li>
+                                        <li class="liSamll"><a href="#">小標題題2</a></li>
+                                        <li class="liSamll"><a href="#">小標題題3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </menu>
-                    <div class="mainTextBox">
-                        {{-- <footer class="footer">
+                    <div class="rightBox">
+                        <div class="mainTextBox">
+                            <div class="title">標題</div>
+                            <div class="line"></div>
+                            <div class="text">內文</div>
+                            <button class="continueBtn">繼續閱讀 →</button>
+                        </div>
+                        <footer class="footer">
                             <div class="footerBox">
                                 <div class="footerbox_logo">
                                     <img class="digeamlogo" src="/img/event/wiki/logo_digeam.png">
@@ -82,21 +94,21 @@
                                 <div class="copyright">
                                     <a href="https://www.digeam.com/terms">會員服務條款</a>
                                     <a href="https://www.digeam.com/terms2">隱私條款</a>
-                                    <p>掘夢網股份有限公司©2023<br>Copyright©DiGeam Corporation.<br>All Rights Reserved.</p>
+                                    <p>掘夢網股份有限公司©2023 Copyright©DiGeam Corporation.<br>All Rights Reserved.</p>
                                 </div>
                                 <div class="plus">
                                     <img class="plus15" src="/img/event/wiki/15plus.png">
-                                    <p>本遊戲為免費使用，部分內容涉及暴力情節。<br>
-                                        遊戲內另提供購買虛擬遊戲幣、物品等付費服務。<br>
+                                    <p>本遊戲為免費使用，部分內容涉及暴力情節。
                                         請注意遊戲時間，避免沉迷。​<br>
+                                        遊戲內另提供購買虛擬遊戲幣、物品等付費服務。<br>
                                         <span class="blue">本遊戲服務區域包含台灣、香港、澳門。</span>
                                     </p>
                                 </div>
                             </div>
-                        </footer> --}}
+                        </footer>
                     </div>
                 </div>
-                
+
 
             </div>
         </div>
@@ -106,6 +118,31 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        // menu點擊、hover
+        $(document).ready(function() {
+            $('.frontTitle').on('click', function() {
+                var liMiddle = $(this).find('.liMiddle');
+                liMiddle.slideToggle();
+
+                liMiddle.one('mouseenter', function() {
+                    var liSamll = $(this).find('.liSamll');
+                    liSamll.slideToggle();
+
+                    liSamll.on('click', function(event) {
+                        event.preventDefault();
+                        var link = $(this).find('a').attr('href');
+
+                        setTimeout(function() {
+                            window.location.href = link;
+                        }, 3000);
+
+                    })
+                });
+            });
+        });
+    </script>
 
 </body>
 
