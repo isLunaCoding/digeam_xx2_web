@@ -111,6 +111,7 @@
             background: url(/img/event/prereg/p2/bg2_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
+            height: 110vh;
 
             .bg2animate{
 
@@ -190,6 +191,7 @@
                 .p2steps{
                     width: 100%;
                     height: 40vh;
+                    scale: 1;
 
                     .step1{
                         margin: auto;
@@ -294,7 +296,7 @@
 
                     .checkbtn{
                         margin: auto;
-                        margin-top: -13%;
+                        margin-top: -8%;
                         width: 260px;
                         height: 101px;
                         background: url(/img/event/prereg/p2/btn1.png)no-repeat;
@@ -306,7 +308,7 @@
                         font-weight: bold;
                         text-align: center;
                         line-height: 101px;
-                        scale: 0.5;
+                        scale: 0.8;
 
                         &:hover{
                             background: url(/img/event/prereg/p2/btn1_hover.png)no-repeat;
@@ -318,7 +320,8 @@
                 .p2awards{
                     scale: 1;
                     width: 100%;
-                    height: 40vh;
+                    height:350px;
+                    margin-top: 5%;
 
                     .awardbox{
                         position: absolute;
@@ -332,8 +335,9 @@
 
                     .p2btns{
                         position: absolute;
+                        top: 17%;
                         left: 50%;
-                        translate: -50%;
+                        translate: -50% -100%;
                         width: 70%;
                         height: 20%;
                         color: #ffffff;
@@ -384,6 +388,7 @@
             background: url(/img/event/prereg/p3/bg3_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
+            height: 110vh;
 
             .bgclouds{
                 .bgcloud1{
@@ -487,7 +492,7 @@
 
                 .p3info{
                     position: absolute;
-                    top: -16%;
+                    top: -22%;
                     right: 50%;
                     translate: 50%;
                     width: 100%;
@@ -501,8 +506,8 @@
 
                     .p3listbtns{
                         position: absolute;
-                        top: 75%;
-                        right: -20%;
+                        top: 115%;
+                        right: 0%;
                         translate: 0%;
                         color: #ffffff;
                         font-size: 1.6rem;
@@ -688,8 +693,8 @@
                     .samplerules{
                         position: absolute;
                         top: 34%;
-                        left: 0%;
-                        translate: 0 -50%;
+                        left: 7%;
+                        translate: 0 -33%;
                         width: 85%;
                         height: auto;
 
@@ -712,7 +717,7 @@
                     .cardinfo{
                         position: absolute;
                         top: 50%;
-                        translate: 0 -85%;
+                        translate: 0 -79%;
                         width: 100%;
                         height: 100%;
                         display: none;
@@ -901,6 +906,7 @@
             background: url(/img/event/prereg/p4/bg4.png);
             background-size: cover;
             background-position: center;
+            height: 115vh;
 
             .bg4animate{
                 .bamboo{
@@ -974,7 +980,7 @@
 
             .p4main{
                 position: absolute;
-                top: 100%;
+                top: 90%;
                 left: 50%;
                 translate: -50% -100%;
                 width: 85vw;
@@ -1215,7 +1221,7 @@
 
                 .pandaGobtn{
                     position: absolute;
-                    top: 75%;
+                    top: 85%;
                     left: 50%;
                     translate: -50%;
                     width: 260px;
@@ -1240,7 +1246,7 @@
 
                 .p4awards{
                     position: absolute;
-                    top: 87%;
+                    top: 100%;
                     left: 50%;
                     translate: -50%;
                     color: #ffffff;
@@ -1322,6 +1328,7 @@
             background: url(/img/event/prereg/p5/bg5_m.png)no-repeat;
             background-size: cover;
             background-position: center;
+            height: 110vh;
 
             .p5title{
                 position: absolute;
@@ -1361,9 +1368,9 @@
                         top: 50%;
                         left: 50%;
                         translate: -50% -50%;
-                        border-radius: 30px;
-                        width: calc(70vw - 60px);
-                        height: calc(103vw - 60px);
+                        border-radius: 20px;
+                        width: calc(70vw - 40px);
+                        height: calc(103vw - 40px);
                         background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                         background-size: cover;
                         background-position: center;
@@ -1525,6 +1532,7 @@
             background: url(/img/event/prereg/p6/bg6_m.jpg);
             background-size: cover;
             background-position: center;
+            height: 110vh;
 
             .p6title{
                 position: absolute;
@@ -1543,8 +1551,8 @@
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
-                // left: -27%;
-                top: -15vh;
+                left: -12%;
+                top: -10vh;
                 scale: 0.6;
 
                 .humen{
@@ -1674,11 +1682,11 @@
 
             .p6menu{
                 position: absolute;
-                // top: 107vh;
+                top: 100%;
                 left: 0vw;
                 width: 100vw;
                 height: 20vw;
-                translate: 0 -120%;
+                translate: 0 -100%;
                 background: none;
                 background-size: contain;
                 background-position: top;
@@ -1797,6 +1805,7 @@
             }
 
             .bgclouds{
+                display: none;
                 .bgcloud1{
                     position: absolute;
                     width: 200vw;
@@ -1848,7 +1857,7 @@
                     position: absolute;
                     width: 70%;
                     height: auto;
-                    top: 26%;
+                    top: 30%;
                     left: 50%;
                     translate: -50%;
                     color: #000;
@@ -1872,6 +1881,7 @@
             background: url(/img/event/prereg/p7/bg7_m.png);
             background-size: cover;
             background-position: center;
+            height: 100vh;
 
             .p7title{
                 position: absolute;
@@ -2189,6 +2199,7 @@
             background: url(/img/event/prereg/p3/missionBG_m.png)no-repeat;
             background-size: contain;
             background-position: center;
+            scale: 0.8;
 
             .p3XX{
                 position: absolute;
@@ -2218,6 +2229,13 @@
                 background: url(/img/event/prereg/p3/missiontitle.png)no-repeat;
                 background-position: center;
                 background-size: contain;
+
+                .p3_desc {
+                    text-align: center;
+                    top: 51%;
+                    font-size: 14px;
+                    padding-right: 0%;
+                }
             }
             .p3missionpopText{
                 margin: auto;
@@ -2324,7 +2342,7 @@
             left: 50%;
             translate: -50% -50%;
             width: 90vw;
-            height: 62vh;
+            height: 75vh;
             background: url(/img/event/prereg/p3/resultpopBG.png)no-repeat;
             background-size: contain;
             background-position: center;
@@ -2469,7 +2487,7 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
-                scale: 1;
+                scale: 0.8;
 
                 .choosenew,.keepnow{
                     cursor: pointer;
@@ -3022,76 +3040,3 @@
     }
 
 }
-
-@media(max-width:495px){
-    /*選單連結(放進bar的css裡面會跑版所以放外面)*/
-    .swiper-pagination{
-        top: 50% !important;
-        left: 3% !important;
-        translate: 0%;
-        scale: 1.2;
-    }
-
-    /*大彈窗*/
-    .pop{
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(127, 140, 149, 0.5);
-        font-family: 'Noto Serif TC', serif;
-        z-index: 10;
-        display: none;
-
-        .popframe{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            translate: -50% -50%;
-            width: 90vw;
-            height: 90vw;
-            background: url(/img/event/prereg/pop_l/popL_frame.png)no-repeat;
-            background-size: contain;
-
-            .XX{
-                position: absolute;
-                top: 110%;
-                right: 50%;
-                translate: 50%;
-                width: 4vw;
-                height: 4vw;
-                cursor: pointer;
-                background: url(/img/event/prereg/pop_l/XX.png)no-repeat;
-                background-size: contain;
-                transition: 0.3s;
-                scale: 3;
-
-                &:hover{
-                    rotate: 90deg;
-                }
-            }
-
-            .poptitle{
-                position: absolute;
-                top: 8%;
-                left: 50%;
-                translate: -50%;
-                font-size: 1.8rem;
-                color: #15386c;
-                text-align: center;
-            }
-
-            .popText{
-                margin: auto;
-                margin-top: 22%;
-                width: 75%;
-                height: 70%;
-                list-style: decimal;
-                color: #15386c;
-                font-size: 1.3rem;
-                overflow-y: scroll;
-            }
-        }
-    }
-}
-

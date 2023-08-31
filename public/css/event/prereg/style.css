@@ -6054,7 +6054,318 @@ body {
   padding-right: 4%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1220px) {
+  .swiper .page4 {
+    background: url(/img/event/prereg/p4/bg4.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .swiper .page4 .p4main {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 80vw;
+    height: 70vh;
+  }
+  .swiper .page4 .p4main .p4info .p4btns {
+    width: auto;
+    height: auto;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    text-shadow: 0 0 5px #010101;
+    filter: drop-shadow(0 0 5px #2d3447);
+  }
+  .swiper .page6 {
+    background: url(/img/event/prereg/p6/bg6.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .swiper .page6 .p6title {
+    position: absolute;
+    top: 12vh;
+    left: 16vw;
+    width: 30vw;
+    height: 10vw;
+    background: url(/img/event/prereg/p6/title.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .swiper .page6 .roles {
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    left: 35%;
+  }
+  .swiper .page6 .roles .humen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    translate: -5vw;
+  }
+  .swiper .page6 .roles .humen .human1 {
+    position: absolute;
+    top: 43.6px;
+    left: 105.6px;
+    width: 853px;
+    height: 902px;
+    background: url(/img/event/prereg/p6/role1.png);
+    opacity: 1;
+  }
+  .swiper .page6 .roles .humen .human2 {
+    position: absolute;
+    top: 38.7px;
+    left: 186.4px;
+    width: 871px;
+    height: 688px;
+    background: url(/img/event/prereg/p6/role2.png);
+    opacity: 0;
+  }
+  .swiper .page6 .roles .humen .human3 {
+    position: absolute;
+    top: 106.59px;
+    left: 359.2px;
+    width: 472px;
+    height: 867px;
+    background: url(/img/event/prereg/p6/role3.png);
+    opacity: 0;
+  }
+  .swiper .page6 .roles .humen .human4 {
+    position: absolute;
+    top: 29px;
+    left: 206px;
+    width: 607px;
+    height: 948px;
+    background: url(/img/event/prereg/p6/role4.png);
+    opacity: 0;
+  }
+  .swiper .page6 .roles .humen .human5 {
+    position: absolute;
+    top: 116.28px;
+    left: 176.8px;
+    width: 637px;
+    height: 677px;
+    background: url(/img/event/prereg/p6/role5.png);
+    opacity: 0;
+  }
+  .swiper .page6 .roles .names {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    translate: -5vw;
+  }
+  .swiper .page6 .roles .names .name1 {
+    position: absolute;
+    top: -43.6px;
+    left: 316.8px;
+    width: 638px;
+    height: 609px;
+    background: url(/img/event/prereg/p6/roleName1.png);
+    opacity: 1;
+  }
+  .swiper .page6 .roles .names .name2 {
+    position: absolute;
+    top: -77.52px;
+    left: 240.8px;
+    width: 601px;
+    height: 635px;
+    background: url(/img/event/prereg/p6/roleName2.png);
+    opacity: 0;
+  }
+  .swiper .page6 .roles .names .name3 {
+    position: absolute;
+    top: -58.14px;
+    left: -80.8px;
+    width: 440px;
+    height: 588px;
+    background: url(/img/event/prereg/p6/roleName3.png);
+    opacity: 0;
+  }
+  .swiper .page6 .roles .names .name4 {
+    position: absolute;
+    top: -106.59px;
+    left: 226px;
+    width: 638px;
+    height: 619px;
+    background: url(/img/event/prereg/p6/roleName4.png);
+    opacity: 0;
+  }
+  .swiper .page6 .roles .names .name5 {
+    position: absolute;
+    top: -87.2px;
+    left: -32.8px;
+    width: 638px;
+    height: 635px;
+    background: url(/img/event/prereg/p6/roleName5.png);
+    opacity: 0;
+  }
+  .swiper .page6 .roles .arm {
+    position: absolute;
+    top: 363.375px;
+    left: 176.64px;
+    translate: -5vw;
+    width: 67px;
+    height: 147px;
+    background: url(/img/event/prereg/p6/roleArm.png) no-repeat;
+    background-size: contain;
+    color: #FFF;
+    font-family: "Noto Serif TC", serif;
+    font-size: 18pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 20pt;
+  }
+  .swiper .page6 .p6menu {
+    position: absolute;
+    top: 42%;
+    left: 48%;
+    width: 542px;
+    height: 417px;
+    background: url(/img/event/prereg/p6/menuBG.png) no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+  .swiper .page6 .p6menu div {
+    position: absolute;
+    cursor: pointer;
+  }
+  .swiper .page6 .p6menu div:hover {
+    scale: 1.05;
+  }
+  .swiper .page6 .p6menu .p6btn1 {
+    top: 25%;
+    left: 86%;
+    width: 109px;
+    height: 75px;
+    background: url(/img/event/prereg/p6/btn1.png) no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+  }
+  .swiper .page6 .p6menu .p6btn1:hover {
+    background: url(/img/event/prereg/p6/btn1_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn1_2 {
+    background: url(/img/event/prereg/p6/btn1_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn2 {
+    top: 46%;
+    left: 78%;
+    width: 109px;
+    height: 75px;
+    background: url(/img/event/prereg/p6/btn2.png) no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+  }
+  .swiper .page6 .p6menu .p6btn2:hover {
+    background: url(/img/event/prereg/p6/btn2_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn2_2 {
+    background: url(/img/event/prereg/p6/btn2_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn3 {
+    top: 63%;
+    left: 65%;
+    width: 109px;
+    height: 75px;
+    background: url(/img/event/prereg/p6/btn3.png) no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+  }
+  .swiper .page6 .p6menu .p6btn3:hover {
+    background: url(/img/event/prereg/p6/btn3_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn3_2 {
+    background: url(/img/event/prereg/p6/btn3_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn4 {
+    top: 77%;
+    left: 50%;
+    width: 109px;
+    height: 75px;
+    background: url(/img/event/prereg/p6/btn4.png) no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+  }
+  .swiper .page6 .p6menu .p6btn4:hover {
+    background: url(/img/event/prereg/p6/btn4_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn4_2 {
+    background: url(/img/event/prereg/p6/btn4_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn5 {
+    top: 86%;
+    left: 32%;
+    width: 109px;
+    height: 75px;
+    background: url(/img/event/prereg/p6/btn5.png) no-repeat;
+    background-size: contain;
+    transition: 0.5s;
+  }
+  .swiper .page6 .p6menu .p6btn5:hover {
+    background: url(/img/event/prereg/p6/btn5_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6menu .p6btn5_2 {
+    background: url(/img/event/prereg/p6/btn5_hover.png) no-repeat;
+    background-size: contain;
+  }
+  .swiper .page6 .p6features {
+    position: absolute;
+    width: 30vw;
+    height: 11.75vw;
+    translate: -30%;
+    background: url(/img/event/prereg/p6/textBG.png) no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+  .swiper .page6 .p6features .p6subtitle {
+    position: absolute;
+    width: 15vw;
+    height: 3.45vw;
+    background: url(/img/event/prereg/p6/subtitleBG.png) no-repeat;
+    background-position: top;
+    background-size: contain;
+    font-family: "Noto Serif TC", serif;
+    color: #FFF;
+    font-size: 17pt;
+    text-align: center;
+    line-height: 3.3vw;
+    letter-spacing: 1px;
+  }
+  .swiper .page6 .p6features .p6text {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    top: 35%;
+    left: 50%;
+    translate: -50%;
+    color: #000;
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  .swiper .page6 .p6feature1 {
+    left: 15%;
+    top: 33%;
+  }
+  .swiper .page6 .p6feature2 {
+    left: 20%;
+    top: 60%;
+  }
+}
+@media (max-width: 1100px) {
   .pop .popframe {
     width: 50%;
     height: 70%;
@@ -6842,8 +7153,10 @@ body {
     background: url(/img/event/prereg/p2/bg2_m.jpg) no-repeat;
     background-position: center;
     background-size: cover;
+    height: 1130px;
   }
-  .swiper .page2 .bg2animate .bird1, .swiper .page2 .bg2animate .bird2 {
+  .swiper .page2 .bg2animate .bird1,
+  .swiper .page2 .bg2animate .bird2 {
     position: absolute;
     filter: drop-shadow(0 0 3px rgba(78, 104, 113, 0.7));
     z-index: 10;
@@ -6903,17 +7216,18 @@ body {
     left: 50%;
     translate: -50%;
     width: 80vw;
-    height: 80vh;
+    height: auto;
     display: block;
   }
   .swiper .page2 .p2main .p2steps {
     width: 100%;
-    height: 40vh;
+    height: 595px;
+    scale: 0.8;
   }
   .swiper .page2 .p2main .p2steps .step1 {
     margin: auto;
-    margin-top: 0%;
-    width: 80%;
+    margin-top: 20px;
+    width: 50%;
     height: 10%;
     background: url(/img/event/prereg/p2/step1.png) no-repeat;
     background-size: contain;
@@ -6951,8 +7265,8 @@ body {
   }
   .swiper .page2 .p2main .p2steps .step2 {
     margin: auto;
-    margin-top: 0%;
-    width: 80%;
+    margin-top: 55px;
+    width: 50%;
     height: 10%;
     background: url(/img/event/prereg/p2/step2.png) no-repeat;
     background-size: contain;
@@ -6961,29 +7275,30 @@ body {
   .swiper .page2 .p2main .p2steps .step2checkbox {
     margin: auto;
     margin-top: 2%;
-    width: -moz-fit-content;
-    width: fit-content;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
     color: #274f72;
   }
   .swiper .page2 .p2main .p2steps .step2checkbox form div select {
-    width: 20%;
-    height: 34px;
-    font-size: 16px;
+    width: 30%;
+    height: 44px;
+    font-size: 22px;
     padding: 0;
     padding-left: 3px;
     border: none;
     border-top: 0.5px solid #FFF;
   }
   .swiper .page2 .p2main .p2steps .step2checkbox form div input {
-    width: 50%;
-    height: 34px;
-    font-size: 16px;
+    width: 68%;
+    height: 44px;
+    font-size: 22px;
     padding: 0;
     padding-left: 10px;
     border: none;
+  }
+  .swiper .page2 .p2main .p2steps .step2checkbox form p {
+    margin-top: 15px;
   }
   .swiper .page2 .p2main .p2steps .step2checkbox form p input {
     width: 19px;
@@ -7013,14 +7328,14 @@ body {
   .swiper .page2 .p2main .p2awards {
     scale: 1;
     width: 100%;
-    height: 40vh;
+    height: 350px;
     margin-top: 1%;
   }
   .swiper .page2 .p2main .p2awards .awardbox {
     position: absolute;
     bottom: 0%;
     width: 100%;
-    height: 80%;
+    height: 100%;
     background: url(/img/event/prereg/p2/award_m.png) no-repeat;
     background-position: center;
     background-size: contain;
@@ -7028,6 +7343,7 @@ body {
   .swiper .page2 .p2main .p2awards .p2btns {
     position: absolute;
     left: 50%;
+    bottom: 108%;
     translate: -50%;
     width: 80%;
     height: 12%;
@@ -7036,16 +7352,20 @@ body {
     font-weight: bold;
     display: flex;
     text-align: center;
+    scale: 1;
     text-shadow: 0 0 5px #010101;
   }
-  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn {
+  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn,
+  .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn {
     width: 50%;
     background: url(/img/event/prereg/p2/btn2.png) no-repeat;
     background-position: center;
     background-size: contain;
     cursor: pointer;
   }
-  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::before, .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::after, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::before, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::after {
+  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::before, .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::after,
+  .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::before,
+  .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::after {
     position: absolute;
     content: "";
     width: 32px;
@@ -7054,20 +7374,25 @@ body {
     background-position: center;
     transition: 0.3s;
   }
-  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::before, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::before {
-    left: 24px;
+  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::before,
+  .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::before {
+    left: 41px;
   }
-  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::after, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::after {
+  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::after,
+  .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::after {
     scale: -1;
-    right: 24px;
+    right: 41px;
   }
-  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover::before, .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover::after, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover::before, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover::after {
+  .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover::before, .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover::after,
+  .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover::before,
+  .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover::after {
     transform: translateX(-5px);
   }
   .swiper .page3 {
     background: url(/img/event/prereg/p3/bg3_m.jpg) no-repeat;
     background-position: center;
     background-size: cover;
+    height: 1175px;
   }
   .swiper .page3 .bgclouds .bgcloud1 {
     position: absolute;
@@ -7102,11 +7427,11 @@ body {
   }
   .swiper .page3 .p3main {
     position: absolute;
-    top: 60%;
+    top: 56%;
     left: 50%;
     translate: -50% -50%;
-    width: 80vw;
-    height: 66vh;
+    width: 80%;
+    height: 761px;
     background: url(/img/event/prereg/p3/mainBG3_m.png) no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -7154,14 +7479,14 @@ body {
   }
   .swiper .page3 .p3main .p3info {
     position: absolute;
-    top: -22%;
+    top: -17%;
     right: 50%;
     translate: 50%;
     width: 100%;
     z-index: 1;
   }
   .swiper .page3 .p3main .p3info p {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     color: #21345d;
   }
@@ -7216,22 +7541,24 @@ body {
   }
   .swiper .page3 .p3main .p3btns {
     position: absolute;
-    top: 100%;
+    top: 104%;
     right: 50%;
     translate: 50%;
-    width: 100%;
+    width: 80%;
     height: auto;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 20px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     text-align: center;
     text-shadow: 0 0 5px #010101;
     filter: drop-shadow(0 0 5px #2d3447);
-    scale: 1.1;
+    scale: 1;
   }
-  .swiper .page3 .p3main .p3btns .p3informationbtn, .swiper .page3 .p3main .p3btns .p3missionbtn, .swiper .page3 .p3main .p3btns .p3noticebtn {
+  .swiper .page3 .p3main .p3btns .p3informationbtn,
+  .swiper .page3 .p3main .p3btns .p3missionbtn,
+  .swiper .page3 .p3main .p3btns .p3noticebtn {
     position: relative;
     width: 202px;
     height: 60px;
@@ -7245,42 +7572,57 @@ body {
     transition: 0.3s;
     scale: 0.95;
   }
-  .swiper .page3 .p3main .p3btns .p3informationbtn::before, .swiper .page3 .p3main .p3btns .p3informationbtn::after, .swiper .page3 .p3main .p3btns .p3missionbtn::before, .swiper .page3 .p3main .p3btns .p3missionbtn::after, .swiper .page3 .p3main .p3btns .p3noticebtn::before, .swiper .page3 .p3main .p3btns .p3noticebtn::after {
+  .swiper .page3 .p3main .p3btns .p3informationbtn::before, .swiper .page3 .p3main .p3btns .p3informationbtn::after,
+  .swiper .page3 .p3main .p3btns .p3missionbtn::before,
+  .swiper .page3 .p3main .p3btns .p3missionbtn::after,
+  .swiper .page3 .p3main .p3btns .p3noticebtn::before,
+  .swiper .page3 .p3main .p3btns .p3noticebtn::after {
     position: absolute;
     content: "";
     width: 32px;
     height: 54px;
     transition: 0.3s;
   }
-  .swiper .page3 .p3main .p3btns .p3informationbtn::before, .swiper .page3 .p3main .p3btns .p3missionbtn::before, .swiper .page3 .p3main .p3btns .p3noticebtn::before {
+  .swiper .page3 .p3main .p3btns .p3informationbtn::before,
+  .swiper .page3 .p3main .p3btns .p3missionbtn::before,
+  .swiper .page3 .p3main .p3btns .p3noticebtn::before {
     left: 0px;
     background: url(/img/event/prereg/p3/btn3_hover1.png) no-repeat;
     background-position: center;
   }
-  .swiper .page3 .p3main .p3btns .p3informationbtn::after, .swiper .page3 .p3main .p3btns .p3missionbtn::after, .swiper .page3 .p3main .p3btns .p3noticebtn::after {
+  .swiper .page3 .p3main .p3btns .p3informationbtn::after,
+  .swiper .page3 .p3main .p3btns .p3missionbtn::after,
+  .swiper .page3 .p3main .p3btns .p3noticebtn::after {
     right: 0px;
     background: url(/img/event/prereg/p3/btn3_hover2.png) no-repeat;
     background-position: center;
   }
-  .swiper .page3 .p3main .p3btns .p3informationbtn:hover::before, .swiper .page3 .p3main .p3btns .p3missionbtn:hover::before, .swiper .page3 .p3main .p3btns .p3noticebtn:hover::before {
+  .swiper .page3 .p3main .p3btns .p3informationbtn:hover::before,
+  .swiper .page3 .p3main .p3btns .p3missionbtn:hover::before,
+  .swiper .page3 .p3main .p3btns .p3noticebtn:hover::before {
     transform: translateX(-5px);
   }
-  .swiper .page3 .p3main .p3btns .p3informationbtn:hover::after, .swiper .page3 .p3main .p3btns .p3missionbtn:hover::after, .swiper .page3 .p3main .p3btns .p3noticebtn:hover::after {
+  .swiper .page3 .p3main .p3btns .p3informationbtn:hover::after,
+  .swiper .page3 .p3main .p3btns .p3missionbtn:hover::after,
+  .swiper .page3 .p3main .p3btns .p3noticebtn:hover::after {
     transform: translateX(5px);
   }
-  .swiper .page3 .p3main .p3btns .p3informationbtn:hover, .swiper .page3 .p3main .p3btns .p3missionbtn:hover, .swiper .page3 .p3main .p3btns .p3noticebtn:hover {
+  .swiper .page3 .p3main .p3btns .p3informationbtn:hover,
+  .swiper .page3 .p3main .p3btns .p3missionbtn:hover,
+  .swiper .page3 .p3main .p3btns .p3noticebtn:hover {
     letter-spacing: 3px;
   }
   .swiper .page3 .p3main .lanternbox {
     position: absolute;
-    top: 0px;
-    left: -90px;
+    top: 28px;
+    left: -70px;
     translate: 0%;
     width: 228.8px;
     height: 501.6px;
     transform-origin: 115.2px 0px;
     rotate: 0deg;
     z-index: 1;
+    scale: 0.9;
   }
   .swiper .page3 .p3main .lanternbox .lantern_light {
     position: absolute;
@@ -7319,7 +7661,7 @@ body {
   }
   .swiper .page3 .p3main .p3text {
     position: absolute;
-    top: 65%;
+    top: 71%;
     right: 45%;
     translate: 50% -50%;
     width: 75%;
@@ -7365,7 +7707,8 @@ body {
     text-shadow: 0 0 10px #103aa3;
     text-align: center;
   }
-  .swiper .page3 .p3main .p3text .cardinfo .cardname::before, .swiper .page3 .p3main .p3text .cardinfo .cardname::after {
+  .swiper .page3 .p3main .p3text .cardinfo .cardname::before,
+  .swiper .page3 .p3main .p3text .cardinfo .cardname::after {
     position: absolute;
     content: "";
     top: 6%;
@@ -7381,7 +7724,8 @@ body {
     right: 5%;
     scale: -1;
   }
-  .swiper .page3 .p3main .p3text .cardinfo .value, .swiper .page3 .p3main .p3text .cardinfo .skill {
+  .swiper .page3 .p3main .p3text .cardinfo .value,
+  .swiper .page3 .p3main .p3text .cardinfo .skill {
     width: -moz-fit-content;
     width: fit-content;
     height: auto;
@@ -7396,29 +7740,33 @@ body {
   .swiper .page3 .p3main .p3text .cardinfo .value {
     margin-top: 35%;
   }
-  .swiper .page3 .p3main .p3text .cardinfo .valuetable, .swiper .page3 .p3main .p3text .cardinfo .skilltable {
+  .swiper .page3 .p3main .p3text .cardinfo .valuetable,
+  .swiper .page3 .p3main .p3text .cardinfo .skilltable {
     margin: 10px auto 15px auto;
     width: 70%;
     border-collapse: collapse;
     font-size: 21px;
     font-weight: bold;
   }
-  .swiper .page3 .p3main .p3text .cardinfo .valuetable td, .swiper .page3 .p3main .p3text .cardinfo .skilltable td {
+  .swiper .page3 .p3main .p3text .cardinfo .valuetable td,
+  .swiper .page3 .p3main .p3text .cardinfo .skilltable td {
     width: 50%;
   }
-  .swiper .page3 .p3main .p3text .cardinfo .valuetable td span, .swiper .page3 .p3main .p3text .cardinfo .skilltable td span {
+  .swiper .page3 .p3main .p3text .cardinfo .valuetable td span,
+  .swiper .page3 .p3main .p3text .cardinfo .skilltable td span {
     color: #eaf4ff;
   }
   .swiper .page3 .p3main .card {
     position: absolute;
-    top: 26%;
+    top: 30%;
     left: 50%;
     translate: -50% -50%;
     width: 40%;
     height: 90%;
     scale: 0.7;
   }
-  .swiper .page3 .p3main .card .nocard, .swiper .page3 .p3main .card .nowcard {
+  .swiper .page3 .p3main .card .nocard,
+  .swiper .page3 .p3main .card .nowcard {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -7426,7 +7774,8 @@ body {
     width: 411px;
     height: 411px;
   }
-  .swiper .page3 .p3main .card .nocard .card_bg, .swiper .page3 .p3main .card .nowcard .card_bg {
+  .swiper .page3 .p3main .card .nocard .card_bg,
+  .swiper .page3 .p3main .card .nowcard .card_bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -7436,7 +7785,8 @@ body {
     -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
     mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
   }
-  .swiper .page3 .p3main .card .nocard .card_cloud1, .swiper .page3 .p3main .card .nowcard .card_cloud1 {
+  .swiper .page3 .p3main .card .nocard .card_cloud1,
+  .swiper .page3 .p3main .card .nowcard .card_cloud1 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -7447,7 +7797,8 @@ body {
     mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
     animation: p3cloud1 2s infinite alternate ease-in-out;
   }
-  .swiper .page3 .p3main .card .nocard .card_cloud2, .swiper .page3 .p3main .card .nowcard .card_cloud2 {
+  .swiper .page3 .p3main .card .nocard .card_cloud2,
+  .swiper .page3 .p3main .card .nowcard .card_cloud2 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -7458,7 +7809,8 @@ body {
     mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
     animation: p3cloud2 2s infinite alternate ease-in-out;
   }
-  .swiper .page3 .p3main .card .nocard .card_frame, .swiper .page3 .p3main .card .nowcard .card_frame {
+  .swiper .page3 .p3main .card .nocard .card_frame,
+  .swiper .page3 .p3main .card .nowcard .card_frame {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -7484,7 +7836,7 @@ body {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 77%;
+    top: 78%;
     left: 50%;
     translate: -50%;
     color: #FFF;
@@ -7493,7 +7845,7 @@ body {
   }
   .swiper .page3 .p3main .p4Gobtn {
     position: absolute;
-    top: 85%;
+    top: 91%;
     left: 50%;
     translate: -50%;
     width: 260px;
@@ -7516,6 +7868,7 @@ body {
     background: url(/img/event/prereg/p4/bg4.png);
     background-size: cover;
     background-position: center;
+    height: 1142px;
   }
   .swiper .page4 .bg4animate .bamboo {
     position: absolute;
@@ -7581,20 +7934,20 @@ body {
   }
   .swiper .page4 .p4main {
     position: absolute;
-    top: 100%;
+    top: 91%;
     left: 50%;
     translate: -50% -100%;
     width: 80vw;
-    height: 80vh;
+    height: 700px;
   }
   .swiper .page4 .p4main .p4info {
     position: absolute;
-    top: -8%;
+    top: -25%;
     right: 0%;
     width: 100%;
   }
   .swiper .page4 .p4main .p4info p {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     color: #21345d;
     text-align: center;
@@ -7611,7 +7964,8 @@ body {
     text-shadow: 0 0 5px #010101;
     filter: drop-shadow(0 0 5px #2d3447);
   }
-  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn {
+  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn,
+  .swiper .page4 .p4main .p4info .p4btns .p4noticebtn {
     position: relative;
     width: 202px;
     height: 54px;
@@ -7625,30 +7979,37 @@ body {
     transition: 0.3s;
     scale: 0.95;
   }
-  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::before, .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::after, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::before, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::after {
+  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::before, .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::after,
+  .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::before,
+  .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::after {
     position: absolute;
     content: "";
     width: 32px;
     height: 54px;
     transition: 0.3s;
   }
-  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::before, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::before {
+  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::before,
+  .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::before {
     left: 0px;
     background: url(/img/event/prereg/p4/btn2_hover1.png) no-repeat;
     background-position: center;
   }
-  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::after, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::after {
+  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::after,
+  .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::after {
     right: 0px;
     background: url(/img/event/prereg/p4/btn2_hover2.png) no-repeat;
     background-position: center;
   }
-  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover::before, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover::before {
+  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover::before,
+  .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover::before {
     transform: translateX(-5px);
   }
-  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover::after, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover::after {
+  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover::after,
+  .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover::after {
     transform: translateX(5px);
   }
-  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover {
+  .swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover,
+  .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover {
     letter-spacing: 3px;
   }
   .swiper .page4 .p4main .pandas {
@@ -7793,7 +8154,7 @@ body {
   }
   .swiper .page4 .p4main .pandaGobtn {
     position: absolute;
-    top: 80%;
+    top: 87%;
     left: 50%;
     translate: -50%;
     width: 260px;
@@ -7814,7 +8175,7 @@ body {
   }
   .swiper .page4 .p4main .p4awards {
     position: absolute;
-    top: 90%;
+    top: 102%;
     left: 50%;
     translate: -50%;
     color: #ffffff;
@@ -7865,7 +8226,7 @@ body {
     position: absolute;
     top: 35%;
     right: 0%;
-    left: -12%;
+    left: -5%;
     translate: 0% 0%;
     width: 248.2px;
     height: 104.55px;
@@ -7878,13 +8239,14 @@ body {
     line-height: 25px;
   }
   .swiper .page4 .p4main .times p {
-    padding-right: 50px;
-    line-height: 40px;
+    padding-right: 71px;
+    line-height: 34px;
   }
   .swiper .page5 {
     background: url(/img/event/prereg/p5/bg5_m.png) no-repeat;
     background-size: cover;
     background-position: center;
+    height: 1080px;
   }
   .swiper .page5 .p5title {
     position: absolute;
@@ -7961,7 +8323,10 @@ body {
   .swiper .page5 .p5slideBox .p5slider .p5slide4 {
     background: url(/img/event/prereg/p5/slide4_m.jpg) no-repeat;
   }
-  .swiper .page5 .p5slideBox .p5slider .p5slide1, .swiper .page5 .p5slideBox .p5slider .p5slide2, .swiper .page5 .p5slideBox .p5slider .p5slide3, .swiper .page5 .p5slideBox .p5slider .p5slide4 {
+  .swiper .page5 .p5slideBox .p5slider .p5slide1,
+  .swiper .page5 .p5slideBox .p5slider .p5slide2,
+  .swiper .page5 .p5slideBox .p5slider .p5slide3,
+  .swiper .page5 .p5slideBox .p5slider .p5slide4 {
     border-radius: 30px;
     background-size: cover;
     background-position: center;
@@ -8058,10 +8423,11 @@ body {
     background: url(/img/event/prereg/p6/bg6_m.jpg);
     background-size: cover;
     background-position: center;
+    height: 1500px;
   }
   .swiper .page6 .p6title {
     position: absolute;
-    top: 5vh;
+    top: 5%;
     left: 50%;
     translate: -50%;
     width: 51vw;
@@ -8076,7 +8442,7 @@ body {
     width: 100vw;
     height: 100vh;
     left: 0%;
-    top: 8vh;
+    top: 11%;
     scale: 1;
   }
   .swiper .page6 .roles .humen {
@@ -8200,7 +8566,7 @@ body {
   }
   .swiper .page6 .p6menu {
     position: absolute;
-    top: 100vh;
+    top: 1455px;
     left: 0vw;
     width: 100vw;
     height: 20vw;
@@ -8210,6 +8576,7 @@ body {
     background-position: top;
     display: flex;
     justify-content: center;
+    scale: 0.8;
   }
   .swiper .page6 .p6menu div {
     position: static;
@@ -8365,11 +8732,11 @@ body {
   }
   .swiper .page6 .p6feature1 {
     left: 40%;
-    top: 55%;
+    top: 59%;
   }
   .swiper .page6 .p6feature2 {
     left: 60%;
-    top: calc(50% + 28vw);
+    top: 73%;
   }
   .swiper .page7 {
     background: url(/img/event/prereg/p7/bg7_m.png);
@@ -8643,14 +9010,15 @@ body {
     translate: -50% -50%;
     width: 90vw;
     height: 90vw;
+    scale: 0.9;
     background: url(/img/event/prereg/p3/missionBG_m.png) no-repeat;
     background-size: contain;
     background-position: center;
   }
   .p3missionpop .p3missionpopframe .p3XX {
     position: absolute;
-    top: 110%;
-    right: 50%;
+    top: 2%;
+    right: 19%;
     translate: 50%;
     width: 4vw;
     height: 4vw;
@@ -8658,10 +9026,14 @@ body {
     background: url(/img/event/prereg/p3/XX.png) no-repeat;
     background-size: contain;
     transition: 0.3s;
-    scale: 2.5;
+    scale: 2;
   }
   .p3missionpop .p3missionpopframe .p3XX:hover {
     rotate: 90deg;
+  }
+  .p3missionpop .p3missionpopframe .p3_desc {
+    top: 76%;
+    font-size: 21px;
   }
   .p3missionpop .p3missionpopframe .p3missionpoptitle {
     position: absolute;
@@ -8675,9 +9047,9 @@ body {
   }
   .p3missionpop .p3missionpopframe .p3missionpopText {
     margin: auto;
-    margin-top: 27%;
-    width: 70%;
-    height: 73%;
+    margin-top: 36%;
+    width: 60%;
+    height: 51%;
     list-style: decimal;
     color: #15386c;
     font-size: 1.3rem;
@@ -8687,14 +9059,14 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li {
     list-style: none;
     margin: 10px 0;
-    padding-left: 8%;
+    padding-left: 5px;
     height: 50px;
     background-color: #dfeaf5;
     line-height: 50px;
     display: flex;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
-    width: 55%;
+    width: 65%;
     height: 100%;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
@@ -8702,20 +9074,17 @@ body {
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
-    width: 20%;
+    width: 26%;
     height: 100%;
     font-size: 1rem;
     text-align: end;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn {
-    width: 25%;
+    width: 18%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
     cursor: pointer;
     transition: 0.3s;
-  }
-  .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn:hover {
-    background-position: right;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li::before {
     position: absolute;
@@ -8866,7 +9235,8 @@ body {
     pointer-events: none;
     scale: 1.3;
   }
-  .p3resultpop .p3resultpopframe .newinfotable, .p3resultpop .p3resultpopframe .nowinfotable {
+  .p3resultpop .p3resultpopframe .newinfotable,
+  .p3resultpop .p3resultpopframe .nowinfotable {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -8875,13 +9245,16 @@ body {
     height: 100%;
     font-weight: bold;
   }
-  .p3resultpop .p3resultpopframe .newinfotable tr, .p3resultpop .p3resultpopframe .nowinfotable tr {
+  .p3resultpop .p3resultpopframe .newinfotable tr,
+  .p3resultpop .p3resultpopframe .nowinfotable tr {
     font-size: 15px;
   }
-  .p3resultpop .p3resultpopframe .newinfotable tr td, .p3resultpop .p3resultpopframe .nowinfotable tr td {
+  .p3resultpop .p3resultpopframe .newinfotable tr td,
+  .p3resultpop .p3resultpopframe .nowinfotable tr td {
     width: 50%;
   }
-  .p3resultpop .p3resultpopframe .newinfotable tr td span, .p3resultpop .p3resultpopframe .nowinfotable tr td span {
+  .p3resultpop .p3resultpopframe .newinfotable tr td span,
+  .p3resultpop .p3resultpopframe .nowinfotable tr td span {
     color: #eaf4ff;
   }
   .p3resultpop .p3resultpopframe .p3resultbtns {
@@ -8893,7 +9266,8 @@ body {
     justify-content: center;
     scale: 1.1;
   }
-  .p3resultpop .p3resultpopframe .p3resultbtns .choosenew, .p3resultpop .p3resultpopframe .p3resultbtns .keepnow {
+  .p3resultpop .p3resultpopframe .p3resultbtns .choosenew,
+  .p3resultpop .p3resultpopframe .p3resultbtns .keepnow {
     cursor: pointer;
     text-align: center;
     color: #FFF;
@@ -8903,7 +9277,8 @@ body {
     background-image: linear-gradient(to bottom, #606994, #21466a);
     transition: 0.3s;
   }
-  .p3resultpop .p3resultpopframe .p3resultbtns .choosenew:hover, .p3resultpop .p3resultpopframe .p3resultbtns .keepnow:hover {
+  .p3resultpop .p3resultpopframe .p3resultbtns .choosenew:hover,
+  .p3resultpop .p3resultpopframe .p3resultbtns .keepnow:hover {
     transform: translateY(-2px);
   }
   .p3resultpop .p3resultpopframe .p3resultbtns .choosenew {
@@ -9167,13 +9542,14 @@ body {
     translate: -50% -50%;
     width: 90vw;
     height: 90vw;
+    scale: 0.8;
     background: url(/img/event/prereg/pop_l/popL_frame.png) no-repeat;
     background-size: contain;
   }
   .pop .popframe .XX {
     position: absolute;
-    top: 110%;
-    right: 50%;
+    top: 10%;
+    right: 13%;
     translate: 50%;
     width: 4vw;
     height: 4vw;
@@ -9181,7 +9557,7 @@ body {
     background: url(/img/event/prereg/pop_l/XX.png) no-repeat;
     background-size: contain;
     transition: 0.3s;
-    scale: 2.5;
+    scale: 2;
   }
   .pop .popframe .XX:hover {
     rotate: 90deg;
@@ -9191,7 +9567,7 @@ body {
     top: 10%;
     left: 50%;
     translate: -50%;
-    font-size: 1.8rem;
+    font-size: 34px;
     color: #15386c;
     text-align: center;
   }
@@ -9224,6 +9600,7 @@ body {
   .pop .popframe .popText li {
     margin: 5px 0;
     padding-right: 3%;
+    font-size: 27px;
   }
   .pop .popframe .popText li span {
     color: #91006a;
@@ -9451,764 +9828,44 @@ body {
     background: url(/img/event/prereg/p1/downbtn_tri2.png);
     animation: downbtnfloat 1s infinite alternate-reverse ease-out;
   }
-  .swiper .page4 .p4main {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    translate: -50% -100%;
-    width: 80vw;
-    height: 80vh;
+  .swiper .page2 {
+    height: 1500px;
   }
-  .swiper .page4 .p4main .pandas {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    top: 25%;
-    left: 47%;
-    translate: -50% 0%;
-    scale: 0.65;
+  .swiper .page2 .p2main {
+    height: 1200px;
   }
-  .swiper .page4 .p4main .p4awards {
-    position: absolute;
-    top: 91%;
-    left: 50%;
-    translate: -50%;
-    color: #ffffff;
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-align: center;
-    width: 202px;
-    height: 54px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background: url(/img/event/prereg/p4/btn3.png) no-repeat;
-    background-position: center;
-    background-size: contain;
-    text-shadow: 0 0 5px #010101;
-    filter: drop-shadow(0 0 5px #2d3447);
-    cursor: pointer;
-    transition: 0.3s;
-    scale: 0.95;
-  }
-  .swiper .page4 .p4main .p4awards::before, .swiper .page4 .p4main .p4awards::after {
-    position: absolute;
-    content: "";
-    width: 32px;
-    height: 54px;
-    transition: 0.3s;
-  }
-  .swiper .page4 .p4main .p4awards::before {
-    left: 0px;
-    background: url(/img/event/prereg/p4/btn2_hover1.png) no-repeat;
-    background-position: center;
-  }
-  .swiper .page4 .p4main .p4awards::after {
-    right: 0px;
-    background: url(/img/event/prereg/p4/btn2_hover2.png) no-repeat;
-    background-position: center;
-  }
-  .swiper .page4 .p4main .p4awards:hover::before {
-    transform: translateX(-5px);
-  }
-  .swiper .page4 .p4main .p4awards:hover::after {
-    transform: translateX(5px);
-  }
-  .swiper .page4 .p4main .p4awards:hover {
-    letter-spacing: 3px;
-  }
-  .swiper .page5 {
-    background: url(/img/event/prereg/p5/bg5_m.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .swiper .page5 .p5title {
-    position: absolute;
-    top: 5vh;
-    left: 50%;
-    translate: -50%;
-    width: 51vw;
-    height: 17vw;
-    background: url(/img/event/prereg/p5/title.png) no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-  .swiper .page5 .p5slideBox {
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    translate: -50% -50%;
-    width: 70vw;
-    height: 103vw;
-    background: url(/img/event/prereg/p5/slideBG.png) no-repeat;
-    background-size: 100% 100%;
-  }
-  .swiper .page5 .p5slideBox .p5slidebg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-    border-radius: 20px;
-    background-image: linear-gradient(to bottom right, #091746, #142765, #3b7c9e);
-  }
-  .swiper .page5 .p5slideBox .p5slidebg::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    border-radius: 30px;
-    width: calc(70vw - 60px);
-    height: calc(103vw - 60px);
-    background: url(/img/event/prereg/p5/slide1_m.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .swiper .page5 .p5slideBox .p5slider {
-    left: 50%;
-    translate: -50%;
-    width: calc(100% - 60px);
-    height: 100%;
-    display: flex;
-    scale: 1;
-  }
-  .swiper .page5 .p5slideBox .p5slider .slick-list {
-    color: rgba(255, 0, 0, 0);
-  }
-  .swiper .page5 .p5slideBox .p5slider .slick-list .slick-track {
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    height: calc(100% - 60px);
-  }
-  .swiper .page5 .p5slideBox .p5slider .p5slide1 {
-    background: url(/img/event/prereg/p5/slide1_m.jpg) no-repeat;
-  }
-  .swiper .page5 .p5slideBox .p5slider .p5slide2 {
-    background: url(/img/event/prereg/p5/slide2_m.jpg) no-repeat;
-  }
-  .swiper .page5 .p5slideBox .p5slider .p5slide3 {
-    background: url(/img/event/prereg/p5/slide3_m.jpg) no-repeat;
-  }
-  .swiper .page5 .p5slideBox .p5slider .p5slide4 {
-    background: url(/img/event/prereg/p5/slide4_m.jpg) no-repeat;
-  }
-  .swiper .page5 .p5slideBox .p5slider .p5slide1, .swiper .page5 .p5slideBox .p5slider .p5slide2, .swiper .page5 .p5slideBox .p5slider .p5slide3, .swiper .page5 .p5slideBox .p5slider .p5slide4 {
-    border-radius: 30px;
-    background-size: cover;
-    background-position: center;
-    background-color: #ffffff;
-  }
-  .swiper .page5 .p5slideBox .p5slider .slick-arrow {
-    position: absolute;
-    width: 73px;
-    height: 108px;
-    background-size: contain;
-    background-position: center;
-    border: none;
-    color: rgba(255, 255, 255, 0);
-    cursor: pointer;
-  }
-  .swiper .page5 .p5slideBox .p5slider .slick-prev {
-    top: 50%;
-    left: -15%;
-    translate: -50% -50%;
-    background: url(/img/event/prereg/p5/swiperArrow_L.png) no-repeat;
-    animation: p5arrowLfloat 1.5s infinite alternate ease-in-out;
-  }
-  .swiper .page5 .p5slideBox .p5slider .slick-next {
-    top: 50%;
-    right: -15%;
-    translate: 50% -50%;
-    background: url(/img/event/prereg/p5/swiperArrow_R.png) no-repeat;
-    animation: p5arrowRfloat 1.5s infinite alternate ease-in-out;
-  }
-  .swiper .page5 .p5slideBox .p5slider .slick-dots {
-    position: absolute;
-    top: 100%;
-    left: calc(50% - 20px);
-    translate: -50%;
-    list-style: none;
-    display: flex !important;
-  }
-  .swiper .page5 .p5slideBox .p5slider .slick-dots li button {
-    width: 25px;
-    height: 25px;
-    border-radius: 100px;
-    margin: auto 5px;
-    border: #7497d1 5px solid;
-    background-color: #FFF;
-    color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .swiper .page5 .p5slideBox .p5slider .slick-dots .slick-active button {
-    width: 55px;
-    background-color: #5d78c5;
-    color: rgba(0, 0, 0, 0);
-  }
-  .swiper .page5 .p5slideBox .p5flowers div {
-    position: absolute;
-    width: 31px;
-    height: 36px;
-    background: url(/img/event/prereg/p5/flower.png) no-repeat;
-  }
-  .swiper .page5 .p5slideBox .p5flowers div:nth-child(1) {
-    left: 0;
-    top: 0;
-    translate: -50% -50%;
-  }
-  .swiper .page5 .p5slideBox .p5flowers div:nth-child(2) {
-    right: 0;
-    top: 0;
-    translate: 50% -50%;
-  }
-  .swiper .page5 .p5slideBox .p5flowers div:nth-child(3) {
-    right: 0;
-    bottom: 0;
-    translate: 50% 50%;
-  }
-  .swiper .page5 .p5slideBox .p5flowers div:nth-child(4) {
-    left: 0;
-    bottom: 0;
-    translate: -50% 50%;
-  }
-  .swiper .page5 #rainBox {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-  .swiper .page5 .rain {
-    position: absolute;
-    width: 3px;
-    height: 100px;
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
-  }
-  .swiper .page6 {
-    background: url(/img/event/prereg/p6/bg6_m.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  .swiper .page6 .p6title {
-    position: absolute;
-    top: 5vh;
-    left: 50%;
-    translate: -50%;
-    width: 51vw;
-    height: 17vw;
-    background: url(/img/event/prereg/p6/title.png) no-repeat;
-    background-size: contain;
-    background-position: center;
-    z-index: 1;
-  }
-  .swiper .page6 .roles {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left: -5%;
-    top: 0vh;
-    scale: 0.95;
-  }
-  .swiper .page6 .roles .humen {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    translate: -5vw;
-  }
-  .swiper .page6 .roles .humen .human1 {
-    position: absolute;
-    top: 43.6px;
-    left: 105.6px;
-    width: 853px;
-    height: 902px;
-    background: url(/img/event/prereg/p6/role1.png);
-    opacity: 1;
-  }
-  .swiper .page6 .roles .humen .human2 {
-    position: absolute;
-    top: 38.7px;
-    left: 186.4px;
-    width: 871px;
-    height: 688px;
-    background: url(/img/event/prereg/p6/role2.png);
-    opacity: 0;
-  }
-  .swiper .page6 .roles .humen .human3 {
-    position: absolute;
-    top: 106.59px;
-    left: 359.2px;
-    width: 472px;
-    height: 867px;
-    background: url(/img/event/prereg/p6/role3.png);
-    opacity: 0;
-  }
-  .swiper .page6 .roles .humen .human4 {
-    position: absolute;
-    top: 29px;
-    left: 206px;
-    width: 607px;
-    height: 948px;
-    background: url(/img/event/prereg/p6/role4.png);
-    opacity: 0;
-  }
-  .swiper .page6 .roles .humen .human5 {
-    position: absolute;
-    top: 116.28px;
-    left: 176.8px;
-    width: 637px;
-    height: 677px;
-    background: url(/img/event/prereg/p6/role5.png);
-    opacity: 0;
-  }
-  .swiper .page6 .roles .names {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    translate: -5vw;
-  }
-  .swiper .page6 .roles .names .name1 {
-    position: absolute;
-    top: -43.6px;
-    left: 316.8px;
-    width: 638px;
-    height: 609px;
-    background: url(/img/event/prereg/p6/roleName1.png);
-    opacity: 1;
-  }
-  .swiper .page6 .roles .names .name2 {
-    position: absolute;
-    top: -77.52px;
-    left: 240.8px;
-    width: 601px;
-    height: 635px;
-    background: url(/img/event/prereg/p6/roleName2.png);
-    opacity: 0;
-  }
-  .swiper .page6 .roles .names .name3 {
-    position: absolute;
-    top: -58.14px;
-    left: -80.8px;
-    width: 440px;
-    height: 588px;
-    background: url(/img/event/prereg/p6/roleName3.png);
-    opacity: 0;
-  }
-  .swiper .page6 .roles .names .name4 {
-    position: absolute;
-    top: -106.59px;
-    left: 226px;
-    width: 638px;
-    height: 619px;
-    background: url(/img/event/prereg/p6/roleName4.png);
-    opacity: 0;
-  }
-  .swiper .page6 .roles .names .name5 {
-    position: absolute;
-    top: -87.2px;
-    left: -32.8px;
-    width: 638px;
-    height: 635px;
-    background: url(/img/event/prereg/p6/roleName5.png);
-    opacity: 0;
-  }
-  .swiper .page6 .roles .arm {
-    position: absolute;
-    top: 363.375px;
-    left: 176.64px;
-    translate: -5vw;
-    width: 67px;
-    height: 147px;
-    background: url(/img/event/prereg/p6/roleArm.png) no-repeat;
-    background-size: contain;
-    color: #FFF;
-    font-family: "Noto Serif TC", serif;
-    font-size: 18pt;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 20pt;
-  }
-  .swiper .page6 .p6menu {
-    position: absolute;
-    top: 100vh;
-    left: 0vw;
-    width: 100vw;
-    height: 20vw;
-    translate: 0 -100%;
-    background: none;
-    background-size: contain;
-    background-position: top;
-    display: flex;
-    justify-content: center;
-  }
-  .swiper .page6 .p6menu div {
-    position: static;
-    cursor: pointer;
-    margin: auto -2vw;
-  }
-  .swiper .page6 .p6menu div:hover {
-    scale: 1;
-  }
-  .swiper .page6 .p6menu .p6btn1 {
-    top: 25%;
-    left: 86%;
-    width: 19vw;
-    height: 100%;
-    background: url(/img/event/prereg/p6/btn1.png) no-repeat;
-    background-size: contain;
-    transition: 0.5s;
-  }
-  .swiper .page6 .p6menu .p6btn1:hover {
-    background: url(/img/event/prereg/p6/btn1_hover.png) no-repeat;
-    background-size: contain;
-  }
-  .swiper .page6 .p6menu .p6btn1_2 {
-    background: url(/img/event/prereg/p6/btn1_hover.png) no-repeat;
-    background-size: contain;
-    margin-right: 2vw;
-  }
-  .swiper .page6 .p6menu .p6btn2 {
-    top: 46%;
-    left: 78%;
-    width: 19vw;
-    height: 100%;
-    background: url(/img/event/prereg/p6/btn2.png) no-repeat;
-    background-size: contain;
-    transition: 0.5s;
-  }
-  .swiper .page6 .p6menu .p6btn2:hover {
-    background: url(/img/event/prereg/p6/btn2_hover.png) no-repeat;
-    background-size: contain;
-  }
-  .swiper .page6 .p6menu .p6btn2_2 {
-    background: url(/img/event/prereg/p6/btn2_hover.png) no-repeat;
-    background-size: contain;
-    margin-right: 2vw;
-  }
-  .swiper .page6 .p6menu .p6btn3 {
-    top: 63%;
-    left: 65%;
-    width: 19vw;
-    height: 100%;
-    background: url(/img/event/prereg/p6/btn3.png) no-repeat;
-    background-size: contain;
-    transition: 0.5s;
-  }
-  .swiper .page6 .p6menu .p6btn3:hover {
-    background: url(/img/event/prereg/p6/btn3_hover.png) no-repeat;
-    background-size: contain;
-  }
-  .swiper .page6 .p6menu .p6btn3_2 {
-    background: url(/img/event/prereg/p6/btn3_hover.png) no-repeat;
-    background-size: contain;
-    margin-right: 2vw;
-  }
-  .swiper .page6 .p6menu .p6btn4 {
-    top: 77%;
-    left: 50%;
-    width: 19vw;
-    height: 100%;
-    background: url(/img/event/prereg/p6/btn4.png) no-repeat;
-    background-size: contain;
-    transition: 0.5s;
-  }
-  .swiper .page6 .p6menu .p6btn4:hover {
-    background: url(/img/event/prereg/p6/btn4_hover.png) no-repeat;
-    background-size: contain;
-  }
-  .swiper .page6 .p6menu .p6btn4_2 {
-    background: url(/img/event/prereg/p6/btn4_hover.png) no-repeat;
-    background-size: contain;
-    margin-right: 2vw;
-  }
-  .swiper .page6 .p6menu .p6btn5 {
-    top: 86%;
-    left: 32%;
-    width: 19vw;
-    height: 100%;
-    background: url(/img/event/prereg/p6/btn5.png) no-repeat;
-    background-size: contain;
-    transition: 0.5s;
-  }
-  .swiper .page6 .p6menu .p6btn5:hover {
-    background: url(/img/event/prereg/p6/btn5_hover.png) no-repeat;
-    background-size: contain;
-  }
-  .swiper .page6 .p6menu .p6btn5_2 {
-    background: url(/img/event/prereg/p6/btn5_hover.png) no-repeat;
-    background-size: contain;
-    margin-right: 2vw;
-  }
-  .swiper .page6 .bgclouds .bgcloud1 {
-    position: absolute;
-    width: 200vw;
-    height: 100vh;
-    left: -100%;
-    background-size: cover;
-    animation: p6cloud1 10s infinite alternate ease-in;
-  }
-  .swiper .page6 .bgclouds .bgcloud2 {
-    position: absolute;
-    top: 5%;
-    left: -50%;
-    width: 200vw;
-    height: 100vh;
-    background-position: left;
-    background-size: cover;
-    animation: p6cloud2 12s infinite alternate ease-in;
-  }
-  .swiper .page6 .p6features {
-    position: absolute;
-    width: 60vw;
-    height: 28vw;
-    left: 50%;
-    translate: -50%;
-    background: url(/img/event/prereg/p6/textBG.png) no-repeat;
-    background-position: top;
-    background-size: contain;
-  }
-  .swiper .page6 .p6features .p6subtitle {
-    position: absolute;
-    width: 30vw;
-    height: 6.9vw;
-    background: url(/img/event/prereg/p6/subtitleBG.png) no-repeat;
-    background-position: top;
-    background-size: contain;
-    font-family: "Noto Serif TC", serif;
-    color: #FFF;
-    font-size: 25px;
-    text-align: center;
-    line-height: 6.6vw;
-    letter-spacing: 1px;
-  }
-  .swiper .page6 .p6features .p6text {
-    position: absolute;
-    width: 80%;
-    height: auto;
-    top: 25%;
-    left: 50%;
-    translate: -50%;
-    color: #000;
-    font-weight: bolder;
-    font-size: 21px;
-    letter-spacing: -1px;
-  }
-  .swiper .page6 .p6feature1 {
-    left: 40%;
-    top: 55%;
-  }
-  .swiper .page6 .p6feature2 {
-    left: 60%;
-    top: calc(50% + 28vw);
-  }
-  .swiper .swiper-slide-active .cloudmask {
-    scale: 2;
-    opacity: 0;
-    transition: 3s;
-    transition-delay: 0s;
-  }
-  .swiper .swiper-slide-active .bg2animate .bird {
-    animation: flybird 6s 1 linear;
-    animation-fill-mode: forwards;
-  }
-  .menubar .menubtn {
-    position: absolute;
-    z-index: 99;
-    width: 60px;
+  .swiper .page2 .p2main .p2awards .p2btns {
     height: 60px;
-    border-radius: 30px;
-    background-image: linear-gradient(to bottom, #98a8cb, #424e7e);
-    cursor: pointer;
-    scale: 1.15;
   }
-  .menubar .menubtn2 {
-    top: 3vw;
-    right: 3vw;
-    translate: 0%;
+  .swiper .page3 {
+    height: 1400px;
   }
-  /*選單連結(放進bar的css裡面會跑版所以放外面)*/
-  .swiper-pagination {
-    top: 50% !important;
-    left: 50% !important;
-    translate: -50%;
-    scale: 1.1;
+  .swiper .page3 .p3main {
+    height: 895px;
   }
-  .swiper-pagination .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    margin: 5vh 0 !important;
-    background: none;
-    color: #ffffff;
-    text-shadow: 0 0 10px #4b6898;
-    opacity: 1;
+  .swiper .page3 .p3main .p3text {
+    height: 402px;
+    top: 70%;
   }
-  .swiper-pagination .swiper-pagination-bullet:hover {
-    color: #fff2d2;
-  }
-  .swiper-pagination .swiper-pagination-bullet:hover::before {
-    position: absolute;
-    content: "";
-    left: 17%;
-    translate: 0% 8%;
-    width: 37px;
-    height: 40px;
-    background: url(/img/event/prereg/menu_icon.png) no-repeat;
-    filter: drop-shadow(0 0 13px #4b6898);
-  }
-  .swiper-pagination .swiper-pagination-bullet-active {
-    color: #fff2d2;
-  }
-  .swiper-pagination .swiper-pagination-bullet-active::before {
-    position: absolute;
-    content: "";
-    left: 17%;
-    translate: 0% 8%;
-    width: 37px;
-    height: 40px;
-    background: url(/img/event/prereg/menu_icon.png) no-repeat;
-    filter: drop-shadow(0 0 13px #4b6898);
-  }
-}
-@media (max-width: 700px) {
-  .swiper {
-    width: 100vw;
-    height: 100%;
-  }
-  .swiper .swiper-slide .cloudmask {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    pointer-events: none;
-    transition: 1s;
-    transition-delay: 0.2s;
-    opacity: 1;
-    scale: 1;
-  }
-  .swiper .page1 {
-    background-color: #96c9bd;
-    background: url(/img/event/prereg/p1/bg1.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .swiper .page1 .videoBG {
-    position: absolute;
-    left: 50%;
-    translate: -50%;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .swiper .page1 .XX2_logo {
-    position: absolute;
-    top: 5vh;
-    left: 49.4%;
-    translate: -50%;
-    width: 100vw;
-    height: 11vh;
-    background: url(/img/event/prereg/p1/logo.png) no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-  .swiper .page1 .maintitle {
-    position: absolute;
-    top: 50vh;
-    left: 48.7%;
-    translate: -50% -50%;
-    width: 100vw;
-    height: 28.2vh;
-    background: url(/img/event/prereg/p1/title_m.png) no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-  .swiper .page1 .slogan {
-    position: absolute;
-    top: 70vh;
-    left: 49.9%;
-    translate: -50%;
-    width: 80vw;
-    height: 6vh;
-    background: url(/img/event/prereg/p1/slogan.png) no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-  .swiper .page1 .downbtn {
-    position: absolute;
-    top: 90vh;
-    left: 50%;
-    translate: -50%;
-    width: 66px;
-    height: 49px;
-    background: url(/img/event/prereg/p1/downbtn_BG.png);
-    animation: downbtnfloat 1s infinite alternate-reverse ease-out;
-  }
-  .swiper .page1 .downbtn::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 50%;
-    translate: -50%;
-    width: 25px;
-    height: 15px;
-    background: url(/img/event/prereg/p1/downbtn_tri1.png);
-    animation: downbtnfloat 1s infinite alternate-reverse ease-out;
-  }
-  .swiper .page1 .downbtn::after {
-    position: absolute;
-    content: "";
-    top: 24%;
-    left: 50%;
-    translate: -50%;
-    width: 40px;
-    height: 22px;
-    background: url(/img/event/prereg/p1/downbtn_tri2.png);
-    animation: downbtnfloat 1s infinite alternate-reverse ease-out;
+  .swiper .page4 {
+    height: 1500px;
   }
   .swiper .page4 .p4main {
-    position: absolute;
-    top: 100%;
+    height: 1100px;
+    top: 14%;
     left: 50%;
-    translate: -50% -100%;
-    width: 80vw;
-    height: 80vh;
+    translate: -50% 0%;
+  }
+  .swiper .page4 .p4main .p4info {
+    height: 130px;
+    top: 0px;
   }
   .swiper .page4 .p4main .pandas {
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    top: 25%;
-    left: 47%;
-    translate: -50% 0%;
+    top: 225px;
     scale: 0.65;
   }
   .swiper .page4 .p4main .p4awards {
-    position: absolute;
-    top: 91%;
-    left: 50%;
-    translate: -50%;
-    color: #ffffff;
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-align: center;
-    width: 202px;
-    height: 54px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background: url(/img/event/prereg/p4/btn3.png) no-repeat;
-    background-position: center;
-    background-size: contain;
-    text-shadow: 0 0 5px #010101;
-    filter: drop-shadow(0 0 5px #2d3447);
-    cursor: pointer;
-    transition: 0.3s;
-    scale: 0.95;
+    top: 97%;
   }
   .swiper .page4 .p4main .p4awards::before, .swiper .page4 .p4main .p4awards::after {
     position: absolute;
@@ -10216,16 +9873,6 @@ body {
     width: 32px;
     height: 54px;
     transition: 0.3s;
-  }
-  .swiper .page4 .p4main .p4awards::before {
-    left: 0px;
-    background: url(/img/event/prereg/p4/btn2_hover1.png) no-repeat;
-    background-position: center;
-  }
-  .swiper .page4 .p4main .p4awards::after {
-    right: 0px;
-    background: url(/img/event/prereg/p4/btn2_hover2.png) no-repeat;
-    background-position: center;
   }
   .swiper .page4 .p4main .p4awards:hover::before {
     transform: translateX(-5px);
@@ -10237,9 +9884,7 @@ body {
     letter-spacing: 3px;
   }
   .swiper .page5 {
-    background: url(/img/event/prereg/p5/bg5_m.png) no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 1000px;
   }
   .swiper .page5 .p5title {
     position: absolute;
@@ -10408,9 +10053,7 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
   }
   .swiper .page6 {
-    background: url(/img/event/prereg/p6/bg6_m.jpg);
-    background-size: cover;
-    background-position: center;
+    height: 1200px;
   }
   .swiper .page6 .p6title {
     position: absolute;
@@ -10425,18 +10068,8 @@ body {
     z-index: 1;
   }
   .swiper .page6 .roles {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left: -5%;
-    top: 0vh;
+    top: 72px;
     scale: 0.95;
-  }
-  .swiper .page6 .roles .humen {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    translate: -5vw;
   }
   .swiper .page6 .roles .humen .human1 {
     position: absolute;
@@ -10552,17 +10185,8 @@ body {
     line-height: 20pt;
   }
   .swiper .page6 .p6menu {
-    position: absolute;
-    top: 100vh;
+    top: 1200px;
     left: 0vw;
-    width: 100vw;
-    height: 20vw;
-    translate: 0 -100%;
-    background: none;
-    background-size: contain;
-    background-position: top;
-    display: flex;
-    justify-content: center;
   }
   .swiper .page6 .p6menu div {
     position: static;
@@ -10722,7 +10346,14 @@ body {
   }
   .swiper .page6 .p6feature2 {
     left: 60%;
-    top: calc(50% + 28vw);
+  }
+  .swiper .page7 {
+    height: 1500px;
+  }
+  .swiper .page7 .p7rules {
+    top: 44%;
+    line-height: 36px;
+    height: 960px;
   }
   .swiper .swiper-slide-active .cloudmask {
     scale: 2;
@@ -10892,6 +10523,7 @@ body {
     background: url(/img/event/prereg/p2/bg2_m.jpg) no-repeat;
     background-position: center;
     background-size: cover;
+    height: 110vh;
   }
   .swiper .page2 .bg2animate .bird1, .swiper .page2 .bg2animate .bird2 {
     position: absolute;
@@ -10961,6 +10593,7 @@ body {
   .swiper .page2 .p2main .p2steps {
     width: 100%;
     height: 40vh;
+    scale: 1;
   }
   .swiper .page2 .p2main .p2steps .step1 {
     margin: auto;
@@ -11047,7 +10680,7 @@ body {
   }
   .swiper .page2 .p2main .p2steps .checkbtn {
     margin: auto;
-    margin-top: -13%;
+    margin-top: -8%;
     width: 260px;
     height: 101px;
     background: url(/img/event/prereg/p2/btn1.png) no-repeat;
@@ -11059,7 +10692,7 @@ body {
     font-weight: bold;
     text-align: center;
     line-height: 101px;
-    scale: 0.5;
+    scale: 0.8;
   }
   .swiper .page2 .p2main .p2steps .checkbtn:hover {
     background: url(/img/event/prereg/p2/btn1_hover.png) no-repeat;
@@ -11067,7 +10700,8 @@ body {
   .swiper .page2 .p2main .p2awards {
     scale: 1;
     width: 100%;
-    height: 40vh;
+    height: 350px;
+    margin-top: 5%;
   }
   .swiper .page2 .p2main .p2awards .awardbox {
     position: absolute;
@@ -11080,8 +10714,9 @@ body {
   }
   .swiper .page2 .p2main .p2awards .p2btns {
     position: absolute;
+    top: 17%;
     left: 50%;
-    translate: -50%;
+    translate: -50% -100%;
     width: 70%;
     height: 20%;
     color: #ffffff;
@@ -11122,6 +10757,7 @@ body {
     background: url(/img/event/prereg/p3/bg3_m.jpg) no-repeat;
     background-position: center;
     background-size: cover;
+    height: 110vh;
   }
   .swiper .page3 .bgclouds .bgcloud1 {
     position: absolute;
@@ -11212,7 +10848,7 @@ body {
   }
   .swiper .page3 .p3main .p3info {
     position: absolute;
-    top: -16%;
+    top: -22%;
     right: 50%;
     translate: 50%;
     width: 100%;
@@ -11225,8 +10861,8 @@ body {
   }
   .swiper .page3 .p3main .p3info .p3listbtns {
     position: absolute;
-    top: 75%;
-    right: -20%;
+    top: 115%;
+    right: 0%;
     translate: 0%;
     color: #ffffff;
     font-size: 1.6rem;
@@ -11386,8 +11022,8 @@ body {
   .swiper .page3 .p3main .p3text .samplerules {
     position: absolute;
     top: 34%;
-    left: 0%;
-    translate: 0 -50%;
+    left: 7%;
+    translate: 0 -33%;
     width: 85%;
     height: auto;
   }
@@ -11406,7 +11042,7 @@ body {
   .swiper .page3 .p3main .p3text .cardinfo {
     position: absolute;
     top: 50%;
-    translate: 0 -85%;
+    translate: 0 -79%;
     width: 100%;
     height: 100%;
     display: none;
@@ -11574,6 +11210,7 @@ body {
     background: url(/img/event/prereg/p4/bg4.png);
     background-size: cover;
     background-position: center;
+    height: 115vh;
   }
   .swiper .page4 .bg4animate .bamboo {
     position: absolute;
@@ -11639,7 +11276,7 @@ body {
   }
   .swiper .page4 .p4main {
     position: absolute;
-    top: 100%;
+    top: 90%;
     left: 50%;
     translate: -50% -100%;
     width: 85vw;
@@ -11852,7 +11489,7 @@ body {
   }
   .swiper .page4 .p4main .pandaGobtn {
     position: absolute;
-    top: 75%;
+    top: 85%;
     left: 50%;
     translate: -50%;
     width: 260px;
@@ -11874,7 +11511,7 @@ body {
   }
   .swiper .page4 .p4main .p4awards {
     position: absolute;
-    top: 87%;
+    top: 100%;
     left: 50%;
     translate: -50%;
     color: #ffffff;
@@ -11945,6 +11582,7 @@ body {
     background: url(/img/event/prereg/p5/bg5_m.png) no-repeat;
     background-size: cover;
     background-position: center;
+    height: 110vh;
   }
   .swiper .page5 .p5title {
     position: absolute;
@@ -11983,9 +11621,9 @@ body {
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    border-radius: 30px;
-    width: calc(70vw - 60px);
-    height: calc(103vw - 60px);
+    border-radius: 20px;
+    width: calc(70vw - 40px);
+    height: calc(103vw - 40px);
     background: url(/img/event/prereg/p5/slide1_m.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -12118,6 +11756,7 @@ body {
     background: url(/img/event/prereg/p6/bg6_m.jpg);
     background-size: cover;
     background-position: center;
+    height: 110vh;
   }
   .swiper .page6 .p6title {
     position: absolute;
@@ -12135,7 +11774,8 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    top: -15vh;
+    left: -12%;
+    top: -10vh;
     scale: 0.6;
   }
   .swiper .page6 .roles .humen {
@@ -12259,10 +11899,11 @@ body {
   }
   .swiper .page6 .p6menu {
     position: absolute;
+    top: 100%;
     left: 0vw;
     width: 100vw;
     height: 20vw;
-    translate: 0 -120%;
+    translate: 0 -100%;
     background: none;
     background-size: contain;
     background-position: top;
@@ -12367,6 +12008,9 @@ body {
     background-size: contain;
     margin-right: 2vw;
   }
+  .swiper .page6 .bgclouds {
+    display: none;
+  }
   .swiper .page6 .bgclouds .bgcloud1 {
     position: absolute;
     width: 200vw;
@@ -12413,7 +12057,7 @@ body {
     position: absolute;
     width: 70%;
     height: auto;
-    top: 26%;
+    top: 30%;
     left: 50%;
     translate: -50%;
     color: #000;
@@ -12432,6 +12076,7 @@ body {
     background: url(/img/event/prereg/p7/bg7_m.png);
     background-size: cover;
     background-position: center;
+    height: 100vh;
   }
   .swiper .page7 .p7title {
     position: absolute;
@@ -12703,6 +12348,7 @@ body {
     background: url(/img/event/prereg/p3/missionBG_m.png) no-repeat;
     background-size: contain;
     background-position: center;
+    scale: 0.8;
   }
   .p3missionpop .p3missionpopframe .p3XX {
     position: absolute;
@@ -12730,6 +12376,12 @@ body {
     background: url(/img/event/prereg/p3/missiontitle.png) no-repeat;
     background-position: center;
     background-size: contain;
+  }
+  .p3missionpop .p3missionpopframe .p3missionpoptitle .p3_desc {
+    text-align: center;
+    top: 51%;
+    font-size: 14px;
+    padding-right: 0%;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText {
     margin: auto;
@@ -12822,7 +12474,7 @@ body {
     left: 50%;
     translate: -50% -50%;
     width: 90vw;
-    height: 62vh;
+    height: 75vh;
     background: url(/img/event/prereg/p3/resultpopBG.png) no-repeat;
     background-size: contain;
     background-position: center;
@@ -12953,7 +12605,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    scale: 1;
+    scale: 0.8;
   }
   .p3resultpop .p3resultpopframe .p3resultbtns .choosenew, .p3resultpop .p3resultpopframe .p3resultbtns .keepnow {
     cursor: pointer;
@@ -13438,7 +13090,45 @@ body {
     scale: 0.8;
   }
 }
-@media (max-width: 495px) {
+@media screen and (min-width: 431px) and (max-width: 500px) {
+  .menubtn2 {
+    top: 7% !important;
+    left: 8% !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+  .cardname {
+    top: 20% !important;
+  }
+  .valuetable {
+    font-size: 20px !important;
+  }
+  .roles {
+    width: 30% !important;
+    height: 100% !important;
+  }
+  .p6menu {
+    height: 7% !important;
+    translate: 0% -100% !important;
+  }
+  .p6text {
+    margin-top: 1%;
+  }
+  .awardbox {
+    height: 95% !important;
+  }
+  .p2btns {
+    top: -12% !important;
+  }
+  .p6feature2 {
+    top: calc(54% + 32vw) !important;
+  }
+  .getcardbtn {
+    top: 87% !important;
+  }
+  .p3_chance {
+    top: 76% !important;
+  }
   /*選單連結(放進bar的css裡面會跑版所以放外面)*/
   .swiper-pagination {
     top: 50% !important;
@@ -13501,6 +13191,51 @@ body {
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 430px) {
+  .awardbox {
+    bottom: -10% !important;
+  }
+  .p2btns {
+    margin-top: 10% !important;
+  }
+  .p4info {
+    top: -15% !important;
+  }
+  .p6menu {
+    top: 95% !important;
+  }
+  .menubtn2 {
+    top: 7% !important;
+    left: 8% !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .mobile_area {
+    width: 38% !important;
+  }
+  .roles {
+    left: -25% !important;
+  }
+  .p6feature2 {
+    top: calc(52% + 32vw) !important;
+  }
+  .cardinfo {
+    top: 65% !important;
+  }
+  .p3_chance {
+    top: 83% !important;
+  }
+  .getcardbtn {
+    top: 96% !important;
+  }
+  .samplerules {
+    top: 49% !important;
+    width: 100% !important;
+  }
+  .samplerules li {
+    font-size: 10px !important;
   }
 }
 @media (max-width: 425px) {
@@ -15482,9 +15217,10 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
     width: 55%;
     height: 100%;
+    font-size: 0.7rem;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
-    font-size: 11px;
+    font-size: 0.7rem;
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
@@ -18201,9 +17937,10 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
     width: 55%;
     height: 100%;
+    font-size: 0.7rem;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
-    font-size: 11px;
+    font-size: 0.7rem;
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
@@ -21597,6 +21334,11 @@ body {
   left: 5vw;
   translate: -50%;
 }
+@media all and (max-width: 1024px) {
+  .menubar .menubtn1 {
+    top: 4%;
+  }
+}
 .menubar .menubtnOpen::after, .menubar .menubtnOpen::before {
   width: 60%;
   top: 45%;
@@ -21615,6 +21357,11 @@ body {
   z-index: 10;
   height: 100vh;
   background-image: linear-gradient(to bottom, rgb(179, 166, 211), rgb(104, 145, 180));
+}
+@media all and (max-width: 1024px) {
+  .menubar .bar {
+    width: 27vw;
+  }
 }
 @media all and (max-width: 768px) {
   .menubar .bar {

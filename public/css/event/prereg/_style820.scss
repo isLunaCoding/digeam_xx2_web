@@ -1,13 +1,12 @@
-@media(max-width:820px){
+@media(max-width:820px) {
 
-    .swiper{
+    .swiper {
         width: 100vw;
-        // height: 100%;
 
-        .swiper-slide{
+        .swiper-slide {
             // overflow: auto;
 
-            .cloudmask{
+            .cloudmask {
                 position: relative;
                 width: 100vw;
                 height: 100vh;
@@ -21,13 +20,14 @@
                 scale: 1;
             }
         }
-        .page1{
+
+        .page1 {
             background-color: #96c9bd;
             background: url(/img/event/prereg/p1/bg1.png);
             background-size: cover;
             background-position: center;
 
-            .videoBG{
+            .videoBG {
                 position: absolute;
                 left: 50%;
                 translate: -50%;
@@ -36,7 +36,7 @@
                 object-fit: cover;
             }
 
-            .XX2_logo{
+            .XX2_logo {
                 position: absolute;
                 top: 5vh;
                 left: 49.4%;
@@ -48,7 +48,7 @@
                 background-position: center;
             }
 
-            .maintitle{
+            .maintitle {
                 position: absolute;
                 top: 50vh;
                 left: 48.7%;
@@ -60,7 +60,7 @@
                 background-position: center;
             }
 
-            .slogan{
+            .slogan {
                 position: absolute;
                 top: 70vh;
                 left: 49.9%;
@@ -72,7 +72,7 @@
                 background-position: center;
             }
 
-            .downbtn{
+            .downbtn {
                 position: absolute;
                 top: 90vh;
                 left: 50%;
@@ -82,7 +82,7 @@
                 background: url(/img/event/prereg/p1/downbtn_BG.png);
                 animation: downbtnfloat 1s infinite alternate-reverse ease-out;
 
-                &::before{
+                &::before {
                     position: absolute;
                     content: '';
                     top: 0;
@@ -94,7 +94,7 @@
                     animation: downbtnfloat 1s infinite alternate-reverse ease-out;
                 }
 
-                &::after{
+                &::after {
                     position: absolute;
                     content: '';
                     top: 24%;
@@ -107,20 +107,24 @@
                 }
             }
         }
-        .page2{
+
+        .page2 {
             background: url(/img/event/prereg/p2/bg2_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
+            height: 1130px;
 
-            .bg2animate{
 
-                .bird1,.bird2{
+            .bg2animate {
+
+                .bird1,
+                .bird2 {
                     position: absolute;
                     filter: drop-shadow(0 0 3px rgba(78, 104, 113, 0.7));
                     z-index: 10;
                 }
 
-                .bird1{
+                .bird1 {
                     top: 40vh;
                     right: 35%;
                     left: -200px;
@@ -130,7 +134,7 @@
                     background: url(/img/event/prereg/p2/bird1.png)no-repeat;
                 }
 
-                .bird2{
+                .bird2 {
                     top: 30vh;
                     right: 57%;
                     left: -100px;
@@ -140,7 +144,7 @@
                     background: url(/img/event/prereg/p2/bird2.png)no-repeat;
                 }
 
-                .leave1{
+                .leave1 {
                     position: absolute;
                     top: 0;
                     right: 0;
@@ -149,7 +153,7 @@
                     background: url(/img/event/prereg/p2/leave_right.png)no-repeat;
                 }
 
-                .leave2{
+                .leave2 {
                     position: absolute;
                     bottom: 0px;
                     left: 0vw;
@@ -164,7 +168,7 @@
 
             }
 
-            .p2title{
+            .p2title {
                 position: absolute;
                 top: 5vh;
                 left: 50%;
@@ -176,30 +180,32 @@
                 background-position: center;
             }
 
-            .p2main{
+            .p2main {
                 position: absolute;
                 top: 15vh;
                 left: 50%;
                 translate: -50%;
                 width: 80vw;
-                height: 80vh;
+                height: auto;
                 display: block;
 
-                .p2steps{
+                .p2steps {
                     width: 100%;
-                    height: 40vh;
+                    height: 595px;
+                    scale: .8;
 
-                    .step1{
+
+                    .step1 {
                         margin: auto;
-                        margin-top: 0%;
-                        width: 80%;
+                        margin-top: 20px;
+                        width: 50%;
                         height: 10%;
                         background: url(/img/event/prereg/p2/step1.png)no-repeat;
                         background-size: contain;
                         background-position: center;
                     }
 
-                    .loginbtn{
+                    .loginbtn {
                         margin: auto;
                         margin-top: 2%;
                         width: 100px;
@@ -212,13 +218,13 @@
                         box-shadow: 0 0 20px #97b5c6;
                         scale: 1.2;
 
-                        & a{
+                        & a {
                             color: #274f72;
                             text-decoration: none;
                         }
                     }
 
-                    .register{
+                    .register {
                         margin: auto;
                         margin-top: 3%;
                         width: fit-content;
@@ -227,60 +233,62 @@
                         font-weight: bold;
                         color: #274f72;
 
-                        & a{
+                        & a {
                             color: #3e69be;
                         }
                     }
 
-                    .step2{
+                    .step2 {
                         margin: auto;
-                        margin-top: 0%;
-                        width: 80%;
+                        margin-top: 55px;
+                        width: 50%;
                         height: 10%;
                         background: url(/img/event/prereg/p2/step2.png)no-repeat;
                         background-size: contain;
                         background-position: center;
                     }
 
-                    .step2checkbox{
+                    .step2checkbox {
                         margin: auto;
                         margin-top: 2%;
-                        width: fit-content;
+                        // width: fit-content;
                         text-align: center;
                         font-size: 25px;
                         font-weight: bold;
                         color: #274f72;
 
-                        & form{
-                            & div{
-                                & select{
-                                    width: 20%;
-                                    height: 34px;
-                                    font-size: 16px;
+                        & form {
+                            & div {
+
+                                & select {
+                                    width: 30%;
+                                    height: 44px;
+                                    font-size: 22px;
                                     padding: 0;
                                     padding-left: 3px;
                                     border: none;
                                     border-top: 0.5px solid #FFF;
                                 }
 
-                                & input{
-                                    width: 50%;
-                                    height: 34px;
-                                    font-size: 16px;
+                                & input {
+                                    width: 68%;
+                                    height: 44px;
+                                    font-size: 22px;
                                     padding: 0;
                                     padding-left: 10px;
                                     border: none;
                                 }
                             }
 
-                            & p{
+                            & p {
+                                margin-top: 15px;
 
-                                & input{
+                                & input {
                                     width: 19px;
                                     height: 19px;
                                 }
 
-                                & a{
+                                & a {
                                     color: #3e69be;
                                 }
 
@@ -289,7 +297,7 @@
 
                     }
 
-                    .checkbtn{
+                    .checkbtn {
                         margin: auto;
                         margin-top: 0%;
                         width: 260px;
@@ -304,32 +312,33 @@
                         text-align: center;
                         line-height: 101px;
 
-                        &:hover{
+                        &:hover {
                             background: url(/img/event/prereg/p2/btn1_hover.png)no-repeat;
                         }
                     }
 
                 }
 
-                .p2awards{
+                .p2awards {
                     scale: 1;
                     width: 100%;
-                    height: 40vh;
+                    height: 350px;
                     margin-top: 1%;
 
-                    .awardbox{
+                    .awardbox {
                         position: absolute;
                         bottom: 0%;
                         width: 100%;
-                        height: 80%;
+                        height: 100%;
                         background: url(/img/event/prereg/p2/award_m.png)no-repeat;
                         background-position: center;
                         background-size: contain;
                     }
 
-                    .p2btns{
+                    .p2btns {
                         position: absolute;
                         left: 50%;
+                        bottom: 108%;
                         translate: -50%;
                         width: 80%;
                         height: 12%;
@@ -338,16 +347,19 @@
                         font-weight: bold;
                         display: flex;
                         text-align: center;
+                        scale: 1;
                         text-shadow: 0 0 5px #010101;
 
-                        .p2informationbtn, .p2noticebtn{
+                        .p2informationbtn,
+                        .p2noticebtn {
                             width: 50%;
                             background: url(/img/event/prereg/p2/btn2.png)no-repeat;
                             background-position: center;
                             background-size: contain;
                             cursor: pointer;
 
-                            &::before, &::after{
+                            &::before,
+                            &::after {
                                 position: absolute;
                                 content: '';
                                 width: 32px;
@@ -357,18 +369,19 @@
                                 transition: 0.3s;
                             }
 
-                            &::before{
-                                left: 24px;
+                            &::before {
+                                left: 41px;
 
                             }
 
-                            &::after{
+                            &::after {
                                 scale: -1;
-                                right: 24px;
+                                right: 41px;
                             }
 
-                            &:hover::before,&:hover::after{
-                                    transform: translateX(-5px);
+                            &:hover::before,
+                            &:hover::after {
+                                transform: translateX(-5px);
                             }
                         }
 
@@ -376,13 +389,16 @@
                 }
             }
         }
-        .page3{
+
+
+        .page3 {
             background: url(/img/event/prereg/p3/bg3_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
+            height: 1175px;
 
-            .bgclouds{
-                .bgcloud1{
+            .bgclouds {
+                .bgcloud1 {
                     position: absolute;
                     width: 100vw;
                     height: 100vh;
@@ -392,7 +408,8 @@
                     background-size: contain;
                     animation: p6cloud1 10s infinite alternate ease-in;
                 }
-                .bgcloud2{
+
+                .bgcloud2 {
                     position: absolute;
                     top: 5%;
                     left: -50%;
@@ -406,7 +423,7 @@
                 }
             }
 
-            .p3title{
+            .p3title {
                 position: absolute;
                 top: 5vh;
                 left: 50%;
@@ -418,18 +435,18 @@
                 background-position: center;
             }
 
-            .p3main{
+            .p3main {
                 position: absolute;
-                top: 60%;
+                top: 56%;
                 left: 50%;
                 translate: -50% -50%;
-                width: 80vw;
-                height: 66vh;
+                width: 80%;
+                height: 761px;
                 background: url(/img/event/prereg/p3/mainBG3_m.png)no-repeat;
                 background-size: 100% 100%;
                 background-position: center;
 
-                &::before{
+                &::before {
                     position: absolute;
                     content: '';
                     width: 100%;
@@ -439,12 +456,12 @@
                     background-position: center;
                 }
 
-                .corner{
+                .corner {
                     position: absolute;
                     width: 100%;
                     height: 100%;
 
-                    & div{
+                    & div {
                         position: absolute;
                         width: 80px;
                         height: 81px;
@@ -452,46 +469,46 @@
                         background-size: contain;
                     }
 
-                    .corner_LT{
+                    .corner_LT {
                         top: 25px;
                         left: 45px;
                         rotate: -90deg;
                     }
 
-                    .corner_RT{
+                    .corner_RT {
                         top: 25px;
                         right: 45px;
                         rotate: 0deg;
                     }
 
-                    .corner_LB{
+                    .corner_LB {
                         bottom: 25px;
                         left: 45px;
                         rotate: -180deg;
                     }
 
-                    .corner_RB{
+                    .corner_RB {
                         bottom: 25px;
                         right: 45px;
                         rotate: 90deg;
                     }
                 }
 
-                .p3info{
+                .p3info {
                     position: absolute;
-                    top: -22%;
+                    top: -17%;
                     right: 50%;
                     translate: 50%;
                     width: 100%;
                     z-index: 1;
 
-                    & p{
-                        font-size: 25px;
+                    & p {
+                        font-size: 22px;
                         font-weight: bold;
                         color: #21345d;
                     }
 
-                    .p3listbtns{
+                    .p3listbtns {
                         position: absolute;
                         top: 120%;
                         right: 0%;
@@ -514,7 +531,8 @@
                         transition: 0.3s;
                         scale: 0.95;
 
-                        &::before, &::after{
+                        &::before,
+                        &::after {
                             position: absolute;
                             content: '';
                             width: 32px;
@@ -522,51 +540,53 @@
                             transition: 0.3s;
                         }
 
-                        &::before{
+                        &::before {
                             left: 0px;
                             background: url(/img/event/prereg/p3/btn3_hover1.png)no-repeat;
                             background-position: center;
                         }
 
-                        &::after{
+                        &::after {
                             right: 0px;
                             background: url(/img/event/prereg/p3/btn3_hover2.png)no-repeat;
                             background-position: center;
                         }
 
-                        &:hover::before{
+                        &:hover::before {
                             transform: translateX(-5px);
                         }
 
-                        &:hover::after{
+                        &:hover::after {
                             transform: translateX(5px);
                         }
 
-                        &:hover{
+                        &:hover {
                             letter-spacing: 3px;
                         }
 
                     }
                 }
 
-                .p3btns{
+                .p3btns {
                     position: absolute;
-                    top: 100%;
+                    top: 104%;
                     right: 50%;
                     translate: 50%;
-                    width: 100%;
+                    width: 80%;
                     height: auto;
                     color: #ffffff;
-                    font-size: 1.6rem;
+                    font-size: 20px;
                     font-weight: bold;
                     display: flex;
                     justify-content: center;
                     text-align: center;
                     text-shadow: 0 0 5px #010101;
                     filter: drop-shadow(0 0 5px #2d3447);
-                    scale: 1.1;
+                    scale: 1;
 
-                    .p3informationbtn, .p3missionbtn, .p3noticebtn{
+                    .p3informationbtn,
+                    .p3missionbtn,
+                    .p3noticebtn {
                         position: relative;
                         width: 202px;
                         height: 60px;
@@ -580,7 +600,8 @@
                         transition: 0.3s;
                         scale: 0.95;
 
-                        &::before, &::after{
+                        &::before,
+                        &::after {
                             position: absolute;
                             content: '';
                             width: 32px;
@@ -588,37 +609,37 @@
                             transition: 0.3s;
                         }
 
-                        &::before{
+                        &::before {
                             left: 0px;
                             background: url(/img/event/prereg/p3/btn3_hover1.png)no-repeat;
                             background-position: center;
                         }
 
-                        &::after{
+                        &::after {
                             right: 0px;
                             background: url(/img/event/prereg/p3/btn3_hover2.png)no-repeat;
                             background-position: center;
                         }
 
-                        &:hover::before{
+                        &:hover::before {
                             transform: translateX(-5px);
                         }
 
-                        &:hover::after{
+                        &:hover::after {
                             transform: translateX(5px);
                         }
 
-                        &:hover{
+                        &:hover {
                             letter-spacing: 3px;
                         }
                     }
 
                 }
 
-                .lanternbox{
+                .lanternbox {
                     position: absolute;
-                    top: 0px;
-                    left: -90px;
+                    top: 28px;
+                    left: -70px;
                     translate: 0%;
                     width: calc(286px * 0.8);
                     height: calc(627px * 0.8);
@@ -626,8 +647,9 @@
                     rotate: 0deg;
                     // opacity: 0;
                     z-index: 1;
+                    scale: 0.9;
 
-                    .lantern_light{
+                    .lantern_light {
                         position: absolute;
                         width: 100%;
                         height: 100%;
@@ -636,7 +658,7 @@
                         background-position: center;
                     }
 
-                    .lantern{
+                    .lantern {
                         position: absolute;
                         width: 100%;
                         height: 100%;
@@ -645,7 +667,7 @@
                         background-position: center;
                     }
 
-                    .lantern_line{
+                    .lantern_line {
                         position: absolute;
                         width: 100%;
                         height: 100%;
@@ -655,7 +677,7 @@
                         transform-origin: calc(146px * 0.8) calc(470px * 0.8);
                     }
 
-                    & p{
+                    & p {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -668,15 +690,15 @@
 
                 }
 
-                .p3text{
+                .p3text {
                     position: absolute;
-                    top: 65%;
+                    top: 71%;
                     right: 45%;
                     translate: 50% -50%;
                     width: 75%;
                     height: 45%;
 
-                    .samplerules{
+                    .samplerules {
                         position: absolute;
                         top: 50%;
                         left: 4%;
@@ -684,14 +706,14 @@
                         width: 80%;
                         height: auto;
 
-                        & li{
-                            list-style-image:url(/img/event/prereg/p3/li.png);
+                        & li {
+                            list-style-image: url(/img/event/prereg/p3/li.png);
                             color: #000;
                             font-size: 21px;
                             font-weight: bold;
                             margin: 8px auto;
 
-                            & span{
+                            & span {
                                 color: #FFF;
                                 text-decoration: underline;
                                 cursor: pointer;
@@ -700,7 +722,7 @@
 
                     }
 
-                    .cardinfo{
+                    .cardinfo {
                         position: absolute;
                         top: 50%;
                         translate: -7% -65%;
@@ -709,7 +731,7 @@
                         display: none;
                         scale: 0.65;
 
-                        .cardname{
+                        .cardname {
                             position: absolute;
                             top: 15%;
                             width: 100%;
@@ -720,7 +742,9 @@
                             text-shadow: 0 0 10px #103aa3;
                             text-align: center
                         }
-                        .cardname::before,.cardname::after{
+
+                        .cardname::before,
+                        .cardname::after {
                             position: absolute;
                             content: '';
                             top: 6%;
@@ -729,15 +753,18 @@
                             background: url(/img/event/prereg/p3/card_flower.png)no-repeat;
                             background-position: center;
                         }
-                        .cardname::before{
+
+                        .cardname::before {
                             left: 5%;
                         }
-                        .cardname::after{
+
+                        .cardname::after {
                             right: 5%;
                             scale: -1;
                         }
 
-                        .value,.skill{
+                        .value,
+                        .skill {
                             width: fit-content;
                             height: auto;
                             padding: 5px 15px;
@@ -749,21 +776,22 @@
                             margin-left: 10%;
                         }
 
-                        .value{
+                        .value {
                             margin-top: 35%;
                         }
 
-                        .valuetable,.skilltable{
+                        .valuetable,
+                        .skilltable {
                             margin: 10px auto 15px auto;
                             width: 70%;
                             border-collapse: collapse;
                             font-size: 21px;
                             font-weight: bold;
 
-                            & td{
+                            & td {
                                 width: 50%;
 
-                                & span{
+                                & span {
                                     color: #eaf4ff;
                                 }
                             }
@@ -771,16 +799,17 @@
                     }
                 }
 
-                .card{
+                .card {
                     position: absolute;
-                    top: 26%;
+                    top: 30%;
                     left: 50%;
                     translate: -50% -50%;
                     width: 40%;
                     height: 90%;
                     scale: 0.7;
 
-                    .nocard,.nowcard{
+                    .nocard,
+                    .nowcard {
                         position: absolute;
                         top: 45%;
                         left: 50%;
@@ -788,7 +817,7 @@
                         width: 411px;
                         height: 411px;
 
-                        .card_bg{
+                        .card_bg {
                             position: absolute;
                             width: 100%;
                             height: 100%;
@@ -799,7 +828,7 @@
                             mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
                         }
 
-                        .card_cloud1{
+                        .card_cloud1 {
                             position: absolute;
                             width: 100%;
                             height: 100%;
@@ -811,7 +840,7 @@
                             animation: p3cloud1 2s infinite alternate ease-in-out;
                         }
 
-                        .card_cloud2{
+                        .card_cloud2 {
                             position: absolute;
                             width: 100%;
                             height: 100%;
@@ -823,7 +852,7 @@
                             animation: p3cloud2 2s infinite alternate ease-in-out;
                         }
 
-                        .card_frame{
+                        .card_frame {
                             position: absolute;
                             width: 100%;
                             height: 100%;
@@ -833,7 +862,7 @@
                         }
                     }
 
-                    .getcardbtn{
+                    .getcardbtn {
                         position: absolute;
                         top: 65%;
                         left: 50%;
@@ -845,16 +874,16 @@
                         transition: 0.3s;
                         scale: 1.1;
 
-                        &:hover{
+                        &:hover {
                             transform: translateY(-5px);
                         }
                     }
 
-                    & p{
+                    & p {
                         position: absolute;
                         width: 100%;
                         text-align: center;
-                        top: 77%;
+                        top: 78%;
                         left: 50%;
                         translate: -50%;
                         color: #FFF;
@@ -863,9 +892,9 @@
                     }
                 }
 
-                .p4Gobtn{
+                .p4Gobtn {
                     position: absolute;
-                    top: 85%;
+                    top: 91%;
                     left: 50%;
                     translate: -50%;
                     width: 260px;
@@ -881,20 +910,22 @@
                     line-height: 101px;
                     filter: drop-shadow(0 0 5px #2d3447);
 
-                    &:hover{
+                    &:hover {
                         background: url(/img/event/prereg/p3/btn1_hover.png)no-repeat;
                     }
 
                 }
             }
         }
-        .page4{
+
+        .page4 {
             background: url(/img/event/prereg/p4/bg4.png);
             background-size: cover;
             background-position: center;
+            height: 1142px;
 
-            .bg4animate{
-                .bamboo{
+            .bg4animate {
+                .bamboo {
                     position: absolute;
                     bottom: 0;
                     translate: 10% -50%;
@@ -905,7 +936,7 @@
                     background-size: contain;
                 }
 
-                .cloud{
+                .cloud {
                     position: absolute;
                     width: 100vw;
                     height: 100vh;
@@ -914,7 +945,7 @@
                     animation: p4cloud 60s infinite alternate ease-in-out;
                 }
 
-                .leave1{
+                .leave1 {
                     position: absolute;
                     top: -100vh;
                     left: 0vw;
@@ -926,7 +957,7 @@
                     animation: p4leave1 40s infinite ease-in;
                 }
 
-                .leave2{
+                .leave2 {
                     position: absolute;
                     top: -100vh;
                     left: 0vw;
@@ -938,7 +969,7 @@
                     animation: p4leave2 40s 10s infinite ease-in;
                 }
 
-                .leave3{
+                .leave3 {
                     position: absolute;
                     top: -100vh;
                     left: 0vw;
@@ -951,7 +982,7 @@
                 }
             }
 
-            .p4title{
+            .p4title {
                 position: absolute;
                 top: 5vh;
                 left: 50%;
@@ -963,29 +994,29 @@
                 background-position: center bottom;
             }
 
-            .p4main{
+            .p4main {
                 position: absolute;
-                top: 100%;
+                top: 91%;
                 left: 50%;
                 translate: -50% -100%;
                 width: 80vw;
-                height: 80vh;
+                height: 700px;
 
-                .p4info{
+                .p4info {
                     position: absolute;
-                    top: -8%;
+                    top: -25%;
                     right: 0%;
                     width: 100%;
 
-                    & p{
-                        font-size: 25px;
+                    & p {
+                        font-size: 22px;
                         font-weight: bold;
                         color: #21345d;
                         text-align: center;
                     }
 
 
-                    .p4btns{
+                    .p4btns {
                         width: auto;
                         height: auto;
                         color: #ffffff;
@@ -997,7 +1028,8 @@
                         text-shadow: 0 0 5px #010101;
                         filter: drop-shadow(0 0 5px #2d3447);
 
-                        .p4informationbtn, .p4noticebtn{
+                        .p4informationbtn,
+                        .p4noticebtn {
                             position: relative;
                             width: 202px;
                             height: 54px;
@@ -1011,7 +1043,8 @@
                             transition: 0.3s;
                             scale: 0.95;
 
-                            &::before, &::after{
+                            &::before,
+                            &::after {
                                 position: absolute;
                                 content: '';
                                 width: 32px;
@@ -1019,27 +1052,27 @@
                                 transition: 0.3s;
                             }
 
-                            &::before{
+                            &::before {
                                 left: 0px;
                                 background: url(/img/event/prereg/p4/btn2_hover1.png)no-repeat;
                                 background-position: center;
                             }
 
-                            &::after{
+                            &::after {
                                 right: 0px;
                                 background: url(/img/event/prereg/p4/btn2_hover2.png)no-repeat;
                                 background-position: center;
                             }
 
-                            &:hover::before{
+                            &:hover::before {
                                 transform: translateX(-5px);
                             }
 
-                            &:hover::after{
+                            &:hover::after {
                                 transform: translateX(5px);
                             }
 
-                            &:hover{
+                            &:hover {
                                 letter-spacing: 3px;
                             }
                         }
@@ -1047,7 +1080,7 @@
                     }
                 }
 
-                .pandas{
+                .pandas {
                     position: absolute;
                     width: 100%;
                     height: 30%;
@@ -1056,7 +1089,7 @@
                     translate: -50% 0%;
                     scale: 0.75;
 
-                    .panda1{
+                    .panda1 {
                         position: absolute;
                         bottom: 0%;
                         left: 50%;
@@ -1065,7 +1098,8 @@
                         height: 548px;
                         background: url(/img/event/prereg/p4/panda1.png)no-repeat;
                     }
-                    .panda2{
+
+                    .panda2 {
                         position: absolute;
                         bottom: 0%;
                         left: 56%;
@@ -1075,7 +1109,8 @@
                         background: url(/img/event/prereg/p4/panda2.png)no-repeat;
                         display: none;
                     }
-                    .panda3{
+
+                    .panda3 {
                         position: absolute;
                         bottom: 0%;
                         left: 58%;
@@ -1087,7 +1122,7 @@
                     }
                 }
 
-                .pandasValue{
+                .pandasValue {
                     position: absolute;
                     top: 45%;
                     right: 50%;
@@ -1095,14 +1130,15 @@
                     width: calc(365px * 0.85);
                     height: calc(214px * 0.85);
 
-                    .panda1Value{
+                    .panda1Value {
                         position: absolute;
                         width: 100%;
                         height: 100%;
                         background: url(/img/event/prereg/p4/panda1_value.png)no-repeat;
                         background-size: contain;
                     }
-                    .panda2Value{
+
+                    .panda2Value {
                         position: absolute;
                         width: 100%;
                         height: 100%;
@@ -1110,7 +1146,8 @@
                         background-size: contain;
                         display: none;
                     }
-                    .panda3Value{
+
+                    .panda3Value {
                         position: absolute;
                         width: 100%;
                         height: 100%;
@@ -1120,7 +1157,7 @@
                     }
                 }
 
-                .pandaMenu{
+                .pandaMenu {
                     position: absolute;
                     top: 63%;
                     left: 50%;
@@ -1131,11 +1168,11 @@
                     display: flex;
                     justify-content: center;
 
-                    & div{
+                    & div {
                         cursor: pointer;
                     }
 
-                    .panda1btn{
+                    .panda1btn {
                         position: static;
                         top: 0%;
                         left: 0%;
@@ -1146,18 +1183,18 @@
                         background: url(/img/event/prereg/p4/menu1_M.png)no-repeat;
                         background-size: contain;
 
-                        &:hover{
+                        &:hover {
                             background: url(/img/event/prereg/p4/menu1_hoverM.png)no-repeat;
                             background-size: contain;
                         }
                     }
 
-                    .panda1btn_2{
+                    .panda1btn_2 {
                         background: url(/img/event/prereg/p4/menu1_hoverM.png)no-repeat;
                         background-size: contain;
                     }
 
-                    .panda2btn{
+                    .panda2btn {
                         position: static;
                         top: 0%;
                         left: 0%;
@@ -1168,18 +1205,18 @@
                         background: url(/img/event/prereg/p4/menu2_M.png)no-repeat;
                         background-size: contain;
 
-                        &:hover{
+                        &:hover {
                             background: url(/img/event/prereg/p4/menu2_hoverM.png)no-repeat;
                             background-size: contain;
                         }
                     }
 
-                    .panda2btn_2{
+                    .panda2btn_2 {
                         background: url(/img/event/prereg/p4/menu2_hoverM.png)no-repeat;
                         background-size: contain;
                     }
 
-                    .panda3btn{
+                    .panda3btn {
                         position: static;
                         top: 0%;
                         left: 0%;
@@ -1190,22 +1227,22 @@
                         background: url(/img/event/prereg/p4/menu3_M.png)no-repeat;
                         background-size: contain;
 
-                        &:hover{
+                        &:hover {
                             background: url(/img/event/prereg/p4/menu3_hoverM.png)no-repeat;
                             background-size: contain;
                         }
 
                     }
 
-                    .panda3btn_2{
+                    .panda3btn_2 {
                         background: url(/img/event/prereg/p4/menu3_hoverM.png)no-repeat;
                         background-size: contain;
                     }
                 }
 
-                .pandaGobtn{
+                .pandaGobtn {
                     position: absolute;
-                    top: 80%;
+                    top: 87%;
                     left: 50%;
                     translate: -50%;
                     width: 260px;
@@ -1221,15 +1258,15 @@
                     line-height: 101px;
                     filter: drop-shadow(0 0 5px #2d3447);
 
-                    &:hover{
+                    &:hover {
                         background: url(/img/event/prereg/p4/btn1_hover.png)no-repeat;
                     }
 
                 }
 
-                .p4awards{
+                .p4awards {
                     position: absolute;
-                    top: 90%;
+                    top: 102%;
                     left: 50%;
                     translate: -50%;
                     color: #ffffff;
@@ -1250,7 +1287,8 @@
                     transition: 0.3s;
                     scale: 0.95;
 
-                    &::before, &::after{
+                    &::before,
+                    &::after {
                         position: absolute;
                         content: '';
                         width: 32px;
@@ -1258,37 +1296,37 @@
                         transition: 0.3s;
                     }
 
-                    &::before{
+                    &::before {
                         left: 0px;
                         background: url(/img/event/prereg/p4/btn2_hover1.png)no-repeat;
                         background-position: center;
                     }
 
-                    &::after{
+                    &::after {
                         right: 0px;
                         background: url(/img/event/prereg/p4/btn2_hover2.png)no-repeat;
                         background-position: center;
                     }
 
-                    &:hover::before{
+                    &:hover::before {
                         transform: translateX(-5px);
                     }
 
-                    &:hover::after{
+                    &:hover::after {
                         transform: translateX(5px);
                     }
 
-                    &:hover{
+                    &:hover {
                         letter-spacing: 3px;
                     }
 
                 }
 
-                .times{
+                .times {
                     position: absolute;
                     top: 35%;
                     right: 0%;
-                    left: -12%;
+                    left: -5%;
                     translate: 0% 0%;
                     width: calc(292px * 0.85);
                     height: calc(123px * 0.85);
@@ -1299,19 +1337,22 @@
                     font-weight: bold;
                     text-align: right;
                     line-height: 25px;
-                    & p{
-                        padding-right: 50px;
-                        line-height: 40px;
+
+                    & p {
+                        padding-right: 71px;
+                        line-height: 34px;
                     }
                 }
             }
         }
-        .page5{
+
+        .page5 {
             background: url(/img/event/prereg/p5/bg5_m.png)no-repeat;
             background-size: cover;
             background-position: center;
+            height: 1080px;
 
-            .p5title{
+            .p5title {
                 position: absolute;
                 top: 5vh;
                 left: 50%;
@@ -1323,7 +1364,7 @@
                 background-position: center;
             }
 
-            .p5slideBox{
+            .p5slideBox {
                 position: absolute;
                 left: 50%;
                 top: 55%;
@@ -1334,7 +1375,7 @@
                 background-size: 100% 100%;
                 scale: 0.95;
 
-                .p5slidebg{
+                .p5slidebg {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -1344,7 +1385,7 @@
                     border-radius: 20px;
                     background-image: linear-gradient(to bottom right, #091746, #142765, #3b7c9e);
 
-                    &::before{
+                    &::before {
                         position: absolute;
                         content: '';
                         top: 50%;
@@ -1360,7 +1401,7 @@
                     }
                 }
 
-                .p5slider{
+                .p5slider {
                     left: 50%;
                     translate: -50%;
                     width: calc(100% - 60px);
@@ -1368,9 +1409,10 @@
                     display: flex;
                     scale: 1;
 
-                    .slick-list{
+                    .slick-list {
                         color: rgba(255, 0, 0, 0);
-                        .slick-track{
+
+                        .slick-track {
                             top: 50%;
                             left: 50%;
                             translate: -50% -50%;
@@ -1378,30 +1420,33 @@
                         }
                     }
 
-                    .p5slide1{
+                    .p5slide1 {
                         background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                     }
 
-                    .p5slide2{
+                    .p5slide2 {
                         background: url(/img/event/prereg/p5/slide2_m.jpg)no-repeat;
                     }
 
-                    .p5slide3{
+                    .p5slide3 {
                         background: url(/img/event/prereg/p5/slide3_m.jpg)no-repeat;
                     }
 
-                    .p5slide4{
+                    .p5slide4 {
                         background: url(/img/event/prereg/p5/slide4_m.jpg)no-repeat;
                     }
 
-                    .p5slide1,.p5slide2,.p5slide3,.p5slide4{
+                    .p5slide1,
+                    .p5slide2,
+                    .p5slide3,
+                    .p5slide4 {
                         border-radius: 30px;
                         background-size: cover;
                         background-position: center;
                         background-color: #ffffff;
                     }
 
-                    .slick-arrow{
+                    .slick-arrow {
                         position: absolute;
                         width: 73px;
                         height: 108px;
@@ -1412,7 +1457,7 @@
                         cursor: pointer;
                     }
 
-                    .slick-prev{
+                    .slick-prev {
                         top: 50%;
                         left: -15%;
                         translate: -50% -50%;
@@ -1420,7 +1465,7 @@
                         animation: p5arrowLfloat 1.5s infinite alternate ease-in-out;
                     }
 
-                    .slick-next{
+                    .slick-next {
                         top: 50%;
                         right: -15%;
                         translate: 50% -50%;
@@ -1428,7 +1473,7 @@
                         animation: p5arrowRfloat 1.5s infinite alternate ease-in-out;
                     }
 
-                    .slick-dots{
+                    .slick-dots {
                         position: absolute;
                         top: 100%;
                         left: calc(50% - 20px);
@@ -1436,8 +1481,8 @@
                         list-style: none;
                         display: flex !important;
 
-                        & li{
-                            & button{
+                        & li {
+                            & button {
                                 width: 25px;
                                 height: 25px;
                                 border-radius: 100px;
@@ -1450,8 +1495,8 @@
                             }
                         }
 
-                        .slick-active{
-                            & button{
+                        .slick-active {
+                            & button {
                                 width: 55px;
                                 background-color: #5d78c5;
                                 color: #00000000;
@@ -1461,29 +1506,32 @@
                     }
                 }
 
-                .p5flowers{
-                    & div{
+                .p5flowers {
+                    & div {
                         position: absolute;
                         width: 31px;
                         height: 36px;
                         background: url(/img/event/prereg/p5/flower.png)no-repeat;
 
-                        &:nth-child(1){
+                        &:nth-child(1) {
                             left: 0;
                             top: 0;
                             translate: -50% -50%;
                         }
-                        &:nth-child(2){
+
+                        &:nth-child(2) {
                             right: 0;
                             top: 0;
                             translate: 50% -50%;
                         }
-                        &:nth-child(3){
+
+                        &:nth-child(3) {
                             right: 0;
                             bottom: 0;
                             translate: 50% 50%;
                         }
-                        &:nth-child(4){
+
+                        &:nth-child(4) {
                             left: 0;
                             bottom: 0;
                             translate: -50% 50%;
@@ -1505,18 +1553,20 @@
                 position: absolute;
                 width: 3px;
                 height: 100px;
-                background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.3));
+                background: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .3));
             }
 
         }
-        .page6{
+
+        .page6 {
             background: url(/img/event/prereg/p6/bg6_m.jpg);
             background-size: cover;
             background-position: center;
+            height: 1500px;
 
-            .p6title{
+            .p6title {
                 position: absolute;
-                top: 5vh;
+                top: 5%;
                 left: 50%;
                 translate: -50%;
                 width: 51vw;
@@ -1527,21 +1577,21 @@
                 z-index: 1;
             }
 
-            .roles{
+            .roles {
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
                 left: 0%;
-                top: 8vh;
+                top: 11%;
                 scale: 1;
 
-                .humen{
+                .humen {
                     position: absolute;
                     width: 100%;
                     height: 100%;
                     translate: -5vw;
 
-                    .human1{
+                    .human1 {
                         position: absolute;
                         top: 43.6px;
                         left: 105.6px;
@@ -1550,7 +1600,8 @@
                         background: url(/img/event/prereg/p6/role1.png);
                         opacity: 1;
                     }
-                    .human2{
+
+                    .human2 {
                         position: absolute;
                         top: 38.7px;
                         left: 186.4px;
@@ -1559,7 +1610,8 @@
                         background: url(/img/event/prereg/p6/role2.png);
                         opacity: 0;
                     }
-                    .human3{
+
+                    .human3 {
                         position: absolute;
                         top: 106.59px;
                         left: 359.2px;
@@ -1568,7 +1620,8 @@
                         background: url(/img/event/prereg/p6/role3.png);
                         opacity: 0;
                     }
-                    .human4{
+
+                    .human4 {
                         position: absolute;
                         top: 29px;
                         left: 206px;
@@ -1577,7 +1630,8 @@
                         background: url(/img/event/prereg/p6/role4.png);
                         opacity: 0;
                     }
-                    .human5{
+
+                    .human5 {
                         position: absolute;
                         top: 116.28px;
                         left: 176.8px;
@@ -1588,13 +1642,13 @@
                     }
                 }
 
-                .names{
+                .names {
                     position: absolute;
                     width: 100%;
                     height: 100%;
                     translate: -5vw;
 
-                    .name1{
+                    .name1 {
                         position: absolute;
                         top: -43.6px;
                         left: 316.8px;
@@ -1603,7 +1657,8 @@
                         background: url(/img/event/prereg/p6/roleName1.png);
                         opacity: 1;
                     }
-                    .name2{
+
+                    .name2 {
                         position: absolute;
                         top: -77.52px;
                         left: 240.8px;
@@ -1612,7 +1667,8 @@
                         background: url(/img/event/prereg/p6/roleName2.png);
                         opacity: 0;
                     }
-                    .name3{
+
+                    .name3 {
                         position: absolute;
                         top: -58.14px;
                         left: -80.8px;
@@ -1621,7 +1677,8 @@
                         background: url(/img/event/prereg/p6/roleName3.png);
                         opacity: 0;
                     }
-                    .name4{
+
+                    .name4 {
                         position: absolute;
                         top: -106.59px;
                         left: 226px;
@@ -1630,7 +1687,8 @@
                         background: url(/img/event/prereg/p6/roleName4.png);
                         opacity: 0;
                     }
-                    .name5{
+
+                    .name5 {
                         position: absolute;
                         top: -87.2px;
                         left: -32.8px;
@@ -1641,7 +1699,7 @@
                     }
                 }
 
-                .arm{
+                .arm {
                     position: absolute;
                     top: 363.375px;
                     left: 176.64px;
@@ -1660,9 +1718,9 @@
                 }
             }
 
-            .p6menu{
+            .p6menu {
                 position: absolute;
-                top: 100vh;
+                top: 1455px;
                 left: 0vw;
                 width: 100vw;
                 height: 20vw;
@@ -1672,18 +1730,19 @@
                 background-position: top;
                 display: flex;
                 justify-content: center;
+                scale: .8;
 
-                & div{
+                & div {
                     position: static;
                     cursor: pointer;
                     margin: auto -2vw;
 
-                    &:hover{
+                    &:hover {
                         scale: 1;
                     }
                 }
 
-                .p6btn1{
+                .p6btn1 {
                     top: 25%;
                     left: 86%;
                     width: 19vw;
@@ -1692,18 +1751,19 @@
                     background-size: contain;
                     transition: 0.5s;
 
-                    &:hover{
+                    &:hover {
                         background: url(/img/event/prereg/p6/btn1_hover.png)no-repeat;
                         background-size: contain;
                     }
                 }
-                .p6btn1_2{
+
+                .p6btn1_2 {
                     background: url(/img/event/prereg/p6/btn1_hover.png)no-repeat;
                     background-size: contain;
                     margin-right: 2vw;
                 }
 
-                .p6btn2{
+                .p6btn2 {
                     top: 46%;
                     left: 78%;
                     width: 19vw;
@@ -1712,18 +1772,19 @@
                     background-size: contain;
                     transition: 0.5s;
 
-                    &:hover{
+                    &:hover {
                         background: url(/img/event/prereg/p6/btn2_hover.png)no-repeat;
                         background-size: contain;
                     }
                 }
-                .p6btn2_2{
+
+                .p6btn2_2 {
                     background: url(/img/event/prereg/p6/btn2_hover.png)no-repeat;
                     background-size: contain;
                     margin-right: 2vw;
                 }
 
-                .p6btn3{
+                .p6btn3 {
                     top: 63%;
                     left: 65%;
                     width: 19vw;
@@ -1732,18 +1793,19 @@
                     background-size: contain;
                     transition: 0.5s;
 
-                    &:hover{
+                    &:hover {
                         background: url(/img/event/prereg/p6/btn3_hover.png)no-repeat;
                         background-size: contain;
                     }
                 }
-                .p6btn3_2{
+
+                .p6btn3_2 {
                     background: url(/img/event/prereg/p6/btn3_hover.png)no-repeat;
                     background-size: contain;
                     margin-right: 2vw;
                 }
 
-                .p6btn4{
+                .p6btn4 {
                     top: 77%;
                     left: 50%;
                     width: 19vw;
@@ -1752,18 +1814,19 @@
                     background-size: contain;
                     transition: 0.5s;
 
-                    &:hover{
+                    &:hover {
                         background: url(/img/event/prereg/p6/btn4_hover.png)no-repeat;
                         background-size: contain;
                     }
                 }
-                .p6btn4_2{
+
+                .p6btn4_2 {
                     background: url(/img/event/prereg/p6/btn4_hover.png)no-repeat;
                     background-size: contain;
                     margin-right: 2vw;
                 }
 
-                .p6btn5{
+                .p6btn5 {
                     top: 86%;
                     left: 32%;
                     width: 19vw;
@@ -1772,20 +1835,21 @@
                     background-size: contain;
                     transition: 0.5s;
 
-                    &:hover{
+                    &:hover {
                         background: url(/img/event/prereg/p6/btn5_hover.png)no-repeat;
                         background-size: contain;
                     }
                 }
-                .p6btn5_2{
+
+                .p6btn5_2 {
                     background: url(/img/event/prereg/p6/btn5_hover.png)no-repeat;
                     background-size: contain;
                     margin-right: 2vw;
                 }
             }
 
-            .bgclouds{
-                .bgcloud1{
+            .bgclouds {
+                .bgcloud1 {
                     position: absolute;
                     width: 200vw;
                     height: 100vh;
@@ -1794,7 +1858,8 @@
                     background-size: cover;
                     animation: p6cloud1 10s infinite alternate ease-in;
                 }
-                .bgcloud2{
+
+                .bgcloud2 {
                     position: absolute;
                     top: 5%;
                     left: -50%;
@@ -1807,7 +1872,7 @@
                 }
             }
 
-            .p6features{
+            .p6features {
                 position: absolute;
                 width: 60vw;
                 height: 28vw;
@@ -1817,7 +1882,7 @@
                 background-position: top;
                 background-size: contain;
 
-                .p6subtitle{
+                .p6subtitle {
                     position: absolute;
                     width: calc(60vw / 2);
                     height: calc(60vw * 0.115);
@@ -1832,7 +1897,7 @@
                     letter-spacing: 1px;
                 }
 
-                .p6text{
+                .p6text {
                     position: absolute;
                     width: 80%;
                     height: auto;
@@ -1846,22 +1911,23 @@
                 }
             }
 
-            .p6feature1{
+            .p6feature1 {
                 left: 40%;
-                top: 55%;
+                top: 59%;
             }
 
-            .p6feature2{
+            .p6feature2 {
                 left: 60%;
-                top: calc(50% + 28vw);
+                top: 73%;
             }
         }
-        .page7{
+
+        .page7 {
             background: url(/img/event/prereg/p7/bg7_m.png);
             background-size: cover;
             background-position: center;
 
-            .p7title{
+            .p7title {
                 position: absolute;
                 top: 5vh;
                 left: 50%;
@@ -1873,7 +1939,7 @@
                 background-position: center;
             }
 
-            .p7rules{
+            .p7rules {
                 position: absolute;
                 top: 46%;
                 left: 50%;
@@ -1886,11 +1952,11 @@
                 font-weight: bold;
                 overflow-y: scroll;
 
-                & li{
+                & li {
                     margin: 5px 0;
                     padding-right: 3%;
 
-                    & span{
+                    & span {
                         color: #91006a;
                     }
                 }
@@ -1918,7 +1984,7 @@
                 }
             }
 
-            .footer{
+            .footer {
                 width: 100vw;
                 height: 200px;
                 bottom: 0;
@@ -1926,7 +1992,7 @@
                 position: absolute;
                 left: 0px;
 
-                .wrap{
+                .wrap {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -1941,11 +2007,11 @@
                     align-items: center;
                     justify-content: center;
 
-                    & div{
+                    & div {
                         margin: auto 1vw;
                     }
 
-                    .digeamlogo{
+                    .digeamlogo {
                         width: 40%;
                         height: 25%;
                         background: url(/img/event/prereg/footer/digeam_logo.png)no-repeat;
@@ -1954,7 +2020,7 @@
                         filter: drop-shadow(0 1px 2px #000);
                     }
 
-                    .giantlogo{
+                    .giantlogo {
                         width: 40%;
                         height: 30%;
                         background: url(/img/event/prereg/footer/GIANT-LOGO.png)no-repeat;
@@ -1962,32 +2028,33 @@
                         background-position: left;
                     }
 
-                    .copyright{
+                    .copyright {
                         // width: 20%;
                         // height: 40%;
 
-                        & div{
+                        & div {
                             width: fit-content;
                             text-align: left;
                             font-size: 9pt;
                             margin: auto;
 
-                            & a{
+                            & a {
                                 color: #9ed5ff;
                                 margin-right: 1%;
                             }
 
-                            & p{
+                            & p {
                                 margin: auto;
                             }
 
                         }
                     }
-                    .plus{
+
+                    .plus {
                         height: 50%;
                         display: flex;
 
-                        .lv{
+                        .lv {
                             width: 60px;
                             height: 100%;
                             background: url(/img/event/prereg/footer/15plus.png)no-repeat;
@@ -1995,12 +2062,13 @@
                             background-position: center;
                         }
 
-                        .footernotice{
+                        .footernotice {
                             text-align: left;
                             vertical-align: top;
                             line-height: 19px;
                             font-size: 9pt;
-                            & p:nth-child(4){
+
+                            & p:nth-child(4) {
                                 color: #9ed5ff;
                             }
                         }
@@ -2010,21 +2078,22 @@
 
         }
 
-        .swiper-slide-active{
-            .cloudmask{
+        .swiper-slide-active {
+            .cloudmask {
                 scale: 2;
                 opacity: 0;
                 transition: 3s;
                 transition-delay: 0s;
             }
-            .bg2animate{
 
-                .bird1{
+            .bg2animate {
+
+                .bird1 {
                     animation: flybird1_m 6s 1 linear;
                     animation-fill-mode: forwards;
                 }
 
-                .bird2{
+                .bird2 {
                     animation: flybird2_m 6s 1 linear;
                     animation-fill-mode: forwards;
                 }
@@ -2032,9 +2101,9 @@
         }
     }
 
-    .menubar{
+    .menubar {
 
-        .menubtn{
+        .menubtn {
             position: absolute;
             z-index: 99;
             width: 60px;
@@ -2044,7 +2113,8 @@
             cursor: pointer;
             scale: 1.3;
 
-            &::before, &::after{
+            &::before,
+            &::after {
                 position: absolute;
                 content: '';
                 left: 50%;
@@ -2054,34 +2124,40 @@
                 background-color: #ffffff;
                 transition: .3s;
             }
-            &::after{
+
+            &::after {
                 top: 35%;
             }
-            &::before{
+
+            &::before {
                 top: 55%;
             }
         }
 
-        .menubtn2{
+        .menubtn2 {
             top: 8vw;
             right: 8vw;
             translate: 0%;
         }
 
-        .menubtnOpen{
-            &::after,&::before{
+        .menubtnOpen {
+
+            &::after,
+            &::before {
                 width: 60%;
                 top: 45%;
             }
-            &::after{
+
+            &::after {
                 rotate: 45deg;
             }
-            &::before{
+
+            &::before {
                 rotate: -45deg;
             }
         }
 
-        .bar{
+        .bar {
             position: fixed;
             top: 0;
             left: 0;
@@ -2092,7 +2168,7 @@
             background-image: linear-gradient(to bottom, rgba(179, 166, 211, 0.8), rgba(104, 145, 180, 0.8));
         }
 
-        .barLine{
+        .barLine {
             position: absolute;
             top: -100vh;
             left: 15vw;
@@ -2107,24 +2183,26 @@
     }
 
     /*選單連結(放進bar的css裡面會跑版所以放外面)*/
-    .swiper-pagination{
+    .swiper-pagination {
         top: 50% !important;
         left: 50% !important;
         translate: -50%;
         scale: 1.2;
 
-        .swiper-pagination-bullet{
+        .swiper-pagination-bullet {
             width: 20px;
             height: 20px;
             margin: 5vh 0 !important;
             background: none;
             color: #ffffff;
-            text-shadow:  0 0 10px #4b6898;
+            text-shadow: 0 0 10px #4b6898;
             opacity: 1;
-            &:hover{
+
+            &:hover {
                 color: #fff2d2;
             }
-            &:hover::before{
+
+            &:hover::before {
                 position: absolute;
                 content: '';
                 left: 23%;
@@ -2136,9 +2214,10 @@
             }
         }
 
-        .swiper-pagination-bullet-active{
+        .swiper-pagination-bullet-active {
             color: #fff2d2;
-            &::before{
+
+            &::before {
                 position: absolute;
                 content: '';
                 left: 23%;
@@ -2149,10 +2228,12 @@
                 filter: drop-shadow(0 0 13px #4b6898);
             }
         }
-        .swiper-pagination-bullet{
+
+        .swiper-pagination-bullet {
             font-size: 30px;
             font-weight: 600;
-            &::after{
+
+            &::after {
                 left: 50%;
                 translate: -50%;
             }
@@ -2160,7 +2241,7 @@
     }
 
     /*結交名士任務板*/
-    .p3missionpop{
+    .p3missionpop {
         position: fixed;
         top: 0;
         width: 100vw;
@@ -2170,21 +2251,22 @@
         z-index: 10;
         display: none;
 
-        .p3missionpopframe{
+        .p3missionpopframe {
             position: absolute;
             top: 50%;
             left: 50%;
             translate: -50% -50%;
             width: 90vw;
             height: 90vw;
+            scale: .9;
             background: url(/img/event/prereg/p3/missionBG_m.png)no-repeat;
             background-size: contain;
             background-position: center;
 
-            .p3XX{
+            .p3XX {
                 position: absolute;
-                top: 110%;
-                right: 50%;
+                top: 2%;
+                right: 19%;
                 translate: 50%;
                 width: 4vw;
                 height: 4vw;
@@ -2192,14 +2274,19 @@
                 background: url(/img/event/prereg/p3/XX.png)no-repeat;
                 background-size: contain;
                 transition: 0.3s;
-                scale: 2.5;
+                scale: 2;
 
-                &:hover{
+                &:hover {
                     rotate: 90deg;
                 }
             }
 
-            .p3missionpoptitle{
+            .p3_desc{
+                top: 76%;
+                font-size: 21px;
+            } 
+
+            .p3missionpoptitle {
                 position: absolute;
                 top: 17%;
                 left: 52%;
@@ -2209,53 +2296,58 @@
                 background: url(/img/event/prereg/p3/missiontitle.png)no-repeat;
                 background-position: center;
             }
-            .p3missionpopText{
+
+            .p3missionpopText {
                 margin: auto;
-                margin-top: 27%;
-                width: 70%;
-                height: 73%;
+                margin-top: 36%;
+                width: 60%;
+                height: 51%;
                 list-style: decimal;
                 color: #15386c;
                 font-size: 1.3rem;
                 overflow-y: scroll;
                 padding: 0;
 
-                & li{
+
+                & li {
                     list-style: none;
                     margin: 10px 0;
-                    padding-left: 8%;
+                    padding-left: 5px;
                     height: 50px;
                     background-color: #dfeaf5;
                     line-height: 50px;
                     display: flex;
 
-                    .missiontext{
-                        width: 55%;
+                    .missiontext {
+                        width: 65%;
                         height: 100%;
-                        & span{
+
+                        & span {
                             font-size: 1rem;
                             color: #67729b;
                         }
                     }
-                    .missiontimes{
-                        width:20%;
+
+                    .missiontimes {
+                        width: 26%;
                         height: 100%;
                         font-size: 1rem;
                         text-align: end;
                     }
-                    .missionbtn{
-                        width: 25%;
+
+                    .missionbtn {
+                        width: 18%;
                         height: 100%;
                         background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
                         cursor: pointer;
                         transition: 0.3s;
 
-                        &:hover{
-                            background-position: right;
-                        }
+                        // &:hover {
+                        //     background-position: right;
+                        // }
                     }
 
-                    &::before{
+                    &::before {
                         position: absolute;
                         content: '';
                         left: 16%;
@@ -2264,7 +2356,7 @@
                         background: url(/img/event/prereg/p3/mission_li.png) no-repeat center;
                     }
 
-                    &:nth-child(2n){
+                    &:nth-child(2n) {
                         background-color: #b7cee6;
 
                     }
@@ -2295,7 +2387,7 @@
     }
 
     /*結交名士結果彈窗*/
-    .p3resultpop{
+    .p3resultpop {
         position: fixed;
         top: 0;
         width: 100vw;
@@ -2305,7 +2397,7 @@
         z-index: 10;
         display: none;
 
-        .p3resultpopframe{
+        .p3resultpopframe {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -2316,7 +2408,7 @@
             background-size: contain;
             background-position: center;
 
-            .p3resultpoptitle{
+            .p3resultpoptitle {
                 position: absolute;
                 top: 10%;
                 left: 50%;
@@ -2325,7 +2417,8 @@
                 color: #15386c;
                 text-align: center;
 
-                &::before,&::after{
+                &::before,
+                &::after {
                     position: absolute;
                     content: '';
                     top: 6%;
@@ -2334,16 +2427,18 @@
                     background: url(/img/event/prereg/pop_l/popLtitle_icon.png)no-repeat;
                     background-position: center;
                 }
-                &::before{
+
+                &::before {
                     left: -30%;
                 }
-                &::after{
+
+                &::after {
                     right: -30%;
                     scale: -1;
                 }
             }
 
-            .p3subtitle{
+            .p3subtitle {
                 position: relative;
                 margin: 57px auto;
                 width: calc(165px * 1);
@@ -2360,7 +2455,7 @@
                 scale: 1.3;
             }
 
-            .result_new{
+            .result_new {
                 position: relative;
                 margin-top: 25%;
                 left: 50%;
@@ -2373,12 +2468,12 @@
                 box-shadow: 0 0 20px #ffdf9d;
                 scale: 1.3;
 
-                & img{
+                & img {
                     width: 100%;
                 }
             }
 
-            .result_now{
+            .result_now {
                 position: relative;
                 left: 50%;
                 translate: -50%;
@@ -2390,13 +2485,13 @@
                 filter: drop-shadow(0 0 20px #ffdf9d);
                 scale: 1.3;
 
-                & img{
+                & img {
                     width: 100%;
                 }
 
             }
 
-            .newinfo{
+            .newinfo {
                 position: absolute;
                 top: 20%;
                 left: 70%;
@@ -2411,7 +2506,7 @@
                 scale: 1.3;
             }
 
-            .nowinfo{
+            .nowinfo {
                 position: absolute;
                 top: 50%;
                 left: 30%;
@@ -2426,7 +2521,8 @@
                 scale: 1.3;
             }
 
-            .newinfotable,.nowinfotable{
+            .newinfotable,
+            .nowinfotable {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -2435,20 +2531,20 @@
                 height: 100%;
                 font-weight: bold;
 
-                & tr{
+                & tr {
                     font-size: 15px;
 
-                    & td{
+                    & td {
                         width: 50%;
 
-                        & span{
+                        & span {
                             color: #eaf4ff;
                         }
                     }
                 }
             }
 
-            .p3resultbtns{
+            .p3resultbtns {
                 position: relative;
                 left: 50%;
                 translate: -50%;
@@ -2457,7 +2553,8 @@
                 justify-content: center;
                 scale: 1.1;
 
-                .choosenew,.keepnow{
+                .choosenew,
+                .keepnow {
                     cursor: pointer;
                     text-align: center;
                     color: #FFF;
@@ -2467,16 +2564,17 @@
                     background-image: linear-gradient(to bottom, #606994, #21466a);
                     transition: 0.3s;
 
-                    &:hover{
+                    &:hover {
                         transform: translateY(-2px);
                     }
                 }
 
-                .choosenew{
+                .choosenew {
                     width: 40%;
                     height: 50px;
                 }
-                .keepnow{
+
+                .keepnow {
                     width: 30%;
                     height: 50px;
                 }
@@ -2485,7 +2583,7 @@
     }
 
     /*結交名士自選彈窗*/
-    .p3choosepop{
+    .p3choosepop {
         position: fixed;
         top: 0;
         width: 100vw;
@@ -2495,7 +2593,7 @@
         z-index: 10;
         display: none;
 
-        .p3choosepopframe{
+        .p3choosepopframe {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -2506,7 +2604,7 @@
             background-size: contain;
             background-position: center;
 
-            .p3choosepoptitle{
+            .p3choosepoptitle {
                 position: absolute;
                 top: 10%;
                 left: 50%;
@@ -2515,7 +2613,8 @@
                 color: #15386c;
                 text-align: center;
 
-                &::before,&::after{
+                &::before,
+                &::after {
                     position: absolute;
                     content: '';
                     top: 6%;
@@ -2524,16 +2623,18 @@
                     background: url(/img/event/prereg/pop_l/popLtitle_icon.png)no-repeat;
                     background-position: center;
                 }
-                &::before{
+
+                &::before {
                     left: -30%;
                 }
-                &::after{
+
+                &::after {
                     right: -30%;
                     scale: -1;
                 }
             }
 
-            .p3subtitle{
+            .p3subtitle {
                 position: relative;
                 margin: 20px auto;
                 width: calc(165px * 1.2);
@@ -2549,7 +2650,7 @@
                 letter-spacing: 1px;
             }
 
-            .cards{
+            .cards {
                 position: relative;
                 top: 34%;
                 left: 50%;
@@ -2559,25 +2660,25 @@
                 display: flex;
                 justify-content: center;
 
-                .card1_frame{
+                .card1_frame {
                     width: 33%;
                     height: 100%;
 
-                    .card1{
+                    .card1 {
                         position: relative;
                         margin-top: 25%;
                         left: 50%;
                         translate: -50%;
                         width: calc(148px * 1.2);
                         height: calc(214px * 1.2);
-                        background:url(/img/event/prereg/p3/orange/card1_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                        background: url(/img/event/prereg/p3/orange/card1_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
                         background-position: center;
                         background-size: contain;
                         box-shadow: 0 0 20px #ffdf9d;
                         cursor: pointer;
                     }
 
-                    .card1info{
+                    .card1info {
                         position: absolute;
                         top: 50%;
                         left: 0%;
@@ -2591,7 +2692,7 @@
                         pointer-events: none;
                     }
 
-                    .cardinfotable{
+                    .cardinfotable {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -2600,38 +2701,39 @@
                         height: 100%;
                         font-weight: bold;
 
-                        & tr{
+                        & tr {
                             font-size: 15px;
 
-                            & td{
+                            & td {
                                 width: 50%;
 
-                                & span{
+                                & span {
                                     color: #eaf4ff;
                                 }
                             }
                         }
                     }
                 }
-                .card2_frame{
+
+                .card2_frame {
                     width: 33%;
                     height: 100%;
 
-                    .card2{
+                    .card2 {
                         position: relative;
                         margin-top: 25%;
                         left: 50%;
                         translate: -50%;
                         width: calc(148px * 1.2);
                         height: calc(214px * 1.2);
-                        background:url(/img/event/prereg/p3/orange/card2_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                        background: url(/img/event/prereg/p3/orange/card2_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
                         background-position: center;
                         background-size: contain;
                         box-shadow: 0 0 20px #ffdf9d;
                         cursor: pointer;
                     }
 
-                    .card2info{
+                    .card2info {
                         position: absolute;
                         top: 50%;
                         left: 33%;
@@ -2645,7 +2747,7 @@
                         pointer-events: none;
                     }
 
-                    .cardinfotable{
+                    .cardinfotable {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -2654,41 +2756,42 @@
                         height: 100%;
                         font-weight: bold;
 
-                        & tr{
+                        & tr {
                             font-size: 15px;
 
-                            & td{
+                            & td {
                                 width: 50%;
 
-                                & span{
+                                & span {
                                     color: #eaf4ff;
                                 }
                             }
                         }
                     }
                 }
-                .card3_frame{
+
+                .card3_frame {
                     width: 33%;
                     height: 100%;
 
-                    .card3{
+                    .card3 {
                         position: relative;
                         margin-top: 25%;
                         left: 50%;
                         translate: -50%;
                         width: calc(148px * 1.2);
                         height: calc(214px * 1.2);
-                        background:url(/img/event/prereg/p3/orange/card3_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
+                        background: url(/img/event/prereg/p3/orange/card3_M.png)no-repeat, url(/img/event/prereg/p3/card1_frame.png)no-repeat;
                         background-position: center;
                         background-size: contain;
                         box-shadow: 0 0 20px #ffdf9d;
                         cursor: pointer;
                     }
 
-                    .card3info{
+                    .card3info {
                         position: absolute;
                         top: 50%;
-                        left:66%;
+                        left: 66%;
                         translate: -50%;
                         width: 250px;
                         height: 300px;
@@ -2699,7 +2802,7 @@
                         pointer-events: none;
                     }
 
-                    .cardinfotable{
+                    .cardinfotable {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -2708,13 +2811,13 @@
                         height: 100%;
                         font-weight: bold;
 
-                        & tr{
+                        & tr {
                             font-size: 15px;
 
-                            & td{
+                            & td {
                                 width: 50%;
 
-                                & span{
+                                & span {
                                     color: #eaf4ff;
                                 }
                             }
@@ -2723,7 +2826,7 @@
                 }
             }
 
-            .p3choosebtn{
+            .p3choosebtn {
                 position: relative;
                 top: 80%;
                 left: 50%;
@@ -2739,7 +2842,7 @@
                 background-image: linear-gradient(to bottom, #606994, #21466a);
                 transition: 0.3s;
 
-                &:hover{
+                &:hover {
                     transform: translateY(-2px);
                 }
             }
@@ -2747,7 +2850,7 @@
     }
 
     /*大彈窗*/
-    .pop{
+    .pop {
         position: fixed;
         top: 0;
         width: 100vw;
@@ -2757,20 +2860,21 @@
         z-index: 10;
         display: none;
 
-        .popframe{
+        .popframe {
             position: absolute;
             top: 50%;
             left: 50%;
             translate: -50% -50%;
             width: 90vw;
             height: 90vw;
+            scale: .8;
             background: url(/img/event/prereg/pop_l/popL_frame.png)no-repeat;
             background-size: contain;
 
-            .XX{
+            .XX {
                 position: absolute;
-                top: 110%;
-                right: 50%;
+                top: 10%;
+                right: 13%;
                 translate: 50%;
                 width: 4vw;
                 height: 4vw;
@@ -2778,23 +2882,24 @@
                 background: url(/img/event/prereg/pop_l/XX.png)no-repeat;
                 background-size: contain;
                 transition: 0.3s;
-                scale: 2.5;
+                scale: 2;
 
-                &:hover{
+                &:hover {
                     rotate: 90deg;
                 }
             }
 
-            .poptitle{
+            .poptitle {
                 position: absolute;
                 top: 10%;
                 left: 50%;
                 translate: -50%;
-                font-size: 1.8rem;
+                font-size: 34px;
                 color: #15386c;
                 text-align: center;
 
-                &::before,&::after{
+                &::before,
+                &::after {
                     position: absolute;
                     content: '';
                     top: 6%;
@@ -2803,16 +2908,18 @@
                     background: url(/img/event/prereg/pop_l/popLtitle_icon.png)no-repeat;
                     background-position: center;
                 }
-                &::before{
+
+                &::before {
                     left: -30%;
                 }
-                &::after{
+
+                &::after {
                     right: -30%;
                     scale: -1;
                 }
             }
 
-            .popText{
+            .popText {
                 margin: auto;
                 margin-top: 18%;
                 width: 80%;
@@ -2822,11 +2929,12 @@
                 font-size: 1.3rem;
                 overflow-y: scroll;
 
-                & li{
+                & li {
                     margin: 5px 0;
                     padding-right: 3%;
+                    font-size: 27px;
 
-                    & span{
+                    & span {
                         color: #91006a;
                     }
                 }
@@ -2856,7 +2964,7 @@
     }
 
     /*小彈窗*/
-    .popS{
+    .popS {
         position: fixed;
         top: 0;
         width: 100vw;
@@ -2866,7 +2974,7 @@
         z-index: 10;
         display: none;
 
-        .popSframe{
+        .popSframe {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -2876,7 +2984,7 @@
             background: url(/img/event/prereg/pop_s/popS_frame.png)no-repeat;
             background-size: contain;
 
-            .popStitle{
+            .popStitle {
                 position: absolute;
                 top: 13%;
                 left: 50%;
@@ -2885,7 +2993,8 @@
                 color: #e4efff;
                 text-align: center;
 
-                &::before,&::after{
+                &::before,
+                &::after {
                     position: absolute;
                     content: '';
                     top: 6%;
@@ -2894,16 +3003,18 @@
                     background: url(/img/event/prereg/pop_s/popStitle_icon.png)no-repeat;
                     background-position: center;
                 }
-                &::before{
+
+                &::before {
                     left: -15%;
                 }
-                &::after{
+
+                &::after {
                     right: -15%;
                     scale: -1;
                 }
             }
 
-            .popSText{
+            .popSText {
                 margin: auto;
                 margin-top: 30%;
                 width: 70%;
@@ -2912,12 +3023,14 @@
                 color: #e4efff;
                 font-size: 1.3rem;
                 text-align: center;
-                & span , & a{
-                        color: #91006a;
-                    }
+
+                & span,
+                & a {
+                    color: #91006a;
+                }
             }
 
-            .popScheckBtn{
+            .popScheckBtn {
                 position: absolute;
                 bottom: 15%;
                 left: 50%;
@@ -2935,7 +3048,7 @@
     }
 
     /*熊貓賽跑影片窗*/
-    .p4resultpop{
+    .p4resultpop {
         position: fixed;
         top: 0;
         width: 100vw;
@@ -2944,7 +3057,7 @@
         z-index: 9;
         display: none;
 
-        .p4resultpopframe{
+        .p4resultpopframe {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -2952,7 +3065,7 @@
             width: 90vw;
             height: 90vw;
 
-            .pandavideo{
+            .pandavideo {
                 position: absolute;
                 width: 70%;
                 height: 70%;
@@ -2961,7 +3074,7 @@
                 translate: -50% -50%;
             }
 
-            .booframe{
+            .booframe {
                 position: absolute;
                 top: 0;
                 width: 100%;
@@ -2976,826 +3089,4 @@
 
 
 
-}
-
-@media(max-width:700px){
-
-    .swiper{
-        width: 100vw;
-        height: 100%;
-
-        .swiper-slide{
-            // overflow-x: hidden;
-            // overflow-y: auto;
-
-            .cloudmask{
-                position: relative;
-                width: 100vw;
-                height: 100vh;
-                // background: url(/img/event/prereg/cloudmask.png)no-repeat;
-                background-size: cover;
-                background-position: center;
-                pointer-events: none;
-                transition: 1s;
-                transition-delay: 0.2s;
-                opacity: 1;
-                scale: 1;
-            }
-        }
-        .page1{
-            background-color: #96c9bd;
-            background: url(/img/event/prereg/p1/bg1.png);
-            background-size: cover;
-            background-position: center;
-
-            .videoBG{
-                position: absolute;
-                left: 50%;
-                translate: -50%;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-
-            .XX2_logo{
-                position: absolute;
-                top: 5vh;
-                left: 49.4%;
-                translate: -50%;
-                width: 100vw;
-                height: 11vh;
-                background: url(/img/event/prereg/p1/logo.png)no-repeat;
-                background-size: contain;
-                background-position: center;
-            }
-
-            .maintitle{
-                position: absolute;
-                top: 50vh;
-                left: 48.7%;
-                translate: -50% -50%;
-                width: 100vw;
-                height: 28.2vh;
-                background: url(/img/event/prereg/p1/title_m.png)no-repeat;
-                background-size: contain;
-                background-position: center;
-            }
-
-            .slogan{
-                position: absolute;
-                top: 70vh;
-                left: 49.9%;
-                translate: -50%;
-                width: 80vw;
-                height: 6vh;
-                background: url(/img/event/prereg/p1/slogan.png)no-repeat;
-                background-size: contain;
-                background-position: center;
-            }
-
-            .downbtn{
-                position: absolute;
-                top: 90vh;
-                left: 50%;
-                translate: -50%;
-                width: 66px;
-                height: 49px;
-                background: url(/img/event/prereg/p1/downbtn_BG.png);
-                animation: downbtnfloat 1s infinite alternate-reverse ease-out;
-
-                &::before{
-                    position: absolute;
-                    content: '';
-                    top: 0;
-                    left: 50%;
-                    translate: -50%;
-                    width: 25px;
-                    height: 15px;
-                    background: url(/img/event/prereg/p1/downbtn_tri1.png);
-                    animation: downbtnfloat 1s infinite alternate-reverse ease-out;
-                }
-
-                &::after{
-                    position: absolute;
-                    content: '';
-                    top: 24%;
-                    left: 50%;
-                    translate: -50%;
-                    width: 40px;
-                    height: 22px;
-                    background: url(/img/event/prereg/p1/downbtn_tri2.png);
-                    animation: downbtnfloat 1s infinite alternate-reverse ease-out;
-                }
-            }
-        }
-        .page4{
-
-            .p4main{
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                translate: -50% -100%;
-                width: 80vw;
-                height: 80vh;
-
-                .pandas{
-                    position: absolute;
-                    width: 100%;
-                    height: 30%;
-                    top: 25%;
-                    left: 47%;
-                    translate: -50% 0%;
-                    scale: 0.65;
-                }
-
-                .p4awards{
-                    position: absolute;
-                    top: 91%;
-                    left: 50%;
-                    translate: -50%;
-                    color: #ffffff;
-                    font-size: 1.6rem;
-                    font-weight: bold;
-                    text-align: center;
-                    width: 202px;
-                    height: 54px;
-                    align-items: center;
-                    justify-content: center;
-                    display: flex;
-                    background: url(/img/event/prereg/p4/btn3.png)no-repeat;
-                    background-position: center;
-                    background-size: contain;
-                    text-shadow: 0 0 5px #010101;
-                    filter: drop-shadow(0 0 5px #2d3447);
-                    cursor: pointer;
-                    transition: 0.3s;
-                    scale: 0.95;
-
-                    &::before, &::after{
-                        position: absolute;
-                        content: '';
-                        width: 32px;
-                        height: 54px;
-                        transition: 0.3s;
-                    }
-
-                    &::before{
-                        left: 0px;
-                        background: url(/img/event/prereg/p4/btn2_hover1.png)no-repeat;
-                        background-position: center;
-                    }
-
-                    &::after{
-                        right: 0px;
-                        background: url(/img/event/prereg/p4/btn2_hover2.png)no-repeat;
-                        background-position: center;
-                    }
-
-                    &:hover::before{
-                        transform: translateX(-5px);
-                    }
-
-                    &:hover::after{
-                        transform: translateX(5px);
-                    }
-
-                    &:hover{
-                        letter-spacing: 3px;
-                    }
-
-                }
-            }
-        }
-        .page5{
-            background: url(/img/event/prereg/p5/bg5_m.png)no-repeat;
-            background-size: cover;
-            background-position: center;
-
-            .p5title{
-                position: absolute;
-                top: 5vh;
-                left: 50%;
-                translate: -50%;
-                width: 51vw;
-                height: 17vw;
-                background: url(/img/event/prereg/p5/title.png)no-repeat;
-                background-size: contain;
-                background-position: center;
-            }
-
-            .p5slideBox{
-                position: absolute;
-                left: 50%;
-                top: 55%;
-                translate: -50% -50%;
-                width: 70vw;
-                height: 103vw;
-                background: url(/img/event/prereg/p5/slideBG.png)no-repeat;
-                background-size: 100% 100%;
-
-                .p5slidebg{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    translate: -50% -50%;
-                    width: calc(100% - 20px);
-                    height: calc(100% - 20px);
-                    border-radius: 20px;
-                    background-image: linear-gradient(to bottom right, #091746, #142765, #3b7c9e);
-
-                    &::before{
-                        position: absolute;
-                        content: '';
-                        top: 50%;
-                        left: 50%;
-                        translate: -50% -50%;
-                        border-radius: 30px;
-                        width: calc(70vw - 60px);
-                        height: calc(103vw - 60px);
-                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
-                        background-size: cover;
-                        background-position: center;
-                    }
-                }
-
-                .p5slider{
-                    left: 50%;
-                    translate: -50%;
-                    width: calc(100% - 60px);
-                    height: 100%;
-                    display: flex;
-                    scale: 1;
-
-                    .slick-list{
-                        color: rgba(255, 0, 0, 0);
-                        .slick-track{
-                            top: 50%;
-                            left: 50%;
-                            translate: -50% -50%;
-                            height: calc(100% - 60px);
-                        }
-                    }
-
-                    .p5slide1{
-                        background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
-                    }
-
-                    .p5slide2{
-                        background: url(/img/event/prereg/p5/slide2_m.jpg)no-repeat;
-                    }
-
-                    .p5slide3{
-                        background: url(/img/event/prereg/p5/slide3_m.jpg)no-repeat;
-                    }
-
-                    .p5slide4{
-                        background: url(/img/event/prereg/p5/slide4_m.jpg)no-repeat;
-                    }
-
-                    .p5slide1,.p5slide2,.p5slide3,.p5slide4{
-                        border-radius: 30px;
-                        background-size: cover;
-                        background-position: center;
-                        background-color: #ffffff;
-                    }
-
-                    .slick-arrow{
-                        position: absolute;
-                        width: 73px;
-                        height: 108px;
-                        background-size: contain;
-                        background-position: center;
-                        border: none;
-                        color: #ffffff00;
-                        cursor: pointer;
-                    }
-
-                    .slick-prev{
-                        top: 50%;
-                        left: -15%;
-                        translate: -50% -50%;
-                        background: url(/img/event/prereg/p5/swiperArrow_L.png)no-repeat;
-                        animation: p5arrowLfloat 1.5s infinite alternate ease-in-out;
-                    }
-
-                    .slick-next{
-                        top: 50%;
-                        right: -15%;
-                        translate: 50% -50%;
-                        background: url(/img/event/prereg/p5/swiperArrow_R.png)no-repeat;
-                        animation: p5arrowRfloat 1.5s infinite alternate ease-in-out;
-                    }
-
-                    .slick-dots{
-                        position: absolute;
-                        top: 100%;
-                        left: calc(50% - 20px);
-                        translate: -50%;
-                        list-style: none;
-                        display: flex !important;
-
-                        & li{
-                            & button{
-                                width: 25px;
-                                height: 25px;
-                                border-radius: 100px;
-                                margin: auto 5px;
-                                border: #7497d1 5px solid;
-                                background-color: #FFF;
-                                color: #00000000;
-                                cursor: pointer;
-                                transition: 0.3s;
-                            }
-                        }
-
-                        .slick-active{
-                            & button{
-                                width: 55px;
-                                background-color: #5d78c5;
-                                color: #00000000;
-                            }
-
-                        }
-                    }
-                }
-
-                .p5flowers{
-                    & div{
-                        position: absolute;
-                        width: 31px;
-                        height: 36px;
-                        background: url(/img/event/prereg/p5/flower.png)no-repeat;
-
-                        &:nth-child(1){
-                            left: 0;
-                            top: 0;
-                            translate: -50% -50%;
-                        }
-                        &:nth-child(2){
-                            right: 0;
-                            top: 0;
-                            translate: 50% -50%;
-                        }
-                        &:nth-child(3){
-                            right: 0;
-                            bottom: 0;
-                            translate: 50% 50%;
-                        }
-                        &:nth-child(4){
-                            left: 0;
-                            bottom: 0;
-                            translate: -50% 50%;
-                        }
-                    }
-                }
-
-            }
-
-            #rainBox {
-                position: fixed;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 0;
-            }
-
-            .rain {
-                position: absolute;
-                width: 3px;
-                height: 100px;
-                background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.3));
-            }
-
-        }
-        .page6{
-            background: url(/img/event/prereg/p6/bg6_m.jpg);
-            background-size: cover;
-            background-position: center;
-
-            .p6title{
-                position: absolute;
-                top: 5vh;
-                left: 50%;
-                translate: -50%;
-                width: 51vw;
-                height: 17vw;
-                background: url(/img/event/prereg/p6/title.png)no-repeat;
-                background-size: contain;
-                background-position: center;
-                z-index: 1;
-            }
-
-            .roles{
-                position: absolute;
-                width: 100vw;
-                height: 100vh;
-                left: -5%;
-                top: 0vh;
-                scale: 0.95;
-
-                .humen{
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    translate: -5vw;
-
-                    .human1{
-                        position: absolute;
-                        top: 43.6px;
-                        left: 105.6px;
-                        width: 853px;
-                        height: 902px;
-                        background: url(/img/event/prereg/p6/role1.png);
-                        opacity: 1;
-                    }
-                    .human2{
-                        position: absolute;
-                        top: 38.7px;
-                        left: 186.4px;
-                        width: 871px;
-                        height: 688px;
-                        background: url(/img/event/prereg/p6/role2.png);
-                        opacity: 0;
-                    }
-                    .human3{
-                        position: absolute;
-                        top: 106.59px;
-                        left: 359.2px;
-                        width: 472px;
-                        height: 867px;
-                        background: url(/img/event/prereg/p6/role3.png);
-                        opacity: 0;
-                    }
-                    .human4{
-                        position: absolute;
-                        top: 29px;
-                        left: 206px;
-                        width: 607px;
-                        height: 948px;
-                        background: url(/img/event/prereg/p6/role4.png);
-                        opacity: 0;
-                    }
-                    .human5{
-                        position: absolute;
-                        top: 116.28px;
-                        left: 176.8px;
-                        width: 637px;
-                        height: 677px;
-                        background: url(/img/event/prereg/p6/role5.png);
-                        opacity: 0;
-                    }
-                }
-
-                .names{
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    translate: -5vw;
-
-                    .name1{
-                        position: absolute;
-                        top: -43.6px;
-                        left: 316.8px;
-                        width: 638px;
-                        height: 609px;
-                        background: url(/img/event/prereg/p6/roleName1.png);
-                        opacity: 1;
-                    }
-                    .name2{
-                        position: absolute;
-                        top: -77.52px;
-                        left: 240.8px;
-                        width: 601px;
-                        height: 635px;
-                        background: url(/img/event/prereg/p6/roleName2.png);
-                        opacity: 0;
-                    }
-                    .name3{
-                        position: absolute;
-                        top: -58.14px;
-                        left: -80.8px;
-                        width: 440px;
-                        height: 588px;
-                        background: url(/img/event/prereg/p6/roleName3.png);
-                        opacity: 0;
-                    }
-                    .name4{
-                        position: absolute;
-                        top: -106.59px;
-                        left: 226px;
-                        width: 638px;
-                        height: 619px;
-                        background: url(/img/event/prereg/p6/roleName4.png);
-                        opacity: 0;
-                    }
-                    .name5{
-                        position: absolute;
-                        top: -87.2px;
-                        left: -32.8px;
-                        width: 638px;
-                        height: 635px;
-                        background: url(/img/event/prereg/p6/roleName5.png);
-                        opacity: 0;
-                    }
-                }
-
-                .arm{
-                    position: absolute;
-                    top: 363.375px;
-                    left: 176.64px;
-                    translate: -5vw;
-                    width: 67px;
-                    height: 147px;
-                    background: url(/img/event/prereg/p6/roleArm.png)no-repeat;
-                    background-size: contain;
-                    color: #FFF;
-                    font-family: 'Noto Serif TC', serif;
-                    font-size: 18pt;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    line-height: 20pt;
-                }
-            }
-
-            .p6menu{
-                position: absolute;
-                top: 100vh;
-                left: 0vw;
-                width: 100vw;
-                height: 20vw;
-                translate: 0 -100%;
-                background: none;
-                background-size: contain;
-                background-position: top;
-                display: flex;
-                justify-content: center;
-
-                & div{
-                    position: static;
-                    cursor: pointer;
-                    margin: auto -2vw;
-
-                    &:hover{
-                        scale: 1;
-                    }
-                }
-
-                .p6btn1{
-                    top: 25%;
-                    left: 86%;
-                    width: 19vw;
-                    height: 100%;
-                    background: url(/img/event/prereg/p6/btn1.png)no-repeat;
-                    background-size: contain;
-                    transition: 0.5s;
-
-                    &:hover{
-                        background: url(/img/event/prereg/p6/btn1_hover.png)no-repeat;
-                        background-size: contain;
-                    }
-                }
-                .p6btn1_2{
-                    background: url(/img/event/prereg/p6/btn1_hover.png)no-repeat;
-                    background-size: contain;
-                    margin-right: 2vw;
-                }
-
-                .p6btn2{
-                    top: 46%;
-                    left: 78%;
-                    width: 19vw;
-                    height: 100%;
-                    background: url(/img/event/prereg/p6/btn2.png)no-repeat;
-                    background-size: contain;
-                    transition: 0.5s;
-
-                    &:hover{
-                        background: url(/img/event/prereg/p6/btn2_hover.png)no-repeat;
-                        background-size: contain;
-                    }
-                }
-                .p6btn2_2{
-                    background: url(/img/event/prereg/p6/btn2_hover.png)no-repeat;
-                    background-size: contain;
-                    margin-right: 2vw;
-                }
-
-                .p6btn3{
-                    top: 63%;
-                    left: 65%;
-                    width: 19vw;
-                    height: 100%;
-                    background: url(/img/event/prereg/p6/btn3.png)no-repeat;
-                    background-size: contain;
-                    transition: 0.5s;
-
-                    &:hover{
-                        background: url(/img/event/prereg/p6/btn3_hover.png)no-repeat;
-                        background-size: contain;
-                    }
-                }
-                .p6btn3_2{
-                    background: url(/img/event/prereg/p6/btn3_hover.png)no-repeat;
-                    background-size: contain;
-                    margin-right: 2vw;
-                }
-
-                .p6btn4{
-                    top: 77%;
-                    left: 50%;
-                    width: 19vw;
-                    height: 100%;
-                    background: url(/img/event/prereg/p6/btn4.png)no-repeat;
-                    background-size: contain;
-                    transition: 0.5s;
-
-                    &:hover{
-                        background: url(/img/event/prereg/p6/btn4_hover.png)no-repeat;
-                        background-size: contain;
-                    }
-                }
-                .p6btn4_2{
-                    background: url(/img/event/prereg/p6/btn4_hover.png)no-repeat;
-                    background-size: contain;
-                    margin-right: 2vw;
-                }
-
-                .p6btn5{
-                    top: 86%;
-                    left: 32%;
-                    width: 19vw;
-                    height: 100%;
-                    background: url(/img/event/prereg/p6/btn5.png)no-repeat;
-                    background-size: contain;
-                    transition: 0.5s;
-
-                    &:hover{
-                        background: url(/img/event/prereg/p6/btn5_hover.png)no-repeat;
-                        background-size: contain;
-                    }
-                }
-                .p6btn5_2{
-                    background: url(/img/event/prereg/p6/btn5_hover.png)no-repeat;
-                    background-size: contain;
-                    margin-right: 2vw;
-                }
-            }
-
-            .bgclouds{
-                .bgcloud1{
-                    position: absolute;
-                    width: 200vw;
-                    height: 100vh;
-                    left: -100%;
-                    // background: url(/img/event/prereg/p6/bg_cloud1.png)no-repeat;
-                    background-size: cover;
-                    animation: p6cloud1 10s infinite alternate ease-in;
-                }
-                .bgcloud2{
-                    position: absolute;
-                    top: 5%;
-                    left: -50%;
-                    width: 200vw;
-                    height: 100vh;
-                    // background: url(/img/event/prereg/p6/bg_cloud2.png)no-repeat;
-                    background-position: left;
-                    background-size: cover;
-                    animation: p6cloud2 12s infinite alternate ease-in;
-                }
-            }
-
-            .p6features{
-                position: absolute;
-                width: 60vw;
-                height: 28vw;
-                left: 50%;
-                translate: -50%;
-                background: url(/img/event/prereg/p6/textBG.png)no-repeat;
-                background-position: top;
-                background-size: contain;
-
-                .p6subtitle{
-                    position: absolute;
-                    width: calc(60vw / 2);
-                    height: calc(60vw * 0.115);
-                    background: url(/img/event/prereg/p6/subtitleBG.png)no-repeat;
-                    background-position: top;
-                    background-size: contain;
-                    font-family: 'Noto Serif TC', serif;
-                    color: #FFF;
-                    font-size: 25px;
-                    text-align: center;
-                    line-height: calc(60vw * 0.11);
-                    letter-spacing: 1px;
-                }
-
-                .p6text{
-                    position: absolute;
-                    width: 80%;
-                    height: auto;
-                    top: 25%;
-                    left: 50%;
-                    translate: -50%;
-                    color: #000;
-                    font-weight: bolder;
-                    font-size: 21px;
-                    letter-spacing: -1px;
-                }
-            }
-
-            .p6feature1{
-                left: 40%;
-                top: 55%;
-            }
-
-            .p6feature2{
-                left: 60%;
-                top: calc(50% + 28vw);
-            }
-        }
-
-        .swiper-slide-active{
-            .cloudmask{
-                scale: 2;
-                opacity: 0;
-                transition: 3s;
-                transition-delay: 0s;
-            }
-            .bg2animate{
-
-                .bird{
-                    animation: flybird 6s 1 linear;
-                    animation-fill-mode: forwards;
-                }
-            }
-        }
-    }
-
-    .menubar{
-
-        .menubtn{
-            position: absolute;
-            z-index: 99;
-            width: 60px;
-            height: 60px;
-            border-radius: 30px;
-            background-image: linear-gradient(to bottom, #98a8cb, #424e7e);
-            cursor: pointer;
-            scale: 1.15;
-        }
-
-        .menubtn2{
-            top: 3vw;
-            right: 3vw;
-            translate: 0%;
-        }
-
-    }
-
-    /*選單連結(放進bar的css裡面會跑版所以放外面)*/
-    .swiper-pagination{
-        top: 50% !important;
-        left: 50% !important;
-        translate: -50%;
-        scale: 1.1;
-
-        .swiper-pagination-bullet{
-            width: 20px;
-            height: 20px;
-            margin: 5vh 0 !important;
-            background: none;
-            color: #ffffff;
-            text-shadow:  0 0 10px #4b6898;
-            opacity: 1;
-            &:hover{
-                color: #fff2d2;
-            }
-            &:hover::before{
-                position: absolute;
-                content: '';
-                left: 17%;
-                translate: 0% 8%;
-                width: 37px;
-                height: 40px;
-                background: url(/img/event/prereg/menu_icon.png)no-repeat;
-                filter: drop-shadow(0 0 13px #4b6898);
-            }
-        }
-
-        .swiper-pagination-bullet-active{
-            color: #fff2d2;
-            &::before{
-                position: absolute;
-                content: '';
-                left: 17%;
-                translate: 0% 8%;
-                width: 37px;
-                height: 40px;
-                background: url(/img/event/prereg/menu_icon.png)no-repeat;
-                filter: drop-shadow(0 0 13px #4b6898);
-            }
-        }
-    }
 }

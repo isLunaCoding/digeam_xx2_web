@@ -1,0 +1,113 @@
+// @media((min-width:426) and (max-width:500px)){
+@media screen and (min-width: 431px) and (max-width: 500px){
+    .menubtn2 {
+        top: 7% !important;
+        left: 8% !important;
+        width: 45px !important;
+        height: 45px !important;
+    }
+    .cardname{
+        top:20% !important;
+    }
+    .valuetable{
+        font-size: 20px !important;
+    }
+    .roles{
+        width:30% !important;
+        height:100% !important;
+    }
+    .p6menu{
+        height: 7% !important;
+        translate: 0% -100% !important;
+    }
+
+    .p6text{
+        margin-top: 1%;
+    }
+    .awardbox{
+        height: 95% !important;
+    }
+    .p2btns{
+        top: -12% !important;
+    }
+    .p6feature2{
+        top: calc(54% + 32vw) !important;
+    }
+    .getcardbtn{
+        top:87% !important;
+    }
+    .p3_chance{
+        top:76% !important;
+    }
+    // shane修的以上
+    /*選單連結(放進bar的css裡面會跑版所以放外面)*/
+    .swiper-pagination{
+        top: 50% !important;
+        left: 3% !important;
+        translate: 0%;
+        scale: 1.2;
+    }
+
+    /*大彈窗*/
+    .pop{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(127, 140, 149, 0.5);
+        font-family: 'Noto Serif TC', serif;
+        z-index: 10;
+        display: none;
+
+        .popframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 90vw;
+            height: 90vw;
+            background: url(/img/event/prereg/pop_l/popL_frame.png)no-repeat;
+            background-size: contain;
+
+            .XX{
+                position: absolute;
+                top: 110%;
+                right: 50%;
+                translate: 50%;
+                width: 4vw;
+                height: 4vw;
+                cursor: pointer;
+                background: url(/img/event/prereg/pop_l/XX.png)no-repeat;
+                background-size: contain;
+                transition: 0.3s;
+                scale: 3;
+
+                &:hover{
+                    rotate: 90deg;
+                }
+            }
+
+            .poptitle{
+                position: absolute;
+                top: 8%;
+                left: 50%;
+                translate: -50%;
+                font-size: 1.8rem;
+                color: #15386c;
+                text-align: center;
+            }
+
+            .popText{
+                margin: auto;
+                margin-top: 22%;
+                width: 75%;
+                height: 70%;
+                list-style: decimal;
+                color: #15386c;
+                font-size: 1.3rem;
+                overflow-y: scroll;
+            }
+        }
+    }
+}
+

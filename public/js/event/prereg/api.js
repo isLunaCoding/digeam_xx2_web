@@ -28,7 +28,7 @@ function login() {
                 $(".distance_30").html(0);
             } else {
                 if (res.user_mobile != "" && res.user_mobile != null) {
-                    _pre = true;
+                    _pre= true;
                 } else {
                     _pre = false;
                 }
@@ -54,22 +54,22 @@ function login() {
 
                 if (res.daily_login != null) {
                     $(".daily_login").css({
-                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        "background-size": "contain"
+                        "background": "url(/img/event/prereg/p3/done_btn.png) no-repeat center",
+                        "background-size": "100%"
                     });
                 }
 
                 if (res.daily_FB != null) {
                     $(".daily_FB").css({
-                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        "background-size": "contain"
+                        "background": "url(/img/event/prereg/p3/done_btn.png) no-repeat center",
+                        "background-size": "100%"
                     });
                 }
 
                 if (res.fb_fans_click != null) {
                     $(".fb_fans_click").css({
-                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        "background-size": "contain"
+                        "background": "url(/img/event/prereg/p3/done_btn.png) no-repeat center",
+                        "background-size": "100%"
                     });
                 }
             }
@@ -276,8 +276,8 @@ $(".missionbtn").on("click", function () {
                 } else {
                     let _finish = document.getElementsByClassName(_type);
                     $(_finish).css({
-                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        "background-size": "contain"
+                        "background": "url(/img/event/prereg/p3/done_btn.png) no-repeat center",
+                        "background-size": "100%"
                     });
                     p3_success();
                     $(".popS").fadeIn(200);
@@ -386,15 +386,13 @@ $(".p3choosebtn").on("click", function () {
 });
 //p4熊貓競猜支持
 $(".pandaGobtn").on("click", function () {
-    _pre = true;
-    console.log(_pre);
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
     } else if (_pre == false) {
         p3_please_pre();
         $(".popS").fadeIn(200);
-    } else {
+    }else {
         $(".popS").fadeIn(200);
         if (p4_panda_choose_num == 1) {
             p4_support_panda1();

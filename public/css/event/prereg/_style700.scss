@@ -110,48 +110,48 @@
                 }
             }
         }
+        .page2{
+            height: 1500px;
+            .p2main{
+                height: 1200px;
+                .p2awards{
+                    .p2btns{
+                        height: 60px;
+                    }
+                }
+            }
+        }
+        .page3{
+            height: 1400px;
+            .p3main{
+                height: 895px;
+                .p3text{
+                    height: 402px;
+                    top: 70%;
+                }
+            }
+        }
         .page4{
+            height: 1500px;
+            // position: relative;
 
             .p4main{
-                position: absolute;
-                top: 100%;
+                height: 1100px;
+                top: 14%;
                 left: 50%;
-                translate: -50% -100%;
-                width: 80vw;
-                height: 80vh;
+                translate: -50% 0%;
+                .p4info{
+                    height: 130px;
+                    top: 0px;
+                }
 
                 .pandas{
-                    position: absolute;
-                    width: 100%;
-                    height: 30%;
-                    top: 25%;
-                    left: 47%;
-                    translate: -50% 0%;
+                    top: 225px;
                     scale: 0.65;
                 }
 
                 .p4awards{
-                    position: absolute;
-                    top: 91%;
-                    left: 50%;
-                    translate: -50%;
-                    color: #ffffff;
-                    font-size: 1.6rem;
-                    font-weight: bold;
-                    text-align: center;
-                    width: 202px;
-                    height: 54px;
-                    align-items: center;
-                    justify-content: center;
-                    display: flex;
-                    background: url(/img/event/prereg/p4/btn3.png)no-repeat;
-                    background-position: center;
-                    background-size: contain;
-                    text-shadow: 0 0 5px #010101;
-                    filter: drop-shadow(0 0 5px #2d3447);
-                    cursor: pointer;
-                    transition: 0.3s;
-                    scale: 0.95;
+                    top: 97%;
 
                     &::before, &::after{
                         position: absolute;
@@ -162,15 +162,9 @@
                     }
 
                     &::before{
-                        left: 0px;
-                        background: url(/img/event/prereg/p4/btn2_hover1.png)no-repeat;
-                        background-position: center;
                     }
 
                     &::after{
-                        right: 0px;
-                        background: url(/img/event/prereg/p4/btn2_hover2.png)no-repeat;
-                        background-position: center;
                     }
 
                     &:hover::before{
@@ -189,9 +183,7 @@
             }
         }
         .page5{
-            background: url(/img/event/prereg/p5/bg5_m.png)no-repeat;
-            background-size: cover;
-            background-position: center;
+            height: 1000px;
 
             .p5title{
                 position: absolute;
@@ -390,9 +382,7 @@
 
         }
         .page6{
-            background: url(/img/event/prereg/p6/bg6_m.jpg);
-            background-size: cover;
-            background-position: center;
+            height: 1200px;
 
             .p6title{
                 position: absolute;
@@ -408,18 +398,10 @@
             }
 
             .roles{
-                position: absolute;
-                width: 100vw;
-                height: 100vh;
-                left: -5%;
-                top: 0vh;
+                top: 72px;
                 scale: 0.95;
 
                 .humen{
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    translate: -5vw;
 
                     .human1{
                         position: absolute;
@@ -541,19 +523,10 @@
             }
 
             .p6menu{
-                position: absolute;
-                top: 100vh;
+                top: 1200px;
                 left: 0vw;
-                width: 100vw;
-                height: 20vw;
-                translate: 0 -100%;
-                background: none;
-                background-size: contain;
-                background-position: top;
-                display: flex;
-                justify-content: center;
 
-                & div{
+                div{
                     position: static;
                     cursor: pointer;
                     margin: auto -2vw;
@@ -733,7 +706,16 @@
 
             .p6feature2{
                 left: 60%;
-                top: calc(50% + 28vw);
+                // top: calc(50% + 28vw);
+            }
+        }
+
+        .page7{
+            height: 1500px;
+            .p7rules{
+                top: 44%;
+                line-height: 36px;
+                height: 960px;
             }
         }
 
