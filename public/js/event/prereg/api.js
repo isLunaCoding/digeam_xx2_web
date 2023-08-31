@@ -55,21 +55,21 @@ function login() {
                 if (res.daily_login != null) {
                     $(".daily_login").css({
                         "background": "url(/img/event/prereg/p3/done_btn.png) no-repeat center",
-                        "background-size": "100%"
+                        // "background-size": "100%"
                     });
                 }
 
                 if (res.daily_FB != null) {
                     $(".daily_FB").css({
                         "background": "url(/img/event/prereg/p3/done_btn.png) no-repeat center",
-                        "background-size": "100%"
+                        // "background-size": "100%"
                     });
                 }
 
                 if (res.fb_fans_click != null) {
                     $(".fb_fans_click").css({
                         "background": "url(/img/event/prereg/p3/done_btn.png) no-repeat center",
-                        "background-size": "100%"
+                        // "background-size": "100%"
                     });
                 }
             }
@@ -154,11 +154,10 @@ function checkMobile() {
         return -99;
     }
 }
-
+var p3_send = true;
 // 結交名士
 $(".check_p3").on("click", function () {
     let _chance = $(".visit_frequency").data("val");
-    var _send = true;
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
@@ -171,7 +170,8 @@ $(".check_p3").on("click", function () {
         var _send = false;
         exit;
     }
-    if (_send == true) {
+    if (p3_send == true) {
+        p3_send = false
         $.post(
             _api,
             {
@@ -179,6 +179,9 @@ $(".check_p3").on("click", function () {
                 user: _user,
             },
             function (res) {
+                setTimeout(() => {
+                    p3_send = true
+                  }, "1000");
                 if (res.status == 1) {
                     $(".p3resultpop").fadeIn(200);
                     $(".result_new").hover(
@@ -277,7 +280,7 @@ $(".missionbtn").on("click", function () {
                     let _finish = document.getElementsByClassName(_type);
                     $(_finish).css({
                         "background": "url(/img/event/prereg/p3/done_btn.png) no-repeat center",
-                        "background-size": "100%"
+                        // "background-size": "100%"
                     });
                     p3_success();
                     $(".popS").fadeIn(200);

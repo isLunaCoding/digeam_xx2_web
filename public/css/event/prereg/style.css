@@ -6365,7 +6365,7 @@ body {
     top: 60%;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .pop .popframe {
     width: 50%;
     height: 70%;
@@ -12421,7 +12421,7 @@ body {
     width: 15%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
-    background-size: contain;
+    background-size: 125%;
     cursor: pointer;
     transition: 0.3s;
   }
@@ -13213,7 +13213,7 @@ body {
     height: 40px !important;
   }
   .mobile_area {
-    width: 38% !important;
+    width: 42% !important;
   }
   .roles {
     left: -25% !important;
@@ -13236,6 +13236,16 @@ body {
   }
   .samplerules li {
     font-size: 10px !important;
+  }
+  .p3info p {
+    font-size: 18px !important;
+  }
+  .p3listbtns {
+    top: 68% !important;
+    right: -10% !important;
+  }
+  .missionbtn {
+    background-size: 125% !important;
   }
 }
 @media (max-width: 425px) {
@@ -15217,10 +15227,9 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
     width: 55%;
     height: 100%;
-    font-size: 0.7rem;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
-    font-size: 0.7rem;
+    font-size: 11px;
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
@@ -15233,7 +15242,6 @@ body {
     width: 15%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
-    background-size: contain;
     cursor: pointer;
     transition: 0.3s;
   }
@@ -17937,10 +17945,9 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
     width: 55%;
     height: 100%;
-    font-size: 0.7rem;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
-    font-size: 0.7rem;
+    font-size: 11px;
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
@@ -17953,7 +17960,6 @@ body {
     width: 15%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
-    background-size: contain;
     cursor: pointer;
     transition: 0.3s;
   }
@@ -20611,7 +20617,6 @@ body {
     width: 15%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
-    background-size: contain;
     cursor: pointer;
     transition: 0.3s;
   }
