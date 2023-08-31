@@ -1,0 +1,519 @@
+@media(max-width: 920px){
+
+    .swiper{
+        .page6{
+            background: url(/img/event/prereg/p6/bg6.jpg);
+            background-size: cover;
+            background-position: center;
+
+            .p6title{
+                position: absolute;
+                top: 12vh;
+                left: 16vw;
+                width: 30vw;
+                height: 10vw;
+                background: url(/img/event/prereg/p6/title.png)no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            .roles{
+                position: absolute;
+                width: 50vw;
+                height: 100vh;
+                left: 25%;
+
+                .humen{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    translate: -5vw;
+
+                    .human1{
+                        position: absolute;
+                        top: 43.6px;
+                        left: 105.6px;
+                        width: 853px;
+                        height: 902px;
+                        background: url(/img/event/prereg/p6/role1.png);
+                        opacity: 1;
+                    }
+                    .human2{
+                        position: absolute;
+                        top: 38.7px;
+                        left: 186.4px;
+                        width: 871px;
+                        height: 688px;
+                        background: url(/img/event/prereg/p6/role2.png);
+                        opacity: 0;
+                    }
+                    .human3{
+                        position: absolute;
+                        top: 106.59px;
+                        left: 359.2px;
+                        width: 472px;
+                        height: 867px;
+                        background: url(/img/event/prereg/p6/role3.png);
+                        opacity: 0;
+                    }
+                    .human4{
+                        position: absolute;
+                        top: 29px;
+                        left: 206px;
+                        width: 607px;
+                        height: 948px;
+                        background: url(/img/event/prereg/p6/role4.png);
+                        opacity: 0;
+                    }
+                    .human5{
+                        position: absolute;
+                        top: 116.28px;
+                        left: 176.8px;
+                        width: 637px;
+                        height: 677px;
+                        background: url(/img/event/prereg/p6/role5.png);
+                        opacity: 0;
+                    }
+                }
+
+                .names{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    translate: -5vw;
+
+                    .name1{
+                        position: absolute;
+                        top: -43.6px;
+                        left: 316.8px;
+                        width: 638px;
+                        height: 609px;
+                        background: url(/img/event/prereg/p6/roleName1.png);
+                        opacity: 1;
+                    }
+                    .name2{
+                        position: absolute;
+                        top: -77.52px;
+                        left: 240.8px;
+                        width: 601px;
+                        height: 635px;
+                        background: url(/img/event/prereg/p6/roleName2.png);
+                        opacity: 0;
+                    }
+                    .name3{
+                        position: absolute;
+                        top: -58.14px;
+                        left: -80.8px;
+                        width: 440px;
+                        height: 588px;
+                        background: url(/img/event/prereg/p6/roleName3.png);
+                        opacity: 0;
+                    }
+                    .name4{
+                        position: absolute;
+                        top: -106.59px;
+                        left: 226px;
+                        width: 638px;
+                        height: 619px;
+                        background: url(/img/event/prereg/p6/roleName4.png);
+                        opacity: 0;
+                    }
+                    .name5{
+                        position: absolute;
+                        top: -87.2px;
+                        left: -32.8px;
+                        width: 638px;
+                        height: 635px;
+                        background: url(/img/event/prereg/p6/roleName5.png);
+                        opacity: 0;
+                    }
+                }
+
+                .arm{
+                    position: absolute;
+                    top: 363.375px;
+                    left: 176.64px;
+                    translate: -5vw;
+                    width: 67px;
+                    height: 147px;
+                    background: url(/img/event/prereg/p6/roleArm.png)no-repeat;
+                    background-size: contain;
+                    color: #FFF;
+                    font-family: 'Noto Serif TC', serif;
+                    font-size: 18pt;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 20pt;
+                }
+            }
+
+            .p6menu{
+                position: absolute;
+                top: 48vh;
+                left: 30vw;
+                width: 542px;
+                height: 417px;
+                background: url(/img/event/prereg/p6/menuBG.png)no-repeat;
+                background-size: contain;
+                background-position: top;
+
+                & div{
+                    position: absolute;
+                    cursor: pointer;
+
+                    &:hover{
+                        scale: 1.05;
+                    }
+                }
+
+                .p6btn1{
+                    top: 25%;
+                    left: 86%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn1.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn1_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn1_2{
+                    background: url(/img/event/prereg/p6/btn1_hover.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .p6btn2{
+                    top: 46%;
+                    left: 78%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn2.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn2_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn2_2{
+                    background: url(/img/event/prereg/p6/btn2_hover.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .p6btn3{
+                    top: 63%;
+                    left: 65%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn3.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn3_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn3_2{
+                    background: url(/img/event/prereg/p6/btn3_hover.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .p6btn4{
+                    top: 77%;
+                    left: 50%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn4.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn4_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn4_2{
+                    background: url(/img/event/prereg/p6/btn4_hover.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .p6btn5{
+                    top: 86%;
+                    left: 32%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn5.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn5_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn5_2{
+                    background: url(/img/event/prereg/p6/btn5_hover.png)no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            .p6features{
+                position: absolute;
+                width: 30vw;
+                height: 20vw;
+                translate: -30%;
+                background: url(/img/event/prereg/p6/textBG.png)no-repeat;
+                background-position: top;
+                background-size: 100% 80%;
+
+                .p6subtitle{
+                    position: absolute;
+                    width: calc(30vw / 2);
+                    height: calc(30vw * 0.115);
+                    background: url(/img/event/prereg/p6/subtitleBG.png)no-repeat;
+                    background-position: top;
+                    background-size: contain;
+                    font-family: 'Noto Serif TC', serif;
+                    color: #FFF;
+                    font-size: 13pt;
+                    text-align: center;
+                    line-height: calc(30vw * 0.11);
+                    letter-spacing: 1px;
+                }
+
+                .p6text{
+                    position: absolute;
+                    width: 70%;
+                    height: auto;
+                    top: 20%;
+                    left: 50%;
+                    translate: -50%;
+                    color: #000;
+                    font-weight: bolder;
+                    font-size: 18px;
+                }
+            }
+
+            .p6feature1{
+                left: 19%;
+                top: 33%;
+            }
+
+            .p6feature2{
+                left: 19%;
+                top: 50%;
+            }
+        }
+    }
+    .menubar{
+
+        .menubtn{
+            position: absolute;
+            z-index: 99;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-image: linear-gradient(to bottom, #98a8cb, #424e7e);
+            cursor: pointer;
+
+            &::before, &::after{
+                position: absolute;
+                content: '';
+                left: 50%;
+                translate: -50%;
+                width: 50%;
+                height: 2px;
+                background-color: #ffffff;
+                transition: .3s;
+            }
+            &::after{
+                top: 35%;
+            }
+            &::before{
+                top: 55%;
+            }
+        }
+
+        .menubtn1{
+            top: 10%;
+            left: 15vw;
+            translate: -50%;
+        }
+
+        .menubtnOpen{
+            &::after,&::before{
+                width: 60%;
+                top: 45%;
+            }
+            &::after{
+                rotate: 45deg;
+            }
+            &::before{
+                rotate: -45deg;
+            }
+        }
+
+        .bar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 99;
+            width: 30vw;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, rgba(179, 166, 211, 0.55), rgba(104, 145, 180, 0.55));
+        }
+
+        .barLine{
+            position: absolute;
+            top: -100vh;
+            left: 30vw;
+            z-index: 99;
+            height: 100vh;
+            border-right-width: 2px;
+            border-right-color: #ffffff;
+            border-right-style: solid;
+        }
+
+    }
+
+    /*選單連結(放進bar的css裡面會跑版所以放外面)*/
+    .swiper-pagination{
+        top: 50vh !important;
+        left: 7.5vw !important;
+
+        .swiper-pagination-bullet{
+            width: 20px;
+            height: 20px;
+            margin: 5vh 0 !important;
+            background: none;
+            color: #ffffff;
+            text-shadow:  0 0 10px #4b6898;
+            opacity: 1;
+            &:hover{
+                color: #fff2d2;
+            }
+            &:hover::before{
+                position: absolute;
+                content: '';
+                left: 0%;
+                translate: -100% 8%;
+                width: 37px;
+                height: 40px;
+                background: url(/img/event/prereg/menu_icon.png)no-repeat;
+                filter: drop-shadow(0 0 13px #4b6898);
+            }
+        }
+
+        .swiper-pagination-bullet-active{
+            color: #fff2d2;
+            &::before{
+                position: absolute;
+                content: '';
+                left: 0%;
+                translate: -100% 8%;
+                width: 37px;
+                height: 40px;
+                background: url(/img/event/prereg/menu_icon.png)no-repeat;
+                filter: drop-shadow(0 0 13px #4b6898);
+            }
+        }
+        .swiper-pagination-bullet{
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+    /*大彈窗*/
+    .pop{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(127, 140, 149, 0.5);
+        font-family: 'Noto Serif TC', serif;
+        z-index: 10;
+        display: none;
+
+        .popframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 60vw;
+            height: 60vw;
+            background: url(/img/event/prereg/pop_l/popL_frame.png)no-repeat;
+            background-size: contain;
+
+            .XX{
+                position: absolute;
+                top: 1%;
+                right: -10%;
+                width: 4vw;
+                height: 4vw;
+                cursor: pointer;
+                background: url(/img/event/prereg/pop_l/XX.png)no-repeat;
+                background-size: contain;
+                transition: 0.3s;
+                scale: 2;
+
+                &:hover{
+                    rotate: 90deg;
+                }
+            }
+
+            .poptitle{
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                translate: -50%;
+                font-size: 1.8rem;
+                color: #15386c;
+                text-align: center;
+
+                &::before,&::after{
+                    position: absolute;
+                    content: '';
+                    top: 6%;
+                    width: 28px;
+                    height: 100%;
+                    background: url(/img/event/prereg/pop_l/popLtitle_icon.png)no-repeat;
+                    background-position: center;
+                }
+                &::before{
+                    left: -30%;
+                }
+                &::after{
+                    right: -30%;
+                    scale: -1;
+                }
+            }
+
+            .popText{
+                margin: auto;
+                margin-top: 18%;
+                width: 80%;
+                height: 73%;
+                list-style: decimal;
+                color: #15386c;
+                font-size: 1.3rem;
+                overflow-y: scroll;
+
+                & li{
+                    margin: 5px 0;
+                    padding-right: 3%;
+
+                    & span{
+                        color: #91006a;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -111,7 +111,8 @@
             background: url(/img/event/prereg/p2/bg2_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
-            height: 100%;
+            height: 115vh;
+            overflow: hidden;
 
             .bg2animate{
 
@@ -259,7 +260,7 @@
                         & form{
                             & div{
                                 & select{
-                                    width: 20%;
+                                    width: 30%;
                                     height: 34px;
                                     font-size: 15px;
                                     padding: 0;
@@ -339,7 +340,7 @@
                         width: 70%;
                         height: 20%;
                         color: #ffffff;
-                        font-size: 1rem;
+                        font-size: 0.7rem;
                         font-weight: bold;
                         display: flex;
                         text-align: center;
@@ -351,6 +352,7 @@
                             background-position: center;
                             background-size: contain;
                             cursor: pointer;
+                            font-size: 0.7rem;
 
                             &::before, &::after{
                                 position: absolute;
@@ -383,7 +385,8 @@
             }
         }
         .page3{
-            height: 844px;
+            height: 110vh;
+            overflow: hidden;
             background: url(/img/event/prereg/p3/bg3_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
@@ -427,7 +430,7 @@
 
             .p3main{
                 position: absolute;
-                top: 56%;
+                top: 50%;
                 left: 50%;
                 translate: -50% -50%;
                 width: 100%;
@@ -490,7 +493,7 @@
 
                 .p3info{
                     position: absolute;
-                    top: -22%;
+                    top: -15%;
                     right: 50%;
                     translate: 50%;
                     width: 85%;
@@ -637,6 +640,7 @@
                     rotate: 0deg;
                     // opacity: 0;
                     z-index: 1;
+                    scale: 0.85;
 
                     .lantern_light{
                         position: absolute;
@@ -904,7 +908,7 @@
             background: url(/img/event/prereg/p4/bg4.png);
             background-size: cover;
             background-position: center;
-            height: 844px;
+            height: 125vh;
 
             .bg4animate{
                 .bamboo{
@@ -966,7 +970,7 @@
 
             .p4title{
                 position: absolute;
-                top: 5vh;
+                top: 2vh;
                 left: 50%;
                 translate: -50%;
                 width: 51vw;
@@ -978,7 +982,7 @@
 
             .p4main{
                 position: absolute;
-                top: 100%;
+                top: 85%;
                 left: 50%;
                 translate: -50% -100%;
                 width: 85vw;
@@ -988,7 +992,7 @@
               
       
                     position: absolute;
-                    top: -12%;
+                    top: -9%;
                     right: 0%;
                     width: 100%;
 
@@ -1094,7 +1098,7 @@
                     .panda3{
                         position: absolute;
                         bottom: 0%;
-                        left: 58%;
+                        left: 75%;
                         translate: -50%;
                         width: 422px;
                         height: 437px;
@@ -1329,7 +1333,7 @@
             background: url(/img/event/prereg/p5/bg5_m.png)no-repeat;
             background-size: cover;
             background-position: center;
-            // height: 595px;
+            height: 100%;
 
             .p5title{
                 position: absolute;
@@ -2228,6 +2232,12 @@
                 background: url(/img/event/prereg/p3/missiontitle.png)no-repeat;
                 background-position: center;
                 background-size: contain;
+
+                .p3_desc {
+                    text-align: center;
+                    top: 50%;
+                    font-size: 12px;
+                }
             }
             .p3missionpopText{
                 margin: auto;
@@ -2236,7 +2246,7 @@
                 height: 68%;
                 list-style: decimal;
                 color: #15386c;
-                font-size: 12px;
+                font-size: 0.7rem;
                 overflow-y: scroll;
                 padding: 0;
 
@@ -2290,6 +2300,15 @@
                     &:nth-child(2n){
                         background-color: #b7cee6;
 
+                    }
+
+                    &:nth-child(3){
+                        // height: 50px;
+                        font-size: 0.7rem;
+                        
+                        & span{
+                            font-size: 0.7rem;
+                        }
                     }
                 }
 
@@ -2480,6 +2499,7 @@
                 display: flex;
                 justify-content: center;
                 scale: 1;
+                font-size: 0.7rem;
 
                 .choosenew,.keepnow{
                     cursor: pointer;
@@ -3103,10 +3123,4 @@
             }
         }
     }
-}
-
-.p3_desc {
-    text-align: center;
-    top: 50%;
-    font-size: 12px;
 }

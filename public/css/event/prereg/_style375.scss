@@ -114,7 +114,8 @@
             background: url(/img/event/prereg/p2/bg2_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
-            height: 100%;
+            height: 120vh;
+            overflow: hidden;
 
             .bg2animate{
 
@@ -254,7 +255,7 @@
                         & form{
                             & div{
                                 & select{
-                                    width: 20%;
+                                    width: 30%;
                                     height: 34px;
                                     font-size: 15px;
                                     padding: 0;
@@ -332,7 +333,7 @@
                         width: 70%;
                         height: 20%;
                         color: #ffffff;
-                        font-size: 1rem;
+                        font-size: 0.7rem;
                         font-weight: bold;
                         display: flex;
                         text-align: center;
@@ -344,6 +345,7 @@
                             background-position: center;
                             background-size: contain;
                             cursor: pointer;
+                            font-size: 0.7rem;
 
                             &::before, &::after{
                                 position: absolute;
@@ -379,6 +381,8 @@
             background: url(/img/event/prereg/p3/bg3_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
+            height: 110vh;
+            overflow: hidden;
 
             .bgclouds{
                 .bgcloud1{
@@ -629,6 +633,7 @@
                     rotate: 0deg;
                     // opacity: 0;
                     z-index: 1;
+                    scale: 0.85;
 
                     .lantern_light{
                         position: absolute;
@@ -896,6 +901,7 @@
             background: url(/img/event/prereg/p4/bg4.png);
             background-size: cover;
             background-position: center;
+            height: 110vh;
 
             .bg4animate{
                 .bamboo{
@@ -969,7 +975,7 @@
 
             .p4main{
                 position: absolute;
-                top: 100%;
+                top: 93%;
                 left: 50%;
                 translate: -50% -100%;
                 width: 85vw;
@@ -1083,7 +1089,7 @@
                     .panda3{
                         position: absolute;
                         bottom: 0%;
-                        left: 58%;
+                        left: 75%;
                         translate: -50%;
                         width: 422px;
                         height: 437px;
@@ -1317,6 +1323,7 @@
             background: url(/img/event/prereg/p5/bg5_m.png)no-repeat;
             background-size: cover;
             background-position: center;
+            height: 100vh;
 
             .p5title{
                 position: absolute;
@@ -1520,6 +1527,7 @@
             background: url(/img/event/prereg/p6/bg6_m.jpg);
             background-size: cover;
             background-position: center;
+            height: 110vh;
 
             .p6title{
                 position: absolute;
@@ -1673,7 +1681,7 @@
                 left: 0vw;
                 width: 100vw;
                 height: 20vw;
-                translate: 0 -120%;
+                translate: 0 -90%;
                 background: none;
                 background-size: contain;
                 background-position: top;
@@ -2223,7 +2231,7 @@
                 height: 68%;
                 list-style: decimal;
                 color: #15386c;
-                font-size: 12px;
+                font-size: 0.7rem;
                 overflow-y: scroll;
                 padding: 0;
 
@@ -2235,6 +2243,7 @@
                     background-color: #dfeaf5;
                     line-height: 25px;
                     display: flex;
+                    
 
                     .missiontext{
                         width: 55%;
@@ -2277,6 +2286,15 @@
                     &:nth-child(2n){
                         background-color: #b7cee6;
 
+                    }
+
+                    &:nth-child(3){
+                        // height: 50px;
+                        font-size: 0.7rem;
+
+                        & span{
+                            font-size: 0.7rem;
+                        }
                     }
                 }
 

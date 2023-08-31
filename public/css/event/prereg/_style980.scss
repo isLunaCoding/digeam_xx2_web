@@ -1,0 +1,39 @@
+@media(max-width: 980px){
+    .swiper{
+        .page4{
+            background: url(/img/event/prereg/p4/bg4.png);
+            background-size: cover;
+            background-position: center;
+
+            .p4main{
+                position: absolute;
+                top: 53%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 80vw;
+                height: 70vh;
+
+                .p4info{
+                    .p4btns{
+                        width: auto;
+                        height: auto;
+                        color: #ffffff;
+                        font-size: 20px;
+                        font-weight: bold;
+                        display: block;
+                        justify-content: flex-end;
+                        text-align: center;
+                        text-shadow: 0 0 5px #010101;
+                        filter: drop-shadow(0 0 5px #2d3447);
+
+                        .p4informationbtn, .p4noticebtn{
+                            margin: 5px auto;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

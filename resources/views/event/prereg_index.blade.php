@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="css/event/prereg/style.css?v3.31">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v3.45">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -68,6 +68,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     src="https://www.facebook.com/tr?id=195255256613754&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+
+    <style>
+
+    </style>
 </head>
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLY7B58FCM"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FLY7B58FCM'); </script>
 <body>
@@ -688,13 +692,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- 熊貓賽跑影片窗 -->
     <div class="p4resultpop">
         <div class="p4resultpopframe">
-            <video controls playsinline class="pandavideo panda1win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+            <video  playsinline class="pandavideo panda1win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
                 <source src="/img/event/prereg/p4/panda1win.mp4">
             </video>
-            <video controls playsinline class="pandavideo panda2win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+            <video  playsinline class="pandavideo panda2win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
                 <source src="/img/event/prereg/p4/panda2win.mp4">
             </video>
-            <video controls playsinline class="pandavideo panda3win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+            <video  playsinline class="pandavideo panda3win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
                 <source src="/img/event/prereg/p4/panda3win.mp4">
             </video>
             <div class="booframe"></div>
@@ -710,7 +714,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     {{-- <script src="js/event/prereg/rain.js?v1.994" type="text/javascript"></script> --}}
     <script src="js/event/prereg/main.js?v2.19" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v2.25" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v2.27" type="text/javascript"></script>
     <script src="js/event/prereg/api.js?v2.20" type="text/javascript"></script>
     <script src="js/event/prereg/menu.js?v2.19" type="text/javascript"></script>
 </body>
