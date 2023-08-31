@@ -1,6 +1,10 @@
 @media(max-width: 1440px){
 
     .swiper{
+        .swiper-slide{
+            // overflow-x: hidden;
+            // overflow-y: auto;
+        }
         .page2{
 
             .bg2animate{
@@ -366,18 +370,19 @@
 
                     .cardinfo{
                         position: absolute;
-                        top: 50%;
-                        translate: 0 -50%;
-                        width: 100%;
+                        top: 45%;
+                        translate: -17% -50%;
+                        width: 120%;
                         height: 100%;
                         display: none;
+                        scale: 0.95;
 
                         .cardname{
                             position: absolute;
                             top: 15%;
                             width: 100%;
                             height: auto;
-                            font-size: 55px;
+                            font-size: 35px;
                             color: #FFF;
                             font-family: 'Noto Serif TC', serif;
                             text-shadow: 0 0 10px #103aa3;
@@ -525,7 +530,7 @@
 
                 .p4Gobtn{
                     position: absolute;
-                    top: 85%;
+                    top: 90%;
                     left: 50%;
                     translate: -50%;
                     width: 260px;
@@ -1893,6 +1898,115 @@
 
                 &::-webkit-scrollbar-track {
                     box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .popS{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(127, 140, 149, 0.5);
+        font-family: 'Noto Serif TC', serif;
+        z-index: 10;
+        display: none;
+    
+        .popSframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 30vw;
+            height: 60vh;
+            background: url(/img/event/prereg/pop_s/popS_frame.png)no-repeat;
+            background-size: contain;
+    
+            .popStitle{
+                position: absolute;
+                top: 13%;
+                left: 50%;
+                translate: -50%;
+                font-size: 1.8rem;
+                color: #e4efff;
+                text-align: center;
+    
+                &::before,&::after{
+                    position: absolute;
+                    content: '';
+                    top: 6%;
+                    width: 20px;
+                    height: 100%;
+                    background: url(/img/event/prereg/pop_s/popStitle_icon.png)no-repeat;
+                    background-position: center;
+                }
+                &::before{
+                    left: -15%;
+                }
+                &::after{
+                    right: -15%;
+                    scale: -1;
+                }
+            }
+    
+            .popSText{
+                margin: auto;
+                margin-top: 30%;
+                width: 70%;
+                height: 73%;
+                list-style: decimal;
+                color: #e4efff;
+                font-size: 1.3rem;
+                text-align: center;
+                & span , & a{
+                        color: #91006a;
+                    }
+            }
+    
+            .popScheckBtn{
+                position: absolute;
+                bottom: 35%;
+                left: 50%;
+                translate: -50%;
+                width: 120px;
+                height: 50px;
+                background-color: #FFF;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 50px;
+                letter-spacing: 5px;
+                cursor: pointer;
+            }
+    
+            .popScheckBtn2,.popScheckBtn3,.popScheckBtn4{
+                position: absolute;
+                bottom: 35%;
+                left: 50%;
+                translate: -50%;
+                width: 60%;
+                height: 50px;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 50px;
+                letter-spacing: 5px;
+                display: flex;
+    
+                .yes,.no,.new_yes,.yes_30{
+                    position: absolute;
+                    width: 90px;
+                    height: 50px;
+                    cursor: pointer;
+                    background-color: #FFF;
+                }
+    
+                .yes,.new_yes,.yes_30{
+                    left: 25%;
+                    translate: -50%;
+                }
+                .no{
+                    left: 75%;
+                    translate: -50%;
                 }
             }
         }

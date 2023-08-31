@@ -2,10 +2,10 @@
 
     .swiper{
         width: 100vw;
-        height: 100%;
+        // height: 100%;
 
         .swiper-slide{
-            overflow: hidden;
+            // overflow: auto;
 
             .cloudmask{
                 position: relative;
@@ -703,7 +703,7 @@
                     .cardinfo{
                         position: absolute;
                         top: 50%;
-                        translate: 0 -65%;
+                        translate: -7% -65%;
                         width: 100%;
                         height: 100%;
                         display: none;
@@ -2985,7 +2985,8 @@
         height: 100%;
 
         .swiper-slide{
-            overflow: hidden;
+            // overflow-x: hidden;
+            // overflow-y: auto;
 
             .cloudmask{
                 position: relative;

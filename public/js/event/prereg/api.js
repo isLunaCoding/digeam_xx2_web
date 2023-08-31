@@ -24,7 +24,7 @@ function login() {
             if (res.status == -99) {
                 console.log("未登入");
                 $(".visit_frequency").html(0);
-
+                $('.p4Gobtn').hide();
                 $(".distance_30").html(0);
             } else {
                 if (res.user_mobile != "" && res.user_mobile != null) {
@@ -48,6 +48,8 @@ function login() {
                 if (res.celebrity != null) {
                     p3cardinfo(res.celebrity[0], res.celebrity[1]);
                     setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
+                }else{
+                $('.p4Gobtn').hide();
                 }
 
                 if (res.daily_login != null) {
@@ -311,6 +313,11 @@ $(".yes").on("click", function () {
                         login();
                     });
                 }
+            }else{
+                p3_not_get()
+                $(".yes").hide();
+                $(".no").hide();
+                $(".popS").fadeIn(200);
             }
         }
     );

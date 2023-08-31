@@ -1,11 +1,11 @@
-@media(max-width:374px){
+@media(max-width:375px){
     .swiper{
         width: 100vw;
-        height: 100vh;
+        // height: 100vh;
 
         .swiper-slide{
-            width: 100vw;
-            height: 100vh;
+            // width: 100vw;
+            // height: 100vh;
             // overflow: hidden;
 
             .cloudmask{
@@ -114,7 +114,7 @@
             background: url(/img/event/prereg/p2/bg2_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
-            height: 800px;
+            height: 100%;
 
             .bg2animate{
 
@@ -660,7 +660,7 @@
 
                     p{
                         position: absolute;
-                        top: 46%;
+                        top: 50%;
                         left: 50%;
                         translate: -50%;
                         color: #a38a46;
@@ -705,8 +705,9 @@
 
                     .cardinfo{
                         position: absolute;
-                        top: 50%;
-                        translate: 0 -85%;
+                        top: 20%;
+                        left: 50%;
+                        translate: -50% -50%;
                         width: 100%;
                         height: 100%;
                         display: none;
@@ -714,7 +715,7 @@
                         .cardname{
                             position: absolute;
                             top: 15%;
-                            width: 100%;
+                            width: 110%;
                             height: auto;
                             font-size: 28px;
                             color: #FFF;
@@ -1356,8 +1357,8 @@
                         left: 50%;
                         translate: -50% -50%;
                         border-radius: 30px;
-                        width: calc(70vw - 60px);
-                        height: calc(103vw - 60px);
+                        width: calc(70vw - 40px);
+                        height: calc(103vw - 40px);
                         background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                         background-size: cover;
                         background-position: center;
@@ -1537,7 +1538,7 @@
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
-                left: -35%;
+                left: -41%;
                 top: -15vh;
                 scale: 0.6;
 
@@ -2246,7 +2247,7 @@
                     .missiontimes{
                         width:30%;
                         height: 100%;
-                        font-size: 0.1rem;
+                        font-size: 0.5rem;
                         text-align: end;
                     }
                     .missionbtn{
@@ -2827,7 +2828,7 @@
 
             .popTable{
                 margin: auto;
-                margin-top: 18%;
+                margin-top: 20%;
                 width: 80%;
                 height: 73%;
                 list-style: decimal;

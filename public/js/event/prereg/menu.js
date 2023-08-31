@@ -1,13 +1,23 @@
-$('.bar ul li a').click(function() {
+$('.bar ul li a').click(function () {
     $('.bar ul li a').removeClass('active');
     var $this = $(this),
-    _clickTab = $this.attr('id');
+        _clickTab = $this.attr('id');
     $this.addClass('active');
     $(_clickTab).stop(false, true).fadeIn().siblings().hide();
     return false;
 });
 
-$('.SUB1 a').click(function() {
+$('.bar ul li a').click(function () {
+
+    if (screen.width <= 768) {
+        $(".bar").fadeOut(100)
+        $('.menubtn').trigger("click");
+
+    }
+
+})
+
+$('.SUB1 a').click(function () {
 
     $('html,body').animate({
 
@@ -15,11 +25,10 @@ $('.SUB1 a').click(function() {
 
     }, 10);
 
-    console.log(1);
 
 });
 
-$('.SUB2 a').click(function() {
+$('.SUB2 a').click(function () {
 
     $('html,body').animate({
 
@@ -29,7 +38,7 @@ $('.SUB2 a').click(function() {
 
 });
 
-$('.SUB3 a').click(function() {
+$('.SUB3 a').click(function () {
 
     $('html,body').animate({
 
@@ -39,17 +48,17 @@ $('.SUB3 a').click(function() {
 
 });
 
-// $('.SUB4 a').click(function() {
+$('.SUB4 a').click(function () {
 
-//     $('html,body').animate({
+    $('html,body').animate({
 
-//         scrollTop: $('.page4').offset().top
+        scrollTop: $('.page4').offset().top
 
-//     }, 10);
+    }, 10);
 
-// });
+});
 
-$('.SUB5 a').click(function() {
+$('.SUB5 a').click(function () {
 
     $('html,body').animate({
 
@@ -59,7 +68,7 @@ $('.SUB5 a').click(function() {
 
 });
 
-$('.SUB6 a').click(function() {
+$('.SUB6 a').click(function () {
 
     $('html,body').animate({
 
@@ -69,7 +78,7 @@ $('.SUB6 a').click(function() {
 
 });
 
-$('.SUB7 a').click(function() {
+$('.SUB7 a').click(function () {
 
     $('html,body').animate({
 
