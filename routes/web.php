@@ -24,7 +24,7 @@ Route::middleware(['setReturnUrl'])->group(function () {
 });
 
 // 官網
-Route::get('/index', function () {
+Route::get('/xx2index', function () {
     return view('front/index');
 });
 // 公告

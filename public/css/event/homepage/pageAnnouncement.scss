@@ -18,6 +18,9 @@
                             border: #002578 1px solid;
                             font-size: 20px;
                             color: #002578;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
 
                             &:hover,
                             &.active {
@@ -28,7 +31,6 @@
 
                         .newsBtnNA {
                             font-weight: 500;
-                            padding-top: 4px;
                         }
                     }
 

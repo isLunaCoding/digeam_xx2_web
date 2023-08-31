@@ -28,9 +28,9 @@
 {{-- 內文 --}}
 @section('textBox')
     <div class="tabBox">
-        <button class="newsBtn newsBtnNA new" data-news="NA">NEW</button>
-        <button class="newsBtn newsBtnNB activity" data-news="NB">活動</button>
-        <button class="newsBtn newsBtnNC systemBox" data-news="NC">系統</button>
+        <a href="#" class="newsBtn newsBtnNA new" data-news="NA">NEW</a>
+        <a href="#"  class="newsBtn newsBtnNB activity" data-news="NB">活動</a>
+        <a href="#"  class="newsBtn newsBtnNC systemBox" data-news="NC">系統</a>
     </div>
     <div class="line"></div>
     <div class="newsContainer">

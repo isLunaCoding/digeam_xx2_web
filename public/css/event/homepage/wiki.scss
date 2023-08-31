@@ -162,10 +162,29 @@
                     background-color: #82a3d4;
                     height: 40px;
                     font-size: 18px;
-                    color: #fff;
                     border: 1px solid #82a3d4;
                     padding: 0 10px;
                     margin: 30px 0 50px;
+                    color: #fff;
+
+                    &:hover{
+                        background-color: #fff;
+                        color: #82a3d4;
+                        background-position: 0.75em bottom;
+                        -webkit-transition: all 1.0s ease;
+                        -ms-transition: all 1.0s ease;
+                        transition: all 1.0s ease;
+                        cursor: pointer;
+                    }
+                    &:not(hover){
+                        background-color: #82a3d4;
+                        color: #fff;
+                        background-position: 0.75em bottom;
+                        -webkit-transition: all 1.0s ease;
+                        -ms-transition: all 1.0s ease;
+                        transition: all 1.0s ease;
+                        cursor: pointer;
+                    }
                 }
             }
         }

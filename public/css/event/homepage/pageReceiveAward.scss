@@ -65,6 +65,7 @@
 }
 
 .awardTitleContent {
+    height: 300px;
     li {
 
         a {
@@ -107,6 +108,47 @@
         height: 1px;
         background-color: #728dcc;
         margin: 10px 0 25px;
+    }
+}
+
+
+.pagination {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 4px;
+    width: 100%;
+
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .page-item {
+
+        font-size: 16px;
+        padding: 8px;
+        text-decoration: none;
+
+        &.disabled {
+            font-size: 16px;
+            padding: 8px;
+            text-decoration: none;
+
+            .page-link {
+                color: #728dcc;
+            }
+        }
+
+        &.active {
+            color: #728dcc;
+            font-size: 16px;
+            padding: 8px;
+            text-decoration: none;
+
+            .page-link {
+                color: #728dcc;
+            }
+        }
     }
 }
 

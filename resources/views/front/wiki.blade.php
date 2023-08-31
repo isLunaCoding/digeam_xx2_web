@@ -83,7 +83,7 @@
                             <div class="title">標題</div>
                             <div class="line"></div>
                             <div class="text">內文</div>
-                            <button class="continueBtn">繼續閱讀 →</button>
+                            <button class="continueBtn" onclick="location.href='#'">繼續閱讀 →</button>
                         </div>
                         <footer class="footer">
                             <div class="footerBox">

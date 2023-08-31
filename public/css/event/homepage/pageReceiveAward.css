@@ -56,6 +56,9 @@
   width: 300px;
 }
 
+.awardTitleContent {
+  height: 300px;
+}
 .awardTitleContent li a {
   display: flex;
 }
@@ -89,6 +92,39 @@
   height: 1px;
   background-color: #728dcc;
   margin: 10px 0 25px;
+}
+
+.pagination {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 4px;
+  width: 100%;
+}
+.pagination li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.pagination .page-item {
+  font-size: 16px;
+  padding: 8px;
+  text-decoration: none;
+}
+.pagination .page-item.disabled {
+  font-size: 16px;
+  padding: 8px;
+  text-decoration: none;
+}
+.pagination .page-item.disabled .page-link {
+  color: #728dcc;
+}
+.pagination .page-item.active {
+  color: #728dcc;
+  font-size: 16px;
+  padding: 8px;
+  text-decoration: none;
+}
+.pagination .page-item.active .page-link {
+  color: #728dcc;
 }
 
 .boxDown {
