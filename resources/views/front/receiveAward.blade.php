@@ -50,7 +50,7 @@
     <div class="awardTitleContent">
         <ul>
             <li>
-                <a href="##" class="normal">
+                <a href="javascript:show()" class="normal">
                     <div class="awardTextBox">
                         <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>

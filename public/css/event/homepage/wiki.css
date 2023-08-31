@@ -343,6 +343,8 @@ body {
   margin: 0 auto 10px;
   width: 1187px;
   height: 640px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .mainBG .mainBox .rightBox .mainTextBox .title {
   font-size: 36px;

@@ -54,6 +54,10 @@ Route::get('/regulations', function () {
 Route::get('/wiki', function () {
     return view('front/wiki');
 });
+// 停權名單
+Route::get('/suspension', function () {
+    return view('front/suspension');
+});
 
 
 

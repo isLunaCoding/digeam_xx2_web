@@ -1,0 +1,32 @@
+.textBox .upBox {
+  margin: 50px 0 20px;
+  width: 878px;
+}
+.textBox .upBox .time {
+  font-size: 14px;
+  color: #002578;
+}
+.textBox .upBox .time span {
+  color: #002578;
+}
+.textBox .downBox {
+  line-height: 30px;
+}
+.textBox .downBox .table {
+  border-collapse: collapse;
+}
+.textBox .downBox .table th {
+  border: 1px solid #002578;
+  background-color: #234fac;
+  height: 45px;
+  text-align: center;
+  line-height: 43px;
+  color: #fff;
+}
+.textBox .downBox .table td {
+  color: #002578;
+  border: 0.5px solid #002578;
+  font-weight: 400;
+  padding: 12px;
+  text-align: left;
+}/*# sourceMappingURL=pageSuspension.css.map */
