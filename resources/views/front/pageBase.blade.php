@@ -2,7 +2,6 @@
 
 {{-- 網頁各自名稱 --}}
 @section('title')
-    @yield('title')
 @endsection
 
 
@@ -52,11 +51,13 @@
                 </div>
                 <div class="boxRight">
                     <div class="textTitle">
-                        {{-- 內文標題 --}}
+                        {{-- 網頁分類大標題 --}}
                         @yield('textTitle')
                     </div>
                     <div class="textBox">
                         <div class="seat">
+                            當前位置：
+                            <a href="">首頁</a>&gt;
                             @yield('seat')
                         </div>
                         {{-- 內文 --}}
@@ -64,6 +65,7 @@
                     </div>
                 </div>
             </div>
+            @yield('boxDown')
         </div>
     </div>
 @endsection

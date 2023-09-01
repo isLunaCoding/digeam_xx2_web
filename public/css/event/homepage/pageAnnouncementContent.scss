@@ -1,0 +1,37 @@
+// 遊戲公告內文樣式
+.sectionPage{
+    .sectionBG{
+        .container{
+            .boxRight{
+                .textBox{
+                    .upBox{
+                        margin-top: 50px;
+                        width: 878px;
+                        // background: #ff9e9e;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        .title{
+                            font-size: 30px;
+                            color: #002578;
+                            font-weight: 600;
+                        }
+                        .time{
+                            font-size: 14px;
+                            color: #002578;
+                        }
+                    }
+                    .line{
+                        width: 878px;
+                        height: 1px;
+                        background-color: #002578;
+                        margin: 20px 0 40px;
+                    }
+                    .downBox{
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

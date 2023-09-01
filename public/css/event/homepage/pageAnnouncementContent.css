@@ -1,1 +1,25 @@
-/*# sourceMappingURL=pageAnnouncementContent.css.map */
+.sectionPage .sectionBG .container .boxRight .textBox .upBox {
+  margin-top: 50px;
+  width: 878px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .upBox .title {
+  font-size: 30px;
+  color: #002578;
+  font-weight: 600;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .upBox .time {
+  font-size: 14px;
+  color: #002578;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .line {
+  width: 878px;
+  height: 1px;
+  background-color: #002578;
+  margin: 20px 0 40px;
+}
+.sectionPage .sectionBG .container .boxRight .textBox .downBox {
+  line-height: 30px;
+}/*# sourceMappingURL=pageAnnouncementContent.css.map */

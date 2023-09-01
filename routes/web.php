@@ -24,14 +24,29 @@ Route::middleware(['setReturnUrl'])->group(function () {
 });
 
 // 官網
-Route::get('/index', function () {
-    return view('front/index');
-});
-Route::get('/announcement', function () {
-    return view('front/announcement');
-});
+Route::get('/xx2index', 'front\indexController@index');
+// 公告
+Route::get('/announcement/{cate?}', 'front\announcementController@index')->name('announcement');
+Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');
 
-
+// 領獎專區
+Route::get('/receiveAward', function () {
+    return view('front/receiveAward');
+});
+// 序號兌換
+Route::get('/exchange', function () {
+    return view('front/exchange');
+});
+// 下載
+Route::get('/download', function () {
+    return view('front/download');
+});
+// 遊戲規章
+Route::get('/regulations', function () {
+    return view('front/regulations');
+});
+// 百科
+Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');

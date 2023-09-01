@@ -1,0 +1,44 @@
+.regulationsTextBox{
+    font-family: "微軟正黑";
+    font-size: 16px;
+    position: relative;
+    line-height: 30px;
+    font-weight: 900;
+
+    .red{
+        color: rgb(0, 103, 214);
+        border:none;
+        display: contents;
+    }
+
+    h2{
+        text-align: center;
+    }
+    .table{
+        border-collapse: collapse;
+        th{
+            border: 1px solid #002578;
+            background-color: #234fac;
+            height: 45px;
+            text-align: center;
+            line-height: 43px;
+            color: #fff;
+        }
+        td{
+            border: 0.5px solid #002578;
+            font-weight: 400;
+            padding: 12px;
+            text-align: center;
+            color: #000;
+        }
+        .textLeft{
+            text-align: left;
+        }
+
+    }
+    .textRight{
+        width: 878px;
+        text-align: right;
+        font-family: '微軟正黑體';
+    }
+}
