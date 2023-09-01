@@ -7,7 +7,7 @@ use App\Model\Category;
 use App\Model\Page;
 class wikiController extends Controller
 {
-    public function index($id=38)
+    public function index($id=14)
     {
         $lists = Category::where('type', 'wiki')->where('open', 'Y')->orderby('parent_id', 'asc')->orderby('sort', 'asc')->get();
         $sec_lists = $lists->groupby('parent_id');
