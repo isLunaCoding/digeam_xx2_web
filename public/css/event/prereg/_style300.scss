@@ -1543,9 +1543,9 @@
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
-                left: -35%;
+                left: -25% !important;
                 top: -15vh;
-                scale: 0.6;
+                scale: 0.5;
 
                 .humen{
                     position: absolute;
@@ -2243,8 +2243,9 @@
                     .missiontext{
                         width: 55%;
                         height: 100%;
+                        font-size: 0.7rem;
                         & span{
-                            font-size: 11px;
+                            font-size: 0.7rem;
                             color: #67729b;
                         }
                     }
@@ -2258,13 +2259,13 @@
                         width: 15%;
                         height: 100%;
                         background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
-                        // background-size: contain;
+                        background-size: 135%;
                         cursor: pointer;
                         transition: 0.3s;
 
-                        &:hover{
-                            background-position: right;
-                        }
+                        // &:hover{
+                        //     background-position: right;
+                        // }
                     }
 
                     &::before{

@@ -310,7 +310,7 @@
                         text-align: center;
                         line-height: 101px;
                         scale: 0.5;
-                        top:-20%;
+                        top:-16%;
                         &:hover{
                             background: url(/img/event/prereg/p2/btn1_hover.png)no-repeat;
                         }
@@ -336,7 +336,7 @@
                     .p2btns{
                         position: absolute;
                         left: 50%;
-                        translate: -50%;
+                        translate: -50% -60%;
                         width: 70%;
                         height: 20%;
                         color: #ffffff;
@@ -982,15 +982,15 @@
 
             .p4main{
                 position: absolute;
-                top: 85%;
+                top: 90%;
                 left: 50%;
                 translate: -50% -100%;
                 width: 85vw;
                 height: 675px;
 
                 .p4info{
-              
-      
+
+
                     position: absolute;
                     top: -9%;
                     right: 0%;
@@ -1557,7 +1557,7 @@
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
-                left: -34%;
+                left: -14%;
                 top: -15vh;
                 scale: 0.6;
 
@@ -2262,8 +2262,9 @@
                     .missiontext{
                         width: 55%;
                         height: 100%;
+                        font-size: 0.7rem;
                         & span{
-                            font-size: 11px;
+                            font-size: 0.7rem;
                             color: #67729b;
                         }
                     }
@@ -2277,13 +2278,13 @@
                         width: 15%;
                         height: 100%;
                         background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
-                        // background-size: contain;
+                        background-size: 135%;
                         cursor: pointer;
                         transition: 0.3s;
 
-                        &:hover{
-                            background-position: right;
-                        }
+                        // &:hover{
+                        //     background-position: right;
+                        // }
                     }
 
                     &::before{
@@ -2305,7 +2306,7 @@
                     &:nth-child(3){
                         // height: 50px;
                         font-size: 0.7rem;
-                        
+
                         & span{
                             font-size: 0.7rem;
                         }
@@ -2933,7 +2934,7 @@
                 width: 75%;
                 height: 70%;
                 color: #15386c;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 overflow-y: scroll;
 
                 & li{

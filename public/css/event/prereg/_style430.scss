@@ -4,6 +4,9 @@
     }
     .p2btns{
         margin-top:10% !important;
+        .p2informationbtn, .p2noticebtn{
+            font-size: 15px !important;
+        }
     }
     .p4info{
         top:-15% !important;
@@ -21,7 +24,7 @@
         width: 42% !important;
     }
     .roles{
-        left: -25% !important;
+        left: -12% !important;
     }
     .p6feature2{
         top: calc(52% + 32vw) !important;
@@ -50,10 +53,19 @@
         right :-10% !important;
     }
     .missionbtn{
-        background-size: 125% !important;
+        background-size: 135% !important;
+    }
+    .missiontext{
+        font-size: 0.7rem;
+        & span{
+            font-size: 0.7rem;
+        }
     }
     .p3_desc{
         top: 38% !important;
         font-size: 12px !important;
+    }
+    .popSText{
+        font-size: 1.2rem !important;
     }
 }

@@ -1,5 +1,49 @@
 
 @media(max-width:700px){
+    .menubtn2 {
+        top: 7% !important;
+        left: 8% !important;
+        width: 45px !important;
+        height: 45px !important;
+    }
+    .cardname{
+        top:20% !important;
+    }
+    .valuetable{
+        font-size: 20px !important;
+    }
+    .roles{
+        width:30% !important;
+        height:100% !important;
+    }
+    .p6menu{
+        height: 12% !important;
+        translate: 0% -100% !important;
+    }
+
+    .p6text{
+        margin-top: 1%;
+    }
+    .awardbox{
+        height: 95% !important;
+        bottom:-15% !important;
+    }
+    .p2btns{
+        top: 20% !important;
+    }
+    .p6feature2{
+        top: calc(54% + 32vw) !important;
+    }
+    .getcardbtn{
+        top:87% !important;
+    }
+    .p3_chance{
+        top:76% !important;
+    }
+    .p4info{
+        top : -13% !important;
+    }
+    // shane修的以上
 
     .swiper{
         width: 100vw;
@@ -128,6 +172,11 @@
                 .p3text{
                     height: 402px;
                     top: 70%;
+                }
+                .card{
+                    p{
+                        top: 75%;
+                    }
                 }
             }
         }

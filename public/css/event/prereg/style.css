@@ -5161,7 +5161,7 @@ body {
     top: 13%;
     left: 50%;
     translate: -50%;
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: #e4efff;
     text-align: center;
   }
@@ -9645,7 +9645,7 @@ body {
     top: 13%;
     left: 50%;
     translate: -50%;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #e4efff;
     text-align: center;
   }
@@ -9730,6 +9730,48 @@ body {
   }
 }
 @media (max-width: 700px) {
+  .menubtn2 {
+    top: 7% !important;
+    left: 8% !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+  .cardname {
+    top: 20% !important;
+  }
+  .valuetable {
+    font-size: 20px !important;
+  }
+  .roles {
+    width: 30% !important;
+    height: 100% !important;
+  }
+  .p6menu {
+    height: 12% !important;
+    translate: 0% -100% !important;
+  }
+  .p6text {
+    margin-top: 1%;
+  }
+  .awardbox {
+    height: 95% !important;
+    bottom: -15% !important;
+  }
+  .p2btns {
+    top: 20% !important;
+  }
+  .p6feature2 {
+    top: calc(54% + 32vw) !important;
+  }
+  .getcardbtn {
+    top: 87% !important;
+  }
+  .p3_chance {
+    top: 76% !important;
+  }
+  .p4info {
+    top: -13% !important;
+  }
   .swiper {
     width: 100vw;
     height: 100%;
@@ -9844,6 +9886,9 @@ body {
   .swiper .page3 .p3main .p3text {
     height: 402px;
     top: 70%;
+  }
+  .swiper .page3 .p3main .card p {
+    top: 75%;
   }
   .swiper .page4 {
     height: 1500px;
@@ -12419,12 +12464,9 @@ body {
     width: 15%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
-    background-size: 125%;
+    background-size: 135%;
     cursor: pointer;
     transition: 0.3s;
-  }
-  .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn:hover {
-    background-position: right;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li::before {
     position: absolute;
@@ -13105,7 +13147,7 @@ body {
     height: 100% !important;
   }
   .p6menu {
-    height: 7% !important;
+    height: 12% !important;
     translate: 0% -100% !important;
   }
   .p6text {
@@ -13113,9 +13155,13 @@ body {
   }
   .awardbox {
     height: 95% !important;
+    bottom: -15% !important;
   }
   .p2btns {
-    top: -12% !important;
+    top: 20% !important;
+  }
+  .p2btns .p2informationbtn, .p2btns .p2noticebtn {
+    font-size: 15px !important;
   }
   .p6feature2 {
     top: calc(54% + 32vw) !important;
@@ -13125,6 +13171,9 @@ body {
   }
   .p3_chance {
     top: 76% !important;
+  }
+  .p4info {
+    top: -13% !important;
   }
   /*選單連結(放進bar的css裡面會跑版所以放外面)*/
   .swiper-pagination {
@@ -13196,6 +13245,9 @@ body {
   .p2btns {
     margin-top: 10% !important;
   }
+  .p2btns .p2informationbtn, .p2btns .p2noticebtn {
+    font-size: 15px !important;
+  }
   .p4info {
     top: -15% !important;
   }
@@ -13212,7 +13264,7 @@ body {
     width: 42% !important;
   }
   .roles {
-    left: -25% !important;
+    left: -12% !important;
   }
   .p6feature2 {
     top: calc(52% + 32vw) !important;
@@ -13241,11 +13293,20 @@ body {
     right: -10% !important;
   }
   .missionbtn {
-    background-size: 125% !important;
+    background-size: 135% !important;
+  }
+  .missiontext {
+    font-size: 0.7rem;
+  }
+  .missiontext span {
+    font-size: 0.7rem;
   }
   .p3_desc {
     top: 38% !important;
     font-size: 12px !important;
+  }
+  .popSText {
+    font-size: 1.2rem !important;
   }
 }
 @media (max-width: 425px) {
@@ -13515,7 +13576,7 @@ body {
     text-align: center;
     line-height: 101px;
     scale: 0.5;
-    top: -20%;
+    top: -16%;
   }
   .swiper .page2 .p2main .p2steps .checkbtn:hover {
     background: url(/img/event/prereg/p2/btn1_hover.png) no-repeat;
@@ -13537,7 +13598,7 @@ body {
   .swiper .page2 .p2main .p2awards .p2btns {
     position: absolute;
     left: 50%;
-    translate: -50%;
+    translate: -50% -60%;
     width: 70%;
     height: 20%;
     color: #ffffff;
@@ -14102,7 +14163,7 @@ body {
   }
   .swiper .page4 .p4main {
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: 50%;
     translate: -50% -100%;
     width: 85vw;
@@ -14602,7 +14663,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    left: -34%;
+    left: -14%;
     top: -15vh;
     scale: 0.6;
   }
@@ -15227,9 +15288,10 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
     width: 55%;
     height: 100%;
+    font-size: 0.7rem;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
-    font-size: 11px;
+    font-size: 0.7rem;
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
@@ -15242,11 +15304,9 @@ body {
     width: 15%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
+    background-size: 135%;
     cursor: pointer;
     transition: 0.3s;
-  }
-  .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn:hover {
-    background-position: right;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li::before {
     position: absolute;
@@ -15814,7 +15874,7 @@ body {
     width: 75%;
     height: 70%;
     color: #15386c;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     overflow-y: scroll;
   }
   .pop .popframe .popText li {
@@ -17325,7 +17385,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    left: -41%;
+    left: -22%;
     top: -15vh;
     scale: 0.6;
   }
@@ -17943,9 +18003,10 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
     width: 55%;
     height: 100%;
+    font-size: 0.7rem;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
-    font-size: 11px;
+    font-size: 0.7rem;
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
@@ -17958,11 +18019,9 @@ body {
     width: 15%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
+    background-size: 135%;
     cursor: pointer;
     transition: 0.3s;
-  }
-  .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn:hover {
-    background-position: right;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li::before {
     position: absolute;
@@ -18629,6 +18688,11 @@ body {
     letter-spacing: 5px;
     cursor: pointer;
     scale: 0.8;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 360px) {
+  .roles {
+    left: -23% !important;
   }
 }
 @media (max-width: 300px) {
@@ -19978,9 +20042,9 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    left: -35%;
+    left: -25% !important;
     top: -15vh;
-    scale: 0.6;
+    scale: 0.5;
   }
   .swiper .page6 .roles .humen {
     position: absolute;
@@ -20599,9 +20663,10 @@ body {
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext {
     width: 55%;
     height: 100%;
+    font-size: 0.7rem;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontext span {
-    font-size: 11px;
+    font-size: 0.7rem;
     color: #67729b;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li .missiontimes {
@@ -20614,11 +20679,9 @@ body {
     width: 15%;
     height: 100%;
     background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
+    background-size: 135%;
     cursor: pointer;
     transition: 0.3s;
-  }
-  .p3missionpop .p3missionpopframe .p3missionpopText li .missionbtn:hover {
-    background-position: right;
   }
   .p3missionpop .p3missionpopframe .p3missionpopText li::before {
     position: absolute;

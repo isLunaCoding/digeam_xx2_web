@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="css/event/prereg/style.css?v3.72">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v3.95">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -103,17 +103,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li class="SUB SUB2"><a href="">初出江湖</a></li>
 
                 <li class="SUB SUB3"><a href="">結交名士</a></li>
-                @if($_SERVER["HTTP_X_FORWARDED_FOR"] == '211.23.144.219')
-                {{-- @if(1==1) --}}
+
                 <li class="SUB SUB4"><a href="">熊貓賽跑</a></li>
-                @endif
+
                 <li class="SUB SUB5"><a href="">遊戲特色</a></li>
 
                 <li class="SUB SUB6"><a href="">職業介紹</a></li>
 
                 <li class="SUB SUB7"><a href="">活動規則</a></li>
-
-                <li class="SUB SUB8"><a href="">敬請期待</a></li>
 
             </ul>
 
@@ -308,10 +305,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <!-- 4熊貓賽跑 -->
-
-
-            @if($_SERVER["HTTP_X_FORWARDED_FOR"] == '211.23.144.219')
-            {{-- @if(1==1) --}}
             <div class="swiper-slide page4">
                 <div class="bg4animate">
                     <div class="bamboo"></div>
@@ -353,7 +346,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="cloudmask"></div>
             </div>
-            @endif
+
             <!-- 5遊戲特色 -->
             <div class="swiper-slide page5">
                 {{-- <div id="rainBox"></div> --}}
@@ -714,8 +707,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     {{-- <script src="js/event/prereg/rain.js?v1.994" type="text/javascript"></script> --}}
     <script src="js/event/prereg/main.js?v2.19" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v2.27" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v2.28" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v2.29" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v2.34" type="text/javascript"></script>
     <script src="js/event/prereg/menu.js?v2.19" type="text/javascript"></script>
 </body>
 <script>
