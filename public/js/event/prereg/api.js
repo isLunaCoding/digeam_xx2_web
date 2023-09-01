@@ -387,6 +387,8 @@ $(".p3choosebtn").on("click", function () {
         }
     });
 });
+
+var _panda_send = true
 //p4熊貓競猜支持
 $(".pandaGobtn").on("click", function () {
     if (_user == null) {
@@ -406,7 +408,10 @@ $(".pandaGobtn").on("click", function () {
         }
         $(".yes").off("click");
         $(".yes").on("click", function () {
-            p4pandaresult(p4_panda_choose_num);
+            if(_panda_send == true){
+                p4pandaresult(p4_panda_choose_num);
+                _panda_send = false
+            }
         });
     }
 });

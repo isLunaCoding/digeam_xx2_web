@@ -2962,7 +2962,7 @@ body {
   margin-top: 18%;
   width: 80%;
   height: 73%;
-  list-style: decimal;
+  list-style: none;
   color: #15386c;
   font-size: 1.3rem;
   overflow-y: scroll;
@@ -6034,7 +6034,7 @@ body {
     margin-top: 18%;
     width: 80%;
     height: 73%;
-    list-style: decimal;
+    list-style: none;
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
@@ -7041,7 +7041,6 @@ body {
     margin-top: 18%;
     width: 80%;
     height: 73%;
-    list-style: decimal;
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
@@ -9592,7 +9591,6 @@ body {
     margin-top: 18%;
     width: 80%;
     height: 73%;
-    list-style: decimal;
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
@@ -12986,7 +12984,6 @@ body {
     margin-top: 22%;
     width: 75%;
     height: 70%;
-    list-style: decimal;
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
@@ -13187,7 +13184,6 @@ body {
     margin-top: 22%;
     width: 75%;
     height: 70%;
-    list-style: decimal;
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
@@ -13246,6 +13242,10 @@ body {
   }
   .missionbtn {
     background-size: 125% !important;
+  }
+  .p3_desc {
+    top: 38% !important;
+    font-size: 12px !important;
   }
 }
 @media (max-width: 425px) {
@@ -13605,7 +13605,7 @@ body {
   }
   .swiper .page3 .p3title {
     position: absolute;
-    top: 5vh;
+    top: 2vh;
     left: 50%;
     translate: -50%;
     width: 51vw;
@@ -15813,7 +15813,6 @@ body {
     margin-top: 22%;
     width: 75%;
     height: 70%;
-    list-style: decimal;
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
@@ -15976,7 +15975,6 @@ body {
     margin-top: 22%;
     width: 75%;
     height: 70%;
-    list-style: decimal;
     color: #15386c;
     font-size: 16px;
     overflow-y: scroll;
@@ -16245,7 +16243,7 @@ body {
     text-align: center;
     line-height: 101px;
     scale: 0.5;
-    top: -69px;
+    top: -50px;
   }
   .swiper .page2 .p2main .p2awards {
     scale: 1;
@@ -16332,7 +16330,7 @@ body {
   }
   .swiper .page3 .p3title {
     position: absolute;
-    top: 5vh;
+    top: 2vh;
     left: 50%;
     translate: -50%;
     width: 51vw;
@@ -18530,7 +18528,6 @@ body {
     margin-top: 22%;
     width: 75%;
     height: 70%;
-    list-style: decimal;
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
@@ -21181,7 +21178,6 @@ body {
     margin-top: 22%;
     width: 75%;
     height: 70%;
-    list-style: decimal;
     color: #15386c;
     font-size: 1.3rem;
     overflow-y: scroll;
