@@ -28,14 +28,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    {{-- <link rel="stylesheet" href="css/event/prereg/main.css?v2.04"> --}}
-    <link rel="stylesheet" href="css/event/prereg/style.css?v2.26">
-    {{-- <link rel="stylesheet" href="css/event/prereg/style1440.css?v2.04">
-    <link rel="stylesheet" href="css/event/prereg/style820.css?v2.04">
-    <link rel="stylesheet" href="css/event/prereg/style600.css?v2.04">
-    <link rel="stylesheet" href="css/event/prereg/style425.css?v2.04">
-    <link rel="stylesheet" href="css/event/prereg/style375.css?v2.04">
-    <link rel="stylesheet" href="css/event/prereg/animate.css?v2.04"> --}}
+    <link rel="stylesheet" href="css/event/prereg/style.css?v3.95">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -75,6 +68,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     src="https://www.facebook.com/tr?id=195255256613754&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+
+    <style>
+
+    </style>
 </head>
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLY7B58FCM"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FLY7B58FCM'); </script>
 <body>
@@ -107,15 +104,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <li class="SUB SUB3"><a href="">結交名士</a></li>
 
-                <!-- <li class="SUB SUB4"><a href="">熊貓賽跑</a></li> -->
+                <li class="SUB SUB4"><a href="">熊貓賽跑</a></li>
 
                 <li class="SUB SUB5"><a href="">遊戲特色</a></li>
 
                 <li class="SUB SUB6"><a href="">職業介紹</a></li>
 
                 <li class="SUB SUB7"><a href="">活動規則</a></li>
-
-                <li class="SUB SUB8"><a href="">敬請期待</a></li>
 
             </ul>
 
@@ -310,7 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <!-- 4熊貓賽跑 -->
-            {{-- <div class="swiper-slide page4">
+            <div class="swiper-slide page4">
                 <div class="bg4animate">
                     <div class="bamboo"></div>
                     <div class="cloud"></div>
@@ -350,7 +345,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="cloudmask"></div>
-            </div> --}}
+            </div>
 
             <!-- 5遊戲特色 -->
             <div class="swiper-slide page5">
@@ -404,7 +399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="p6features p6feature2">
                     <div class="p6subtitle">團隊定位</div>
-                    <div class="p6text">遠程法系輸出，可以控制大量敵人，並給予傷害，但是血防較為薄弱，容易被擊火擊殺。</div>
+                    <div class="p6text">遠程法系輸出，可以控制大量敵人，並給予傷害，但是血防較為薄弱，容易被集火擊殺。</div>
                 </div>
                 <div class="p6menu">
                     <div class="p6btn5"></div>
@@ -434,7 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="plus">
                             <div class="lv"></div>
                             <div class="footernotice">
-                                <p>本遊戲為免費使用，部分內容涉及暴力情節。</p>
+                                <p>本遊戲為免費使用，部分內容涉及暴力與不當言語情節。</p>
                                 <p>遊戲內另提供購買虛擬遊戲幣、物品等付費服務。</p>
                                 <p>請注意遊戲時間，避免沉迷。​</p>
                                 <p>本遊戲服務區域包含台灣、香港、澳門。</p>
@@ -461,44 +456,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="p3missionpopText">
                 <li>
                     <div class="missiontext">每日首次登入頁面</div>
-                    <div class="missiontimes">拜訪次數+1</div>
+                    <div class="missiontimes">拜訪次數+1&nbsp;</div>
                     <div class="missionbtn daily_login" data-val='daily_login'></div>
                 </li>
                 <li>
                     <div class="missiontext">每日首次分享FB</div>
-                    <div class="missiontimes">拜訪次數+2</div>
+                    <div class="missiontimes">拜訪次數+2&nbsp;</div>
                     <div class="missionbtn daily_FB" data-val='daily_FB' data-href="https://xx2.digeam.com/prereg" id="fb-root"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fxx2.digeam.com%2Fprereg&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" target="blank"></a></div>
                 </li>
                 <li>
                     <div class="missiontext">FB粉絲團按讚追蹤<span>(僅一次)</span></div>
-                    <div class="missiontimes">拜訪次數+2</div>
+                    <div class="missiontimes">拜訪次數+2&nbsp;</div>
                     <div class="missionbtn fb_fans_click" data-val='fb_fans_click'><a href="https://www.facebook.com/DiGeamXianXia2/" target="blank"></a></div>
                 </li>
                 <li>
                     {{-- <div class="missiontext">進入官方DC群<span>(僅一次)</span></div> --}}
                     <div class="missiontext">尚未開放</div>
-                    <!-- <div class="missiontimes">拜訪次數+2</div> -->
+                    <!-- <div class="missiontimes">拜訪次數+2&nbsp;</div> -->
                     <div class="missiontimes"></div>
                     <div class="missionbtn join_dc" data-val='join_dc'><a href="#" target="blank"></a></div>
                 </li>
                 <li>
                     {{-- <div class="missiontext">進入CB活動頁面<span>(僅一次)</span></div> --}}
                     <div class="missiontext">尚未開放</div>
-                    <!-- <div class="missiontimes">拜訪次數+2</div> -->
+                    <!-- <div class="missiontimes">拜訪次數+2&nbsp;</div> -->
                     <div class="missiontimes"></div>
                     <div class="missionbtn go_cb" data-val='go_cb'><a href="https://xx2.digeam.com/cbt" target="blank"></a></div>
                 </li>
                 <li>
                     {{-- <div class="missiontext">進入官方網站<span>(僅一次)</span></div> --}}
                     <div class="missiontext">尚未開放</div>
-                    <!-- <div class="missiontimes">拜訪次數+2</div> -->
+                    <!-- <div class="missiontimes">拜訪次數+2&nbsp;</div> -->
                     <div class="missiontimes"></div>
                     <div class="missionbtn go_index" data-val='go_index'><a href="https://xx2.digeam.com/" target="blank"></a></div>
                 </li>
                 <li>
                     {{-- <div class="missiontext">進入OB活動頁面<span>(僅一次)</span></div> --}}
                     <div class="missiontext">尚未開放</div>
-                    <!-- <div class="missiontimes">拜訪次數+2</div> -->
+                    <!-- <div class="missiontimes">拜訪次數+2&nbsp;</div> -->
                     <div class="missiontimes"></div>
                     <div class="missionbtn go_ob" data-val='go_ob'><a href="https://xx2.digeam.com/obt" target="blank"></a></div>
                 </li>
@@ -690,13 +685,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- 熊貓賽跑影片窗 -->
     <div class="p4resultpop">
         <div class="p4resultpopframe">
-            <video class="pandavideo panda1win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+            <video  playsinline class="pandavideo panda1win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
                 <source src="/img/event/prereg/p4/panda1win.mp4">
             </video>
-            <video class="pandavideo panda2win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+            <video  playsinline class="pandavideo panda2win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
                 <source src="/img/event/prereg/p4/panda2win.mp4">
             </video>
-            <video class="pandavideo panda3win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
+            <video  playsinline class="pandavideo panda3win" poster="/img/event/prereg/p4/panda_loading.jpg" autoplay muted>
                 <source src="/img/event/prereg/p4/panda3win.mp4">
             </video>
             <div class="booframe"></div>
@@ -711,10 +706,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     {{-- <script src="js/event/prereg/rain.js?v1.994" type="text/javascript"></script> --}}
-    <script src="js/event/prereg/main.js?v2.14" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v2.14" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v2.15" type="text/javascript"></script>
-    <script src="js/event/prereg/menu.js?v2.14" type="text/javascript"></script>
+    <script src="js/event/prereg/main.js?v2.19" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v2.29" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v2.34" type="text/javascript"></script>
+    <script src="js/event/prereg/menu.js?v2.19" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){

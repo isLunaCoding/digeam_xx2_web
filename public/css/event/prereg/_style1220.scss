@@ -1,0 +1,344 @@
+@media(max-width: 1220px){
+
+    .swiper{
+        .page4{
+            background: url(/img/event/prereg/p4/bg4.png);
+            background-size: cover;
+            background-position: center;
+
+            .p4main{
+                position: absolute;
+                top: 53%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 80vw;
+                height: 70vh;
+
+                .p4info{
+                    .p4btns{
+                        width: auto;
+                        height: auto;
+                        color: #ffffff;
+                        font-size: 20px;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: flex-end;
+                        text-align: center;
+                        text-shadow: 0 0 5px #010101;
+                        filter: drop-shadow(0 0 5px #2d3447);
+
+                    }
+                }
+            }
+        }
+        .page6{
+            background: url(/img/event/prereg/p6/bg6.jpg);
+            background-size: cover;
+            background-position: center;
+
+            .p6title{
+                position: absolute;
+                top: 12vh;
+                left: 16vw;
+                width: 30vw;
+                height: 10vw;
+                background: url(/img/event/prereg/p6/title.png)no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            .roles{
+                position: absolute;
+                width: 50vw;
+                height: 100vh;
+                left: 35%;
+
+                .humen{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    translate: -5vw;
+
+                    .human1{
+                        position: absolute;
+                        top: 43.6px;
+                        left: 105.6px;
+                        width: 853px;
+                        height: 902px;
+                        background: url(/img/event/prereg/p6/role1.png);
+                        opacity: 1;
+                    }
+                    .human2{
+                        position: absolute;
+                        top: 38.7px;
+                        left: 186.4px;
+                        width: 871px;
+                        height: 688px;
+                        background: url(/img/event/prereg/p6/role2.png);
+                        opacity: 0;
+                    }
+                    .human3{
+                        position: absolute;
+                        top: 106.59px;
+                        left: 359.2px;
+                        width: 472px;
+                        height: 867px;
+                        background: url(/img/event/prereg/p6/role3.png);
+                        opacity: 0;
+                    }
+                    .human4{
+                        position: absolute;
+                        top: 29px;
+                        left: 206px;
+                        width: 607px;
+                        height: 948px;
+                        background: url(/img/event/prereg/p6/role4.png);
+                        opacity: 0;
+                    }
+                    .human5{
+                        position: absolute;
+                        top: 116.28px;
+                        left: 176.8px;
+                        width: 637px;
+                        height: 677px;
+                        background: url(/img/event/prereg/p6/role5.png);
+                        opacity: 0;
+                    }
+                }
+
+                .names{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    translate: -5vw;
+
+                    .name1{
+                        position: absolute;
+                        top: -43.6px;
+                        left: 316.8px;
+                        width: 638px;
+                        height: 609px;
+                        background: url(/img/event/prereg/p6/roleName1.png);
+                        opacity: 1;
+                    }
+                    .name2{
+                        position: absolute;
+                        top: -77.52px;
+                        left: 240.8px;
+                        width: 601px;
+                        height: 635px;
+                        background: url(/img/event/prereg/p6/roleName2.png);
+                        opacity: 0;
+                    }
+                    .name3{
+                        position: absolute;
+                        top: -58.14px;
+                        left: -80.8px;
+                        width: 440px;
+                        height: 588px;
+                        background: url(/img/event/prereg/p6/roleName3.png);
+                        opacity: 0;
+                    }
+                    .name4{
+                        position: absolute;
+                        top: -106.59px;
+                        left: 226px;
+                        width: 638px;
+                        height: 619px;
+                        background: url(/img/event/prereg/p6/roleName4.png);
+                        opacity: 0;
+                    }
+                    .name5{
+                        position: absolute;
+                        top: -87.2px;
+                        left: -32.8px;
+                        width: 638px;
+                        height: 635px;
+                        background: url(/img/event/prereg/p6/roleName5.png);
+                        opacity: 0;
+                    }
+                }
+
+                .arm{
+                    position: absolute;
+                    top: 363.375px;
+                    left: 176.64px;
+                    translate: -5vw;
+                    width: 67px;
+                    height: 147px;
+                    background: url(/img/event/prereg/p6/roleArm.png)no-repeat;
+                    background-size: contain;
+                    color: #FFF;
+                    font-family: 'Noto Serif TC', serif;
+                    font-size: 18pt;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 20pt;
+                }
+            }
+
+            .p6menu{
+                position: absolute;
+                top: 42%;
+                left: 48%;
+                width: 542px;
+                height: 417px;
+                background: url(/img/event/prereg/p6/menuBG.png)no-repeat;
+                background-size: contain;
+                background-position: top;
+
+                & div{
+                    position: absolute;
+                    cursor: pointer;
+
+                    &:hover{
+                        scale: 1.05;
+                    }
+                }
+
+                .p6btn1{
+                    top: 25%;
+                    left: 86%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn1.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn1_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn1_2{
+                    background: url(/img/event/prereg/p6/btn1_hover.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .p6btn2{
+                    top: 46%;
+                    left: 78%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn2.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn2_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn2_2{
+                    background: url(/img/event/prereg/p6/btn2_hover.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .p6btn3{
+                    top: 63%;
+                    left: 65%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn3.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn3_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn3_2{
+                    background: url(/img/event/prereg/p6/btn3_hover.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .p6btn4{
+                    top: 77%;
+                    left: 50%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn4.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn4_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn4_2{
+                    background: url(/img/event/prereg/p6/btn4_hover.png)no-repeat;
+                    background-size: contain;
+                }
+
+                .p6btn5{
+                    top: 86%;
+                    left: 32%;
+                    width: 109px;
+                    height: 75px;
+                    background: url(/img/event/prereg/p6/btn5.png)no-repeat;
+                    background-size: contain;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background: url(/img/event/prereg/p6/btn5_hover.png)no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .p6btn5_2{
+                    background: url(/img/event/prereg/p6/btn5_hover.png)no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            .p6features{
+                position: absolute;
+                width: 30vw;
+                height: 11.75vw;
+                translate: -30%;
+                background: url(/img/event/prereg/p6/textBG.png)no-repeat;
+                background-position: top;
+                background-size: contain;
+
+                .p6subtitle{
+                    position: absolute;
+                    width: calc(30vw / 2);
+                    height: calc(30vw * 0.115);
+                    background: url(/img/event/prereg/p6/subtitleBG.png)no-repeat;
+                    background-position: top;
+                    background-size: contain;
+                    font-family: 'Noto Serif TC', serif;
+                    color: #FFF;
+                    font-size: 17pt;
+                    text-align: center;
+                    line-height: calc(30vw * 0.11);
+                    letter-spacing: 1px;
+                }
+
+                .p6text{
+                    position: absolute;
+                    width: 70%;
+                    height: auto;
+                    top: 35%;
+                    left: 50%;
+                    translate: -50%;
+                    color: #000;
+                    font-weight: bolder;
+                    font-size: 18px;
+                }
+            }
+
+            .p6feature1{
+                left: 15%;
+                top: 33%;
+            }
+
+            .p6feature2{
+                left: 20%;
+                top: 60%;
+            }
+        }
+    }
+}
