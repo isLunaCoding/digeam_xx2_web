@@ -28,9 +28,9 @@
 
 {{-- 內文 --}}
 @section('textBox')
-    <form id="serchForm" action="process1.php" method="post">
+    <form id="serchForm" action=".php" method="post">
         <div class="serchBox">
-            <input type="text" name="input1" placeholder="請輸入活動關鍵字">
+            <input type="text" name="actionKeywords" placeholder="請輸入活動關鍵字">
             <select name="year" id="year">
                 <option value="" disabled selected>&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                 <option value="123">123</option>
@@ -50,43 +50,7 @@
     <div class="awardTitleContent">
         <ul>
             <li>
-                <a class="normal" href="">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a class="normal" href="">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a class="normal" href="">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a class="normal" href="">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a class="normal" href="">
+                <a href="javascript:show()" class="normal">
                     <div class="awardTextBox">
                         <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
@@ -96,6 +60,18 @@
             </li>
         </ul>
     </div>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
+                <span class="page-link" aria-hidden="true">‹</span>
+            </li>
+            <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+            <li class="page-item"><a class="page-link" href="">2</a></li>
+            <li class="page-item">
+                <a class="page-link" href="" rel="next" aria-label="Next »">›</a>
+            </li>
+        </ul>
+    </nav>
 @endsection
 
 @section('boxDown')
@@ -163,4 +139,8 @@
 
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script src="/js/event/homepage/receive.js"></script>
 @endsection

@@ -1,1 +1,63 @@
-/*# sourceMappingURL=pageDownload.css.map */
+@charset "UTF-8";
+.downloadBox {
+  font-family: "微軟正黑";
+  font-size: 16px;
+  position: relative;
+  line-height: 30px;
+  font-weight: 900;
+  color: #002578;
+  width: 800px;
+  margin: 60px auto 0;
+}
+.downloadBox .btnBox {
+  display: flex;
+  justify-content: space-between;
+}
+.downloadBox .btnBox .downloadBtn {
+  width: 260px;
+  height: 60px;
+  font-size: 25px;
+  font-family: "微軟正黑";
+  background-color: #234fac;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.downloadBox .btnBox .downloadBtn:hover {
+  border: 2px solid #234fac;
+  background-color: #fff;
+  color: #234fac;
+  transition: all 0.2s ease;
+}
+.downloadBox li {
+  color: #002578;
+  list-style-type: decimal;
+  margin-left: 25px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.downloadBox .tableTitle,
+.downloadBox .ulTitle {
+  color: #002578;
+  font-size: 24px;
+  padding: 0 0 10px;
+}
+.downloadBox .table {
+  border-collapse: collapse;
+}
+.downloadBox .table th {
+  border: 1px solid #002578;
+  background-color: #234fac;
+  height: 45px;
+  text-align: center;
+  line-height: 43px;
+  color: #fff;
+}
+.downloadBox .table td {
+  color: #002578;
+  border: 0.5px solid #002578;
+  font-weight: 400;
+  padding: 12px;
+  text-align: center;
+}/*# sourceMappingURL=pageDownload.css.map */

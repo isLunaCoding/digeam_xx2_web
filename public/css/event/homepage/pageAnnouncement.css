@@ -13,6 +13,9 @@
   border: #002578 1px solid;
   font-size: 20px;
   color: #002578;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sectionPage .sectionBG .container .boxRight .textBox .tabBox .newsBtn:hover, .sectionPage .sectionBG .container .boxRight .textBox .tabBox .newsBtn.active {
   color: #fff;
@@ -20,7 +23,6 @@
 }
 .sectionPage .sectionBG .container .boxRight .textBox .tabBox .newsBtnNA {
   font-weight: 500;
-  padding-top: 4px;
 }
 .sectionPage .sectionBG .container .boxRight .textBox .line {
   width: 878px;
