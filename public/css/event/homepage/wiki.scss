@@ -139,6 +139,8 @@
                 margin: 0 auto 10px;
                 width: 1187px;
                 height: 640px;
+                overflow-y: scroll;
+                overflow-x: hidden;
                 // background-color: #97979784;
 
                 .title {

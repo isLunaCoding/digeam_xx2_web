@@ -6235,7 +6235,7 @@ if (___announce[0] == "announcement") {
         bodyClass: "",
         fullPage: !1,
         height: 200,
-        contentsCss: CKEDITOR.getUrl((___css),
+        contentsCss: CKEDITOR.getUrl((___css)),
         extraPlugins: "",
         removePlugins: "",
         protectedSource: [],

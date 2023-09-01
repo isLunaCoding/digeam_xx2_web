@@ -11,11 +11,11 @@ class indexController extends Controller
     public function index()
     {
         //最新
-        $NA = Page::where('type', 'announcement')->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderby('new', 'desc')->orderBy('created_at', 'desc')->limit(8)->get();
+        $NA = Page::where('type', 'announcement')->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderby('new', 'desc')->orderBy('created_at', 'desc')->limit(7)->get();
         //活動
-        $NB = Page::where('cate_id', 2)->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderBy('new', 'desc')->orderBy('created_at', 'desc')->limit(8)->get();
+        $NB = Page::where('cate_id', 2)->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderBy('new', 'desc')->orderBy('created_at', 'desc')->limit(7)->get();
         //系統
-        $NC = Page::where('cate_id', 3)->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderBy('new', 'desc')->orderBy('created_at', 'desc')->limit(8)->get();
+        $NC = Page::where('cate_id', 3)->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderBy('new', 'desc')->orderBy('created_at', 'desc')->limit(7)->get();
 
         $images = Image::where('type', 'index')->where('status', 'Y')->orderBy('sort', 'asc')->get();
         $game_features = Image::where('type', 'game_features')->where('status', 'Y')->orderBy('sort', 'asc')->get();

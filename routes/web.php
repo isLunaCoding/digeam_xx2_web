@@ -24,16 +24,11 @@ Route::middleware(['setReturnUrl'])->group(function () {
 });
 
 // 官網
-Route::get('/index', function () {
-    return view('front/index');
-});
+Route::get('/xx2index', 'front\indexController@index');
 // 公告
-Route::get('/announcement', function () {
-    return view('front/announcement');
-});
-Route::get('/announcementContent', function () {
-    return view('front/announcementContent');
-});
+Route::get('/announcement/{cate?}', 'front\announcementController@index')->name('announcement');
+Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');
+
 // 領獎專區
 Route::get('/receiveAward', function () {
     return view('front/receiveAward');
@@ -51,11 +46,7 @@ Route::get('/regulations', function () {
     return view('front/regulations');
 });
 // 百科
-Route::get('/wiki', function () {
-    return view('front/wiki');
-});
-
-
+Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');

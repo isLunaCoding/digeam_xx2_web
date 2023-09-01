@@ -29,7 +29,9 @@ class AnnouncementController extends AdminController
             ->where('type', 'announcement')
             ->orderBy('open', 'desc')
             ->orderBy('top', 'desc')
-            ->orderBy('new', 'desc');
+            ->orderBy('new', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->orderBy('main_sort', 'asc');
         $grid->column('title', __('Title'));
         $grid->column('cate_id', __('Cate id'))->using(['1' => '最新', '2' => '活動', '3' => '系統']);
         $grid->column('open', __('Open'));
@@ -59,7 +61,7 @@ class AnnouncementController extends AdminController
         $show->field('top', __('是否置頂'));
         $show->field('new', __('是否最新'));
         $show->field('type', __('類型'));
-        $show->field('main_sort', __('排序'));
+        $show->field('main_sort', __('排序/日期相同由小到大'));
         $show->field('created_at', __('發布日期'));
         $show->field('updated_at', __('上次更新時間'));
 
@@ -82,7 +84,7 @@ class AnnouncementController extends AdminController
         $form->radio('open', __('開啟'))->options(['N' => '否', 'Y' => '是']);
         $form->radio('top', __('置頂'))->options(['N' => '', 'Y' => 'top']);
         $form->radio('new', __('最新'))->options(['N' => '', 'Y' => 'new']);
-        $form->number('main_sort', __('排序'));
+        $form->number('main_sort', __('排序/日期相同時由小到大'));
 
         //如果需要置頂且發布日期小於現在,將舊的置頂移除
         $form->saving(function (Form $form) {
