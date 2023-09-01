@@ -13,7 +13,7 @@
 
 
 @section('otherCss')
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 @endsection
 
 
@@ -48,11 +48,11 @@
             </div>
         </div>
         <div class="swiper">
-            <div class="sw">
-                <img src="/img/event/homepage/S1BN530.jpg" alt="">
-            </div>
-            <div class="sw">2</div>
-            <div class="sw">3</div>
+            @foreach ($images as $image)
+                <div class="sw">
+                    <img src={{ $image['file_name'] }} alt="">
+                </div>
+            @endforeach
         </div>
         <div class="news">
             <div class="newsBtnBox">
@@ -67,38 +67,112 @@
             <div class="newsContainer">
                 <div class="text textNA">
                     <ul>
-                        <li class="textli ">
-                            <a class="TOP" href="">
-                                <div class="textBox">
-                                    <div class="textTitle">1111111111112</div>
-                                    <div class="textTime">2023/8/21</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="textli ">
-                            <a class="NEW" href="">
-                                <div class="textBox">
-                                    <div class="textTitle">12</div>
-                                    <div class="textTime">123</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="textli ">
-                            <a class="normal" href="">
-                                <div class="textBox">
-                                    <div class="textTitle">12</div>
-                                    <div class="textTime">123</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="textli normal">123</li>
-                        <li class="textli normal">123</li>
-                        <li class="textli normal">123</li>
-                        <li class="textli normal">123</li>
+                        @foreach ($NA as $value)
+                            @if ($value['top'] == 'Y')
+                                <li class="textli ">
+                                    <a class="TOP" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @elseif($value['new'] == 'Y')
+                                <li class="textli ">
+                                    <a class="NEW" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @else
+                                <li class="textli ">
+                                    <a class="normal" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
                     </ul>
                 </div>
-                <div class="text textNB">2</div>
-                <div class="text textNC">3</div>
+                <div class="text textNB">
+                    <ul>
+                        @foreach ($NB as $value)
+                            @if ($value['top'] == 'Y')
+                                <li class="textli ">
+                                    <a class="TOP" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @elseif($value['new'] == 'Y')
+                                <li class="textli ">
+                                    <a class="NEW" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @else
+                                <li class="textli ">
+                                    <a class="normal" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="text textNC">
+                    <ul>
+                        @foreach ($NC as $value)
+                            @if ($value['top'] == 'Y')
+                                <li class="textli ">
+                                    <a class="TOP" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @elseif($value['new'] == 'Y')
+                                <li class="textli ">
+                                    <a class="NEW" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @else
+                                <li class="textli ">
+                                    <a class="normal" href="{{ route('announcementContent', [$value->id]) }}">
+                                        <div class="textBox">
+                                            <div class="textTitle">{{ $value['title'] }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -223,22 +297,23 @@
                 <div class="title"><img src="/img/event/homepage/section3title.png"></div>
                 <div class="gallery_container">
                     <div class="gallery_wrap threeD_gallery_wrap">
-                        <div class="gallery_item threeD_gallery_item gallery_left_middle">
-                            <img src="/img/event/homepage/section3swiperImg1.jpg" class="show">
-                        </div>
 
                         <div class="gallery_item threeD_gallery_item front_side">
-                            <img src="/img/event/homepage/section3swiperImg1.jpg" class="show">
+                            <img src={{ $game_features[0]['file_name'] }} class="show">
                         </div>
 
                         <div class="gallery_item threeD_gallery_item gallery_right_middle">
-                            <img src="/img/event/homepage/section3swiperImg1.jpg" class="show">
+                            <img src={{ $game_features[1]['file_name'] }} class="show">
                         </div>
+                        @for ($i = 2; $i < $game_features->count() - 1; $i++)
+                            <div class="gallery_item threeD_gallery_item gallery_out">
+                                <img src={{ $game_features[$i]['file_name'] }} class="show">
+                            </div>
+                        @endfor
 
-                        <div class="gallery_item threeD_gallery_item gallery_out">
-                            <img src="/img/event/homepage/section3swiperImg1.jpg" class="show">
+                        <div class="gallery_item threeD_gallery_item gallery_left_middle">
+                            <img src={{ $game_features[$game_features->count() - 1]['file_name'] }} class="show">
                         </div>
-
                     </div>
                     <button class="prev"><img src="/img/event/homepage/arrowL.png"></button>
                     <button class="next"><img src="/img/event/homepage/arrowR.png"></button>
@@ -257,7 +332,7 @@
     <script>
         $(function() {
             $('.gallery_container').gallery_slider({
-                imgNum: 4
+                imgNum: {{ $game_features->count() }}
             });
         })
     </script>

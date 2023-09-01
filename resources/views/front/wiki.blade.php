@@ -54,36 +54,56 @@
                 <div class="mainBox">
                     <menu class="menu">
                         <div class="menuBox">
-                            <ul class="frontTitle">
-                                大標題題
-                                <li class="liMiddle">
-                                    <a href="">中標題題</a>
-                                    <ul>
-                                        <li class="liSamll"><a href="#">小標題題1</a></li>
-                                        <li class="liSamll"><a href="#">小標題題2</a></li>
-                                        <li class="liSamll"><a href="#">小標題題3</a></li>
+
+                            @foreach ($sec_cate as $value)
+                                {{-- 只有大標題有內文 --}}
+                                @if ($value['count'] != 0 && $value['parent_id'] == 0)
+                                    <ul class="frontTitle">
+                                        <a
+                                            href="{{ route('wiki', $all_page[$value['cate_id']][0]['id']) }}">{{ $value['title'] }}</a>
                                     </ul>
-                                </li>
-                            </ul>
-                            <ul class="frontTitle">
-                                大標題題
-                                <li class="liMiddle">
-                                    <a href="">中標題題</a>
-                                    <ul>
-                                        <li class="liSamll"><a href="#">小標題題1</a></li>
-                                        <li class="liSamll"><a href="#">小標題題2</a></li>
-                                        <li class="liSamll"><a href="#">小標題題3</a></li>
+                                @endif
+
+                                {{-- 是大標題還有中標題 --}}
+                                @if ($value['count'] == 0 && $value['parent_id'] == 0)
+                                    <ul class="frontTitle">
+                                        {{ $value['title'] }}
+                                        @foreach ($sec_cate as $value2)
+                                            @if ($value2['parent_id'] == $value['id'])
+                                                {{-- 只到中標題 --}}
+                                                @if ($value2['count'] == 0)
+                                                    <li class="liMiddle"><a
+                                                            href="{{ route('wiki') }}">{{ $value2['title'] }}</a>
+                                                    </li>
+                                                @elseif($value2['count'] == 1)
+                                                    <li class="liMiddle"><a
+                                                            href="{{ route('wiki', $all_page[$value2['cate_id']][0]['id']) }}">{{ $value2['title'] }}</a>
+                                                    </li>
+                                                @else
+                                                    <li class="liMiddle"><a href="">{{ $value2['title'] }}</a>
+                                                        <ul>
+                                                            @for ($i = 0; $i < $value2['count']; $i++)
+                                                                <li class="liSamll"><a
+                                                                        href="{{ route('wiki', $all_page[$value2['cate_id']][$i]['id']) }}">{{ $all_page[$value2['cate_id']][$i]['title'] }}</a>
+                                                                </li>
+                                                            @endfor
+                                                        </ul>
+                                                    </li>
+                                                @endif
+                                            @endif
+                                        @endforeach
                                     </ul>
-                                </li>
-                            </ul>
+                                    </li>
+                                @endif
+                            @endforeach
                         </div>
                     </menu>
                     <div class="rightBox">
                         <div class="mainTextBox">
-                            <div class="title">標題</div>
+                            <div class="title">{{ $page['title'] }}</div>
                             <div class="line"></div>
-                            <div class="text">內文</div>
-                            <button class="continueBtn" onclick="location.href='#'">繼續閱讀 →</button>
+                            <div class="text">{!! $page['content'] !!}</div>
+                            {{-- <button class="continueBtn" onclick="location.href='#'">繼續閱讀 →</button> --}}
                         </div>
                         <footer class="footer">
                             <div class="footerBox">
@@ -135,7 +155,7 @@
 
                         setTimeout(function() {
                             window.location.href = link;
-                        }, 3000);
+                        }, 500);
 
                     })
                 });
@@ -146,8 +166,8 @@
         $(document).ready(function() {
             $('#serchForm input[name="serch"]').on('keypress', function(event) {
                 if (event.which === 13) {
-                    event.preventDefault(); 
-                    $('#serchForm').submit(); 
+                    event.preventDefault();
+                    $('#serchForm').submit();
                 }
             });
         });

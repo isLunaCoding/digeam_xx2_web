@@ -28,120 +28,42 @@
 {{-- 內文 --}}
 @section('textBox')
     <div class="tabBox">
-        <a href="#" class="newsBtn newsBtnNA new" data-news="NA">NEW</a>
-        <a href="#"  class="newsBtn newsBtnNB activity" data-news="NB">活動</a>
-        <a href="#"  class="newsBtn newsBtnNC systemBox" data-news="NC">系統</a>
+        <a href="{{ route('announcement', 'new') }}" class="newsBtn newsBtnNA new" data-news="NA">NEW</a>
+        <a href="{{ route('announcement', 'activity') }}" class="newsBtn newsBtnNB activity" data-news="NB">活動</a>
+        <a href="{{ route('announcement', 'system') }}" class="newsBtn newsBtnNC systemBox" data-news="NC">系統</a>
     </div>
     <div class="line"></div>
     <div class="newsContainer">
         <div class="text textNA">
             <ul>
-                <li class="textli">
-                    <a class="TOP" href="">
+                @foreach ($list as $key => $value)
+                    <li class="textli">
+                        @if ($value['top'] == 'Y')
+                            <a class="TOP" href="{{ route('announcementContent', [$value->id]) }}">
+                            @elseif($value['new'] == 'Y')
+                                <a class="NEW" href="{{ route('announcementContent', [$value->id]) }}">
+                                @else
+                                    <a class="normal" href="{{ route('announcementContent', [$value->id]) }}">
+                        @endif
                         <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
+                            @if ($value['cate_id'] == 3)
+                                <div class="newsTextTitle">【系統】 {{ $value['title'] }}</div>
+                            @else
+                                <div class="newsTextTitle">【活動】 {{ $value['title'] }}</div>
+                            @endif
+                            <div class="newsTextTime">{{ date('Y/m/d', strtotime($value->created_at)) }}</div>
                         </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="NEW" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="normal" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="normal" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="normal" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="normal" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="normal" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="normal" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="normal" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-                <li class="textli">
-                    <a class="normal" href="">
-                        <div class="newsTextBox">
-                            <div class="newsTextTitle">【系統】 01/30(五) 測試內容非正式525563255635</div>
-                            <div class="newsTextTime">2023/08/21</div>
-                        </div>
-                    </a>
-                    <div class="newsLine"></div>
-                </li>
-
+                        </a>
+                        <div class="newsLine"></div>
+                @endforeach
             </ul>
         </div>
-        <div class="text textNB">2</div>
-        <div class="text textNC">3</div>
+        <div class="text textNB"></div>
+        <div class="text textNC"></div>
     </div>
     <nav>
         <ul class="pagination">
-            <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
-                <span class="page-link" aria-hidden="true">‹</span>
-            </li>
-            <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-            <li class="page-item"><a class="page-link" href="">2</a></li>
-            <li class="page-item">
-                <a class="page-link" href="" rel="next" aria-label="Next »">›</a>
-            </li>
+            {!! $list->links() !!}
         </ul>
     </nav>
 @endsection

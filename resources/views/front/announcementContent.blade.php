@@ -30,22 +30,11 @@
 {{-- 內文 --}}
 @section('textBox')
     <div class="upBox">
-        <div class="title">這邊總之是標題</div>
-        <div class="time">2023年08月18日 18:00</div>
+        <div class="title">{{ $page['title'] }}</div>
+        <div class="time">{{ $page['created_at'] }}</div>
     </div>
     <div class="line"></div>
     <div class="downBox">
-        <p>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-            這邊總之就放內文<br>
-        </p>
+        {!! $page['content'] !!}
     </div>
 @endsection
