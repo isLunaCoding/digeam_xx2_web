@@ -30,14 +30,27 @@
 @section('textBox')
     <form id="serchForm" action=".php" method="post">
         <div class="serchBox">
-            <input type="text" name="actionKeywords" placeholder="請輸入活動關鍵字">
+            <input type="text" name="keyword" placeholder="請輸入活動關鍵字">
             <select name="year" id="year">
                 <option value="" disabled selected>&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-                <option value="123">123</option>
+                <?php
+                    $nowyear = date('Y');
+                    for ($i=2023;$i<=$nowyear+1;$i++) {
+                ?>
+                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                <?php
+                    }
+                ?>
             </select>
             <select name="month" id="month">
                 <option value="" disabled selected>&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-                <option value="123">123</option>
+                <?php
+                    for ($i=1;$i<=12;$i++) {
+                ?>
+                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                <?php
+                    }
+                ?>
             </select>
             <button class="submit" type="submit">搜尋</button>
         </div>
@@ -48,9 +61,27 @@
         <div class="actionTime">領獎時間</div>
     </div>
     <div class="awardTitleContent">
-        <ul>
+        <ul class="awardList">
             <li>
-                <a href="javascript:show()" class="normal">
+                <a href="javascript:show_cont(1)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="javascript:show_cont(2)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="javascript:show_cont(3)" class="normal">
                     <div class="awardTextBox">
                         <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
@@ -79,19 +110,19 @@
         <div class="emptyBox"></div>
         <div class="awardActionContent">
             <img src="img/event/homepage/awardTriangle.png" alt="">
-            <div class="actionTitle">8/11 ~ 8/31 活動名稱123</div>
+            <div class="actionTitle show_title">8/11 ~ 8/31 活動名稱123</div>
             <div class="boxBG">
                 <div class="playerInfo">
                     <p class="account">Hi,<span>XWE0000000000000</span></p>
                     <form id="playeFrorm" action="process2.php" method="post">
                         <label for="server"></label>
-                        <select name="server" id="server">
+                        <select name="server" id="server" required>
                             <option value="" disabled selected>請選擇伺服器</option>
-                            <option value="123">123</option>
+                            <option value="1801">1801</option>
                         </select>
-                        <select name="character" id="character">
+                        <select name="character" id="character" required>
                             <option value="" disabled selected>請選擇角色</option>
-                            <option value="123">123</option>
+                            <option value="70001869">APItest</option>
                         </select>
                     </form>
                     <button class="logout">登出</button>
@@ -107,29 +138,21 @@
                                 <td>領取狀態</td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="show_content">
                             <tr>
                                 <td>名稱</td>
                                 <td>獎勵</td>
-                                <td>說明</td>
-                                <td>
-                                    <button class="receive">領取</button>
+                                <td rowspan="2">說明</td>
+                                <td >
+                                    <button class="receive" onclick="get_reward(1)">領取</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>名稱</td>
-                                <td>獎勵</td>
-                                <td>說明</td>
+                                <td >獎勵</td>
+                                {{-- <td>說明</td> --}}
                                 <td>
                                     <button class="cannotReceive">領取</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>名稱</td>
-                                <td>獎勵</td>
-                                <td>說明</td>
-                                <td>
-                                    已領取
                                 </td>
                             </tr>
                         </tbody>
