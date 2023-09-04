@@ -30,7 +30,7 @@ class WikiController extends AdminController
             ->where('type', 'wiki')
             ->orderBy('open', 'desc')
             ->orderBy('cate_id', 'asc')
-            ->orderBy('sec_sort', 'asc');
+            ->orderBy('main_sort', 'asc');
         $grid->column('cate_id', __('中分類'))->display(function () {
             $cateName = Category::where('type', 'wiki')->where('cate_id', $this->cate_id)->first();
             $count = Category::where('type', 'wiki')->where('cate_id', $this->cate_id)->count();
@@ -41,7 +41,7 @@ class WikiController extends AdminController
         });
         $grid->column('title', __('標題'));
         $grid->column('open', __('是否開啟'))->label(['N' => 'default', 'Y' => 'danger']);
-        $grid->column('sec_sort', __('次要排序'));
+        $grid->column('main_sort', __('排序'));
         $grid->disableRowSelector();
 
         return $grid;
@@ -62,7 +62,6 @@ class WikiController extends AdminController
         $show->field('content', __('內文'));
         $show->field('open', __('是否開啟'));
         $show->field('main_sort', __('排序'));
-        $show->field('sec_sort', __('次要排序'));
         $show->field('created_at', __('建立日期'));
         $show->field('updated_at', __('上次更新日期'));
 
@@ -85,7 +84,7 @@ class WikiController extends AdminController
         $form->ckeditor('content', __('內容'));
         $form->text('open', __('是否開啟'))->default('N');
         $form->number('main_sort', __('主要排序'));
-        $form->number('sec_sort', __('次要排序'));
+        // $form->number('sec_sort', __('次要排序'));
 
         return $form;
     }

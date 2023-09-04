@@ -47,6 +47,10 @@ Route::get('/regulations', function () {
 });
 // 百科
 Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
+// Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');
+
+//停權名單
+Route::get('/suspension', 'front\suspensionController@index')->name('suspension');
 
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
