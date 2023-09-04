@@ -255,6 +255,7 @@
   color: #002578;
   font-size: 16px;
   padding: 10px;
+  vertical-align: middle;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-child(n):nth-child(-n+3) {
   border-right: #002578 1px solid;
@@ -267,9 +268,9 @@
   width: 72px;
   height: 27px;
   color: #fff;
-  cursor: pointer;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody td .receive {
+  cursor: pointer;
   background-color: #002578;
   border: #002578 1px solid;
 }

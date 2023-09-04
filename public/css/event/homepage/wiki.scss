@@ -160,7 +160,16 @@
                     font-size: 18px;
                 }
 
-                .continueBtn{
+                .text2 {
+                    font-size: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                }
+
+                .continueBtn {
                     background-color: #82a3d4;
                     height: 40px;
                     font-size: 18px;
@@ -169,7 +178,7 @@
                     margin: 30px 0 50px;
                     color: #fff;
 
-                    &:hover{
+                    &:hover {
                         background-color: #fff;
                         color: #82a3d4;
                         background-position: 0.75em bottom;
@@ -178,7 +187,8 @@
                         transition: all 1.0s ease;
                         cursor: pointer;
                     }
-                    &:not(hover){
+
+                    &:not(hover) {
                         background-color: #82a3d4;
                         color: #fff;
                         background-position: 0.75em bottom;

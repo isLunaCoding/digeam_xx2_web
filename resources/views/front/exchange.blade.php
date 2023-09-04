@@ -52,3 +52,8 @@
         ※<a href="">兌換序號由此查詢</a>
     </div>
 @endsection
+
+
+@section('script')
+    <script src="/js/event/homepage/exchange.js"></script>
+@endsection
