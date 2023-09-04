@@ -28,9 +28,9 @@
 
 {{-- 內文 --}}
 @section('textBox')
-    <form id="serchForm" action=".php" method="post">
+    <form id="serchForm" action=".php" method="post" onsubmit="return validateform()">
         <div class="serchBox">
-            <input type="text" name="keyword" placeholder="請輸入活動關鍵字">
+            <input type="text" name="keyword" id="keyword" placeholder="請輸入活動關鍵字">
             <select name="year" id="year">
                 <option value="" disabled selected>&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                 <?php

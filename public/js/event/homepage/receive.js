@@ -24,3 +24,32 @@ $(function(res) {
 function get_reward(content_id){
     console.log(1111);
 }
+
+function reward_get_setting(){
+
+}
+
+
+
+// 活動搜尋列年月
+
+// var keywordValue = $('#keyword');
+// var yearValue = $('#year');
+// var monthValue = $('#month');
+// var submitBTN = $('.submit');
+var keyword = $('#keyword');
+var year = $('#year');
+var month = $('#month');
+var submitBTN = $('.submit');
+
+searchInput.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        
+        validateForm();
+    }
+});
+
+function validateForm(){
+
+}
