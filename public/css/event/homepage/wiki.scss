@@ -159,6 +159,14 @@
                 .text {
                     font-size: 18px;
                 }
+                .text2 {
+                    font-size: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                }
 
                 .continueBtn{
                     background-color: #82a3d4;

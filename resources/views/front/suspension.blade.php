@@ -5,7 +5,7 @@
 @endsection
 
 @section('textTitle')
-停權名單
+    停權名單
 @endsection
 
 
@@ -27,7 +27,7 @@
 {{-- 內文 --}}
 @section('textBox')
     <div class="upBox">
-        <div class="time">最後更新時間 : <span>2023/08/18 18:00:00</span></div>
+        <div class="time">最後更新時間 : <span>{{ $last_time }}</span></div>
     </div>
     <div class="downBox">
         <div class="tableBox">
@@ -41,12 +41,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>2023/08/11</td>
-                        <td>XWE0000000000000</td>
-                        <td>Win7及其以上64位版</td>
-                        <td>Win7及其以上64位版</td>
-                    </tr>
+                    @foreach ($user_list as $value)
+                        <tr>
+                            <td>{{ date('Y/m/d', strtotime($value->created_at)) }}</td>
+                            <td>{{ $value->user_id }}/{{ $value->char_name }}</td>
+                            <td>{{ $value->description }}</td>
+                            <td>{{ $value->punish }}</td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

@@ -359,6 +359,14 @@ body {
 .mainBG .mainBox .rightBox .mainTextBox .text {
   font-size: 18px;
 }
+.mainBG .mainBox .rightBox .mainTextBox .text2 {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
 .mainBG .mainBox .rightBox .mainTextBox .continueBtn {
   background-color: #82a3d4;
   height: 40px;

@@ -65,7 +65,7 @@
             <li>
                 <a href="javascript:show_cont(1)" class="normal">
                     <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱1</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
                     </div>
                 </a>
@@ -74,7 +74,7 @@
             <li>
                 <a href="javascript:show_cont(2)" class="normal">
                     <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱2</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
                     </div>
                 </a>
@@ -83,7 +83,7 @@
             <li>
                 <a href="javascript:show_cont(3)" class="normal">
                     <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱3</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
                     </div>
                 </a>
