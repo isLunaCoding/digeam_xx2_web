@@ -28,7 +28,7 @@
 
 {{-- 內文 --}}
 @section('textBox')
-    <form id="serchForm" action="" method="post" onsubmit="return validateform()">
+    <form id="serchForm" action="" method="post">
         <div class="serchBox">
             <input type="text" name="keyword" id="keyword" placeholder="請輸入活動關鍵字">
             <select name="year" id="year">
@@ -52,7 +52,7 @@
                     }
                 ?>
             </select>
-            <button class="submit" type="submit">搜尋</button>
+            <button class="submit" type="submit" onclick="awardSearch()">搜尋</button>
         </div>
     </form>
 
@@ -63,7 +63,7 @@
     <div class="awardTitleContent">
         <ul class="awardList">
             <li>
-                <a href="javascript:show_cont(1)" class="normal">
+                <a href="#boxDown" onclick="show_cont(1)" class="normal">
                     <div class="awardTextBox">
                         <div class="awardTextTitle">8/11 ~ 8/31 活動名稱1</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
@@ -72,7 +72,7 @@
                 <div class="awardLine"></div>
             </li>
             <li>
-                <a href="javascript:show_cont(2)" class="normal">
+                <a href="#boxDown" onclick="show_cont(2)" class="normal">
                     <div class="awardTextBox">
                         <div class="awardTextTitle">8/11 ~ 8/31 活動名稱2</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
@@ -81,7 +81,7 @@
                 <div class="awardLine"></div>
             </li>
             <li>
-                <a href="javascript:show_cont(3)" class="normal">
+                <a href="#boxDown" onclick="show_cont(3)" class="normal">
                     <div class="awardTextBox">
                         <div class="awardTextTitle">8/11 ~ 8/31 活動名稱3</div>
                         <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
@@ -106,7 +106,7 @@
 @endsection
 
 @section('boxDown')
-    <div class="boxDown">
+    <div class="boxDown" id="boxDown">
         <div class="emptyBox"></div>
         <div class="awardActionContent">
             <img src="img/event/homepage/awardTriangle.png" alt="">

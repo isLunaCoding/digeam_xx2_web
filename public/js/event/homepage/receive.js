@@ -133,92 +133,75 @@ selectMonth.change(function(){
 keyword.change(function(){
     keywordVal = keyword.val();
     console.log(keywordVal);
+    if ( keywordVal ===""  ){
+        keywordVal = null;
+        console.log(keywordVal);
+    }
+})
+$('#keyword input[name="keyword"]').on('keypress',function (event) {
+    if (event.which === 13) {
+        event.preventDefault();
+        keywordWall();
+    }
 })
 
 
-// var keywordValue = $('#keyword');
-// var yearValue = $('#year');
-// var monthValue = $('#month');
-// var submitBTN = $('.submit');
-// var keyword = $('#keyword');
-// var year = $('#year');
-// var month = $('#month');
-// var submitBTN = $('.submit');
-
-// searchInput.addEventListener("keydown", function(event) {
-//     if (event.keyCode === 13) {
-//         event.preventDefault();
+var resSearch = {
+    status:1
+}
+function keywordWall(){
+    if(keywordVal ===null  && yearVal ==="0" && monthVal ==="0" ){
+        alert('請填寫關鍵字、年、月任一項目')
+    }else {
+        awardSearch();
+        function awardSearch(){
+            //     $.post(api_data,
+            // {
+            //     type : 'search',
+            //     keyword:keywordVal,
+            //     year:yearVal,
+            //     month:monthVal
+            // },function(_res){
+                let res = resSearch;
+                // let res = JSON.parse(_res);
+                if(res.status == -99 ){
+                    alert('不明錯誤，請重整或連繫客服')
         
-//         validateForm();
-//     }
-// });
-
-// function validateForm(){
-
-// }
-
-
-
-
-
-
-
-
-
-
-$('.boxDown').hide();
-
-function show_cont(event_id){
-    let box = $('.boxDown')
-    box.show();
-    $('html').animate({
-        scrollTop: $('.boxDown').offset().top
-    }, 200);
-
-    console.log(event_id);
-    // window.scrollBy(0, 500); // 向下滚动500像素
+                } else if(res.status == 1 ){
+                $('.awardList').html(res.list)
+                }
+                
+            // })
+        }
+    }
 }
 
 
 
 
-// function scrollToElement(selector, duration) {
-//     var element = document.querySelector(selector);
-//     if (element) {
-//         var targetOffset = element.getBoundingClientRect().top + window.scrollY;
-//         var initialOffset = window.scrollY;
-//         var startTime = null;
 
-//         function scrollStep(timestamp) {
-//             if (!startTime) {
-//                 startTime = timestamp;
-//             }
 
-//             var progress = timestamp - startTime;
-//             var percentage = Math.min(progress / duration, 1);
-//             var newPosition = initialOffset + (targetOffset - initialOffset) * percentage;
 
-//             window.scrollTo(0, newPosition);
+var resShow = {
+    status:1
+}
 
-//             if (percentage < 1) {
-//                 requestAnimationFrame(scrollStep);
-//             }
-//         }
+function show_cont(event_id){
+    // $.post(api_data,
+    // {
+    //     type : 'show',
+    //     user_id : $(".account span").text(),
+    //     event_id:event_id,
+    // },function(_res){
+        let res = resShow;
+        // let res = JSON.parse(_res);
+    
 
-//         requestAnimationFrame(scrollStep);
-//     }
-// }
 
-// function show_cont(event_id) {
-//     let box = document.querySelector('.boxDown');
-//     if (box) {
-//         box.style.display = 'block';
-//         scrollToElement('.boxDown', 200);
-//     }
 
-//     console.log(event_id);
-// }
+    
+    // })
+}
 
-// // 使用示例
-// show_cont("your_event_id");
+
 
