@@ -1,42 +1,125 @@
-var data_api = '.php';
+var api_data = '';
 
-// reward_get_setting();
 
-// function reward_get_setting(){
-    
-// }
 
-$('.boxDown').hide();
-function show_cont(event_id){
-    $('.boxDown').show();
-    $('html, body').animate({
-        scrollTop: $('.boxDown').offset().top
-    }, 200);
+function reward_get_setting(){
+    // $.post(api_data,
+    // {
+    //     type : 'login',
+    //     user_id : ''
+    // },function(_res){
+        let res = resLogin;
+        // let res = JSON.parse(_res);
+        $('.awardList').html(res.list)
+        
+    // })
+
 }
 
 
-// 印活動名稱資料
-$(function(res) {
-    $('.awardList').html(res.list);
+
+var playeFrorm = $('#playeFrorm');
+var selectServer = $('#server');
+var selectCharacter = $('#character');
+var optionServer ='';
+var optionCharacter ='';
+var optionCharacterName ='';
+
+// 伺服器切換call char api
+selectServer.change(function(){
+    optionServer = selectServer.val();
+    console.log(optionServer);
+    
+    if( optionServer !=="0" ){
+        // playeFrorm.submit();//表單可以提交
+        get_char(optionServer);
+    }
+});
+
+
+// 角色切換 抓角色名稱
+selectCharacter.change(function(){
+    optionCharacter = selectCharacter.val();
+    optionCharacterName = selectCharacter.find('option:selected').text()
+    console.log(optionCharacter);
+    console.log(optionCharacterName);
 })
 
 
+
+var resChar = {
+    status:1,
+    char_list:{
+        0:{
+            charid:70001869,
+            name:'APItest'
+        },
+        1:{
+            charid:80001869,
+            name:'2APItest'
+        }
+    }
+}
+
+function get_char(server_id){
+    // $.post(api_data,
+    // {
+    //     type : 'char',
+    //     user_id : $(".account span").text(),
+    //     server_id : server_id
+    // },function(_res){
+        let res = resChar;
+        // let res = JSON.parse(_res);
+        if( res.status == -99 ){
+            alert('請先登入<br>有任何問題請連繫客服')
+        }else if( res.status == 1 ){
+            for (var i in res.char_list) {
+                $("#character").append($("<option></option>").attr("value", res.char_list[i].charid).text(res.char_list[i].name));
+            }
+        }
+    // })
+}
+
+
+
 function get_reward(content_id){
-    console.log(1111);
-}
+if( optionServer !=="0" && optionCharacter !== "0" ){
 
-function reward_get_setting(){
+    // $.post(api_data,
+    // {
+    //     type : 'reward',
+    //     user_id : $(".account span").text(),
+    //     content_id : content_id,
+    //     server_id : optionServer,
+    //     char_id : optionCharacter,
+    //     char_name : optionCharacterName,
+    // },function(_res){
+        
+        // if( res.status == -99 ){
+            // alert('不明錯誤<br>請連繫客服')
+        // }
+        // if( res.status == 1 ){
+            console.log(optionServer);
+            console.log(optionCharacter);
+            console.log(optionCharacterName);
+            alert('領取成功');
+        // }
+    // })
+}}
 
-}
+
+
+
+
 
 
 
 // 活動搜尋列年月
 
-// var keywordValue = $('#keyword');
-// var yearValue = $('#year');
-// var monthValue = $('#month');
-// var submitBTN = $('.submit');
+var keywordValue = $('#keyword');
+var yearValue = $('#year');
+var monthValue = $('#month');
+var submitBTN = $('.submit');
 var keyword = $('#keyword');
 var year = $('#year');
 var month = $('#month');
@@ -52,4 +135,20 @@ searchInput.addEventListener("keydown", function(event) {
 
 function validateForm(){
 
+}
+
+
+
+
+
+
+
+
+$('.boxDown').hide();
+
+function show_cont(event_id){
+    $('.boxDown').show();
+    $('html, body').animate({
+        scrollTop: $('.boxDown').offset().top
+    }, 200);
 }
