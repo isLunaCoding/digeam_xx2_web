@@ -115,27 +115,49 @@ if( optionServer !=="0" && optionCharacter !== "0" ){
 
 
 // 活動搜尋列年月
+var keyword = $('#keyword')
+var selectYear = $('#year')
+var selectMonth = $('#month')
+var keywordVal = ''
+var yearVal = ''
+var monthVal = ''
 
-var keywordValue = $('#keyword');
-var yearValue = $('#year');
-var monthValue = $('#month');
-var submitBTN = $('.submit');
-var keyword = $('#keyword');
-var year = $('#year');
-var month = $('#month');
-var submitBTN = $('.submit');
+selectYear.change(function(){
+    yearVal = selectYear.val();
+    console.log(yearVal);
+})
+selectMonth.change(function(){
+    monthVal = selectMonth.val();
+    console.log(monthVal);
+})
+keyword.change(function(){
+    keywordVal = keyword.val();
+    console.log(keywordVal);
+})
 
-searchInput.addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
+
+// var keywordValue = $('#keyword');
+// var yearValue = $('#year');
+// var monthValue = $('#month');
+// var submitBTN = $('.submit');
+// var keyword = $('#keyword');
+// var year = $('#year');
+// var month = $('#month');
+// var submitBTN = $('.submit');
+
+// searchInput.addEventListener("keydown", function(event) {
+//     if (event.keyCode === 13) {
+//         event.preventDefault();
         
-        validateForm();
-    }
-});
+//         validateForm();
+//     }
+// });
 
-function validateForm(){
+// function validateForm(){
 
-}
+// }
+
+
 
 
 
@@ -147,8 +169,12 @@ function validateForm(){
 $('.boxDown').hide();
 
 function show_cont(event_id){
-    $('.boxDown').show();
-    $('html, body').animate({
+    let box = $('.boxDown')
+    box.show();
+    $('html').animate({
         scrollTop: $('.boxDown').offset().top
     }, 200);
+
+    console.log(event_id);
+    // window.scrollBy(0, 500); // 向下滚动500像素
 }
