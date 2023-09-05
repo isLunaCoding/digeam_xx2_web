@@ -178,3 +178,47 @@ function show_cont(event_id){
     console.log(event_id);
     // window.scrollBy(0, 500); // 向下滚动500像素
 }
+
+
+
+
+// function scrollToElement(selector, duration) {
+//     var element = document.querySelector(selector);
+//     if (element) {
+//         var targetOffset = element.getBoundingClientRect().top + window.scrollY;
+//         var initialOffset = window.scrollY;
+//         var startTime = null;
+
+//         function scrollStep(timestamp) {
+//             if (!startTime) {
+//                 startTime = timestamp;
+//             }
+
+//             var progress = timestamp - startTime;
+//             var percentage = Math.min(progress / duration, 1);
+//             var newPosition = initialOffset + (targetOffset - initialOffset) * percentage;
+
+//             window.scrollTo(0, newPosition);
+
+//             if (percentage < 1) {
+//                 requestAnimationFrame(scrollStep);
+//             }
+//         }
+
+//         requestAnimationFrame(scrollStep);
+//     }
+// }
+
+// function show_cont(event_id) {
+//     let box = document.querySelector('.boxDown');
+//     if (box) {
+//         box.style.display = 'block';
+//         scrollToElement('.boxDown', 200);
+//     }
+
+//     console.log(event_id);
+// }
+
+// // 使用示例
+// show_cont("your_event_id");
+
