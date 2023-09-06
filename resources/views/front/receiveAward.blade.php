@@ -114,7 +114,7 @@
             <div class="boxBG">
                 <div class="playerInfo">
                     {{-- <p class="account">Hi,<span>XWE0000000000000</span></p>
-                    <form id="playeFrorm" action="process2.php" method="post">
+                    <form id="playerFrorm" action="process2.php" method="post">
                         <label for="server"></label>
                         <select name="server" id="server" required>
                             <option value="0" disabled selected>請選擇伺服器</option>

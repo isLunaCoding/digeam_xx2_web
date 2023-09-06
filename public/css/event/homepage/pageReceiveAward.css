@@ -171,20 +171,20 @@
 .boxDown .awardActionContent .playerInfo .account span {
   color: #002578;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm {
+.boxDown .awardActionContent .playerInfo #playerFrorm {
   margin-top: 15px;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm .serchBox {
+.boxDown .awardActionContent .playerInfo #playerFrorm .serchBox {
   display: flex;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm input {
+.boxDown .awardActionContent .playerInfo #playerFrorm input {
   height: 29px;
   width: 300px;
   font-size: 20px;
   border: 1px solid #234fac;
   margin-right: 5px;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm select {
+.boxDown .awardActionContent .playerInfo #playerFrorm select {
   font-size: 20px;
   width: 143px;
   height: 29px;
@@ -194,7 +194,7 @@
   line-height: 20px;
   margin-right: 5px;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm .submit {
+.boxDown .awardActionContent .playerInfo #playerFrorm .submit {
   background-color: #234fac;
   border: 1px solid #234fac;
   color: #fff;

@@ -1,24 +1,24 @@
 var api_data = '';
 
 
-
+reward_get_setting();
 function reward_get_setting(){
-    // $.post(api_data,
-    // {
-    //     type : 'login',
-    //     user_id : ''
-    // },function(_res){
-        let res = resLogin;
-        // let res = JSON.parse(_res);
+    $.post(api_data,
+    {
+        type : 'login',
+        user_id : ''
+    },function(_res){
+        // let res = resLogin;
+        let res = JSON.parse(_res);
         $('.awardList').html(res.list)
         
-    // })
+    })
 
 }
 
 
 
-var playeFrorm = $('#playeFrorm');
+var playerFrorm = $('#playerFrorm');
 var selectServer = $('#server');
 var selectCharacter = $('#character');
 var optionServer ='';
@@ -31,7 +31,7 @@ selectServer.change(function(){
     console.log(optionServer);
     
     if( optionServer !=="0" ){
-        // playeFrorm.submit();//表單可以提交
+        // playerFrorm.submit();//表單可以提交
         get_char(optionServer);
     }
 });
@@ -62,14 +62,14 @@ var resChar = {
 }
 
 function get_char(server_id){
-    // $.post(api_data,
-    // {
-    //     type : 'char',
-    //     user_id : $(".account span").text(),
-    //     server_id : server_id
-    // },function(_res){
-        let res = resChar;
-        // let res = JSON.parse(_res);
+    $.post(api_data,
+    {
+        type : 'char',
+        user_id : $(".account span").text(),
+        server_id : server_id
+    },function(_res){
+        // let res = resChar;
+        let res = JSON.parse(_res);
         if( res.status == -99 ){
             alert('請先登入<br>有任何問題請連繫客服')
         }else if( res.status == 1 ){
@@ -77,7 +77,7 @@ function get_char(server_id){
                 $("#character").append($("<option></option>").attr("value", res.char_list[i].charid).text(res.char_list[i].name));
             }
         }
-    // })
+    })
 }
 
 
@@ -85,26 +85,26 @@ function get_char(server_id){
 function get_reward(content_id){
 if( optionServer !=="0" && optionCharacter !== "0" ){
 
-    // $.post(api_data,
-    // {
-    //     type : 'reward',
-    //     user_id : $(".account span").text(),
-    //     content_id : content_id,
-    //     server_id : optionServer,
-    //     char_id : optionCharacter,
-    //     char_name : optionCharacterName,
-    // },function(_res){
+    $.post(api_data,
+    {
+        type : 'reward',
+        user_id : $(".account span").text(),
+        content_id : content_id,
+        server_id : optionServer,
+        char_id : optionCharacter,
+        char_name : optionCharacterName,
+    },function(_res){
         
-        // if( res.status == -99 ){
-            // alert('不明錯誤<br>請連繫客服')
-        // }
-        // if( res.status == 1 ){
+        if( res.status == -99 ){
+            alert('不明錯誤<br>請連繫客服')
+        }
+        if( res.status == 1 ){
             console.log(optionServer);
             console.log(optionCharacter);
             console.log(optionCharacterName);
             alert('領取成功');
-        // }
-    // })
+        }
+    })
 }}
 
 
@@ -155,15 +155,15 @@ function keywordWall(){
     }else {
         awardSearch();
         function awardSearch(){
-            //     $.post(api_data,
-            // {
-            //     type : 'search',
-            //     keyword:keywordVal,
-            //     year:yearVal,
-            //     month:monthVal
-            // },function(_res){
-                let res = resSearch;
-                // let res = JSON.parse(_res);
+                $.post(api_data,
+            {
+                type : 'search',
+                keyword:keywordVal,
+                year:yearVal,
+                month:monthVal
+            },function(_res){
+                // let res = resSearch;
+                let res = JSON.parse(_res);
                 if(res.status == -99 ){
                     alert('不明錯誤，請重整或連繫客服')
         
@@ -171,7 +171,7 @@ function keywordWall(){
                 $('.awardList').html(res.list)
                 }
                 
-            // })
+            })
         }
     }
 }
@@ -183,24 +183,28 @@ function keywordWall(){
 
 
 var resShow = {
-    status:1
+    status:1,
+    title:123,
+    content:''
 }
 
 function show_cont(event_id){
-    // $.post(api_data,
-    // {
-    //     type : 'show',
-    //     user_id : $(".account span").text(),
-    //     event_id:event_id,
-    // },function(_res){
-        let res = resShow;
-        // let res = JSON.parse(_res);
-    
-
-
-
-    
-    // })
+    $.post(api_data,
+    {
+        type : 'show',
+        user_id : $(".account span").text(),
+        event_id:event_id,
+    },function(_res){
+        // let res = resShow;
+        let res = JSON.parse(_res);
+        if(res.status == -99 ){
+            $('.show_title').html(res.title);
+            $('.show_content').html(res.content);
+        } else if(res.status == 1 ){
+            $('.show_title').html(res.title);
+            $('.show_content').html(res.content);
+        }
+    })
 }
 
 
