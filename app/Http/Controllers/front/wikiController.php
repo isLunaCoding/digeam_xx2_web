@@ -8,7 +8,7 @@ use App\Model\Page;
 
 class wikiController extends Controller
 {
-    public function index($id =6)
+    public function index($id = 20)
     {
         if (isset($_GET['keyword']) && $_GET['keyword'] != null) {
             $lists = Category::where('type', 'wiki')->where('open', 'Y')->orderby('parent_id', 'asc')->orderby('sort', 'asc')->get();

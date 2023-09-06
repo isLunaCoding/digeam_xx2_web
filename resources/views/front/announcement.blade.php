@@ -70,15 +70,30 @@
 
 @section('script')
     <script>
-        $(".newsContainer .text").hide();
-        $(".newsContainer .textNA").show();
-        $(".new").addClass("active");
-        $(".tabBox .newsBtn").on("click", function() {
-            $(".newsContainer .text").hide();
-            $(".newsBtn").removeClass("active");
-            $(this).addClass("active");
-            $(".newsContainer .text").hide();
-            $(".text" + this.dataset.news + "").show();
+        $(document).ready(function() {
+            var currentUrl = window.location.href;
+
+            if (currentUrl.includes("/announcement/activity")) {
+                $(".systemBox").removeClass("active");
+                $(".new").removeClass("active");
+                $(".activity").addClass("active");
+            } else if (currentUrl.includes("/announcement/new")) {
+                $(".systemBox").removeClass("active");
+                $(".activity").removeClass("active");
+                $(".new").addClass("active");
+            } else if (currentUrl.includes("/announcement/system")) {
+                $(".new").removeClass("active");
+                $(".activity").removeClass("active");
+                $(".systemBox").addClass("active");
+            }
+
+            $(".newsTab .newsBtn").on("click", function() {
+                $(".newsContainer .text").hide();
+                $(".newsBtn").removeClass("active");
+                $(this).addClass("active");
+                $(".newsContainer .text").hide();
+                $(".text" + this.dataset.news + "").show();
+            });
         });
     </script>
 @endsection

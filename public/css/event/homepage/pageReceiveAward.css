@@ -32,6 +32,9 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .awardTitleBox {
@@ -241,7 +244,7 @@
   color: #fff;
   font-size: 16px;
 }
-.boxDown .awardActionContent .actionInfo .actionTable thead td:nth-child(n):nth-child(-n+3) {
+.boxDown .awardActionContent .actionInfo .actionTable thead td:nth-child(n):nth-child(-n+4) {
   border-right: #002578 1px solid;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody {
@@ -257,10 +260,10 @@
   padding: 10px;
   vertical-align: middle;
 }
-.boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-child(n):nth-child(-n+3) {
+.boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-child(n):nth-child(-n+4) {
   border-right: #002578 1px solid;
 }
-.boxDown .awardActionContent .actionInfo .actionTable tbody td:last-child {
+.boxDown .awardActionContent .actionInfo .actionTable tbody td:last-child, .boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-last-child(2) {
   text-align: center;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody td .receive, .boxDown .awardActionContent .actionInfo .actionTable tbody td .cannotReceive {

@@ -28,33 +28,33 @@
 
 {{-- 內文 --}}
 @section('textBox')
-    <form id="serchForm" action="" method="post">
+    <div id="serchForm">
         <div class="serchBox">
             <input type="text" name="keyword" id="keyword" placeholder="請輸入活動關鍵字">
             <select name="year" id="year">
                 <option value="0" selected>&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                 <?php
-                    $nowyear = date('Y');
-                    for ($i=2023;$i<=$nowyear+1;$i++) {
-                ?>
+                        $nowyear = date('Y');
+                        for ($i=2023;$i<=$nowyear+1;$i++) {
+                    ?>
                 <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                 <?php
-                    }
-                ?>
+                        }
+                    ?>
             </select>
             <select name="month" id="month">
                 <option value="0" selected>&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                 <?php
-                    for ($i=1;$i<=12;$i++) {
-                ?>
+                        for ($i=1;$i<=12;$i++) {
+                    ?>
                 <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                 <?php
-                    }
-                ?>
+                        }
+                    ?>
             </select>
-            <button class="submit" type="submit" onclick="awardSearch()">搜尋</button>
+            <a href="javascript:keywordWall();" class="submit" type="submit">搜尋</a>
         </div>
-    </form>
+    </div>
 
     <div class="awardTitleBox">
         <div class="actionName">活動名稱</div>
@@ -144,13 +144,13 @@
                                 <td>名稱</td>
                                 <td>獎勵</td>
                                 <td rowspan="2">說明</td>
-                                <td >
+                                <td>
                                     <button class="receive" onclick="get_reward(1)">領取</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>名稱</td>
-                                <td >獎勵</td>
+                                <td>獎勵</td>
                                 {{-- <td>說明</td> --}}
                                 <td>
                                     <button class="cannotReceive">領取</button>

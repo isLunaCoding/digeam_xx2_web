@@ -35,7 +35,8 @@
                 <thead>
                     <tr>
                         <th width="0.3%">停權日期</th>
-                        <th width="0.3%">帳號/角色名稱</th>
+                        <th width="0.3%">帳號</th>
+                        <th width="0.3%">角色名稱</th>
                         <th width="5%">說明</th>
                         <th width="3%">懲處結果</th>
                     </tr>
@@ -44,7 +45,8 @@
                     @foreach ($user_list as $value)
                         <tr>
                             <td>{{ date('Y/m/d', strtotime($value->created_at)) }}</td>
-                            <td>{{ $value->user_id }}/{{ $value->char_name }}</td>
+                            <td>{{ $value->user_id }}</td>
+                            <td>{{ $value->char_name }}</td>
                             <td>{{ $value->description }}</td>
                             <td>{{ $value->punish }}</td>
                         </tr>
