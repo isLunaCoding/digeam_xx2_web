@@ -228,17 +228,36 @@ body {
     opacity: 0;
   }
 }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font: revert;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  margin: 0 auto;
+}
+
+.main {
+  margin: 0 auto;
+}
+
 .mainBG {
   background-image: url("/img/event/wiki/wikiBG.jpg");
-  background-size: contain;
-  width: 1920px;
-  height: 950px;
+  background-size: cover;
+  min-width: 1920px;
+  min-height: 950px;
+  width: 100%;
+  height: 100%;
   top: 0px;
   left: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin: 0 auto;
 }
 .mainBG .topBox {
   width: 1550px;
@@ -358,6 +377,14 @@ body {
 }
 .mainBG .mainBox .rightBox .mainTextBox .text {
   font-size: 18px;
+}
+.mainBG .mainBox .rightBox .mainTextBox .text2 {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .mainBG .mainBox .rightBox .mainTextBox .text2 {
   font-size: 18px;
