@@ -32,9 +32,9 @@ class AnnouncementController extends AdminController
             ->orderBy('new', 'desc')
             ->orderBy('created_at', 'desc')
             ->orderBy('main_sort', 'asc');
-        $grid->column('title', __('Title'));
-        $grid->column('cate_id', __('Cate id'))->using(['1' => '最新', '2' => '活動', '3' => '系統']);
-        $grid->column('open', __('Open'));
+        $grid->column('title', __('標題'));
+        $grid->column('cate_id', __('分類'))->using(['2' => '活動', '3' => '系統']);
+        $grid->column('open', __('是否開啟'));
         $grid->column('top', __('置頂'))->label(['N' => 'default', 'Y' => 'danger']);
         $grid->column('new', __('最新'))->label(['N' => 'default', 'Y' => 'danger']);
         $grid->column('main_sort', __('排序'));
@@ -76,8 +76,8 @@ class AnnouncementController extends AdminController
     protected function form()
     {
         $form = new Form(new Page());
-        $form->text('title', __('Title'));
-        $form->select('cate_id', __('Cate id'))->options(['1' => '最新', '2' => '活動', '3' => '系統'])->default(5);
+        $form->text('title', __('標題'));
+        $form->select('cate_id', __('分類'))->options(['2' => '活動', '3' => '系統'])->default(5);
         $form->text('type', __('類型'))->default('announcement')->readonly();
         $form->ckeditor('content', __('內文'));
         $form->datetime('created_at', __('發佈日期'))->default(date('Y-m-d H:i:s'));
