@@ -13,7 +13,7 @@
 
 
 @section('backHome')
-    <a class="backHome" href="">&#9668; &nbsp; 回到首頁</a>
+    <a class="backHome" href={{ route('index') }}>&#9668; &nbsp; 回到首頁</a>
 @endsection
 
 
@@ -69,5 +69,3 @@
         </div>
     </div>
 @endsection
-
-

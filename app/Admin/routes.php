@@ -21,4 +21,6 @@ Route::group([
     $router->resource('suspension_lists', 'SuspensionController');
     $router->resource('image', 'ImageController');
     $router->resource('game_features', 'GameFeaturesController');
+    $router->resource('serialnumbercate', 'SerialNumberCateController');
+
 });
