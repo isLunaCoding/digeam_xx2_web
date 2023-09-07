@@ -241,7 +241,7 @@
   color: #fff;
   font-size: 16px;
 }
-.boxDown .awardActionContent .actionInfo .actionTable thead td:nth-child(n):nth-child(-n+3) {
+.boxDown .awardActionContent .actionInfo .actionTable thead td:nth-child(n):nth-child(-n+4) {
   border-right: #002578 1px solid;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody {
@@ -257,7 +257,7 @@
   padding: 10px;
   vertical-align: middle;
 }
-.boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-child(n):nth-child(-n+3) {
+.boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-child(n):nth-child(-n+4) {
   border-right: #002578 1px solid;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody td:last-child {

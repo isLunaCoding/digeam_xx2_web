@@ -281,7 +281,7 @@
                         color: #fff;
                         font-size: 16px;
 
-                        &:nth-child(n):nth-child(-n+3) {
+                        &:nth-child(n):nth-child(-n+4) {
                             border-right: #002578 1px solid;
                         }
                     }
@@ -301,7 +301,7 @@
                         padding: 10px;
                         vertical-align:middle;
 
-                        &:nth-child(n):nth-child(-n+3) {
+                        &:nth-child(n):nth-child(-n+4) {
                             border-right: #002578 1px solid;
                         }
 

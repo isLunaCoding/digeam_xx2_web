@@ -30,7 +30,7 @@ Route::get('/announcement/{cate?}', 'front\announcementController@index')->name(
 Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');
 
 // 領獎專區
-Route::get('/receiveAward', function () {
+Route::get('/reward', function () {
     return view('front/receiveAward');
 });
 // 序號兌換

@@ -83,18 +83,14 @@ class ServicesController extends Controller
         $role_info = [];
         $i = 0;
 
-        if ($result_str['ZoneRoles'][1] == null) {
-            return response()->json([
-                'status' => -97,
-                'msg' => '無角色',
-            ]);
-        }
-        foreach ($result_str['ZoneRoles'][1] as $roles) {
-            $role_info[$i]['acclogin'] = $roles['acclogin'];
-            $role_info[$i]['charid'] = $roles['charid'];
-            $role_info[$i]['name'] = $roles['name'];
-            $role_info[$i]['type'] = $roles['type'];
-            $i++;
+        if($result_str['ZoneRoles'][1]) {
+            foreach ($result_str['ZoneRoles'][1] as $roles) {
+                $role_info[$i]['acclogin'] = $roles['acclogin'];
+                $role_info[$i]['charid'] = $roles['charid'];
+                $role_info[$i]['name'] = $roles['name'];
+                $role_info[$i]['type'] = $roles['type'];
+                $i++;
+            }
         }
         return response()->json([
             'status' => 0,
