@@ -4,6 +4,8 @@ function logout_dg() {
     $("#logout-form").submit();
 }
 
+$('.boxDown').hide();
+
 reward_get_setting();
 function reward_get_setting() {
     $.post(
@@ -162,9 +164,11 @@ function show_cont(event_id) {
             if (res.status == -99) {
                 $(".show_title").html(res.title);
                 $(".show_content").html(res.content);
+                $('.boxDown').show();
             } else if (res.status == 1) {
                 $(".show_title").html(res.title);
                 $(".show_content").html(res.content);
+                $('.boxDown').show();
             }
         }
     );
