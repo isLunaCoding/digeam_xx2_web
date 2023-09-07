@@ -30,21 +30,22 @@ Route::get('/announcement/{cate?}', 'front\announcementController@index')->name(
 Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');
 
 // 領獎專區
-Route::get('/receiveAward', function () {
+Route::get('/reward', function () {
     return view('front/receiveAward');
-});
+})->name('reward');
 // 序號兌換
 Route::get('/exchange', function () {
     return view('front/exchange');
 });
 // 下載
 Route::get('/download', function () {
-    return view('front/download');
-});
+    return view('front.download');
+})->name('download');
+
 // 遊戲規章
 Route::get('/regulations', function () {
     return view('front/regulations');
-});
+})->name('regulations');
 // 百科
 Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 // Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');

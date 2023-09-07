@@ -141,6 +141,8 @@ function keywordWall() {
                         alert("不明錯誤，請重整或連繫客服");
                     } else if (res.status == 1) {
                         $(".awardList").html(res.list);
+                        showPage(1);
+                        generatePagination();
                     }
                 }
             );
@@ -235,7 +237,7 @@ function generatePagination() {
         } else {
             nextBtn.removeClass("disabled");
         }
-        
+
     });
 
     // Previous點擊

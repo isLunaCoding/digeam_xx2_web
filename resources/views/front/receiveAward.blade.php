@@ -61,170 +61,6 @@
         <div class="actionTime">領獎時間</div>
     </div>
     <div class="awardTitleContent">
-        {{-- <ul class="awardList">
-            <li>
-                <a href="#boxDown" onclick="show_cont(1)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱1</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(2)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱2</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(3)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱3</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(1)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱4</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(2)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱5</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(3)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱6</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(1)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱7</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(2)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱8</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(3)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱9</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(1)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱10</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(2)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱11</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(3)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱12</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(1)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱13</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(2)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱14</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(3)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱15</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(1)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱16</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(2)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱17</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(3)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱18</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-        </ul> --}}
         <ul class="awardList">
         </ul>
     </div>
@@ -239,24 +75,34 @@
         <div class="emptyBox"></div>
         <div class="awardActionContent">
             <img src="img/event/homepage/awardTriangle.png" alt="">
-            <div class="actionTitle show_title">8/11 ~ 8/31 活動名稱123</div>
+            <div class="actionTitle show_title"></div>
             <div class="boxBG">
                 <div class="playerInfo">
-                    {{-- <p class="account">Hi,<span>XWE0000000000000</span></p>
-                    <form id="playerFrorm" action="process2.php" method="post">
-                        <label for="server"></label>
-                        <select name="server" id="server" required>
-                            <option value="0" disabled selected>請選擇伺服器</option>
-                            <option value="1801">1801</option>
-                        </select>
-                        <select name="character" id="character" required>
-                            <option value="0" disabled selected>請選擇角色</option>
-                        </select>
-                    </form>
-                    <button class="logout">登出</button> --}}
-
-                    <p class="account"><span></span></p>
-                    <button class="login">登入</button>
+                    @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
+                        <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
+                            <input type="hidden" name="return_url" id="return_url"
+                                value={{ base64_encode('https://xx2.digeam.com/reward') }}>
+                        </form>
+                        <p class="account">Hi,<span>{{ $_COOKIE['StrID'] }}</span></p>
+                        <form id="playerFrorm" action="process2.php" method="post">
+                            <label for="server"></label>
+                            <select name="server" id="server" required>
+                                <option value="0" disabled selected>請選擇伺服器</option>
+                                <option value="1899">1899</option>
+                            </select>
+                            <select name="character" id="character" required>
+                                <option value="0" disabled selected>請選擇角色</option>
+                            </select>
+                        </form>
+                            <button class="logout" onclick="logout_dg()">登出</button>
+                    @else
+                        <p class="account"><span></span></p>
+                        @php
+                            $_COOKIE_DOMAIN = '.digeam.com';
+                            SetCookie('return_url', base64_encode('https://xx2.digeam.com/reward'), 0, '/', $_COOKIE_DOMAIN);
+                        @endphp
+                        <a class="login" href="https://digeam.com/login">登入</a>
+                    @endif
                 </div>
                 <div class="actionInfo">
                     <table class="actionTable">
@@ -266,25 +112,10 @@
                                 <td>獎勵</td>
                                 <td>說明</td>
                                 <td>領取狀態</td>
+                                <td>剩餘次數</td>
                             </tr>
                         </thead>
                         <tbody class="show_content">
-                            <tr>
-                                <td>名稱</td>
-                                <td>獎勵</td>
-                                <td rowspan="2">說明</td>
-                                <td>
-                                    <button class="receive" onclick="get_reward(1)">領取</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>名稱</td>
-                                <td>獎勵</td>
-                                {{-- <td>說明</td> --}}
-                                <td>
-                                    <button class="cannotReceive">領取</button>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>

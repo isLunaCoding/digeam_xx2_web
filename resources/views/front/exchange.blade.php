@@ -27,10 +27,10 @@
 {{-- 內文 --}}
 @section('textBox')
 <div class="exchangePlayerInfo">
-    {{-- <p class="account">Hi,<span>XWE0000000000000</span></p>
-    <button class="logout">登出</button> --}}
-    <p class="account">Hi,請先登入帳號<span></span></p>
-    <button class="login">登入</button>
+    <p class="account">Hi,<span>xx2digeam18</span></p>
+    <button class="logout">登出</button>
+    {{-- <p class="account">Hi,請先登入帳號<span></span></p>
+    <button class="login">登入</button> --}}
 </div>
 
     <form id="exchangeForm" action="process1.php" method="post">

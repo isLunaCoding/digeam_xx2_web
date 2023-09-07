@@ -28,7 +28,7 @@
 {{-- 內文 --}}
 @section('textBox')
     <div class="tabBox">
-        <a href="{{ route('announcement', 'new') }}" class="newsBtn newsBtnNA new" data-news="NA">NEW</a>
+        <a href="{{ route('announcement', 'new') }}" class="newsBtn newsBtnNA new " data-news="NA">NEW</a>
         <a href="{{ route('announcement', 'activity') }}" class="newsBtn newsBtnNB activity" data-news="NB">活動</a>
         <a href="{{ route('announcement', 'system') }}" class="newsBtn newsBtnNC systemBox" data-news="NC">系統</a>
     </div>
