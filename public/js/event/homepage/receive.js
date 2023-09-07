@@ -174,7 +174,6 @@ function show_cont(event_id) {
     );
 }
 
-
 // 顯示當前頁li
 function showPage(page) {
     var itemsPerPage = 5;
@@ -192,15 +191,10 @@ function generatePagination() {
     var totalItems = $(".awardList li").length;
     var totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    console.log(totalItems);
-    console.log(totalPages);
-
     $(".pagination").empty();
 
     var prevBtn = $(
-        "<li class='page-goto' aria-label='« Previous'>" +
-            "‹" +
-            "</li>"
+        "<li class='page-goto' aria-label='« Previous'>" + "‹" + "</li>"
     );
     $(".pagination").append(prevBtn);
 
@@ -213,11 +207,7 @@ function generatePagination() {
         $(".pagination").append(li);
     }
 
-    var nextBtn = $(
-        "<li class='page-goto'>" +
-            "›" +
-            "</li>"
-    );
+    var nextBtn = $("<li class='page-goto'>" + "›" + "</li>");
     $(".pagination").append(nextBtn);
 
     $(".page-goto").first().addClass("active");
@@ -241,7 +231,6 @@ function generatePagination() {
         } else {
             nextBtn.removeClass("disabled");
         }
-
     });
 
     // Previous點擊
@@ -249,7 +238,10 @@ function generatePagination() {
         var currentPage = parseInt($(".page-item.active").text());
         if (currentPage > 1) {
             showPage(currentPage - 1);
-            $(".page-item").removeClass("active").eq(currentPage - 2).addClass("active");
+            $(".page-item")
+                .removeClass("active")
+                .eq(currentPage - 2)
+                .addClass("active");
         }
     });
 
@@ -258,7 +250,10 @@ function generatePagination() {
         var currentPage = parseInt($(".page-item.active").text());
         if (currentPage < totalPages) {
             showPage(currentPage + 1);
-            $(".page-item").removeClass("active").eq(currentPage).addClass("active");
+            $(".page-item")
+                .removeClass("active")
+                .eq(currentPage)
+                .addClass("active");
         }
     });
 }
