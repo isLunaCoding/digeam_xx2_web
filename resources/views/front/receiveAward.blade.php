@@ -61,7 +61,7 @@
         <div class="actionTime">領獎時間</div>
     </div>
     <div class="awardTitleContent">
-        <ul class="awardList">
+        {{-- <ul class="awardList">
             <li>
                 <a href="#boxDown" onclick="show_cont(1)" class="normal">
                     <div class="awardTextBox">
@@ -89,18 +89,147 @@
                 </a>
                 <div class="awardLine"></div>
             </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(1)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱4</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(2)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱5</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(3)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱6</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(1)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱7</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(2)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱8</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(3)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱9</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(1)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱10</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(2)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱11</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(3)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱12</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(1)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱13</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(2)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱14</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(3)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱15</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(1)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱16</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(2)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱17</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+            <li>
+                <a href="#boxDown" onclick="show_cont(3)" class="normal">
+                    <div class="awardTextBox">
+                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱18</div>
+                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
+                    </div>
+                </a>
+                <div class="awardLine"></div>
+            </li>
+        </ul> --}}
+        <ul class="awardList">
         </ul>
     </div>
     <nav>
         <ul class="pagination">
-            <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
-                <span class="page-link" aria-hidden="true">‹</span>
-            </li>
-            <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-            <li class="page-item"><a class="page-link" href="">2</a></li>
-            <li class="page-item">
-                <a class="page-link" href="" rel="next" aria-label="Next »">›</a>
-            </li>
         </ul>
     </nav>
 @endsection
@@ -167,4 +296,5 @@
 
 @section('script')
     <script src="/js/event/homepage/receive.js"></script>
+    <script src="/js/event/homepage/receiveChangePage.js"></script>
 @endsection

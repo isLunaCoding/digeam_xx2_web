@@ -107,26 +107,31 @@
   display: inline-block;
   margin-right: 10px;
 }
-.pagination .page-item {
+.pagination .page-item, .pagination .page-goto {
   font-size: 16px;
   padding: 8px;
   text-decoration: none;
+  cursor: pointer;
 }
-.pagination .page-item.disabled {
+.pagination .page-item.disabled, .pagination .page-goto.disabled {
   font-size: 16px;
   padding: 8px;
   text-decoration: none;
+  cursor: default;
 }
-.pagination .page-item.disabled .page-link {
+.pagination .page-item.disabled .page-link, .pagination .page-goto.disabled .page-link {
+  cursor: default;
   color: #728dcc;
 }
-.pagination .page-item.active {
+.pagination .page-item.active, .pagination .page-goto.active {
   color: #728dcc;
   font-size: 16px;
   padding: 8px;
   text-decoration: none;
+  cursor: default;
 }
-.pagination .page-item.active .page-link {
+.pagination .page-item.active .page-link, .pagination .page-goto.active .page-link {
+  cursor: default;
   color: #728dcc;
 }
 
