@@ -28,74 +28,81 @@
 
 {{-- 內文 --}}
 @section('textBox')
-    <form id="serchForm" action=".php" method="post">
+    <div id="serchForm">
         <div class="serchBox">
-            <input type="text" name="actionKeywords" placeholder="請輸入活動關鍵字">
+            <input type="text" name="keyword" id="keyword" placeholder="請輸入活動關鍵字">
             <select name="year" id="year">
-                <option value="" disabled selected>&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-                <option value="123">123</option>
+                <option value="0" selected>&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <?php
+                        $nowyear = date('Y');
+                        for ($i=2023;$i<=$nowyear+1;$i++) {
+                    ?>
+                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                <?php
+                        }
+                    ?>
             </select>
             <select name="month" id="month">
-                <option value="" disabled selected>&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-                <option value="123">123</option>
+                <option value="0" selected>&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <?php
+                        for ($i=1;$i<=12;$i++) {
+                    ?>
+                <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                <?php
+                        }
+                    ?>
             </select>
-            <button class="submit" type="submit">搜尋</button>
+            <a href="javascript:keywordWall();" class="submit" type="submit">搜尋</a>
         </div>
-    </form>
+    </div>
 
     <div class="awardTitleBox">
         <div class="actionName">活動名稱</div>
         <div class="actionTime">領獎時間</div>
     </div>
     <div class="awardTitleContent">
-        <ul>
-            <li>
-                <a href="javascript:show()" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱123</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
+        <ul class="awardList">
         </ul>
     </div>
     <nav>
         <ul class="pagination">
-            <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
-                <span class="page-link" aria-hidden="true">‹</span>
-            </li>
-            <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-            <li class="page-item"><a class="page-link" href="">2</a></li>
-            <li class="page-item">
-                <a class="page-link" href="" rel="next" aria-label="Next »">›</a>
-            </li>
         </ul>
     </nav>
 @endsection
 
 @section('boxDown')
-    <div class="boxDown">
+    <div class="boxDown" id="boxDown">
         <div class="emptyBox"></div>
         <div class="awardActionContent">
             <img src="img/event/homepage/awardTriangle.png" alt="">
-            <div class="actionTitle">8/11 ~ 8/31 活動名稱123</div>
+            <div class="actionTitle show_title"></div>
             <div class="boxBG">
                 <div class="playerInfo">
-                    <p class="account">Hi,<span>XWE0000000000000</span></p>
-                    <form id="playeFrorm" action="process2.php" method="post">
-                        <label for="server"></label>
-                        <select name="server" id="server">
-                            <option value="" disabled selected>請選擇伺服器</option>
-                            <option value="123">123</option>
-                        </select>
-                        <select name="character" id="character">
-                            <option value="" disabled selected>請選擇角色</option>
-                            <option value="123">123</option>
-                        </select>
-                    </form>
-                    <button class="logout">登出</button>
-                    {{-- <button class="login">登入</button> --}}
+                    @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
+                        <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
+                            <input type="hidden" name="return_url" id="return_url"
+                                value={{ base64_encode('https://xx2.digeam.com/reward') }}>
+                        </form>
+                        <p class="account">Hi,<span>{{ $_COOKIE['StrID'] }}</span></p>
+                        <form id="playerFrorm" action="process2.php" method="post">
+                            <label for="server"></label>
+                            <select name="server" id="server" required>
+                                <option value="0" disabled selected>請選擇伺服器</option>
+                                <option value="1899">1899</option>
+                            </select>
+                            <select name="character" id="character" required>
+                                <option value="0" disabled selected>請選擇角色</option>
+                            </select>
+                        </form>
+                            <button class="logout" onclick="logout_dg()">登出</button>
+                    @else
+                        <p class="account"><span></span></p>
+                        @php
+                            $_COOKIE_DOMAIN = '.digeam.com';
+                            SetCookie('return_url', base64_encode('https://xx2.digeam.com/reward'), 0, '/', $_COOKIE_DOMAIN);
+                        @endphp
+                        <a class="login" href="https://digeam.com/login">登入</a>
+                    @endif
                 </div>
                 <div class="actionInfo">
                     <table class="actionTable">
@@ -105,33 +112,10 @@
                                 <td>獎勵</td>
                                 <td>說明</td>
                                 <td>領取狀態</td>
+                                <td>剩餘次數</td>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>名稱</td>
-                                <td>獎勵</td>
-                                <td>說明</td>
-                                <td>
-                                    <button class="receive">領取</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>名稱</td>
-                                <td>獎勵</td>
-                                <td>說明</td>
-                                <td>
-                                    <button class="cannotReceive">領取</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>名稱</td>
-                                <td>獎勵</td>
-                                <td>說明</td>
-                                <td>
-                                    已領取
-                                </td>
-                            </tr>
+                        <tbody class="show_content">
                         </tbody>
                     </table>
                 </div>

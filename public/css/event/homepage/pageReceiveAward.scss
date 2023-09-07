@@ -36,6 +36,9 @@
         line-height: 20px;
         font-weight: 600;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -123,18 +126,21 @@
         margin-right: 10px;
     }
 
-    .page-item {
+    .page-item , .page-goto {
 
         font-size: 16px;
         padding: 8px;
         text-decoration: none;
+        cursor: pointer;
 
         &.disabled {
             font-size: 16px;
             padding: 8px;
             text-decoration: none;
+            cursor: default;
 
             .page-link {
+                cursor: default;
                 color: #728dcc;
             }
         }
@@ -144,8 +150,10 @@
             font-size: 16px;
             padding: 8px;
             text-decoration: none;
-
+            cursor: default;
+            
             .page-link {
+                cursor: default;
                 color: #728dcc;
             }
         }
@@ -203,7 +211,7 @@
                 }
             }
 
-            #playeFrorm {
+            #playerFrorm {
                 margin-top: 15px;
 
                 .serchBox {
@@ -281,7 +289,7 @@
                         color: #fff;
                         font-size: 16px;
 
-                        &:nth-child(n):nth-child(-n+3) {
+                        &:nth-child(n):nth-child(-n+4) {
                             border-right: #002578 1px solid;
                         }
                     }
@@ -299,12 +307,13 @@
                         color: #002578;
                         font-size: 16px;
                         padding: 10px;
+                        vertical-align:middle;
 
-                        &:nth-child(n):nth-child(-n+3) {
+                        &:nth-child(n):nth-child(-n+4) {
                             border-right: #002578 1px solid;
                         }
 
-                        &:last-child {
+                        &:last-child ,&:nth-last-child(2) {
                             text-align: center;
                         }
 
@@ -313,9 +322,9 @@
                             width: 72px;
                             height: 27px;
                             color: #fff;
-                            cursor: pointer;
                         }
                         .receive {
+                            cursor: pointer;
                             background-color: #002578;
                             border: #002578 1px solid;
                         }

@@ -32,6 +32,9 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .awardTitleBox {
@@ -104,26 +107,31 @@
   display: inline-block;
   margin-right: 10px;
 }
-.pagination .page-item {
+.pagination .page-item, .pagination .page-goto {
   font-size: 16px;
   padding: 8px;
   text-decoration: none;
+  cursor: pointer;
 }
-.pagination .page-item.disabled {
+.pagination .page-item.disabled, .pagination .page-goto.disabled {
   font-size: 16px;
   padding: 8px;
   text-decoration: none;
+  cursor: default;
 }
-.pagination .page-item.disabled .page-link {
+.pagination .page-item.disabled .page-link, .pagination .page-goto.disabled .page-link {
+  cursor: default;
   color: #728dcc;
 }
-.pagination .page-item.active {
+.pagination .page-item.active, .pagination .page-goto.active {
   color: #728dcc;
   font-size: 16px;
   padding: 8px;
   text-decoration: none;
+  cursor: default;
 }
-.pagination .page-item.active .page-link {
+.pagination .page-item.active .page-link, .pagination .page-goto.active .page-link {
+  cursor: default;
   color: #728dcc;
 }
 
@@ -171,20 +179,20 @@
 .boxDown .awardActionContent .playerInfo .account span {
   color: #002578;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm {
+.boxDown .awardActionContent .playerInfo #playerFrorm {
   margin-top: 15px;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm .serchBox {
+.boxDown .awardActionContent .playerInfo #playerFrorm .serchBox {
   display: flex;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm input {
+.boxDown .awardActionContent .playerInfo #playerFrorm input {
   height: 29px;
   width: 300px;
   font-size: 20px;
   border: 1px solid #234fac;
   margin-right: 5px;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm select {
+.boxDown .awardActionContent .playerInfo #playerFrorm select {
   font-size: 20px;
   width: 143px;
   height: 29px;
@@ -194,7 +202,7 @@
   line-height: 20px;
   margin-right: 5px;
 }
-.boxDown .awardActionContent .playerInfo #playeFrorm .submit {
+.boxDown .awardActionContent .playerInfo #playerFrorm .submit {
   background-color: #234fac;
   border: 1px solid #234fac;
   color: #fff;
@@ -241,7 +249,7 @@
   color: #fff;
   font-size: 16px;
 }
-.boxDown .awardActionContent .actionInfo .actionTable thead td:nth-child(n):nth-child(-n+3) {
+.boxDown .awardActionContent .actionInfo .actionTable thead td:nth-child(n):nth-child(-n+4) {
   border-right: #002578 1px solid;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody {
@@ -255,11 +263,12 @@
   color: #002578;
   font-size: 16px;
   padding: 10px;
+  vertical-align: middle;
 }
-.boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-child(n):nth-child(-n+3) {
+.boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-child(n):nth-child(-n+4) {
   border-right: #002578 1px solid;
 }
-.boxDown .awardActionContent .actionInfo .actionTable tbody td:last-child {
+.boxDown .awardActionContent .actionInfo .actionTable tbody td:last-child, .boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-last-child(2) {
   text-align: center;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody td .receive, .boxDown .awardActionContent .actionInfo .actionTable tbody td .cannotReceive {
@@ -267,9 +276,9 @@
   width: 72px;
   height: 27px;
   color: #fff;
-  cursor: pointer;
 }
 .boxDown .awardActionContent .actionInfo .actionTable tbody td .receive {
+  cursor: pointer;
   background-color: #002578;
   border: #002578 1px solid;
 }
