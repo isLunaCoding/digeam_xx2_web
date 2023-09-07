@@ -18,4 +18,6 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::post('prereg', 'API\event\preregController@index');
 Route::get('service_api', 'Services\ServicesController@index');
+Route::post('reward', 'API\rewardController@index');
+
 

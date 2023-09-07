@@ -4,17 +4,42 @@
 
 
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    font: revert;
+}
+table, caption, tbody, tfoot, thead, tr, th, td{
+    border: 1px solid;
+}
+
+
+.wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll ;
+    margin: 0 auto;
+}
+
+.main{
+    margin: 0 auto;
+}
+
 .mainBG {
     background-image: url('/img/event/wiki/wikiBG.jpg');
-    background-size: contain;
-    width: 1920px;
-    height: 950px;
+    // background-size: contain;
+    background-size: cover;
+    min-width: 1920px;
+    min-height: 950px;
+    width: 100%;
+    height: 100%;
     top: 0px;
     left: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin: 0 auto;
+
 
     .topBox {
         width: 1550px;
@@ -158,9 +183,29 @@
 
                 .text {
                     font-size: 18px;
+                    line-height: 30px;
+
+                }
+                .text2 {
+                    line-height: 30px;
+                    font-size: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
                 }
 
-                .continueBtn{
+                .text2 {
+                    font-size: 18px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                }
+
+                .continueBtn {
                     background-color: #82a3d4;
                     height: 40px;
                     font-size: 18px;
@@ -169,7 +214,7 @@
                     margin: 30px 0 50px;
                     color: #fff;
 
-                    &:hover{
+                    &:hover {
                         background-color: #fff;
                         color: #82a3d4;
                         background-position: 0.75em bottom;
@@ -178,7 +223,8 @@
                         transition: all 1.0s ease;
                         cursor: pointer;
                     }
-                    &:not(hover){
+
+                    &:not(hover) {
                         background-color: #82a3d4;
                         color: #fff;
                         background-position: 0.75em bottom;

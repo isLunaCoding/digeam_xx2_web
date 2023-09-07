@@ -39,8 +39,8 @@
                         <a href="#"><img src="/img/event/wiki/LOGO.png"></a>
 
                         <div class="serch">
-                            <form id="serchForm" action=".php" method="post">
-                                <input type="text" name="serch" placeholder="搜尋...">
+                            <form id="serchForm" action="" method="GET">
+                                <input type="text" name="keyword" placeholder="搜尋...">
                             </form>
                         </div>
 
@@ -100,11 +100,28 @@
                     </menu>
                     <div class="rightBox">
                         <div class="mainTextBox">
-                            <div class="title">{{ $page['title'] }}</div>
-                            <div class="line"></div>
-                            <div class="text">{!! $page['content'] !!}</div>
-                            {{-- <button class="continueBtn" onclick="location.href='#'">繼續閱讀 →</button> --}}
+                            @if ($type == 'content')
+                                <div class="title">{{ $page['title'] }}</div>
+                                <div class="line"></div>
+                                <div class="text">{!! $page['content'] !!}</div>
+                            @endif
+                            @if ($type == 'search' && count($result) != 0)
+                                @for ($i = 0; $i < count($result); $i++)
+                                    <div class="title">{{ $result[$i]['title'] }}</div>
+                                    <div class="line"></div>
+                                    <div class="text2">{!! $result[$i]['content'] !!}</div>
+                                    <button class="continueBtn"
+                                        onclick="location.href='{{ route('wiki', $result[$i]['id']) }}'">繼續閱讀
+                                        →</button>
+                                @endfor
+                            @endif
+                            @if ($type == 'search' && count($result) == 0)
+                                <div class="title">找不到</div>
+                                <div class="line"></div>
+                                <div class="text2">抱歉，沒東西符合你的搜尋條件。請試試其他不同關鍵字。</div>
+                            @endif
                         </div>
+
                         <footer class="footer">
                             <div class="footerBox">
                                 <div class="footerbox_logo">
