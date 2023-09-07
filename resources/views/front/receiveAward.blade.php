@@ -296,5 +296,4 @@
 
 @section('script')
     <script src="/js/event/homepage/receive.js"></script>
-    <script src="/js/event/homepage/receiveChangePage.js"></script>
 @endsection
