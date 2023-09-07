@@ -36,6 +36,9 @@
         line-height: 20px;
         font-weight: 600;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -123,18 +126,21 @@
         margin-right: 10px;
     }
 
-    .page-item {
+    .page-item , .page-goto {
 
         font-size: 16px;
         padding: 8px;
         text-decoration: none;
+        cursor: pointer;
 
         &.disabled {
             font-size: 16px;
             padding: 8px;
             text-decoration: none;
+            cursor: default;
 
             .page-link {
+                cursor: default;
                 color: #728dcc;
             }
         }
@@ -144,8 +150,10 @@
             font-size: 16px;
             padding: 8px;
             text-decoration: none;
-
+            cursor: default;
+            
             .page-link {
+                cursor: default;
                 color: #728dcc;
             }
         }
@@ -305,7 +313,7 @@
                             border-right: #002578 1px solid;
                         }
 
-                        &:last-child {
+                        &:last-child ,&:nth-last-child(2) {
                             text-align: center;
                         }
 

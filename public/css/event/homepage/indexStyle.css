@@ -426,9 +426,8 @@ body {
 .section1 .sectionBG .container .swiper .slick-dots {
   position: absolute;
   bottom: 0px;
-  left: 50%;
-  transform: translate(-50%);
   display: flex;
+  justify-content: center;
 }
 .section1 .sectionBG .container .swiper .slick-dots li button {
   scale: 0.5;

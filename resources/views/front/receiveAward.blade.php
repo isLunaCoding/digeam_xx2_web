@@ -34,62 +34,34 @@
             <select name="year" id="year">
                 <option value="0" selected>&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                 <?php
-                    $nowyear = date('Y');
-                    for ($i=2023;$i<=$nowyear+1;$i++) {
-                ?>
+                        $nowyear = date('Y');
+                        for ($i=2023;$i<=$nowyear+1;$i++) {
+                    ?>
                 <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                 <?php
-                    }
-                ?>
+                        }
+                    ?>
             </select>
             <select name="month" id="month">
                 <option value="0" selected>&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                 <?php
-                    for ($i=1;$i<=12;$i++) {
-                ?>
+                        for ($i=1;$i<=12;$i++) {
+                    ?>
                 <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                 <?php
-                    }
-                ?>
+                        }
+                    ?>
             </select>
             <a href="javascript:keywordWall();" class="submit" type="submit">搜尋</a>
-
         </div>
-
     </div>
+
     <div class="awardTitleBox">
         <div class="actionName">活動名稱</div>
         <div class="actionTime">領獎時間</div>
     </div>
     <div class="awardTitleContent">
         <ul class="awardList">
-            {{-- <li>
-                <a href="#boxDown" onclick="show_cont(1)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱1</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(2)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱2</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li>
-            <li>
-                <a href="#boxDown" onclick="show_cont(3)" class="normal">
-                    <div class="awardTextBox">
-                        <div class="awardTextTitle">8/11 ~ 8/31 活動名稱3</div>
-                        <div class="awardTextTime">2023/08/21 ~ 2023/09/01</div>
-                    </div>
-                </a>
-                <div class="awardLine"></div>
-            </li> --}}
         </ul>
     </div>
     <nav>
@@ -106,7 +78,6 @@
             <div class="actionTitle show_title"></div>
             <div class="boxBG">
                 <div class="playerInfo">
-
                     @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
                         <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
                             <input type="hidden" name="return_url" id="return_url"

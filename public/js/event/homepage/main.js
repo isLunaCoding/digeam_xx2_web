@@ -52,17 +52,19 @@ $(".newsTab .newsBtn").on("click", function () {
     $(".newsContainer .text").hide();
     $(".text" + this.dataset.news + "").show();
 });
+
+
 // section1 BN輪播
-// $(document).ready(function(){
-//     $('.swiper').slick({
-//         dots: true,
-//         arrows:false,
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         autoplaySpeed: 2000,
-//     });
-// });
+$(document).ready(function(){
+    $('.swiper').slick({
+        dots: true,
+        arrows:false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+});
 
 
 

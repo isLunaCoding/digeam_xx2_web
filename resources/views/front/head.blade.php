@@ -39,7 +39,7 @@
     <div class="wrap">
         <div class="main">
 
-    
+
             <div class="mask" id="pop1">
                 <div class="popBG">
                     <button onclick="_close()" class="popX">X</button>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="section1">
                 <header class="logo"><img src="/img/event/homepage/LOGO.png"></header>
                 <div class="navBox">
@@ -64,14 +64,14 @@
                     <nav>
                         <ul class="menuBox">
                             <li class="menu menu1" data-menuaction="menu1_open">
-                                <a href="">遊戲公告</a>
+                                <a href={{ route('announcement') }}>遊戲公告</a>
                                 <ul class="menu1_open">
-                                    <li><a href="">最新消息</a></li>
-                                    <li><a href="">活動情報</a></li>
-                                    <li><a href="">系統公告</a></li>
+                                    <li><a href={{ route('announcement', 'new') }}>最新消息</a></li>
+                                    <li><a href={{ route('announcement', 'activity') }}>活動情報</a></li>
+                                    <li><a href={{ route('announcement', 'system') }}>系統公告</a></li>
                                 </ul>
                             </li>
-                            <li class="menu menu2"><a href="">遊戲百科</a></li>
+                            <li class="menu menu2"><a href={{ route('wiki') }}>遊戲百科</a></li>
                             <li class="menu menu3" data-menuaction="menu3_open">
                                 <a href="">玩家社群</a>
                                 <ul class="menu3_open">
@@ -80,19 +80,19 @@
                                 </ul>
                             </li>
                             {{-- <li class="menu menu4"><a href="">排行榜</a></li> --}}
-                            <li class="menu menu5"><a href="">下載專區</a></li>
+                            <li class="menu menu5"><a href={{ route('download') }}>下載專區</a></li>
                             <li class="menu menu6" data-menuaction="menu6_open">
                                 <a href="">會員中心</a>
                                 <ul class="menu6_open">
-                                    <li><a href="">註冊會員</a></li>
-                                    <li><a href="">停權名單</a></li>
-                                    <li><a href="">FAQ</a></li>
-                                    <li><a href="">遊戲規章</a></li>
-                                    <li><a href="">聯繫客服</a></li>
-                                    <li><a href="">領獎專區</a></li>
+                                    <li><a href="https://www.digeam.com/register">註冊會員</a></li>
+                                    <li><a href={{ route('suspension') }}>停權名單</a></li>
+                                    <li><a href="https://www.digeam.com/cs/faq">FAQ</a></li>
+                                    <li><a href={{ route('regulations') }}>遊戲規章</a></li>
+                                    <li><a href="https://www.digeam.com/cs">聯繫客服</a></li>
+                                    <li><a href={{ route('reward') }}>領獎專區</a></li>
                                 </ul>
                             </li>
-                            <li class="menu menu7 "><a href="">儲值中心</a></li>
+                            <li class="menu menu7 "><a href="https://www.digeam.com/member/billing">儲值中心</a></li>
                         </ul>
                     </nav>
                     <nav class="iconBox">
@@ -107,11 +107,11 @@
                     @yield('section1Container')
                 </div>
             </div>
-    
+
             @yield('section2')
             @yield('section3')
             @yield('sectionPage')
-    
+
             <footer class="footer">
                 <div class="footerBox">
                     <div class="footerbox_logo">
