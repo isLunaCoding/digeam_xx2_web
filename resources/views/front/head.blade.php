@@ -38,6 +38,10 @@
 <body>
     <div class="wrap">
         <div class="main">
+            <div id="loading">
+                <p>頁面加載中，請稍等</p>
+                <div class="spinner"></div>
+            </div>
 
 
             <div class="mask" id="pop1">
@@ -46,12 +50,6 @@
                     <div class="popBox">
                         <div class="popTitle">技能介紹</div>
                         <div class="popContainer">
-                            {{-- <div class="title">
-                                <img src="/img/event/homepage/skill_icon/char_skill3_1.png">
-                                致命投擲
-                            </div>
-                            <div class="text">蓄勢後向選中目標投擲一把飛斧，造成致命的打擊。飛斧有60%的機率對目標造成割裂效果，使其受到的傷害提高5%，並每秒損失一定生命值，持續5秒</div>
-                            <div class="line"></div> --}}
                         </div>
                     </div>
                 </div>

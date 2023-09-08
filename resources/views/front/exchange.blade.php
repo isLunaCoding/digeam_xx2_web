@@ -26,25 +26,25 @@
 
 {{-- 內文 --}}
 @section('textBox')
-<div class="exchangePlayerInfo">
-    <p class="account">Hi,<span>xx2digeam18</span></p>
-    <button class="logout">登出</button>
-    {{-- <p class="account">Hi,請先登入帳號<span></span></p>
+    <div class="exchangePlayerInfo">
+        <p class="account">Hi,<span>xx2digeam18</span></p>
+        <button class="logout">登出</button>
+        {{-- <p class="account">Hi,請先登入帳號<span></span></p>
     <button class="login">登入</button> --}}
-</div>
+    </div>
 
-    <form id="exchangeForm" action="process1.php" method="post">
+    <div id="exchangeForm">
         <select name="server" id="server">
             <option value="" disabled selected>伺服器</option>
             <option value="1899">1899</option>
         </select>
         <select name="character" id="character">
             <option value="" disabled selected>角色名稱</option>
-            {{-- <option value="123">123</option> --}}
+            <option value="123">123</option>
         </select>
         <input type="text" name="serial_num" id="serial_num" placeholder="請輸入活動序號">
         <button class="submit" type="submit" onclick="ex_submit()">兌換</button>
-    </form>
+    </div>
 
     <div class="exchangeLine"></div>
     <div class="exchangePoint">
