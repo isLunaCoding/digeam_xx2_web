@@ -36,7 +36,7 @@ Route::get('/reward', function () {
 // 序號兌換
 Route::get('/exchange', function () {
     return view('front/exchange');
-});
+})->name('exchange');
 // 下載
 Route::get('/download', function () {
     return view('front.download');

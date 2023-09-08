@@ -90,6 +90,7 @@
                                     <li><a href={{ route('regulations') }}>遊戲規章</a></li>
                                     <li><a href="https://www.digeam.com/cs">聯繫客服</a></li>
                                     <li><a href={{ route('reward') }}>領獎專區</a></li>
+                                    <li><a href={{ route('exchange') }}>序號兌換</a></li>
                                 </ul>
                             </li>
                             <li class="menu menu7 "><a href="https://www.digeam.com/member/billing">儲值中心</a></li>

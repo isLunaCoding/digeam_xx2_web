@@ -36,7 +36,7 @@
     <form id="exchangeForm" action="process1.php" method="post">
         <select name="server" id="server">
             <option value="" disabled selected>伺服器</option>
-            <option value="1801">1801</option>
+            <option value="1899">1899</option>
         </select>
         <select name="character" id="character">
             <option value="" disabled selected>角色名稱</option>

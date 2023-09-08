@@ -18,9 +18,9 @@ class CreateSerialNumber extends Migration
             $table->string('type');
             $table->string('number');
             $table->string('status');
-            $table->string('user_id');
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->string('user_id')->nullable();
+            $table->dateTime('start_date')->nullable();
+            $table->dateTime('end_date')->nullable();
             $table->timestamps();
         });
     }
