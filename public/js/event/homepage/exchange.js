@@ -7,8 +7,8 @@ var serial_num = $('#serial_num');
 var exchangeForm = $('#exchangeForm');
 var selectServer = $('#server');
 var selectCharacter = $('#character');
-var optionServer ='';
-var optionCharacter ='';
+var optionServer ='0';
+var optionCharacter ='0';
 var optionCharacterName ='';
 var serial_text = '';
 
@@ -26,11 +26,6 @@ serial_num.change(function(){
 })
 
 
-var resExC = {
-    status:1,
-
-}
-
 
 function exchange_get_char(){
     console.log(optionServer);
@@ -39,9 +34,8 @@ function exchange_get_char(){
         type : 'char',
         user_id : $('.account span').text(),
         sever_id:optionServer
-    },function(_res){
+    },function(res){
         // let res = resExC;
-        let res = JSON.parse(_res);
 
         if ( res.status == -99 ){
             alert('請先登入帳號')
@@ -56,12 +50,6 @@ function exchange_get_char(){
 
 
 
-
-
-var resEx = {
-    status:1,
-
-}
 
 
 function ex_submit(){
@@ -85,9 +73,8 @@ function get_exchange(){
         charid:optionCharacter,
         char_name:optionCharacterName
         
-    },function(_res){
+    },function(res){
         // let res = resEx;
-        let res = JSON.parse(_res);
         if( res.status == -99 ){
             alert('序號錯誤')
         }else if( res.status == -98 ){
