@@ -96,3 +96,8 @@ function get_exchange() {
         }
     );
 }
+
+
+function logout_dg() {
+    $("#logout-form").submit();
+}

@@ -27,10 +27,20 @@
 {{-- 內文 --}}
 @section('textBox')
     <div class="exchangePlayerInfo">
-        <p class="account">Hi,<span>xx2digeam18</span></p>
-        <button class="logout">登出</button>
-        {{-- <p class="account">Hi,請先登入帳號<span></span></p>
-    <button class="login">登入</button> --}}
+        @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
+            <p class="account">Hi,<span>{{ $_COOKIE['StrID'] }}</span></p>
+            <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
+                <input type="hidden" name="return_url" id="return_url"
+                    value={{ base64_encode('https://xx2.digeam.com/exchange') }}>
+            </form>
+            <button class="logout" onclick="logout_dg()">登出</button>
+        @else
+            <p class="account">Hi,請先登入帳號<span></span></p>
+            <a href="https://digeam.com/login">
+                <button class="login">登入</button>
+            </a>
+        @endif
+
     </div>
 
     <div id="exchangeForm">
