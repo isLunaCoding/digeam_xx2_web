@@ -1,0 +1,74 @@
+@keyframes p2_tab {
+    0%{
+        rotate: 0deg;
+    }
+    12.5%{
+        rotate: 1deg;
+    }
+    25%{
+        rotate: 0deg;
+    }
+    37.5%{
+        rotate: -1deg;
+    }
+    50%{
+        rotate: 0deg;
+    }
+    62.5%{
+        rotate: 0.5deg;
+    }
+    75%{
+        rotate: 0deg;
+    }
+    87.5%{
+        rotate: -0.5deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes p3_gift_light{
+    0%,100%{
+        filter: none;
+    }
+    50%{
+        filter: drop-shadow(0 0 5px #fff9bc);
+    }
+}
+
+@keyframes p3_gift3_view{
+    0%,50%{
+        background-image: url(/img/event/CBT/p3/gift3_view1.png);
+    }
+    51%,100%{
+        background-image: url(/img/event/CBT/p3/gift3_view2.png);
+    }
+}
+
+@keyframes p3_gift3_view_m{
+    0%,50%{
+        background-image: url(/img/event/CBT/p3/gift3_view1_m.png);
+    }
+    51%,100%{
+        background-image: url(/img/event/CBT/p3/gift3_view2_m.png);
+    }
+}
+
+@keyframes p4_iphone{
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes p4_iphone2{
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}

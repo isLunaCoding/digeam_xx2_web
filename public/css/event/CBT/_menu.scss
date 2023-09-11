@@ -1,0 +1,328 @@
+.menubar{
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
+    height: 75px;
+    background-color: rgba(10, 24, 45, 0.5);
+
+    @include xl(){
+        height: 65px;
+    }
+
+    @include md(){
+        height: 50px;
+    }
+
+    @include sm(){
+        right: -100%;
+        height: 100%;
+        background-color: rgba(10, 24, 45, 0.9);
+    }
+
+    .menu_wrap{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        @include sm(){
+            height: 85%;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .xx2_logo{
+            width: 20%;
+            height: 100%;
+            background: no-repeat center center / contain;
+            background-image: url(/img/event/CBT/p0/bar/xx2LOGO.png);
+            top: 50%;
+            translate: 0 -50%;
+            cursor: pointer;
+    
+            & a{
+                width: 100%;
+                height: 100%;
+            }
+    
+            @include sm(){
+                width: 40%;
+                height: 10%;
+                left: 50%;
+                top: 2vh;
+                translate: -50% 0;
+            }
+        }
+    
+        .menubtns{
+            width: 50%;
+            height: 85%;
+            display: flex;
+            top: 50%;
+            translate: 0 -50%;
+    
+            @include sm(){
+                display: block;
+                width: 30%;
+                height: 60%;
+                margin: auto;
+                top: 0;
+                translate: 0 0;
+            }
+    
+            @include xxs(){
+                width: 50%;
+            }
+    
+    
+            .btn1{
+                background-image: url(/img/event/CBT/p0/bar/menubtn1.png);
+    
+                @include sm(){
+                    background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn1m.png);
+    
+                    &:hover{
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn1m_hover.png);
+                    }
+                }
+    
+                &:hover{
+                    background-image: url(/img/event/CBT/p0/bar/menubtn1_hover.png);
+    
+                    @include sm(){
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn1m_hover.png);
+                    }
+                }
+            }
+            
+            .btn2{
+                background-image: url(/img/event/CBT/p0/bar/menubtn2.png);
+    
+                @include sm(){
+                    background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn2m.png);
+    
+                    &:hover{
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn2m_hover.png);
+                    }
+                }
+    
+                &:hover{
+                    background-image: url(/img/event/CBT/p0/bar/menubtn2_hover.png);
+    
+                    @include sm(){
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn2m_hover.png);
+                    }
+                }
+            }
+            
+            .btn3{
+                background-image: url(/img/event/CBT/p0/bar/menubtn3.png);
+    
+                @include sm(){
+                    background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn3m.png);
+    
+                    &:hover{
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn3m_hover.png);
+                    }
+                }
+    
+                &:hover{
+                    background-image: url(/img/event/CBT/p0/bar/menubtn3_hover.png);
+    
+                    @include sm(){
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn3m_hover.png);
+                    }
+                }
+            }
+            
+            .btn4{
+                background-image: url(/img/event/CBT/p0/bar/menubtn4.png);
+    
+                @include sm(){
+                    background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn4m.png);
+    
+                    &:hover{
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn4m_hover.png);
+                    }
+                }
+    
+                &:hover{
+                    background-image: url(/img/event/CBT/p0/bar/menubtn4_hover.png);
+    
+                    @include sm(){
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn4m_hover.png);
+                    }
+                }
+            }
+            
+            .btn5{
+                background-image: url(/img/event/CBT/p0/bar/menubtn5.png);
+    
+                @include sm(){
+                    background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn5m.png);
+    
+                    &:hover{
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn5m_hover.png);
+                    }
+                }
+    
+                &:hover{
+                    background-image: url(/img/event/CBT/p0/bar/menubtn5_hover.png);
+    
+                    @include sm(){
+                        background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn5m_hover.png);
+                    }
+                }
+            }
+    
+            & div{
+                width: 20%;
+                height: 100%;
+                background: no-repeat center center / cover;
+                cursor: pointer;
+                transition: 0.3s;
+    
+                @include sm(){
+                    width: 100%;
+                    height: 20%;
+                    background: no-repeat center center / contain;
+                }
+    
+                & a{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    
+        .social_link{
+            width: 20%;
+            height: 80%;
+            top: 50%;
+            translate: 0 -50%;
+            display: flex;
+            justify-content: flex-end;
+    
+            @include sm(){
+                width: 30%;
+                margin: auto;
+                height: 10%;
+                top: 0%;
+                translate: 0 -100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+    
+            @include xxs(){
+                width: 40%;
+            }
+    
+            & div{
+                width: 20%;
+                height: 100%;
+                background: no-repeat center center / contain;
+                cursor: pointer;
+                transition: 0.3s;
+    
+                & a{
+                    width: 100%;
+                    height: 100%;
+                }
+    
+                &:hover{
+                    transform: translateY(-3px);
+    
+                    @include sm(){
+                        transform: translateY(0px);
+    
+                    }
+                }
+            }
+
+            // 已登入
+            .login{
+                width: 60%;
+                height: 100%;
+                cursor: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-evenly;
+
+                @include sm(){
+                    width: 100%;
+                    align-items: center;
+                }
+
+                & p{
+                    color: #FFF;
+                    font-size: 15px;
+                    text-align: right;
+
+                    @include sm(){
+                        text-align: center;
+                    }
+
+                    & span{
+                        color: #FFF;
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+
+                }
+
+                .logoutbtn{
+                    color: #0c2845;
+                    background-color: #FFF;
+                    border: none;
+                    cursor: pointer;
+                }
+                
+                &:hover{
+                    transform: none;
+                }
+            }
+    
+            // 未登入
+            .loginbtn{
+                background-image: url(/img/event/CBT/p0/bar/login.png);
+            }
+    
+            .DC_link{
+                background-image: url(/img/event/CBT/p0/bar/DCicon.png);
+            }
+    
+            .FB_link{
+                background-image: url(/img/event/CBT/p0/bar/FBicon.png);
+            }
+        }
+    }
+}
+
+.menubarbtn{
+    position: fixed;
+    z-index: 99;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    scale: 1.2;
+    display: none;
+
+    @include sm(){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    @include xxs(){
+        scale: 1;
+    }
+
+    .line1,.line2,.line3{
+        margin: auto;
+        width: 80%;
+        height: 3px;
+        background-color: #FFF;
+    }
+}

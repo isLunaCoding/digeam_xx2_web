@@ -1,0 +1,99 @@
+$xxxl-media: 1600px;
+$xxl-media: 1440px;
+$xl-media: 1240px;
+$lg-media: 1024px;
+$md-media: 960px;
+$sm-media: 768px;
+$sm2-media: 640px;
+$xs-media: 560px;
+$xxs-media: 480px;
+$xxs2-media: 400px;
+$xxs3-media: 390px;
+$xxs4-media: 370px;
+$xxxs-media: 360px;
+$xxxxs-media: 320px;
+
+
+@mixin xxxl() {
+    @media all and (max-width: $xxxl-media) {
+        @content;
+    }
+}
+
+@mixin xxl() {
+    @media all and (max-width: $xxl-media) {
+        @content;
+    }
+}
+
+@mixin xl() {
+    @media all and (max-width: $xl-media) {
+        @content;
+    }
+}
+
+@mixin lg() {
+    @media all and (max-width: $lg-media) {
+        @content;
+    }
+}
+
+@mixin md() {
+    @media all and (max-width: $md-media) {
+        @content;
+    }
+}
+
+@mixin sm() {
+    @media all and (max-width: $sm-media) {
+        @content;
+    }
+}
+
+@mixin sm2() {
+    @media all and (max-width: $sm2-media) {
+        @content;
+    }
+}
+
+@mixin xs() {
+    @media all and (max-width: $xs-media) {
+        @content;
+    }
+}
+
+@mixin xxs() {
+    @media all and (max-width: $xxs-media) {
+        @content;
+    }
+}
+
+@mixin xxs2() {
+    @media all and (max-width: $xxs2-media) {
+        @content;
+    }
+}
+
+@mixin xxs3() {
+    @media all and (max-width: $xxs3-media) {
+        @content;
+    }
+}
+
+@mixin xxs4() {
+    @media all and (max-width: $xxs4-media) {
+        @content;
+    }
+}
+
+@mixin xxxs() {
+    @media all and (max-width: $xxxs-media) {
+        @content;
+    }
+}
+
+@mixin xxxxs() {
+    @media all and (max-width: $xxxxs-media) {
+        @content;
+    }
+}
