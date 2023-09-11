@@ -8,27 +8,41 @@
     width: 800px;
     margin: 60px auto 0;
 
-    .btnBox {
+    .btnBox1, .btnBox2 {
         display: flex;
-        justify-content: space-between;
+        margin-bottom: 30px;
 
         .downloadBtn {
-            width: 260px;
             height: 60px;
             font-size: 25px;
             font-family: "微軟正黑";
-            background-color: #234fac;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-
+            
             &:hover {
                 border: 2px solid #234fac;
                 background-color: #fff;
                 color: #234fac;
                 transition: all .2s ease;
             }
+        }
+    }
+    .btnBox1{
+        justify-content: center;
+        .downloadBtn {
+            background-color: #052d83;
+            width: 200px;
+        }
+    }
+    .btnBox2{
+        justify-content: space-between;
+        .downloadBtn {
+            background-color: #234fac;
+            width: 150px;
+            text-align: center;
+            line-height: 25px;
         }
     }
 
