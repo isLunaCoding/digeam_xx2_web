@@ -20,10 +20,7 @@
     <meta property="og:url" content="">{{-- 官網連結 --}}
     <meta property="og:title" content="">
     <meta property="article:author" content="https://www.facebook.com">
-
-    {{-- 連結縮圖 --}}
-    @yield('thumbnail')
-
+    <meta property="og:image" content="/img/event/homepage/thumbnail_1200x628.jpg" />
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -38,10 +35,12 @@
 <body>
     <div class="wrap">
         <div class="main">
-            <div id="loading">
-                <p>頁面加載中，請稍等</p>
-                <div class="spinner"></div>
-            </div>
+            {{-- <div id="loading">
+                <div class="loadBox">
+                    <p>頁面加載中，請稍等</p>
+                    <div class="spinner"></div>
+                </div>
+            </div> --}}
 
 
             <div class="mask" id="pop1">

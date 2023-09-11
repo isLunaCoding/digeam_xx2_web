@@ -1,10 +1,10 @@
-$(document).ready(function() {
-    $("#loading").show();
+// $(document).ready(function() {
+//     $("#loading").show();
     
-    $(window).on('load', function() {
-        $("#loading").hide();
-    });
-});
+//     $(window).on('load', function() {
+//         $("#loading").hide();
+//     });
+// });
 
 
 
