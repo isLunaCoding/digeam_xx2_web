@@ -21,6 +21,9 @@ Route::middleware(['setReturnUrl'])->group(function () {
     Route::get('/prereg', function () {
         return view('event/prereg_index');
     });
+
+    // CBT
+    Route::get('/CBT', 'front\CBTController@index');
 });
 
 // 官網
