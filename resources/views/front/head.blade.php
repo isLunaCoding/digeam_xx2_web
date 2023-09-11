@@ -38,11 +38,12 @@
 <body>
     <div class="wrap">
         <div class="main">
-            <div id="loading">
-                <p>頁面加載中，請稍等</p>
-                <div class="spinner"></div>
-            </div>
-
+            {{-- <div id="loading">
+                <div class="loadBox">
+                    <p>頁面加載中，請稍等</p>
+                    <div class="spinner"></div>
+                </div>
+            </div> --}}
 
             <div class="mask" id="pop1">
                 <div class="popBG">

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSerialNumber extends Migration
+class CreateSerialItem extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateSerialNumber extends Migration
      */
     public function up()
     {
-        Schema::create('serial_number', function (Blueprint $table) {
+        Schema::create('serial_item', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->string('number');
-            $table->string('status');
-            $table->string('user_id')->nullable();
-            $table->string('user_ip')->nullable();
+            $table->integer('cate_id');
+            $table->integer('item_code')->nullable();
+            $table->string('item_name');
+            $table->integer('itemcnt')->default(1);
+            $table->integer('isbind')->default(1);
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateSerialNumber extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('serial_number');
+        Schema::dropIfExists('serial_item');
     }
 }

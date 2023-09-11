@@ -32,12 +32,14 @@ class SerialNumberCateController extends AdminController
         $grid->column('type', __('前贅詞'));
         $grid->column('all_for_one', __('種類'))->using(['N' => '一組序號一人用', 'Y' => '一組序號多人用']);
         $grid->column('count', __('序號產出數量'));
-        $grid->column('remainder', __('剩餘次數(多人用)'))->display(function () {
+        $grid->column('remainder', __('可兌換次數(剩餘數量)'))->display(function () {
             $cate = serial_number_cate::where('type', $this->type)->first();
             if ($cate->all_for_one == 'N') {
                 return '';
             } else {
-                return $cate->remainder;
+                $used = serial_number::where('type', $this->type)->count();
+                $not_use = $cate->remainder - $used + 1;
+                return $cate->remainder . "(" . $not_use . ")";
             }
         });
 
@@ -86,7 +88,7 @@ class SerialNumberCateController extends AdminController
         $form->text('type', __('前贅詞'));
         $form->select('all_for_one', __('狀態'))->options(['N' => '一組序號一人用', 'Y' => '一組序號多人用'])->default('N');
         $form->number('count', __('序號產出數量'))->default(1);
-        $form->number('remainder', __('序號可用次數'))->default(0);
+        $form->number('remainder', __('序號可用次數'))->default(1);
         $form->datetime('start_date', __('開始日期'));
         $form->datetime('end_date', __('結束日期'));
 
@@ -135,7 +137,7 @@ class SerialNumberCateController extends AdminController
             }
             //可兌換次數檢查
             if ($form->all_for_one == 'N') {
-                if ($form->remainder != 0) {
+                if ($form->remainder != 1) {
                     $error = new MessageBag([
                         'title' => '錯誤',
                         'message' => '一組一人序號可用次數為"0"',

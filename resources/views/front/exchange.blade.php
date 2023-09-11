@@ -40,7 +40,6 @@
         </select>
         <select name="character" id="character">
             <option value="" disabled selected>角色名稱</option>
-            <option value="123">123</option>
         </select>
         <input type="text" name="serial_num" id="serial_num" placeholder="請輸入活動序號">
         <button class="submit" type="submit" onclick="ex_submit()">兌換</button>

@@ -251,7 +251,6 @@ body {
 }
 
 #loading {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -261,15 +260,20 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1200;
-  display: flex;
 }
-#loading p {
+#loading .loadBox {
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#loading .loadBox p {
   font-size: 20px;
   margin-right: 20px;
   color: #002750;
   font-weight: 600;
 }
-#loading .spinner {
+#loading .loadBox .spinner {
   border: 4px solid rgba(255, 255, 255, 0.3);
   border-top: 4px solid #007bff; /* Loading 图标的颜色 */
   border-radius: 50%;

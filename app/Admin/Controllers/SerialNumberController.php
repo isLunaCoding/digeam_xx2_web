@@ -28,14 +28,15 @@ class SerialNumberController extends AdminController
         $explodeURL = explode('/', URL::current());
         $count = Count($explodeURL);
         $grid = new Grid(new serial_number());
+        
         $grid->model()
             ->where('type', $explodeURL[$count - 2])
-            ->orderBy('status', 'asc');
+            ->orderBy('status', 'desc');
+
         $grid->column('number', __('序號'));
         $grid->column('status', __('狀態'))->using(['N' => '未使用', 'Y' => '已使用']);
         $grid->column('user_id', __('使用帳號'));
-        $grid->column('start_date', __('開始日期'));
-        $grid->column('end_date', __('結束日期'));
+        $grid->column('updated_at', __('更新時間'))->date('Y-m-d');
 
         $grid->disableRowSelector();
         $grid->disableExport();
