@@ -213,25 +213,24 @@
   font-weight: 600;
   cursor: pointer;
 }
-.boxDown .awardActionContent .playerInfo .logout {
+.boxDown .awardActionContent .playerInfo .logout, .boxDown .awardActionContent .playerInfo .login {
   width: 66px;
   height: 29px;
   font-size: 20px;
   color: #fff;
-  background-color: #94a7d7;
-  border: 1px solid #94a7d7;
   margin-left: 200px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxDown .awardActionContent .playerInfo .logout {
+  background-color: #94a7d7;
+  border: 1px solid #94a7d7;
 }
 .boxDown .awardActionContent .playerInfo .login {
-  width: 66px;
-  height: 29px;
-  font-size: 20px;
-  color: #fff;
   background-color: #153d97;
   border: 1px solid #153d97;
-  margin: 0 auto;
-  cursor: pointer;
 }
 .boxDown .awardActionContent .actionInfo {
   margin-top: 20px;

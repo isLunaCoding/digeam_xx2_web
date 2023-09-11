@@ -27,10 +27,15 @@
 {{-- 內文 --}}
 @section('textBox')
     <div class="downloadBox">
-        <div class="btnBox">
+        <div class="btnBox1">
             <a href="" class="downloadBtn">下載器</a>
-            <a href="" class="downloadBtn">官網下載-part1</a>
-            <a href="" class="downloadBtn">官網下載-part2</a>
+        </div>
+        <div class="btnBox2">
+            <a href="" class="downloadBtn">官網下載_1</a>
+            <a href="" class="downloadBtn">官網下載_2</a>
+            <a href="" class="downloadBtn">官網下載_3</a>
+            <a href="" class="downloadBtn">官網下載_4</a>
+            <a href="" class="downloadBtn">官網下載_5</a>
         </div>
         <br>
         <br>

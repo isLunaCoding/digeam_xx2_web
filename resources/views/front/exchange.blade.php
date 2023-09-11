@@ -26,25 +26,34 @@
 
 {{-- 內文 --}}
 @section('textBox')
-<div class="exchangePlayerInfo">
-    <p class="account">Hi,<span>xx2digeam18</span></p>
-    <button class="logout">登出</button>
-    {{-- <p class="account">Hi,請先登入帳號<span></span></p>
-    <button class="login">登入</button> --}}
-</div>
+    <div class="exchangePlayerInfo">
+        @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
+            <p class="account">Hi,<span>{{ $_COOKIE['StrID'] }}</span></p>
+            <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
+                <input type="hidden" name="return_url" id="return_url"
+                    value={{ base64_encode('https://xx2.digeam.com/exchange') }}>
+            </form>
+            <button class="logout" onclick="logout_dg()">登出</button>
+        @else
+            <p class="account">Hi,請先登入帳號<span></span></p>
+            <a href="https://digeam.com/login">
+                <button class="login">登入</button>
+            </a>
+        @endif
 
-    <form id="exchangeForm" action="process1.php" method="post">
+    </div>
+
+    <div id="exchangeForm">
         <select name="server" id="server">
             <option value="" disabled selected>伺服器</option>
-            <option value="1801">1801</option>
+            <option value="1899">1899</option>
         </select>
         <select name="character" id="character">
             <option value="" disabled selected>角色名稱</option>
-            {{-- <option value="123">123</option> --}}
         </select>
         <input type="text" name="serial_num" id="serial_num" placeholder="請輸入活動序號">
         <button class="submit" type="submit" onclick="ex_submit()">兌換</button>
-    </form>
+    </div>
 
     <div class="exchangeLine"></div>
     <div class="exchangePoint">
