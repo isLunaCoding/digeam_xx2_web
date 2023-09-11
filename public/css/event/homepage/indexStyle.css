@@ -167,6 +167,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -625,6 +626,10 @@ body {
   width: 1458px;
   display: flex;
   align-items: center;
+  animation-duration: 0.5s;
+  animation-name: fade-in-right;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .section2 .sectionBG .charBox .cha .textBox {
   width: 550px;
@@ -661,11 +666,21 @@ body {
 }
 @keyframes fade-in-left {
   0% {
-    left: -100px;
+    left: -200px;
     opacity: 0;
   }
   100% {
     left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  100% {
+    right: 0px;
     opacity: 1;
   }
 }
