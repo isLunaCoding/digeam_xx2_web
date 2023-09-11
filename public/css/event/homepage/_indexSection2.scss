@@ -65,6 +65,10 @@
                 width: 1458px;
                 display: flex;
                 align-items: center;
+                animation-duration: .5s;
+                animation-name: fade-in-right;
+                opacity: 0;
+                animation-fill-mode:forwards ;
 
                 .textBox {
                     width: 550px;
@@ -81,6 +85,7 @@
                         margin-top: 40px;
                     }
 
+
                     .skillInt {
                         margin-top: 25px;
                         background-color: #3c68c3;
@@ -93,6 +98,34 @@
                         text-align: center;
                         vertical-align: middle;
                         cursor: pointer;
+                    }
+
+                    img , p , .skillInt {
+                        animation-duration: .5s;
+                        animation-name: fade-in-left;
+                        opacity: 0;
+                        animation-fill-mode:forwards ;
+                    }
+
+                    @keyframes fade-in-left {
+                        0%{
+                            left: -200px;
+                            opacity: 0;
+                        }
+                        100%{
+                            left: 0px;
+                            opacity: 1;
+                        }
+                    }
+                    @keyframes fade-in-right {
+                        0%{
+                            right: -100px;
+                            opacity: 0;
+                        }
+                        100%{
+                            right: 0px;
+                            opacity: 1;
+                        }
                     }
                 }
             }

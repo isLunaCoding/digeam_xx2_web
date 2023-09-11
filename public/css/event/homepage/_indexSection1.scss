@@ -105,9 +105,10 @@
                 .slick-dots{
                     position: absolute;
                     bottom: 0px;
-                    left: 50%;
-                    transform: translate(-50%);
+                    // left: 50%;
+                    // transform: translate(-50%);
                     display: flex;
+                    justify-content: center;
                     li {
                         button{
                             scale: .5;

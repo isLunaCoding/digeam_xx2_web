@@ -167,6 +167,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -228,6 +229,21 @@ body {
     opacity: 0;
   }
 }
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  margin: 0 auto;
+  background-image: linear-gradient(#fff, #d2e2ff);
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+  width: 1920px;
+}
+
 .logo {
   position: absolute;
   top: 242px;
@@ -235,12 +251,52 @@ body {
   z-index: 1;
 }
 
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+}
+#loading .loadBox {
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#loading .loadBox p {
+  font-size: 20px;
+  margin-right: 20px;
+  color: #002750;
+  font-weight: 600;
+}
+#loading .loadBox .spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #007bff; /* Loading 图标的颜色 */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .navBox {
   font-size: 22.5px;
   font-weight: 500;
   background: linear-gradient(rgba(0, 21, 98, 0.7450980392), rgba(8, 57, 154, 0.7960784314));
   height: 80px;
-  width: 1920px;
+  width: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -274,9 +330,11 @@ body {
 }
 .navBox nav .menuBox .menu6 .menu1_open,
 .navBox nav .menuBox .menu6 .menu3_open,
-.navBox nav .menuBox .menu6 .menu6_open, .navBox nav .menuBox .menu1 .menu1_open,
+.navBox nav .menuBox .menu6 .menu6_open,
+.navBox nav .menuBox .menu1 .menu1_open,
 .navBox nav .menuBox .menu1 .menu3_open,
-.navBox nav .menuBox .menu1 .menu6_open, .navBox nav .menuBox .menu3 .menu1_open,
+.navBox nav .menuBox .menu1 .menu6_open,
+.navBox nav .menuBox .menu3 .menu1_open,
 .navBox nav .menuBox .menu3 .menu3_open,
 .navBox nav .menuBox .menu3 .menu6_open {
   display: none;
@@ -284,9 +342,11 @@ body {
 }
 .navBox nav .menuBox .menu6 .menu1_open li,
 .navBox nav .menuBox .menu6 .menu3_open li,
-.navBox nav .menuBox .menu6 .menu6_open li, .navBox nav .menuBox .menu1 .menu1_open li,
+.navBox nav .menuBox .menu6 .menu6_open li,
+.navBox nav .menuBox .menu1 .menu1_open li,
 .navBox nav .menuBox .menu1 .menu3_open li,
-.navBox nav .menuBox .menu1 .menu6_open li, .navBox nav .menuBox .menu3 .menu1_open li,
+.navBox nav .menuBox .menu1 .menu6_open li,
+.navBox nav .menuBox .menu3 .menu1_open li,
 .navBox nav .menuBox .menu3 .menu3_open li,
 .navBox nav .menuBox .menu3 .menu6_open li {
   display: grid;
@@ -294,7 +354,9 @@ body {
   height: 80px;
   background-color: rgba(28, 45, 98, 0.7607843137);
 }
-.navBox nav .menuBox .menu6:hover, .navBox nav .menuBox .menu1:hover, .navBox nav .menuBox .menu3:hover {
+.navBox nav .menuBox .menu6:hover,
+.navBox nav .menuBox .menu1:hover,
+.navBox nav .menuBox .menu3:hover {
   background-color: rgba(28, 45, 98, 0.7607843137);
 }
 .navBox .iconBox {
@@ -405,9 +467,8 @@ body {
 .section1 .sectionBG .container .swiper .slick-dots {
   position: absolute;
   bottom: 0px;
-  left: 50%;
-  transform: translate(-50%);
   display: flex;
+  justify-content: center;
 }
 .section1 .sectionBG .container .swiper .slick-dots li button {
   scale: 0.5;
@@ -565,6 +626,10 @@ body {
   width: 1458px;
   display: flex;
   align-items: center;
+  animation-duration: 0.5s;
+  animation-name: fade-in-right;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .section2 .sectionBG .charBox .cha .textBox {
   width: 550px;
@@ -592,6 +657,32 @@ body {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+}
+.section2 .sectionBG .charBox .cha .textBox img, .section2 .sectionBG .charBox .cha .textBox p, .section2 .sectionBG .charBox .cha .textBox .skillInt {
+  animation-duration: 0.5s;
+  animation-name: fade-in-left;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in-left {
+  0% {
+    left: -200px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  100% {
+    right: 0px;
+    opacity: 1;
+  }
 }
 .section2 .sectionBG .charBox .cha1 {
   background: url("../../../img/event/homepage/char_1.png");

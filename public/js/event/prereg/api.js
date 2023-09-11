@@ -24,11 +24,11 @@ function login() {
             if (res.status == -99) {
                 console.log("未登入");
                 $(".visit_frequency").html(0);
-
+                $('.p4Gobtn').hide();
                 $(".distance_30").html(0);
             } else {
                 if (res.user_mobile != "" && res.user_mobile != null) {
-                    _pre = true;
+                    _pre= true;
                 } else {
                     _pre = false;
                 }
@@ -48,26 +48,25 @@ function login() {
                 if (res.celebrity != null) {
                     p3cardinfo(res.celebrity[0], res.celebrity[1]);
                     setTimeout($(".choosenew").click(), $(".popS").hide(), 2);
+                }else{
+                $('.p4Gobtn').hide();
                 }
 
                 if (res.daily_login != null) {
                     $(".daily_login").css({
-                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        "background-size": "contain"
+                        "background-image": "url(/img/event/prereg/p3/done_btn.png)"
                     });
                 }
 
                 if (res.daily_FB != null) {
                     $(".daily_FB").css({
-                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        "background-size": "contain"
+                        "background-image": "url(/img/event/prereg/p3/done_btn.png)"
                     });
                 }
 
                 if (res.fb_fans_click != null) {
                     $(".fb_fans_click").css({
-                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        "background-size": "contain"
+                        "background-image": "url(/img/event/prereg/p3/done_btn.png)"
                     });
                 }
             }
@@ -152,11 +151,10 @@ function checkMobile() {
         return -99;
     }
 }
-
+var p3_send = true;
 // 結交名士
 $(".check_p3").on("click", function () {
     let _chance = $(".visit_frequency").data("val");
-    var _send = true;
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
@@ -169,7 +167,8 @@ $(".check_p3").on("click", function () {
         var _send = false;
         exit;
     }
-    if (_send == true) {
+    if (p3_send == true) {
+        p3_send = false
         $.post(
             _api,
             {
@@ -177,6 +176,9 @@ $(".check_p3").on("click", function () {
                 user: _user,
             },
             function (res) {
+                setTimeout(() => {
+                    p3_send = true
+                  }, "1000");
                 if (res.status == 1) {
                     $(".p3resultpop").fadeIn(200);
                     $(".result_new").hover(
@@ -215,8 +217,8 @@ $(".keepnow").on("click", function () {
     var _origin_distance_30 = $(".distance_30").attr("data-val");
     var _new_visit_frequency = _origin_visit_frequency - 1;
     var _new_distance_30 = parseInt(_origin_distance_30) + 1;
-    if (_new_visit_frequency <= 0) {
-        login();
+    if (_new_visit_frequency == 0 || _new_visit_frequency < 0) {
+        location.reload();
     } else {
         $(".visit_frequency").attr("data-val", _new_visit_frequency);
         $(".visit_frequency").html(_new_visit_frequency);
@@ -274,8 +276,7 @@ $(".missionbtn").on("click", function () {
                 } else {
                     let _finish = document.getElementsByClassName(_type);
                     $(_finish).css({
-                        "background": "url(/img/event/prereg/p3/seal.png) no-repeat center",
-                        "background-size": "contain"
+                        "background-image": "url(/img/event/prereg/p3/done_btn.png)"
                     });
                     p3_success();
                     $(".popS").fadeIn(200);
@@ -311,6 +312,11 @@ $(".yes").on("click", function () {
                         login();
                     });
                 }
+            }else{
+                p3_not_get()
+                $(".yes").hide();
+                $(".no").hide();
+                $(".popS").fadeIn(200);
             }
         }
     );
@@ -377,17 +383,17 @@ $(".p3choosebtn").on("click", function () {
         }
     });
 });
+
+var _panda_send = true
 //p4熊貓競猜支持
 $(".pandaGobtn").on("click", function () {
-    _pre = true;
-    console.log(_pre);
     if (_user == null) {
         p2_not_login();
         $(".popS").fadeIn(200);
     } else if (_pre == false) {
         p3_please_pre();
         $(".popS").fadeIn(200);
-    } else {
+    }else {
         $(".popS").fadeIn(200);
         if (p4_panda_choose_num == 1) {
             p4_support_panda1();
@@ -398,7 +404,13 @@ $(".pandaGobtn").on("click", function () {
         }
         $(".yes").off("click");
         $(".yes").on("click", function () {
-            p4pandaresult(p4_panda_choose_num);
+            if(_panda_send == true){
+                p4pandaresult(p4_panda_choose_num);
+                _panda_send = false
+            }
+            setTimeout(function () {
+                _panda_send = true;
+            }, 1000);
         });
     }
 });
@@ -448,6 +460,9 @@ function p4pandaresult(user_guess) {
                         p4_panda3_win();
                     }, 7000);
                 }
+                $('.popScheckBtn').on('click',function(){
+                    location.reload();
+                })
             }
         }
     );

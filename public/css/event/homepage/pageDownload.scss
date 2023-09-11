@@ -1,0 +1,85 @@
+.downloadBox {
+    font-family: "微軟正黑";
+    font-size: 16px;
+    position: relative;
+    line-height: 30px;
+    font-weight: 900;
+    color: #002578;
+    width: 800px;
+    margin: 60px auto 0;
+
+    .btnBox1, .btnBox2 {
+        display: flex;
+        margin-bottom: 30px;
+
+        .downloadBtn {
+            height: 60px;
+            font-size: 25px;
+            font-family: "微軟正黑";
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &:hover {
+                border: 2px solid #234fac;
+                background-color: #fff;
+                color: #234fac;
+                transition: all .2s ease;
+            }
+        }
+    }
+    .btnBox1{
+        justify-content: center;
+        .downloadBtn {
+            background-color: #052d83;
+            width: 200px;
+        }
+    }
+    .btnBox2{
+        justify-content: space-between;
+        .downloadBtn {
+            background-color: #234fac;
+            width: 150px;
+            text-align: center;
+            line-height: 25px;
+        }
+    }
+
+    li {
+        color: #002578;
+        list-style-type: decimal;
+        margin-left: 25px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .tableTitle,
+    .ulTitle {
+        color: #002578;
+        font-size: 24px;
+        padding: 0 0 10px;
+    }
+
+    .table {
+        border-collapse: collapse;
+
+        th {
+            border: 1px solid #002578;
+            background-color: #234fac;
+            height: 45px;
+            text-align: center;
+            line-height: 43px;
+            color: #fff;
+        }
+
+        td {
+            color: #002578;
+            border: 0.5px solid #002578;
+            font-weight: 400;
+            padding: 12px;
+            text-align: center;
+        }
+
+    }
+}

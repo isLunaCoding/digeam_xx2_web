@@ -1,10 +1,11 @@
 @media(max-width:425px){
     .swiper{
         width: 100vw;
-        height: 100%;
+        // height: 100%;
 
         .swiper-slide{
-            overflow: hidden;
+            // overflow-x: hidden;
+            // overflow-y: auto;
 
             .cloudmask{
                 position: relative;
@@ -110,6 +111,8 @@
             background: url(/img/event/prereg/p2/bg2_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
+            height: 115vh;
+            overflow: hidden;
 
             .bg2animate{
 
@@ -170,8 +173,10 @@
                 top: 5vh;
                 left: 50%;
                 translate: -50%;
-                width: 51vw;
-                height: 17vw;
+                // width: 51vw;
+                // height: 17vw;
+                width: 216px;
+                height: 72px;
                 background: url(/img/event/prereg/p2/title.png)no-repeat;
                 background-size: contain;
                 background-position: center;
@@ -188,7 +193,7 @@
 
                 .p2steps{
                     width: 100%;
-                    height: 40vh;
+                    height: 340px;
 
                     .step1{
                         margin: auto;
@@ -255,7 +260,7 @@
                         & form{
                             & div{
                                 & select{
-                                    width: 20%;
+                                    width: 30%;
                                     height: 34px;
                                     font-size: 15px;
                                     padding: 0;
@@ -305,7 +310,7 @@
                         text-align: center;
                         line-height: 101px;
                         scale: 0.5;
-                        top:-20%;
+                        top:-16%;
                         &:hover{
                             background: url(/img/event/prereg/p2/btn1_hover.png)no-repeat;
                         }
@@ -316,7 +321,7 @@
                 .p2awards{
                     scale: 1;
                     width: 100%;
-                    height: 40vh;
+                    height: 340px;
 
                     .awardbox{
                         position: absolute;
@@ -331,11 +336,11 @@
                     .p2btns{
                         position: absolute;
                         left: 50%;
-                        translate: -50%;
+                        translate: -50% -60%;
                         width: 70%;
                         height: 20%;
                         color: #ffffff;
-                        font-size: 1rem;
+                        font-size: 0.7rem;
                         font-weight: bold;
                         display: flex;
                         text-align: center;
@@ -347,6 +352,7 @@
                             background-position: center;
                             background-size: contain;
                             cursor: pointer;
+                            font-size: 0.7rem;
 
                             &::before, &::after{
                                 position: absolute;
@@ -379,6 +385,8 @@
             }
         }
         .page3{
+            height: 110vh;
+            overflow: hidden;
             background: url(/img/event/prereg/p3/bg3_m.jpg)no-repeat;
             background-position: center;
             background-size: cover;
@@ -410,7 +418,7 @@
 
             .p3title{
                 position: absolute;
-                top: 5vh;
+                top: 2vh;
                 left: 50%;
                 translate: -50%;
                 width: 51vw;
@@ -422,11 +430,11 @@
 
             .p3main{
                 position: absolute;
-                top: 56%;
+                top: 50%;
                 left: 50%;
                 translate: -50% -50%;
-                width: 80vw;
-                height: 62vh;
+                width: 100%;
+                height: 523px;
                 background: url(/img/event/prereg/p3/mainBG3_m.png)no-repeat;
                 background-size: 100% 100%;
                 background-position: center;
@@ -485,14 +493,14 @@
 
                 .p3info{
                     position: absolute;
-                    top: -22%;
+                    top: -15%;
                     right: 50%;
                     translate: 50%;
-                    width: 100%;
+                    width: 85%;
                     z-index: 1;
 
                     & p{
-                        font-size: 5px;
+                        font-size: 16px;
                         font-weight: bold;
                         color: #21345d;
                     }
@@ -624,7 +632,7 @@
                 .lanternbox{
                     position: absolute;
                     top: 0px;
-                    left: -54px;
+                    left: -28px;
                     translate: 0%;
                     width: calc(286px * 0.5);
                     height: calc(627px * 0.5);
@@ -632,6 +640,7 @@
                     rotate: 0deg;
                     // opacity: 0;
                     z-index: 1;
+                    scale: 0.85;
 
                     .lantern_light{
                         position: absolute;
@@ -663,7 +672,7 @@
 
                     & p{
                         position: absolute;
-                        top: 46%;
+                        top: 50%;
                         left: 50%;
                         translate: -50%;
                         color: #a38a46;
@@ -676,24 +685,24 @@
 
                 .p3text{
                     position: absolute;
-                    top: 72%;
-                    right: 40%;
+                    top: 75%;
+                    right: 43%;
                     translate: 50% -50%;
                     width: 75%;
-                    height: 45%;
+                    height: 24%;
 
                     .samplerules{
                         position: absolute;
                         top: 34%;
                         left: 0%;
                         translate: 0 -50%;
-                        width: 85%;
+                        width: 91%;
                         height: auto;
 
                         & li{
                             list-style-image:url(/img/event/prereg/p3/li.png);
                             color: #000;
-                            font-size: 12px;
+                            font-size: 16px;
                             font-weight: bold;
                             margin: 0px auto;
 
@@ -708,8 +717,9 @@
 
                     .cardinfo{
                         position: absolute;
-                        top: 50%;
-                        translate: 0 -85%;
+                        top: -30%;
+                        left: 40%;
+                        translate: -50% -50%;
                         width: 100%;
                         height: 100%;
                         display: none;
@@ -783,7 +793,7 @@
                     translate: -50% -50%;
                     width: 40%;
                     height: 90%;
-                    scale: 0.4;
+                    scale: 0.5;
 
                     .nocard,.nowcard{
                         position: absolute;
@@ -863,7 +873,7 @@
                         left: 50%;
                         translate: -50%;
                         color: #000;
-                        font-size: 26px;
+                        font-size: 34px;
                         font-weight: bold;
                     }
                 }
@@ -898,6 +908,7 @@
             background: url(/img/event/prereg/p4/bg4.png);
             background-size: cover;
             background-position: center;
+            height: 125vh;
 
             .bg4animate{
                 .bamboo{
@@ -914,7 +925,7 @@
                 .cloud{
                     position: absolute;
                     width: 100vw;
-                    height: 100vh;
+                    height: 130vh;
                     background: url(/img/event/prereg/p4/cloud.png)no-repeat;
                     background-position: bottom left;
                     animation: p4cloud 60s infinite alternate ease-in-out;
@@ -959,7 +970,7 @@
 
             .p4title{
                 position: absolute;
-                top: 5vh;
+                top: 2vh;
                 left: 50%;
                 translate: -50%;
                 width: 51vw;
@@ -971,15 +982,17 @@
 
             .p4main{
                 position: absolute;
-                top: 100%;
+                top: 90%;
                 left: 50%;
                 translate: -50% -100%;
                 width: 85vw;
-                height: 80vh;
+                height: 675px;
 
                 .p4info{
+
+
                     position: absolute;
-                    top: -12%;
+                    top: -9%;
                     right: 0%;
                     width: 100%;
 
@@ -1002,7 +1015,7 @@
                         text-align: center;
                         text-shadow: 0 0 5px #010101;
                         filter: drop-shadow(0 0 3px #2d3447);
-                        margin-top: -5%;
+                        margin-top: 0%;
 
                         .p4informationbtn, .p4noticebtn{
                             position: relative;
@@ -1085,7 +1098,7 @@
                     .panda3{
                         position: absolute;
                         bottom: 0%;
-                        left: 58%;
+                        left: 75%;
                         translate: -50%;
                         width: 422px;
                         height: 437px;
@@ -1306,11 +1319,12 @@
                     font-size: 20px;
                     font-weight: bold;
                     text-align: right;
-                    line-height: 25px;
                     scale: 0.65;
+                    padding-top: 20px;
 
                     & p{
-                        padding-right: 50px;
+                        padding-right: 60px;
+                        line-height: normal;
                     }
                 }
             }
@@ -1319,6 +1333,7 @@
             background: url(/img/event/prereg/p5/bg5_m.png)no-repeat;
             background-size: cover;
             background-position: center;
+            height: 100%;
 
             .p5title{
                 position: absolute;
@@ -1359,8 +1374,8 @@
                         left: 50%;
                         translate: -50% -50%;
                         border-radius: 30px;
-                        width: calc(70vw - 60px);
-                        height: calc(103vw - 60px);
+                        width: calc(70vw - 40px);
+                        height: calc(103vw - 40px);
                         background: url(/img/event/prereg/p5/slide1_m.jpg)no-repeat;
                         background-size: cover;
                         background-position: center;
@@ -1522,6 +1537,8 @@
             background: url(/img/event/prereg/p6/bg6_m.jpg);
             background-size: cover;
             background-position: center;
+            height: 100%;
+            overflow: hidden;
 
             .p6title{
                 position: absolute;
@@ -1540,7 +1557,7 @@
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
-                left: -27%;
+                left: -14%;
                 top: -15vh;
                 scale: 0.6;
 
@@ -1671,7 +1688,7 @@
 
             .p6menu{
                 position: absolute;
-                top: 100vh;
+                bottom:0px;
                 left: 0vw;
                 width: 100vw;
                 height: 20vw;
@@ -1857,12 +1874,12 @@
 
             .p6feature1{
                 left: 45%;
-                top: 50%;
+                top: 55%;
             }
 
             .p6feature2{
                 left: 55%;
-                top: calc(50% + 32vw);
+                top: 73%;
             }
         }
         .page7{
@@ -1891,7 +1908,7 @@
                 height: 60vh;
                 list-style: decimal;
                 color: #000000;
-                font-size: 1.3rem;
+                font-size: 16px;
                 font-weight: bold;
                 overflow-y: scroll;
 
@@ -1972,8 +1989,8 @@
                     }
 
                     .copyright{
-                        width: 50%;
-                        height: 40%;
+                        // width: 50%;
+                        // height: 40%;
 
                         & div{
                             width: fit-content;
@@ -2215,6 +2232,12 @@
                 background: url(/img/event/prereg/p3/missiontitle.png)no-repeat;
                 background-position: center;
                 background-size: contain;
+
+                .p3_desc {
+                    text-align: center;
+                    top: 50%;
+                    font-size: 12px;
+                }
             }
             .p3missionpopText{
                 margin: auto;
@@ -2223,7 +2246,7 @@
                 height: 68%;
                 list-style: decimal;
                 color: #15386c;
-                font-size: 12px;
+                font-size: 0.7rem;
                 overflow-y: scroll;
                 padding: 0;
 
@@ -2239,28 +2262,29 @@
                     .missiontext{
                         width: 55%;
                         height: 100%;
+                        font-size: 0.7rem;
                         & span{
-                            font-size: 11px;
+                            font-size: 0.7rem;
                             color: #67729b;
                         }
                     }
                     .missiontimes{
                         width:30%;
                         height: 100%;
-                        font-size: 0.1rem;
+                        font-size: 0.5rem;
                         text-align: end;
                     }
                     .missionbtn{
                         width: 15%;
                         height: 100%;
                         background: url(/img/event/prereg/p3/btn4.png) no-repeat center;
-                        background-size: contain;
+                        background-size: 135%;
                         cursor: pointer;
                         transition: 0.3s;
 
-                        &:hover{
-                            background-position: right;
-                        }
+                        // &:hover{
+                        //     background-position: right;
+                        // }
                     }
 
                     &::before{
@@ -2277,6 +2301,15 @@
                     &:nth-child(2n){
                         background-color: #b7cee6;
 
+                    }
+
+                    &:nth-child(3){
+                        // height: 50px;
+                        font-size: 0.7rem;
+
+                        & span{
+                            font-size: 0.7rem;
+                        }
                     }
                 }
 
@@ -2467,6 +2500,7 @@
                 display: flex;
                 justify-content: center;
                 scale: 1;
+                font-size: 0.7rem;
 
                 .choosenew,.keepnow{
                     cursor: pointer;
@@ -2826,7 +2860,7 @@
             }
             .popTable{
                 margin: auto;
-                margin-top: 18%;
+                margin-top: 20%;
                 width: 80%;
                 height: 73%;
                 list-style: decimal;
@@ -2899,9 +2933,8 @@
                 margin-top: 22%;
                 width: 75%;
                 height: 70%;
-                list-style: decimal;
                 color: #15386c;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 overflow-y: scroll;
 
                 & li{
@@ -3073,7 +3106,7 @@
                 top: 8%;
                 left: 50%;
                 translate: -50%;
-                font-size: 1.8rem;
+                font-size: 27px;
                 color: #15386c;
                 text-align: center;
             }
@@ -3083,17 +3116,10 @@
                 margin-top: 22%;
                 width: 75%;
                 height: 70%;
-                list-style: decimal;
                 color: #15386c;
-                font-size: 1.3rem;
+                font-size: 16px;
                 overflow-y: scroll;
             }
         }
     }
-}
-
-.p3_desc {
-    text-align: center;
-    top: 58%;
-    font-size: 12px;
 }

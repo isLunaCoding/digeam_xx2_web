@@ -1,0 +1,341 @@
+// 領獎專區樣式
+
+#serchForm {
+    margin-top: 15px;
+
+    .serchBox {
+        display: flex;
+    }
+
+    input {
+        height: 29px;
+        width: 300px;
+        font-size: 20px;
+        border: 1px solid #234fac;
+        margin-right: 5px;
+    }
+
+    select {
+        font-size: 20px;
+        width: 93px;
+        height: 29px;
+        color: #728dcc;
+        border-radius: 0px;
+        border: 1px solid #234fac;
+        line-height: 20px;
+        margin-right: 5px;
+    }
+
+    .submit {
+        background-color: #234fac;
+        border: 1px solid #234fac;
+        color: #fff;
+        font-size: 20px;
+        width: 93px;
+        height: 29px;
+        line-height: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.awardTitleBox {
+    width: 878px;
+    height: 32px;
+    background-color: #234fac;
+    margin: 20px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .actionName,
+    .actionTime {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .actionName {
+        width: 500px;
+    }
+
+    .actionTime {
+        width: 300px;
+    }
+}
+
+.awardTitleContent {
+    height: 300px;
+    li {
+
+        a {
+            display: flex;
+
+            &.normal::before {
+                content: " ▶ ";
+                color: #153d97;
+                margin-right: 10px;
+                margin-left: 17px
+            }
+
+            .awardTextBox {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                .awardTextTitle,
+                .awardTextTime {
+                    font-weight: 600;
+                }
+
+                .awardTextTitle {
+                    font-size: 16px;
+                    width: 500px;
+                    color: #002578;
+                }
+
+                .awardTextTime {
+                    font-size: 12px;
+                    width: 300px;
+                    color: #728dcc;
+                }
+            }
+        }
+    }
+
+    .awardLine {
+        width: 878px;
+        height: 1px;
+        background-color: #728dcc;
+        margin: 10px 0 25px;
+    }
+}
+
+
+.pagination {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 4px;
+    width: 100%;
+
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .page-item , .page-goto {
+
+        font-size: 16px;
+        padding: 8px;
+        text-decoration: none;
+        cursor: pointer;
+
+        &.disabled {
+            font-size: 16px;
+            padding: 8px;
+            text-decoration: none;
+            cursor: default;
+
+            .page-link {
+                cursor: default;
+                color: #728dcc;
+            }
+        }
+
+        &.active {
+            color: #728dcc;
+            font-size: 16px;
+            padding: 8px;
+            text-decoration: none;
+            cursor: default;
+            
+            .page-link {
+                cursor: default;
+                color: #728dcc;
+            }
+        }
+    }
+}
+
+.boxDown {
+    width: 1270px;
+    margin: 0 auto;
+    display: flex;
+
+    .emptyBox {
+        width: 245px;
+    }
+
+    .awardActionContent {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 46px;
+            height: 32px;
+            margin: 30px 0;
+        }
+
+        .actionTitle {
+            font-size: 35px;
+            color: #002578;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .boxBG {
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 1025px;
+            border: 1px solid #1a48a8;
+            padding: 40px 72.5px;
+        }
+
+        .playerInfo {
+            display: flex;
+            align-items: flex-end;
+
+            .account {
+                font-size: 20px;
+                color: #002578;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #002578;
+                margin-right: 20px;
+
+                span {
+                    color: #002578;
+                }
+            }
+
+            #playerFrorm {
+                margin-top: 15px;
+
+                .serchBox {
+                    display: flex;
+                }
+
+                input {
+                    height: 29px;
+                    width: 300px;
+                    font-size: 20px;
+                    border: 1px solid #234fac;
+                    margin-right: 5px;
+                }
+
+                select {
+                    font-size: 20px;
+                    width: 143px;
+                    height: 29px;
+                    color: #728dcc;
+                    border-radius: 0px;
+                    border: 1px solid #234fac;
+                    line-height: 20px;
+                    margin-right: 5px;
+                }
+
+                .submit {
+                    background-color: #234fac;
+                    border: 1px solid #234fac;
+                    color: #fff;
+                    font-size: 20px;
+                    width: 93px;
+                    height: 29px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+
+            .logout ,.login {
+                width: 66px;
+                height: 29px;
+                font-size: 20px;
+                color: #fff;
+                margin-left: 200px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .logout {
+                background-color: #94a7d7;
+                border: 1px solid #94a7d7;
+            }
+
+            .login {
+                background-color: #153d97;
+                border: 1px solid #153d97;
+
+            }
+        }
+
+        .actionInfo {
+            margin-top: 20px;
+
+            .actionTable {
+                width: 878px;
+
+                thead {
+                    background-color: #234fac;
+                    border: 1px solid #002578;
+                    text-align: center;
+
+                    td {
+                        padding: 10px 0;
+                        color: #fff;
+                        font-size: 16px;
+
+                        &:nth-child(n):nth-child(-n+4) {
+                            border-right: #002578 1px solid;
+                        }
+                    }
+                }
+
+                tbody {
+                    background-color: #fff;
+                    border: 1px solid #002578;
+
+                    tr {
+                        border-bottom: #002578 1px solid;
+                    }
+
+                    td {
+                        color: #002578;
+                        font-size: 16px;
+                        padding: 10px;
+                        vertical-align:middle;
+
+                        &:nth-child(n):nth-child(-n+4) {
+                            border-right: #002578 1px solid;
+                        }
+
+                        &:last-child ,&:nth-last-child(2) {
+                            text-align: center;
+                        }
+
+                        .receive, .cannotReceive {
+                            font-size: 16px;
+                            width: 72px;
+                            height: 27px;
+                            color: #fff;
+                        }
+                        .receive {
+                            cursor: pointer;
+                            background-color: #002578;
+                            border: #002578 1px solid;
+                        }
+
+                        .cannotReceive {
+                            background-color: #a2a2a2;
+                            border: #a2a2a2 1px solid;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

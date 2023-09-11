@@ -1,0 +1,71 @@
+@media screen and (min-width: 426px) and (max-width: 430px){
+    .awardbox{
+        bottom:-10% !important;
+    }
+    .p2btns{
+        margin-top:10% !important;
+        .p2informationbtn, .p2noticebtn{
+            font-size: 15px !important;
+        }
+    }
+    .p4info{
+        top:-15% !important;
+    }
+    .p6menu{
+        top:95% !important;
+    }
+    .menubtn2{
+    top: 7% !important;
+    left: 8% !important;
+    width: 40px !important;
+    height: 40px !important;
+    }
+    .mobile_area{
+        width: 42% !important;
+    }
+    .roles{
+        left: -12% !important;
+    }
+    .p6feature2{
+        top: calc(52% + 32vw) !important;
+    }
+    .cardinfo{
+        top: 65% !important;
+    }
+    .p3_chance{
+        top: 83% !important;
+    }
+    .getcardbtn{
+        top: 96% !important;
+    }
+    .samplerules{
+        top: 49% !important;
+        width: 100% !important;
+        li{
+            font-size: 10px !important;
+        }
+    }
+    .p3info p{
+        font-size:18px !important;
+    }
+    .p3listbtns{
+        top:68% !important;
+        right :-10% !important;
+    }
+    .missionbtn{
+        background-size: 135% !important;
+    }
+    .missiontext{
+        font-size: 0.7rem;
+        & span{
+            font-size: 0.7rem;
+        }
+    }
+    .p3_desc{
+        top: 38% !important;
+        font-size: 12px !important;
+    }
+    .popSText{
+        font-size: 1.2rem !important;
+    }
+}

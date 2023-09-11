@@ -1,0 +1,287 @@
+@charset "UTF-8";
+#serchForm {
+  margin-top: 15px;
+}
+#serchForm .serchBox {
+  display: flex;
+}
+#serchForm input {
+  height: 29px;
+  width: 300px;
+  font-size: 20px;
+  border: 1px solid #234fac;
+  margin-right: 5px;
+}
+#serchForm select {
+  font-size: 20px;
+  width: 93px;
+  height: 29px;
+  color: #728dcc;
+  border-radius: 0px;
+  border: 1px solid #234fac;
+  line-height: 20px;
+  margin-right: 5px;
+}
+#serchForm .submit {
+  background-color: #234fac;
+  border: 1px solid #234fac;
+  color: #fff;
+  font-size: 20px;
+  width: 93px;
+  height: 29px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.awardTitleBox {
+  width: 878px;
+  height: 32px;
+  background-color: #234fac;
+  margin: 20px 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.awardTitleBox .actionName,
+.awardTitleBox .actionTime {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.awardTitleBox .actionName {
+  width: 500px;
+}
+.awardTitleBox .actionTime {
+  width: 300px;
+}
+
+.awardTitleContent {
+  height: 300px;
+}
+.awardTitleContent li a {
+  display: flex;
+}
+.awardTitleContent li a.normal::before {
+  content: " ▶ ";
+  color: #153d97;
+  margin-right: 10px;
+  margin-left: 17px;
+}
+.awardTitleContent li a .awardTextBox {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.awardTitleContent li a .awardTextBox .awardTextTitle,
+.awardTitleContent li a .awardTextBox .awardTextTime {
+  font-weight: 600;
+}
+.awardTitleContent li a .awardTextBox .awardTextTitle {
+  font-size: 16px;
+  width: 500px;
+  color: #002578;
+}
+.awardTitleContent li a .awardTextBox .awardTextTime {
+  font-size: 12px;
+  width: 300px;
+  color: #728dcc;
+}
+.awardTitleContent .awardLine {
+  width: 878px;
+  height: 1px;
+  background-color: #728dcc;
+  margin: 10px 0 25px;
+}
+
+.pagination {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 4px;
+  width: 100%;
+}
+.pagination li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.pagination .page-item, .pagination .page-goto {
+  font-size: 16px;
+  padding: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pagination .page-item.disabled, .pagination .page-goto.disabled {
+  font-size: 16px;
+  padding: 8px;
+  text-decoration: none;
+  cursor: default;
+}
+.pagination .page-item.disabled .page-link, .pagination .page-goto.disabled .page-link {
+  cursor: default;
+  color: #728dcc;
+}
+.pagination .page-item.active, .pagination .page-goto.active {
+  color: #728dcc;
+  font-size: 16px;
+  padding: 8px;
+  text-decoration: none;
+  cursor: default;
+}
+.pagination .page-item.active .page-link, .pagination .page-goto.active .page-link {
+  cursor: default;
+  color: #728dcc;
+}
+
+.boxDown {
+  width: 1270px;
+  margin: 0 auto;
+  display: flex;
+}
+.boxDown .emptyBox {
+  width: 245px;
+}
+.boxDown .awardActionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boxDown .awardActionContent img {
+  width: 46px;
+  height: 32px;
+  margin: 30px 0;
+}
+.boxDown .awardActionContent .actionTitle {
+  font-size: 35px;
+  color: #002578;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.boxDown .awardActionContent .boxBG {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 1025px;
+  border: 1px solid #1a48a8;
+  padding: 40px 72.5px;
+}
+.boxDown .awardActionContent .playerInfo {
+  display: flex;
+  align-items: flex-end;
+}
+.boxDown .awardActionContent .playerInfo .account {
+  font-size: 20px;
+  color: #002578;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #002578;
+  margin-right: 20px;
+}
+.boxDown .awardActionContent .playerInfo .account span {
+  color: #002578;
+}
+.boxDown .awardActionContent .playerInfo #playerFrorm {
+  margin-top: 15px;
+}
+.boxDown .awardActionContent .playerInfo #playerFrorm .serchBox {
+  display: flex;
+}
+.boxDown .awardActionContent .playerInfo #playerFrorm input {
+  height: 29px;
+  width: 300px;
+  font-size: 20px;
+  border: 1px solid #234fac;
+  margin-right: 5px;
+}
+.boxDown .awardActionContent .playerInfo #playerFrorm select {
+  font-size: 20px;
+  width: 143px;
+  height: 29px;
+  color: #728dcc;
+  border-radius: 0px;
+  border: 1px solid #234fac;
+  line-height: 20px;
+  margin-right: 5px;
+}
+.boxDown .awardActionContent .playerInfo #playerFrorm .submit {
+  background-color: #234fac;
+  border: 1px solid #234fac;
+  color: #fff;
+  font-size: 20px;
+  width: 93px;
+  height: 29px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.boxDown .awardActionContent .playerInfo .logout, .boxDown .awardActionContent .playerInfo .login {
+  width: 66px;
+  height: 29px;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 200px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxDown .awardActionContent .playerInfo .logout {
+  background-color: #94a7d7;
+  border: 1px solid #94a7d7;
+}
+.boxDown .awardActionContent .playerInfo .login {
+  background-color: #153d97;
+  border: 1px solid #153d97;
+}
+.boxDown .awardActionContent .actionInfo {
+  margin-top: 20px;
+}
+.boxDown .awardActionContent .actionInfo .actionTable {
+  width: 878px;
+}
+.boxDown .awardActionContent .actionInfo .actionTable thead {
+  background-color: #234fac;
+  border: 1px solid #002578;
+  text-align: center;
+}
+.boxDown .awardActionContent .actionInfo .actionTable thead td {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 16px;
+}
+.boxDown .awardActionContent .actionInfo .actionTable thead td:nth-child(n):nth-child(-n+4) {
+  border-right: #002578 1px solid;
+}
+.boxDown .awardActionContent .actionInfo .actionTable tbody {
+  background-color: #fff;
+  border: 1px solid #002578;
+}
+.boxDown .awardActionContent .actionInfo .actionTable tbody tr {
+  border-bottom: #002578 1px solid;
+}
+.boxDown .awardActionContent .actionInfo .actionTable tbody td {
+  color: #002578;
+  font-size: 16px;
+  padding: 10px;
+  vertical-align: middle;
+}
+.boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-child(n):nth-child(-n+4) {
+  border-right: #002578 1px solid;
+}
+.boxDown .awardActionContent .actionInfo .actionTable tbody td:last-child, .boxDown .awardActionContent .actionInfo .actionTable tbody td:nth-last-child(2) {
+  text-align: center;
+}
+.boxDown .awardActionContent .actionInfo .actionTable tbody td .receive, .boxDown .awardActionContent .actionInfo .actionTable tbody td .cannotReceive {
+  font-size: 16px;
+  width: 72px;
+  height: 27px;
+  color: #fff;
+}
+.boxDown .awardActionContent .actionInfo .actionTable tbody td .receive {
+  cursor: pointer;
+  background-color: #002578;
+  border: #002578 1px solid;
+}
+.boxDown .awardActionContent .actionInfo .actionTable tbody td .cannotReceive {
+  background-color: #a2a2a2;
+  border: #a2a2a2 1px solid;
+}/*# sourceMappingURL=pageReceiveAward.css.map */

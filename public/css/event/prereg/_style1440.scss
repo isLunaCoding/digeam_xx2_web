@@ -1,6 +1,10 @@
 @media(max-width: 1440px){
 
     .swiper{
+        .swiper-slide{
+            // overflow-x: hidden;
+            // overflow-y: auto;
+        }
         .page2{
 
             .bg2animate{
@@ -91,7 +95,7 @@
                 width: 70vw;
                 height: 66vh;
                 background: url(/img/event/prereg/p3/mainBG3.png)no-repeat;
-                background-size: contain;
+                background-size: 100% 100%;
                 background-position: center;
 
                 &::before{
@@ -100,7 +104,7 @@
                     width: 100%;
                     height: 100%;
                     background: url(/img/event/prereg/p3/mainBG.png)no-repeat;
-                    background-size: contain;
+                    background-size: 100% 100%;
                     background-position: center;
                 }
 
@@ -118,26 +122,26 @@
                     }
 
                     .corner_LT{
-                        top: 30px;
-                        left: 52px;
+                        top: 35px;
+                        left: 24px;
                         rotate: -90deg;
                     }
 
                     .corner_RT{
-                        top: 32px;
-                        right: 52px;
+                        top: 35px;
+                        right: 24px;
                         rotate: 0deg;
                     }
 
                     .corner_LB{
-                        bottom: 27px;
-                        left: 51px;
+                        bottom: 35px;
+                        left: 24px;
                         rotate: -180deg;
                     }
 
                     .corner_RB{
-                        bottom: 25px;
-                        right: 53px;
+                        bottom: 35px;
+                        right: 24px;
                         rotate: 90deg;
                     }
                 }
@@ -282,7 +286,7 @@
                 .lanternbox{
                     position: absolute;
                     top: 34px;
-                    left: -60px;
+                    left: -100px;
                     translate: 0%;
                     width: calc(286px * 0.95);
                     height: calc(627px * 0.95);
@@ -290,6 +294,7 @@
                     rotate: 0deg;
                     // opacity: 0;
                     z-index: 1;
+                    scale: 0.8;
 
                     .lantern_light{
                         position: absolute;
@@ -321,7 +326,7 @@
 
                     & p{
                         position: absolute;
-                        top: 46%;
+                        top: 50%;
                         left: 50%;
                         translate: -50%;
                         color: #a38a46;
@@ -335,7 +340,7 @@
                 .p3text{
                     position: absolute;
                     top: 50%;
-                    right: 50%;
+                    right: 43%;
                     translate: 100% -50%;
                     width: 40%;
                     height: 90%;
@@ -365,18 +370,19 @@
 
                     .cardinfo{
                         position: absolute;
-                        top: 50%;
-                        translate: 0 -50%;
-                        width: 100%;
+                        top: 45%;
+                        translate: -17% -50%;
+                        width: 120%;
                         height: 100%;
                         display: none;
+                        scale: 0.95;
 
                         .cardname{
                             position: absolute;
                             top: 15%;
                             width: 100%;
                             height: auto;
-                            font-size: 55px;
+                            font-size: 35px;
                             color: #FFF;
                             font-family: 'Noto Serif TC', serif;
                             text-shadow: 0 0 10px #103aa3;
@@ -524,7 +530,7 @@
 
                 .p4Gobtn{
                     position: absolute;
-                    top: 85%;
+                    top: 90%;
                     left: 50%;
                     translate: -50%;
                     width: 260px;
@@ -704,6 +710,7 @@
                     top: 50%;
                     left: 47%;
                     translate: -50% -50%;
+                    scale: 0.9;
 
                     .panda1{
                         position: absolute;
@@ -938,6 +945,7 @@
                     line-height: 25px;
                     & p{
                         padding-right: 50px;
+                        line-height: 40px;
                     }
                 }
             }
@@ -1579,8 +1587,8 @@
                     }
 
                     .copyright{
-                        width: 20%;
-                        height: 70%;
+                        // width: 20%;
+                        // height: 70%;
 
                         & div{
                             width: fit-content;
@@ -1894,6 +1902,115 @@
             }
         }
     }
+
+    .popS{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(127, 140, 149, 0.5);
+        font-family: 'Noto Serif TC', serif;
+        z-index: 10;
+        display: none;
+    
+        .popSframe{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 30vw;
+            height: 60vh;
+            background: url(/img/event/prereg/pop_s/popS_frame.png)no-repeat;
+            background-size: contain;
+    
+            .popStitle{
+                position: absolute;
+                top: 13%;
+                left: 50%;
+                translate: -50%;
+                font-size: 1rem;
+                color: #e4efff;
+                text-align: center;
+    
+                &::before,&::after{
+                    position: absolute;
+                    content: '';
+                    top: 6%;
+                    width: 20px;
+                    height: 100%;
+                    background: url(/img/event/prereg/pop_s/popStitle_icon.png)no-repeat;
+                    background-position: center;
+                }
+                &::before{
+                    left: -15%;
+                }
+                &::after{
+                    right: -15%;
+                    scale: -1;
+                }
+            }
+    
+            .popSText{
+                margin: auto;
+                margin-top: 30%;
+                width: 70%;
+                height: 73%;
+                list-style: decimal;
+                color: #e4efff;
+                font-size: 1.3rem;
+                text-align: center;
+                & span , & a{
+                        color: #91006a;
+                    }
+            }
+    
+            .popScheckBtn{
+                position: absolute;
+                bottom: 35%;
+                left: 50%;
+                translate: -50%;
+                width: 120px;
+                height: 50px;
+                background-color: #FFF;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 50px;
+                letter-spacing: 5px;
+                cursor: pointer;
+            }
+    
+            .popScheckBtn2,.popScheckBtn3,.popScheckBtn4{
+                position: absolute;
+                bottom: 35%;
+                left: 50%;
+                translate: -50%;
+                width: 60%;
+                height: 50px;
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 50px;
+                letter-spacing: 5px;
+                display: flex;
+    
+                .yes,.no,.new_yes,.yes_30{
+                    position: absolute;
+                    width: 90px;
+                    height: 50px;
+                    cursor: pointer;
+                    background-color: #FFF;
+                }
+    
+                .yes,.new_yes,.yes_30{
+                    left: 25%;
+                    translate: -50%;
+                }
+                .no{
+                    left: 75%;
+                    translate: -50%;
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 1220px){
@@ -2078,8 +2195,8 @@
 
             .p6menu{
                 position: absolute;
-                top: 48vh;
-                left: 40vw;
+                top: 42%;
+                left: 48%;
                 width: 542px;
                 height: 417px;
                 background: url(/img/event/prereg/p6/menuBG.png)no-repeat;
@@ -2219,7 +2336,7 @@
                     position: absolute;
                     width: 70%;
                     height: auto;
-                    top: 30%;
+                    top: 35%;
                     left: 50%;
                     translate: -50%;
                     color: #000;
@@ -2229,13 +2346,13 @@
             }
 
             .p6feature1{
-                left: 19%;
+                left: 15%;
                 top: 33%;
             }
 
             .p6feature2{
-                left: 30%;
-                top: calc(33% + 11.75vw);
+                left: 20%;
+                top: 60%;
             }
         }
     }
@@ -2782,7 +2899,7 @@
                 margin-top: 18%;
                 width: 80%;
                 height: 73%;
-                list-style: decimal;
+                list-style: none;
                 color: #15386c;
                 font-size: 1.3rem;
                 overflow-y: scroll;
