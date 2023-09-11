@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Services\MemberRecord;
 use App\Model\Reward\reward_content;
 use App\Model\Reward\reward_event;
 use App\Model\Reward\reward_getlog;
@@ -82,14 +83,31 @@ class rewardController extends Controller
     public function get_setting(Request $request)
     {
         $list = '';
+        $user_id = $request->user_id;
+        // if ($user_id != '') {
+        //     if ((date('YmdHis') >= '20230911000000') && (date('YmdHis') <= '20230913235959')) {
+        //         MemberRecord::getUserInfo($user_id);
+        //     }
+        // }
+
+        // if ($_SERVER['HTTP_CF_CONNECTING_IP'] != '211.23.144.219') {
+        //     $event_lists = reward_event::where('is_open', 'Y')->orderby('created_at', 'desc')->get();
+        // } else {
+        //     $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
+        // }
+
         $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
+
         foreach ($event_lists as $event_list) {
             if ((date('Y-m-d H:i:s') >= $event_list->start_date) && (date('Y-m-d H:i:s') < $event_list->end_date)) {
                 $list .= "<li><a href='#boxDown'  onclick='show_cont(" . $event_list->id . ")' class='normal'><div class='awardTextBox'><div class='awardTextTitle'>" . $event_list->event_name . "</div><div class='awardTextTime'>" . (new DateTime($event_list->start_date))->format('Y/m/d') . "~" . (new DateTime($event_list->end_date))->format('Y/m/d') . "</div></div></a><div class='awardLine'></div></li>";
-            } elseif ((date('Y-m-d H:i:s') < $event_list->start_date)) {
-                $list .= "<li><a href='#boxDown'  onclick='show_cont(" . $event_list->id . ")' class='normal'><div class='awardTextBox'><div class='awardTextTitle'>" . $event_list->event_name . "(未開始)</div><div class='awardTextTime'>" . (new DateTime($event_list->start_date))->format('Y/m/d') . "~" . (new DateTime($event_list->end_date))->format('Y/m/d') . "</div></div></a><div class='awardLine'></div></li>";
             } else {
-                $list .= "<li><a href='#boxDown'  onclick='show_cont(" . $event_list->id . ")' class='normal'><div class='awardTextBox'><div class='awardTextTitle'>" . $event_list->event_name . "(已結束)</div><div class='awardTextTime'>" . (new DateTime($event_list->start_date))->format('Y/m/d') . "~" . (new DateTime($event_list->end_date))->format('Y/m/d') . "</div></div></a><div class='awardLine'></div></li>";
+                if (date('Y-m-d H:i:s') < $event_list->start_date) {
+                    $list .= "<li><a href='#boxDown'  onclick='show_cont(" . $event_list->id . ")' class='normal'><div class='awardTextBox'><div class='awardTextTitle'>" . $event_list->event_name . "(未開始)</div><div class='awardTextTime'>" . (new DateTime($event_list->start_date))->format('Y/m/d') . "~" . (new DateTime($event_list->end_date))->format('Y/m/d') . "</div></div></a><div class='awardLine'></div></li>";
+                }
+                if (date('Y-m-d H:i:s') >= $event_list->end_date) {
+                    $list .= "<li><a href='#boxDown'  onclick='show_cont(" . $event_list->id . ")' class='normal'><div class='awardTextBox'><div class='awardTextTitle'>" . $event_list->event_name . "(已結束)</div><div class='awardTextTime'>" . (new DateTime($event_list->start_date))->format('Y/m/d') . "~" . (new DateTime($event_list->end_date))->format('Y/m/d') . "</div></div></a><div class='awardLine'></div></li>";
+                }
             }
         }
         return response()->json([
@@ -132,14 +150,16 @@ class rewardController extends Controller
             foreach ($group_lists as $group) {
                 //不能領取
                 $got_log = 'Z';
-                $temp_results = reward_getlog::where('user_id', $user_id)->where('group_id', $group->id)->orderby('is_send', 'asc')->first();
-                $remaining_num = reward_getlog::where('user_id', $user_id)->where('group_id', $group->id)->where('is_send', 'N')->count();
-                if ($temp_results != null || $temp_results != '') {
-                    if ($temp_results->is_send == 'Y') {
-                        $got_log = 'Y';
-                    } else {
-                        //可以領取
-                        $got_log = 'N';
+                if ((date('Y-m-d H:i:s') >= $start_date) && (date('Y-m-d H:i:s') < $end_date)) {
+                    $temp_results = reward_getlog::where('user_id', $user_id)->where('group_id', $group->id)->orderby('is_send', 'asc')->first();
+                    $remaining_num = reward_getlog::where('user_id', $user_id)->where('group_id', $group->id)->where('is_send', 'N')->count();
+                    if ($temp_results != null || $temp_results != '') {
+                        if ($temp_results->is_send == 'Y') {
+                            $got_log = 'Y';
+                        } else {
+                            //可以領取
+                            $got_log = 'N';
+                        }
                     }
                 }
                 $content_lists = reward_content::where('group_id', $group->id)->get();
@@ -257,7 +277,7 @@ class rewardController extends Controller
         $title = $event_group->title;
         $event = reward_event::where('id', $event_group->event_id)->first();
         $event_name = $event->event_name;
-        $content = "領獎專區";
+        $content = "領獎專區-" . $event_name;
         //找出uid
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $user_id);

@@ -20,10 +20,7 @@
     <meta property="og:url" content="">{{-- 官網連結 --}}
     <meta property="og:title" content="">
     <meta property="article:author" content="https://www.facebook.com">
-
-    {{-- 連結縮圖 --}}
-    @yield('thumbnail')
-
+    <meta property="og:image" content="/img/event/homepage/thumbnail_1200x628.jpg" />
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -38,7 +35,12 @@
 <body>
     <div class="wrap">
         <div class="main">
-
+            {{-- <div id="loading">
+                <div class="loadBox">
+                    <p>頁面加載中，請稍等</p>
+                    <div class="spinner"></div>
+                </div>
+            </div> --}}
 
             <div class="mask" id="pop1">
                 <div class="popBG">
@@ -46,12 +48,6 @@
                     <div class="popBox">
                         <div class="popTitle">技能介紹</div>
                         <div class="popContainer">
-                            {{-- <div class="title">
-                                <img src="/img/event/homepage/skill_icon/char_skill3_1.png">
-                                致命投擲
-                            </div>
-                            <div class="text">蓄勢後向選中目標投擲一把飛斧，造成致命的打擊。飛斧有60%的機率對目標造成割裂效果，使其受到的傷害提高5%，並每秒損失一定生命值，持續5秒</div>
-                            <div class="line"></div> --}}
                         </div>
                     </div>
                 </div>
@@ -90,6 +86,7 @@
                                     <li><a href={{ route('regulations') }}>遊戲規章</a></li>
                                     <li><a href="https://www.digeam.com/cs">聯繫客服</a></li>
                                     <li><a href={{ route('reward') }}>領獎專區</a></li>
+                                    <li><a href={{ route('exchange') }}>序號兌換</a></li>
                                 </ul>
                             </li>
                             <li class="menu menu7 "><a href="https://www.digeam.com/member/billing">儲值中心</a></li>
