@@ -42,7 +42,6 @@
                 </div>
             </div> --}}
 
-
             <div class="mask" id="pop1">
                 <div class="popBG">
                     <button onclick="_close()" class="popX">X</button>
