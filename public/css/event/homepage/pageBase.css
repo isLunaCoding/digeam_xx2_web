@@ -116,16 +116,16 @@
   font-weight: bold;
   color: #696969;
 }
-.sectionPage .sectionBG .container .boxRight .textBox .seat a {
+.sectionPage .sectionBG .container .boxRight .textBox .seat a, .sectionPage .sectionBG .container .boxRight .textBox .seat span {
   color: #696969;
 }
-.sectionPage .sectionBG .container .boxRight .textBox .seat a:hover {
+.sectionPage .sectionBG .container .boxRight .textBox .seat a:hover, .sectionPage .sectionBG .container .boxRight .textBox .seat span:hover {
   color: #1a48a8;
 }
-.sectionPage .sectionBG .container .boxRight .textBox .seat a .currentLocation {
+.sectionPage .sectionBG .container .boxRight .textBox .seat .currentLocation {
   color: #1a48a8;
 }
-.sectionPage .sectionBG .container .boxRight .textBox .seat a .currentLocation:hover {
+.sectionPage .sectionBG .container .boxRight .textBox .seat .currentLocation:hover {
   color: #1b63ff;
 }
 

@@ -21,7 +21,7 @@
 
 {{-- 顯示當前位置 --}}
 @section('seat')
-    <a href=""><span class="currentLocation">最新公告</span></a>
+    <span class="currentLocation">最新公告</span>
 @endsection
 
 

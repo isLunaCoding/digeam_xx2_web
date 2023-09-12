@@ -132,21 +132,20 @@
                         font-weight: bold;
                         color: #696969;
 
-                        a {
+                        a, span {
                             color: #696969;
 
                             &:hover {
                                 color: #1a48a8;
                             }
 
-                            .currentLocation {
-                                color: #1a48a8;
+                        }
+                        .currentLocation {
+                            color: #1a48a8;
 
-                                &:hover {
-                                    color: #1b63ff;
-                                }
+                            &:hover {
+                                color: #1b63ff;
                             }
-
                         }
                     }
                 }

@@ -20,7 +20,7 @@
 
 {{-- 顯示當前位置 --}}
 @section('seat')
-    <a href=""><span class="currentLocation">停權名單</span></a>
+    <span class="currentLocation">停權名單</span>
 @endsection
 
 

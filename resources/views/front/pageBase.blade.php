@@ -57,7 +57,7 @@
                     <div class="textBox">
                         <div class="seat">
                             當前位置：
-                            <a href="">首頁</a>&gt;
+                            <a href={{ route('index') }}>首頁</a>&gt;
                             @yield('seat')
                         </div>
                         {{-- 內文 --}}
