@@ -123,9 +123,9 @@ table, caption, tbody, tfoot, thead, tr, th, td{
             }
 
             .frontTitle {
-                font-size: 18px;
+                font-size: 21px;
                 font-weight: 600;
-                line-height: 19px;
+                line-height: 34px;
                 cursor: pointer;
 
                 &:hover {
@@ -137,6 +137,7 @@ table, caption, tbody, tfoot, thead, tr, th, td{
                     font-size: 14px;
                     padding-left: 18px;
                     padding-top: 5px;
+                    line-height: 20px;
 
                     a:hover {
                         color: #004dc1;

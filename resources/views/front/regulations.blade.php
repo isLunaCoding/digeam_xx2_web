@@ -20,7 +20,7 @@
 
 {{-- 顯示當前位置 --}}
 @section('seat')
-    <a href=""><span class="currentLocation">遊戲規章</span></a>
+    <span class="currentLocation">遊戲規章</span>
 @endsection
 
 

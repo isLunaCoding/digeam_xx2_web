@@ -14,7 +14,7 @@
     @yield('title')
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.1, user-scalable=yes">
     <meta name="keywords" content="Digeam 掘夢網,線上遊戲,免費遊戲,3D">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">{{-- 官網連結 --}}
@@ -69,10 +69,10 @@
                             </li>
                             <li class="menu menu2"><a href={{ route('wiki') }}>遊戲百科</a></li>
                             <li class="menu menu3" data-menuaction="menu3_open">
-                                <a href="">玩家社群</a>
+                                <a href="https://www.facebook.com/DiGeamXianXia2">玩家社群</a>
                                 <ul class="menu3_open">
-                                    <li><a href="">FB粉絲團</a></li>
-                                    <li><a href="">Discord</a></li>
+                                    <li><a href="https://www.facebook.com/DiGeamXianXia2">FB粉絲團</a></li>
+                                    <li><a href="https://discord.gg/gpXjMWGd">Discord</a></li>
                                 </ul>
                             </li>
                             {{-- <li class="menu menu4"><a href="">排行榜</a></li> --}}
@@ -94,9 +94,9 @@
                     </nav>
                     <nav class="iconBox">
                         <ul>
-                            <li><a href="#"><img src="/img/event/homepage/social_icon_yt.png"></a></li>
-                            <li><a href="#"><img src="/img/event/homepage/social_icon_dc.png"></a></li>
-                            <li><a href="#"><img src="/img/event/homepage/social_icon_fb.png"></a></li>
+                            <li><a href="https://www.youtube.com/@officialdigeam/videos"><img src="/img/event/homepage/social_icon_yt.png"></a></li>
+                            <li><a href="https://discord.gg/gpXjMWGd"><img src="/img/event/homepage/social_icon_dc.png"></a></li>
+                            <li><a href="https://www.facebook.com/DiGeamXianXia2"><img src="/img/event/homepage/social_icon_fb.png"></a></li>
                         </ul>
                     </nav>
                 </div>

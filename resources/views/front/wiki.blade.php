@@ -36,7 +36,7 @@
             <div class="mainBG">
                 <div class="topBox">
                     <nav class="leftBox">
-                        <a href="#"><img src="/img/event/wiki/LOGO.png"></a>
+                        <a href={{ route('index') }}><img src="/img/event/wiki/LOGO.png"></a>
 
                         <div class="serch">
                             <form id="serchForm" action="" method="GET">
@@ -46,8 +46,8 @@
 
                     </nav>
                     <nav class="iconBox">
-                        <a href="#"><img src="/img/event/wiki/social_icon_dc.png"></a>
-                        <a href="#"><img src="/img/event/wiki/social_icon_fb.png"></a>
+                        <a href="https://discord.gg/gpXjMWGd"><img src="/img/event/wiki/social_icon_dc.png"></a>
+                        <a href="https://www.facebook.com/DiGeamXianXia2"><img src="/img/event/wiki/social_icon_fb.png"></a>
                     </nav>
                 </div>
 
