@@ -214,6 +214,9 @@ $('.p3_giftinfo_btn').on("click",function(){
     $('body').css({
         "overflow":"hidden"
     });
+    $('.popL_info').animate({
+        scrollTop: 0
+    },10)
 })
 //p3說明彈窗開啟
 $('.p3_notice_btn').on("click",function(){
@@ -222,6 +225,9 @@ $('.p3_notice_btn').on("click",function(){
     $('body').css({
         "overflow":"hidden"
     });
+    $('.popL_info').animate({
+        scrollTop: 0
+    },10)
 })
 
 
@@ -232,6 +238,9 @@ $('.p4_award_btn').on("click",function(){
     $('body').css({
         "overflow":"hidden"
     });
+    $('.popL_info').animate({
+        scrollTop: 0
+    },10)
 })
 //p4說明彈窗開啟
 $('.p4_notice_btn').on("click",function(){
@@ -240,6 +249,9 @@ $('.p4_notice_btn').on("click",function(){
     $('body').css({
         "overflow":"hidden"
     });
+    $('.popL_info').animate({
+        scrollTop: 0
+    },10)
 })
 
 
@@ -250,6 +262,9 @@ $('.p5_award_btn').on("click",function(){
     $('body').css({
         "overflow":"hidden"
     });
+    $('.popL_info').animate({
+        scrollTop: 0
+    },10)
 })
 //p5說明彈窗開啟
 $('.p5_notice_btn').on("click",function(){
@@ -258,5 +273,167 @@ $('.p5_notice_btn').on("click",function(){
     $('body').css({
         "overflow":"hidden"
     });
+    $('.popL_info').animate({
+        scrollTop: 0
+    },10)
 })
 
+scroll_p1()
+scroll_p2()
+scroll_p3()
+scroll_p4()
+scroll_p5()
+function scroll_p1(){
+    const option = {
+        threshold: 0.5
+    };
+    const callback = (entries, observe) => {
+        if (entries[0].isIntersecting) {
+            if(screen.width > 768){
+                $('.btn1').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn1_hover.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn1').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn1m.png)no-repeat center center / contain'
+                })
+            }
+        } else {
+            if(screen.width > 768){
+                $('.btn1').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn1.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn1').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn1m.png)no-repeat center center / contain'
+                })
+            }
+        }
+    };
+    const observer = new IntersectionObserver(callback, option);
+    observer.observe(document.querySelector(".p1_wrap"));
+}
+
+function scroll_p2(){
+    const option = {
+        threshold: 0.5
+    };
+    const callback = (entries, observe) => {
+        if (entries[0].isIntersecting) {
+            if(screen.width > 768){
+                $('.btn2').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn2_hover.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn2').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn2m.png)no-repeat center center / contain'
+                })
+            }
+        } else {
+            if(screen.width > 768){
+                $('.btn2').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn2.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn2').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn2m.png)no-repeat center center / contain'
+                })
+            }
+        }
+    };
+    const observer = new IntersectionObserver(callback, option);
+    observer.observe(document.querySelector(".page2"));
+}
+
+function scroll_p3(){
+    const option = {
+        threshold: 0.5
+    };
+    const callback = (entries, observe) => {
+        if (entries[0].isIntersecting) {
+            if(screen.width > 768){
+                $('.btn3').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn3_hover.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn3').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn3m.png)no-repeat center center / contain'
+                })
+            }
+        } else {
+            if(screen.width > 768){
+                $('.btn3').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn3.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn3').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn3m.png)no-repeat center center / contain'
+                })
+            }
+        }
+    };
+    const observer = new IntersectionObserver(callback, option);
+    observer.observe(document.querySelector(".page3"));
+}
+
+function scroll_p4(){
+    const option = {
+        threshold: 0.5
+    };
+    const callback = (entries, observe) => {
+        if (entries[0].isIntersecting) {
+            if(screen.width > 768){
+                $('.btn4').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn4_hover.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn4').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn4m.png)no-repeat center center / contain'
+                })
+            }
+        } else {
+            if(screen.width > 768){
+                $('.btn4').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn4.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn4').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn4m.png)no-repeat center center / contain'
+                })
+            }
+        }
+    };
+    const observer = new IntersectionObserver(callback, option);
+    observer.observe(document.querySelector(".page4"));
+}
+
+function scroll_p5(){
+    const option = {
+        threshold: 1
+    };
+    const callback = (entries, observe) => {
+        if (entries[0].isIntersecting) {
+            if(screen.width > 768){
+                $('.btn5').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn5_hover.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn5').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn5m.png)no-repeat center center / contain'
+                })
+            }
+        } else {
+            if(screen.width > 768){
+                $('.btn5').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn5.png)no-repeat center center / cover'
+                })
+            }else{
+                $('.btn5').css({
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn5m.png)no-repeat center center / contain'
+                })
+            }
+        }
+    };
+    const observer = new IntersectionObserver(callback, option);
+    observer.observe(document.querySelector(".page5"));
+}

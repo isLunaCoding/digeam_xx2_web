@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Model\Reward\package_item;
 use App\Model\Reward\reward_content;
 use App\Model\Reward\reward_event;
 use App\Model\Reward\reward_getlog;
@@ -85,29 +84,27 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
-            // if ((date('YmdHis') >= '20230911000000') && (date('YmdHis') <= '20230913235959')) {
-            //     // $id = MemberRecord::getUserInfo($user_id);
-            //     if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
-            //         $db = \DB::connection('mysql');
-            //         $event_infos = reward_getlog::where('group_id', '1')->where('user_id', $user_id)->count();
-            //         if ($event_infos == 0) {
-            //             $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',1,'測試')";
-            //             $db->disableQueryLog();
-            //             $event_info = $db->statement($sql);
-            //         }
-            //         \DB::disconnect('mysql');
+            if ((date('YmdHis') >= '20230911000000') && (date('YmdHis') <= '20230913235959')) {
+                // $id = MemberRecord::getUserInfo($user_id);
+                if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+                    $db = \DB::connection('mysql');
+                    $event_infos = reward_getlog::where('group_id', '1')->where('user_id', $user_id)->count();
+                    if ($event_infos == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',1,'測試')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                    \DB::disconnect('mysql');
 
-            //     }
-            // }
+                }
+            }
         }
 
-        // if ($_SERVER['HTTP_CF_CONNECTING_IP'] != '211.23.144.219') {
-        //     $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
-        // } else {
-        //     $event_lists = reward_event::orderby('created_at', 'desc')->get();
-        // }
-
-        $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
+        if ($_SERVER['HTTP_CF_CONNECTING_IP'] != '211.23.144.219') {
+            $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
+        } else {
+            $event_lists = reward_event::orderby('created_at', 'desc')->get();
+        }
 
         foreach ($event_lists as $event_list) {
             if ((date('Y-m-d H:i:s') >= $event_list->start_date) && (date('Y-m-d H:i:s') < $event_list->end_date)) {
@@ -291,6 +288,7 @@ class rewardController extends Controller
         $event = reward_event::where('id', $event_group->event_id)->first();
         $event_name = $event->event_name;
         $content = "領獎專區-" . $event_name;
+
         //找出uid
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $user_id);
@@ -318,7 +316,14 @@ class rewardController extends Controller
                 dd($item->item_code);
             }
 
-        }
+        $ch = curl_init();
+        $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
+            . "&zoneid=" . $server_id . "&charid=" . $charid . "&content=" . $content . "&title=" . $title . "&name=" . $char_name . "&itemid=" . $item_code . "&itemnum=" . $itemcnt . "&isbind=" . $isbind;
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $result3 = curl_exec($ch);
+        curl_close($ch);
+        $result3 = json_decode($result3);
 
         if ($result3->status == 0) {
             //確認發獎成功，更新的get_log

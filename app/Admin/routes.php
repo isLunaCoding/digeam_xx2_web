@@ -17,6 +17,7 @@ Route::group([
     $router->resource('/panda_guess_log', 'prereg\PandaGuessLogController');
     $router->resource('/buylog', 'cbt\BuyLogController');
     $router->resource('/playlog', 'cbt\PlayLogController');
+    $router->resource('/playuser', 'cbt\PlayUserController');
     $router->resource('/report', 'cbt\ReportController');
     $router->resource('category', 'CategoryController');
     $router->resource('wiki', 'WikiController');
