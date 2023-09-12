@@ -7,10 +7,15 @@
     color: #002578;
     width: 800px;
     margin: 60px auto 0;
+    
+    .line{
+        background-color: #002578;
+        width: 800px;
+        height: 1px;
+    }
 
-    .btnBox1, .btnBox2 {
+    .btn1, .btn2 {
         display: flex;
-        margin-bottom: 30px;
 
         .downloadBtn {
             height: 60px;
@@ -19,6 +24,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 5px 5px;
             
             &:hover {
                 border: 2px solid #234fac;
@@ -28,15 +34,16 @@
             }
         }
     }
-    .btnBox1{
+    .btn1{
         justify-content: center;
         .downloadBtn {
             background-color: #052d83;
             width: 200px;
         }
     }
-    .btnBox2{
-        justify-content: space-between;
+    .btn2{
+        flex-wrap: wrap;
+        justify-content: center;
         .downloadBtn {
             background-color: #234fac;
             width: 150px;

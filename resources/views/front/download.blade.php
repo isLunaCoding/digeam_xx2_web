@@ -27,10 +27,11 @@
 {{-- 內文 --}}
 @section('textBox')
     <div class="downloadBox">
-        <div class="btnBox1">
+        <div class="btn1">
             <a href="" class="downloadBtn">下載器</a>
         </div>
-        <div class="btnBox2">
+        <div class="line"></div>
+        <div class="btn2">
             <a href="" class="downloadBtn">官網下載_1</a>
             <a href="" class="downloadBtn">官網下載_2</a>
             <a href="" class="downloadBtn">官網下載_3</a>
@@ -43,7 +44,7 @@
             <p class="ulTitle">遊戲下載說明</p>
             <li>點擊上方連結，選擇下載器或官網下載其中一種方式下載即可。</li>
             <li>安裝前，請確認硬碟內的空間有大於50GB。</li>
-            <li>若使用官網下載，請將part1與part2同一資料夾進行解壓縮後，開啟Launcher開啟遊戲。</li>
+            <li>若使用官網下載，請將part1~part5放置到同一資料夾進行解壓縮後，點選Launcher開啟遊戲。</li>
             <li>若下載或安裝有發生任何問題，請透過客服中心聯絡我們。</li>
         </ul>
         <br>

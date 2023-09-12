@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .backHome {
+  font-weight: 600;
   position: fixed;
   top: 30px;
   left: 90px;

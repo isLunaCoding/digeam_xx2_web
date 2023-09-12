@@ -14,7 +14,7 @@
     @yield('title')
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.1, user-scalable=yes">
     <meta name="keywords" content="Digeam 掘夢網,線上遊戲,免費遊戲,3D">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">{{-- 官網連結 --}}
