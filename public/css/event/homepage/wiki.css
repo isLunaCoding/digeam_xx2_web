@@ -382,18 +382,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 .mainBG .mainBox .rightBox .mainTextBox .text {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 40px;
+  font-family: Arial;
 }
 .mainBG .mainBox .rightBox .mainTextBox .text2 {
   line-height: 30px;
-  font-size: 18px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-.mainBG .mainBox .rightBox .mainTextBox .text2 {
   font-size: 18px;
   overflow: hidden;
   text-overflow: ellipsis;

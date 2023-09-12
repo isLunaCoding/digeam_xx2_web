@@ -46,7 +46,7 @@
     <div id="exchangeForm">
         <select name="server" id="server">
             <option value="" disabled selected>伺服器</option>
-            <option value="1899">1899</option>
+            <option value="1801">十方鎮</option>
         </select>
         <select name="character" id="character">
             <option value="" disabled selected>角色名稱</option>

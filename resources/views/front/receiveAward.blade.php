@@ -88,7 +88,7 @@
                             <label for="server"></label>
                             <select name="server" id="server" required>
                                 <option value="0" disabled selected>請選擇伺服器</option>
-                                <option value="1899">1899</option>
+                                <option value="1801">十方鎮</option>
                             </select>
                             <select name="character" id="character" required>
                                 <option value="0" disabled selected>請選擇角色</option>
@@ -108,11 +108,11 @@
                     <table class="actionTable">
                         <thead>
                             <tr>
-                                <td>名稱</td>
-                                <td>獎勵</td>
-                                <td>說明</td>
-                                <td>領取狀態</td>
-                                <td>剩餘次數</td>
+                                <td width="0.4%">名稱</td>
+                                <td width="0.6%">獎勵</td>
+                                <td width="1.8%">說明</td>
+                                <td width="0.1%">領取狀態</td>
+                                <td width="0.2%">剩餘次數</td>
                             </tr>
                         </thead>
                         <tbody class="show_content">

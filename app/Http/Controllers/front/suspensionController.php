@@ -28,7 +28,11 @@ class suspensionController extends Controller
             }
         }
         $last = Suspension_lists::orderBy('created_at', 'desc')->first();
-        $last_time = $last->created_at;
+        if ($last != null) {
+            $last_time = $last->created_at;
+        } else {
+            $last_time = '';
+        }
         return view('front.suspension', ['user_list' => $user_list, 'last_time' => $last_time]);
     }
 }
