@@ -27,6 +27,7 @@ class suspensionController extends Controller
                 $value->char_name = mb_substr($name, 0, 2) . "***" . mb_substr($name, -2);
             }
         }
+        
         $last = Suspension_lists::orderBy('created_at', 'desc')->first();
         if ($last != null) {
             $last_time = $last->created_at;

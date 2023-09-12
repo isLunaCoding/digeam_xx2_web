@@ -85,7 +85,7 @@ function get_exchange() {
             } else if (res.status == -98) {
                 alert("序號不在兌換時間內");
             } else if (res.status == -97) {
-                alert("序號已領取");
+                alert("這個序號已經被使用過了！");
             } else if (res.status == -96) {
                 alert("該序號數量已兌換完畢");
             } else if (res.status == -95) {

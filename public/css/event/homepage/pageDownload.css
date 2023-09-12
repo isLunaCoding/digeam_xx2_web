@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .downloadBox {
-  font-family: "微軟正黑";
+  font-family: "微軟正黑體";
   font-size: 16px;
   position: relative;
   line-height: 30px;
@@ -9,36 +9,42 @@
   width: 800px;
   margin: 60px auto 0;
 }
-.downloadBox .btnBox1, .downloadBox .btnBox2 {
-  display: flex;
-  margin-bottom: 30px;
+.downloadBox .line {
+  background-color: #002578;
+  width: 800px;
+  height: 1px;
+  margin: 20px 0;
 }
-.downloadBox .btnBox1 .downloadBtn, .downloadBox .btnBox2 .downloadBtn {
+.downloadBox .btn1, .downloadBox .btn2 {
+  display: flex;
+}
+.downloadBox .btn1 .downloadBtn, .downloadBox .btn2 .downloadBtn {
   height: 60px;
   font-size: 25px;
-  font-family: "微軟正黑";
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px 5px;
 }
-.downloadBox .btnBox1 .downloadBtn:hover, .downloadBox .btnBox2 .downloadBtn:hover {
+.downloadBox .btn1 .downloadBtn:hover, .downloadBox .btn2 .downloadBtn:hover {
   border: 2px solid #234fac;
   background-color: #fff;
   color: #234fac;
   transition: all 0.2s ease;
 }
-.downloadBox .btnBox1 {
+.downloadBox .btn1 {
   justify-content: center;
 }
-.downloadBox .btnBox1 .downloadBtn {
+.downloadBox .btn1 .downloadBtn {
   background-color: #052d83;
   width: 200px;
 }
-.downloadBox .btnBox2 {
-  justify-content: space-between;
+.downloadBox .btn2 {
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.downloadBox .btnBox2 .downloadBtn {
+.downloadBox .btn2 .downloadBtn {
   background-color: #234fac;
   width: 150px;
   text-align: center;

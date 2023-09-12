@@ -300,7 +300,21 @@ class rewardController extends Controller
             $info = $result->account_info;
             $uid = $info->uid;
         }
-        //發獎API
+        if ($is_package == 'N') {
+            //發獎API
+            $ch = curl_init();
+            $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
+                . "&zoneid=" . $server_id . "&charid=" . $charid . "&content=" . $content . "&title=" . $title . "&name=" . $char_name . "&itemid=" . $item_code . "&itemnum=" . $itemcnt . "&isbind=" . $isbind;
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            $result3 = curl_exec($ch);
+            curl_close($ch);
+            $result3 = json_decode($result3);
+        } else {
+            $item_lists = package_item::where('package_code', $item_code)->get();
+            foreach ($item_lists as $item) {
+                dd($item->item_code);
+            }
 
         $ch = curl_init();
         $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid

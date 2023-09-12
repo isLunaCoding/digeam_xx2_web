@@ -20,7 +20,7 @@
 
 {{-- 顯示當前位置 --}}
 @section('seat')
-    <a href=""><span class="currentLocation">領獎專區</span></a>
+    <span class="currentLocation">領獎專區</span>
 @endsection
 
 

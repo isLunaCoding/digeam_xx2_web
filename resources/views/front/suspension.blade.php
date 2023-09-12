@@ -20,7 +20,7 @@
 
 {{-- 顯示當前位置 --}}
 @section('seat')
-    <a href=""><span class="currentLocation">停權名單</span></a>
+    <span class="currentLocation">停權名單</span>
 @endsection
 
 
@@ -34,11 +34,11 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th width="0.3%">停權日期</th>
-                        <th width="0.3%">帳號</th>
-                        <th width="0.3%">角色名稱</th>
+                        <th width="1%">停權日期</th>
+                        <th width="1%">帳號</th>
+                        <th width="1%">角色名稱</th>
                         <th width="5%">說明</th>
-                        <th width="3%">懲處結果</th>
+                        <th width="2%">懲處結果</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -21,9 +21,7 @@
 
 {{-- 顯示當前位置 --}}
 @section('seat')
-    當前位置：
-    <a href="">首頁</a>&gt;
-    <a href=""><span class="currentLocation">最新公告</span></a>
+    <span class="currentLocation">最新公告</span>
 @endsection
 
 

@@ -123,9 +123,9 @@ table, caption, tbody, tfoot, thead, tr, th, td{
             }
 
             .frontTitle {
-                font-size: 18px;
+                font-size: 21px;
                 font-weight: 600;
-                line-height: 19px;
+                line-height: 34px;
                 cursor: pointer;
 
                 &:hover {
@@ -137,6 +137,7 @@ table, caption, tbody, tfoot, thead, tr, th, td{
                     font-size: 14px;
                     padding-left: 18px;
                     padding-top: 5px;
+                    line-height: 20px;
 
                     a:hover {
                         color: #004dc1;
@@ -183,8 +184,8 @@ table, caption, tbody, tfoot, thead, tr, th, td{
 
                 .text {
                     font-size: 18px;
-                    line-height: 30px;
-
+                    line-height: 40px;
+                    font-family:Arial;
                 }
                 .text2 {
                     line-height: 30px;
@@ -196,14 +197,6 @@ table, caption, tbody, tfoot, thead, tr, th, td{
                     -webkit-line-clamp: 3;
                 }
 
-                .text2 {
-                    font-size: 18px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                }
 
                 .continueBtn {
                     background-color: #82a3d4;
