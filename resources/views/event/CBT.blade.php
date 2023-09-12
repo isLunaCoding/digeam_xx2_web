@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <link rel="stylesheet" href="css/event/CBT/style.css?v=1">
+    <link rel="stylesheet" href="css/event/CBT/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
     <div class="menubar">
         <div class="menu_wrap">
             <div class="xx2_logo">
-                <a href="https://xx2.digeam.com/index" target="blank"></a>
+                <a href="https://xx2.digeam.com/xx2index" target="blank"></a>
             </div>
             <div class="menubtns">
                 <div class="btn1"><a href="#page1"></a></div>
@@ -58,10 +58,9 @@
                     </div>
                 @else
                     <!-- 未登入 -->
-                    @php
-                        $_COOKIE_DOMAIN = '.digeam.com';
-                        SetCookie('return_url', base64_encode('https://xx2.digeam.com/CBT'), 0, '/', $_COOKIE_DOMAIN);
-                    @endphp
+                    <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
+                        <input type="hidden" name="return_url" id="return_url" value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
+                    </form>
                     <div class='loginbtn login_user_id' style='text-align:center' data-val='null'><a href="https://www.digeam.com/login"></a></div>
                 @endif
 
@@ -85,7 +84,7 @@
     <div class="page0">
         <video poster="/img/event/CBT/p0/bg0.png" class="videoBG" src="/img/event/CBT/p0/BG.mp4" autoplay loop muted></video>
         <div class="xx2_logo_M">
-            <a href="https://xx2.digeam.com/index" target="blank"></a>
+            <a href="https://xx2.digeam.com/xx2index" target="blank"></a>
         </div>
         <div class="p0_ti"></div>
         <div class="p0btns">
@@ -427,7 +426,7 @@
     <!-- footer -->
     <footer>
         <div class="wrap">
-            <div class="digeamLogo"></div>
+            <div class="digeamLogo"><a href="https://www.digeam.com/index" target="blank"></a></div>
             <div class="gaintLogo"></div>
             <div class="copyright">
                 <p>
@@ -454,9 +453,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
-    <script src="js/event/CBT/menu.js?v=1" type="text/javascript"></script>
-    <script src="js/event/CBT/poptext.js?v=1" type="text/javascript"></script>
-    <script src="js/event/CBT/main.js?v=1" type="text/javascript"></script>
-    <script src="js/event/CBT/api.js?v=1" type="text/javascript"></script>
+    <script src="js/event/CBT/menu.js" type="text/javascript"></script>
+    <script src="js/event/CBT/poptext.js" type="text/javascript"></script>
+    <script src="js/event/CBT/main.js" type="text/javascript"></script>
+    <script src="js/event/CBT/api.js" type="text/javascript"></script>
 </body>
 </html>

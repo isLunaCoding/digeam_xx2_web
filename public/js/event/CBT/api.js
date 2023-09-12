@@ -7,7 +7,7 @@ if (_CheckLogin != "null") {
     _user = null;
 }
 
-let _play_times = -99
+let _play_times;
 
 
 
@@ -323,10 +323,12 @@ $(".p4_gobtn").on("click",function(){
                             }else if(_play_times == 15){
                                 level_6()
                             }else{
+                                console.log(_play_times+"error1")
                                 error()
                             }
                         },1000)
                     }else{
+                        console.log(_play_times+"error2")
                         error()
                     }
                 }else if(res.status == -98){  //當日已遊玩

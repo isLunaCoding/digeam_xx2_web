@@ -4,10 +4,6 @@ function login_txt(){
     $('body').css({
         "overflow":"hidden"
     });
-    // $('.login_checkbtn').on("click",function(){
-    //     window.open('https://www.digeam.com/login');
-    //     location.reload();
-    // })
 }
 
 //禮包

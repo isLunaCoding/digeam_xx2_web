@@ -1912,10 +1912,12 @@ body{
                 padding-left: 25px;
                 list-style: decimal;
                 width: 90%;
+                top: -6%;
                 left: 50%;
                 translate: -50%;
 
                 @include xxxl(){
+                    top: 0%;
                     width: 80%;
                 }
 
@@ -2761,6 +2763,7 @@ body{
 
                 .p5_enter_btn{
                     width: 100px;
+                    height: 20px;
                     left: 50%;
                     translate: -50%;
                     background-color: #FFF;
@@ -2784,125 +2787,7 @@ body{
 
 }
 
-footer{
-    width: 100%;
-    height: 100px;
-    background-image: linear-gradient(to top, #192e35,#313953);
-        
-    @include sm(){
-        height: 300px;
-    }
-
-    .wrap{
-        width: 60%;
-        height: 80%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        top: 50%;
-        translate: 0 -50%;
-        justify-content: space-around;
-
-        @include xxl(){
-            width: 80%;
-        }
-
-        @include xl(){
-            width: 100%;
-        }
-
-        @include sm(){
-            display: block;
-        }
-
-        .digeamLogo{
-            width: 15%;
-            background: no-repeat center center / contain;
-            background-image: url(/img/event/CBT/footer/LOGO_white.png);
-
-            @include sm(){
-                width: 150px;
-                height: 12%;
-                margin: 10px auto;
-            }
-        }
-
-        .gaintLogo{
-            width: 15%;
-            background: no-repeat center center / contain;
-            background-image: url(/img/event/CBT/footer/GIANT-LOGO.png);
-
-            @include sm(){
-                width: 150px;
-                height: 15%;
-                margin: 10px auto;
-            }
-        }
-
-        .copyright{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-
-            @include sm(){
-                margin: 10px auto;
-            }
-
-            & p{
-                color: #FFF;
-                font-size: 12px;
-                line-height: 18px;
-
-                @include sm(){
-                    text-align: center;
-                }
-            
-                & a{
-                    display: inline-block;
-                    color: #92fbff;
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        .plus{
-            display: flex;
-            justify-content: center;
-            
-            @include sm(){
-                margin: 10px auto;
-            }
-
-            @include xxs(){
-                scale: 0.8;
-            }
-
-            .lv{
-                width: 60px;
-                height: 100%;
-                background: no-repeat center center / contain;
-                background-image: url(/img/event/CBT/footer/15plus.png);
-
-                @include sm(){
-                    height: 60px;
-                }
-            }
-
-            .footernotice{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                padding-left: 5px;
-                & p{
-                    color: #FFF;
-                    font-size: 12px;
-                    line-height: 15px;
-                }
-            }
-        }
-    }
-}
-
+//下載大彈窗(它被拋棄了QQ)
 .popDownload{
     position: fixed;
     top: 0;
