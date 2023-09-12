@@ -125,7 +125,7 @@
                         <footer class="footer">
                             <div class="footerBox">
                                 <div class="footerbox_logo">
-                                    <img class="digeamlogo" src="/img/event/wiki/logo_digeam.png">
+                                    <a href="https://www.digeam.com/index"><img class="digeamlogo" src="/img/event/wiki/logo_digeam.png"></a>
                                     <img class="giantlogo" src="/img/event/wiki/GIANT_logo.png">
                                 </div>
                                 <div class="copyright">
