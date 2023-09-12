@@ -61,7 +61,7 @@
                         <ul class="menuBox">
                             <li class="menu menu1" data-menuaction="menu1_open">
                                 <a href={{ route('announcement') }}>遊戲公告</a>
-                                <ul class="menu1_open">
+                                <ul class="menu1_open" data-menuaction="menu1_open">
                                     <li><a href={{ route('announcement', 'new') }}>最新消息</a></li>
                                     <li><a href={{ route('announcement', 'activity') }}>活動情報</a></li>
                                     <li><a href={{ route('announcement', 'system') }}>系統公告</a></li>
@@ -70,7 +70,7 @@
                             <li class="menu menu2"><a href={{ route('wiki') }}>遊戲百科</a></li>
                             <li class="menu menu3" data-menuaction="menu3_open">
                                 <a href="https://www.facebook.com/DiGeamXianXia2">玩家社群</a>
-                                <ul class="menu3_open">
+                                <ul class="menu3_open" data-menuaction="menu3_open">
                                     <li><a href="https://www.facebook.com/DiGeamXianXia2">FB粉絲團</a></li>
                                     <li><a href="https://discord.gg/gpXjMWGd">Discord</a></li>
                                 </ul>
@@ -79,7 +79,7 @@
                             <li class="menu menu5"><a href={{ route('download') }}>下載專區</a></li>
                             <li class="menu menu6" data-menuaction="menu6_open">
                                 <a href="">會員中心</a>
-                                <ul class="menu6_open">
+                                <ul class="menu6_open" data-menuaction="menu6_open">
                                     <li><a href="https://www.digeam.com/register">註冊會員</a></li>
                                     <li><a href={{ route('suspension') }}>停權名單</a></li>
                                     <li><a href="https://www.digeam.com/cs/faq">FAQ</a></li>
@@ -112,7 +112,7 @@
             <footer class="footer">
                 <div class="footerBox">
                     <div class="footerbox_logo">
-                        <img class="digeamlogo" src="/img/event/homepage/footer/digeam_logo.webp">
+                        <a href="https://www.digeam.com/index"><img class="digeamlogo" src="/img/event/homepage/footer/digeam_logo.webp"></a>
                         <img class="giantlogo" src="/img/event/homepage/footer/GIANT_logo.webp">
                     </div>
                     <div class="copyright">

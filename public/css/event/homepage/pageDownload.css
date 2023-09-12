@@ -13,6 +13,7 @@
   background-color: #002578;
   width: 800px;
   height: 1px;
+  margin: 20px 0;
 }
 .downloadBox .btn1, .downloadBox .btn2 {
   display: flex;
