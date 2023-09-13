@@ -352,7 +352,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   color: #004dc1;
 }
 .mainBG .mainBox .menu .frontTitle .liMiddle .liSamll {
-  display: none;
   padding-left: 14px;
 }
 .mainBG .mainBox .menu .frontTitle .liMiddle .liSamll:hover {
