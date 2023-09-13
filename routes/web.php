@@ -24,6 +24,14 @@ Route::middleware(['setReturnUrl'])->group(function () {
 
     // CBT
     Route::get('/CBT', 'front\CBTController@index');
+    Route::get('/CBT', function () {
+        return view('event/CBT');
+    });
+
+    //obt
+    Route::get('/OBT', function () {
+        return view('event/OBT');
+    });
 });
 
 // 官網
