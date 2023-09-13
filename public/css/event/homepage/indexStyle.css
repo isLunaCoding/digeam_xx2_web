@@ -236,6 +236,7 @@ body {
   overflow: scroll;
   margin: 0 auto;
   background-image: linear-gradient(#fff, #d2e2ff);
+  min-width: 1600px;
 }
 
 .main {
@@ -616,6 +617,9 @@ body {
   background-color: #0b3792;
 }
 .section2 .sectionBG .charBox .btnBox .charBtn:hover img {
+  -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
+  -ms-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
+  -o-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
 }
 .section2 .sectionBG .charBox .btnBox .active {
@@ -623,6 +627,9 @@ body {
   background-color: #0b3792;
 }
 .section2 .sectionBG .charBox .btnBox .active img {
+  -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
+  -ms-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
+  -o-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='white'><feColorMatrix type='matrix' values='1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0'/></filter></svg>#white");
 }
 .section2 .sectionBG .charBox .cha {
