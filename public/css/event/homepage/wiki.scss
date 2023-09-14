@@ -185,19 +185,10 @@ table, caption, tbody, tfoot, thead, tr, th, td{
                 .text {
                     font-size: 18px;
                     line-height: 40px;
-
+                    font-family:Arial;
                 }
                 .text2 {
                     line-height: 30px;
-                    font-size: 18px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                }
-
-                .text2 {
                     font-size: 18px;
                     overflow: hidden;
                     text-overflow: ellipsis;
