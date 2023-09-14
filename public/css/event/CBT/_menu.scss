@@ -75,6 +75,25 @@
             }
     
     
+            & div{
+                width: 20%;
+                height: 100%;
+                background: no-repeat center center / cover;
+                cursor: pointer;
+                transition: 0.3s;
+    
+                @include sm(){
+                    width: 100%;
+                    height: 20%;
+                    background: no-repeat center center / contain;
+                }
+    
+                & a{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+    
             .btn1{
                 background-image: url(/img/event/CBT/p0/bar/menubtn1.png);
     
@@ -172,25 +191,6 @@
                     @include sm(){
                         background-image: url(/img/event/CBT/p0/bar/menubtn_M/menubtn5m_hover.png);
                     }
-                }
-            }
-    
-            & div{
-                width: 20%;
-                height: 100%;
-                background: no-repeat center center / cover;
-                cursor: pointer;
-                transition: 0.3s;
-    
-                @include sm(){
-                    width: 100%;
-                    height: 20%;
-                    background: no-repeat center center / contain;
-                }
-    
-                & a{
-                    width: 100%;
-                    height: 100%;
                 }
             }
         }

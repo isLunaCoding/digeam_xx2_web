@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Services\MemberRecord;
+use App\Model\Reward\package_item;
 use App\Model\Reward\reward_content;
 use App\Model\Reward\reward_event;
 use App\Model\Reward\reward_getlog;
@@ -19,16 +19,16 @@ class rewardController extends Controller
         if ($request->type == 'login') {
             $result = rewardController::get_setting($request);
             return $result;
-        } else if ($request->type == 'char') {
+        } elseif ($request->type == 'char') {
             $result = rewardController::get_char($request);
             return $result;
-        } else if ($request->type == 'reward') {
+        } elseif ($request->type == 'reward') {
             $result = rewardController::get_reward($request);
             return $result;
-        } else if ($request->type == 'show') {
+        } elseif ($request->type == 'show') {
             $result = rewardController::show_cont($request);
             return $result;
-        } else if ($request->type == 'search') {
+        } elseif ($request->type == 'search') {
             $result = rewardController::search($request);
             return $result;
         }
@@ -84,19 +84,39 @@ class rewardController extends Controller
     {
         $list = '';
         $user_id = $request->user_id;
-        // if ($user_id != '') {
-        //     if ((date('YmdHis') >= '20230911000000') && (date('YmdHis') <= '20230913235959')) {
-        //         MemberRecord::getUserInfo($user_id);
-        //     }
-        // }
+        if ($user_id != '') {
 
-        // if ($_SERVER['HTTP_CF_CONNECTING_IP'] != '211.23.144.219') {
-        //     $event_lists = reward_event::where('is_open', 'Y')->orderby('created_at', 'desc')->get();
-        // } else {
-        //     $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
-        // }
+            if ((date('YmdHis') >= '20231019000000') && (date('YmdHis') <= '20231231235959')) {
+                // $id = MemberRecord::getUserInfo($user_id);
+            }
 
-        $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
+            if ((date('YmdHis') >= '20230911000000') && (date('YmdHis') <= '20230913235959')) {
+                // $id = MemberRecord::getUserInfo($user_id);
+                if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+                    $db = \DB::connection('mysql');
+                    $event_infos = reward_getlog::where('group_id', '1')->where('user_id', $user_id)->count();
+                    if ($event_infos == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',1,'測試')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                    $event_infos = reward_getlog::where('group_id', '2')->where('user_id', $user_id)->count();
+                    if ($event_infos == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',2,'測試2')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                    \DB::disconnect('mysql');
+                }
+            }
+
+        }
+
+        if ($_SERVER['HTTP_CF_CONNECTING_IP'] != '211.23.144.219') {
+            $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
+        } else {
+            $event_lists = reward_event::orderby('created_at', 'desc')->get();
+        }
 
         foreach ($event_lists as $event_list) {
             if ((date('Y-m-d H:i:s') >= $event_list->start_date) && (date('Y-m-d H:i:s') < $event_list->end_date)) {
@@ -201,6 +221,7 @@ class rewardController extends Controller
         } else {
             $real_ip = $_SERVER["REMOTE_ADDR"];
         }
+
         $keyword = $request->keyword;
         $year = $request->year;
         $month = $request->month;
@@ -235,7 +256,6 @@ class rewardController extends Controller
             }
         }
         $sql = "SELECT * FROM reward_event" . $where . $order;
-        // dd($sql);
         $db = \DB::connection('mysql');
         $db->disableQueryLog();
         $event_lists = $db->select($sql);
@@ -273,11 +293,14 @@ class rewardController extends Controller
         $event_group = reward_group::where('id', $reward_content->group_id)->first();
         $item_name = $reward_content->item_name;
         $item_code = $reward_content->item_code;
+        $itemcnt = $reward_content->itemcnt;
+        $isbind = $reward_content->isbind;
         $is_package = $reward_content->is_package;
         $title = $event_group->title;
         $event = reward_event::where('id', $event_group->event_id)->first();
         $event_name = $event->event_name;
         $content = "領獎專區-" . $event_name;
+
         //找出uid
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $user_id);
@@ -289,25 +312,44 @@ class rewardController extends Controller
             $info = $result->account_info;
             $uid = $info->uid;
         }
-        //發獎API
-
-        $ch = curl_init();
-        $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
-            . "&zoneid=" . $server_id . "&charid=" . $charid . "&content=" . $content . "&title=" . $title . "&name=" . $char_name . "&itemid=50001&itemnum=1&isbind=1";
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $result3 = curl_exec($ch);
-        curl_close($ch);
-        $result3 = json_decode($result3);
-
-        if ($result3->status == 0) {
+        $status = 0;
+        if ($is_package == 'N') {
+            //發獎API
+            $ch = curl_init();
+            $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
+                . "&zoneid=" . $server_id . "&charid=" . $charid . "&content=" . $content . "&title=" . $title . "&name=" . $char_name . "&itemid=" . $item_code . "&itemnum=" . $itemcnt . "&isbind=" . $isbind;
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            $result3 = curl_exec($ch);
+            curl_close($ch);
+            $result3 = json_decode($result3);
+            $status = $result3->status;
+        } else {
+            $item_lists = package_item::where('package_code', $item_code)->get();
+            foreach ($item_lists as $item) {
+                $ch = curl_init();
+                $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
+                . "&zoneid=" . $server_id . "&charid=" . $charid . "&content=" . $content . "&title=" . $title . "&name=" . $char_name . "&itemid=" . $item->item_code . "&itemnum=" . $item->item_count . "&isbind=" . $item->isbind;
+                curl_setopt($ch, CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                $result3 = curl_exec($ch);
+                curl_close($ch);
+                $result3 = json_decode($result3);
+                $status = $result3->status;
+            }
+        }
+        if ($status == 0) {
             //確認發獎成功，更新的get_log
             $log_info = reward_getlog::where('user_id', $user_id)->where('group_id', $event_group->id)->where('is_send', 'N')->orderby('is_send', 'asc')->first();
-            $log_id = $log_info->id;
-            $db = \DB::connection('mysql');
-            $sql = "update reward_getlog set server_id ='" . $server_id . "',char_name = '" . $char_name . "', charid = '" . $charid . "',item_name ='" . $item_name . "', is_send = 'Y', item_code = '" . $item_code . "',user_ip = '" . $real_ip . "',remark ='" . $event_name . "-" . $title . "' where id =" . $log_id;
-            $db->disableQueryLog();
-            $event_info = $db->statement($sql);
+            $log_info->server_id = $server_id;
+            $log_info->char_name = $char_name;
+            $log_info->charid = $charid;
+            $log_info->item_name = $item_name;
+            $log_info->is_send = 'Y';
+            $log_info->item_code = $item_code;
+            $log_info->user_ip = $real_ip;
+            $log_info->remark = $event_name . "-" . $title;
+            $log_info->save();
             return response()->json([
                 'status' => 1,
             ]);
@@ -318,5 +360,4 @@ class rewardController extends Controller
         }
 
     }
-
 }

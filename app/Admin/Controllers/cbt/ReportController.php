@@ -45,7 +45,9 @@ class ReportController extends AdminController
             }
         });
         $grid->column('user_ip', __('IP'));
-        $grid->column('created_at', __('建立時間'))->date('Y-m-d H:i:s');
+        $grid->column('created_at', __('建立時間'))->display(function(){
+            return date('Y-m-d H:i:s', strtotime($this->created_at));
+        });
 
 
 
