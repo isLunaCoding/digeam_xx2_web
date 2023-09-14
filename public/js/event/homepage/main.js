@@ -19,7 +19,7 @@ $(".menu , .menu li, .menu li ul").hover(
     function () {
         $("." + this.dataset.menuaction + "")
             .stop(true, false)
-            .slideUp(80);
+            .slideUp(300);
     }
 );
 
