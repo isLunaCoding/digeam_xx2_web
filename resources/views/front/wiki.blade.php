@@ -67,7 +67,7 @@
                                 {{-- 是大標題還有中標題 --}}
                                 @if ($value['count'] == 0 && $value['parent_id'] == 0)
                                     <ul class="frontTitle">
-                                        {{ $value['title'] }}
+                                        <p>{{ $value['title'] }}</p>
                                         @foreach ($sec_cate as $value2)
                                             @if ($value2['parent_id'] == $value['id'])
                                                 {{-- 只到中標題 --}}
@@ -93,7 +93,6 @@
                                             @endif
                                         @endforeach
                                     </ul>
-                                    </li>
                                 @endif
                             @endforeach
                         </div>
@@ -135,7 +134,7 @@
                                 </div>
                                 <div class="plus">
                                     <img class="plus15" src="/img/event/wiki/15plus.png">
-                                    <p>本遊戲為免費使用，部分內容涉及暴力情節。
+                                    <p>本遊戲為免費使用，部分內容設計暴力情節。
                                         請注意遊戲時間，避免沉迷。​<br>
                                         遊戲內另提供購買虛擬遊戲幣、物品等付費服務。<br>
                                         <span class="blue">本遊戲服務區域包含台灣、香港、澳門。</span>
@@ -162,7 +161,9 @@
                 var liMiddle = $(this).find('.liMiddle');
                 liMiddle.slideToggle();
 
-                liMiddle.one('mouseenter', function() {
+                liMiddle.one('mousedown', function() {
+                // liMiddle.one('mouseenter', function() {
+                // liMiddle.on('click', function() {
                     var liSamll = $(this).find('.liSamll');
                     liSamll.slideToggle();
 

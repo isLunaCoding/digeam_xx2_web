@@ -10,7 +10,7 @@
 
 
 // bar選單的hover動畫
-$(".menu , .menu li").hover(
+$(".menu , .menu li, .menu li ul").hover(
     function () {
         $("." + this.dataset.menuaction + "")
             .stop(true, true)
@@ -18,8 +18,8 @@ $(".menu , .menu li").hover(
     },
     function () {
         $("." + this.dataset.menuaction + "")
-            .stop(true, true)
-            .slideUp(100);
+            .stop(true, false)
+            .slideUp(300);
     }
 );
 

@@ -62,7 +62,7 @@
                     <button class="newsBtn newsBtnNB activity" data-news="NB">活動</button>
                     <button class="newsBtn newsBtnNC systemBox" data-news="NC">系統</button>
                 </div>
-                <a class="btnMore" href="">More</a>
+                <a class="btnMore" href={{ route('announcement') }}>More</a>
             </div>
             <div class="line"></div>
             <div class="newsContainer">

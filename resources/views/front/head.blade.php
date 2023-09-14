@@ -14,7 +14,7 @@
     @yield('title')
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.1, user-scalable=yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="Digeam 掘夢網,線上遊戲,免費遊戲,3D">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">{{-- 官網連結 --}}
@@ -122,7 +122,7 @@
                     </div>
                     <div class="plus">
                         <img class="plus15" src="/img/event/homepage/footer/15plus.webp">
-                        <p>本遊戲為免費使用，部分內容涉及暴力情節。<br>
+                        <p>本遊戲為免費使用，部分內容設計暴力情節。<br>
                             遊戲內另提供購買虛擬遊戲幣、物品等付費服務。<br>
                             請注意遊戲時間，避免沉迷。​<br>
                             <span class="blue">本遊戲服務區域包含台灣、香港、澳門。</span>
