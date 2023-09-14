@@ -137,7 +137,7 @@
                     <div class="p2_subti"><p>活動說明</p></div>
                     <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取CBT限定10000元寶。</p></div>
                     <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的紅包將不會保留至OBT。</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的元寶將不會保留至OBT。</p></div>
                 </div>
                 <div class="p2_tab2_info">
                     <div class="p2_subti"><p>活動時間</p></div>
@@ -165,34 +165,40 @@
         <!-- rwd -->
         <div class="p2_wrap_m">
             <div class="p2_tab1_m">
-                <div class="p2_tab1_m_ti"></div>
-                <div class="p2_subti"><p>活動時間</p></div>
-                <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                <div class="p2_subti"><p>活動說明</p></div>
-                <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取CBT限定10000元寶。</p></div>
-                <div class="p2_subti"><p>注意事項</p></div>
-                <div class="p2_text_2"><p>本活動獲得之元寶僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的紅包將不會保留至OBT。</p></div>
-                <img class="p2_tab1_img" src="/img/event/CBT/p2/NPC1.png">
+                <img class="p2_tab_m_ti" src="/img/event/CBT/p2/tabbtn1_m.png">
+                <div class="p2_tabwrap_m">
+                    <div class="p2_subti"><p>活動時間</p></div>
+                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
+                    <div class="p2_subti"><p>活動說明</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取CBT限定10000元寶。</p></div>
+                    <div class="p2_subti"><p>注意事項</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的元寶將不會保留至OBT。</p></div>
+                    <img class="p2_tab_img" src="/img/event/CBT/p2/NPC1.png">
+                </div>
             </div>
             <div class="p2_tab2_m">
-                <div class="p2_tab2_m_ti"></div>
-                <div class="p2_subti"><p>活動時間</p></div>
-                <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                <div class="p2_subti"><p>活動說明</p></div>
-                <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後，可以領取CBT限定一百萬紅包。</p></div>
-                <div class="p2_subti"><p>注意事項</p></div>
-                <div class="p2_text_2"><p>本活動獲得之紅包僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的紅包將不會保留至OBT。</p></div>
-                <img class="p2_tab2_img" src="/img/event/CBT/p2/NPC2.png">
+                <img class="p2_tab_m_ti" src="/img/event/CBT/p2/tabbtn2_m.png">
+                <div class="p2_tabwrap_m">
+                    <div class="p2_subti"><p>活動時間</p></div>
+                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
+                    <div class="p2_subti"><p>活動說明</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後，可以領取CBT限定一百萬紅包。</p></div>
+                    <div class="p2_subti"><p>注意事項</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之紅包僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的紅包將不會保留至OBT。</p></div>
+                    <img class="p2_tab_img" src="/img/event/CBT/p2/NPC2.png">
+                </div>
             </div>
             <div class="p2_tab3_m">
-                <div class="p2_tab3_m_ti"></div>
-                <div class="p2_subti"><p>活動時間</p></div>
-                <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                <div class="p2_subti"><p>活動說明</p></div>
-                <div class="p2_text_2"><p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取CBT限定一百萬寶珠。</p></div>
-                <div class="p2_subti"><p>注意事項</p></div>
-                <div class="p2_text_2"><p>本活動獲得之寶珠僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的寶珠將不會保留至OBT。​</p></div>
-                <img class="p2_tab3_img" src="/img/event/CBT/p2/NPC3.png">
+                <img class="p2_tab_m_ti" src="/img/event/CBT/p2/tabbtn3_m.png">
+                <div class="p2_tabwrap_m">
+                    <div class="p2_subti"><p>活動時間</p></div>
+                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
+                    <div class="p2_subti"><p>活動說明</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取CBT限定一百萬寶珠。</p></div>
+                    <div class="p2_subti"><p>注意事項</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之寶珠僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的寶珠將不會保留至OBT。</p></div>
+                    <img class="p2_tab_img" src="/img/event/CBT/p2/NPC3.png">
+                </div>
             </div>
         </div>
     </div>
@@ -206,7 +212,7 @@
             <div class="p3_main_info">
                 <div class="p3_main_text">
                     <div class="p3_subti"><p>活動時間</p></div>
-                    <div class="p3_text_1"><p>即日起~《仙俠世界貳》封測結束後</p></div>
+                    <div class="p3_text_1"><p>即日起 ~《仙俠世界貳》封測結束後</p></div>
                     <div class="p3_subti"><p>活動方式</p></div>
                     <ul class="p3_text_2">
                         <li>封測期間，由此頁面可預購期間限定強力支援禮包，禮包將於公測開服時發送。</li>
@@ -264,7 +270,7 @@
         <div class="p4_wrap">
             <div class="p4_main_text">
                 <div class="p4_subti"><p>活動時間</p></div>
-                <div class="p4_text_1"><p>即日起~《仙俠世界貳》上市後一週</p></div>
+                <div class="p4_text_1"><p>即日起 ~《仙俠世界貳》上市後一週</p></div>
                 <div class="p4_subti"><p>活動方式</p></div>                    <ul class="p4_text_2">
                     <li>每天可進行一次內力注入。​</li>
                     <li>注入內力次數會於每日00:00重置。</li>

@@ -277,7 +277,7 @@ $('.p5_notice_btn').on("click",function(){
         scrollTop: 0
     },10)
 })
-
+ttt()
 scroll_p1()
 scroll_p2()
 scroll_p3()
@@ -290,12 +290,17 @@ function scroll_p1(){
     const callback = (entries, observe) => {
         if (entries[0].isIntersecting) {
             if(screen.width > 768){
+                $('.btn1').hover(function(){
+                    $('.btn1').css("background","url(/img/event/CBT/p0/bar/menubtn1_hover.png)no-repeat center center / cover");
+                },function(){
+                    $('.btn1').css("background","url(/img/event/CBT/p0/bar/menubtn1.png)no-repeat center center / cover");
+                });
                 $('.btn1').css({
                     'background': 'url(/img/event/CBT/p0/bar/menubtn1_hover.png)no-repeat center center / cover'
                 })
             }else{
                 $('.btn1').css({
-                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn1m.png)no-repeat center center / contain'
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn1m_hover.png)no-repeat center center / contain'
                 })
             }
         } else {
@@ -321,12 +326,17 @@ function scroll_p2(){
     const callback = (entries, observe) => {
         if (entries[0].isIntersecting) {
             if(screen.width > 768){
+                $('.btn2').hover(function(){
+                    $('.btn2').css("background","url(/img/event/CBT/p0/bar/menubtn2_hover.png)no-repeat center center / cover");
+                },function(){
+                    $('.btn2').css("background","url(/img/event/CBT/p0/bar/menubtn2.png)no-repeat center center / cover");
+                });
                 $('.btn2').css({
                     'background': 'url(/img/event/CBT/p0/bar/menubtn2_hover.png)no-repeat center center / cover'
                 })
             }else{
                 $('.btn2').css({
-                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn2m.png)no-repeat center center / contain'
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn2m_hover.png)no-repeat center center / contain'
                 })
             }
         } else {
@@ -347,17 +357,22 @@ function scroll_p2(){
 
 function scroll_p3(){
     const option = {
-        threshold: 0.5
+        threshold: 0
     };
     const callback = (entries, observe) => {
         if (entries[0].isIntersecting) {
             if(screen.width > 768){
+                $('.btn3').hover(function(){
+                    $('.btn3').css("background","url(/img/event/CBT/p0/bar/menubtn3_hover.png)no-repeat center center / cover");
+                },function(){
+                    $('.btn3').css("background","url(/img/event/CBT/p0/bar/menubtn3.png)no-repeat center center / cover");
+                });
                 $('.btn3').css({
                     'background': 'url(/img/event/CBT/p0/bar/menubtn3_hover.png)no-repeat center center / cover'
                 })
             }else{
                 $('.btn3').css({
-                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn3m.png)no-repeat center center / contain'
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn3m_hover.png)no-repeat center center / contain'
                 })
             }
         } else {
@@ -378,17 +393,22 @@ function scroll_p3(){
 
 function scroll_p4(){
     const option = {
-        threshold: 0.5
+        threshold: 0
     };
     const callback = (entries, observe) => {
         if (entries[0].isIntersecting) {
             if(screen.width > 768){
+                $('.btn4').hover(function(){
+                    $('.btn4').css("background","url(/img/event/CBT/p0/bar/menubtn4_hover.png)no-repeat center center / cover");
+                },function(){
+                    $('.btn4').css("background","url(/img/event/CBT/p0/bar/menubtn4.png)no-repeat center center / cover");
+                });
                 $('.btn4').css({
                     'background': 'url(/img/event/CBT/p0/bar/menubtn4_hover.png)no-repeat center center / cover'
                 })
             }else{
                 $('.btn4').css({
-                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn4m.png)no-repeat center center / contain'
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn4m_hover.png)no-repeat center center / contain'
                 })
             }
         } else {
@@ -409,17 +429,22 @@ function scroll_p4(){
 
 function scroll_p5(){
     const option = {
-        threshold: 1
+        threshold: 0
     };
     const callback = (entries, observe) => {
         if (entries[0].isIntersecting) {
             if(screen.width > 768){
+                $('.btn5').hover(function(){
+                    $('.btn5').css("background","url(/img/event/CBT/p0/bar/menubtn5_hover.png)no-repeat center center / cover");
+                },function(){
+                    $('.btn5').css("background","url(/img/event/CBT/p0/bar/menubtn5.png)no-repeat center center / cover");
+                });
                 $('.btn5').css({
                     'background': 'url(/img/event/CBT/p0/bar/menubtn5_hover.png)no-repeat center center / cover'
                 })
             }else{
                 $('.btn5').css({
-                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn5m.png)no-repeat center center / contain'
+                    'background': 'url(/img/event/CBT/p0/bar/menubtn_M/menubtn5m_hover.png)no-repeat center center / contain'
                 })
             }
         } else {
@@ -436,4 +461,34 @@ function scroll_p5(){
     };
     const observer = new IntersectionObserver(callback, option);
     observer.observe(document.querySelector(".page5"));
+}
+
+function ttt(){
+    if(screen.width > 768){
+        $('.btn1').hover(function(){
+            $('.btn1').css("background","url(/img/event/CBT/p0/bar/menubtn1_hover.png)no-repeat center center / cover");
+        },function(){
+            $('.btn1').css("background","url(/img/event/CBT/p0/bar/menubtn1.png)no-repeat center center / cover");
+        });
+        $('.btn2').hover(function(){
+            $('.btn2').css("background","url(/img/event/CBT/p0/bar/menubtn2_hover.png)no-repeat center center / cover");
+        },function(){
+            $('.btn2').css("background","url(/img/event/CBT/p0/bar/menubtn2.png)no-repeat center center / cover");
+        });
+        $('.btn3').hover(function(){
+            $('.btn3').css("background","url(/img/event/CBT/p0/bar/menubtn3_hover.png)no-repeat center center / cover");
+        },function(){
+            $('.btn3').css("background","url(/img/event/CBT/p0/bar/menubtn3.png)no-repeat center center / cover");
+        });
+        $('.btn4').hover(function(){
+            $('.btn4').css("background","url(/img/event/CBT/p0/bar/menubtn4_hover.png)no-repeat center center / cover");
+        },function(){
+            $('.btn4').css("background","url(/img/event/CBT/p0/bar/menubtn4.png)no-repeat center center / cover");
+        });
+        $('.btn5').hover(function(){
+            $('.btn5').css("background","url(/img/event/CBT/p0/bar/menubtn5_hover.png)no-repeat center center / cover");
+        },function(){
+            $('.btn5').css("background","url(/img/event/CBT/p0/bar/menubtn5.png)no-repeat center center / cover");
+        });
+    }
 }

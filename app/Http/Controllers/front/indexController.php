@@ -22,5 +22,9 @@ class indexController extends Controller
 
         return view('front/index', ['NA' => $NA, 'NB' => $NB, 'NC' => $NC, 'images' => $images, 'game_features' => $game_features]);
     }
+    public function launcher()
+    {
+        dd('123');
+    }
 
 }

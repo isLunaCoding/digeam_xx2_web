@@ -26,6 +26,11 @@ Route::middleware(['setReturnUrl'])->group(function () {
     Route::get('/CBT', 'front\CBTController@index');
 });
 
+
+//
+// 官網
+Route::get('/launcher', 'front\indexController@launcher');
+
 // 官網
 Route::get('/xx2index', 'front\indexController@index')->name('index');
 // 公告
