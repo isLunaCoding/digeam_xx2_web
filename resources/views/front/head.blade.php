@@ -2,6 +2,7 @@
     if (document.documentMode) {
         alert('建議使用Edge或者Chrome瀏覽器進行瀏覽')
     }
+    $("#loading").show();
 </script>
 
 <!DOCTYPE html>
@@ -35,12 +36,12 @@
 <body>
     <div class="wrap">
         <div class="main">
-            {{-- <div id="loading">
+            <div id="loading">
                 <div class="loadBox">
                     <p>頁面加載中，請稍等</p>
                     <div class="spinner"></div>
                 </div>
-            </div> --}}
+            </div>
 
             <div class="mask" id="pop1">
                 <div class="popBG">
@@ -122,7 +123,7 @@
                     </div>
                     <div class="plus">
                         <img class="plus15" src="/img/event/homepage/footer/15plus.webp">
-                        <p>本遊戲為免費使用，部分內容設計暴力情節。<br>
+                        <p>本遊戲為免費使用，部分內容設計暴力情節及不當言語情節。<br>
                             遊戲內另提供購買虛擬遊戲幣、物品等付費服務。<br>
                             請注意遊戲時間，避免沉迷。​<br>
                             <span class="blue">本遊戲服務區域包含台灣、香港、澳門。</span>
@@ -138,7 +139,13 @@
     <script src="/js/event/homepage/view.js"></script>
     <script src="/js/event/homepage/main.js"></script>
     @yield('script')
-
+    
 </body>
 
 </html>
+
+<script>
+    $(window).on('load', function() {
+    $("#loading").hide();
+    });
+</script>
