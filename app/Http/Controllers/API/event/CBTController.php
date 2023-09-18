@@ -257,7 +257,7 @@ class CBTController extends Controller
         }
 
         if (($request->bug_report_img != 'null')&&($request->bug_report_img != '')) {
-            $setDay = date('Y-m-d-h:i:s');
+            $setDay = date('Y-m-d-h-i-s');
             $image = $request->bug_report_img;
             $ifPng = explode('data:image/png;base64', $request->bug_report_img);
             $ifJpg = explode('data:image/jpeg;base64', $request->bug_report_img);
