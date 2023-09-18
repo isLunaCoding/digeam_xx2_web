@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Model\event\CBT_Buy_Log;
 use App\Model\Reward\package_item;
 use App\Model\Reward\reward_content;
 use App\Model\Reward\reward_event;
@@ -85,37 +86,48 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
-
-            if ((date('YmdHis') >= '20231019000000') && (date('YmdHis') <= '20231231235959')) {
+            if ((date('YmdHis') >= '20230915000000') && (date('YmdHis') <= '20231231235959')) {
                 // $id = MemberRecord::getUserInfo($user_id);
-            }
-
-            if ((date('YmdHis') >= '20230911000000') && (date('YmdHis') <= '20230913235959')) {
-                // $id = MemberRecord::getUserInfo($user_id);
+                $db = \DB::connection('mysql');
                 if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
-                    $db = \DB::connection('mysql');
-                    $event_infos = reward_getlog::where('group_id', '1')->where('user_id', $user_id)->count();
-                    if ($event_infos == 0) {
-                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',1,'測試')";
-                        $db->disableQueryLog();
-                        $event_info = $db->statement($sql);
+                    $user_info = CBT_Buy_Log::where('user_id', $user_id)->where('price', '299')->count();
+                    if ($user_info > 0) {
+                        $event_infos = reward_getlog::where('group_id', '3')->where('user_id', $user_id)->count();
+                        if ($event_infos == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',3,'靈氣初現禮包')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
                     }
-                    $event_infos = reward_getlog::where('group_id', '2')->where('user_id', $user_id)->count();
-                    if ($event_infos == 0) {
-                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',2,'測試2')";
-                        $db->disableQueryLog();
-                        $event_info = $db->statement($sql);
+
+                    $user_info = CBT_Buy_Log::where('user_id', $user_id)->where('price', '999')->count();
+                    if ($user_info > 0) {
+                        $event_infos = reward_getlog::where('group_id', '4')->where('user_id', $user_id)->count();
+                        if ($event_infos == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',4,'仙獸羈絆禮包')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+
+                    $user_info = CBT_Buy_Log::where('user_id', $user_id)->where('price', '2690')->count();
+                    if ($user_info > 0) {
+                        $event_infos = reward_getlog::where('group_id', '5')->where('user_id', $user_id)->count();
+                        if ($event_infos == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',5,'修真之寶禮包')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
                     }
                     \DB::disconnect('mysql');
                 }
             }
-
         }
 
         if ($_SERVER['HTTP_CF_CONNECTING_IP'] != '211.23.144.219') {
-            $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('created_at', 'desc')->get();
+            $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('id', 'desc')->get();
         } else {
-            $event_lists = reward_event::orderby('created_at', 'desc')->get();
+            $event_lists = reward_event::orderby('id', 'desc')->get();
         }
 
         foreach ($event_lists as $event_list) {
@@ -229,7 +241,7 @@ class rewardController extends Controller
         $order = " order by created_at desc";
         $time = " start_date  < '" . date('Y-m-d H:i:s') . "' ";
         if ($keyword != null || $keyword != '') {
-            $where = " where event_name like '%" . $keyword . "%'";
+            $where = " where event_name like '%" . $keyword . "%' and is_open = 'Y' ";
             if ($year == 0 && $month == 0) {
                 $where .= " and " . $time;
                 //純關鍵字搜尋
@@ -243,16 +255,16 @@ class rewardController extends Controller
                 $where .= " and ((Year(start_date) in ('" . $year . "') and Month(start_date) in ('" . $month . "')) or (Year(end_date) in ('" . $year . "') and Month(end_date) in ('" . $month . "'))) and " . $time;
             }
         } else {
-            $where = '';
+            $where = " where is_open ='Y' ";
             //純時間搜尋
             if ($month == 0 && $year > 0) {
-                $where .= " where start_date >= '" . $year . "-01-01 00:00:00' and " . $time;
+                $where .= " and start_date >= '" . $year . "-01-01 00:00:00' and " . $time;
             } elseif ($year == 0 && $month > 0) {
-                $where .= " where (Year(start_date) in ('" . date('Y') . "') and Month(start_date) in ('" . $month . "')) or (Year(end_date) in ('" . date('Y') . "') and Month(end_date) in ('" . $month . "')) and " . $time;
+                $where .= " and ((Year(start_date) in ('" . date('Y') . "') and Month(start_date) in ('" . $month . "')) or (Year(end_date) in ('" . date('Y') . "') and Month(end_date) in ('" . $month . "'))and " . $time . ")";
             } elseif ($year == 0 && $month == 0) {
-                $where .= " where " . $time;
+                $where .= " and " . $time;
             } else {
-                $where .= " where ((Year(start_date) in ('" . $year . "') and Month(start_date) in ('" . $month . "')) or (Year(end_date) in ('" . $year . "') and Month(end_date) in ('" . $month . "')) ) and " . $time;
+                $where .= " and ((Year(start_date) in ('" . $year . "') and Month(start_date) in ('" . $month . "')) or (Year(end_date) in ('" . $year . "') and Month(end_date) in ('" . $month . "')) ) and " . $time;
             }
         }
         $sql = "SELECT * FROM reward_event" . $where . $order;
@@ -296,7 +308,7 @@ class rewardController extends Controller
         $itemcnt = $reward_content->itemcnt;
         $isbind = $reward_content->isbind;
         $is_package = $reward_content->is_package;
-        $title = $event_group->title;
+        $title ='領獎區';
         $event = reward_event::where('id', $event_group->event_id)->first();
         $event_name = $event->event_name;
         $content = "領獎專區-" . $event_name;
