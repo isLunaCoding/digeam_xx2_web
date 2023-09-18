@@ -555,6 +555,16 @@ body {
 .section1 .sectionBG .container .news .newsContainer .text ul li a .textBox .textTime {
   color: #153d97;
 }
+.section1 .sectionBG .container .news .newsContainer .text ul li a .textBox .textTitle {
+  max-width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+.section1 .sectionBG .container .news .newsContainer .text ul li a .textBox .textTime {
+  font-size: 14px;
+}
 .section1 .sectionBG .container .news .newsContainer .text ul .TOP::before {
   content: "TOP";
   font-style: italic;

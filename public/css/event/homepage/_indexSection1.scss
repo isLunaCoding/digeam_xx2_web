@@ -192,6 +192,7 @@
                         ul {
                             line-height: 36px;
 
+                            // 字體大小18 可塞15.5字
                             li {
                                 font-size: 18px;
 
@@ -208,9 +209,49 @@
                                         .textTime {
                                             color: #153d97;
                                         }
+                                        .textTitle{
+                                            max-width: 300px;
+                                            text-overflow: ellipsis;
+                                            overflow: hidden;
+                                            white-space: nowrap;
+                                            display: block;
+                                        }
+                                        .textTime{
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
                             }
+                            // 字體大小15 可塞20字
+                            // li {
+                            //     font-size: 16px;
+
+                            //     a {
+                            //         display: flex;
+
+                            //         .textBox {
+                            //             width: 420px;
+                            //             display: flex;
+                            //             justify-content: space-between;
+                            //             font-weight: 600;
+
+                            //             .textTitle,
+                            //             .textTime {
+                            //                 color: #153d97;
+                            //             }
+                            //             .textTitle{
+                            //                 max-width: 300px;
+                            //                 text-overflow: ellipsis;
+                            //                 overflow: hidden;
+                            //                 white-space: nowrap;
+                            //                 display: block;
+                            //             }
+                            //             .textTime{
+                            //                 font-size: 12px;
+                            //             }
+                            //         }
+                            //     }
+                            // }
 
                             .TOP {
                                 &::before {

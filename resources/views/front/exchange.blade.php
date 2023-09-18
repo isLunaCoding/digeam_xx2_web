@@ -57,8 +57,7 @@
 
     <div class="exchangeLine"></div>
     <div class="exchangePoint">
-        ※序號兌換後無法改變使用對象，兌換前請確認選擇的伺服器、角色無誤。<br>​
-        ※<a href="https://www.digeam.com/member/coupon">兌換序號由此查詢</a>
+        ※序號兌換後無法改變使用對象，兌換前請確認選擇的伺服器、角色無誤。<br>
     </div>
 @endsection
 
