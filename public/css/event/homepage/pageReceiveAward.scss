@@ -255,7 +255,6 @@
                 height: 29px;
                 font-size: 20px;
                 color: #fff;
-                margin-left: 200px;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
@@ -264,9 +263,11 @@
             .logout {
                 background-color: #94a7d7;
                 border: 1px solid #94a7d7;
+                margin-left: 200px;
             }
-
+            
             .login {
+                margin-left: 387px;
                 background-color: #153d97;
                 border: 1px solid #153d97;
 
