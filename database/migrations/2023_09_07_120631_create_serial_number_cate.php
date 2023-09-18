@@ -18,6 +18,9 @@ class CreateSerialNumberCate extends Migration
             $table->string('title');
             $table->string('type');
             $table->integer('count');
+            $table->integer('remainder')->nullable();
+            $table->dateTime('start_date')->nullable();
+            $table->dateTime('end_date')->nullable();
             $table->string('all_for_one');
             $table->timestamps();
         });

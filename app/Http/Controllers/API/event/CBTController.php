@@ -262,6 +262,8 @@ class CBTController extends Controller
             $ifPng = explode('data:image/png;base64', $request->bug_report_img);
             $ifJpg = explode('data:image/jpeg;base64', $request->bug_report_img);
 
+            //echo count($ifPng).' '.count($ifJpg);
+
             if (count($ifPng) == 2) {
                 $image = str_replace('data:image/png;base64,', '', $image);
                 $imageName = $setDay.'-'.$request->user.'-report.png';

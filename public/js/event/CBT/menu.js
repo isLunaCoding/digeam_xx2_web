@@ -1,4 +1,3 @@
-
 $('.menubtns div').on("click",function () {
 
     if (screen.width <= 768) {
@@ -6,6 +5,36 @@ $('.menubtns div').on("click",function () {
     }
 
 })
+
+$('.btn1 a').click(function () {
+    $('html,body').animate({
+        scrollTop: $('#page1').offset().top
+    }, 10);
+});
+
+$('.btn2 a').click(function () {
+    $('html,body').animate({
+        scrollTop: $('#page2').offset().top
+    }, 10);
+});
+
+$('.btn3 a').click(function () {
+    $('html,body').animate({
+        scrollTop: $('#page3').offset().top
+    }, 10);
+});
+
+$('.btn4 a').click(function () {
+    $('html,body').animate({
+        scrollTop: $('#page4').offset().top
+    }, 10);
+});
+
+$('.btn5 a').click(function () {
+    $('html,body').animate({
+        scrollTop: $('#page5').offset().top
+    }, 10);
+});
 
 //menubar收合按鈕
 let k = 0
