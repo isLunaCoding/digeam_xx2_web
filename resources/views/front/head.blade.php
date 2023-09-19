@@ -96,7 +96,7 @@
                     <nav class="iconBox">
                         <ul>
                             <li><a href="https://www.youtube.com/@officialdigeam/videos"><img src="/img/event/homepage/social_icon_yt.png"></a></li>
-                            <li><a href="https://discord.gg/gpXjMWGd"><img src="/img/event/homepage/social_icon_dc.png"></a></li>
+                            <li><a href="https://discord.gg/2ZRW3hacJ2"><img src="/img/event/homepage/social_icon_dc.png"></a></li>
                             <li><a href="https://www.facebook.com/DiGeamXianXia2"><img src="/img/event/homepage/social_icon_fb.png"></a></li>
                         </ul>
                     </nav>

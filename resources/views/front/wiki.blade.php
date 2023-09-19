@@ -46,7 +46,7 @@
 
                     </nav>
                     <nav class="iconBox">
-                        <a href="https://discord.gg/gpXjMWGd"><img src="/img/event/wiki/social_icon_dc.png"></a>
+                        <a href="https://discord.gg/2ZRW3hacJ2"><img src="/img/event/wiki/social_icon_dc.png"></a>
                         <a href="https://www.facebook.com/DiGeamXianXia2"><img src="/img/event/wiki/social_icon_fb.png"></a>
                     </nav>
                 </div>
