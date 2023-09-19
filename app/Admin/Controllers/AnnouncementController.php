@@ -32,6 +32,7 @@ class AnnouncementController extends AdminController
             ->orderBy('new', 'desc')
             ->orderBy('created_at', 'desc')
             ->orderBy('main_sort', 'asc');
+        $grid->column('id', __('編號'));
         $grid->column('title', __('標題'));
         $grid->column('cate_id', __('分類'))->using(['2' => '活動', '3' => '系統']);
         $grid->column('open', __('是否開啟'));

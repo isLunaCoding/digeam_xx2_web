@@ -25,7 +25,7 @@ class ImageController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Image());
-        $grid->model()->orderBy('status', 'desc')->orderBy('sort', 'asc');
+        $grid->model()->where('type', 'index')->orderBy('status', 'desc')->orderBy('sort', 'asc');
         $grid->column('file_name', __('圖片'))->image();
         $grid->column('url', __('網址'));
         $grid->column('sort', __('排序'));

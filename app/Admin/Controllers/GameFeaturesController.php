@@ -15,7 +15,7 @@ class GameFeaturesController extends AdminController
      *
      * @var string
      */
-    protected $title = '遊戲特色照片管理';
+    protected $title = '遊戲特色照片管理(一定要維持4張(含)以上)';
 
     /**
      * Make a grid builder.
