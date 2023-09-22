@@ -16,9 +16,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Digeam 掘夢網,線上遊戲,免費遊戲,3D">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">{{-- 官網連結 --}}
+    <meta property="og:url" content="https://xx2.digeam.com/">{{-- 官網連結 --}}
     <meta property="og:title" content="">
     <meta property="article:author" content="https://www.facebook.com">
+    <meta property="og:image" content="/img/event/homepage/thumbnail_1200x628.jpg" />
+
 
     {{-- 連結縮圖 --}}
     @yield('thumbnail')
