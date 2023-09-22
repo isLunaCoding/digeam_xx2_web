@@ -112,6 +112,47 @@ td {
     margin: 0 auto;
 }
 
+
+#loading {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1200;
+    .loadBox{
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-size: 20px;
+            margin-right: 20px;
+            color: #002750;
+            font-weight: 600;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #007bff; /* Loading 图标的颜色 */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+    }
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
 .mainBG {
     background-image: url('/img/event/wiki/wikiBG.jpg');
     // background-size: contain;
