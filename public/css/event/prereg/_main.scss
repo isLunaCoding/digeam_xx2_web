@@ -245,24 +245,24 @@ body{
 
                     & a{
                         color: #FFF;
-                        // background-color: #11a3ff;
                         background-image: linear-gradient(to bottom,#11a3ff,#0d7fc5);
                         scale: 1.1;
 
+                        SVG{
+                            fill: #FFF;
+                        }
+
+                        .p2registerarrowL{
+                            animation: p2registerarrowL 1s infinite linear;
+                            left: -1px;
+                        }
+                        .p2registerarrowR{
+                            animation: p2registerarrowR 1s infinite linear;
+                            left: 5px;
+                        }
+
                         span{
                             top: -1px;
-                            &:nth-child(1){
-                                animation: p2registerarrowL 1s infinite linear;
-                                left: 0px;
-                                top: -1px;
-                                font-size: 21px;
-                            }
-                            &:nth-child(3){
-                                animation: p2registerarrowR 1s infinite linear;
-                                left: 5px;
-                                top: -1px;
-                                font-size: 21px;
-                            }
                         }
                     }
                 }

@@ -112,23 +112,23 @@
 
 @keyframes p2registerarrowL{
     0%,100%{
-        left: 0px;
-        top: -1px;
+        left: -1px;
+        top: 1px;
     }
     50%{
         left: -5px;
-        top: -1px;
+        top: 1px;
     }
 }
 
 @keyframes p2registerarrowR{
     0%,100%{
-        left: 0px;
-        top: -1px;
+        left: 1px;
+        top: 1px;
     }
     50%{
         left: 5px;
-        top: -1px;
+        top: 1px;
     }
 }
 
