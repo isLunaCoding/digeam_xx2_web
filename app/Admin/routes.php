@@ -27,4 +27,6 @@ Route::group([
     $router->resource('game_features', 'GameFeaturesController');
     $router->resource('serialnumbercate', 'SerialNumberCateController');
     $router->resource('{number}/serial_number', 'SerialNumberController');
+    $router->resource('{id}/serial_item', 'SerialitemController');
+
 });

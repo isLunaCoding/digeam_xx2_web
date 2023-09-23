@@ -24,7 +24,6 @@ serial_num.change(function () {
 });
 
 function exchange_get_char() {
-    console.log(optionServer);
     $.post(
         api_get_char,
         {
@@ -90,13 +89,14 @@ function get_exchange() {
                 alert("該序號數量已兌換完畢");
             } else if (res.status == -95) {
                 alert("不明錯誤，請聯繫客服");
+            } else if (res.status == -94) {
+                alert("您已兌換過該序號獎勵");
             } else if (res.status == 1) {
                 alert("領取成功");
             }
         }
     );
 }
-
 
 function logout_dg() {
     $("#logout-form").submit();
