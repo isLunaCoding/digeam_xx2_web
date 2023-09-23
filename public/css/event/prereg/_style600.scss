@@ -232,8 +232,16 @@
                         color: #274f72;
 
                         & a{
-                            color: #3e69be;
+                            span{
+                                &:nth-child(1){
+                                    font-size: 17px;
+                                }
+                                &:nth-child(3){
+                                    font-size: 17px;
+                                }
+                            }
                         }
+
                     }
 
                     .step2{

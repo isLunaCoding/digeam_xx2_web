@@ -244,7 +244,26 @@ body{
                     color: #274f72;
 
                     & a{
-                        color: #3e69be;
+                        color: #FFF;
+                        // background-color: #11a3ff;
+                        background-image: linear-gradient(to bottom,#11a3ff,#0d7fc5);
+                        scale: 1.1;
+
+                        span{
+                            top: -1px;
+                            &:nth-child(1){
+                                animation: p2registerarrowL 1s infinite linear;
+                                left: 0px;
+                                top: -1px;
+                                font-size: 21px;
+                            }
+                            &:nth-child(3){
+                                animation: p2registerarrowR 1s infinite linear;
+                                left: 5px;
+                                top: -1px;
+                                font-size: 21px;
+                            }
+                        }
                     }
                 }
 
@@ -320,6 +339,7 @@ body{
                     font-weight: bold;
                     text-align: center;
                     line-height: 101px;
+                    animation: p2checkbtn 2s infinite linear;
 
                     &:hover{
                         background: url(/img/event/prereg/p2/btn1_hover.png)no-repeat;

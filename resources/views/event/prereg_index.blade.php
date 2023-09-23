@@ -166,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class='login_user_id' style='text-align:center' data-val='null'></div>
                             <div class="loginbtn"><a href="https://www.digeam.com/login">登入</a></div>
                             <p class="register">※沒有會員嗎?<a href="https://www.digeam.com/register"
-                                    target="blank">前往註冊</a></p>
+                                    target="blank"><span>▶</span><span>前往註冊</span><span>◀</span></a></p>
                         @endif
 
                         <div class="step2"></div>
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </p>
                             </form>
                         </div>
-                        <div class="checkbtn check_p2" id="checkbtn">初出江湖</div>
+                        <div class="checkbtn check_p2" id="checkbtn">現在預約</div>
                     </div>
                     <div class="p2awards">
                         <div class="awardbox"></div>
