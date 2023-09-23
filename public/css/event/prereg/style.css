@@ -563,20 +563,19 @@ body {
   background-image: linear-gradient(to bottom, #11a3ff, #0d7fc5);
   scale: 1.1;
 }
-.swiper .page2 .p2main .p2steps .register a span {
-  top: -1px;
+.swiper .page2 .p2main .p2steps .register a SVG {
+  fill: #FFF;
 }
-.swiper .page2 .p2main .p2steps .register a span:nth-child(1) {
+.swiper .page2 .p2main .p2steps .register a .p2registerarrowL {
   animation: p2registerarrowL 1s infinite linear;
-  left: 0px;
-  top: -1px;
-  font-size: 21px;
+  left: -1px;
 }
-.swiper .page2 .p2main .p2steps .register a span:nth-child(3) {
+.swiper .page2 .p2main .p2steps .register a .p2registerarrowR {
   animation: p2registerarrowR 1s infinite linear;
   left: 5px;
+}
+.swiper .page2 .p2main .p2steps .register a span {
   top: -1px;
-  font-size: 21px;
 }
 .swiper .page2 .p2main .p2steps .step2 {
   margin: auto;
@@ -3268,22 +3267,22 @@ body {
 }
 @keyframes p2registerarrowL {
   0%, 100% {
-    left: 0px;
-    top: -1px;
+    left: -1px;
+    top: 1px;
   }
   50% {
     left: -5px;
-    top: -1px;
+    top: 1px;
   }
 }
 @keyframes p2registerarrowR {
   0%, 100% {
-    left: 0px;
-    top: -1px;
+    left: 1px;
+    top: 1px;
   }
   50% {
     left: 5px;
-    top: -1px;
+    top: 1px;
   }
 }
 @keyframes p2checkbtn {
