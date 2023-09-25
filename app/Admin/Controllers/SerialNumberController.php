@@ -37,10 +37,10 @@ class SerialNumberController extends AdminController
         $grid->column('status', __('狀態'))->using(['N' => '未使用', 'Y' => '已使用']);
         $grid->column('user_id', __('使用帳號'));
         $grid->column('user_ip', __('ip'));
-        $grid->column('updated_at', __('更新時間'))->date('Y-m-d');
-
+        $grid->column('updated_at', __('更新時間'))->display(function () {
+            return ($this->updated_at)->format('Y-m-d H:i:s');
+        });
         $grid->disableRowSelector();
-        $grid->disableExport();
         $grid->disableActions();
 
         $grid->filter(function ($filter) {

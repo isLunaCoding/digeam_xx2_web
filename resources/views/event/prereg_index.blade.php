@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="css/event/prereg/style.css?v3.96">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v3.991">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -166,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class='login_user_id' style='text-align:center' data-val='null'></div>
                             <div class="loginbtn"><a href="https://www.digeam.com/login">登入</a></div>
                             <p class="register">※沒有會員嗎?<a href="https://www.digeam.com/register"
-                                    target="blank">前往註冊</a></p>
+                                    target="blank"><svg class="p2registerarrowL" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 512"><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg><span>前往註冊</span><svg class="p2registerarrowR" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 512"><path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z"/></svg></a></p>
                         @endif
 
                         <div class="step2"></div>
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </p>
                             </form>
                         </div>
-                        <div class="checkbtn check_p2" id="checkbtn">初出江湖</div>
+                        <div class="checkbtn check_p2" id="checkbtn">現在預約</div>
                     </div>
                     <div class="p2awards">
                         <div class="awardbox"></div>
@@ -705,11 +705,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    {{-- <script src="js/event/prereg/rain.js?v1.994" type="text/javascript"></script> --}}
-    <script src="js/event/prereg/main.js?v2.19" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v2.29" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v2.34" type="text/javascript"></script>
-    <script src="js/event/prereg/menu.js?v2.19" type="text/javascript"></script>
+    {{-- <script src="js/event/prereg/rain.js?v1.995" type="text/javascript"></script> --}}
+    <script src="js/event/prereg/main.js?v2.21" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v2.31" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v2.36" type="text/javascript"></script>
+    <script src="js/event/prereg/menu.js?v2.21" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){

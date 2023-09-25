@@ -9,11 +9,16 @@ class announcementcontentController extends Controller
 {
     public function index($id)
     {
-        $page = Page::where('id', $id)->where('open', 'Y')->first();
-        if ($page) {
+        if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+            $page = Page::where('id', $id)->first();
             return view('front.announcementContent', ['page' => $page]);
         } else {
-            return redirect('/');
+            $page = Page::where('id', $id)->where('open', 'Y')->first();
+            if ($page) {
+                return view('front.announcementContent', ['page' => $page]);
+            } else {
+                return redirect('/');
+            }
         }
     }
 }

@@ -197,7 +197,7 @@ body{
 
                 .step1{
                     margin: auto;
-                    margin-top: 33.5%;
+                    margin-top: 20%;
                     width: 50%;
                     height: 9%;
                     background: url(/img/event/prereg/p2/step1.png)no-repeat;
@@ -244,7 +244,26 @@ body{
                     color: #274f72;
 
                     & a{
-                        color: #3e69be;
+                        color: #FFF;
+                        background-image: linear-gradient(to bottom,#11a3ff,#0d7fc5);
+                        scale: 1.1;
+
+                        SVG{
+                            fill: #FFF;
+                        }
+
+                        .p2registerarrowL{
+                            animation: p2registerarrowL 1s infinite linear;
+                            left: -1px;
+                        }
+                        .p2registerarrowR{
+                            animation: p2registerarrowR 1s infinite linear;
+                            left: 5px;
+                        }
+
+                        span{
+                            top: -1px;
+                        }
                     }
                 }
 
@@ -320,6 +339,7 @@ body{
                     font-weight: bold;
                     text-align: center;
                     line-height: 101px;
+                    animation: p2checkbtn 2s infinite linear;
 
                     &:hover{
                         background: url(/img/event/prereg/p2/btn1_hover.png)no-repeat;
