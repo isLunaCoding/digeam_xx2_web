@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 
-    <link rel="stylesheet" href="css/event/prereg/style.css?v3.99">
+    <link rel="stylesheet" href="css/event/prereg/style.css?v3.991">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -705,11 +705,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    {{-- <script src="js/event/prereg/rain.js?v1.994" type="text/javascript"></script> --}}
-    <script src="js/event/prereg/main.js?v2.20" type="text/javascript"></script>
-    <script src="js/event/prereg/text.js?v2.30" type="text/javascript"></script>
-    <script src="js/event/prereg/api.js?v2.35" type="text/javascript"></script>
-    <script src="js/event/prereg/menu.js?v2.20" type="text/javascript"></script>
+    {{-- <script src="js/event/prereg/rain.js?v1.995" type="text/javascript"></script> --}}
+    <script src="js/event/prereg/main.js?v2.21" type="text/javascript"></script>
+    <script src="js/event/prereg/text.js?v2.31" type="text/javascript"></script>
+    <script src="js/event/prereg/api.js?v2.36" type="text/javascript"></script>
+    <script src="js/event/prereg/menu.js?v2.21" type="text/javascript"></script>
 </body>
 <script>
     $('.card1').on('click',function(){

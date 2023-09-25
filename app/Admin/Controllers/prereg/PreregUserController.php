@@ -35,7 +35,7 @@ class PreregUserController extends AdminController
             'orange_1' => '七花獸百花仙靈', 'orange_2' => '仙道盟主沈仲陽', 'orange_3' => '愛之紅娘',
             'purple_1' => '仙道盟訓誡長老', 'purple_2' => '仙道盟執法長老', 'purple_3' => '仙道盟傳功長老', 'purple_4' => '仙道盟掌刑長老', 'purple_5' => '天魔影煞', 'purple_6' => '天魔計都',
             'blue_1' => '愛之月老', 'blue_2' => '吞靈獸', 'blue_3' => '齊天大聖',
-            'green_1' => '不死冰骷髏', 'green_2' => '不死霜骷髏', 'green_3' => '開明獸', 'green_4' => '冰麒麟', 'green_5' => '', 'green_6' => '寒冰巨甲',
+            'green_1' => '不死冰骷髏', 'green_2' => '不死霜骷髏', 'green_3' => '開明獸', 'green_4' => '冰麒麟',  'green_5' => '寒冰巨甲',
             'white_1' => '愛之隨從', 'white_2' => '愛之花童', 'white_3' => '愛之禮官',
         ]);
         $grid->column('keep_celebrity', '綁定名士')->using([
