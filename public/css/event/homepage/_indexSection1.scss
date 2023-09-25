@@ -4,8 +4,8 @@
         background-size: 1920px 950px;
         background-position: center center;
         height: 950px;
-        width: 1920px;
         overflow: auto;
+        width: 100%;
 
         .container {
             width: 1270px;
@@ -152,6 +152,7 @@
                             justify-content: center;
                             align-items: center;
                             margin-right: 5px;
+                            white-space:nowrap;
 
                             &:hover {
                                 background-image: linear-gradient(#08389a, #001562);

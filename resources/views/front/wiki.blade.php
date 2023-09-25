@@ -1,6 +1,8 @@
 <script>
     if (document.documentMode) {
         alert('建議使用Edge或者Chrome瀏覽器進行瀏覽')
+        document.getElementById("loading").style.display = "block";
+
     }
 </script>
 
@@ -16,9 +18,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Digeam 掘夢網,線上遊戲,免費遊戲,3D">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">{{-- 官網連結 --}}
+    <meta property="og:url" content="https://xx2.digeam.com/">{{-- 官網連結 --}}
     <meta property="og:title" content="">
     <meta property="article:author" content="https://www.facebook.com">
+    <meta property="og:image" content="/img/event/homepage/thumbnail_1200x628.jpg" />
+
 
     {{-- 連結縮圖 --}}
     @yield('thumbnail')
@@ -33,6 +37,12 @@
     <div class="wrap">
 
         <div class="main">
+            <div id="loading">
+                <div class="loadBox">
+                    <p>頁面加載中，請稍等</p>
+                    <div class="spinner"></div>
+                </div>
+            </div>
             <div class="mainBG">
                 <div class="topBox">
                     <nav class="leftBox">
@@ -47,7 +57,8 @@
                     </nav>
                     <nav class="iconBox">
                         <a href="https://discord.gg/2ZRW3hacJ2"><img src="/img/event/wiki/social_icon_dc.png"></a>
-                        <a href="https://www.facebook.com/DiGeamXianXia2"><img src="/img/event/wiki/social_icon_fb.png"></a>
+                        <a href="https://www.facebook.com/DiGeamXianXia2"><img
+                                src="/img/event/wiki/social_icon_fb.png"></a>
                     </nav>
                 </div>
 
@@ -124,7 +135,8 @@
                         <footer class="footer">
                             <div class="footerBox">
                                 <div class="footerbox_logo">
-                                    <a href="https://www.digeam.com/index"><img class="digeamlogo" src="/img/event/wiki/logo_digeam.png"></a>
+                                    <a href="https://www.digeam.com/index"><img class="digeamlogo"
+                                            src="/img/event/wiki/logo_digeam.png"></a>
                                     <img class="giantlogo" src="/img/event/wiki/GIANT_logo.png">
                                 </div>
                                 <div class="copyright">
@@ -162,8 +174,8 @@
                 liMiddle.slideToggle();
 
                 liMiddle.one('mousedown', function() {
-                // liMiddle.one('mouseenter', function() {
-                // liMiddle.on('click', function() {
+                    // liMiddle.one('mouseenter', function() {
+                    // liMiddle.on('click', function() {
                     var liSamll = $(this).find('.liSamll');
                     liSamll.slideToggle();
 
@@ -194,3 +206,9 @@
 </body>
 
 </html>
+
+<script>
+    $(window).on('load', function() {
+    $("#loading").hide();
+    });
+</script>

@@ -2,7 +2,8 @@
     if (document.documentMode) {
         alert('建議使用Edge或者Chrome瀏覽器進行瀏覽')
     }
-    $("#loading").show();
+    // $("#loading").show();
+    document.getElementById("loading").style.display = "block";
 </script>
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="Digeam 掘夢網,線上遊戲,免費遊戲,3D">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">{{-- 官網連結 --}}
+    <meta property="og:url" content="https://xx2.digeam.com/">{{-- 官網連結 --}}
     <meta property="og:title" content="">
     <meta property="article:author" content="https://www.facebook.com">
     <meta property="og:image" content="/img/event/homepage/thumbnail_1200x628.jpg" />
@@ -86,8 +87,8 @@
                                     <li><a href="https://www.digeam.com/cs/faq">FAQ</a></li>
                                     <li><a href={{ route('regulations') }}>遊戲規章</a></li>
                                     <li><a href="https://www.digeam.com/cs">聯繫客服</a></li>
-                                    <li><a href={{ route('reward') }}>領獎專區</a></li>
-                                    <li><a href={{ route('exchange') }}>序號兌換</a></li>
+                                    {{-- <li><a href={{ route('reward') }}>領獎專區</a></li> --}}
+                                    {{-- <li><a href={{ route('exchange') }}>序號兌換</a></li> --}}
                                 </ul>
                             </li>
                             <li class="menu menu7 "><a href="https://www.digeam.com/member/billing">儲值中心</a></li>
