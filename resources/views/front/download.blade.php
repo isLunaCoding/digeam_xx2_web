@@ -28,15 +28,15 @@
 @section('textBox')
     <div class="downloadBox">
         <div class="btn1">
-            <a href="" class="downloadBtn">下載器</a>
+            <a href="https://download.digeam.com/download/s1/xx2/TheMythicalRealm2.exe" class="downloadBtn">下載器 (推薦)</a>
         </div>
         <div class="line"></div>
         <div class="btn2">
-            <a href="" class="downloadBtn">官網下載_1</a>
-            <a href="" class="downloadBtn">官網下載_2</a>
-            <a href="" class="downloadBtn">官網下載_3</a>
-            <a href="" class="downloadBtn">官網下載_4</a>
-            <a href="" class="downloadBtn">官網下載_5</a>
+            <a href="https://download.digeam.com/download/s1/xx2/rar/TheMythicalRealm2.part1.rar" class="downloadBtn">官網下載_1</a>
+            <a href="https://download.digeam.com/download/s1/xx2/rar/TheMythicalRealm2.part2.rar" class="downloadBtn">官網下載_2</a>
+            <a href="https://download.digeam.com/download/s1/xx2/rar/TheMythicalRealm2.part3.rar" class="downloadBtn">官網下載_3</a>
+            <a href="https://download.digeam.com/download/s1/xx2/rar/TheMythicalRealm2.part4.rar" class="downloadBtn">官網下載_4</a>
+            <a href="https://download.digeam.com/download/s1/xx2/rar/TheMythicalRealm2.part5.rar" class="downloadBtn">官網下載_5</a>
         </div>
 
         <br>
