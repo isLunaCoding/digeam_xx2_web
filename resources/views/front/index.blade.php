@@ -321,7 +321,7 @@
                     <button class="prev"><img src="/img/event/homepage/arrowL.png"></button>
                     <button class="next"><img src="/img/event/homepage/arrowR.png"></button>
                 </div>
-                <a href="{{ route('wiki') }}"><img src="/img/event/homepage/section3moreBtn.jpg"></a>
+                {{-- <a href="{{ route('wiki') }}"><img src="/img/event/homepage/section3moreBtn.jpg"></a> --}}
             </div>
         </div>
     </div>
