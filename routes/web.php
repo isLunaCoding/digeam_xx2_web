@@ -39,11 +39,11 @@ Route::get('/suspension', 'front\suspensionController@index')->name('suspension'
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
-if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
     if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
         // 百科
         Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
-// Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');
+        // Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');
         // 下載
         Route::get('/download', function () {
             return view('front.download');
@@ -57,7 +57,7 @@ if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
         Route::get('/OBT', function () {
             return view('event/OBT');
         });
-// launcher
+        // launcher
         Route::get('/launcher', 'front\indexController@launcher');
         // 序號兌換
         Route::get('/exchange', function () {
@@ -69,5 +69,4 @@ if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
             return view('front/receiveAward');
         })->name('reward');
     }
-
 }
