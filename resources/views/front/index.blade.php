@@ -22,7 +22,9 @@
 @section('section1Container')
     <div class="container">
         <div class="btnBox1">
-            <a target="_blank" class="buttonDownload" href="{{ route('download') }}"><img
+            {{-- <a target="_blank" class="buttonDownload" href="{{ route('download') }}"><img
+                    src="/img/event/homepage/buttonDownload.jpg"></a> --}}
+            <a target="_blank" class="buttonDownload" onclick="downloadRemind()"><img
                     src="/img/event/homepage/buttonDownload.jpg"></a>
             <div class="btnBox2">
                 <a class="register" target="_blank" href="https://www.digeam.com/register">
@@ -353,6 +355,12 @@
                 $('#pop1').fadeIn(200);
             }, 200);
         };
+
+        // 下載敬請期待
+        function downloadRemind(){
+            alert('主程式將於近日開放下載，敬請期待')
+        }
+        
 
         // section1資訊tab
         $(".newsContainer .text").hide();

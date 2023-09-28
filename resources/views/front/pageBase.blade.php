@@ -23,31 +23,33 @@
         <div class="sectionBG">
             <div class="container">
                 <div class="btnBoxLeft">
-                    <a target="_blank" class="buttonDownload" href="{{ route('download') }}"><img
-                        src="/img/event/homepage/buttonDownload.jpg"></a>
-                <div class="btnBox2">
-                    <a class="register" target="_blank" href="https://www.digeam.com/register">
-                        <img src="/img/event/homepage/imgRegister.png">
-                        帳號註冊
-                    </a>
-                    <a class="addValue" target="_blank" href="https://www.digeam.com/member/billing">
-                        <img src="/img/event/homepage/imgAddValue.png">
-                        儲值中心
-                    </a>
-    
-                    <div class="btnBox3">
-                        <a class="OTP" target="_blank" href="https://www.digeam.com/member/enable">
-                            <img src="/img/event/homepage/imgOTP.png">
-                            OTP申請
+                    {{-- <a target="_blank" class="buttonDownload" href="{{ route('download') }}"><img
+                        src="/img/event/homepage/buttonDownload.jpg"></a> --}}
+                    <a target="_blank" class="buttonDownload" onclick="downloadRemind()"><img
+                            src="/img/event/homepage/buttonDownload.jpg"></a>
+                    <div class="btnBox2">
+                        <a class="register" target="_blank" href="https://www.digeam.com/register">
+                            <img src="/img/event/homepage/imgRegister.png">
+                            帳號註冊
                         </a>
-                        <div class="line"></div>
-                        <a class="customerService" target="_blank" href="https://www.digeam.com/cs">
-                            <img src="/img/event/homepage/imgCustomerService.png">
-                            聯繫客服
+                        <a class="addValue" target="_blank" href="https://www.digeam.com/member/billing">
+                            <img src="/img/event/homepage/imgAddValue.png">
+                            儲值中心
                         </a>
+
+                        <div class="btnBox3">
+                            <a class="OTP" target="_blank" href="https://www.digeam.com/member/enable">
+                                <img src="/img/event/homepage/imgOTP.png">
+                                OTP申請
+                            </a>
+                            <div class="line"></div>
+                            <a class="customerService" target="_blank" href="https://www.digeam.com/cs">
+                                <img src="/img/event/homepage/imgCustomerService.png">
+                                聯繫客服
+                            </a>
+                        </div>
+
                     </div>
-    
-                </div>
                 </div>
                 <div class="boxRight">
                     <div class="textTitle">
@@ -69,3 +71,10 @@
         </div>
     </div>
 @endsection
+
+<script>
+    // 下載敬請期待
+    function downloadRemind() {
+        alert('主程式將於近日開放下載，敬請期待')
+    }
+</script>
