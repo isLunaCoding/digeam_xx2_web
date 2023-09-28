@@ -25,7 +25,7 @@ Route::middleware(['setReturnUrl'])->group(function () {
 });
 
 // 官網
-if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
+// if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
     Route::get('/launcher', 'front\indexController@launcher');
 // 官網
     Route::get('/xx2index', 'front\indexController@index');
@@ -73,4 +73,4 @@ if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
     Route::get('/reward', function () {
         return view('front/receiveAward');
     })->name('reward');
-}
+// }

@@ -3,7 +3,9 @@
         alert('建議使用Edge或者Chrome瀏覽器進行瀏覽')
     }
     // $("#loading").show();
+    // document.getElementById("loading").style('display','block');
     document.getElementById("loading").style.display = "block";
+
 </script>
 
 <!DOCTYPE html>
