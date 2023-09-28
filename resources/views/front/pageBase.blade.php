@@ -73,8 +73,10 @@
 @endsection
 
 <script>
-    // 下載敬請期待
+
+// 下載敬請期待
     function downloadRemind() {
         alert('主程式將於近日開放下載，敬請期待')
     }
+
 </script>

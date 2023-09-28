@@ -40,7 +40,7 @@ Route::middleware(['setReturnUrl'])->group(function () {
 Route::get('/launcher', 'front\indexController@launcher');
 
 // 官網
-Route::get('/xx2index', 'front\indexController@index')->name('index');
+Route::get('/', 'front\indexController@index')->name('index');
 // 公告
 Route::get('/announcement/{cate?}', 'front\announcementController@index')->name('announcement');
 Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');

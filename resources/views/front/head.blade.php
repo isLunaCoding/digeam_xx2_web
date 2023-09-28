@@ -74,7 +74,7 @@
                                 <a href="https://www.facebook.com/DiGeamXianXia2">玩家社群</a>
                                 <ul class="menu3_open" data-menuaction="menu3_open">
                                     <li><a href="https://www.facebook.com/DiGeamXianXia2">FB粉絲團</a></li>
-                                    <li><a href="https://discord.gg/gpXjMWGd">Discord</a></li>
+                                    <li><a href="https://discord.gg/2ZRW3hacJ2">Discord</a></li>
                                 </ul>
                             </li>
                             {{-- <li class="menu menu4"><a href="">排行榜</a></li> --}}
