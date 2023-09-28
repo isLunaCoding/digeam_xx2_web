@@ -64,18 +64,18 @@
                 <tbody>
                     <tr>
                         <td>作業系統</td>
-                        <td>Win7及其以上64位版</td>
-                        <td>Win7及其以上64位版</td>
+                        <td>Win7及其以上64位元版本</td>
+                        <td>Win7及其以上64位元版本</td>
                     </tr>
                     <tr>
                         <td>CPU</td>
-                        <td>主頻1.8G以上</td>
-                        <td>主頻3.0G以上</td>
+                        <td>時脈1.8GHz</td>
+                        <td>時脈3.0GHz</td>
                     </tr>
                     <tr>
                         <td>記憶體</td>
-                        <td>4G或更多的內存容量</td>
-                        <td>16G或更多的內存容量</td>
+                        <td>4G</td>
+                        <td>16G</td>
                     </tr>
                     <tr>
                         <td>顯示卡</td>
@@ -84,8 +84,8 @@
                     </tr>
                     <tr>
                         <td>硬碟空間</td>
-                        <td>50GB以上磁盤剩余空間</td>
-                        <td>50GB以上磁盤剩余空間</td>
+                        <td>50GB以上</td>
+                        <td>50GB以上</td>
                     </tr>
                 </tbody>
             </table>
