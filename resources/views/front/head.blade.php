@@ -78,7 +78,7 @@
                                 </ul>
                             </li>
                             {{-- <li class="menu menu4"><a href="">排行榜</a></li> --}}
-                            <li class="menu menu5"><a href={{ route('download') }}>下載專區</a></li>
+                            {{-- <li class="menu menu5"><a href={{ route('download') }}>下載專區</a></li> --}}
                             <li class="menu menu6" data-menuaction="menu6_open">
                                 <a href="">會員中心</a>
                                 <ul class="menu6_open" data-menuaction="menu6_open">
