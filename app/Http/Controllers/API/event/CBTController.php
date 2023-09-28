@@ -110,6 +110,12 @@ class CBTController extends Controller
                 'status' => -99,
             ]);
         }
+
+        if (date('YmdHis') >= '20231017000000') {
+            return response()->json([
+                'status' => -95,
+            ]);
+        }
         if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
             $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
         } else {
@@ -208,6 +214,12 @@ class CBTController extends Controller
                 'status' => -99,
             ]);
         }
+
+        if (date('YmdHis') >= '20231026000000') {
+            return response()->json([
+                'status' => -97,
+            ]);
+        }
         if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
             $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
         } else {
@@ -236,6 +248,12 @@ class CBTController extends Controller
         if ($request->user == null) {
             return response()->json([
                 'status' => -99,
+            ]);
+        }
+
+        if (date('YmdHis') >= '20231017000000') {
+            return response()->json([
+                'status' => -95,
             ]);
         }
         if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {

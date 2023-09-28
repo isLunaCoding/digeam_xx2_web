@@ -28,5 +28,6 @@ Route::group([
     $router->resource('serialnumbercate', 'SerialNumberCateController');
     $router->resource('{number}/serial_number', 'SerialNumberController');
     $router->resource('{id}/serial_item', 'SerialitemController');
+    $router->resource('rewardLog', 'RewardLogController');
 
 });

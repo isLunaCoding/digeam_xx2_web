@@ -119,6 +119,8 @@ $(".p3_buy299").on("click",function(){
                     })
                 }else if(res.status == -97){
                     point_not_enough()
+                }else if(res.status == -95){
+                    end()
                 }else{
                     error()
                 }
@@ -162,6 +164,8 @@ $(".p3_buy999").on("click",function(){
                     })
                 }else if(res.status == -97){
                     point_not_enough()
+                }else if(res.status == -95){
+                    end()
                 }else{
                     error()
                 }
@@ -205,6 +209,8 @@ $(".p3_buy2690").on("click",function(){
                     })
                 }else if(res.status == -97){
                     point_not_enough()
+                }else if(res.status == -95){
+                    end()
                 }else{
                     error()
                 }
@@ -323,12 +329,10 @@ $(".p4_gobtn").on("click",function(){
                             }else if(_play_times == 15){
                                 level_6()
                             }else{
-                                console.log(_play_times+"error1")
                                 error()
                             }
                         },1000)
                     }else{
-                        console.log(_play_times+"error2")
                         error()
                     }
                 }else if(res.status == -98){  //當日已遊玩
@@ -337,6 +341,8 @@ $(".p4_gobtn").on("click",function(){
                     }else{
                         already_play()
                     }
+                }else if(res.status == -97){
+                    end()
                 }
     
             }
@@ -392,6 +398,8 @@ $(".p5_enter_btn").on("click",function(){
                     }else if(res.status == 1){
                         report_success()
                     }
+                }else if(res.status == -95){
+                    end()
                 }else{
                     error()
                 }
@@ -402,7 +410,6 @@ $(".p5_enter_btn").on("click",function(){
 
 //上傳圖片並預覽(轉base64)
 $("#imgInp").change(function(){
-    console.log($("#imagePreview").attr("src"))
     $("#imagePreview").show()
     readImgURL(this);
 });
