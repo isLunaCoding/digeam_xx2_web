@@ -28,8 +28,8 @@ Route::middleware(['setReturnUrl'])->group(function () {
 if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
     Route::get('/launcher', 'front\indexController@launcher');
 // 官網
-    Route::get('/xx2index', 'front\indexController@index')->name('index');
-    Route::get('/', 'front\indexController@index');
+    Route::get('/xx2index', 'front\indexController@index');
+    Route::get('/', 'front\indexController@index')->name('index');
 // 公告
     Route::get('/announcement/{cate?}', 'front\announcementController@index')->name('announcement');
     Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');

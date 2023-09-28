@@ -316,6 +316,7 @@ body {
 }
 .navBox nav .menuBox {
   display: flex;
+  justify-content: center;
 }
 .navBox nav .menuBox .menu a {
   width: 157px;
