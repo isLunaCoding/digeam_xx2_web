@@ -28,7 +28,7 @@
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/event/homepage/indexStyle.css?v=1.0.1">
+    <link rel="stylesheet" href="/css/event/homepage/indexStyle.css?v=1.0.2">
     <link rel="stylesheet" href="/css/event/homepage/pop.css">
 
     {{-- 分頁專用CSS --}}
