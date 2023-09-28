@@ -69,7 +69,8 @@
                                     <li><a href={{ route('announcement', 'system') }}>系統公告</a></li>
                                 </ul>
                             </li>
-                            <li class="menu menu2"><a href={{ route('wiki') }}>遊戲百科</a></li>
+                            {{-- <li class="menu menu2"><a href={{ route('wiki') }}>遊戲百科</a></li> --}}
+                            <li class="menu menu2"><a>敬請期待</a></li>
                             <li class="menu menu3" data-menuaction="menu3_open">
                                 <a href="https://www.facebook.com/DiGeamXianXia2">玩家社群</a>
                                 <ul class="menu3_open" data-menuaction="menu3_open">

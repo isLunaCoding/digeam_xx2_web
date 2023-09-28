@@ -53,7 +53,7 @@
         <div class="swiper">
             @foreach ($images as $image)
                 <div class="sw">
-                    <img src={{ $image['file_name'] }} alt="">
+                    <a href={{ $image['url'] }}><img src={{ $image['file_name'] }} alt=""></a>
                 </div>
             @endforeach
         </div>
@@ -202,7 +202,7 @@
                         <img src="/img/event/homepage/char_name1.png">
                         <img src="/img/event/homepage/char_feature1.png">
                         <p>
-                            潛行暗殺者,善隱忍,精伏擊。本身擁有超強的近身戰鬥實力,伺機而動,常以風馳電掣的手段予敵致命一擊。事了拂衣而去,行蹤莫測難辨。<br>
+                            潛行暗殺者，善隱忍，精伏擊。本身擁有超強的近身戰鬥實力，伺機而動，常以風馳電掣的手段予敵致命一擊。事了拂衣而去，行蹤莫測難辨。<br>
                             使用雙刃。近戰法系輸出，擁有隱身技能的絕影峰十分適合作為團隊中偵查兵的存在，高爆發的技能保證其單體傷害。
                         </p>
                         <button class="skillInt" onclick="skillInt(char_Array1)">技能介紹&rarr; </button>
