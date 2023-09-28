@@ -6,7 +6,7 @@
 
 
 @section('otherCss')
-    <link rel="stylesheet" href="/css/event/homepage/pageBase.css">
+    <link rel="stylesheet" href="/css/event/homepage/pageBase.css?v=1.0.1">
     @yield('otherCss2')
 @endsection
 
