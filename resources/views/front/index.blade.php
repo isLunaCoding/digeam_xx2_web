@@ -188,14 +188,14 @@
         <div class="sectionBG">
             <div class="charBox">
                 <div class="btnBox">
-                    <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div>
-                    <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div>
+                    {{-- <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div> --}}
+                    {{-- <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div> --}}
                     <div class="charBtn" data-char="cha3"><img src="/img/event/homepage/char_icon3.png"></div>
                     <div class="charBtn" data-char="cha4"><img src="/img/event/homepage/char_icon4.png"></div>
                     <div class="charBtn" data-char="cha5"><img src="/img/event/homepage/char_icon5.png"></div>
                     <div class="charBtn" data-char="cha6"><img src="/img/event/homepage/char_icon6.png"></div>
                     <div class="charBtn" data-char="cha7"><img src="/img/event/homepage/char_icon7.png"></div>
-                    <div class="charBtn" data-char="cha8"><img src="/img/event/homepage/char_icon8.png"></div>
+                    {{-- <div class="charBtn" data-char="cha8"><img src="/img/event/homepage/char_icon8.png"></div> --}}
                 </div>
                 <div class="cha cha1">
                     <div class="textBox textBox1">
@@ -389,7 +389,7 @@
         // section2角色資訊切換
         $(".section2 .cha").hide();
         $(".section2 .cha3").show();
-        $('.charBtn:eq(2)').addClass('active');
+        $('.charBtn:eq(0)').addClass('active');
         $(".section2 .charBtn").on("click", function () {
             $(".section2 .cha").hide();
             $('.charBtn').removeClass("active");

@@ -33,7 +33,7 @@
         <span class="red">※本遊戲規章可能會因特定服務更新或遊戲改版而有所修正調整，還請定期查閱並確實遵守。</span><br>
         <br>
         <div class="tableBox">
-            <h2>《仙俠世界二》遊戲管理規章</h2>
+            <h2>《仙俠世界貳》遊戲管理規章</h2>
             <table class="table">
                 <thead>
                     <tr>
@@ -350,7 +350,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p class="textRight">  DiGeam 《仙俠世界二》 營運團隊  </p>
+            <p class="textRight">  DiGeam 《仙俠世界貳》 營運團隊  </p>
         </div>
     </div>
 @endsection
