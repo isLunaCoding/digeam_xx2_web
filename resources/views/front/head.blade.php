@@ -3,7 +3,9 @@
         alert('建議使用Edge或者Chrome瀏覽器進行瀏覽')
     }
     // $("#loading").show();
+    // document.getElementById("loading").style('display','block');
     document.getElementById("loading").style.display = "block";
+
 </script>
 
 <!DOCTYPE html>
@@ -26,7 +28,7 @@
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/event/homepage/indexStyle.css">
+    <link rel="stylesheet" href="/css/event/homepage/indexStyle.css?v=1.0.1">
     <link rel="stylesheet" href="/css/event/homepage/pop.css">
 
     {{-- 分頁專用CSS --}}
@@ -138,7 +140,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="/js/event/homepage/view.js"></script>
+    <script src="/js/event/homepage/view.js?v=1.0.1"></script>
     <script src="/js/event/homepage/main.js"></script>
     @yield('script')
     

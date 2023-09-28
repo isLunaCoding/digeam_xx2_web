@@ -125,12 +125,12 @@ var char_Array3 = [
     {
         icon: `<img src="/img/event/homepage/skill_icon/char_skill3_1.png">`,
         title: `致命投擲`,
-        text: `蓄勢後向選中目標投擲一把飛斧，造成致命的打擊。飛斧有60%的機率對目標造成割裂效果，使其受到的傷害提高5%，並每秒損失一定生命值，持續5秒。`,
+        text: `蓄勢後向選中目標投擲一把飛斧，造成致命的打擊。飛斧有60%的機率對目標造成割裂效果，使其受到的傷害提高5%，並每秒損失一定生命值，持續5秒`,
     },
     {
         icon: `<img src="/img/event/homepage/skill_icon/char_skill3_2.png">`,
         title: `斬殺`,
-        text: `近身斬擊目標，對攜帶割裂效果的目標斬殺造成傷害有60%的機率使斬殺立即冷卻`,
+        text: `近身斬擊目標，對攜帶割裂效果的目標斬殺造成傷害，有60%的機率使斬殺立即冷卻`,
     },
     {
         icon: `<img src="/img/event/homepage/skill_icon/char_skill3_3.png">`,
@@ -165,7 +165,7 @@ var char_Array3 = [
     {
         icon: `<img src="/img/event/homepage/skill_icon/char_skill3_9.png">`,
         title: `利刃切割`,
-        text: `向指定地點投擲利斧，每0.5秒對半徑10米內最多8個敵人造成一次切割攻擊，並附加#點真實傷害，持續4秒`,
+        text: `向指定地點投擲利斧，每0.5秒對半徑10米內最多8個敵人造成一次切割攻擊，並附加真實傷害，持續4秒`,
     },
     {
         icon: `<img src="/img/event/homepage/skill_icon/char_skill3_10.png">`,
@@ -211,7 +211,7 @@ var char_Array4 = [
     text:'每0.5秒施放出一道雷電持續對半徑14米內最多8個目標發出雷擊，持續2秒'},
     {icon: `<img src="/img/event/homepage/skill_icon/char_skill4_10.png">`,
     title:'極度深寒',
-    text:'召喚冰寒之力攻擊目標，同時使其被急凍，無法移動和使用技能，持續4秒。'},
+    text:'召喚冰寒之力攻擊目標，同時使其被急凍，無法移動和使用技能，持續4秒'},
     {icon: `<img src="/img/event/homepage/skill_icon/char_skill4_11.png">`,
     title:'冰棺術',
     text:'施法後立即進入冷凍狀態，但不清除已有的負面狀態，持續4秒'
@@ -431,6 +431,11 @@ var char_Array8 = [
         text:`瞬間為自己或一名隊友目標恢復等同於自己生命上限35%的生命值，恢復量受自身攻擊加成，受到聖元訣影響的目標120秒之內無法再受到相同的效果影響`
     },
 ];
+
+
+
+
+
 
 
 

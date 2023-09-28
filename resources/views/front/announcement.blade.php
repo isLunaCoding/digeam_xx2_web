@@ -13,7 +13,7 @@
 
 
 @section('otherCss2')
-    <link rel="stylesheet" href="/css/event/homepage/pageAnnouncement.css">
+    <link rel="stylesheet" href="/css/event/homepage/pageAnnouncement.css?v=1.0.1">
 @endsection
 
 
