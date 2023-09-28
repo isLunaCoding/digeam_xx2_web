@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Model\event\CBT_Buy_Log;
+use App\Model\event\PreregUser;
 use App\Model\Reward\package_item;
 use App\Model\Reward\reward_content;
 use App\Model\Reward\reward_event;
@@ -86,10 +87,43 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
-            if ((date('YmdHis') >= '20230915000000') && (date('YmdHis') <= '20231231235959')) {
-                // $id = MemberRecord::getUserInfo($user_id);
-                $db = \DB::connection('mysql');
-                if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+            if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+                if ((date('YmdHis') >= '20230915000000') && (date('YmdHis') <= '20231231235959')) {
+                    $celebrity = PreregUser::where('user_id', $user_id)->first();
+                    $db = \DB::connection('mysql');
+                    if ($celebrity != null) {
+                        $event_infos = reward_getlog::where('group_id', '6')->where('user_id', $user_id)->count();
+                        if ($event_infos == 0) {
+                            $c = ['orange_1', 'orange_2', 'orange_3', 'purple_1', 'purple_2', 'purple_3', 'purple_4', 'purple_5', 'purple_6', 'blue_1', 'blue_2', 'blue_3', 'green_1', 'green_2', 'green_3', 'green_4', 'green_5', 'white_1', 'white_2', 'white_3'];
+                            $c_name = ['七花獸百花仙靈', '仙道盟主沈仲陽', '愛之紅娘', '仙道盟訓誡長老', '仙道盟執法長老', '仙道盟傳功長老', '仙道盟掌刑長老', '天魔影煞', '天魔計都', '愛之月老', '吞靈獸', '齊天大聖', '不死冰骷髏', '不死霜骷髏', '開明獸', '冰麒麟', '寒冰巨甲', '愛之隨從', '愛之花童', '愛之禮官'];
+                            $bind_c = $celebrity->keep_celebrity;
+                            $now_c = $celebrity->celebrity;
+                            if ($now_c != null) {
+                                if ((date('YmdHis') < '20231026000000')) {
+                                    if ($bind_c != null) {
+                                        $index = array_search($bind_c, $c);
+                                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',6,'" . $c_name[$index] . "')";
+                                        $db->disableQueryLog();
+                                        $event_info = $db->statement($sql);
+                                    }
+                                } else {
+                                    if ($bind_c != null) {
+                                        $index = array_search($bind_c, $c);
+                                    } else {
+                                        $index = array_search($now_c, $c);
+                                    }
+                                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',6,'" . $c_name[$index] . "')";
+                                    $db->disableQueryLog();
+                                    $event_info = $db->statement($sql);
+                                }
+                            }
+                        }
+                    }
+                    \DB::disconnect('mysql');
+                }
+                if ((date('YmdHis') >= '20230915000000') && (date('YmdHis') <= '20231231235959')) {
+                    // $id = MemberRecord::getUserInfo($user_id);
+                    $db = \DB::connection('mysql');
                     $user_info = CBT_Buy_Log::where('user_id', $user_id)->where('price', '299')->count();
                     if ($user_info > 0) {
                         $event_infos = reward_getlog::where('group_id', '3')->where('user_id', $user_id)->count();
@@ -179,12 +213,12 @@ class rewardController extends Controller
                 'content' => $content,
             ]);
         } else {
-            foreach ($group_lists as $group) {
-                //不能領取
+            if ($event_id == 3) {
+                //結交名士活動獎勵
                 $got_log = 'Z';
                 if ((date('Y-m-d H:i:s') >= $start_date) && (date('Y-m-d H:i:s') < $end_date)) {
-                    $temp_results = reward_getlog::where('user_id', $user_id)->where('group_id', $group->id)->orderby('is_send', 'asc')->first();
-                    $remaining_num = reward_getlog::where('user_id', $user_id)->where('group_id', $group->id)->where('is_send', 'N')->count();
+                    $temp_results = reward_getlog::where('user_id', $user_id)->where('group_id', 6)->orderby('is_send', 'asc')->first();
+                    $remaining_num = reward_getlog::where('user_id', $user_id)->where('group_id', 6)->where('is_send', 'N')->count();
                     if ($temp_results != null || $temp_results != '') {
                         if ($temp_results->is_send == 'Y') {
                             $got_log = 'Y';
@@ -194,26 +228,82 @@ class rewardController extends Controller
                         }
                     }
                 }
-                $content_lists = reward_content::where('group_id', $group->id)->get();
-                $i = 0;
-                foreach ($content_lists as $content_list) {
-                    if ($i == 0) {
-                        $content .= "<tr><td rowspan=" . $group->tablecnt . ">" . $group->title . "</td>";
-                    }
-                    $content .= "<td>" . $content_list->item_name . "</td>";
-                    if ($i == 0) {
-                        $content .= "<td rowspan=" . $group->tablecnt . ">" . $group->remark . "</td>";
-                    }
-
-                    if ($got_log == 'Y') {
-                        $content .= "<td><button class='cannotReceive'>領取</button></td><td>0</td></tr>";
-                    } elseif ($got_log == 'N') {
-                        $content .= "<td ><button class='receive' onclick='get_reward(" . $content_list->id . ")'>領取</button></td><td>" . $remaining_num . "</td></tr>";
-
+                $celebrity = PreregUser::where('user_id', $user_id)->first();
+                // dd($celebrity);
+                if ($celebrity != null) {
+                    $c = ['orange_1', 'orange_2', 'orange_3', 'purple_1', 'purple_2', 'purple_3', 'purple_4', 'purple_5', 'purple_6', 'blue_1', 'blue_2', 'blue_3', 'green_1', 'green_2', 'green_3', 'green_4', 'green_5', 'white_1', 'white_2', 'white_3'];
+                    $c_name = ['七花獸百花仙靈', '仙道盟主沈仲陽', '愛之紅娘', '仙道盟訓誡長老', '仙道盟執法長老', '仙道盟傳功長老', '仙道盟掌刑長老', '天魔影煞', '天魔計都', '愛之月老', '吞靈獸', '齊天大聖', '不死冰骷髏', '不死霜骷髏', '開明獸', '冰麒麟', '寒冰巨甲', '愛之隨從', '愛之花童', '愛之禮官'];
+                    $bind_c = $celebrity->keep_celebrity;
+                    $now_c = $celebrity->celebrity;
+                    if ($now_c != null) {
+                        if ((date('YmdHis') < '20231026000000')) {
+                            if ($bind_c != null) {
+                                $index = array_search($bind_c, $c);
+                                $celebrity_name = $c_name[$index];
+                            } else {
+                                $celebrity_name = '無';
+                            }
+                        } else {
+                            if ($bind_c != null) {
+                                $index = array_search($bind_c, $c);
+                                $celebrity_name = $c_name[$index];
+                            } else {
+                                $index = array_search($now_c, $c);
+                                $celebrity_name = $c_name[$index];
+                            }
+                        }
                     } else {
-                        $content .= "<td><button class='cannotReceive'>領取</button></td><td>0</td></tr>";
+                        $celebrity_name = '無';
                     }
-                    $i++;
+                    if ($request->event_id == 3) {
+                        $content .= "<tr><td rowspan= 1 >綁定名士</td>" . "<td>" . $celebrity_name . "</td>" . "<td rowspan= 1>結交名士活動獎勵(綁定名士)</td>";
+                        if ($got_log == 'Y') {
+                            $content .= "<td><button class='cannotReceive'>領取</button></td><td>0</td></tr>";
+                        } elseif ($celebrity_name == '無') {
+                            $content .= "<td><button class='cannotReceive'>領取</button></td><td>0</td></tr>";
+                        } elseif ($got_log == 'N') {
+                            $content .= "<td ><button class='receive' onclick='get_reward(6)'>領取</button></td><td>" . $remaining_num . "</td></tr>";
+                        } else {
+                            $content .= "<td><button class='cannotReceive'>領取</button></td><td>0</td></tr>";
+                        }
+                    }
+                }
+            } else {
+                foreach ($group_lists as $group) {
+                    //不能領取
+                    $got_log = 'Z';
+                    if ((date('Y-m-d H:i:s') >= $start_date) && (date('Y-m-d H:i:s') < $end_date)) {
+                        $temp_results = reward_getlog::where('user_id', $user_id)->where('group_id', $group->id)->orderby('is_send', 'asc')->first();
+                        $remaining_num = reward_getlog::where('user_id', $user_id)->where('group_id', $group->id)->where('is_send', 'N')->count();
+                        if ($temp_results != null || $temp_results != '') {
+                            if ($temp_results->is_send == 'Y') {
+                                $got_log = 'Y';
+                            } else {
+                                //可以領取
+                                $got_log = 'N';
+                            }
+                        }
+                    }
+                    $content_lists = reward_content::where('group_id', $group->id)->get();
+                    $i = 0;
+                    foreach ($content_lists as $content_list) {
+                        if ($i == 0) {
+                            $content .= "<tr><td rowspan=" . $group->tablecnt . ">" . $group->title . "</td>";
+                        }
+                        $content .= "<td>" . $content_list->item_name . "</td>";
+                        if ($i == 0) {
+                            $content .= "<td rowspan=" . $group->tablecnt . ">" . $group->remark . "</td>";
+                        }
+
+                        if ($got_log == 'Y') {
+                            $content .= "<td><button class='cannotReceive'>領取</button></td><td>0</td></tr>";
+                        } elseif ($got_log == 'N') {
+                            $content .= "<td ><button class='receive' onclick='get_reward(" . $content_list->id . ")'>領取</button></td><td>" . $remaining_num . "</td></tr>";
+                        } else {
+                            $content .= "<td><button class='cannotReceive'>領取</button></td><td>0</td></tr>";
+                        }
+                        $i++;
+                    }
                 }
 
             }
@@ -301,17 +391,33 @@ class rewardController extends Controller
         $charid = $request->charid;
         $server_id = $request->server_id;
 
-        $reward_content = reward_content::where('id', $content_id)->first();
-        $event_group = reward_group::where('id', $reward_content->group_id)->first();
-        $item_name = $reward_content->item_name;
-        $item_code = $reward_content->item_code;
-        $itemcnt = $reward_content->itemcnt;
-        $isbind = $reward_content->isbind;
-        $is_package = $reward_content->is_package;
-        $title ='領獎區';
-        $event = reward_event::where('id', $event_group->event_id)->first();
-        $event_name = $event->event_name;
-        $content = "領獎專區-" . $event_name;
+        if ($content_id == 6) {
+            $c_name = ['七花獸百花仙靈', '仙道盟主沈仲陽', '愛之紅娘', '仙道盟訓誡長老', '仙道盟執法長老', '仙道盟傳功長老', '仙道盟掌刑長老', '天魔影煞', '天魔計都', '愛之月老', '吞靈獸', '齊天大聖', '不死冰骷髏', '不死霜骷髏', '開明獸', '冰麒麟', '寒冰巨甲', '愛之隨從', '愛之花童', '愛之禮官'];
+            $c_code = [14147, 14110, 14213, 14113, 14112, 14114, 14111, 14149, 14148, 14214, 14151, 14150, 14162, 14163, 14165, 14166, 14175, 14217, 14216, 14215];
+            $info = reward_getlog::where('user_id', $user_id)->where('group_id', 6)->where('is_send', 'N')->orderby('is_send', 'asc')->first();
+            $item_name = $info->remark;
+            $index = array_search($item_name, $c_name);
+            $item_code = $c_code[$index];
+            $itemcnt = 1;
+            $isbind = 1;
+            $is_package = 'N';
+            $title = '領獎區';
+            $event = reward_event::where('id', 3)->first();
+            $event_name = '綁定名士' . $item_name;
+            $content = "領獎專區-" . $event_name;
+        } else {
+            $reward_content = reward_content::where('id', $content_id)->first();
+            $event_group = reward_group::where('id', $reward_content->group_id)->first();
+            $item_name = $reward_content->item_name;
+            $item_code = $reward_content->item_code;
+            $itemcnt = $reward_content->itemcnt;
+            $isbind = $reward_content->isbind;
+            $is_package = $reward_content->is_package;
+            $title = '領獎區';
+            $event = reward_event::where('id', $event_group->event_id)->first();
+            $event_name = $event->event_name;
+            $content = "領獎專區-" . $event_name;
+        }
 
         //找出uid
         $ch = curl_init();
@@ -347,12 +453,17 @@ class rewardController extends Controller
                 $result3 = curl_exec($ch);
                 curl_close($ch);
                 $result3 = json_decode($result3);
-                $status = $result3->status;
-            }
+                if ($result3->status != 0) {
+                    $status = $result3->status;
+                }}
         }
         if ($status == 0) {
             //確認發獎成功，更新的get_log
-            $log_info = reward_getlog::where('user_id', $user_id)->where('group_id', $event_group->id)->where('is_send', 'N')->orderby('is_send', 'asc')->first();
+            if ($content_id == 6) {
+                $log_info = reward_getlog::where('user_id', $user_id)->where('group_id', 6)->where('is_send', 'N')->orderby('is_send', 'asc')->first();
+            } else {
+                $log_info = reward_getlog::where('user_id', $user_id)->where('group_id', $event_group->id)->where('is_send', 'N')->orderby('is_send', 'asc')->first();
+            }
             $log_info->server_id = $server_id;
             $log_info->char_name = $char_name;
             $log_info->charid = $charid;

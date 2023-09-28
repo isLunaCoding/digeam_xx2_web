@@ -42,11 +42,19 @@ class SerialNumberCateController extends AdminController
                 return $cate->remainder . "(" . $not_use . ")";
             }
         });
-
+        $grid->column('limit_times', __('同帳號可領取次數'))->display(function () {
+            if ($this->limit_times == 0) {
+                return '無限制';
+            } else {
+                return $this->limit_times;
+            }
+        });
         $grid->column('list', __('序號列表'))->display(function () {
             return '<a href =/admin/' . $this->type . '/serial_number>序號列表</a>';
         });
-
+        $grid->column('list2', __('設定道具'))->display(function () {
+            return '<a href =/admin/' . $this->id . '/serial_item>道具列表</a>';
+        });
         $grid->column('start_date', __('開始日期'));
         $grid->column('end_date', __('截止日期'));
         $grid->disableRowSelector();
@@ -89,6 +97,7 @@ class SerialNumberCateController extends AdminController
         $form->select('all_for_one', __('狀態'))->options(['N' => '一組序號一人用', 'Y' => '一組序號多人用'])->default('N');
         $form->number('count', __('序號產出數量'))->default(1);
         $form->number('remainder', __('序號可用次數'))->default(1);
+        $form->number('limit_times', __('同帳號可領取次數/0為無限制'))->default(0);
         $form->datetime('start_date', __('開始日期'));
         $form->datetime('end_date', __('結束日期'));
 
@@ -140,7 +149,7 @@ class SerialNumberCateController extends AdminController
                 if ($form->remainder != 1) {
                     $error = new MessageBag([
                         'title' => '錯誤',
-                        'message' => '一組一人序號可用次數為"0"',
+                        'message' => '一組一人序號可用次數為"1"',
                     ]);
                     return back()->with(compact('error'));
                 }

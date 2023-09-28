@@ -110,6 +110,37 @@
     }
 }
 
+@keyframes p2registerarrowL{
+    0%,100%{
+        left: -1px;
+        top: 1px;
+    }
+    50%{
+        left: -5px;
+        top: 1px;
+    }
+}
+
+@keyframes p2registerarrowR{
+    0%,100%{
+        left: 1px;
+        top: 1px;
+    }
+    50%{
+        left: 5px;
+        top: 1px;
+    }
+}
+
+@keyframes p2checkbtn{
+    0%,100%{
+        filter: brightness(1.3) drop-shadow(0 0 20px #ffffff);
+    }
+    50%{
+        filter: brightness(1);
+    }
+}
+
 @keyframes downbtnfloat{
     0%{
         transform: translateY(0px);
