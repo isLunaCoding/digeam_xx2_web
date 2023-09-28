@@ -337,6 +337,7 @@
         // pop跳窗
         function _close() {
             $('.mask').fadeOut(200);
+            $("html").css("overflow", "scroll");
         };
         function skillInt(arrayName) {
             $("html").css("overflow", "hidden");
