@@ -222,18 +222,29 @@ function report_success(){
     })
 }
 
+
 //活動結束
 function end(){
     $('.popS').fadeIn(200)
     $('.popStext').html('活動已截止!<br/>感謝您的支持!<br/>前往官網了解更多最新活動情報。')
-    $('.doublebtns').hide()
-    $('.checkbtn_1').show()
-    $('.checkbtn_1').on("click",function(){
-        $(window).attr('location','//www.xx2.digeam.com');
+    $('.doublebtns').show()
+    $('.checkbtn_1').hide()
+    $('.checkbtn_2').html('前往官網')
+    $('.checkbtn_2').css({
+        width: '120px'
     })
+    if(screen.width <= 480){
+        $('.checkbtn_2').css({
+            width: '80px'
+        })
+    }
     $('body').css({
         "overflow":"hidden"
     });
+    $('.checkbtn_2').on("click",function(){
+        window.open('//xx2.digeam.com/xx2index');
+        $('.checkbtn_3').trigger("click")      
+    })
 }
 
 //發生不明錯誤
@@ -281,6 +292,8 @@ function p3_event_pop(){
         <ul class="popL_ul">
             <li>每個帳號於活動期間內每個禮包限購一次。</li>
             <li>購買禮包後，將可以於活動結束後至「領獎專區」領取已購買的商品。</li>
+            <li>本活動之禮包僅需轉點至《仙俠世界貳》後即可於頁面進行購買，無需在遊戲中將點數轉換成元寶，進行購買時請注意，以免自身權益受損。</li>
+            <li>若在封測期間有於遊戲中將點數兌換成元寶，將於封測開啟後，以《仙俠世界貳》點數形式全數返還。</li>
             <li>本活動所提供之虛寶獎勵，皆為不可交易之性質，實際道具限制依遊戲內為準。領出前請務必留意角色ID，一經領取恕不提供轉移道具之服務。</li>
             <li>本活動參加、得獎資格與獎項不得轉讓或贈與第三人。</li>
             <li>本活動之獎勵將無法折換現金或其他等值商品。</li>

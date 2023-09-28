@@ -252,6 +252,35 @@ a {
     transform: translateY(-10px);
   }
 }
+@keyframes cloud {
+  0% {
+    top: -600px;
+    right: -800px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 600px;
+    right: 1000px;
+    opacity: 0;
+  }
+}
+@keyframes ti_light {
+  0% {
+    top: -45%;
+  }
+  100% {
+    top: 100%;
+  }
+}
 .menubar {
   position: fixed;
   z-index: 99;
@@ -702,6 +731,20 @@ body::-webkit-scrollbar-track {
     left: 35%;
     width: 55%;
   }
+}
+.page0 .p0_ti .ti_light_mask {
+  width: 100%;
+  height: 100%;
+  -webkit-mask: url(/img/event/CBT/p0/mainti_mask.png) no-repeat center center/contain;
+  mask: url(/img/event/CBT/p0/mainti_mask.png) no-repeat center center/contain;
+  mix-blend-mode: overlay;
+  opacity: 1;
+}
+.page0 .p0_ti .ti_light_mask .ti_light {
+  width: 100%;
+  height: 50%;
+  background: url(/img/event/CBT/p0/mainti_light.png) no-repeat center center/cover;
+  animation: ti_light 5s infinite linear;
 }
 .page0 .p0btns {
   position: absolute;
@@ -1801,7 +1844,7 @@ body::-webkit-scrollbar-track {
   font-size: 28px;
   letter-spacing: 5px;
   text-align: center;
-  margin: 10% 0%;
+  margin: 7% 0%;
 }
 @media all and (max-width: 1440px) {
   .page3 .p3_wrap .p3_main_info .p3_main_text .p3_subti {
@@ -1976,14 +2019,25 @@ body::-webkit-scrollbar-track {
   margin: 5% 0%;
   line-height: 30px;
 }
+@media all and (max-width: 1600px) {
+  .page3 .p3_wrap .p3_main_info .p3_main_text .p3_text_2 li {
+    line-height: 25px;
+  }
+}
 @media all and (max-width: 1240px) {
   .page3 .p3_wrap .p3_main_info .p3_main_text .p3_text_2 li {
     line-height: 20px;
   }
 }
+@media all and (max-width: 1024px) {
+  .page3 .p3_wrap .p3_main_info .p3_main_text .p3_text_2 li {
+    margin: 2% 0;
+  }
+}
 @media all and (max-width: 768px) {
   .page3 .p3_wrap .p3_main_info .p3_main_text .p3_text_2 li {
     line-height: 30px;
+    margin: 5% 0;
   }
 }
 @media all and (max-width: 480px) {
@@ -3502,6 +3556,11 @@ body::-webkit-scrollbar-track {
      object-fit: contain;
   display: none;
 }
+@media all and (max-width: 768px) {
+  .page5 .p5_wrap .bug_box form .quBox3 .bug_img #imagePreview {
+    height: 50px;
+  }
+}
 .page5 .p5_wrap .bug_box form .p5_enter_btn {
   width: 100px;
   height: 20px;
@@ -3522,6 +3581,46 @@ body::-webkit-scrollbar-track {
     font-size: 15px;
     margin-top: 0px;
   }
+}
+
+.clouds .cloud1 {
+  position: fixed;
+  width: 1920px;
+  height: 1254px;
+  pointer-events: none;
+  background: no-repeat center center/contain;
+  background-image: url(/img/event/CBT/cloud.png);
+  mix-blend-mode: soft-light;
+  animation: cloud 50s infinite ease-in-out;
+}
+.clouds .cloud2 {
+  position: fixed;
+  width: 1920px;
+  height: 1254px;
+  pointer-events: none;
+  background: no-repeat center center/contain;
+  background-image: url(/img/event/CBT/cloud2.png);
+  mix-blend-mode: soft-light;
+  animation: cloud 50s 30s infinite ease-in-out;
+}
+
+.OBTLink {
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  width: 194.4px;
+  height: 263.2px;
+  background: no-repeat center center/contain;
+  background-image: url(/img/event/CBT/OBTbtn.png);
+  transition: 0.3s;
+  display: none;
+}
+.OBTLink:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 253, 152, 0.4235294118));
+}
+.OBTLink a {
+  width: 100%;
+  height: 100%;
 }
 
 .popDownload {

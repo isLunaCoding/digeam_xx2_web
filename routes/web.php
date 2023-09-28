@@ -32,10 +32,19 @@ Route::middleware(['setReturnUrl'])->group(function () {
     Route::get('/OBT', function () {
         return view('event/OBT');
     });
+
+    // 序號兌換
+    Route::get('/exchange', function () {
+        return view('front/exchange');
+    })->name('exchange');
+
+    // 領獎專區
+    Route::get('/reward', function () {
+        return view('front/receiveAward');
+    })->name('reward');
+
 });
 
-
-//
 // 官網
 Route::get('/launcher', 'front\indexController@launcher');
 
@@ -45,14 +54,6 @@ Route::get('/xx2index', 'front\indexController@index')->name('index');
 Route::get('/announcement/{cate?}', 'front\announcementController@index')->name('announcement');
 Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');
 
-// 領獎專區
-Route::get('/reward', function () {
-    return view('front/receiveAward');
-})->name('reward');
-// 序號兌換
-Route::get('/exchange', function () {
-    return view('front/exchange');
-})->name('exchange');
 // 下載
 Route::get('/download', function () {
     return view('front.download');

@@ -72,3 +72,35 @@
         transform: translateY(-10px);
     }
 }
+
+@keyframes cloud{
+    0%{
+        top: -600px;
+        right: -800px;
+        opacity: 0;
+    }
+    30%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    100%{
+        top: 600px;
+        right: 1000px;
+        opacity: 0;
+    }
+
+}
+
+@keyframes ti_light{
+    0%{
+        top:-45%;
+    }
+    100%{
+        top: 100%;
+    }
+}
