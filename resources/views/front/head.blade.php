@@ -5,7 +5,6 @@
     // $("#loading").show();
     // document.getElementById("loading").style('display','block');
     document.getElementById("loading").style.display = "block";
-
 </script>
 
 <!DOCTYPE html>
@@ -21,10 +20,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="Digeam 掘夢網,線上遊戲,免費遊戲,3D">
     <meta property="og:type" content="website">
+    <meta property="og:description" content="玄幻仙俠MMORPG《仙俠世界貳》獨創飛行模式，高自由度捏臉系統，開啟縱橫三界修真之旅，遨遊雲煙飄渺的靈耀大陸。" />
     <meta property="og:url" content="https://xx2.digeam.com/">{{-- 官網連結 --}}
     <meta property="og:title" content="玄幻仙俠MMORPG《仙俠世界貳》獨創飛行模式，高自由度捏臉系統，開啟縱橫三界修真之旅，遨遊雲煙飄渺的靈耀大陸。">
     <meta property="article:author" content="https://www.facebook.com">
     <meta property="og:image" content="/img/event/homepage/thumbnail_1200x628.jpg" />
+    <meta name="description" content="玄幻仙俠MMORPG《仙俠世界貳》獨創飛行模式，高自由度捏臉系統，開啟縱橫三界修真之旅，遨遊雲煙飄渺的靈耀大陸。" />
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -99,9 +100,12 @@
                     </nav>
                     <nav class="iconBox">
                         <ul>
-                            <li><a href="https://www.youtube.com/@officialdigeam/videos"><img src="/img/event/homepage/social_icon_yt.png"></a></li>
-                            <li><a href="https://discord.gg/2ZRW3hacJ2"><img src="/img/event/homepage/social_icon_dc.png"></a></li>
-                            <li><a href="https://www.facebook.com/DiGeamXianXia2"><img src="/img/event/homepage/social_icon_fb.png"></a></li>
+                            <li><a href="https://www.youtube.com/@officialdigeam/videos"><img
+                                        src="/img/event/homepage/social_icon_yt.png"></a></li>
+                            <li><a href="https://discord.gg/2ZRW3hacJ2"><img
+                                        src="/img/event/homepage/social_icon_dc.png"></a></li>
+                            <li><a href="https://www.facebook.com/DiGeamXianXia2"><img
+                                        src="/img/event/homepage/social_icon_fb.png"></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -117,7 +121,8 @@
             <footer class="footer">
                 <div class="footerBox">
                     <div class="footerbox_logo">
-                        <a href="https://www.digeam.com/index"><img class="digeamlogo" src="/img/event/homepage/footer/digeam_logo.webp"></a>
+                        <a href="https://www.digeam.com/index"><img class="digeamlogo"
+                                src="/img/event/homepage/footer/digeam_logo.webp"></a>
                         <img class="giantlogo" src="/img/event/homepage/footer/GIANT_logo.webp">
                     </div>
                     <div class="copyright">
@@ -143,13 +148,13 @@
     <script src="/js/event/homepage/view.js?v=1.0.1"></script>
     <script src="/js/event/homepage/main.js"></script>
     @yield('script')
-    
+
 </body>
 
 </html>
 
 <script>
     $(window).on('load', function() {
-    $("#loading").hide();
+        $("#loading").hide();
     });
 </script>
