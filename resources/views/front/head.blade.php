@@ -20,7 +20,7 @@
     <meta name="keywords" content="Digeam 掘夢網,線上遊戲,免費遊戲,3D">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xx2.digeam.com/">{{-- 官網連結 --}}
-    <meta property="og:title" content="">
+    <meta property="og:title" content="玄幻仙俠MMORPG《仙俠世界貳》獨創飛行模式，高自由度捏臉系統，開啟縱橫三界修真之旅，遨遊雲煙飄渺的靈耀大陸。">
     <meta property="article:author" content="https://www.facebook.com">
     <meta property="og:image" content="/img/event/homepage/thumbnail_1200x628.jpg" />
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
