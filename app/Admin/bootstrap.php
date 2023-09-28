@@ -22,3 +22,4 @@ use App\Admin\Extensions\Form\CKEditor;
 
 Encore\Admin\Form::forget(['map', 'editor']);
 Form::extend('ckeditor', CKEditor::class);
+Admin::favicon('/img/event/wiki/LOGO.png');

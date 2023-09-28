@@ -483,4 +483,22 @@ class rewardController extends Controller
         }
 
     }
+
+    public function myCardEvent(Request $request)
+    {
+        $user_id = $request->user_id;
+        $group_id = $request->group_id;
+        $info = reward_getlog::where('user_id', $user_id)->where('group_id', $group_id)->get();
+        if (count($info) == 0) {
+            $db = \DB::connection('mysql');
+            if ($group_id == 7) {
+                $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',7,'mycard儲值回饋500')";
+            } else {
+                $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',8,'mycard儲值回饋1000')";
+            }
+            $db->disableQueryLog();
+            $event_info = $db->statement($sql);
+        }
+        \DB::disconnect('mysql');
+    }
 }

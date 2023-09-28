@@ -6,24 +6,24 @@ body{
     &::-webkit-scrollbar {
         width: 7px;
     }
-  
+    
     &::-webkit-scrollbar-button {
         background: #1d5180;
         border-left: 1px solid #FFF;
         border-right: 1px solid #FFF;
     }
-  
+    
     &::-webkit-scrollbar-track-piece {
         background: #1d5180;
         border-left: 1px solid #FFF;
         border-right: 1px solid #FFF;
     }
-  
+    
     &::-webkit-scrollbar-thumb {
         border-radius: 4px;
         background-color: rgb(255, 255, 255);
     }
-  
+    
     &::-webkit-scrollbar-track {
         box-shadow: transparent;
     }
@@ -127,6 +127,22 @@ body{
             top: 0%;
             left: 35%;
             width: 55%;
+        }
+
+        .ti_light_mask{
+            width: 100%;
+            height: 100%;
+            -webkit-mask: url(/img/event/CBT/p0/mainti_mask.png) no-repeat center center / contain;
+            mask: url(/img/event/CBT/p0/mainti_mask.png) no-repeat center center / contain;
+            mix-blend-mode: overlay;
+            opacity: 1;
+
+            .ti_light{
+                width: 100%;
+                height: 50%;
+                background:url(/img/event/CBT/p0/mainti_light.png) no-repeat center center / cover;
+                animation: ti_light 5s infinite linear;
+            }
         }
     }
 
@@ -1169,7 +1185,7 @@ body{
                     font-size: 28px;
                     letter-spacing: 5px;
                     text-align: center;
-                    margin: 10% 0%;
+                    margin: 7% 0%;
 
                     @include xxl(){
                         margin: 6% 0;
@@ -1289,6 +1305,7 @@ body{
                     color: #FFF;
                     padding-left: 25px;
                     list-style: decimal;
+
     
                     @include xl(){
                         font-size: 17px;
@@ -1326,12 +1343,21 @@ body{
                         margin: 5% 0%;
                         line-height: 30px;
 
+                        @include xxxl(){
+                            line-height: 25px;    
+                        }
+
                         @include xl(){
                             line-height: 20px;
                         }
 
+                        @include lg(){
+                            margin: 2% 0;
+                        }
+
                         @include sm(){
                             line-height: 30px;
+                            margin: 5% 0;
                         }
     
                         @include xxs(){
@@ -2757,6 +2783,10 @@ body{
                             height: 100%;
                             object-fit: contain;
                             display: none;
+
+                            @include sm(){
+                                height: 50px;
+                            }
                         }
                     }
                 }
@@ -2785,6 +2815,51 @@ body{
         }
     }
 
+}
+
+.clouds{
+    .cloud1{
+        position: fixed;
+        width: 1920px;
+        height: 1254px;
+        pointer-events: none;
+        background: no-repeat center center / contain;
+        background-image: url(/img/event/CBT/cloud.png);
+        mix-blend-mode: soft-light;
+        animation: cloud 50s infinite ease-in-out;
+    }
+    .cloud2{
+        position: fixed;
+        width: 1920px;
+        height: 1254px;
+        pointer-events: none;
+        background: no-repeat center center / contain;
+        background-image: url(/img/event/CBT/cloud2.png);
+        mix-blend-mode: soft-light;
+        animation: cloud 50s 30s infinite ease-in-out;
+    }
+
+}
+
+.OBTLink{
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    width: calc(243px * 0.8);
+    height: calc(329px * 0.8);
+    background: no-repeat center center / contain;
+    background-image: url(/img/event/CBT/OBTbtn.png);
+    transition: 0.3s;
+    display: none;
+
+    &:hover{
+        filter: drop-shadow(0 0 15px #fffd986c);
+    }
+
+    & a{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 //下載大彈窗(它被拋棄了QQ)

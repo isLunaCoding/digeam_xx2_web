@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="《仙俠世界貳》封測火熱開放中" />
+    <meta property="og:title" content="《仙俠世界貳》刪檔封測開放中" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="【仙俠世界貳】9/20~9/25刪檔封測火熱開放中！" />
+    <meta property="og:description" content="人人皆可恣意飛行的修仙大世界，打造屬於自己的修仙之路，【仙俠世界貳】10/12~10/16 刪檔封測開放中！" />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:locale" content="zh_tw" />
     <meta property="article:author" content="" />
-    <meta property="og:image" content="img/event/CBT/fb_share.jpg" />
+    <meta property="og:image" content="img/event/CBT/fb_share.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta name="author" content="DiGeam" />
     <meta name="Resource-type" content="Document" />
     <link rel="icon" sizes="192x192" href="img/event/CBT/favicon.ico">
-    <meta name="description" content="【仙俠世界貳】9/20~9/25刪檔封測火熱開放中" />
+    <meta name="description" content="人人皆可恣意飛行的修仙大世界，打造屬於自己的修仙之路，【仙俠世界貳】10/12~10/16 刪檔封測開放中！" />
     <link rel="pingback" href="" />
 
     <title>《仙俠世界貳》封測火熱開放中</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <link rel="stylesheet" href="css/event/CBT/style.css">
+    <link rel="stylesheet" href="css/event/CBT/style.css?v=100">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
     <div class="menubar">
         <div class="menu_wrap">
             <div class="xx2_logo">
-                <a href="https://xx2.digeam.com/xx2index" target="blank"></a>
+                <a href="https://xx2.digeam.com/" target="blank"></a>
             </div>
             <div class="menubtns">
                 <div class="btn1"><a href="#page1"></a></div>
@@ -65,7 +65,7 @@
                 @endif
 
                 <div class="DC_link">
-                    <a href="https://discord.gg/gpXjMWGd" target="blank"></a>
+                    <a href="https://discord.gg/2ZRW3hacJ2" target="blank"></a>
                 </div>
                 <div class="FB_link">
                     <a href="https://www.facebook.com/DiGeamXianXia2" target="blank"></a>
@@ -84,9 +84,13 @@
     <div class="page0">
         <video poster="/img/event/CBT/p0/bg0.png" class="videoBG" src="/img/event/CBT/p0/BG.mp4" autoplay loop muted></video>
         <div class="xx2_logo_M">
-            <a href="https://xx2.digeam.com/xx2index" target="blank"></a>
+            <a href="https://xx2.digeam.com/" target="blank"></a>
         </div>
-        <div class="p0_ti"></div>
+        <div class="p0_ti">
+            <div class="ti_light_mask">
+                <div class="ti_light"></div>
+            </div>
+        </div>
         <div class="p0btns">
             <div class="register_btn">
                 <a href="https://www.digeam.com/register" target="blank"> </a>
@@ -108,8 +112,8 @@
                 <div class="p1_text_1"><p>《仙俠世界貳》封測期間</p></div>
                 <div class="p1_subti"><p>活動方式</p></div>
                 <ul class="p1_text_2">
-                    <li>上仙於CBT期間等級提升至40等，將可以於OBT領取時裝「雪意浮花」！</li>
-                    <li>符合領取條件的帳號將可以於OBT後，前往領獎專區領取獎勵。</li>
+                    <li>上仙於封測期間等級提升至40等，可以前往十方鎮尋找NPC魯東海領取時裝「雪意浮花」！</li>
+                    <li>符合領取條件的帳號將可以於公測後，前往領獎專區再次領取時裝獎勵。</li>
                 </ul>
             </div>
             <div class="p1_cloth">
@@ -135,25 +139,25 @@
                     <div class="p2_subti"><p>活動時間</p></div>
                     <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
                     <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取CBT限定10000元寶。</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取封測限定10000元寶。</p></div>
                     <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的元寶將不會保留至OBT。</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的元寶將不會保留至公測。</p></div>
                 </div>
                 <div class="p2_tab2_info">
                     <div class="p2_subti"><p>活動時間</p></div>
                     <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
                     <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後，可以領取CBT限定一百萬紅包。</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後可以領取封測限定10000紅包。</p></div>
                     <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之紅包僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的紅包將不會保留至OBT。</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之紅包僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的紅包將不會保留至公測。</p></div>
                 </div>
                 <div class="p2_tab3_info">
                     <div class="p2_subti"><p>活動時間</p></div>
                     <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
                     <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取CBT限定一百萬寶珠。</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取封測限定一百萬寶珠。</p></div>
                     <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之寶珠僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的寶珠將不會保留至OBT。​</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之寶珠僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的寶珠將不會保留至公測。​</p></div>
                 </div>
             </div>
             <div class="p2_pic">
@@ -170,9 +174,9 @@
                     <div class="p2_subti"><p>活動時間</p></div>
                     <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
                     <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取CBT限定10000元寶。</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取封測限定10000元寶。</p></div>
                     <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的元寶將不會保留至OBT。</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的元寶將不會保留至公測。</p></div>
                     <img class="p2_tab_img" src="/img/event/CBT/p2/NPC1.png">
                 </div>
             </div>
@@ -182,9 +186,9 @@
                     <div class="p2_subti"><p>活動時間</p></div>
                     <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
                     <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後，可以領取CBT限定一百萬紅包。</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後可以領取封測限定10000紅包。</p></div>
                     <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之紅包僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的紅包將不會保留至OBT。</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之紅包僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的紅包將不會保留至公測。</p></div>
                     <img class="p2_tab_img" src="/img/event/CBT/p2/NPC2.png">
                 </div>
             </div>
@@ -194,9 +198,9 @@
                     <div class="p2_subti"><p>活動時間</p></div>
                     <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
                     <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取CBT限定一百萬寶珠。</p></div>
+                    <div class="p2_text_2"><p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取封測限定一百萬寶珠。</p></div>
                     <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之寶珠僅能於CBT期間使用，CBT結束後角色資料將會刪除，未使用的寶珠將不會保留至OBT。</p></div>
+                    <div class="p2_text_2"><p>本活動獲得之寶珠僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的寶珠將不會保留至公測。</p></div>
                     <img class="p2_tab_img" src="/img/event/CBT/p2/NPC3.png">
                 </div>
             </div>
@@ -218,11 +222,12 @@
                         <li>封測期間，由此頁面可預購期間限定強力支援禮包，禮包將於公測開服時發送。</li>
                         <li>禮包內含限定時裝，​​僅限封測期間販售，錯過不再！</li>
                         <li>每個禮包帳號限購1次。</li>
+                        <li>禮包僅需轉點至《仙俠世界貳》後即可於頁面進行購買，無需在遊戲中將點數兌換成元寶。</li>
                     </ul>
                 </div>
                 <div class="p3_point">
                     <span>剩餘點數</span>
-                    <span class="player_points"></span>
+                    <span class="player_points">0</span>
                     <span>點</span>
                 </div>
                 <div class="p3_btns">
@@ -338,6 +343,17 @@
             </div>
         </div>
     </div>
+
+    <!-- 雲霧特效 -->
+    <div class="clouds">
+        <div class="cloud1"></div>
+        <div class="cloud2"></div>
+    </div>
+
+    <!-- OB按鈕(10/16中午12點自己會出現) -->
+    <div class="OBTLink">
+        <a href="https://xx2.digeam.com/OBT" target="blank"></a>
+    </div>
     
     <!-- 下載大彈窗(它被拋棄了QQ) -->
     <div class="popDownload">
@@ -384,8 +400,6 @@
     <div class="login_popS">
         <div class="login_popSframe">
             <p class="login_popStext">請先登入掘夢網會員</p>
-
-
                         
                 @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
                     <!-- 已登入 -->
@@ -397,14 +411,9 @@
                     <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
                         <input type="hidden" name="return_url" id="return_url" value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
                     </form>
-                    <!-- <div class='loginbtn login_user_id' style='text-align:center' data-val='null'><a href="https://www.digeam.com/login"></a></div> -->
                     <div class="login_checkbtn" data-val='null'><a href="https://www.digeam.com/login">確定</a></div>
                 @endif
 
-
-
-
-            <!-- <div class="login_checkbtn" data-val='null'><a href="https://www.digeam.com/login">確定</a></div> -->
         </div>
     </div>
 
@@ -459,9 +468,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
-    <script src="js/event/CBT/menu.js" type="text/javascript"></script>
-    <script src="js/event/CBT/poptext.js" type="text/javascript"></script>
-    <script src="js/event/CBT/main.js" type="text/javascript"></script>
-    <script src="js/event/CBT/api.js" type="text/javascript"></script>
+    <script src="js/event/CBT/menu.js?v=100" type="text/javascript"></script>
+    <script src="js/event/CBT/poptext.js?v=100" type="text/javascript"></script>
+    <script src="js/event/CBT/main.js?v=100" type="text/javascript"></script>
+    <script src="js/event/CBT/api.js?v=100" type="text/javascript"></script>
 </body>
 </html>

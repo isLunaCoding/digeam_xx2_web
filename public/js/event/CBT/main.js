@@ -23,6 +23,15 @@ $('.checkbtn_3').on("click",function(){
     $('.popStext').html('')
     $('.doublebtns').hide()
     $('.checkbtn_1').hide()
+    $('.checkbtn_2').html('確定')
+    $('.checkbtn_2').css({
+        width: '100px'
+    })
+    if(screen.width <= 480){
+        $('.checkbtn_2').css({
+            width: '50px'
+        })
+    }
     $('.popS').fadeOut(200)
     $('body').css({
         "overflow":"auto"
@@ -195,14 +204,14 @@ $('.p2_tab3_btn').on("click",function(){
 })
 
 //rwd基金slick
- $(document).ready(function(){
+$(document).ready(function(){
     $('.p2_wrap_m').slick({
         dots: false,
         infinite: true,
         speed: 500,
         fade: true,
         cssEase: 'linear'
-      });
+    });
 });
 
 
@@ -277,7 +286,7 @@ $('.p5_notice_btn').on("click",function(){
         scrollTop: 0
     },10)
 })
-ttt()
+menu_hover()
 scroll_p1()
 scroll_p2()
 scroll_p3()
@@ -463,7 +472,7 @@ function scroll_p5(){
     observer.observe(document.querySelector(".page5"));
 }
 
-function ttt(){
+function menu_hover(){
     if(screen.width > 768){
         $('.btn1').hover(function(){
             $('.btn1').css("background","url(/img/event/CBT/p0/bar/menubtn1_hover.png)no-repeat center center / cover");
@@ -492,3 +501,14 @@ function ttt(){
         });
     }
 }
+
+
+var OBTbtn = setInterval(function (){
+    var usertime = Date.now(),OBTtime = Date.UTC(2023, 9, 16, 4, 0, 0);
+
+    if(usertime >= OBTtime){
+        $(".OBTLink").show()
+        clearInterval(OBTbtn)
+    }
+
+},1)
