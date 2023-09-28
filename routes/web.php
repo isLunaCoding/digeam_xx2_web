@@ -39,33 +39,35 @@ Route::get('/suspension', 'front\suspensionController@index')->name('suspension'
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
-
-if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
-    // 百科
-    Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
+if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+    if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
+        // 百科
+        Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 // Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');
-    // 下載
-    Route::get('/download', function () {
-        return view('front.download');
-    })->name('download');
-    // CBT
-    Route::get('/CBT', 'front\CBTController@index');
-    Route::get('/CBT', function () {
-        return view('event/CBT');
-    });
-    //obt
-    Route::get('/OBT', function () {
-        return view('event/OBT');
-    });
+        // 下載
+        Route::get('/download', function () {
+            return view('front.download');
+        })->name('download');
+        // CBT
+        Route::get('/CBT', 'front\CBTController@index');
+        Route::get('/CBT', function () {
+            return view('event/CBT');
+        });
+        //obt
+        Route::get('/OBT', function () {
+            return view('event/OBT');
+        });
 // launcher
-    Route::get('/launcher', 'front\indexController@launcher');
-    // 序號兌換
-    Route::get('/exchange', function () {
-        return view('front/exchange');
-    })->name('exchange');
+        Route::get('/launcher', 'front\indexController@launcher');
+        // 序號兌換
+        Route::get('/exchange', function () {
+            return view('front/exchange');
+        })->name('exchange');
 
-    // 領獎專區
-    Route::get('/reward', function () {
-        return view('front/receiveAward');
-    })->name('reward');
+        // 領獎專區
+        Route::get('/reward', function () {
+            return view('front/receiveAward');
+        })->name('reward');
+    }
+
 }
