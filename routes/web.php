@@ -72,3 +72,6 @@ Route::get('/suspension', 'front\suspensionController@index')->name('suspension'
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
+
+// launcher
+Route::get('/launcher', 'front\indexController@launcher');
