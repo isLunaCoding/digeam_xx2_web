@@ -29,6 +29,7 @@ if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
     Route::get('/launcher', 'front\indexController@launcher');
 // 官網
     Route::get('/xx2index', 'front\indexController@index')->name('index');
+    Route::get('/', 'front\indexController@index');
 // 公告
     Route::get('/announcement/{cate?}', 'front\announcementController@index')->name('announcement');
     Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');
@@ -68,43 +69,8 @@ if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
         return view('front/exchange');
     })->name('exchange');
 
-//
-// 官網
-Route::get('/launcher', 'front\indexController@launcher');
-
-// 官網
-Route::get('/', 'front\indexController@index')->name('index');
-// 公告
-Route::get('/announcement/{cate?}', 'front\announcementController@index')->name('announcement');
-Route::get('announcementContent/{id}', 'front\announcementcontentController@index')->name('announcementContent');
-
-// 領獎專區
-Route::get('/reward', function () {
-    return view('front/receiveAward');
-})->name('reward');
-// 序號兌換
-Route::get('/exchange', function () {
-    return view('front/exchange');
-})->name('exchange');
-// 下載
-Route::get('/download', function () {
-    return view('front.download');
-})->name('download');
-
-// 遊戲規章
-Route::get('/regulations', function () {
-    return view('front/regulations');
-})->name('regulations');
-// 百科
-Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
-// Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');
-
-//停權名單
-Route::get('/suspension', 'front\suspensionController@index')->name('suspension');
-
-//後台圖片上傳
-Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
-Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
-
-// launcher
-Route::get('/launcher', 'front\indexController@launcher');
+    // 領獎專區
+    Route::get('/reward', function () {
+        return view('front/receiveAward');
+    })->name('reward');
+}
