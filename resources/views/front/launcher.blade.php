@@ -7,7 +7,6 @@
     <title></title>
     <script src="/js/event/launcher/jquery-1.7.2.js" type="text/javascript"></script>
     <script src="/js/event/launcher/js.js" type="text/javascript"></script>
-    <script src="/js/event/launcher/YLMarquee-1.1.js" type="text/javascript"></script>
     <link href="/css/event/launcher/launcher.css?v=2.3" rel="stylesheet" type="text/css" />
 </head>
 
