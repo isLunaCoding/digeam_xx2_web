@@ -9,6 +9,9 @@ body {
     background-repeat: no-repeat;
     width: 619px;
     height: 417px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .notice .menubox ul {
@@ -18,14 +21,13 @@ body {
 .notice {
     padding: 0;
     border: 1px solid blue;
+    margin: 0;
 
     .carouselBox {
         border: 2px solid red;
         height: 100%;
-        display: flex;
 
         .container {
-            display: flex;
 
             ul {
                 list-style: none;
@@ -34,32 +36,33 @@ body {
             }
 
             .container2 {
-                width: 578px;
+                width: 568px;
                 height: 200px;
                 overflow: hidden;
                 position: relative;
-            }
-
-            .slider {
-                padding: 10px;
-                display: flex;
-
-                img {
-                    background-color: #fff;
-                    width: 566px;
-                    height: 180px;
+                margin: 10px 0 0 30px;
+                .slider {
+                    li{
+                        float: left;
+                        vertical-align: top;
+                    }
+    
+                    img {
+                        background-color: #fff;
+                        width: 566px;
+                        height: 180px;
+                    }
+                }
+    
+                .slider2 {
+                    width: 10000px;
                 }
             }
 
-            .slider2 {
-                width: 10000px;
-            }
 
             .num {
-                display: flex;
+                position: absolute;
                 padding: 10px 0;
-                flex-direction: column;
-                justify-content: space-evenly;
 
                 li {
                     border: 1px solid #fff;
@@ -92,19 +95,18 @@ body {
         height: 173px;
         padding: 10px 20px;
         background-color: #ffffff9a;
-        // font-family: '微軟正黑',sans-serif;
         font-family: 'noto sans tc';
         font-weight: 550;
 
         .menubox {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
+            height: 31px;
             .codeDemoUL {
-                display: flex;
-                align-items: flex-end;
                 padding: 0;
+
+                li{
+                    float: left;
+                    text-align: center;
+                }
 
                 .codeDemomouseOnMenu,
                 .codeDemomouseOutMenu {
@@ -113,11 +115,6 @@ body {
                     font-size: 20px;
                     color: #153d97;
                     width: 80px;
-                    height: 35px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
                     margin-right: 5px;
                     white-space: nowrap;
                 }
@@ -132,6 +129,7 @@ body {
                 font-size: 20px;
                 color: #153d97;
                 text-decoration: none;
+                margin-left: 50px;
             }
         }
 
@@ -151,18 +149,16 @@ body {
                 li {
                     list-style: none;
                     font-size: 15px;
+                    float: left;
 
                     a {
                         color: #08389a;
                         text-decoration: none;
-                        display: flex;
                     }
 
                     .textBox {
                         width: 528px;
-                        display: flex;
                         font-weight: 600;
-                        justify-content: space-between;
 
                         .textTitle {
                             max-width: 420px;
