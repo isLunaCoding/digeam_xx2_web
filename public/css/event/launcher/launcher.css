@@ -1,8 +1,6 @@
-@charset "UTF-8";
 body {
   overflow: hidden;
   overflow-y: hidden;
-  -ms-overflow-style: none;
 }
 
 .launch {
@@ -26,7 +24,10 @@ body {
 }
 .notice .carouselBox {
   border: 2px solid red;
-  height: 100%;
+  height: 180px;
+}
+.notice .carouselBox .container {
+  height: 180px;
 }
 .notice .carouselBox .container ul {
   list-style: none;
@@ -34,11 +35,10 @@ body {
   border: 1px solid blue;
 }
 .notice .carouselBox .container .container2 {
-  width: 568px;
-  height: 200px;
   overflow: hidden;
   position: relative;
-  margin: 10px 0 0 30px;
+  height: 180px;
+  width: 566px;
 }
 .notice .carouselBox .container .container2 .slider li {
   float: left;
@@ -54,7 +54,9 @@ body {
 }
 .notice .carouselBox .container .num {
   position: absolute;
-  padding: 10px 0;
+  margin: 0;
+  left: 2px;
+  top: 25px;
 }
 .notice .carouselBox .container .num li {
   border: 1px solid #fff;
@@ -74,16 +76,13 @@ body {
 }
 .notice #tabs {
   position: absolute;
-  top: 0;
+  top: 219px;
   left: 0;
-  margin-top: 10px;
   border: 2px solid red;
   width: 573px;
   height: 173px;
-  padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.6039215686);
   font-family: "noto sans tc";
-  font-weight: 550;
 }
 .notice #tabs .menubox {
   height: 31px;
@@ -106,14 +105,14 @@ body {
   white-space: nowrap;
 }
 .notice #tabs .menubox .codeDemoUL .codeDemomouseOnMenu {
-  background-image: linear-gradient(#08389a, #001562);
+  background-color: #08389a;
   color: #fff;
 }
 .notice #tabs .menubox .more {
   font-size: 20px;
   color: #153d97;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 222px;
 }
 .notice #tabs .line {
   width: 100%;
@@ -123,7 +122,7 @@ body {
 }
 .notice #tabs #newlist .newslist2 {
   padding: 10px 0;
-  line-height: 26px;
+  line-height: 28px;
 }
 .notice #tabs #newlist .newslist2 ul {
   padding: 0;
@@ -133,40 +132,22 @@ body {
   font-size: 15px;
   float: left;
 }
-.notice #tabs #newlist .newslist2 li a {
+.notice #tabs #newlist .newslist2 li .textBox {
+  float: left;
+  width: 528px;
+  font-weight: 500;
+  color: #08389a;
+}
+.notice #tabs #newlist .newslist2 li .textTitle {
   color: #08389a;
   text-decoration: none;
-}
-.notice #tabs #newlist .newslist2 li .textBox {
-  width: 528px;
-  font-weight: 600;
-}
-.notice #tabs #newlist .newslist2 li .textBox .textTitle {
-  max-width: 420px;
+  max-width: 350px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  display: block;
-}
-.notice #tabs #newlist .newslist2 li .textBox .textTime {
-  font-size: 14px;
-}
-.notice #tabs #newlist .newslist2 .new:before,
-.notice #tabs #newlist .newslist2 .top:before {
-  font-style: italic;
-  color: #ff4901;
-}
-.notice #tabs #newlist .newslist2 .normal:before {
-  content: "▶";
-  color: #08389a;
-  margin-right: 24px;
-  margin-left: 11px;
-}
-.notice #tabs #newlist .newslist2 .new:before {
-  content: "NEW";
-  margin-right: 16px;
-}
-.notice #tabs #newlist .newslist2 .top:before {
-  content: "TOP";
+  display: inline-block;
   margin-right: 20px;
+}
+.notice #tabs #newlist .newslist2 li .textTime {
+  font-size: 14px;
 }/*# sourceMappingURL=launcher.css.map */

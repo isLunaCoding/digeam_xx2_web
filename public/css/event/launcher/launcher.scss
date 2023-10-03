@@ -1,7 +1,6 @@
 body {
     overflow: hidden;
     overflow-y: hidden;
-    -ms-overflow-style: none;
 }
 
 .launch {
@@ -25,9 +24,10 @@ body {
 
     .carouselBox {
         border: 2px solid red;
-        height: 100%;
+        height: 180px;
 
         .container {
+            height: 180px;
 
             ul {
                 list-style: none;
@@ -36,24 +36,24 @@ body {
             }
 
             .container2 {
-                width: 568px;
-                height: 200px;
                 overflow: hidden;
                 position: relative;
-                margin: 10px 0 0 30px;
+                height: 180px;
+                width: 566px;
+
                 .slider {
-                    li{
+                    li {
                         float: left;
                         vertical-align: top;
                     }
-    
+
                     img {
                         background-color: #fff;
                         width: 566px;
                         height: 180px;
                     }
                 }
-    
+
                 .slider2 {
                     width: 10000px;
                 }
@@ -62,7 +62,9 @@ body {
 
             .num {
                 position: absolute;
-                padding: 10px 0;
+                margin: 0;
+                left: 2px;
+                top: 25px;
 
                 li {
                     border: 1px solid #fff;
@@ -87,23 +89,21 @@ body {
 
     #tabs {
         position: absolute;
-        top: 0;
+        top: 219px;
         left: 0;
-        margin-top: 10px;
         border: 2px solid red;
         width: 573px;
         height: 173px;
-        padding: 10px 20px;
         background-color: #ffffff9a;
         font-family: 'noto sans tc';
-        font-weight: 550;
 
         .menubox {
             height: 31px;
+
             .codeDemoUL {
                 padding: 0;
 
-                li{
+                li {
                     float: left;
                     text-align: center;
                 }
@@ -120,7 +120,7 @@ body {
                 }
 
                 .codeDemomouseOnMenu {
-                    background-image: linear-gradient(#08389a, #001562);
+                    background-color: #08389a;
                     color: #fff;
                 }
             }
@@ -129,7 +129,7 @@ body {
                 font-size: 20px;
                 color: #153d97;
                 text-decoration: none;
-                margin-left: 50px;
+                margin-left: 222px;
             }
         }
 
@@ -142,6 +142,9 @@ body {
 
         #newlist {
             .newslist2 {
+                padding: 10px 0;
+                line-height: 28px;
+
                 ul {
                     padding: 0;
                 }
@@ -151,54 +154,30 @@ body {
                     font-size: 15px;
                     float: left;
 
-                    a {
+                    .textBox {
+                        float: left;
+                        width: 528px;
+                        font-weight: 500;
+                        color: #08389a;
+                    }
+
+                    .textTitle {
                         color: #08389a;
                         text-decoration: none;
+                        max-width: 350px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        display: inline-block;
+                        margin-right: 20px;
                     }
 
-                    .textBox {
-                        width: 528px;
-                        font-weight: 600;
-
-                        .textTitle {
-                            max-width: 420px;
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                            white-space: nowrap;
-                            display: block;
-                        }
-
-                        .textTime {
-                            font-size: 14px;
-                        }
+                    .textTime {
+                        font-size: 14px;
                     }
+
                 }
 
-                .new:before,
-                .top:before {
-                    font-style: italic;
-                    color: #ff4901;
-                }
-
-                .normal:before {
-                    content: "▶";
-                    color: #08389a;
-                    margin-right: 24px;
-                    margin-left: 11px;
-                }
-
-                .new:before {
-                    content: "NEW";
-                    margin-right: 16px;
-                }
-
-                .top:before {
-                    content: "TOP";
-                    margin-right: 20px;
-                }
-
-                padding: 10px 0;
-                line-height: 26px;
             }
         }
 
