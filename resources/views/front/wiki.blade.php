@@ -1,7 +1,7 @@
 <script>
     if (document.documentMode) {
         alert('建議使用Edge或者Chrome瀏覽器進行瀏覽')
-        document.getElementById("loading").style.display = "block";
+        // document.getElementById("loading").style.display = "block";
 
     }
 </script>
@@ -37,12 +37,12 @@
     <div class="wrap">
 
         <div class="main">
-            <div id="loading">
+            {{-- <div id="loading">
                 <div class="loadBox">
                     <p>頁面加載中，請稍等</p>
                     <div class="spinner"></div>
                 </div>
-            </div>
+            </div> --}}
             <div class="mainBG">
                 <div class="topBox">
                     <nav class="leftBox">
@@ -69,7 +69,7 @@
                             @foreach ($sec_cate as $value)
                                 {{-- 只有大標題有內文 --}}
                                 @if ($value['count'] != 0 && $value['parent_id'] == 0)
-                                    <ul class="frontTitle">
+                                    <ul class="frontTitle" id='title-{{ $all_page[$value['cate_id']][0]['id'] }}'>
                                         <a
                                             href="{{ route('wiki', $all_page[$value['cate_id']][0]['id']) }}">{{ $value['title'] }}</a>
                                     </ul>
@@ -87,14 +87,17 @@
                                                             href="{{ route('wiki') }}">{{ $value2['title'] }}</a>
                                                     </li>
                                                 @elseif($value2['count'] == 1)
-                                                    <li class="liMiddle"><a
+                                                    <li class="liMiddle"
+                                                        id='title-{{ $all_page[$value2['cate_id']][0]['id'] }}'><a
                                                             href="{{ route('wiki', $all_page[$value2['cate_id']][0]['id']) }}">{{ $value2['title'] }}</a>
                                                     </li>
                                                 @else
-                                                    <li class="liMiddle"><a href="">{{ $value2['title'] }}</a>
+                                                    <li class="liMiddle">{{ $value2['title'] }}
                                                         <ul>
                                                             @for ($i = 0; $i < $value2['count']; $i++)
-                                                                <li class="liSamll"><a
+                                                                <li class="liSamll"
+                                                                    id='title-{{ $all_page[$value2['cate_id']][$i]['id'] }}'>
+                                                                    <a
                                                                         href="{{ route('wiki', $all_page[$value2['cate_id']][$i]['id']) }}">{{ $all_page[$value2['cate_id']][$i]['title'] }}</a>
                                                                 </li>
                                                             @endfor
@@ -167,26 +170,38 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
+        setTimeout(function() {
+            var url = location.href.split("/");
+            var id = (url[url.length - 1]);
+            $("#" + "title" + "-" + id).click()
+            // var parentElement = $("#" + "title" + "-" + id).parent().tagName;
+            // $("#" + "title" + "-" + 14).attr("style", "display:list-item;")
+            // $("#" + "title" + "-" + 15).attr("style", "display:list-item;")
+            // $("#" + "title" + "-" + 47).attr("style", "display:list-item;")
+            $("#" + "title" + "-" + id + " a").attr("style", "color:#004dc1;");
+            // $("#" + "title" + "-" + id).on('click', function() {
+            // })
+        }, 100);
+
         // menu點擊、hover
         $(document).ready(function() {
             $('.frontTitle').on('click', function() {
                 var liMiddle = $(this).find('.liMiddle');
-                liMiddle.slideToggle();
-
+                var displayValue = liMiddle.css("display");
+                if (displayValue == "none") {
+                    //隱藏
+                    $('.liMiddle').hide();
+                }
+                liMiddle.toggle();
                 liMiddle.one('mousedown', function() {
-                    // liMiddle.one('mouseenter', function() {
-                    // liMiddle.on('click', function() {
                     var liSamll = $(this).find('.liSamll');
-                    liSamll.slideToggle();
-
+                    // liSamll.slideDown();
                     liSamll.on('click', function(event) {
                         event.preventDefault();
                         var link = $(this).find('a').attr('href');
-
-                        setTimeout(function() {
+                        // setTimeout(function() {
                             window.location.href = link;
-                        }, 500);
-
+                        // }, 10);
                     })
                 });
             });
@@ -202,13 +217,12 @@
             });
         });
     </script>
-
 </body>
 
 </html>
 
 <script>
-    $(window).on('load', function() {
-    $("#loading").hide();
-    });
+    // $(window).on('load', function() {
+    //     $("#loading").hide();
+    // });
 </script>

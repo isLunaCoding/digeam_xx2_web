@@ -37,8 +37,8 @@ Route::get('/regulations', function () {
 Route::get('/suspension', 'front\suspensionController@index')->name('suspension');
 
 // launcher
-Route::get('/launcher', 'front\indexController@launcher');
-Route::get('/launcher2', function () {
+Route::get('/launcher2', 'front\indexController@launcher');
+Route::get('/launcher', function () {
     return view('front/launcher');
 })->name('launcher');
 
