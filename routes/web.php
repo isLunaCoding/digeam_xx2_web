@@ -36,6 +36,12 @@ Route::get('/regulations', function () {
 //停權名單
 Route::get('/suspension', 'front\suspensionController@index')->name('suspension');
 
+// launcher
+Route::get('/launcher', 'front\indexController@launcher');
+Route::get('/launcher2', function () {
+    return view('front/launcher');
+})->name('launcher');
+
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
@@ -57,8 +63,6 @@ if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
         Route::get('/OBT', function () {
             return view('event/OBT');
         });
-        // launcher
-        Route::get('/launcher', 'front\indexController@launcher');
         // 序號兌換
         Route::get('/exchange', function () {
             return view('front/exchange');
