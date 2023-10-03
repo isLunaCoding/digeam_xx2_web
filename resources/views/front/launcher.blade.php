@@ -6,9 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="/js/event/launcher/jquery-1.7.2.js" type="text/javascript"></script>
+    {{-- <script src="/js/event/launcher/jquery-1.7.2.js" type="text/javascript"></script> --}}
     <script src="/js/event/launcher/js.js" type="text/javascript"></script>
-    <script src="/js/event/launcher/YLMarquee-1.1.js" type="text/javascript"></script>
     <script src="/js/event/homepage/swiper.js"></script>
     <link href="/css/event/launcher/launcher.css?v=2.2" rel="stylesheet" type="text/css" />
 </head>
