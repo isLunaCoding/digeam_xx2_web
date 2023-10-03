@@ -10,9 +10,6 @@ body {
   background-repeat: no-repeat;
   width: 619px;
   height: 417px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .notice .menubox ul {
@@ -22,11 +19,14 @@ body {
 .notice {
   padding: 0;
   border: 1px solid blue;
-  margin: 0;
 }
 .notice .carouselBox {
   border: 2px solid red;
   height: 100%;
+  display: flex;
+}
+.notice .carouselBox .container {
+  display: flex;
 }
 .notice .carouselBox .container ul {
   list-style: none;
@@ -34,27 +34,28 @@ body {
   border: 1px solid blue;
 }
 .notice .carouselBox .container .container2 {
-  width: 568px;
+  width: 578px;
   height: 200px;
   overflow: hidden;
   position: relative;
-  margin: 10px 0 0 30px;
 }
-.notice .carouselBox .container .container2 .slider li {
-  float: left;
-  vertical-align: top;
+.notice .carouselBox .container .slider {
+  padding: 10px;
+  display: flex;
 }
-.notice .carouselBox .container .container2 .slider img {
+.notice .carouselBox .container .slider img {
   background-color: #fff;
   width: 566px;
   height: 180px;
 }
-.notice .carouselBox .container .container2 .slider2 {
+.notice .carouselBox .container .slider2 {
   width: 10000px;
 }
 .notice .carouselBox .container .num {
-  position: absolute;
+  display: flex;
   padding: 10px 0;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .notice .carouselBox .container .num li {
   border: 1px solid #fff;
@@ -86,14 +87,14 @@ body {
   font-weight: 550;
 }
 .notice #tabs .menubox {
-  height: 31px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .notice #tabs .menubox .codeDemoUL {
+  display: flex;
+  align-items: flex-end;
   padding: 0;
-}
-.notice #tabs .menubox .codeDemoUL li {
-  float: left;
-  text-align: center;
 }
 .notice #tabs .menubox .codeDemoUL .codeDemomouseOnMenu,
 .notice #tabs .menubox .codeDemoUL .codeDemomouseOutMenu {
@@ -102,6 +103,11 @@ body {
   font-size: 20px;
   color: #153d97;
   width: 80px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-right: 5px;
   white-space: nowrap;
 }
@@ -113,7 +119,6 @@ body {
   font-size: 20px;
   color: #153d97;
   text-decoration: none;
-  margin-left: 50px;
 }
 .notice #tabs .line {
   width: 100%;
@@ -131,15 +136,17 @@ body {
 .notice #tabs #newlist .newslist2 li {
   list-style: none;
   font-size: 15px;
-  float: left;
 }
 .notice #tabs #newlist .newslist2 li a {
   color: #08389a;
   text-decoration: none;
+  display: flex;
 }
 .notice #tabs #newlist .newslist2 li .textBox {
   width: 528px;
+  display: flex;
   font-weight: 600;
+  justify-content: space-between;
 }
 .notice #tabs #newlist .newslist2 li .textBox .textTitle {
   max-width: 420px;
