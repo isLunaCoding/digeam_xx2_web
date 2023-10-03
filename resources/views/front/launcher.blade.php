@@ -7,9 +7,9 @@
     <title></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     {{-- <script src="/js/event/launcher/jquery-1.7.2.js" type="text/javascript"></script> --}}
-    <script src="/js/event/launcher/js.js" type="text/javascript"></script>
+    <script src="/js/event/launcher/js.js?v=2.4" type="text/javascript"></script>
     <script src="/js/event/homepage/swiper.js"></script>
-    <link href="/css/event/launcher/launcher.css?v=2.3" rel="stylesheet" type="text/css" />
+    <link href="/css/event/launcher/launcher.css?v=2.4" rel="stylesheet" type="text/css" />
 </head>
 
 <body scroll="no">
