@@ -60,13 +60,9 @@
                     </div>
                 @else
                     <!-- 未登入 -->
-                    {{-- <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
-                        <input type="hidden" name="return_url" id="return_url"
-                            value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
-                    </form> --}}
                     @php
                         $_COOKIE_DOMAIN = '.digeam.com';
-                        SetCookie('return_url', base64_encode('https://cbo.digeam.com/CBT'), 0, '/', $_COOKIE_DOMAIN);
+                        SetCookie('return_url', base64_encode('https://xx2.digeam.com/CBT'), 0, '/', $_COOKIE_DOMAIN);
                     @endphp
                     <div class='loginbtn login_user_id' style='text-align:center' data-val='null'><a
                             href="https://www.digeam.com/login"></a></div>
