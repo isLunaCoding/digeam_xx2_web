@@ -73,7 +73,9 @@ body {
   border: 1px solid #6faae5;
 }
 .notice #tabs {
-  margin-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
   border: 2px solid red;
   width: 573px;
   height: 173px;
