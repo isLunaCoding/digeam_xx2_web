@@ -1,0 +1,176 @@
+@charset "UTF-8";
+body {
+  overflow: hidden;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+}
+
+.launch {
+  background-image: url("/img/event/launcher/launcher.jpg");
+  background-repeat: no-repeat;
+  width: 619px;
+  height: 417px;
+}
+
+.notice .menubox ul {
+  list-style: none;
+}
+
+.notice {
+  padding: 0;
+  border: 1px solid blue;
+}
+.notice .carouselBox {
+  border: 2px solid red;
+  height: 100%;
+  display: flex;
+}
+.notice .carouselBox .container {
+  display: flex;
+}
+.notice .carouselBox .container ul {
+  list-style: none;
+  padding: 0;
+  border: 1px solid blue;
+}
+.notice .carouselBox .container .container2 {
+  width: 578px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.notice .carouselBox .container .slider {
+  padding: 10px;
+  display: flex;
+}
+.notice .carouselBox .container .slider img {
+  background-color: #fff;
+  width: 566px;
+  height: 180px;
+}
+.notice .carouselBox .container .slider2 {
+  width: 10000px;
+}
+.notice .carouselBox .container .num {
+  display: flex;
+  padding: 10px 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.notice .carouselBox .container .num li {
+  border: 1px solid #fff;
+  border-radius: 25px;
+  text-align: center;
+  width: 12px;
+  height: 12px;
+  line-height: 1;
+  cursor: pointer;
+  overflow: hidden;
+  background: #6faae5;
+  margin-left: 3px;
+}
+.notice .carouselBox .container .num li.on {
+  background-color: #fff;
+  border: 1px solid #6faae5;
+}
+.notice #tabs {
+  margin-top: 10px;
+  border: 2px solid red;
+  width: 573px;
+  height: 173px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.6039215686);
+  font-family: "noto sans tc";
+  font-weight: 550;
+}
+.notice #tabs .menubox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice #tabs .menubox .codeDemoUL {
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+.notice #tabs .menubox .codeDemoUL .codeDemomouseOnMenu,
+.notice #tabs .menubox .codeDemoUL .codeDemomouseOutMenu {
+  background-color: #fff;
+  border: 1px solid #2c3765;
+  font-size: 20px;
+  color: #153d97;
+  width: 80px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+.notice #tabs .menubox .codeDemoUL .codeDemomouseOnMenu {
+  background-image: linear-gradient(#08389a, #001562);
+  color: #fff;
+}
+.notice #tabs .menubox .more {
+  font-size: 20px;
+  color: #153d97;
+  text-decoration: none;
+}
+.notice #tabs .line {
+  width: 100%;
+  height: 1px;
+  background-color: #001562;
+  margin-top: -1px;
+}
+.notice #tabs #newlist .newslist2 {
+  padding: 10px 0;
+  line-height: 26px;
+}
+.notice #tabs #newlist .newslist2 ul {
+  padding: 0;
+}
+.notice #tabs #newlist .newslist2 li {
+  list-style: none;
+  font-size: 15px;
+}
+.notice #tabs #newlist .newslist2 li a {
+  color: #08389a;
+  text-decoration: none;
+  display: flex;
+}
+.notice #tabs #newlist .newslist2 li .textBox {
+  width: 528px;
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+}
+.notice #tabs #newlist .newslist2 li .textBox .textTitle {
+  max-width: 420px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+.notice #tabs #newlist .newslist2 li .textBox .textTime {
+  font-size: 14px;
+}
+.notice #tabs #newlist .newslist2 .new:before,
+.notice #tabs #newlist .newslist2 .top:before {
+  font-style: italic;
+  color: #ff4901;
+}
+.notice #tabs #newlist .newslist2 .normal:before {
+  content: "▶";
+  color: #08389a;
+  margin-right: 24px;
+  margin-left: 11px;
+}
+.notice #tabs #newlist .newslist2 .new:before {
+  content: "NEW";
+  margin-right: 16px;
+}
+.notice #tabs #newlist .newslist2 .top:before {
+  content: "TOP";
+  margin-right: 20px;
+}/*# sourceMappingURL=launcher.css.map */
