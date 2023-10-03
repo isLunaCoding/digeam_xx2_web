@@ -48,42 +48,42 @@
                         <ul class="slider slider2" id="UPic" data-val="8">
                             <li>
                                 <a href='' target='_blank'>
-                                    <img src=''>
+                                    <img src='upload/game_features/section3_BN002.jpg'>
                                 </a>
                             </li>
                             <li>
                                 <a href='' target='_blank'>
-                                    <img src=''>
+                                    <img  src='upload/game_features/section3_BN002.jpg'>
                                 </a>
                             </li>
                             <li>
                                 <a href='' target='_blank'>
-                                    <img src=''>
+                                    <img  src='upload/game_features/section3_BN002.jpg'>
                                 </a>
                             </li>
                             <li>
                                 <a href='' target='_blank'>
-                                    <img src=''>
+                                    <img  src='upload/game_features/section3_BN002.jpg'>
                                 </a>
                             </li>
                             <li>
                                 <a href='' target='_blank'>
-                                    <img src=''>
+                                    <img  src='upload/game_features/section3_BN002.jpg'>
                                 </a>
                             </li>
                             <li>
                                 <a href='' target='_blank'>
-                                    <img src=''>
+                                    <img  src='upload/game_features/section3_BN002.jpg'>
                                 </a>
                             </li>
                             <li>
                                 <a href='' target='_blank'>
-                                    <img src=''>
+                                    <img  src='upload/game_features/section3_BN002.jpg'>
                                 </a>
                             </li>
                             <li>
                                 <a href='' target='_blank'>
-                                    <img src=''>
+                                    <img  src='upload/game_features/section3_BN002.jpg'>
                                 </a>
                             </li>
                         </ul>
