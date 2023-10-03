@@ -31,6 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <!-- web版menu -->
     <div class="menubar">
@@ -50,7 +51,8 @@
                 @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
                     <!-- 已登入 -->
                     <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
-                        <input type="hidden" name="return_url" id="return_url" value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
+                        <input type="hidden" name="return_url" id="return_url"
+                            value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
                     </form>
                     <div class="login login_user_id" data-val={{ $_COOKIE['StrID'] }}>
                         <p>您好，<span>{{ $_COOKIE['StrID'] }}</span></p>
@@ -58,10 +60,12 @@
                     </div>
                 @else
                     <!-- 未登入 -->
-                    <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
-                        <input type="hidden" name="return_url" id="return_url" value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
-                    </form>
-                    <div class='loginbtn login_user_id' style='text-align:center' data-val='null'><a href="https://www.digeam.com/login"></a></div>
+                    @php
+                        $_COOKIE_DOMAIN = '.digeam.com';
+                        SetCookie('return_url', base64_encode('https://xx2.digeam.com/CBT'), 0, '/', $_COOKIE_DOMAIN);
+                    @endphp
+                    <div class='loginbtn login_user_id' style='text-align:center' data-val='null'><a
+                            href="https://www.digeam.com/login"></a></div>
                 @endif
 
                 <div class="DC_link">
@@ -82,7 +86,8 @@
 
     <!-- 頁首主視覺 -->
     <div class="page0">
-        <video poster="/img/event/CBT/p0/bg0.png" class="videoBG" src="/img/event/CBT/p0/BG.mp4" autoplay loop muted></video>
+        <video poster="/img/event/CBT/p0/bg0.png" class="videoBG" src="/img/event/CBT/p0/BG.mp4" autoplay loop
+            muted></video>
         <div class="xx2_logo_M">
             <a href="https://xx2.digeam.com/" target="blank"></a>
         </div>
@@ -108,9 +113,15 @@
         </div>
         <div class="p1_wrap">
             <div class="p1_main_text">
-                <div class="p1_subti"><p>活動時間</p></div>
-                <div class="p1_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                <div class="p1_subti"><p>活動方式</p></div>
+                <div class="p1_subti">
+                    <p>活動時間</p>
+                </div>
+                <div class="p1_text_1">
+                    <p>《仙俠世界貳》封測期間</p>
+                </div>
+                <div class="p1_subti">
+                    <p>活動方式</p>
+                </div>
                 <ul class="p1_text_2">
                     <li>上仙於封測期間等級提升至40等，可以前往十方鎮尋找NPC魯東海領取時裝「雪意浮花」！</li>
                     <li>符合領取條件的帳號將可以於公測後，前往領獎專區再次領取時裝獎勵。</li>
@@ -136,28 +147,64 @@
             </div>
             <div class="p2_main_text">
                 <div class="p2_tab1_info">
-                    <div class="p2_subti"><p>活動時間</p></div>
-                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                    <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取封測限定10000元寶。</p></div>
-                    <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的元寶將不會保留至公測。</p></div>
+                    <div class="p2_subti">
+                        <p>活動時間</p>
+                    </div>
+                    <div class="p2_text_1">
+                        <p>《仙俠世界貳》封測期間</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>活動說明</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取封測限定10000元寶。</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>注意事項</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>本活動獲得之元寶僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的元寶將不會保留至公測。</p>
+                    </div>
                 </div>
                 <div class="p2_tab2_info">
-                    <div class="p2_subti"><p>活動時間</p></div>
-                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                    <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後可以領取封測限定10000紅包。</p></div>
-                    <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之紅包僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的紅包將不會保留至公測。</p></div>
+                    <div class="p2_subti">
+                        <p>活動時間</p>
+                    </div>
+                    <div class="p2_text_1">
+                        <p>《仙俠世界貳》封測期間</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>活動說明</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後可以領取封測限定10000紅包。</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>注意事項</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>本活動獲得之紅包僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的紅包將不會保留至公測。</p>
+                    </div>
                 </div>
                 <div class="p2_tab3_info">
-                    <div class="p2_subti"><p>活動時間</p></div>
-                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                    <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取封測限定一百萬寶珠。</p></div>
-                    <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之寶珠僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的寶珠將不會保留至公測。​</p></div>
+                    <div class="p2_subti">
+                        <p>活動時間</p>
+                    </div>
+                    <div class="p2_text_1">
+                        <p>《仙俠世界貳》封測期間</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>活動說明</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取封測限定一百萬寶珠。</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>注意事項</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>本活動獲得之寶珠僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的寶珠將不會保留至公測。​</p>
+                    </div>
                 </div>
             </div>
             <div class="p2_pic">
@@ -171,36 +218,72 @@
             <div class="p2_tab1_m">
                 <img class="p2_tab_m_ti" src="/img/event/CBT/p2/tabbtn1_m.png">
                 <div class="p2_tabwrap_m">
-                    <div class="p2_subti"><p>活動時間</p></div>
-                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                    <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取封測限定10000元寶。</p></div>
-                    <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之元寶僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的元寶將不會保留至公測。</p></div>
+                    <div class="p2_subti">
+                        <p>活動時間</p>
+                    </div>
+                    <div class="p2_text_1">
+                        <p>《仙俠世界貳》封測期間</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>活動說明</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>封測期間每日可以前往十方鎮尋找NPC沈仲陽領取封測限定10000元寶。</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>注意事項</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>本活動獲得之元寶僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的元寶將不會保留至公測。</p>
+                    </div>
                     <img class="p2_tab_img" src="/img/event/CBT/p2/NPC1.png">
                 </div>
             </div>
             <div class="p2_tab2_m">
                 <img class="p2_tab_m_ti" src="/img/event/CBT/p2/tabbtn2_m.png">
                 <div class="p2_tabwrap_m">
-                    <div class="p2_subti"><p>活動時間</p></div>
-                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                    <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後可以領取封測限定10000紅包。</p></div>
-                    <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之紅包僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的紅包將不會保留至公測。</p></div>
+                    <div class="p2_subti">
+                        <p>活動時間</p>
+                    </div>
+                    <div class="p2_text_1">
+                        <p>《仙俠世界貳》封測期間</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>活動說明</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>封測期間每日可以前往十方鎮尋找NPC根叔，完成任務後可以領取封測限定10000紅包。</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>注意事項</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>本活動獲得之紅包僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的紅包將不會保留至公測。</p>
+                    </div>
                     <img class="p2_tab_img" src="/img/event/CBT/p2/NPC2.png">
                 </div>
             </div>
             <div class="p2_tab3_m">
                 <img class="p2_tab_m_ti" src="/img/event/CBT/p2/tabbtn3_m.png">
                 <div class="p2_tabwrap_m">
-                    <div class="p2_subti"><p>活動時間</p></div>
-                    <div class="p2_text_1"><p>《仙俠世界貳》封測期間</p></div>
-                    <div class="p2_subti"><p>活動說明</p></div>
-                    <div class="p2_text_2"><p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取封測限定一百萬寶珠。</p></div>
-                    <div class="p2_subti"><p>注意事項</p></div>
-                    <div class="p2_text_2"><p>本活動獲得之寶珠僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的寶珠將不會保留至公測。</p></div>
+                    <div class="p2_subti">
+                        <p>活動時間</p>
+                    </div>
+                    <div class="p2_text_1">
+                        <p>《仙俠世界貳》封測期間</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>活動說明</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>封測期間每日可以前往凌霄城尋找NPC陸望舒，完成任務後，可以領取封測限定一百萬寶珠。</p>
+                    </div>
+                    <div class="p2_subti">
+                        <p>注意事項</p>
+                    </div>
+                    <div class="p2_text_2">
+                        <p>本活動獲得之寶珠僅能於封測期間使用，封測結束後角色資料將會刪除，未使用的寶珠將不會保留至公測。</p>
+                    </div>
                     <img class="p2_tab_img" src="/img/event/CBT/p2/NPC3.png">
                 </div>
             </div>
@@ -215,9 +298,15 @@
         <div class="p3_wrap">
             <div class="p3_main_info">
                 <div class="p3_main_text">
-                    <div class="p3_subti"><p>活動時間</p></div>
-                    <div class="p3_text_1"><p>即日起 ~《仙俠世界貳》封測結束後</p></div>
-                    <div class="p3_subti"><p>活動方式</p></div>
+                    <div class="p3_subti">
+                        <p>活動時間</p>
+                    </div>
+                    <div class="p3_text_1">
+                        <p>即日起 ~《仙俠世界貳》封測結束後</p>
+                    </div>
+                    <div class="p3_subti">
+                        <p>活動方式</p>
+                    </div>
                     <ul class="p3_text_2">
                         <li>封測期間，由此頁面可預購期間限定強力支援禮包，禮包將於公測開服時發送。</li>
                         <li>禮包內含限定時裝，​​僅限封測期間販售，錯過不再！</li>
@@ -274,9 +363,16 @@
         </div>
         <div class="p4_wrap">
             <div class="p4_main_text">
-                <div class="p4_subti"><p>活動時間</p></div>
-                <div class="p4_text_1"><p>即日起 ~《仙俠世界貳》上市後一週</p></div>
-                <div class="p4_subti"><p>活動方式</p></div>                    <ul class="p4_text_2">
+                <div class="p4_subti">
+                    <p>活動時間</p>
+                </div>
+                <div class="p4_text_1">
+                    <p>即日起 ~《仙俠世界貳》上市後一週</p>
+                </div>
+                <div class="p4_subti">
+                    <p>活動方式</p>
+                </div>
+                <ul class="p4_text_2">
                     <li>每天可進行一次內力注入。​</li>
                     <li>注入內力次數會於每日00:00重置。</li>
                     <li>達成指定注入內力次數可以提升境界，並獲得對應獎勵。​</li>
@@ -289,11 +385,17 @@
                     <div class="p4_man2"></div>
                     <div class="p4_man_frame"></div>
                 </div>
-                <div class="p4_lv"><p class="now_LV"></p></div>
-                <div class="p4_gobtn"><p>注入<br/>內力</p></div>
+                <div class="p4_lv">
+                    <p class="now_LV"></p>
+                </div>
+                <div class="p4_gobtn">
+                    <p>注入<br />內力</p>
+                </div>
             </div>
             <div class="p4_iphone">
-                <div class="p4_iphone_text"><p>登仙途<br/>送iPhone</p></div>
+                <div class="p4_iphone_text">
+                    <p>登仙途<br />送iPhone</p>
+                </div>
                 <div class="p4_iphone_img"></div>
             </div>
             <div class="p4_btns">
@@ -319,11 +421,11 @@
                     <div class="quBox quBox1">
                         <p>問題分類</p>
                         <div class="qu_menu">
-                            <input type="radio" id="abn" name="question" >
+                            <input type="radio" id="abn" name="question">
                             <label for="abn" id="abn">系統及機制異常</label>
-                            <input type="radio" id="mis" name="question" >
+                            <input type="radio" id="mis" name="question">
                             <label for="mis" id="mis">描述錯誤/錯字/亂碼</label>
-                            <input type="radio" id="other" name="question" >
+                            <input type="radio" id="other" name="question">
                             <label for="other" id="other">其他</label>
                         </div>
                     </div>
@@ -334,7 +436,8 @@
                     <div class="quBox quBox3">
                         <p class="pic_ti">上傳圖片(2MB以下,限JPG、JPEG、PNG格式)</p>
                         <label for class="bug_img">
-                            <input class="imgBtn0" type="file" id="imgInp" name="uploadImage" accept="image/*">
+                            <input class="imgBtn0" type="file" id="imgInp" name="uploadImage"
+                                accept="image/*">
                             <img id="imagePreview" src="">
                         </label>
                     </div>
@@ -354,7 +457,7 @@
     <div class="OBTLink">
         <a href="https://xx2.digeam.com/OBT" target="blank"></a>
     </div>
-    
+
     <!-- 下載大彈窗(它被拋棄了QQ) -->
     <div class="popDownload">
         <div class="popDframe">
@@ -383,7 +486,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- 小彈窗 -->
     <div class="popS">
         <div class="popSframe">
@@ -395,24 +498,26 @@
             </div>
         </div>
     </div>
-    
+
     <!-- 登入用小彈窗 -->
     <div class="login_popS">
         <div class="login_popSframe">
             <p class="login_popStext">請先登入掘夢網會員</p>
-                        
-                @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
-                    <!-- 已登入 -->
-                    <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
-                        <input type="hidden" name="return_url" id="return_url" value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
-                    </form>
-                @else
-                    <!-- 未登入 -->
-                    <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
-                        <input type="hidden" name="return_url" id="return_url" value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
-                    </form>
-                    <div class="login_checkbtn" data-val='null'><a href="https://www.digeam.com/login">確定</a></div>
-                @endif
+
+            @if (isset($_COOKIE['StrID']) && isset($_COOKIE['StrID']) != null)
+                <!-- 已登入 -->
+                <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
+                    <input type="hidden" name="return_url" id="return_url"
+                        value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
+                </form>
+            @else
+                <!-- 未登入 -->
+                <form id="logout-form" action="https://www.digeam.com/logout" method="POST" style="display: none;">
+                    <input type="hidden" name="return_url" id="return_url"
+                        value={{ base64_encode('https://xx2.digeam.com/CBT') }}>
+                </form>
+                <div class="login_checkbtn" data-val='null'><a href="https://www.digeam.com/login">確定</a></div>
+            @endif
 
         </div>
     </div>
@@ -463,7 +568,7 @@
             </div>
         </div>
     </footer>
-    
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
@@ -473,4 +578,5 @@
     <script src="js/event/CBT/main.js?v=100" type="text/javascript"></script>
     <script src="js/event/CBT/api.js?v=100" type="text/javascript"></script>
 </body>
+
 </html>

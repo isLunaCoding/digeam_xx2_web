@@ -226,12 +226,12 @@ class CBTController extends Controller
             $real_ip = $_SERVER["REMOTE_ADDR"];
         }
 
-        //$checkPlayToday = CBT_Play_Log::where('user_id', $request->user)->whereBetween('created_at', [date('Y-m-d').' 00:00:00', date('Y-m-d').' 23:59:59'])->count();
-        //if ($checkPlayToday > 0) {
-        //    return response()->json([
-        //        'status' => -98,
-        //    ]);
-        //}
+        $checkPlayToday = CBT_Play_Log::where('user_id', $request->user)->whereBetween('created_at', [date('Y-m-d').' 00:00:00', date('Y-m-d').' 23:59:59'])->count();
+        if ($checkPlayToday > 0) {
+            return response()->json([
+                'status' => -98,
+            ]);
+        }
 
         $createLog = new CBT_Play_Log();
         $createLog->user_id = $request->user;
