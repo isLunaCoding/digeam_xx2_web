@@ -79,8 +79,8 @@
                     </tr>
                     <tr>
                         <td>顯示卡</td>
-                        <td>nVIDIA GTX650VAMD 6500以上</td>
-                        <td>nVIDIA GTX960AMD R9以上</td>
+                        <td>NVIDIA GTX650\AMD 6500以上</td>
+                        <td>NVIDIA GTX960\AMD R9以上</td>
                     </tr>
                     <tr>
                         <td>硬碟空間</td>
