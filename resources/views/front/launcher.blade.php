@@ -11,7 +11,7 @@
     <link href="/css/event/launcher/news_style.css" rel="stylesheet" type="text/css">
     <script src="/js/event/launcher/jquery.min.js"></script>
     <script src="/js/event/launcher/jquery.SuperSlide.2.1.1.js"></script>
-    <script src="/js/event/launcher/news.js"></script>
+    <script src="/js/event/launcher/news.js?v=1.0.1"></script>
 </head>
 
 <body scroll="no">
@@ -28,7 +28,7 @@
                             href="https://xx2.ztgame.com/html/news/134b0a5/000-1678-0040e-331788.shtml" title=""
                             target="_blank"><img
                                 src="https://siteres.ztgame.com/s4/xx2/images/indexdata/2023-03/396-182_1.jpg"></a></li>
-                    <li style="display: none;"><a href="http://xx2.ztgame.com/act/gongcefuli/" title=""
+                    {{-- <li style="display: none;"><a href="http://xx2.ztgame.com/act/gongcefuli/" title=""
                             target="_blank"><img
                                 src="https://siteres.ztgame.com/s4/xx2/images/indexdata/2022-01/3.jpg"></a></li>
                     <li style="display: none;"><a href="https://xx2.ztgame.com/act/wegamedata/index.html#/index"
@@ -48,7 +48,7 @@
                                 src="https://siteres.ztgame.com/s4/xx2/images/indexdata/2023-03/396-182_1.jpg"></a></li>
                     <li style="display: none;"><a href="http://xx2.ztgame.com/act/gongcefuli/" title=""
                             target="_blank"><img
-                                src="https://siteres.ztgame.com/s4/xx2/images/indexdata/2022-01/3.jpg"></a></li>
+                                src="https://siteres.ztgame.com/s4/xx2/images/indexdata/2022-01/3.jpg"></a></li> --}}
                 </ul>
             </div>
             <div class="hd">
@@ -123,5 +123,4 @@
         </div>
     </div>
 </body>
-
 </html>

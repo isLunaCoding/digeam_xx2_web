@@ -4,7 +4,7 @@
 	width: 611px;
 	height: 403px;
 	background: url(/img/event/launcher/bgg1.jpg);
-	font-family: "Noto Sans TC";
+	font-family: "Noto Sans TC",'Arial';
 }
 
 .index-container .slideBox {
@@ -107,7 +107,7 @@
 	font-weight: 500;
 	color: #153d97;
 	border: #153d97 1px solid;
-	font-family: "Noto Sans TC";
+	font-family: "Noto Sans TC",'Arial';
 	background-color: #fff;
 	margin-right: 5px;
 }
@@ -150,7 +150,7 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	font-size: 16px;
-	font-family: "Noto Sans TC";
+	font-family: "Noto Sans TC",'Arial';
 	color: #ff6715;
 	margin-right: 5px;
 }
