@@ -119,8 +119,6 @@
                 </ul>
                 <ul class="swiper-slide" style="display: none;">
                 </ul>
-
-                <!--template::ssi_p2p_news_v3.tpl-->
             </div>
         </div>
     </div>
