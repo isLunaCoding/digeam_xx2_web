@@ -170,21 +170,18 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
-        setTimeout(function() {
-            var url = location.href.split("/");
-            var id = (url[url.length - 1]);
-            $("#" + "title" + "-" + id).click()
-            // var parentElement = $("#" + "title" + "-" + id).parent().tagName;
-            // $("#" + "title" + "-" + 14).attr("style", "display:list-item;")
-            // $("#" + "title" + "-" + 15).attr("style", "display:list-item;")
-            // $("#" + "title" + "-" + 47).attr("style", "display:list-item;")
-            $("#" + "title" + "-" + id + " a").attr("style", "color:#004dc1;");
-            // $("#" + "title" + "-" + id).on('click', function() {
-            // })
-        }, 100);
-
         // menu點擊、hover
         $(document).ready(function() {
+            setTimeout(function() {
+                var url = location.href.split("/");
+                var id = (url[url.length - 1]);
+                $("#" + "title" + "-" + id).click()
+                // var parentElement = $("#" + "title" + "-" + id).closest('li');
+                $("#" + "title" + "-" + id + " a").attr("style", "color:#004dc1;");
+                // $("#" + "title" + "-" + id).on('click', function() {
+                // })
+            }, 10);
+
             $('.frontTitle').on('click', function() {
                 var liMiddle = $(this).find('.liMiddle');
                 var displayValue = liMiddle.css("display");
@@ -192,17 +189,17 @@
                     //隱藏
                     $('.liMiddle').hide();
                 }
-                liMiddle.toggle();
+                liMiddle.show();
                 liMiddle.one('mousedown', function() {
-                    var liSamll = $(this).find('.liSamll');
-                    // liSamll.slideDown();
-                    liSamll.on('click', function(event) {
-                        event.preventDefault();
-                        var link = $(this).find('a').attr('href');
-                        // setTimeout(function() {
-                            window.location.href = link;
-                        // }, 10);
-                    })
+                    // var liSamll = $(this).find('.liSamll');
+                    // // liSamll.slideDown();
+                    // liSamll.on('click', function(event) {
+                    //     event.preventDefault();
+                    //     var link = $(this).find('a').attr('href');
+                    //     // setTimeout(function() {
+                    //         window.location.href = link;
+                    //     // }, 10);
+                    // })
                 });
             });
         });
