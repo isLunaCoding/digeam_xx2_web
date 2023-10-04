@@ -1,22 +1,22 @@
 .index-container {
 	position: relative;
 	overflow: hidden;
-	/* width: 539px; */
 	width: 611px;
 	height: 403px;
 	background: url(/img/event/launcher/bgg1.jpg);
-	font-family: 'å¾®è½¯é›…é»‘';
+	font-family: "Noto Sans TC";
 }
 
 .index-container .slideBox {
 	float: right;
 	position: relative;
-	width: 414px;
-	height: 196px;
-	padding: 11px 0 0 6px;
-
-	background: url(/img/event/launcher/switch_bg1.png) no-repeat;
-	/* box-shadow: 0px 0px 12px #999; */
+	width: 565px;
+	height: 204px;
+	/* width: 414px;
+	height: 196px; */
+	padding: 11px 0 0 12px;
+	/* background: url(/img/event/launcher/switch_bg1.png) no-repeat; */
+	background: url(/img/event/launcher/bannerBG.png) no-repeat;
 }
 
 .index-container .slideBox .item-wrapper {
@@ -26,7 +26,7 @@
 }
 
 .index-container .slideBox .item-wrapper ul li img {
-	width: 396px;
+	width: 540px;
 	height: 182px;
 }
 
@@ -35,7 +35,7 @@
 	overflow: hidden;
 	position: absolute;
 	left: -25px;
-	bottom: 46px;
+	bottom: 13px;
 	z-index: 1;
 	text-align: center;
 }
@@ -48,38 +48,30 @@
 
 .index-container .slideBox .hd ul li {
 	display: inline-block;
-	margin: 2px 0;
-	width: 15px;
-	height: 15px;
+	width: 13px;
+	height: 13px;
 	border-radius: 50%;
 	background: #81a7c5;
-	/* background: url(../images/switch_dots.png) no-repeat;
-    background-position: -24.5px 0; */
 	cursor: pointer;
 	text-indent: -9999px;
 }
 
 .index-container .slideBox .hd ul li.on {
-	border: 2px solid #b0c7d7;
+	border: 1px solid #b0c7d7;
 	background: #fff;
 }
 
-
-
-
-/*æ–°é—»*/
 .index-container .news-container {
 	position: relative;
 	display: inline-block;
 	width: 592px;
 	height: 196px;
-	/* padding: 6px; */
 	background: url(../images/newsbg1.png) no-repeat;
 	margin: 0px auto;
 }
 
 .index-container .news-container::after {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -91,46 +83,43 @@
 
 .news-container .head {
 	padding: 0 5px;
-	height: 47px;
+	height: 31px;
 	font-size: 0;
+}
 
+.news-container .head .more {
+	color: #153d97;
+	font-size: 20px;
+	border: none;
+	background-color: #ebf1f600;
+	margin-left: 244px;
+	cursor: pointer;
+	font-weight: 500;
 }
 
 .news-container .head a {
 	position: relative;
 	display: inline-block;
-	width: 18.3%;
-	font-size: 22px;
+	width: 80px;
+	font-size: 20px;
 	text-align: center;
-	line-height: 47px;
-	font-weight: bold;
-	color: #959aab;
-	font-family: 'å¾®è½¯é›…é»‘';
-	text-shadow:0 0 2px #fff,
-                -0 -0 2px #fff;
-}
-
-.news-container .head a i {
-	display: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 16px;
-	height: 16px;
-	background: url(../images/dot.png) no-repeat;
+	line-height: 30px;
+	font-weight: 500;
+	color: #153d97;
+	border: #153d97 1px solid;
+	font-family: "Noto Sans TC";
+	background-color: #fff;
+	margin-right: 5px;
 }
 
 .news-container .head .on {
-	color: #cca852;
-}
-
-.news-container .head .on i {
-	display: block;
+	color: #fff;
+	background-color: #153d97;
 }
 
 .news-container .context {
 	position: relative;
-	padding: 0 2px;
+	padding: 10px 2px;
 	height: 135px;
 	margin: 0 auto;
 	overflow: hidden;
@@ -138,7 +127,6 @@
 
 .news-container .context ul {
 	width: 100%;
-	/* background: #fff; */
 	overflow: hidden;
 }
 
@@ -149,7 +137,6 @@
 	line-height: 27px;
 	font-size: 0;
 	background: url(../images/txtbg2-2.png) no-repeat center 0;
-	font-style: italic;
 }
 
 .news-container .context li.even {
@@ -162,22 +149,26 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	font-size: 18px;
-	font-family: 'å¾®è½¯é›…é»‘';
-	color: #964f4f;
+	font-size: 16px;
+	font-family: "Noto Sans TC";
+	color: #ff6715;
+	margin-right: 5px;
 }
 
 .news-container .context li .colum2 {
 	display: inline-block;
-	width: 67%;
+	max-width: 417px;
+	width: 417px;
+	margin-right: 20px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	font-size: 18px;
+	text-overflow:ellipsis;
 }
 
 .news-container .context li .colum2 a {
-	color: #734d3d;
+	color: #153d97;
 	font-size: 16px;
 }
 
@@ -192,6 +183,12 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	color: #734d3d;
+	color: #153d97;
 	font-size: 15px;
+}
+
+.news-container .line {
+	height: 1px;
+	width: 603px;
+	background-color: #153d97;
 }
