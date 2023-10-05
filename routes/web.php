@@ -42,6 +42,11 @@ Route::get('/launcher', function () {
     return view('front/launcher');
 })->name('launcher');
 
+
+Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
+
+
+
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
