@@ -92,7 +92,8 @@
                                                             href="{{ route('wiki', $all_page[$value2['cate_id']][0]['id']) }}">{{ $value2['title'] }}</a>
                                                     </li>
                                                 @else
-                                                    <li class="liMiddle"><p>{{ $value2['title'] }}</p>
+                                                    <li class="liMiddle">
+                                                        <p>{{ $value2['title'] }}</p>
                                                         <ul>
                                                             @for ($i = 0; $i < $value2['count']; $i++)
                                                                 <li class="liSamll"
@@ -175,12 +176,20 @@
             setTimeout(function() {
                 var url = location.href.split("/");
                 var id = (url[url.length - 1]);
-                // $("#" + "title" + "-" + id).click()
-                // var parentElement = $("#" + "title" + "-" + id).closest('li');
+                var main = $("#" + "title" + "-" + id).parent().attr('class');
+                console.log(main);
+                if (main != 'menuBox') {
+                    var targetP = $("#" + "title" + "-" + id).closest('ul').find('p').text();
+                    console.log($('.liMiddle p'));
+                    if (targetP != '') {
+                        $("#" + "title" + "-" + id).closest('ul').find('p').click();
+                        $('.liMiddle ul').show();
+                    } else {
+                        $("#" + "title" + "-" + id).closest('ul').parent().parent().find('p')[0].click()
+                    }
+                }
                 $("#" + "title" + "-" + id + " a").attr("style", "color:#004dc1;");
-                // $("#" + "title" + "-" + id).on('click', function() {
-                // })
-            }, 10);
+            }, 100);
 
             $('.frontTitle p').on('click', function() {
                 var pUl = $(this).parent('ul');
@@ -191,17 +200,13 @@
                     //隱藏
                     $('.liMiddle').hide();
                 }
-                liMiddle.show();
+                liMiddle.toggle();
             });
         });
 
-        $('.liMiddle p').on('click', function() {
-            console.log(123);
-            var pli = $(this).parent('li');
-            // var liSmall = $(this).find('.liSmall');
-            var liSmall = pli.find('.liSmall');
-            // var liMiddleUL = $(this).find('ul');
-            var liMiddleUL = pli.find('ul');
+        $('.liMiddle').on('click', function() {
+            var liSmall = $(this).find('.liSmall');
+            var liMiddleUL = $(this).find('ul');
 
             var displayValue = liMiddleUL.css("display");
             if (displayValue == "none") {
@@ -209,7 +214,15 @@
             } else {
                 liMiddleUL.attr("style", "display:none;")
             }
-            
+
+        });
+
+
+        $('li ul li a').click(function(event) {
+            if ($(this).attr('href')) {
+                window.location = $(this).attr('href');
+            }
+            event.stopPropagation();
         });
 
         // serch 按下enter發送資訊
