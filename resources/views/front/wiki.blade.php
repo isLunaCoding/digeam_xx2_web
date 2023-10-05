@@ -92,7 +92,7 @@
                                                             href="{{ route('wiki', $all_page[$value2['cate_id']][0]['id']) }}">{{ $value2['title'] }}</a>
                                                     </li>
                                                 @else
-                                                    <li class="liMiddle">{{ $value2['title'] }}
+                                                    <li class="liMiddle"><p>{{ $value2['title'] }}</p>
                                                         <ul>
                                                             @for ($i = 0; $i < $value2['count']; $i++)
                                                                 <li class="liSamll"
@@ -170,41 +170,46 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
-        setTimeout(function() {
-            var url = location.href.split("/");
-            var id = (url[url.length - 1]);
-            $("#" + "title" + "-" + id).click()
-            // var parentElement = $("#" + "title" + "-" + id).parent().tagName;
-            // $("#" + "title" + "-" + 14).attr("style", "display:list-item;")
-            // $("#" + "title" + "-" + 15).attr("style", "display:list-item;")
-            // $("#" + "title" + "-" + 47).attr("style", "display:list-item;")
-            $("#" + "title" + "-" + id + " a").attr("style", "color:#004dc1;");
-            // $("#" + "title" + "-" + id).on('click', function() {
-            // })
-        }, 100);
-
         // menu點擊、hover
         $(document).ready(function() {
-            $('.frontTitle').on('click', function() {
-                var liMiddle = $(this).find('.liMiddle');
+            setTimeout(function() {
+                var url = location.href.split("/");
+                var id = (url[url.length - 1]);
+                // $("#" + "title" + "-" + id).click()
+                // var parentElement = $("#" + "title" + "-" + id).closest('li');
+                $("#" + "title" + "-" + id + " a").attr("style", "color:#004dc1;");
+                // $("#" + "title" + "-" + id).on('click', function() {
+                // })
+            }, 10);
+
+            $('.frontTitle p').on('click', function() {
+                var pUl = $(this).parent('ul');
+                // var liMiddle = $(this).find('.liMiddle');
+                var liMiddle = pUl.find('.liMiddle');
                 var displayValue = liMiddle.css("display");
                 if (displayValue == "none") {
                     //隱藏
                     $('.liMiddle').hide();
                 }
-                liMiddle.toggle();
-                liMiddle.one('mousedown', function() {
-                    var liSamll = $(this).find('.liSamll');
-                    // liSamll.slideDown();
-                    liSamll.on('click', function(event) {
-                        event.preventDefault();
-                        var link = $(this).find('a').attr('href');
-                        // setTimeout(function() {
-                            window.location.href = link;
-                        // }, 10);
-                    })
-                });
+                liMiddle.show();
             });
+        });
+
+        $('.liMiddle p').on('click', function() {
+            console.log(123);
+            var pli = $(this).parent('li');
+            // var liSmall = $(this).find('.liSmall');
+            var liSmall = pli.find('.liSmall');
+            // var liMiddleUL = $(this).find('ul');
+            var liMiddleUL = pli.find('ul');
+
+            var displayValue = liMiddleUL.css("display");
+            if (displayValue == "none") {
+                liMiddleUL.attr("style", "display:list_item;")
+            } else {
+                liMiddleUL.attr("style", "display:none;")
+            }
+            
         });
 
         // serch 按下enter發送資訊
