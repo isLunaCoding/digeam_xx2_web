@@ -10,9 +10,9 @@
 .index-container .slideBox {
 	float: right;
 	position: relative;
-	width: 565px;
+	width: 560px;
 	height: 204px;
-	padding: 11px 0 0 12px;
+	padding: 11px 0 0 11px;
 	background: url(/img/event/launcher/bannerBG.png) no-repeat;
 }
 
@@ -89,7 +89,7 @@
 	font-size: 20px;
 	border: none;
 	background-color: #ede8e5;
-	margin-left: 244px;
+	margin-left: 254px;
 	cursor: pointer;
 	font-weight: 500;
 }
