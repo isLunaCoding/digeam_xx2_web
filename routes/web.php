@@ -37,10 +37,7 @@ Route::get('/regulations', function () {
 Route::get('/suspension', 'front\suspensionController@index')->name('suspension');
 
 // launcher
-Route::get('/launcher2', 'front\indexController@launcher');
-Route::get('/launcher', function () {
-    return view('front/launcher');
-})->name('launcher');
+Route::get('/launcher', 'front\indexController@launcher')->name('launcher');
 
 
 Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
@@ -50,8 +47,8 @@ Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
-if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-    if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
+// if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+//     if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
         // 百科
         Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
         // Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');
@@ -77,5 +74,5 @@ if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
         Route::get('/reward', function () {
             return view('front/receiveAward');
         })->name('reward');
-    }
-}
+//     }
+// }
