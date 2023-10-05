@@ -308,3 +308,17 @@ $('.menubtn1,.menubtn2').on("click",function(){
         $('.bar').fadeOut(200);
     }
 })
+
+
+let now = new Date.getTime();
+let cbt = new Date('2023-10-6 15:00:00').getTime();
+let obt = new Date('2023-10-16 15:00:00').getTime();
+
+if(now >= cbt){
+    $('.cb_btn').show();
+}
+
+if(now >= obt){
+    $('.ob_btn').show();
+}
+

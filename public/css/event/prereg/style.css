@@ -450,7 +450,8 @@ body {
 .swiper .page2 .bg2animate {
   display: none;
 }
-.swiper .page2 .bg2animate .bird1, .swiper .page2 .bg2animate .bird2 {
+.swiper .page2 .bg2animate .bird1,
+.swiper .page2 .bg2animate .bird2 {
   position: absolute;
   filter: drop-shadow(0 0 3px rgba(78, 104, 113, 0.7));
   z-index: 10;
@@ -664,7 +665,8 @@ body {
   text-align: center;
   text-shadow: 0 0 5px #010101;
 }
-.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn {
+.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn,
+.swiper .page2 .p2main .p2awards .p2btns .p2noticebtn {
   position: relative;
   width: 50%;
   align-items: center;
@@ -676,7 +678,9 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::before, .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::after, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::before, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::after {
+.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::before, .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::after,
+.swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::before,
+.swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::after {
   position: absolute;
   content: "";
   width: 32px;
@@ -685,17 +689,22 @@ body {
   background-position: center;
   transition: 0.3s;
 }
-.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::before, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::before {
+.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::before,
+.swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::before {
   left: 24px;
 }
-.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::after, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::after {
+.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn::after,
+.swiper .page2 .p2main .p2awards .p2btns .p2noticebtn::after {
   scale: -1;
   right: 24px;
 }
-.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover::before, .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover::after, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover::before, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover::after {
+.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover::before, .swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover::after,
+.swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover::before,
+.swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover::after {
   transform: translateX(-5px);
 }
-.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover, .swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover {
+.swiper .page2 .p2main .p2awards .p2btns .p2informationbtn:hover,
+.swiper .page2 .p2main .p2awards .p2btns .p2noticebtn:hover {
   letter-spacing: 3px;
 }
 .swiper .page3 {
@@ -862,7 +871,9 @@ body {
   text-shadow: 0 0 5px #010101;
   filter: drop-shadow(0 0 5px #2d3447);
 }
-.swiper .page3 .p3main .p3btns .p3informationbtn, .swiper .page3 .p3main .p3btns .p3missionbtn, .swiper .page3 .p3main .p3btns .p3noticebtn {
+.swiper .page3 .p3main .p3btns .p3informationbtn,
+.swiper .page3 .p3main .p3btns .p3missionbtn,
+.swiper .page3 .p3main .p3btns .p3noticebtn {
   position: relative;
   width: 202px;
   height: 60px;
@@ -876,30 +887,44 @@ body {
   transition: 0.3s;
   scale: 0.95;
 }
-.swiper .page3 .p3main .p3btns .p3informationbtn::before, .swiper .page3 .p3main .p3btns .p3informationbtn::after, .swiper .page3 .p3main .p3btns .p3missionbtn::before, .swiper .page3 .p3main .p3btns .p3missionbtn::after, .swiper .page3 .p3main .p3btns .p3noticebtn::before, .swiper .page3 .p3main .p3btns .p3noticebtn::after {
+.swiper .page3 .p3main .p3btns .p3informationbtn::before, .swiper .page3 .p3main .p3btns .p3informationbtn::after,
+.swiper .page3 .p3main .p3btns .p3missionbtn::before,
+.swiper .page3 .p3main .p3btns .p3missionbtn::after,
+.swiper .page3 .p3main .p3btns .p3noticebtn::before,
+.swiper .page3 .p3main .p3btns .p3noticebtn::after {
   position: absolute;
   content: "";
   width: 32px;
   height: 54px;
   transition: 0.3s;
 }
-.swiper .page3 .p3main .p3btns .p3informationbtn::before, .swiper .page3 .p3main .p3btns .p3missionbtn::before, .swiper .page3 .p3main .p3btns .p3noticebtn::before {
+.swiper .page3 .p3main .p3btns .p3informationbtn::before,
+.swiper .page3 .p3main .p3btns .p3missionbtn::before,
+.swiper .page3 .p3main .p3btns .p3noticebtn::before {
   left: 0px;
   background: url(/img/event/prereg/p3/btn3_hover1.png) no-repeat;
   background-position: center;
 }
-.swiper .page3 .p3main .p3btns .p3informationbtn::after, .swiper .page3 .p3main .p3btns .p3missionbtn::after, .swiper .page3 .p3main .p3btns .p3noticebtn::after {
+.swiper .page3 .p3main .p3btns .p3informationbtn::after,
+.swiper .page3 .p3main .p3btns .p3missionbtn::after,
+.swiper .page3 .p3main .p3btns .p3noticebtn::after {
   right: 0px;
   background: url(/img/event/prereg/p3/btn3_hover2.png) no-repeat;
   background-position: center;
 }
-.swiper .page3 .p3main .p3btns .p3informationbtn:hover::before, .swiper .page3 .p3main .p3btns .p3missionbtn:hover::before, .swiper .page3 .p3main .p3btns .p3noticebtn:hover::before {
+.swiper .page3 .p3main .p3btns .p3informationbtn:hover::before,
+.swiper .page3 .p3main .p3btns .p3missionbtn:hover::before,
+.swiper .page3 .p3main .p3btns .p3noticebtn:hover::before {
   transform: translateX(-5px);
 }
-.swiper .page3 .p3main .p3btns .p3informationbtn:hover::after, .swiper .page3 .p3main .p3btns .p3missionbtn:hover::after, .swiper .page3 .p3main .p3btns .p3noticebtn:hover::after {
+.swiper .page3 .p3main .p3btns .p3informationbtn:hover::after,
+.swiper .page3 .p3main .p3btns .p3missionbtn:hover::after,
+.swiper .page3 .p3main .p3btns .p3noticebtn:hover::after {
   transform: translateX(5px);
 }
-.swiper .page3 .p3main .p3btns .p3informationbtn:hover, .swiper .page3 .p3main .p3btns .p3missionbtn:hover, .swiper .page3 .p3main .p3btns .p3noticebtn:hover {
+.swiper .page3 .p3main .p3btns .p3informationbtn:hover,
+.swiper .page3 .p3main .p3btns .p3missionbtn:hover,
+.swiper .page3 .p3main .p3btns .p3noticebtn:hover {
   letter-spacing: 3px;
 }
 .swiper .page3 .p3main .lanternbox {
@@ -1044,7 +1069,8 @@ body {
   text-shadow: 0 0 10px #103aa3;
   text-align: center;
 }
-.swiper .page3 .p3main .p3text .cardinfo .cardname::before, .swiper .page3 .p3main .p3text .cardinfo .cardname::after {
+.swiper .page3 .p3main .p3text .cardinfo .cardname::before,
+.swiper .page3 .p3main .p3text .cardinfo .cardname::after {
   position: absolute;
   content: "";
   top: 6%;
@@ -1060,7 +1086,8 @@ body {
   right: 5%;
   scale: -1;
 }
-.swiper .page3 .p3main .p3text .cardinfo .value, .swiper .page3 .p3main .p3text .cardinfo .skill {
+.swiper .page3 .p3main .p3text .cardinfo .value,
+.swiper .page3 .p3main .p3text .cardinfo .skill {
   width: -moz-fit-content;
   width: fit-content;
   height: auto;
@@ -1075,17 +1102,20 @@ body {
 .swiper .page3 .p3main .p3text .cardinfo .value {
   margin-top: 35%;
 }
-.swiper .page3 .p3main .p3text .cardinfo .valuetable, .swiper .page3 .p3main .p3text .cardinfo .skilltable {
+.swiper .page3 .p3main .p3text .cardinfo .valuetable,
+.swiper .page3 .p3main .p3text .cardinfo .skilltable {
   margin: 10px auto 15px auto;
   width: 70%;
   border-collapse: collapse;
   font-size: 21px;
   font-weight: bold;
 }
-.swiper .page3 .p3main .p3text .cardinfo .valuetable td, .swiper .page3 .p3main .p3text .cardinfo .skilltable td {
+.swiper .page3 .p3main .p3text .cardinfo .valuetable td,
+.swiper .page3 .p3main .p3text .cardinfo .skilltable td {
   width: 50%;
 }
-.swiper .page3 .p3main .p3text .cardinfo .valuetable td span, .swiper .page3 .p3main .p3text .cardinfo .skilltable td span {
+.swiper .page3 .p3main .p3text .cardinfo .valuetable td span,
+.swiper .page3 .p3main .p3text .cardinfo .skilltable td span {
   color: #eaf4ff;
 }
 .swiper .page3 .p3main .card {
@@ -1096,7 +1126,8 @@ body {
   width: 40%;
   height: 90%;
 }
-.swiper .page3 .p3main .card .nocard, .swiper .page3 .p3main .card .nowcard {
+.swiper .page3 .p3main .card .nocard,
+.swiper .page3 .p3main .card .nowcard {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -1104,7 +1135,8 @@ body {
   width: 411px;
   height: 411px;
 }
-.swiper .page3 .p3main .card .nocard .card_bg, .swiper .page3 .p3main .card .nowcard .card_bg {
+.swiper .page3 .p3main .card .nocard .card_bg,
+.swiper .page3 .p3main .card .nowcard .card_bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1114,7 +1146,8 @@ body {
   -webkit-mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
   mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
 }
-.swiper .page3 .p3main .card .nocard .card_cloud1, .swiper .page3 .p3main .card .nowcard .card_cloud1 {
+.swiper .page3 .p3main .card .nocard .card_cloud1,
+.swiper .page3 .p3main .card .nowcard .card_cloud1 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1125,7 +1158,8 @@ body {
   mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
   animation: p3cloud1 2s infinite alternate ease-in-out;
 }
-.swiper .page3 .p3main .card .nocard .card_cloud2, .swiper .page3 .p3main .card .nowcard .card_cloud2 {
+.swiper .page3 .p3main .card .nocard .card_cloud2,
+.swiper .page3 .p3main .card .nowcard .card_cloud2 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1136,7 +1170,8 @@ body {
   mask: url(/img/event/prereg/p3/card_mask.png) no-repeat;
   animation: p3cloud2 2s infinite alternate ease-in-out;
 }
-.swiper .page3 .p3main .card .nocard .card_frame, .swiper .page3 .p3main .card .nowcard .card_frame {
+.swiper .page3 .p3main .card .nocard .card_frame,
+.swiper .page3 .p3main .card .nowcard .card_frame {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1284,7 +1319,8 @@ body {
   text-shadow: 0 0 5px #010101;
   filter: drop-shadow(0 0 5px #2d3447);
 }
-.swiper .page4 .p4main .p4info .p4btns .p4informationbtn, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn {
+.swiper .page4 .p4main .p4info .p4btns .p4informationbtn,
+.swiper .page4 .p4main .p4info .p4btns .p4noticebtn {
   position: relative;
   width: 202px;
   height: 54px;
@@ -1298,30 +1334,37 @@ body {
   transition: 0.3s;
   scale: 0.95;
 }
-.swiper .page4 .p4main .p4info .p4btns .p4informationbtn::before, .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::after, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::before, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::after {
+.swiper .page4 .p4main .p4info .p4btns .p4informationbtn::before, .swiper .page4 .p4main .p4info .p4btns .p4informationbtn::after,
+.swiper .page4 .p4main .p4info .p4btns .p4noticebtn::before,
+.swiper .page4 .p4main .p4info .p4btns .p4noticebtn::after {
   position: absolute;
   content: "";
   width: 32px;
   height: 54px;
   transition: 0.3s;
 }
-.swiper .page4 .p4main .p4info .p4btns .p4informationbtn::before, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::before {
+.swiper .page4 .p4main .p4info .p4btns .p4informationbtn::before,
+.swiper .page4 .p4main .p4info .p4btns .p4noticebtn::before {
   left: 0px;
   background: url(/img/event/prereg/p4/btn2_hover1.png) no-repeat;
   background-position: center;
 }
-.swiper .page4 .p4main .p4info .p4btns .p4informationbtn::after, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn::after {
+.swiper .page4 .p4main .p4info .p4btns .p4informationbtn::after,
+.swiper .page4 .p4main .p4info .p4btns .p4noticebtn::after {
   right: 0px;
   background: url(/img/event/prereg/p4/btn2_hover2.png) no-repeat;
   background-position: center;
 }
-.swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover::before, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover::before {
+.swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover::before,
+.swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover::before {
   transform: translateX(-5px);
 }
-.swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover::after, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover::after {
+.swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover::after,
+.swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover::after {
   transform: translateX(5px);
 }
-.swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover, .swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover {
+.swiper .page4 .p4main .p4info .p4btns .p4informationbtn:hover,
+.swiper .page4 .p4main .p4info .p4btns .p4noticebtn:hover {
   letter-spacing: 3px;
 }
 .swiper .page4 .p4main .pandas {
@@ -1620,7 +1663,10 @@ body {
 .swiper .page5 .p5slideBox .p5slider .p5slide4 {
   background: url(/img/event/prereg/p5/slide4.jpg) no-repeat;
 }
-.swiper .page5 .p5slideBox .p5slider .p5slide1, .swiper .page5 .p5slideBox .p5slider .p5slide2, .swiper .page5 .p5slideBox .p5slider .p5slide3, .swiper .page5 .p5slideBox .p5slider .p5slide4 {
+.swiper .page5 .p5slideBox .p5slider .p5slide1,
+.swiper .page5 .p5slideBox .p5slider .p5slide2,
+.swiper .page5 .p5slideBox .p5slider .p5slide3,
+.swiper .page5 .p5slideBox .p5slider .p5slide4 {
   border-radius: 30px;
   background-size: cover;
   background-position: center;
@@ -2425,7 +2471,10 @@ body {
   width: 100%;
   height: 100%;
 }
-.p3missionpop .p3missionpopframe .p3missionpopText li .join_dc, .p3missionpop .p3missionpopframe .p3missionpopText li .go_cb, .p3missionpop .p3missionpopframe .p3missionpopText li .go_ob, .p3missionpop .p3missionpopframe .p3missionpopText li .go_index {
+.p3missionpop .p3missionpopframe .p3missionpopText li .join_dc,
+.p3missionpop .p3missionpopframe .p3missionpopText li .go_cb,
+.p3missionpop .p3missionpopframe .p3missionpopText li .go_ob,
+.p3missionpop .p3missionpopframe .p3missionpopText li .go_index {
   filter: grayscale(1) brightness(1.5);
   pointer-events: none;
   cursor: auto;
@@ -2576,7 +2625,8 @@ body {
   display: none;
   pointer-events: none;
 }
-.p3resultpop .p3resultpopframe .newinfotable, .p3resultpop .p3resultpopframe .nowinfotable {
+.p3resultpop .p3resultpopframe .newinfotable,
+.p3resultpop .p3resultpopframe .nowinfotable {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2585,13 +2635,16 @@ body {
   height: 100%;
   font-weight: bold;
 }
-.p3resultpop .p3resultpopframe .newinfotable tr, .p3resultpop .p3resultpopframe .nowinfotable tr {
+.p3resultpop .p3resultpopframe .newinfotable tr,
+.p3resultpop .p3resultpopframe .nowinfotable tr {
   font-size: 15px;
 }
-.p3resultpop .p3resultpopframe .newinfotable tr td, .p3resultpop .p3resultpopframe .nowinfotable tr td {
+.p3resultpop .p3resultpopframe .newinfotable tr td,
+.p3resultpop .p3resultpopframe .nowinfotable tr td {
   width: 50%;
 }
-.p3resultpop .p3resultpopframe .newinfotable tr td span, .p3resultpop .p3resultpopframe .nowinfotable tr td span {
+.p3resultpop .p3resultpopframe .newinfotable tr td span,
+.p3resultpop .p3resultpopframe .nowinfotable tr td span {
   color: #eaf4ff;
 }
 .p3resultpop .p3resultpopframe .p3resultbtns {
@@ -2602,7 +2655,8 @@ body {
   display: flex;
   justify-content: center;
 }
-.p3resultpop .p3resultpopframe .p3resultbtns .choosenew, .p3resultpop .p3resultpopframe .p3resultbtns .keepnow {
+.p3resultpop .p3resultpopframe .p3resultbtns .choosenew,
+.p3resultpop .p3resultpopframe .p3resultbtns .keepnow {
   cursor: pointer;
   text-align: center;
   color: #FFF;
@@ -2612,7 +2666,8 @@ body {
   background-image: linear-gradient(to bottom, #606994, #21466a);
   transition: 0.3s;
 }
-.p3resultpop .p3resultpopframe .p3resultbtns .choosenew:hover, .p3resultpop .p3resultpopframe .p3resultbtns .keepnow:hover {
+.p3resultpop .p3resultpopframe .p3resultbtns .choosenew:hover,
+.p3resultpop .p3resultpopframe .p3resultbtns .keepnow:hover {
   transform: translateY(-2px);
 }
 .p3resultpop .p3resultpopframe .p3resultbtns .choosenew {
@@ -3081,7 +3136,9 @@ body {
   letter-spacing: 5px;
   cursor: pointer;
 }
-.popS .popSframe .popScheckBtn2, .popS .popSframe .popScheckBtn3, .popS .popSframe .popScheckBtn4 {
+.popS .popSframe .popScheckBtn2,
+.popS .popSframe .popScheckBtn3,
+.popS .popSframe .popScheckBtn4 {
   position: absolute;
   bottom: 15%;
   left: 50%;
@@ -3094,18 +3151,39 @@ body {
   letter-spacing: 5px;
   display: flex;
 }
-.popS .popSframe .popScheckBtn2 .yes, .popS .popSframe .popScheckBtn2 .no, .popS .popSframe .popScheckBtn2 .new_yes, .popS .popSframe .popScheckBtn2 .yes_30, .popS .popSframe .popScheckBtn3 .yes, .popS .popSframe .popScheckBtn3 .no, .popS .popSframe .popScheckBtn3 .new_yes, .popS .popSframe .popScheckBtn3 .yes_30, .popS .popSframe .popScheckBtn4 .yes, .popS .popSframe .popScheckBtn4 .no, .popS .popSframe .popScheckBtn4 .new_yes, .popS .popSframe .popScheckBtn4 .yes_30 {
+.popS .popSframe .popScheckBtn2 .yes,
+.popS .popSframe .popScheckBtn2 .no,
+.popS .popSframe .popScheckBtn2 .new_yes,
+.popS .popSframe .popScheckBtn2 .yes_30,
+.popS .popSframe .popScheckBtn3 .yes,
+.popS .popSframe .popScheckBtn3 .no,
+.popS .popSframe .popScheckBtn3 .new_yes,
+.popS .popSframe .popScheckBtn3 .yes_30,
+.popS .popSframe .popScheckBtn4 .yes,
+.popS .popSframe .popScheckBtn4 .no,
+.popS .popSframe .popScheckBtn4 .new_yes,
+.popS .popSframe .popScheckBtn4 .yes_30 {
   position: absolute;
   width: 120px;
   height: 50px;
   cursor: pointer;
   background-color: #FFF;
 }
-.popS .popSframe .popScheckBtn2 .yes, .popS .popSframe .popScheckBtn2 .new_yes, .popS .popSframe .popScheckBtn2 .yes_30, .popS .popSframe .popScheckBtn3 .yes, .popS .popSframe .popScheckBtn3 .new_yes, .popS .popSframe .popScheckBtn3 .yes_30, .popS .popSframe .popScheckBtn4 .yes, .popS .popSframe .popScheckBtn4 .new_yes, .popS .popSframe .popScheckBtn4 .yes_30 {
+.popS .popSframe .popScheckBtn2 .yes,
+.popS .popSframe .popScheckBtn2 .new_yes,
+.popS .popSframe .popScheckBtn2 .yes_30,
+.popS .popSframe .popScheckBtn3 .yes,
+.popS .popSframe .popScheckBtn3 .new_yes,
+.popS .popSframe .popScheckBtn3 .yes_30,
+.popS .popSframe .popScheckBtn4 .yes,
+.popS .popSframe .popScheckBtn4 .new_yes,
+.popS .popSframe .popScheckBtn4 .yes_30 {
   left: 25%;
   translate: -50%;
 }
-.popS .popSframe .popScheckBtn2 .no, .popS .popSframe .popScheckBtn3 .no, .popS .popSframe .popScheckBtn4 .no {
+.popS .popSframe .popScheckBtn2 .no,
+.popS .popSframe .popScheckBtn3 .no,
+.popS .popSframe .popScheckBtn4 .no {
   left: 75%;
   translate: -50%;
 }
@@ -3155,6 +3233,66 @@ body {
   text-align: center;
   top: 58%;
   font-size: 14px;
+}
+
+.fixed_box {
+  position: fixed;
+  bottom: 34%;
+  right: 0%;
+}
+@media all and (max-width: 1024px) {
+  .fixed_box {
+    bottom: 50%;
+  }
+}
+@media all and (max-width: 500px) {
+  .fixed_box {
+    bottom: 10%;
+  }
+}
+
+.cb_btn {
+  background-image: url(/img/event/prereg/CBbtn.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 160px;
+  z-index: 2;
+  display: none;
+}
+@media all and (max-width: 500px) {
+  .cb_btn {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media all and (max-width: 320px) {
+  .cb_btn {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.ob_btn {
+  background-image: url(/img/event/prereg/OBbtn.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 160px;
+  z-index: 2;
+  display: none;
+}
+@media all and (max-width: 500px) {
+  .ob_btn {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media all and (max-width: 320px) {
+  .ob_btn {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 @keyframes flybird1 {

@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::middleware(['setReturnUrl'])->group(function () {
-    // 事前預約
-    Route::get('/prereg', function () {
-        return view('event/prereg_index');
-    });
+// Route::middleware(['setReturnUrl'])->group(function () {
+//     // 事前預約
+//     Route::get('/prereg', function () {
+//         return view('event/prereg_index');
+//     });
 
+// });
+
+Route::get('/prereg', function () {
+    return view('event/prereg_index');
 });
 
 // 官網
