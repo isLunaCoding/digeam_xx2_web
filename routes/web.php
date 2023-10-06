@@ -21,6 +21,7 @@ Route::middleware(['setReturnUrl'])->group(function () {
 
 });
 
+
 // 官網
 Route::get('/index', 'front\indexController@index')->name('index');
 Route::get('/', 'front\indexController@index');

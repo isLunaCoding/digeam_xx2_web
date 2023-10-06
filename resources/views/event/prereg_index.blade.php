@@ -698,6 +698,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
+    <div class="fixed_box">
+        <a href="https://xx2.digeam.com/CBT" class="cb_btn"></a>
+        <a href="https://xx2.digeam.com/OBT" class="ob_btn"></a>
+    </div>
+
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
     <!-- Swiper JS -->

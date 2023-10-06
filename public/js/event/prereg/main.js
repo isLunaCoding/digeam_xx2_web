@@ -308,3 +308,16 @@ $('.menubtn1,.menubtn2').on("click",function(){
         $('.bar').fadeOut(200);
     }
 })
+
+
+
+
+var Timebtn = setInterval(function () { 
+    var usertime = Date.now(), cbt = Date.UTC(2023, 9, 6, 7, 0, 0), obt = Date.UTC(2023, 9, 16, 7, 0, 0);
+    if (usertime >= obt) {
+        $('.cb_btn , .ob_btn').show();
+        clearInterval(Timebtn)
+    }else if(usertime >= cbt){
+        $('.cb_btn').show();
+    }
+}, 1)
