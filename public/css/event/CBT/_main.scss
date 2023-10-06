@@ -2824,7 +2824,7 @@ body{
 }
 
 .clouds{
-    @include sm(){
+    @include lg(){
         display: none;
     }
     .cloud1{
