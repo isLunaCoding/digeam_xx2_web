@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <link rel="stylesheet" href="css/event/CBT/style.css?v=100">
+    <link rel="stylesheet" href="css/event/CBT/style.css?v=1.6">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
@@ -573,10 +573,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
-    <script src="js/event/CBT/menu.js?v=100" type="text/javascript"></script>
-    <script src="js/event/CBT/poptext.js?v=100" type="text/javascript"></script>
-    <script src="js/event/CBT/main.js?v=100" type="text/javascript"></script>
-    <script src="js/event/CBT/api.js?v=100" type="text/javascript"></script>
+    <script src="js/event/CBT/menu.js?v=5.0" type="text/javascript"></script>
+    <script src="js/event/CBT/poptext.js?v=5.0" type="text/javascript"></script>
+    <script src="js/event/CBT/main.js?v=5.0" type="text/javascript"></script>
+    <script src="js/event/CBT/api.js?v=5.0" type="text/javascript"></script>
 </body>
 
 </html>
