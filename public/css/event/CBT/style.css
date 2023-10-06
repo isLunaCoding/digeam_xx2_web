@@ -692,7 +692,8 @@ body::-webkit-scrollbar-track {
   top: 7%;
   left: 35%;
   width: 20%;
-  height: 80vh;
+  height: 100%;
+  max-height: 806px;
   display: flex;
   background: no-repeat center center/contain;
   background-image: url(/img/event/CBT/p0/mainti.png);
@@ -3592,7 +3593,7 @@ body::-webkit-scrollbar-track {
 
 @media all and (max-width: 768px) {
   .clouds {
-    opacity: 0.2;
+    display: none;
   }
 }
 .clouds .cloud1 {
