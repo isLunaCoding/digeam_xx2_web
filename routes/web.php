@@ -47,8 +47,8 @@ Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
-// if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-//     if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
+if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+    if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
         // 百科
         Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
         // Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');
@@ -74,5 +74,5 @@ Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
         Route::get('/reward', function () {
             return view('front/receiveAward');
         })->name('reward');
-//     }
-// }
+    }
+}

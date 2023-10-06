@@ -24,7 +24,6 @@
                         <li style="display: none;"><a href={{ $image['url'] }} title="" target="_blank"><img
                                     src={{ $image['file_name'] }}></a></li>
                     @endforeach
-
                 </ul>
             </div>
             <div class="hd">
@@ -48,7 +47,7 @@
                 <a href="javascript:;">NEW</a>
                 <a href="javascript:;">活動</a>
                 <a href="javascript:;">系統</a>
-                <a class="more" href="https://xx2.digeam.com/announcement/new">More</a>
+                <a class="more" href="https://xx2.digeam.com/announcement/new" target="_blank">More</a>
             </div>
             <div class="line"></div>
             <!-- 内容 -->
@@ -58,21 +57,22 @@
                         @if ($value['top'] == 'Y')
                             <li class="even">
                                 <span class="colum1">TOP</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
-                                        target="_blank">{{ $value['title'] }}</a></span>
+                                <span class="colum2">
+                                    <a href="{{ route('announcementContent', [$value->id]) }}" target="_blank">{{ $value['title'] }}</a>
+                                </span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
                         @elseif($value['new'] == 'Y')
                             <li class="even">
                                 <span class="colum1">NEW</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
+                                <span class="colum2"><a href="{{ route('announcementContent', [$value->id]) }}"
                                         target="_blank">{{ $value['title'] }}</a></span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
                         @else
                             <li class="even">
                                 <span class="colum1 blue">&#9656</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
+                                <span class="colum2"><a href="{{ route('announcementContent', [$value->id]) }}"
                                         target="_blank">{{ $value['title'] }}</a></span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
@@ -84,21 +84,21 @@
                         @if ($value['top'] == 'Y')
                             <li class="even">
                                 <span class="colum1">TOP</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
+                                <span class="colum2"><a href="{{ route('announcementContent', [$value->id]) }}"
                                         target="_blank">{{ $value['title'] }}</a></span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
                         @elseif($value['new'] == 'Y')
                             <li class="even">
                                 <span class="colum1">NEW</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
+                                <span class="colum2"><a href="{{ route('announcementContent', [$value->id]) }}"
                                         target="_blank">{{ $value['title'] }}</a></span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
                         @else
                             <li class="even">
                                 <span class="colum1 blue">&#9656</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
+                                <span class="colum2"><a href="{{ route('announcementContent', [$value->id]) }}"
                                         target="_blank">{{ $value['title'] }}</a></span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
@@ -110,21 +110,21 @@
                         @if ($value['top'] == 'Y')
                             <li class="even">
                                 <span class="colum1">TOP</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
+                                <span class="colum2"><a href="{{ route('announcementContent', [$value->id]) }}"
                                         target="_blank">{{ $value['title'] }}</a></span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
                         @elseif($value['new'] == 'Y')
                             <li class="even">
                                 <span class="colum1">NEW</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
+                                <span class="colum2"><a href="{{ route('announcementContent', [$value->id]) }}"
                                         target="_blank">{{ $value['title'] }}</a></span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
                         @else
                             <li class="even">
                                 <span class="colum1 blue">&#9656</span>
-                                <span class="colum2"><a href="{{ $value['url'] }}"
+                                <span class="colum2"><a href="{{ route('announcementContent', [$value->id]) }}"
                                         target="_blank">{{ $value['title'] }}</a></span>
                                 <span class="colum3">{{ date('Y/m/d', strtotime($value['created_at'])) }}</span>
                             </li>
