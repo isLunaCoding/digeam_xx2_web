@@ -2774,6 +2774,11 @@ body{
                         height: 100%;
                         width: 100%;
 
+                        
+                        @include sm(){
+                            flex-direction: column;
+                        }
+
                         .imgBtn0{
                             color: #FFF;
                         }
@@ -2818,6 +2823,9 @@ body{
 }
 
 .clouds{
+    @include sm(){
+        opacity: .2;
+    }
     .cloud1{
         position: fixed;
         width: 1920px;
