@@ -88,9 +88,7 @@
     <div class="page0">
         <video poster="/img/event/CBT/p0/bg0.png" class="videoBG" src="/img/event/CBT/p0/BG.mp4" autoplay loop
             muted></video>
-        <div class="xx2_logo_M">
-            <a href="https://xx2.digeam.com/" target="blank"></a>
-        </div>
+        <a href="https://xx2.digeam.com/" target="blank" class="xx2_logo_M"></a>
         <div class="p0_ti">
             <div class="ti_light_mask">
                 <div class="ti_light"></div>
