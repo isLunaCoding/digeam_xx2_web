@@ -310,15 +310,14 @@ $('.menubtn1,.menubtn2').on("click",function(){
 })
 
 
-let now = new Date.getTime();
-let cbt = new Date('2023-10-6 15:00:00').getTime();
-let obt = new Date('2023-10-16 15:00:00').getTime();
 
-if(now >= cbt){
-    $('.cb_btn').show();
-}
 
-if(now >= obt){
-    $('.ob_btn').show();
-}
-
+var Timebtn = setInterval(function () { 
+    var usertime = Date.now(), cbt = Date.UTC(2023, 9, 6, 7, 0, 0), obt = Date.UTC(2023, 9, 16, 7, 0, 0);
+    if (usertime >= obt) {
+        $('.cb_btn , .ob_btn').show();
+        clearInterval(Timebtn)
+    }else if(usertime >= cbt){
+        $('.cb_btn').show();
+    }
+}, 1)
