@@ -18,6 +18,10 @@ Route::middleware(['setReturnUrl'])->group(function () {
     Route::get('/prereg', function () {
         return view('event/prereg_index');
     });
+    // 領獎專區
+    Route::get('/reward', function () {
+        return view('front/receiveAward');
+    })->name('reward');
 
 });
 
@@ -69,9 +73,5 @@ if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
             return view('front/exchange');
         })->name('exchange');
 
-        // 領獎專區
-        Route::get('/reward', function () {
-            return view('front/receiveAward');
-        })->name('reward');
     }
 }
