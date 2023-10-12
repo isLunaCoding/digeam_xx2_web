@@ -22,6 +22,10 @@ Route::middleware(['setReturnUrl'])->group(function () {
     Route::get('/reward', function () {
         return view('front/receiveAward');
     })->name('reward');
+    // 序號兌換
+    Route::get('/exchange', function () {
+        return view('front/exchange');
+    })->name('exchange');
 
 });
 
@@ -68,10 +72,6 @@ if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
         Route::get('/OBT', function () {
             return view('event/OBT');
         });
-        // 序號兌換
-        Route::get('/exchange', function () {
-            return view('front/exchange');
-        })->name('exchange');
 
     }
 }
