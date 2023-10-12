@@ -32,6 +32,10 @@ class SuspensionController extends AdminController
         $grid->column('punish', __('懲處結果'));
         $grid->column('created_at', __('建立時間'))->date();
         $grid->disableRowSelector();
+
+        $grid->actions(function ($actions) {
+            $actions->disableDelete();
+        });
         return $grid;
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Model\event\CBT_Buy_Log;
+use App\Model\event\PandaGuessLog;
 use App\Model\event\PreregUser;
 use App\Model\Reward\package_item;
 use App\Model\Reward\reward_content;
@@ -11,6 +12,7 @@ use App\Model\Reward\reward_event;
 use App\Model\Reward\reward_getlog;
 use App\Model\Reward\reward_group;
 use DateTime;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
 class rewardController extends Controller
@@ -87,8 +89,180 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
-            if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
-                if ((date('YmdHis') >= '20230915000000') && (date('YmdHis') <= '20231231235959')) {
+            if ($user_id == 'xx2digeam01' || $user_id == 'xx2digeam02' || $user_id == 'xx2digeam03' || $user_id == 'xx2digeam04' || $user_id == 'minnn112') {
+                //mycard1000
+                if ((date('YmdHis') >= '20231006000000')) {
+                    $db = \DB::connection('mysql');
+                    $client = new Client();
+                    $data = [
+                        'user_id' => $user_id,
+                        'sdate' => '2023-10-01 12:00:00',
+                        'edate' => '2023-11-19 23:59:59',
+                        'PromoCode' => 'E8048',
+                    ];
+
+                    $headers = [
+                        'Content-Type' => 'application/json',
+                        'Accept' => 'application/json',
+                    ];
+
+                    $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getMyCardLog', [
+                        'headers' => $headers,
+                        'json' => $data,
+                    ]);
+                    $result = $res->getBody();
+                    $result = json_decode($result);
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '8')->count();
+                    while ($eventNum < $result) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',8,'mycard儲值回饋1000')";
+                        $event_info = $db->statement($sql);
+                        $eventNum++;
+                    }
+                    \DB::disconnect('mysql');
+                }
+                //mycard500
+                if ((date('YmdHis') >= '20231006000000')) {
+                    $db = \DB::connection('mysql');
+                    $client = new Client();
+                    $data = [
+                        'user_id' => $user_id,
+                        'sdate' => '2023-10-01 12:00:00',
+                        'edate' => '2023-11-19 23:59:59',
+                        'PromoCode' => 'E8052',
+                    ];
+
+                    $headers = [
+                        'Content-Type' => 'application/json',
+                        'Accept' => 'application/json',
+                    ];
+
+                    $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getMyCardLog', [
+                        'headers' => $headers,
+                        'json' => $data,
+                    ]);
+                    $result = $res->getBody();
+                    $result = json_decode($result);
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '7')->count();
+                    while ($eventNum < $result) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',7,'mycard儲值回饋500')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                        $eventNum++;
+                    }
+                    \DB::disconnect('mysql');
+                }
+                //熊貓
+                if ((date('YmdHis') >= '20231006000000')) {
+                    $db = \DB::connection('mysql');
+                    //猜對次數
+                    $successNum = PandaGuessLog::where('user_id', $user_id)->where('result', '正確')->count();
+
+                    if ($successNum >= 1) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '12')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',12,'猜對次數1')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($successNum >= 3) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '13')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',13,'猜對次數3')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($successNum >= 5) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '14')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',14,'猜對次數5')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($successNum >= 7) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '15')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',15,'猜對次數7')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($successNum >= 10) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '16')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',16,'猜對次數10')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    //累積次數
+                    $accumlateNum = PandaGuessLog::where('user_id', $user_id)->count();
+                    if ($accumlateNum >= 5) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '17')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',17,'累積次數5')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($accumlateNum >= 10) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '18')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',18,'累積次數10')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($accumlateNum >= 15) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '19')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',19,'累積次數15')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($accumlateNum >= 20) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '20')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',20,'累積次數20')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($accumlateNum >= 30) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '30')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',30,'累積次數30')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    \DB::disconnect('mysql');
+                }
+                //初出江湖
+                if ((date('YmdHis') >= '20231019120000')) {
+                    $db = \DB::connection('mysql');
+                    $user_info = PreregUser::where('user_id', $user_id)->where('user_mobile', '!=', '')->first();
+                    if ($user_info != null) {
+                        $event_infos = reward_getlog::where('group_id', '9')->where('user_id', $user_id)->count();
+                        if ($event_infos == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',9,'九色神鹿')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',10,'寶石兌換券')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',11,'洪福齊天符')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    \DB::disconnect('mysql');
+                }
+                //綁定名士
+                if ((date('YmdHis') >= '20231011120000') && (date('YmdHis') <= '20231231235959')) {
                     $celebrity = PreregUser::where('user_id', $user_id)->first();
                     $db = \DB::connection('mysql');
                     if ($celebrity != null) {
@@ -121,7 +295,8 @@ class rewardController extends Controller
                     }
                     \DB::disconnect('mysql');
                 }
-                if ((date('YmdHis') >= '20230915000000') && (date('YmdHis') <= '20231231235959')) {
+                //prereg禮包
+                if ((date('YmdHis') >= '20231019000000')) {
                     // $id = MemberRecord::getUserInfo($user_id);
                     $db = \DB::connection('mysql');
                     $user_info = CBT_Buy_Log::where('user_id', $user_id)->where('price', '299')->count();
@@ -156,12 +331,13 @@ class rewardController extends Controller
                     \DB::disconnect('mysql');
                 }
             }
+
         }
 
         if ($_SERVER['HTTP_CF_CONNECTING_IP'] != '211.23.144.219') {
             $event_lists = reward_event::where('is_open', 'Y')->where('start_date', '<', date('Y-m-d H:i:s'))->orderby('id', 'desc')->get();
         } else {
-            $event_lists = reward_event::orderby('id', 'desc')->get();
+            $event_lists = reward_event::orderby('start_date', 'desc')->get();
         }
 
         foreach ($event_lists as $event_list) {
@@ -236,7 +412,9 @@ class rewardController extends Controller
                     $bind_c = $celebrity->keep_celebrity;
                     $now_c = $celebrity->celebrity;
                     if ($now_c != null) {
-                        if ((date('YmdHis') < '20231026000000')) {
+                        if ((date('YmdHis') < '20231019120000')) {
+                            $celebrity_name = '無';
+                        } elseif ((date('YmdHis') < '20231026000000')) {
                             if ($bind_c != null) {
                                 $index = array_search($bind_c, $c);
                                 $celebrity_name = $c_name[$index];
@@ -482,20 +660,5 @@ class rewardController extends Controller
             ]);
         }
 
-    }
-
-    public function myCardEvent(Request $request)
-    {
-        $user_id = $request->user_id;
-        $group_id = $request->group_id;
-            $db = \DB::connection('mysql');
-            if ($group_id == 7) {
-                $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',7,'mycard儲值回饋500')";
-            } else {
-                $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',8,'mycard儲值回饋1000')";
-            }
-            $db->disableQueryLog();
-            $event_info = $db->statement($sql);
-        \DB::disconnect('mysql');
     }
 }

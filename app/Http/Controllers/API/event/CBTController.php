@@ -43,12 +43,12 @@ class CBTController extends Controller
         }
 
         $client = new Client(['verify' => false]);
-        $res = $client->request('POST', 'http://testapi.digeam.com/billing/get_balance', [
+        $res = $client->request('POST', 'http://api.digeam.com/billing/get_balance', [
             'form_params' => [
                 'user_id' => $request->user,
-                'user_ip' => '192.168.0.41',
+                'user_ip' => '219.84.160.51',
                 'game_service' => 'CGAMEXX2018',
-                'server_id' => '1899',
+                'server_id' => '1801',
                 'char_id' => 0,
             ],
         ]);
@@ -123,12 +123,12 @@ class CBTController extends Controller
         }
 
         $client = new Client(['verify' => false]);
-        $res = $client->request('POST', 'http://testapi.digeam.com/billing/get_balance', [
+        $res = $client->request('POST', 'http://api.digeam.com/billing/get_balance', [
             'form_params' => [
                 'user_id' => $request->user,
-                'user_ip' => '192.168.0.41',
+                'user_ip' => '219.84.160.51',
                 'game_service' => 'CGAMEXX2018',
-                'server_id' => '1899',
+                'server_id' => '1801',
                 'char_id' => 0,
             ],
         ]);
@@ -173,16 +173,16 @@ class CBTController extends Controller
         }
 
         $client = new Client(['verify' => false]);
-        $res = $client->request('POST', 'http://testapi.digeam.com/billing/purchase', [
+        $res = $client->request('POST', 'http://api.digeam.com/billing/purchase', [
             'form_params' => [
                 'user_id' => $request->user,
-                'user_ip' => '192.168.0.41',
+                'user_ip' => $real_ip,
                 'game_service' => 'CGAMEXX2018',
                 'purchase_name' => $package_name,
                 'purchase_cnt' => 1,
                 'unit_price' => $request->gift,
                 'total_price' => $request->gift,
-                'server_id' => '1899',
+                'server_id' => '1801',
                 'char_id' => 0,
             ],
         ]);
