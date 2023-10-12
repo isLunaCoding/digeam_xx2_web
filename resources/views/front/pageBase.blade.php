@@ -23,10 +23,10 @@
         <div class="sectionBG">
             <div class="container">
                 <div class="btnBoxLeft">
-                    {{-- <a target="_blank" class="buttonDownload" href="{{ route('download') }}"><img
-                        src="/img/event/homepage/buttonDownload.jpg"></a> --}}
-                    <a target="_blank" class="buttonDownload" onclick="downloadRemind()"><img
-                            src="/img/event/homepage/buttonDownload.jpg"></a>
+                    <a target="_blank" class="buttonDownload" href="{{ route('download') }}"><img
+                        src="/img/event/homepage/buttonDownload.jpg"></a>
+                    {{-- <a target="_blank" class="buttonDownload" onclick="downloadRemind()"><img
+                            src="/img/event/homepage/buttonDownload.jpg"></a> --}}
                     <div class="btnBox2">
                         <a class="register" target="_blank" href="https://www.digeam.com/register">
                             <img src="/img/event/homepage/imgRegister.png">

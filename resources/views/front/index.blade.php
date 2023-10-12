@@ -22,10 +22,10 @@
 @section('section1Container')
     <div class="container">
         <div class="btnBox1">
-            {{-- <a target="_blank" class="buttonDownload" href="{{ route('download') }}"><img
-                    src="/img/event/homepage/buttonDownload.jpg"></a> --}}
-            <a target="_blank" class="buttonDownload" onclick="downloadRemind()"><img
+            <a target="_blank" class="buttonDownload" href="{{ route('download') }}"><img
                     src="/img/event/homepage/buttonDownload.jpg"></a>
+            {{-- <a target="_blank" class="buttonDownload" onclick="downloadRemind()"><img
+                    src="/img/event/homepage/buttonDownload.jpg"></a> --}}
             <div class="btnBox2">
                 <a class="register" target="_blank" href="https://www.digeam.com/register">
                     <img src="/img/event/homepage/imgRegister.png">
@@ -361,7 +361,7 @@
         function downloadRemind(){
             alert('主程式將於近日開放下載，敬請期待')
         }
-        
+
 
         // section1資訊tab
         $(".newsContainer .text").hide();
@@ -397,13 +397,13 @@
             $(this).addClass("active");
             $("." + this.dataset.char + "").show();
         });
-        
+
         // section3輪播
         $(function() {
             $('.gallery_container').gallery_slider({
                 imgNum: {{ $game_features->count() }}
             });
         })
-        
+
     </script>
 @endsection

@@ -47,8 +47,6 @@ Route::get('/suspension', 'front\suspensionController@index')->name('suspension'
 // launcher
 Route::get('/launcher', 'front\indexController@launcher')->name('launcher');
 
-Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
-
 // 百科
 Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 // Route::get('wikiSearch/{keyword?}', 'front\wikiController@search');
@@ -56,18 +54,17 @@ Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 Route::get('/download', function () {
     return view('front.download');
 })->name('download');
-
+// CBT
+Route::get('/CBT', 'front\CBTController@index');
+// Route::get('/CBT', function () {
+//     return view('event/CBT');
+// });
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
 if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
     if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
 
-        // CBT
-        Route::get('/CBT', 'front\CBTController@index');
-        Route::get('/CBT', function () {
-            return view('event/CBT');
-        });
         //obt
         Route::get('/OBT', function () {
             return view('event/OBT');
