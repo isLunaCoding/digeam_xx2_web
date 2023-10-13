@@ -11,6 +11,8 @@ use App\Model\Reward\reward_content;
 use App\Model\Reward\reward_event;
 use App\Model\Reward\reward_getlog;
 use App\Model\Reward\reward_group;
+use App\Model\sendItem;
+use App\Model\sendItemLog;
 use DateTime;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -35,7 +37,11 @@ class rewardController extends Controller
         } elseif ($request->type == 'search') {
             $result = rewardController::search($request);
             return $result;
+        } elseif ($request->type == 'send') {
+            $result = rewardController::send($request);
+            return $result;
         }
+
     }
     public function get_char(Request $request)
     {
@@ -657,6 +663,72 @@ class rewardController extends Controller
         } else {
             return response()->json([
                 'status' => -99,
+            ]);
+        }
+
+    }
+    public function send(Request $request)
+    {
+        $user_id = $request->user_id;
+        $item = $request->item;
+        $char_name = $request->char_name;
+        $charid = $request->charid;
+        $server_id = $request->server_id;
+
+        //找出uid
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $user_id);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $result = curl_exec($ch);
+        curl_close($ch);
+        $result = json_decode($result);
+        if ($result->status == 0) {
+            $info = $result->account_info;
+            $uid = $info->uid;
+        } else {
+            return response()->json([
+                'status' => -99,
+            ]);
+        }
+        //找出同分類item
+        $status = 0;
+        $item_lists = sendItem::where('cate_id', $item)->get();
+        foreach ($item_lists as $value) {
+            $item_code = $value->item_code;
+            $itemcnt = $value->itemcnt;
+            $isbind = $value->isbind;
+            $content = '寄送道具';
+            $title = '寄送';
+            $ch = curl_init();
+            $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
+                . "&zoneid=" . $server_id . "&charid=" . $charid . "&content=" . $content . "&title=" . $title . "&name=" . $char_name . "&itemid=" . $item_code . "&itemnum=" . $itemcnt . "&isbind=" . $isbind;
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            $result3 = curl_exec($ch);
+            curl_close($ch);
+            $result3 = json_decode($result3);
+            if ($result3->status != 0) {
+                $status = $result3->status;
+            } else {
+                $createlog = new sendItemLog();
+                $createlog->user_id = $user_id;
+                $createlog->char_name = $char_name;
+                $createlog->charid = $charid;
+                $createlog->server_id = $server_id;
+                $createlog->item_name = $value->item_name;
+                $createlog->itemcnt = $itemcnt;
+                $createlog->save();
+            }
+        }
+        if ($status == 0) {
+            return response()->json([
+                'status' => 1,
+                'uid' => $uid,
+            ]);
+        } else {
+            return response()->json([
+                'status' => -98,
+                'uid' => $uid,
             ]);
         }
 
