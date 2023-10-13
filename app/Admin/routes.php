@@ -5,10 +5,10 @@ use Illuminate\Routing\Router;
 Admin::routes();
 
 Route::group([
-    'prefix'        => config('admin.route.prefix'),
-    'namespace'     => config('admin.route.namespace'),
-    'middleware'    => config('admin.route.middleware'),
-    'as'            => config('admin.route.prefix') . '.',
+    'prefix' => config('admin.route.prefix'),
+    'namespace' => config('admin.route.namespace'),
+    'middleware' => config('admin.route.middleware'),
+    'as' => config('admin.route.prefix') . '.',
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('home');
@@ -30,4 +30,7 @@ Route::group([
     $router->resource('{id}/serial_item', 'SerialitemController');
     $router->resource('rewardLog', 'RewardLogController');
     $router->resource('launcherimg', 'launcherController');
+    $router->resource('send', 'sendItemController');
+    $router->resource('sendItemList', 'sendItemListController');
+    $router->resource('sendItemLog', 'sendItemLogController');
 });
