@@ -399,7 +399,7 @@ $(".p5_enter_btn").on("click",function(){
                         report_success()
                     }
                 }else if(res.status == -95){
-                    end()
+                    end2()
                 }else{
                     error()
                 }
