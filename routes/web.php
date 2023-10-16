@@ -62,13 +62,8 @@ Route::get('/CBT', 'front\CBTController@index');
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
-if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-    if ($_SERVER["HTTP_CF_CONNECTING_IP"] == '211.23.144.219') {
-
         //obt
         Route::get('/OBT', function () {
             return view('event/OBT');
         });
 
-    }
-}
