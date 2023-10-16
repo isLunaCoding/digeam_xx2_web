@@ -15,15 +15,15 @@
     <meta property="og:image" content="img/event/" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
-    <meta property="og:image" content="img/event/obt/share_bg.png" />
+    <meta property="og:image" content="/img/event/obt/share_bg.png" />
     <meta name="author" content="DiGeam" />
     <meta name="Resource-type" content="Document" />
-    <link rel="icon" sizes="192x192" href="img/event/prereg/favicon.ico">
+    <link rel="icon" sizes="192x192" href="/img/event/prereg/favicon.ico">
     <meta name="description" content="人人皆可恣意飛行的修仙大世界，打造屬於自己的修仙之路，2023年度仙俠鉅作【仙俠世界貳】事前預約中！" />
     <link rel="pingback" href="" />
     <title>《仙俠世界貳》OBT</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="css/event/obt/style.css">
+    <link rel="stylesheet" href="/css/event/obt/style.css">
 
 </head>
 
