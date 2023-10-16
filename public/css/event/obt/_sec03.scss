@@ -1,0 +1,866 @@
+.sec03 {
+    @extend %bg-cover;
+    width: 100%;
+    max-width: 1920px;
+    height: 1010px;
+    background-image: url(../../../img/event/obt/sec02/Section2Bg.webp);
+
+    @include sm() {
+        height: 1210px;
+    }
+
+    &_box {
+        z-index: 5;
+        padding-top: 6%;
+        width: 90%;
+        margin: 0 auto;
+        @extend %f-r-c;
+        justify-content: space-evenly;
+
+        @include sm() {
+            display: none;
+        }
+
+
+        .sec03_menu {
+            z-index: 4;
+            width: 12%;
+            @extend %f-c-c;
+
+            @include sm() {
+                flex-direction: row;
+                width: 93%;
+                margin-top: 93px;
+                margin-bottom: 24px;
+            }
+
+            li {
+                text-align: center;
+                letter-spacing: 1.3px;
+                font-size: 22px;
+                width: 190px;
+                height: 60px;
+                border: 2px solid #b69542;
+                border-radius: 2px;
+                @extend %f-r-c;
+                margin: 10px 0;
+                cursor: pointer;
+                font-family: 'SourceHanSerifTC-Heavy';
+                box-shadow: 0px 0px 5px #000;
+                background-image: url(../../../img/event/obt/sec03/S3_1TitleBg.webp);
+                transition: all .5s ease-in-out;
+
+                &:hover,
+                &.active {
+                    background-image: url(../../../img/event/obt/sec03/S3_1TitleHoverBg.webp);
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    @include re-lt(0px, 0px);
+                    @include size(34px, 24px);
+                    transform: rotate(-90deg);
+                    background-image: url(../../../img/event/obt/sec03/S3TabSwing.webp);
+                }
+
+
+            }
+        }
+
+        .sec03_main {
+            @include size(80%, 730px);
+            @extend %bg-cover;
+            border: 4px solid #b69542;
+            border-radius: 5px;
+            box-shadow: inset 0 0 5px #000000;
+            position: relative;
+            background-image: url(../../../img/event/obt/sec03/S3Bg02.webp);
+            @extend %f-c-c;
+
+            &::before {
+                content: '';
+                display: flex;
+                @include size(100%, 101px);
+                max-width: 100px;
+                @include ab-lt(-4px, -4px);
+                transform: rotate(90deg);
+                @extend %bg-contain;
+                background-image: url(../../../img/event/obt/sec03/S3Bg02Deco.webp);
+
+                @include xlg() {
+                    max-width: 54px;
+                    @include ab-lt(7px, -14px);
+                }
+            }
+
+            &::after {
+                content: '';
+                display: flex;
+                @include size(100%, 101px);
+                max-width: 100px;
+                @include ab-rb(-4px, -6px);
+                transform: rotate(270deg);
+                @extend %bg-contain;
+                background-image: url(../../../img/event/obt/sec03/S3Bg02Deco.webp);
+
+                @include xlg() {
+                    max-width: 54px;
+                    @include ab-rb(7px, -14px);
+                }
+            }
+
+            @include xlg() {
+                width: 105%;
+            }
+
+            @include sm() {
+                width: 100%;
+                height: 770px;
+                min-height: 770px
+            }
+        }
+
+        .title_bg {
+            @include size(515px, 97px);
+            margin-left: 37%;
+            margin-top: 1%;
+            @extend %f-r-c;
+            background-image: url(../../../img/event/obt/sec03/S2Title.webp);
+
+            @include lg() {
+                margin-left: 27%;
+            }
+
+            @include sm() {
+                display: none;
+            }
+        }
+
+        h3 {
+            @include size(177px, 64px);
+            @extend %f-r-c;
+            justify-content: flex-start;
+            @extend %bg-cover;
+            margin: 0 auto;
+            padding-bottom: 14px;
+            padding-left: 32px;
+            margin-top: 20px;
+            background-image: url(../../../img/event/obt/sec03/S3Title02Bg.webp);
+            font-family: 'SourceHanSerifTC-Heavy';
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0px 0px 5px #1c0e07;
+        }
+
+        p {
+            color: #420d0d;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 0 auto;
+            font-weight: bold;
+            word-break: break-all;
+
+        }
+
+        span {
+            color: red;
+            font-size: 16px;
+        }
+
+        .txt_left {
+            margin: 0 auto;
+            @extend %f-c-c;
+            text-align: left;
+            word-break: break-all;
+        }
+
+        .img_box {
+            margin: 15px auto;
+            @extend %f-r-c;
+            flex-wrap: wrap;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .case_box {
+            margin: 15px auto;
+            @extend %f-r-c;
+            flex-wrap: wrap;
+            position: relative;
+            cursor: pointer;
+
+            @extend %ani-box-1s;
+
+
+            .case_txt {
+                @include sm() {
+                    @include re-lt(0px, -70px);
+                }
+            }
+        }
+
+        .content_box {
+            margin-top: 20px;
+            width: 99%;
+            height: 80%;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            @include lg() {
+                padding: 0 4%;
+            }
+
+            @include sm() {
+                width: 95%;
+                height: 714px;
+                margin: 0 auto;
+                height: 714px;
+            }
+        }
+
+        @for $i from 1 through 6 {
+            .t#{$i}_title {
+                @include size(204px, 49px);
+                margin-right: 181px;
+                background-image: url('../../../img/event/obt/sec03/t' + $i + '_title.webp');
+            }
+        }
+
+        .tab_content {
+            width: 100%;
+            height: 100%;
+            padding: 1% 0;
+        }
+
+        .t2 {
+
+            &_content_box {
+                width: 100%;
+                padding: 1% 0;
+                height: 65%;
+                overflow-y: auto;
+                overflow-x: hidden;
+                margin-top: 2%;
+
+                @include sm() {
+                    width: 95%;
+                    height: 655px;
+                    margin: 0 auto;
+                    min-height: 655px;
+                }
+            }
+
+            &_content {
+                @extend %f-r-c;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                @include lg() {
+                    flex-direction: column;
+                    align-content: center;
+                }
+
+                .img_box {
+                    margin: 0;
+                    width: 40%;
+
+                    img {
+                        max-width: 80%;
+                    }
+
+                    @include sm() {
+                        width: 70%;
+                    }
+                }
+
+                .txt_box {
+                    width: 40%;
+
+                    @include sm() {
+                        width: 80%;
+                    }
+                }
+            }
+
+
+            &_menu {
+                width: 60%;
+                @extend %f-r-c;
+                justify-content: space-around;
+                margin: 0 auto;
+
+                @include lg() {
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+
+                @include sm() {
+                    justify-content: center;
+                    margin-top: 72px;
+                }
+
+            }
+
+            &_tab {
+                margin-top: 15px;
+                @include size(180px, 60px);
+                background-position: center;
+                background-size: 115%;
+                @extend %bg-cover;
+                border-radius: 50px;
+                border: #b69542 2px solid;
+                box-shadow: inset #000 0px 0px 5px;
+                background-image: url(../../../img/event/obt/sec03/S3TabTitleBg.webp);
+                transition: all .4s ease-in-out;
+                @extend %f-r-c;
+                letter-spacing: 1px;
+                font-size: 20px;
+                cursor: pointer;
+                word-break: break-all;
+
+                &::before,
+                &::after {
+                    content: '';
+                    @include size(34px, 24px);
+                    @extend %bg-cover;
+                    background-image: url(../../../img/event/obt/sec03/S3TabSwing.webp);
+                }
+
+                &::before {
+                    @include re-lt(0px, 0px);
+                }
+
+                &::after {
+                    transform: scaleX(-1);
+                    @include re-rt(0px, 0px);
+                }
+
+                &:hover,
+                &.active {
+                    background-image: url(../../../img/event/obt/sec03/S3_1TitleHoverBg.webp);
+                }
+
+                @include sm() {
+                    width: 26%;
+                    font-size: 16px;
+                    margin: 0 10px;
+                    background-size: cover;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+        .other_box,
+        .other_box2 {
+            @include ab-lb(0, -45px);
+            @extend %f-r-c;
+            margin: 0 auto;
+            width: 100%;
+
+            @include sm() {
+                margin: 0 auto;
+                width: 100%;
+                justify-content: space-around;
+                bottom: -58px;
+            }
+
+            .other {
+                cursor: pointer;
+                @extend %f-c-c;
+                font-family: 'SourceHanSerifTC-Heavy';
+                @include size(100%, 55px);
+                max-width: 180px;
+                background-color: #830800;
+                text-align: center;
+                border: 2px solid #b69542;
+                font-size: 20px;
+                color: #fff;
+                margin-right: 20px;
+                cursor: pointer;
+                z-index: 4;
+                transition: all .3s ease-in-out;
+                margin: 0 10px;
+
+                &:hover {
+                    letter-spacing: 3px;
+                }
+            }
+        }
+
+
+
+
+    }
+
+    &_rwd_box {
+        z-index: 5;
+        display: none;
+        padding-top: 6%;
+        width: 90%;
+        margin: 0 auto;
+        @extend %f-r-c;
+        justify-content: space-evenly;
+
+        @include sm() {
+            display: block;
+            padding-top: 16%;
+            flex-direction: column;
+        }
+
+        @include xxs() {
+            width: 100%;
+        }
+
+
+        .rwd_menu {
+
+            @include sm() {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-top: 93px;
+                margin-bottom: 24px;
+            }
+
+            .slick-list {
+
+                .slick-track {
+                    display: flex;
+                    align-items: center;
+                }
+
+            }
+
+            .slick-slide {
+                text-align: center;
+                letter-spacing: 1.3px;
+                font-size: 22px;
+                width: 190px;
+                height: 60px;
+                border: 2px solid #b69542;
+                border-radius: 2px;
+                @extend %f-r-c;
+                margin: 10px 0;
+                cursor: pointer;
+                font-family: 'SourceHanSerifTC-Heavy';
+                box-shadow: 0px 0px 5px #000;
+                background-image: url(../../../img/event/obt/sec03/S3_1TitleBg.webp);
+                transition: all .5s ease-in-out;
+                @extend %bg-cover;
+
+                &:hover,
+                &.slick-active {
+                    margin: 0 10px;
+                    background-image: url(../../../img/event/obt/sec03/S3_1TitleHoverBg.webp);
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    @include re-lt(0px, 0px);
+                    @include size(34px, 24px);
+                    transform: rotate(-90deg);
+                    background-image: url(../../../img/event/obt/sec03/S3TabSwing.webp);
+                }
+
+
+            }
+
+            .slick-arrow {
+                border: none;
+                background-color: transparent;
+                @include size(50px, 76px);
+                @extend %bg-contain;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    @include size(50px, 76px);
+                }
+            }
+
+            .slick-prev {
+                transform: rotate(180deg);
+                margin-right: 5%;
+
+                background-image: url(../../../img/event/obt/sec03/S3Arrow.webp);
+
+                &:hover {
+                    filter: drop-shadow(0px, 0px, 5px, #fff);
+                    background-image: url(../../../img/event/obt/sec03/S3ArrowHover.webp);
+                }
+            }
+
+            .slick-next {
+                margin-left: 5%;
+                background-image: url(../../../img/event/obt/sec03/S3Arrow.webp);
+
+                &:hover {
+                    filter: drop-shadow(0px, 0px, 5px, #fff);
+                    background-image: url(../../../img/event/obt/sec03/S3ArrowHover.webp);
+                }
+
+
+            }
+
+        }
+
+        .rwd_content {
+            @include size(80%, 730px);
+            @extend %bg-cover;
+            border: 4px solid #b69542;
+            border-radius: 5px;
+            box-shadow: inset 0 0 5px #000000;
+            position: relative;
+            background-image: url(../../../img/event/obt/sec03/S3Bg02.webp);
+            @extend %f-c-c;
+
+            &::before {
+                content: '';
+                display: flex;
+                @include size(100%, 101px);
+                max-width: 100px;
+                @include ab-lt(7px, 6px);
+                transform: rotate(90deg);
+                @extend %bg-contain;
+                background-image: url(../../../img/event/obt/sec03/S3Bg02Deco.webp);
+
+                @include xlg() {
+                    max-width: 54px;
+                    @include ab-lt(7px, -14px);
+                }
+            }
+
+            &::after {
+                content: '';
+                display: flex;
+                @include size(100%, 101px);
+                max-width: 100px;
+                @include ab-rb(7px, 6px);
+                transform: rotate(270deg);
+                @extend %bg-contain;
+                background-image: url(../../../img/event/obt/sec03/S3Bg02Deco.webp);
+
+                @include xlg() {
+                    max-width: 54px;
+                    @include ab-rb(7px, -14px);
+                }
+            }
+
+            @include xlg() {
+                width: 105%;
+            }
+
+            @include sm() {
+                width: 100%;
+                height: 770px;
+                min-height: 770px
+            }
+
+            @include xs() {
+                width: 95%;
+                margin: 0 auto;
+            }
+        }
+
+        .title_bg {
+            @include size(515px, 97px);
+            margin-left: 37%;
+            margin-top: 1%;
+            @extend %f-r-c;
+            background-image: url(../../../img/event/obt/sec03/S2Title.webp);
+
+            @include sm() {
+                display: none;
+            }
+        }
+
+        h3 {
+            @include size(177px, 64px);
+            @extend %f-r-c;
+            justify-content: flex-start;
+            @extend %bg-cover;
+            margin: 0 auto;
+            padding-bottom: 14px;
+            padding-left: 32px;
+            margin-top: 20px;
+            background-image: url(../../../img/event/obt/sec03/S3Title02Bg.webp);
+            font-family: 'SourceHanSerifTC-Heavy';
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0px 0px 5px #1c0e07;
+        }
+
+        p {
+            color: #420d0d;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 0 auto;
+            font-weight: bold;
+            word-break: break-all;
+
+            @include xs() {
+                font-size: 18px;
+            }
+
+            @include xxs() {
+                font-size: 16px;
+            }
+
+        }
+
+        span {
+            color: red;
+            font-size: 16px;
+        }
+
+        .txt_left {
+            margin: 0 auto;
+            @extend %f-c-c;
+            text-align-last: left;
+            word-break: break-all;
+        }
+
+        .img_box {
+            margin: 15px auto;
+            @extend %f-r-c;
+            flex-wrap: wrap;
+
+            img {
+                max-width: 100%;
+
+                @include xlg() {
+                    max-width: 60%;
+                }
+            }
+        }
+
+        .case_box {
+            margin: 15px auto;
+            @extend %f-r-c;
+            flex-wrap: wrap;
+            position: relative;
+            @extend %ani-box-1s;
+
+            @include xs() {
+                height: 230px;
+            }
+
+            @include xsm() {
+                height: 200px;
+            }
+
+            .case_txt {
+                @include sm() {
+                    @include re-lt(0px, -70px);
+                }
+            }
+        }
+
+        .content_box {
+            margin-top: 20px;
+            width: 99%;
+            height: 80%;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            @include sm() {
+                width: 95%;
+                height: 586px;
+                margin: 0 auto;
+            }
+        }
+
+        @for $i from 1 through 6 {
+            .t#{$i}_title {
+                @include size(204px, 49px);
+                margin-right: 181px;
+                background-image: url('../../../img/event/obt/sec03/t' + $i + '_title.webp');
+            }
+        }
+
+        .t2 {
+
+            &_content_box {
+                width: 100%;
+                padding: 1% 0;
+                height: 65%;
+                overflow-y: auto;
+                overflow-x: hidden;
+                margin-top: 2%;
+
+                @include sm() {
+                    width: 95%;
+                    margin: 20px auto;
+                    min-height: 433px;
+                }
+            }
+
+            &_content {
+                @extend %f-r-c;
+                flex-wrap: wrap;
+
+                .img_box {
+                    margin: 0;
+                    width: 40%;
+
+                    img {
+                        max-width: 80%;
+                    }
+
+                    @include sm() {
+                        width: 70%;
+                    }
+                }
+            }
+
+
+            &_menu {
+                width: 60%;
+                @extend %f-r-c;
+                justify-content: space-around;
+                margin: 0 auto;
+
+                @include lg() {
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+
+                @include sm() {
+                    justify-content: center;
+                    margin-top: 56px;
+                }
+
+                @include xs() {
+                    margin-top: 30px;
+                }
+
+            }
+
+            &_tab {
+                margin-top: 15px;
+                @include size(180px, 60px);
+                background-position: center;
+                background-size: 115%;
+                @extend %bg-cover;
+                border-radius: 50px;
+                border: #b69542 2px solid;
+                box-shadow: inset #000 0px 0px 5px;
+                background-image: url(../../../img/event/obt/sec03/S3TabTitleBg.webp);
+                transition: all .4s ease-in-out;
+                @extend %f-r-c;
+                letter-spacing: 1px;
+                font-size: 20px;
+                cursor: pointer;
+                word-break: break-all;
+
+                &::before,
+                &::after {
+                    content: '';
+                    @include size(34px, 24px);
+                    @extend %bg-cover;
+                    background-image: url(../../../img/event/obt/sec03/S3TabSwing.webp);
+                }
+
+                &::before {
+                    @include re-lt(0px, 0px);
+                }
+
+                &::after {
+                    transform: scaleX(-1);
+                    @include re-rt(0px, 0px);
+                }
+
+                &:hover,
+                &.active {
+                    background-image: url(../../../img/event/obt/sec03/S3_1TitleHoverBg.webp);
+                }
+
+                @include sm() {
+                    width: 25%;
+                    font-size: 16px;
+                    margin: 0 10px;
+                    background-size: cover;
+                    text-align: center;
+                }
+
+                @include xlg() {
+                    width: 33%;
+                    margin: 10px 10px;
+                }
+
+                @include xs() {
+                    width: 29%;
+                    margin: 5px 5px;
+                }
+
+            }
+
+        }
+
+        .other_box,
+        .other_box2 {
+            z-index: 5;
+            @include ab-lb(0, -45px);
+            @extend %f-r-c;
+            margin: 0 auto;
+            width: 100%;
+
+            @include sm() {
+                z-index: 5;
+                margin: 0 auto;
+                margin-top: 10px;
+                width: 80%;
+                position: relative;
+                justify-content: space-around;
+                bottom: 0;
+            }
+
+            @include xs() {
+                width: 80%;
+            }
+
+            @include xxs() {
+                width: 78%;
+            }
+
+            .other {
+                cursor: pointer;
+                @extend %f-c-c;
+                font-family: 'SourceHanSerifTC-Heavy';
+                @include size(100%, 55px);
+                max-width: 180px;
+                background-color: #830800;
+                text-align: center;
+                border: 2px solid #b69542;
+                font-size: 20px;
+                color: #fff;
+                margin-right: 20px;
+                cursor: pointer;
+                z-index: 4;
+                transition: all .3s ease-in-out;
+                margin: 0 10px;
+
+                &:hover {
+                    letter-spacing: 3px;
+                }
+
+                @include xs() {
+                    font-size: 18px;
+                }
+            }
+        }
+
+
+
+
+    }
+
+
+}

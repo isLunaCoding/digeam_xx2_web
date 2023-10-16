@@ -98,7 +98,7 @@ let content = {
         </ul>`,
         sec06: `<ul class="pop_b_tab">
         <li data-gift="tab1" class="gift_tab long">雙人．蒸氣限定<br>超跑坐騎包</li>
-        <li data-gift="tab2" class="gift_tab long">血影狂刀<br>絕無神包​</li>
+        <li data-gift="tab2" class="gift_tab long">血飲狂刀<br>絕無神包​</li>
         <li data-gift="tab3" class="gift_tab long">消費滿額禮​​</li>
     </ul>`
     },
@@ -561,7 +561,7 @@ let content = {
             </thead>
             <tbody>
                 <tr>
-                    <td>仙俠令一個​</td>
+                    <td>仙俠令</td>
                     <td>1​</td>
                     <td>用於仙俠錄收錄卡片時消耗。​</td>
                 </tr>
@@ -733,9 +733,9 @@ let content = {
                         <td>1.8%​</td>
                     </tr>
                     <tr>
-                        <td>血影狂刀絕無神​</td>
+                        <td>血飲狂刀絕無神​</td>
                         <td>1</td>
-                        <td>使用後可獲得血影狂刀絕無神​</td>
+                        <td>使用後可獲得<br>血飲狂刀絕無神​</td>
                         <td>1.2%​</td>
                     </tr>
                 </tbody>
@@ -747,8 +747,8 @@ let content = {
         <div class="gift_content" data-gift="tab3">
         <table>
         <thead>
-            <th width="40%">累積消費點數</th>
-            <th width="50%">道具名稱</th>
+            <th width="25%">累積消費點數</th>
+            <th width="25%">道具名稱</th>
             <th width="10%">數量</th>
         </thead>
         <tbody>
@@ -819,8 +819,8 @@ let content = {
     <br>
     <table>
         <thead>
-            <th width="40%">累積消費點數</th>
-            <th width="50%">道具名稱</th>
+            <th width="25%">累積消費點數</th>
+            <th width="25%">道具名稱</th>
             <th width="10%">數量</th>
         </thead>
         <tbody>
@@ -830,7 +830,7 @@ let content = {
                 <td>1​</td>
             </tr>
             <tr>
-                <td>血影狂刀絕無神​</td>
+                <td>血飲狂刀絕無神​</td>
                 <td>1</td>
             </tr>
             <thead>
@@ -841,8 +841,8 @@ let content = {
                 <td colspan="2">使用後可獲得雙人·蒸汽限定超跑</td>
             </tr>
             <tr>
-                <td>血影狂刀絕無神​</td>
-                <td colspan="2">使用後可獲得血影狂刀絕無神</td>
+                <td>血飲狂刀絕無神​</td>
+                <td colspan="2">使用後可獲得血飲狂刀絕無神</td>
             </tr>
             <thead>
                 <th colspan="3">備註</th>
@@ -864,9 +864,9 @@ let content = {
         alt="《仙俠世界貳》- 雙人爭氣限定/超跑坐騎包">
         </div></div>`,
         sec06_2: `<div class="pop_b_content">
-        <div class="img_box">
+        <div class="img_box2">
         <img src="../../../img/event/obt/sec03/S3_6People.webp"
-        alt="《仙俠世界貳》- 血影狂刀/絕無神包">
+        alt="《仙俠世界貳》- 血飲狂刀絕無神包">
          </div></div>`
     }
 }

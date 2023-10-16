@@ -1,0 +1,89 @@
+.header {
+    @extend %bg-cover;
+    background-image: url(../../../img/event/obt/header/section1Bg.webp);
+    width: 100%;
+    max-width: 1920px;
+    height: 950px;
+    position: relative;
+
+    @include sm(){
+        height: 100vh;
+        background-position: right 0px  center;
+        background-size: cover;
+    }
+
+    @include xlg(){
+        background-position: right -160px  center;
+    }
+
+    &_area {
+        width: 100%;
+        padding-top: 29vh;
+        margin: 0 auto;
+        @extend %f-c-c;
+        z-index: 4;
+
+        @include sm(){
+            padding-top: 43vh;
+        }
+
+
+        .title {
+            max-width: 1312px;
+
+            
+            @include sm(){
+                width: 180%;
+                max-width: 1100px;
+            }
+        }
+
+
+        .link_box {
+            margin: 0 auto;
+            display: flex;
+     
+
+            @include sm(){
+                width: 100%;
+            }
+
+            @include sm(){
+                display: none
+            }
+
+            .register,
+            .download,
+            .home {
+                @include size(287px, 100px);
+                @extend %bg-contain;
+                transition: all ease-in-out .3s;
+            }
+
+            .register {      
+                background-image: url(../../../img/event/obt/header/S1Register.webp);
+                &:hover{
+                    background-image: url(../../../img/event/obt/header/S1RegisterHover.webp);
+                }
+            }
+
+            .download {
+                background-image: url(../../../img/event/obt/header/S1Download.webp);
+                &:hover{
+                    background-image: url(../../../img/event/obt/header/S1DownloadHover.webp);
+                }
+            }
+
+            .home {
+                background-image: url(../../../img/event/obt/header/S1Offical.webp);
+                &:hover{
+                    background-image: url(../../../img/event/obt/header/S1OfficalHover.webp);
+                }
+            }
+
+        }
+
+    }
+
+
+}

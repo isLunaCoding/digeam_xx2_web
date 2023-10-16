@@ -1,0 +1,139 @@
+.nav {
+    width: 100%;
+    @include fixed-lt(0px, 0px);
+    background-color: rgba(0, 0, 0, .6);
+    // padding: 10px;
+    z-index: 10;
+
+    @include sm(){
+        display: none;
+    }
+
+    &_box {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1920px;
+        display: flex;
+        padding: 10px 15px;
+
+
+        .logo {
+            @include size(176px, 72px);
+            @extend %bg-cover;
+            background-image: url(../../../img/event/obt/header/logo.webp);
+            z-index: 3;
+        }
+
+        .topBar {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+            padding-top: 39px;
+            margin: 0 auto;
+
+
+            .line {
+                width: 70%;
+                height: 5px;
+                background-color: #f7dfa3;
+                border: 1px solid #000;
+                box-shadow: 0px 1px 5px;
+                @include ab-lt(14%, 18px);
+ 
+            }
+
+            
+
+
+
+            &_sec01 {
+                @include size(57px, 32px);
+                background-image: url(../../../img/event/obt/header/TopBarTitle01.webp);
+
+                &.active,
+                &:hover {
+                    @extend %bg-contain;
+                    scale: 1.1;
+                    @extend %hover;
+                    -webkit-filter:saturate(1.5);
+                    filter:saturate(1.5);
+                }
+
+                &::before{
+                    content:'';
+                    @include size(41px, 38px);
+                    background-image: url(../../../img/event/obt/header/TopBarIcon.webp);
+                    @include ab-lt(8px, -38px);
+                }
+    
+            }
+
+            &_sec02 {
+                @include size(190px, 31px);
+                background-image: url(../../../img/event/obt/header/TopBarTitle02.webp);
+
+                &.active,
+                &:hover {
+                    @extend %bg-contain;
+                    scale: 1.1;
+                    @extend %hover;
+                    -webkit-filter:saturate(1.5);
+                    filter:saturate(1.5);
+                }
+
+                &::before{
+                    content:'';
+                    @include size(41px, 38px);
+                    background-image: url(../../../img/event/obt/header/TopBarIcon.webp);
+                    @include ab-lt(73px, -38px);
+                }
+            }
+
+            &_sec03 {
+                @include size(105px, 31px);
+                background-image: url(../../../img/event/obt/header/TopBarTitle03.webp);
+
+                &.active,
+                &:hover {
+                    @extend %bg-contain;
+                    scale: 1.1;
+                    @extend %hover;
+                    -webkit-filter:saturate(1.5);
+                    filter:saturate(1.5);
+                }
+
+                &::before{
+                    content:'';
+                    @include size(41px, 38px);
+                    background-image: url(../../../img/event/obt/header/TopBarIcon.webp);
+                    @include ab-lt(30px, -38px);
+                }
+            }
+        }
+
+        .link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .dc{
+                @include size(64px,51px);
+                 background-image: url(../../../img/event/obt/header/dc_icon.webp);
+                 @extend %hover;
+                 margin-right: 10px;
+            }
+
+            .fb{
+                @include size(52px,51px);
+                background-image: url(../../../img/event/obt/header/fb_icon.webp);
+                @extend %hover;
+            }
+
+        }
+
+    }
+
+}
+

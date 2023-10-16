@@ -1,0 +1,213 @@
+.sec02 {
+    @extend %bg-cover;
+    width: 100%;
+    max-width: 1920px;
+    height: 950px;
+    background-image: url(../../../img/event/obt/sec02/Section2Bg.webp);
+    position: relative;
+
+    @include md() {
+        height: 825px;
+    }
+
+    @include sm {
+        background-position: center;
+        height: auto;
+    }
+
+    .sec02_title_rwd {
+        display: none;
+        margin: 0 auto;
+
+        @include sm() {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            @include re-lt(0px, 124px);
+        }
+
+        @include xs() {
+            left: 23px;
+        }
+
+        @include xxs() {
+            @include re-lt(13px, 124px);
+        }
+    }
+
+    &_box {
+        @extend %f-r-c;
+        width: 100%;
+
+        @include sm() {
+            flex-direction: column-reverse;
+        }
+
+        .left {
+
+            @extend %f-c-c;
+
+            @include lg() {
+                width: 43%;
+            }
+
+            @include sm() {
+                width: 100%;
+                @include re-lt(0px, -95px);
+            }
+
+            @include xlg() {
+                top: -77px;
+            }
+
+            @include xxs() {
+                top: -49px;
+                padding-bottom: 45px;
+            }
+
+            .sec02_title {
+                @include lg() {
+                    margin-top: 50%;
+                    max-width: 110%;
+                }
+
+                @include sm() {
+                    display: none;
+                }
+            }
+
+            .job_box,
+            .team_box {
+                z-index: 2;
+                background-repeat: no-repeat;
+
+
+                p {
+
+                    color: #fff;
+                    line-height: 150%;
+                    font-weight: bold;
+                    text-shadow: 0px 0px 13px #000, 2px 2px 6px #000, 2px 2px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000, 0px 0px 6px #000;
+
+                    @include lg() {
+                        font-size: 16px;
+
+                    }
+
+                    @include sm() {
+                        font-size: 18px;
+                    }
+
+                    @include xlg() {
+                        font-size: 16px;
+                    }
+
+                    @include xs() {
+                        font-size: 14px;
+                    }
+
+                    @include xxs() {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .job_box {
+                @include size(100%, 265px);
+                max-width: 551px;
+                padding-left: 84px;
+                margin-right: 20%;
+                @extend %bg-contain;
+                @extend %f-r-c;
+                background-image: url(../../../img/event/obt/sec02/S2JobBg.webp);
+
+                @include lg() {
+                    height: 214px;
+                    margin-right: 0%;
+                }
+
+                @include sm() {
+                    height: 305px;
+                    margin-right: 20%;
+                }
+
+                @include xlg() {
+                    margin-right: 0%;
+                }
+
+                @include xs() {}
+
+                @include xxs() {
+                    background-size: cover;
+                    height: 196px;
+                }
+            }
+
+            .team_box {
+                @include size(100%, 256px);
+                max-width: 549px;
+                margin-left: 20%;
+                @extend %f-r-c;
+                @extend %bg-contain;
+                background-image: url(../../../img/event/obt/sec02/S2TeamBg.webp);
+                padding-left: 52px;
+
+                @include lg() {
+                    // padding: 85px 0px 0px 98px;
+                    @include re-lt(7px, -76px);
+                }
+
+                @include sm() {
+                    // padding: 90px 0px 0px 136px;
+                    height: 279px;
+                    top: -37px;
+                }
+
+                @include xlg() {
+                    // padding: 96px 0px 0px 122px;
+                    margin-left: 0%;
+                    @include re-lt(7px, -76px);
+                }
+
+                @include xs() {
+                    // padding: 96px 0px 0px 104px;
+                }
+
+                @include xxs() {
+                    background-size: cover;
+                    // padding: 62px 0px 0px 74px;
+                    height: 187px;
+                    top: -35px;
+                }
+
+            }
+        }
+
+        .right {
+            img {
+                padding-top: 10%;
+                max-width: 100%;
+                max-height: 100%;
+                margin: 0 auto;
+
+                @include lg() {
+                    max-width: 88%;
+                }
+
+                @include xlg(){
+                    max-width: 96%;
+                }
+
+                @include xs() {
+                    padding-top: 30%;
+                    max-width: 98%;
+                }
+
+                @include xxs() {
+                    padding-top: 38%;
+                }
+            }
+        }
+    }
+
+}
