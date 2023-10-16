@@ -238,9 +238,9 @@ class rewardController extends Controller
                         }
                     }
                     if ($accumlateNum >= 30) {
-                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '30')->count();
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '21')->count();
                         if ($eventNum == 0) {
-                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',30,'累積次數30')";
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',21,'累積次數30')";
                             $db->disableQueryLog();
                             $event_info = $db->statement($sql);
                         }
@@ -418,9 +418,10 @@ class rewardController extends Controller
                     $bind_c = $celebrity->keep_celebrity;
                     $now_c = $celebrity->celebrity;
                     if ($now_c != null) {
-                        if ((date('YmdHis') < '20231019120000')) {
-                            $celebrity_name = '無';
-                        } elseif ((date('YmdHis') < '20231026000000')) {
+                        // if ((date('YmdHis') < '20231019120000')) {
+                        //     $celebrity_name = '無';
+                        // } else
+                        if ((date('YmdHis') < '20231026000000')) {
                             if ($bind_c != null) {
                                 $index = array_search($bind_c, $c);
                                 $celebrity_name = $c_name[$index];

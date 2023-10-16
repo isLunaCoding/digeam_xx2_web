@@ -34,8 +34,15 @@ class sendItemLogController extends AdminController
         $grid->column('created_at', __('建立日期'));
         $grid->column('updated_at', __('更新日期'));
         $grid->disableRowSelector();
+        $grid->disableActions();
+        $grid->disableCreation();
         $grid->actions(function ($actions) {
-            $actions->disableDelete();});
+            $actions->disableDelete();
+        });
+        $grid->filter(function ($filter) {
+            $filter->disableIdFilter();
+            $filter->equal('user_id', '帳號');
+        });
         return $grid;
     }
 
