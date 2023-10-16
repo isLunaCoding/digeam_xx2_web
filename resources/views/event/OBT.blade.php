@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="《仙俠世界貳》事前預約" />
+    <meta property="og:title" content="《仙俠世界貳》正式公測" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="人人皆可恣意飛行的修仙大世界，打造屬於自己的修仙之路，2023年度仙俠鉅作【仙俠世界貳】事前預約中！" />
+    <meta property="og:description" content="《仙俠世界貳》群仙聚首，今日盛大公測！多種公測好禮僅此一次，錯過不再！" />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:locale" content="zh_tw" />
@@ -19,7 +19,7 @@
     <meta name="author" content="DiGeam" />
     <meta name="Resource-type" content="Document" />
     <link rel="icon" sizes="192x192" href="/img/event/prereg/favicon.ico">
-    <meta name="description" content="人人皆可恣意飛行的修仙大世界，打造屬於自己的修仙之路，2023年度仙俠鉅作【仙俠世界貳】事前預約中！" />
+    <meta name="description" content="《仙俠世界貳》群仙聚首，今日盛大公測！多種公測好禮僅此一次，錯過不再！" />
     <link rel="pingback" href="" />
     <title>《仙俠世界貳》OBT</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
