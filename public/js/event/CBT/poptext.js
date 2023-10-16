@@ -247,6 +247,30 @@ function end(){
     })
 }
 
+function end2(){
+    $('.popS').fadeIn(200)
+    $('.popStext').html('遊仙緝蠱活動已結束，<br>如有任何遊戲問題請至客服中心反應，<br>感謝您的參與！')
+    $('.doublebtns').show()
+    $('.checkbtn_1').hide()
+    $('.checkbtn_2').html('客服中心')
+    $('.checkbtn_2').css({
+        width: '120px'
+    })
+    if(screen.width <= 480){
+        $('.checkbtn_2').css({
+            width: '80px'
+        })
+    }
+    $('body').css({
+        "overflow":"hidden"
+    });
+    $('.checkbtn_2').on("click",function(){
+        window.open('//digeam.com/cs');
+        $('.checkbtn_3').trigger("click")      
+    })
+}
+
+
 //發生不明錯誤
 function error(){
     $('.popS').fadeIn(200)
