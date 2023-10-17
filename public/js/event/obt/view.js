@@ -773,19 +773,10 @@ let content = {
             <tr>
                 <td rowspan="2">45000​</td>
                 <td>玄獸技能升級寶典</td>
-                <td>120​</td>
-            </tr>
-            <tr>
-                <td>超級物防加持​</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td rowspan="2">45000​</td>
-                <td>玄獸技能升級寶典</td>
                 <td>240​</td>
             </tr>
             <tr>
-                <td>物防加持​</td>
+                <td>超級物防加持​</td>
                 <td>1</td>
             </tr>
             <tr>
