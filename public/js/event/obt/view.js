@@ -649,7 +649,7 @@ let content = {
                     </tr>
                     <tr>
                         <td>洗紅丹</td>
-                        <td>10</td>
+                        <td>1</td>
                         <td>使用後可以減少60點殺氣值​</td>
                         <td>13.7%​</td>
                     </tr>
