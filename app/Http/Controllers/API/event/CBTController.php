@@ -111,7 +111,7 @@ class CBTController extends Controller
             ]);
         }
 
-        if (date('YmdHis') >= '20231017000000') {
+        if (date('YmdHis') >= '20231016170000') {
             return response()->json([
                 'status' => -95,
             ]);
@@ -251,7 +251,7 @@ class CBTController extends Controller
             ]);
         }
 
-        if (date('YmdHis') >= '20231017000000') {
+        if (date('YmdHis') >= '20231016170000') {
             return response()->json([
                 'status' => -95,
             ]);

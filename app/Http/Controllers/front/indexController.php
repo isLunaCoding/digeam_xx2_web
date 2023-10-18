@@ -25,11 +25,11 @@ class indexController extends Controller
     public function launcher()
     {
         //最新
-        $NA = Page::where('type', 'announcement')->where('open', 'Y')->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderby('new', 'desc')->orderBy('created_at', 'desc')->limit(6)->get();
+        $NA = Page::where('type', 'announcement')->where('open', 'Y')->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderby('new', 'desc')->orderBy('created_at', 'desc')->limit(5)->get();
         //活動
-        $NB = Page::where('cate_id', 2)->where('open', 'Y')->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderBy('new', 'desc')->orderBy('created_at', 'desc')->limit(6)->get();
+        $NB = Page::where('cate_id', 2)->where('open', 'Y')->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderBy('new', 'desc')->orderBy('created_at', 'desc')->limit(5)->get();
         //系統
-        $NC = Page::where('cate_id', 3)->where('open', 'Y')->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderBy('new', 'desc')->orderBy('created_at', 'desc')->limit(6)->get();
+        $NC = Page::where('cate_id', 3)->where('open', 'Y')->where('created_at', '<=', date('Y-m-d H:i:s'))->orderby('top', 'desc')->orderBy('new', 'desc')->orderBy('created_at', 'desc')->limit(5)->get();
 
         $images = Image::where('type', 'launcher')->where('status', 'Y')->orderBy('sort', 'asc')->get();
         return view('front/launcher', ['NA' => $NA, 'NB' => $NB, 'NC' => $NC, 'images' => $images]);}
