@@ -644,6 +644,6 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/event/obt/plug/particles.min.js" crossorigin="anonymous"></script>
 <script src="js/event/obt/plug/fire.js" crossorigin="anonymous"></script>
-<script src="js/event/obt/view.js" crossorigin="anonymous"></script>
+<script src="js/event/obt/view.js?v1.0" crossorigin="anonymous"></script>
 <script src="js/event/obt/main.js" crossorigin="anonymous"></script>
 </html>
