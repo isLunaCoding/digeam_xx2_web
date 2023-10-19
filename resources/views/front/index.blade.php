@@ -190,7 +190,7 @@
             <div class="charBox">
                 <div class="btnBox">
                     @if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219')
-                        <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div>
+                    <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div>
                     @endif
                     {{-- <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div> --}}
                     <div class="charBtn" data-char="cha3"><img src="/img/event/homepage/char_icon3.png"></div>
@@ -324,7 +324,7 @@
                     <button class="prev"><img src="/img/event/homepage/arrowL.png"></button>
                     <button class="next"><img src="/img/event/homepage/arrowR.png"></button>
                 </div>
-                {{-- <a href="{{ route('wiki') }}"><img src="/img/event/homepage/section3moreBtn.jpg"></a> --}}
+                <a href="{{ route('wiki') }}"><img src="/img/event/homepage/section3moreBtn.jpg"></a>
             </div>
         </div>
     </div>
