@@ -188,7 +188,9 @@
         <div class="sectionBG">
             <div class="charBox">
                 <div class="btnBox">
-                    {{-- <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div> --}}
+                    @if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219')
+                    <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div>
+                    @endif
                     {{-- <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div> --}}
                     <div class="charBtn" data-char="cha3"><img src="/img/event/homepage/char_icon3.png"></div>
                     <div class="charBtn" data-char="cha4"><img src="/img/event/homepage/char_icon4.png"></div>

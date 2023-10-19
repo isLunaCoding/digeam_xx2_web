@@ -5,57 +5,57 @@
 // 絕影峰
 var char_Array1 = [
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_1.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_1.png">`,
         title: `影殺`,
         text:'快速揮動雙刃對目標發起攻擊，同時使你獲得一層滅魂印記，持續9秒，該狀態最多可疊加至5層'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_2.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_2.png">`,
         title: `滅魂殺`,
         text:'吞噬自身的滅魂印記，對其造成致命一擊。根據吞噬滅魂印記的層數，提升本次滅魂殺的傷害： 一層：傷害提升50% 二層：傷害提升120% 三層：傷害提升210% 四層：傷害提升320% 五層：傷害提升450%'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_3.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_3.png">`,
         title: `噬魂殺`,
         text:'對目標發起充斥殺意的一擊，同時使目標陷入封印狀態，無法使用技能，持續1秒'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_4.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_4.png">`,
         title: `隱遁`,
         text:'進入隱匿狀態，不會被他人發現。移動速度降低25%，使用技能、受到傷害或造成傷害均會解除隱匿狀態。該技能在戰鬥中無法使用，解除隱匿狀態後20秒之內不得再次施展此技能'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_5.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_5.png">`,
         title: `修羅怒`,
         text:'永久增加30點智力'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_6.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_6.png">`,
         title: `影襲`,
         text:'使目標陷入麻痺狀態，無法移動和使用技能，持續1.5秒。隱匿狀態下發動此技能麻痺時間翻倍'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_7.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_7.png">`,
         title: `幻影突襲`,
         text:'化為幻影突襲目標，快速攻擊目標3次，攻擊結束後會停留在目標身邊'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_8.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_8.png">`,
         title: `追魂印`,
         text:'瞬間對目標造成一次傷害並為自己施加3層滅魂印記'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_9.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_9.png">`,
         title: `霧化`,
         text:'立即進入隱匿狀態，可以在戰鬥中使用'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_10.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_10.png">`,
         title: `風華圓斬`,
         text:'揮動雙刃高速旋轉，每0.5秒釋放一次刀氣攻擊周身半徑16米範圍內最多8個敵人，持續2秒'
     },
     {
-        icon: `<img src="/img/event/homepage/skill_icon/char_skill4_11.png">`,
+        icon: `<img src="/img/event/homepage/skill_icon/char_skill1_11.png">`,
         title: `修羅斬`,
         text:'躍至空中俯衝攻擊目標，修羅斬會吞噬自身的滅魂印記，並根據該狀態的層數提升本次修羅斬的傷害： 一層：傷害提升70% 二層：傷害提升140% 三層：傷害提升230% 四層：傷害提升350% 五層：傷害提升500%'
     },
