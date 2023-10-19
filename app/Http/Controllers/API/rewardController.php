@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Model\change_point_log;
 use App\Model\event\CBT_Buy_Log;
 use App\Model\event\PandaGuessLog;
 use App\Model\event\PreregUser;
@@ -95,10 +96,73 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
-            if ($user_id == 'xx2digeam01' || $user_id == 'xx2digeam02' || $user_id == 'xx2digeam03' || $user_id == 'xx2digeam04' || $user_id == 'minnn112') {
+            if ($user_id == 'xx2digeam01' || $user_id == 'xx2digeam02' || $user_id == 'xx2digeam03' || $user_id == 'xx2digeam04' || $user_id == 'minnn112' || $user_id == 'rtfgtygh123' || $user_id = 'f19960301') {
+                //轉點回饋
+                if ((date('YmdHis') >= '20231018000000') && (date('YmdHis') <= '20231126100000')) {
+                    $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-10-18 10:00:00', '2023-11-16 10:00:00'])->sum('c_point');
+                    $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-10-18 10:00:00', '2023-11-16 10:00:00'])->sum('cb_point');
+                    $event_pay = $c_point + $cb_point;
+                    $db = \DB::connection('mysql');
+                    if ($event_pay >= 10000) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '22')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',22,'10000')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($event_pay >= 25000) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '23')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',23,'25000')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($event_pay >= 45000) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '24')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',24,'45000')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    if ($event_pay >= 66666) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '25')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',25,'66666')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    //可循環
+                    $round = (integer) ($event_pay / 30000);
+                    $check_cnt = reward_getlog::where('user_id', $user_id)->where('group_id', '26')->count();
+                    while ($round > $check_cnt) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',26,'30000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                        $check_cnt += 1;
+                    }
+                    \DB::disconnect('mysql');
+                }
+            }
+            //修仙啟程40等
+            if ((date('YmdHis') >= '20231019150000') && (date('YmdHis') <= '20231231235959')) {
+                $user_lists = ['minnn112','a01002413', 'a02043388', 'xx2digeam08', 'xx2digeam04', 'a0264717', 'a0903351033', 'a0909583100', 'a0918816792', 'a0955860093', 'a0975595290', 'a0987437629', 'a0989197695', 'a1152017a', 'a147854789', 'a1597321', 'a24914051', 'a3707680', 'a68526852', 'a69876987', 'a82628068', 'a8511234', 'a8765536876', 'a93036567', 'a9424552754', 'aaa199409', 'abcoe0000', 'alone0222', 'amzxcvbnm28', 'andeoz2017', 'andeoz2023', 'andychoi0722', 'andylinhappy1', 'angeltstk001', 'aorll096game', 'appyd8295', 'as7589420', 'asd10502245', 'asdf20707', 'asdfgh0101', 'asdjkl10633', 'aszx27913', 'auster1983', 'azsx7957893', 'baby8521', 'back512pace', 'backhan1', 'bb2273512', 'bcg203575484', 'bergers08', 'bergers25', 'beyine28530', 'bnm357159', 'boss321654', 'cang2j694', 'cclin5688', 'ckj800702', 'ckwei0909', 'ckwei090909', 'clouds1368285', 'convenient0418', 'cuu00239', 'digeamdpotw07', 'diou5209', 'domon123', 'dryadh65077', 'e0917222289', 'e09294192127540', 'e5210341', 'e570316i', 'easoncck1996', 'edwin0802', 'egg605011', 'eilen6427', 'eli850808', 'elvisjoy1983', 'ernie0982', 'et2592256', 'eva25290', 'f19960301', 'facjackie27618', 'feicuan0213', 'feicuanlin0925', 'forever20jerry', 'fy20612345', 'fy20672321', 'g0933298862', 'gch74317', 'gin8321800', 'gn00654068', 'gn01819576', 'gogo0730', 'goodgodno3', 'gtoksshe88', 'h37856240', 'hansting185200', 'hao740889', 'hatsuyuk1', 'hchs310169', 'hieiue89', 'himhim789', 'hn883327', 'hoya86823', 'hunter0214hunter', 'ice134963', 'ivesqfly1', 'ja45790522', 'james52127', 'janice51244', 'janicetsao520', 'jen40170', 'jerry831113', 'jimmy0827', 'jlps88313', 'joe755067', 'joker4367', 'jpsakura95173', 'justgiveme014064', 'jyyling91', 'k228165566', 'kafuumori2513', 'keven5214', 'kevinkk2348', 'kevinkuo851212', 'kiki58921', 'king58859587', 'king7772022', 'kingkit3211', 'kissingbarbie2', 'kitterlions01', 'kuso1990030124', 'lai408612', 'leaveisture82', 'lf27693810', 'lf2net6310', 'liarking22no', 'linda122719', 'louis5566', 'love02587531', 'love2006321', 'love507153', 'loveing84126', 'lycan9220329', 'm0905257553', 'm1415677', 'm9879602', 'maggie118988', 'maggie1189881', 'maggie1189882', 'maggie1189883', 'maggie1189885', 'maggie1189886', 'maggie1189887', 'maggie11898899', 'mail740329', 'mango123456', 'maybe1516', 'md3191119', 'mo0408rris', 'momo0315', 'mor19830311', 'nice11233', 'nniu2004', 'oio127007', 'okok999888777', 'ooxx1120306', 'p6983225', 'popo1000402', 'pp33942775', 'q0916255018', 'q0930763718q', 'q730922q730922', 'q763718q', 'qaz22809502', 'qq0606pp', 'qq833061', 'qsw8851575s', 'qw147854789', 'qwas820816', 'qwe30376', 'qwe610160', 'qwe830116', 'rocky1336', 'rtfgtygh123', 's12355188', 's22300227', 's26709498', 's30306s15', 'sfftd2234', 'shen0908', 'shinelaixs1', 'siul0ve0206', 'siulok0808', 'skpaylove5', 'sky10127321', 'sm9020404', 'smith669', 'spendmoney1', 'ss1379ss', 'st864012', 'stu86164', 'summer089', 'tedyang1992', 'to761111', 'tong0309', 'tszchung1995', 'tyu35714599', 'unalove0520', 'vae16666', 'viva7410', 'voom1111', 'watcher2103', 'wl01474947', 'x11001230', 'x159357456', 'x9135809u', 'xuann2002', 'xx2guest02', 'yrbo0728', 'yung985914', 'zu00991713', 'zx26337463', 'zx82839642', 'zxc3143611', 'zxcvb5545'];
+                $db = \DB::connection('mysql');
+                if (in_array($user_id, $user_lists)) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '27')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',27,'修仙啟程')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                \DB::disconnect('mysql');
             }
             //mycard1000
-            if ((date('YmdHis') >= '20231019000000') && (date('YmdHis') <= '20231231235959')) {
+            if ((date('YmdHis') >= '20231019150000') && (date('YmdHis') <= '20231231235959')) {
                 $db = \DB::connection('mysql');
                 $client = new Client();
                 $data = [
@@ -128,7 +192,7 @@ class rewardController extends Controller
                 \DB::disconnect('mysql');
             }
             //mycard500
-            if ((date('YmdHis') >= '20231019000000') && (date('YmdHis') <= '20231231235959')) {
+            if ((date('YmdHis') >= '20231019150000') && (date('YmdHis') <= '20231231235959')) {
                 $db = \DB::connection('mysql');
                 $client = new Client();
                 $data = [
@@ -217,7 +281,6 @@ class rewardController extends Controller
                 $db = \DB::connection('mysql');
                 //猜對次數
                 $successNum = PandaGuessLog::where('user_id', $user_id)->where('result', '正確')->count();
-
                 if ($successNum >= 1) {
                     $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '12')->count();
                     if ($eventNum == 0) {

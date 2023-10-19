@@ -94,7 +94,8 @@
                                     <a class="normal" href="{{ route('announcementContent', [$value->id]) }}">
                                         <div class="textBox">
                                             <div class="textTitle">{{ $value['title'] }}</div>
-                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}</div>
+                                            <div class="textTime">{{ date('Y/m/d', strtotime($value['created_at'])) }}
+                                            </div>
                                         </div>
                                     </a>
                                 </li>
@@ -188,7 +189,9 @@
         <div class="sectionBG">
             <div class="charBox">
                 <div class="btnBox">
-                    {{-- <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div> --}}
+                    @if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219')
+                        <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div>
+                    @endif
                     {{-- <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div> --}}
                     <div class="charBtn" data-char="cha3"><img src="/img/event/homepage/char_icon3.png"></div>
                     <div class="charBtn" data-char="cha4"><img src="/img/event/homepage/char_icon4.png"></div>
@@ -333,12 +336,12 @@
     <script src="/js/event/homepage/swiper.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-
         // pop跳窗
         function _close() {
             $('.mask').fadeOut(200);
             $("html").css("overflow", "scroll");
         };
+
         function skillInt(arrayName) {
             $("html").css("overflow", "hidden");
             var _popContainer = ``;
@@ -358,7 +361,7 @@
         };
 
         // 下載敬請期待
-        function downloadRemind(){
+        function downloadRemind() {
             alert('主程式將於近日開放下載，敬請期待')
         }
 
@@ -367,7 +370,7 @@
         $(".newsContainer .text").hide();
         $(".newsContainer .textNA").show();
         $(".new").addClass("active");
-        $(".newsTab .newsBtn").on("click", function () {
+        $(".newsTab .newsBtn").on("click", function() {
             $(".newsContainer .text").hide();
             $(".newsBtn").removeClass("active");
             $(this).addClass("active");
@@ -376,10 +379,10 @@
         });
 
         // section1 BN輪播
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('.swiper').slick({
                 dots: true,
-                arrows:false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true,
@@ -391,7 +394,7 @@
         $(".section2 .cha").hide();
         $(".section2 .cha3").show();
         $('.charBtn:eq(0)').addClass('active');
-        $(".section2 .charBtn").on("click", function () {
+        $(".section2 .charBtn").on("click", function() {
             $(".section2 .cha").hide();
             $('.charBtn').removeClass("active");
             $(this).addClass("active");
@@ -404,6 +407,5 @@
                 imgNum: {{ $game_features->count() }}
             });
         })
-
     </script>
 @endsection
