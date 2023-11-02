@@ -66,36 +66,42 @@ function ex_submit() {
     }
 }
 
+var ex_lock = "open";
+
 function get_exchange() {
-    $.post(
-        api_data,
-        {
-            type: "exchange",
-            user_id: $(".account span").text(),
-            serial_num: serial_text,
-            sever_id: optionServer,
-            charid: optionCharacter,
-            char_name: optionCharacterName,
-        },
-        function (res) {
-            // let res = resEx;
-            if (res.status == -99) {
-                alert("序號錯誤");
-            } else if (res.status == -98) {
-                alert("序號不在兌換時間內");
-            } else if (res.status == -97) {
-                alert("這個序號已經被使用過了！");
-            } else if (res.status == -96) {
-                alert("該序號數量已兌換完畢");
-            } else if (res.status == -95) {
-                alert("不明錯誤，請聯繫客服");
-            } else if (res.status == -94) {
-                alert("您已兌換過該序號獎勵");
-            } else if (res.status == 1) {
-                alert("領取成功");
+    if (ex_lock == "open") {
+        ex_lock = "lock";
+        $.post(
+            api_data,
+            {
+                type: "exchange",
+                user_id: $(".account span").text(),
+                serial_num: serial_text,
+                sever_id: optionServer,
+                charid: optionCharacter,
+                char_name: optionCharacterName,
+            },
+            function (res) {
+                ex_lock = "open";
+                // let res = resEx;
+                if (res.status == -99) {
+                    alert("序號錯誤");
+                } else if (res.status == -98) {
+                    alert("序號不在兌換時間內");
+                } else if (res.status == -97) {
+                    alert("這個序號已經被使用過了！");
+                } else if (res.status == -96) {
+                    alert("該序號數量已兌換完畢");
+                } else if (res.status == -95) {
+                    alert("不明錯誤，請聯繫客服");
+                } else if (res.status == -94) {
+                    alert("您已兌換過該序號獎勵");
+                } else if (res.status == 1) {
+                    alert("領取成功");
+                }
             }
-        }
-    );
+        );
+    }
 }
 
 function logout_dg() {

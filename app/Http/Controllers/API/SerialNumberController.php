@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Model\Reward\reward_send_log;
 use App\Model\serial_item;
 use App\Model\serial_number;
 use App\Model\serial_number_cate;
@@ -139,6 +140,7 @@ class SerialNumberController extends Controller
             $item_code = $value->item_code;
             $itemcnt = $value->itemcnt;
             $isbind = $value->isbind;
+            $item_name = $value->item_name;
             $content = '序號兌換-' . $find_cate->title;
             $title = '序號';
             $ch = curl_init();
@@ -150,7 +152,30 @@ class SerialNumberController extends Controller
             curl_close($ch);
             $result3 = json_decode($result3);
             if ($result3->status != 0) {
+                $createlog = new reward_send_log();
+                $createlog->user_id = $user_id;
+                $createlog->server_id = $server_id;
+                $createlog->char_name = $char_name;
+                $createlog->charid = $charid;
+                $createlog->item_name = $item_name;
+                $createlog->is_send = 'N';
+                $createlog->item_code = $item_code;
+                $createlog->user_ip = $real_ip;
+                $createlog->remark = '失敗-'.$content;
+                $createlog->save();
                 $status = $result3->status;
+            } else {
+                $createlog = new reward_send_log();
+                $createlog->user_id = $user_id;
+                $createlog->server_id = $server_id;
+                $createlog->char_name = $char_name;
+                $createlog->charid = $charid;
+                $createlog->item_name = $item_name;
+                $createlog->is_send = 'Y';
+                $createlog->item_code = $item_code;
+                $createlog->user_ip = $real_ip;
+                $createlog->remark = $content;
+                $createlog->save();
             }
         }
         if ($status == 0) {

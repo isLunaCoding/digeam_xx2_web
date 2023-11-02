@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::middleware(['setReturnUrl'])->group(function () {
-    // 事前預約
-    Route::get('/prereg', function () {
-        return view('event/prereg_index');
-    });
     // 領獎專區
     Route::get('/reward', function () {
         return view('front/receiveAward');
@@ -62,8 +58,11 @@ Route::get('/CBT', 'front\CBTController@index');
 //後台圖片上傳
 Route::post('ckeditor/upload', 'CkeditorUploadController@uploadImage');
 Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
-        //obt
-        Route::get('/OBT', function () {
-            return view('event/OBT');
-        });
-
+//obt
+Route::get('/OBT', function () {
+    return view('event/OBT');
+});
+    // 事前預約
+    Route::get('/prereg', function () {
+        return redirect('/');
+    });

@@ -25,7 +25,9 @@ class sendItemLogController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new sendItemLog());
-
+        $grid->model()
+        ->orderBy('created_at', 'desc');
+        
         $grid->column('user_id', __('帳號'));
         $grid->column('char_name', __('角色名稱'));
         $grid->column('charid', __('角色ID'));
