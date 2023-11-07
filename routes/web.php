@@ -66,3 +66,4 @@ Route::get('/OBT', function () {
     Route::get('/prereg', function () {
         return redirect('/');
     });
+    Route::get('redis', 'RedisController@index');
