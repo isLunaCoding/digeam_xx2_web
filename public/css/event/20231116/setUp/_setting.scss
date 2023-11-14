@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'SourceHanSerifTC-Heavy';
+    src:
+        url(./fonts/SourceHanSerifTC-Heavy.otf) format("opentype");
+    font-display: swap;
+}
+
+@import url("https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/5.4.5/css/swiper.min.css");
+
+
+$font: #fff;
+$link: #32cbf7;
+
+
+body {
+    font-family: '微軟正黑體';
+    background: linear-gradient(rgba(54, 20, 20), rgba(0, 0, 0), rgba(54, 20, 20));
+    overflow-y: auto;
+    overflow-x: hidden !important;
+    line-height: normal;
+    font-size: 18px;
+
+    .wrap {
+        max-width: 1918px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        @extend %bg-cover;
+        overflow: hidden !important;
+
+    }
+}
+
+
+::-webkit-scrollbar {
+    padding-right: 5px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1c70a2;
+}
+
+::-webkit-scrollbar-track {
+    background: #9b9b9b;
+}
+
+%ani-box1 {
+    animation: active-box 4s;
+    animation-iteration-count: infinite;
+
+    @keyframes active-box {
+
+        0%,
+        100% {
+            filter: drop-shadow(0 0 0px #47778a);
+        }
+
+        50% {
+            filter: drop-shadow(0 0 8px #2a7880);
+        }
+    }
+
+}
+%ani-box2 {
+    animation: active-box 4s;
+    animation-iteration-count: infinite;
+
+    @keyframes active-box {
+
+        0%,
+        100% {
+            filter: drop-shadow(0 0 0px #47778a);
+        }
+
+        50% {
+            filter: drop-shadow(0 0 4px #2a7880);
+        }
+    }
+
+}
+%hover{
+
+    &:hover {
+        filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.7));
+        transition: .3s;
+    }
+
+}

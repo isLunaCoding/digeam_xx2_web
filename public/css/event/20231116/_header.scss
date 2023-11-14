@@ -1,0 +1,101 @@
+main {
+    z-index: 1;
+    width: 100%;
+    height: auto;
+
+    .header {
+        @extend %bg-cover;
+        position: relative;
+        width: 100%;
+        max-width: 1920px;
+        height: 970px;
+        background-image: url(../../../img/event/20231116/header/s1BgAll.jpg);
+        background-position: left 0px center;
+
+        @include sm() {
+            height: 100vh;
+            background-image: url(../../../img/event/20231116/header/s1BgM.jpg);
+            background-size: cover;
+        }
+
+        .logo_rwd {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translate(-50%, 0%);
+            @include size(176px, 72px);
+            background-image: url(../../../img/event/20231116/header/logo.png);
+            display: none;
+            @include sm() {
+                display: block;
+            }
+        }
+
+        &_area {
+            @extend %f-r-c;
+            position: relative;
+            width: 100%;
+            flex-direction: column;
+            padding-top: 17%;
+
+            @include lg() {
+                padding-top: 27vh;
+            }
+
+            @include sm() {
+                padding-top: 45vh;
+            }
+
+            .title {
+                max-width: 779px;
+                height: auto;
+
+                @include md() {
+                    width: 90%;
+                }
+            }
+
+            .link_box {
+                position: relative;
+                @extend %f-r-c;
+                padding-top: 1%;
+                @include sm() {
+                    display: none;
+                }
+
+                .register {
+                    @include size (290px, 113px);
+                    background-image: url(../../../img/event/20231116/header/s1Register.png);
+                    @extend %bg-contain;
+                    &:hover {
+                        background-image: url(../../../img/event/20231116/header/s1RegisterHover.png);
+                        transition: .8s;
+                    }
+                }
+
+                .download {
+                    @include size (290px, 113px);
+                    background-image: url(../../../img/event/20231116/header/s1Download.png);
+                    @extend %bg-contain;
+                    &:hover {
+                        background-image: url(../../../img/event/20231116/header/s1DownloadHover.png);
+                        transition: .8s;
+                    }
+                }
+
+                .home {
+                    @include size (290px, 113px);
+                    background-image: url(../../../img/event/20231116/header/s1Offical.png);
+                    @extend %bg-contain;
+                    &:hover {
+                        background-image: url(../../../img/event/20231116/header/s1OfficalHover.png);
+                        transition: .8s;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+}

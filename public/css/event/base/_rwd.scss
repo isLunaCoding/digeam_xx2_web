@@ -2,6 +2,7 @@ $xl-media: 1440px;
 $lg-media: 1024px;
 $md-media: 960px;
 $sm-media: 768px;
+$xlg-media: 500px;
 $xs-media: 425px;
 $xsm-media:375px;
 $xxs-media: 320px;
@@ -27,6 +28,12 @@ $xxs-media: 320px;
 
 @mixin sm() {
     @media all and (max-width: $sm-media) {
+        @content;
+    }
+}
+
+@mixin xlg() {
+    @media all and (max-width: $xlg-media) {
         @content;
     }
 }
