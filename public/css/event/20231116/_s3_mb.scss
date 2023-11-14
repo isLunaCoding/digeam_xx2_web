@@ -172,7 +172,7 @@ main {
                                 color: #fff;
                                 background-image: url(../../../img/event/20231116/s3/s3InnerTitleBg2.png);
 
-                                @include xs() {
+                                @include xlg() {
                                     padding-left: 17%;
                                     font-size: 20px;
                                 }
@@ -255,7 +255,7 @@ main {
                             padding-left: 6%;
                             color: #fff;
                             background-image: url(../../../img/event/20231116/s3/s3InnerTitleBg2.png);
-                            @include xs() {
+                            @include xlg() {
                                 padding-left: 17%;
                                 font-size: 20px;
                             }
@@ -340,7 +340,7 @@ main {
                                 padding-left: 8%;
                                 color: #fff;
                                 background-image: url(../../../img/event/20231116/s3/s3InnerTitleBg2.png);
-                                @include xs() {
+                                @include xlg() {
                                     padding-left: 17%;
                                     font-size: 20px;
                                 }

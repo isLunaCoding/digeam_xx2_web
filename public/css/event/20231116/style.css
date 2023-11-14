@@ -1192,7 +1192,7 @@ main .s3 .s3_rwd .rwd_content .t1 .content_box .content_text .sub {
   color: #fff;
   background-image: url(../../../img/event/20231116/s3/s3InnerTitleBg2.png);
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   main .s3 .s3_rwd .rwd_content .t1 .content_box .content_text .sub {
     padding-left: 17%;
     font-size: 20px;
@@ -1269,7 +1269,7 @@ main .s3 .s3_rwd .rwd_content .t2 .content_box .sub {
   color: #fff;
   background-image: url(../../../img/event/20231116/s3/s3InnerTitleBg2.png);
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   main .s3 .s3_rwd .rwd_content .t2 .content_box .sub {
     padding-left: 17%;
     font-size: 20px;
@@ -1347,7 +1347,7 @@ main .s3 .s3_rwd .rwd_content .t3 .content_box .content_text .sub {
   color: #fff;
   background-image: url(../../../img/event/20231116/s3/s3InnerTitleBg2.png);
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   main .s3 .s3_rwd .rwd_content .t3 .content_box .content_text .sub {
     padding-left: 17%;
     font-size: 20px;
