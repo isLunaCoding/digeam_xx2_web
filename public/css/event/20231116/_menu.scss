@@ -1,0 +1,101 @@
+.menu_toggle {
+    @include fixed-rt(13px, 7px);
+    cursor: pointer;
+    z-index: 11;
+    display: none;
+
+    @include sm() {
+        display: block;
+    }
+
+    div {
+        @include size(34px, 8px);
+        background-color: #000000;
+        border-radius: 3px;
+        border: 2px solid #fff;
+        margin: 5px auto;
+        transition-duration: 0.3s;
+    }
+
+    &.on {
+        z-index: 54;
+        .one {
+            transform: rotate(45deg) translate(2px, 9px);
+        }
+        .two {
+            display: none;
+        }
+        .three {
+            transform: rotate(-45deg) translate(0px, -8px);
+        }
+    }
+}
+
+.menu {
+    display: none;
+    &.on {
+        display: block;
+    }
+    .menu_mask {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        z-index: 53;
+        @include size(100%, 100%);
+        .menu_box {
+            position: relative;
+            @extend %f-c-c;
+            margin-top: 30%;
+
+            .menuBtn1 {
+                margin-top: 15%;
+                @include size(58px, 32px);
+                background-image: url(../../../img/event/20231116/header/navTitleText1.png);
+                @extend %hover;
+            }
+
+            .menuBtn2 {
+                margin-top: 15%;
+                @include size(191px, 31px);
+                background-image: url(../../../img/event/20231116/header/navTitleText2.png);
+                @extend %hover;
+            }
+
+            .menuBtn3 {
+                margin-top: 15%;
+                @include size(105px, 31px);
+                background-image: url(../../../img/event/20231116/header/navTitleText3.png);
+                @extend %hover;
+            }
+        }
+
+        .menu_link {
+            position: relative;
+            @extend %f-r-c;
+            margin-top: 15%;
+
+            a {
+                @include size(100%, 100%);
+            }
+
+            .rg {
+                @include size(54px, 61px);
+                background-image: url(../../../img/event/20231116/header/RegisterIcon.png);
+                @extend %hover;
+            }
+
+            .fb {
+                margin-left: 5%;
+                @include size(52px, 51px);
+                background-image: url(../../../img/event/20231116/header/fbIcon.png);
+                @extend %hover;
+            }
+
+            .dc {
+                margin-left: 5%;
+                @include size(64px, 51px);
+                background-image: url(../../../img/event/20231116/header/dcIcon.png);
+                @extend %hover;
+            }
+        }
+    }
+}

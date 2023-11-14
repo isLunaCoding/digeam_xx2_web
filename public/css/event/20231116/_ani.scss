@@ -1,0 +1,37 @@
+.falling-leaves {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.leaf-scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: url(../../../img/event/20231116/header/leaf.png) no-repeat;
+        background-size: 100%;
+        transform-style: preserve-3d;
+        backface-visibility: visible;
+        @include sm(){
+            @include size(17px,17px);
+        }
+        @include xs(){
+            @include size(13px,13px);
+        }
+    }
+}

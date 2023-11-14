@@ -1,0 +1,212 @@
+main {
+
+    .s2 {
+        @extend %bg-cover;
+        position: relative;
+        width: 100%;
+        background-image: url(../../../img/event/20231116/s2/s2Bg.jpg);
+        background-position: left 26% top 0%;
+        @include lg(){
+            height:auto;
+        }
+
+
+        .title_rwd {
+            display: none;
+
+            @include sm() {
+                max-width: 90%;
+                display: block;
+                left: 50%;
+                padding-top: 5%;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        &_box {
+            position: relative;
+            width: 100%;
+            @extend %f-r-c;
+
+            @include sm() {
+                flex-direction: column-reverse;
+            }
+
+            .text {
+                @extend %f-r-c;
+                flex-direction: column;
+                margin-left: 10vw;
+                @include lg(){
+                    margin-left: 0%;
+                }
+
+                .title {
+                    @include lg() {
+                        margin-top: 20%;
+                        max-width: 100%;
+                    }
+
+                    @include sm() {
+                        display: none;
+                    }
+                }
+
+                .chName {
+                    width: 100%;
+                    padding: 3% 0;
+                    padding-left: 2vw;
+
+                    @include lg() {
+                        max-width: 90%;
+                        padding-left: 0vw;
+                    }
+
+                    @include md() {
+                        max-width: 95%;
+                    }
+
+                    @include sm() {
+                        max-width: 75%;
+                    }
+                }
+
+                .text_box {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    @include lg() {
+                        margin-bottom: 20%;
+                    }
+
+                    @include sm() {
+                        margin-bottom: 10%;
+                    }
+
+                    .job_box {
+                        display: flex;
+                        margin-bottom: 10%;
+                        align-items: flex-start;
+
+                        @include md() {
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                        }
+
+                        .job_title {
+                            @extend %f-r-c;
+                            @include size (200px, 63px);
+                            @extend %bg-contain;
+                            background-image: url(../../../img/event/20231116/s2/s2TextBg.png);
+                            background-position: left -20px top 3px;
+
+                            @include md() {
+                                @include size(180px, 63px);
+                            }
+
+                            p {
+                                font-size: 20px;
+                                color: #ffff;
+                                font-family: 'SourceHanSerifTC-Heavy';
+                                font-weight: 500;
+                                letter-spacing: 2px;
+
+                                @include md() {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+
+                        p {
+                            font-size: 20px;
+                            line-height: 40px;
+                            font-weight: 700;
+                            margin-left: -1vw;
+                            @include lg{
+                                margin-left: 0vw;
+                            }
+                            @include md() {
+                                font-size: 18px;
+                            }
+
+                        }
+                    }
+
+                    .team_box {
+                        display: flex;
+                        align-items: flex-start;
+
+                        @include md() {
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                        }
+
+                        .team_title {
+                            @extend %f-r-c;
+                            @include size (200px, 63px);
+                            @extend %bg-contain;
+                            background-image: url(../../../img/event/20231116/s2/s2TextBg.png);
+                            background-position: left -20px top 3px;
+
+                            @include md() {
+                                @include size(180px, 63px);
+                            }
+
+                            p {
+                                font-size: 20px;
+                                color: #ffff;
+                                font-weight: 500;
+                                font-family: 'SourceHanSerifTC-Heavy';
+                                letter-spacing: 2px;
+
+                                @include md() {
+                                    font-size: 18px;
+                                }
+
+                            }
+                        }
+
+                        p {
+                            font-size: 20px;
+                            line-height: 40px;
+                            font-weight: 700;
+                            margin-left: -1vw;
+                            @include lg{
+                                margin-left: 0vw;
+                            }
+                            @include md() {
+                                font-size: 18px;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .s2_img {
+                padding-top: 5%;
+                max-width: 70%;
+                max-height: 100%;
+                margin-left: -2vw;
+
+                @include lg() {
+                    padding-top: 7%;
+                    max-width: 60%;
+                }
+
+                @include sm() {
+                    margin-top: -7vh;
+                    padding-top: 0%;
+                    max-width: 75%;
+                }
+
+                @include xlg {
+                    max-width: 90%;
+                }
+
+            }
+        }
+    }
+}

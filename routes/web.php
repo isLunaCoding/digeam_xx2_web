@@ -67,3 +67,7 @@ Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
             return view('event/OBT');
         });
 
+Route::get('/20231116', function () {
+    return view('event/20231116_index');
+});
+

@@ -1,0 +1,169 @@
+.mask {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 50;
+}
+
+.pop_wrap {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 51;
+    background-image: url(../../../img/event/20231116/s3/s3NoticeBg.png);
+    border: 3px solid #0d1f11;
+    border-radius: 5px;
+    @extend %bg-cover;
+    background-position: center;
+    width: 95%;
+    max-width: 700px;
+    max-height: 700px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, .5);
+
+    .pop_close {
+        z-index: 52;
+        width: 51px;
+        cursor: pointer;
+        position: absolute;
+        top: 2%;
+        right: 2%;
+
+        .one {
+            height: 10px;
+            background-color: #000000;
+            border-radius: 3px;
+            border: 2px solid #fff;
+            margin: 5px auto;
+            transition-duration: 0.3s;
+            transform: rotate(45deg) translate(2px, 0px);
+        }
+
+        .three {
+            height: 10px;
+            background-color: #000000;
+            border-radius: 3px;
+            border: 2px solid #fff;
+            margin: 5px auto;
+            transition-duration: 0.3s;
+            transform: rotate(-45deg) translate(12px, -10px);
+        }
+
+        &:hover {
+            transition: .3s;
+            transform: scale(1.1);
+        }
+
+    }
+
+    .pop_box {
+        @extend %f-c-c;
+        margin-top: 15px;
+        max-width: 100%;
+
+        .pop_title {
+            padding-top: 24px;
+            padding-left: 108px;
+            @include size(278px, 78px);
+            font-size: 24px;
+            color: #fff;
+            font-weight: 600;
+            font-family: 'SourceHanSerifTC-Heavy';
+            background-image: url(../../../img/event/20231116/s3/s3NoticeTitleBg.png);
+            @include xlg(){
+                font-size: 18px;
+                padding-top: 28px;
+            }
+        }
+
+        .no_content {
+            padding: 5%;
+            line-height: 30px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 450px;
+            font-weight: 600;
+
+            li {
+                color: #000000;
+                font-size: 20px;
+                line-height: 30px;
+                @include xs(){
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .pro_content {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 450px;
+            img {
+                max-width: 100%;
+                padding: 3%;
+                margin: 0 auto;
+            }
+
+            ul {
+                @extend %f-r-c;
+                flex-wrap: wrap;
+
+                li {
+                    color: #ffff;
+                    text-align: center;
+                    @extend %f-r-c;
+                    height: 50px;
+                    min-width: 30%;
+                    padding: 1% 0;
+                    cursor: pointer;
+                    margin: 1%;
+                    font-size: 20px;
+                    font-family: "SourceHanSerifTC-Heavy";
+                    letter-spacing: 2px;
+                    background-color: #112028;
+                    transition: all 0.3s ease-in-out;
+                    border: #ffff solid 1px;
+                    @include xlg(){
+                        font-size: 14px;
+                        min-width: 40%;
+                    }
+                    &:hover,
+                    &.active {
+                        background-color: #4699bd;
+                    }
+                }
+            }
+        }
+
+        .case_content {
+            @extend %f-c-c;
+            max-height: 450px;
+
+            img {
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 3%;
+            }
+        }
+
+        #c3 {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            padding-top: 70%;
+            padding-right: 10%;
+            padding-left: 10%;
+
+            @include  xs(){
+                padding-top: 40%;
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+
+        }
+    }
+}
