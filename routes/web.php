@@ -63,7 +63,11 @@ Route::get('/OBT', function () {
     return view('event/OBT');
 });
     // 事前預約
-    Route::get('/prereg', function () {
+Route::get('/prereg', function () {
         return redirect('/');
     });
-    Route::get('redis', 'RedisController@index');
+Route::get('redis', 'RedisController@index');
+Route::get('/20231116', function () {
+        return view('event/20231116_index');
+    });
+    

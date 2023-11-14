@@ -98,30 +98,52 @@ class rewardController extends Controller
         $user_id = $request->user_id;
         if ($user_id != '') {
 
-                //四海轉點回饋
-                if ((date('YmdHis') >= '20231101120000') && (date('YmdHis') <= '20231231235959')) {
+            //四海轉點回饋2
+
+            if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+                if ((date('YmdHis') >= '20231114120000') && (date('YmdHis') <= '20231130235959')) {
                     $db = \DB::connection('mysql');
-                    $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-11-01 12:00:00', '2023-11-08 12:00:00'])->sum('c_point');
-                    $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-11-01 12:00:00', '2023-11-08 12:00:00'])->sum('cb_point');
+                    $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-11-14 12:00:00', '2023-11-22 23:59:59'])->sum('c_point');
+                    $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-11-14 12:00:00', '2023-11-22 23:59:59'])->sum('cb_point');
                     $event_pay = $c_point + $cb_point;
+                    $event_pay=1000;
                     if ($event_pay >= 1000) {
-                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '28')->count();
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '30')->count();
                         if ($eventNum == 0) {
-                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',28,'1000')";
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',30,'1000')";
                             $db->disableQueryLog();
                             $event_info = $db->statement($sql);
                         }
                     }
-                    if ($event_pay >= 3000) {
-                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '29')->count();
-                        if ($eventNum == 0) {
-                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',29,'3000')";
-                            $db->disableQueryLog();
-                            $event_info = $db->statement($sql);
-                        }
-                    }
+
                     \DB::disconnect('mysql');
                 }
+            }
+
+            //四海轉點回饋1
+            if ((date('YmdHis') >= '20231101120000') && (date('YmdHis') <= '20231231235959')) {
+                $db = \DB::connection('mysql');
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-11-01 12:00:00', '2023-11-08 12:00:00'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-11-01 12:00:00', '2023-11-08 12:00:00'])->sum('cb_point');
+                $event_pay = $c_point + $cb_point;
+                if ($event_pay >= 1000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '28')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',28,'1000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 3000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '29')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',29,'3000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                \DB::disconnect('mysql');
+            }
 
             //轉點回饋
             if ((date('YmdHis') >= '20231019150000') && (date('YmdHis') <= '20231126100000')) {
