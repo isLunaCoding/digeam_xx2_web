@@ -189,9 +189,7 @@
         <div class="sectionBG">
             <div class="charBox">
                 <div class="btnBox">
-                    @if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219')
                     <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div>
-                    @endif
                     {{-- <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div> --}}
                     <div class="charBtn" data-char="cha3"><img src="/img/event/homepage/char_icon3.png"></div>
                     <div class="charBtn" data-char="cha4"><img src="/img/event/homepage/char_icon4.png"></div>
@@ -324,7 +322,7 @@
                     <button class="prev"><img src="/img/event/homepage/arrowL.png"></button>
                     <button class="next"><img src="/img/event/homepage/arrowR.png"></button>
                 </div>
-                <a href="{{ route('wiki') }}"><img src="/img/event/homepage/section3moreBtn.jpg"></a>
+                {{-- <a href="{{ route('wiki') }}"><img src="/img/event/homepage/section3moreBtn.jpg"></a> --}}
             </div>
         </div>
     </div>
@@ -393,7 +391,7 @@
         // section2角色資訊切換
         $(".section2 .cha").hide();
         $(".section2 .cha3").show();
-        $('.charBtn:eq(0)').addClass('active');
+        $('.charBtn:eq(1)').addClass('active');
         $(".section2 .charBtn").on("click", function() {
             $(".section2 .cha").hide();
             $('.charBtn').removeClass("active");

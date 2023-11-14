@@ -63,5 +63,5 @@
 
 
 @section('script')
-    <script src="/js/event/homepage/exchange.js"></script>
+    <script src="/js/event/homepage/exchange.js?v1.0"></script>
 @endsection

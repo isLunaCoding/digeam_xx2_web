@@ -126,5 +126,5 @@
 @endsection
 
 @section('script')
-    <script src="/js/event/homepage/receive.js"></script>
+    <script src="/js/event/homepage/receive.js?v1.1"></script>
 @endsection
