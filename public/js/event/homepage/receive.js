@@ -4,7 +4,7 @@ function logout_dg() {
     $("#logout-form").submit();
 }
 
-$('.boxDown').hide();
+$(".boxDown").hide();
 
 reward_get_setting();
 function reward_get_setting() {
@@ -68,31 +68,64 @@ function get_char(server_id) {
     );
 }
 
+var reward_lock = "open";
+
 function get_reward(content_id) {
-    if (optionServer !== "0" && optionCharacter !== "0") {
-        $.post(
-            api_data,
-            {
-                type: "reward",
-                user_id: $(".account span").text(),
-                content_id: content_id,
-                server_id: optionServer,
-                charid: optionCharacter,
-                char_name: optionCharacterName,
-            },
-            function (res) {
-                if (res.status == -99) {
-                    alert("不明錯誤<br>請連繫客服");
-                }
-                if (res.status == 1) {
-                    alert("領取成功");
-                    location.reload();
-                }
-            }
-        );
-    } else {
-        alert("請選擇伺服器及角色");
-    }
+
+    if (reward_lock == "open") {
+
+        reward_lock = "lock";
+
+        if (optionServer !== "0" && optionCharacter !== "0") {
+
+            $.post(
+
+                api_data,
+
+                {
+
+                    type: "reward",
+
+                    user_id: $(".account span").text(),
+
+                    content_id: content_id,
+
+                    server_id: optionServer,
+
+                    charid: optionCharacter,
+
+                    char_name: optionCharacterName,
+
+                },
+
+                function (res) {
+
+                    if (res.status == -99) {
+
+                        alert("不明錯誤，請連繫客服");
+
+                    }
+
+                    if (res.status == 1) {
+
+                        alert("領取成功");
+
+                        location.reload();
+
+                    }
+
+                    reward_lock = "open";
+
+                });
+
+        } else {
+
+            alert("請選擇伺服器及角色");
+
+        }
+
+}
+
 }
 
 // 活動搜尋列年月
@@ -164,11 +197,11 @@ function show_cont(event_id) {
             if (res.status == -99) {
                 $(".show_title").html(res.title);
                 $(".show_content").html(res.content);
-                $('.boxDown').show();
+                $(".boxDown").show();
             } else if (res.status == 1) {
                 $(".show_title").html(res.title);
                 $(".show_content").html(res.content);
-                $('.boxDown').show();
+                $(".boxDown").show();
             }
         }
     );

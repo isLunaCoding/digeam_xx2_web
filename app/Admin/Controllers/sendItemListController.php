@@ -27,6 +27,8 @@ class sendItemListController extends AdminController
         $grid = new Grid(new sendItem());
 
         // $grid->column('id', __('編號'));
+        $grid->model()
+            ->orderby('cate_id', 'desc');
         $grid->column('cate_id', __('分類'));
         $grid->column('item_code', __('道具ID'));
         $grid->column('item_name', __('道具名稱'));
