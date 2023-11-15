@@ -1172,7 +1172,7 @@ main .s3 .s3_rwd .rwd_content .t1 .content_box .content_text {
   font-size: 22px;
   line-height: 40px;
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   main .s3 .s3_rwd .rwd_content .t1 .content_box .content_text {
     font-size: 16px;
     line-height: 30px;
@@ -1248,7 +1248,7 @@ main .s3 .s3_rwd .rwd_content .t2 .content_box {
   padding: 5% 5%;
   padding-top: 35%;
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   main .s3 .s3_rwd .rwd_content .t2 .content_box {
     margin-top: 15%;
     font-size: 16px;
@@ -1326,7 +1326,7 @@ main .s3 .s3_rwd .rwd_content .t3 .content_box {
 main .s3 .s3_rwd .rwd_content .t3 .content_box .content_text {
   padding-top: 90%;
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   main .s3 .s3_rwd .rwd_content .t3 .content_box .content_text {
     font-size: 16px;
     line-height: 30px;
@@ -1360,7 +1360,7 @@ main .s3 .s3_rwd .rwd_content .t3 .content_box .content_text p {
 main .s3 .s3_rwd .rwd_content .t3 .content_box .content_text p span {
   color: #930202;
 }
-@media all and (max-width: 425px) {
+@media all and (max-width: 500px) {
   main .s3 .s3_rwd .rwd_content .t3 .content_box .content_text p span {
     font-size: 16px;
   }

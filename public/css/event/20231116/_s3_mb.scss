@@ -154,7 +154,7 @@ main {
                             font-size: 22px;
                             line-height: 40px;
 
-                            @include xs() {
+                            @include xlg() {
                                 font-size: 16px;
                                 line-height: 30px;
                                 padding: 0 5%;
@@ -237,7 +237,7 @@ main {
                         padding: 5% 5%;
                         padding-top: 35%;
 
-                        @include xs() {
+                        @include xlg() {
                             margin-top: 15%;
                             font-size: 16px;
                             line-height: 35px;
@@ -322,7 +322,7 @@ main {
                             @extend %f-c-c;
                             padding-top: 90%;
 
-                            @include xs() {
+                            @include xlg() {
                                 font-size: 16px;
                                 line-height: 30px;
                                 padding: 0 5%;
@@ -352,7 +352,7 @@ main {
                                 text-align: center;
                                 span {
                                     color: #930202;
-                                    @include xs() {
+                                    @include xlg() {
                                         font-size: 16px;
                                     }
                                 }
