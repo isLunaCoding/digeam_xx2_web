@@ -7,18 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:title" content="《仙俠世界貳》天龍降世" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="《仙俠世界貳》天龍降世" />
+    <meta property="og:description" content="《仙俠世界貳》首波大型改版問世，全新近戰職業，多項改版活動，讓你再入仙道，共赴仙途！" />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:locale" content="zh_tw" />
     <meta property="og:image" content="img/event/" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
-    <meta property="og:image" content="/img/event/20231116/share.png" />
+    <meta property="og:image" content="/img/event/20231116/header/share.png" />
     <meta name="author" content="DiGeam" />
     <meta name="Resource-type" content="Document" />
     <link rel="icon" sizes="192x192" href="/img/event/prereg/favicon.ico">
-    <meta name="description" content="《仙俠世界貳》天龍降世" />
+    <meta name="description" content="《仙俠世界貳》首波大型改版問世，全新近戰職業，多項改版活動，讓你再入仙道，共赴仙途！" />
     <title>《仙俠世界貳》天龍降世</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="/css/event/20231116/style.css">
