@@ -190,13 +190,17 @@
             <div class="charBox">
                 <div class="btnBox">
                     <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div>
-                    {{-- <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div> --}}
+                    @if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219')
+                        <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div>
+                    @endif
                     <div class="charBtn" data-char="cha3"><img src="/img/event/homepage/char_icon3.png"></div>
                     <div class="charBtn" data-char="cha4"><img src="/img/event/homepage/char_icon4.png"></div>
                     <div class="charBtn" data-char="cha5"><img src="/img/event/homepage/char_icon5.png"></div>
                     <div class="charBtn" data-char="cha6"><img src="/img/event/homepage/char_icon6.png"></div>
                     <div class="charBtn" data-char="cha7"><img src="/img/event/homepage/char_icon7.png"></div>
-                    {{-- <div class="charBtn" data-char="cha8"><img src="/img/event/homepage/char_icon8.png"></div> --}}
+                    @if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219')
+                        <div class="charBtn" data-char="cha8"><img src="/img/event/homepage/char_icon8.png"></div>
+                    @endif
                 </div>
                 <div class="cha cha1">
                     <div class="textBox textBox1">
