@@ -190,9 +190,7 @@
             <div class="charBox">
                 <div class="btnBox">
                     <div class="charBtn" data-char="cha1"><img src="/img/event/homepage/char_icon1.png"></div>
-                    @if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219')
-                        <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div>
-                    @endif
+                    <div class="charBtn" data-char="cha2"><img src="/img/event/homepage/char_icon2.png"></div>
                     <div class="charBtn" data-char="cha3"><img src="/img/event/homepage/char_icon3.png"></div>
                     <div class="charBtn" data-char="cha4"><img src="/img/event/homepage/char_icon4.png"></div>
                     <div class="charBtn" data-char="cha5"><img src="/img/event/homepage/char_icon5.png"></div>
@@ -218,7 +216,7 @@
                         <img src="/img/event/homepage/char_name2.png">
                         <img src="/img/event/homepage/char_feature2.png">
                         <p>
-                            法力無邊，佛法精深。可將佛力凝聚肉體，形成萬帳金光的法像金身，擁有無窮無盡的神力來退魔伏妖。<br>
+                            法力無邊，佛法精深。可將佛力凝聚肉體，形成萬丈金光的法像金身，擁有無窮無盡的神力來退魔伏妖。<br>
                             使用槍。近戰物理輸出職業，單體輸出較高，控制技能較多。
                         </p>
                         <button class="skillInt" onclick="skillInt(char_Array2)">技能介紹&rarr; </button>
@@ -284,8 +282,8 @@
                         <img src="/img/event/homepage/char_name8.png">
                         <img src="/img/event/homepage/char_feature8.png">
                         <p>
-                            擁有超凡的自癒能力，能善用丹藥賜予萬玉頃刻恢復生機之能，自保能力強，在戰爭中充當著治癒者的身份。
-                            <br>使用法仗。治癒系職業，無論是副本還是戰鬥都不可或缺的職業之一，有了該職業相當於多了一條命。
+                            擁有超凡的自癒能力，能善用丹藥賜予萬物頃刻恢復生機之能，自保能力強，在戰爭中充當著治癒者的身份。
+                            <br>使用法杖。治癒系職業，無論是副本還是戰鬥都不可或缺的職業之一，有了該職業相當於多了一條命。
                         </p>
                         <button class="skillInt" onclick="skillInt(char_Array8)">技能介紹&rarr; </button>
                     </div>
@@ -395,7 +393,7 @@
         // section2角色資訊切換
         $(".section2 .cha").hide();
         $(".section2 .cha3").show();
-        $('.charBtn:eq(1)').addClass('active');
+        $('.charBtn:eq(2)').addClass('active');
         $(".section2 .charBtn").on("click", function() {
             $(".section2 .cha").hide();
             $('.charBtn').removeClass("active");
