@@ -98,6 +98,116 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
+                if ((date('YmdHis') >= '20231201120000')) {
+                    $db = \DB::connection('mysql');
+                    $client = new Client();
+                    $data = [
+                        'user_id' => $user_id,
+                    ];
+                    $headers = [
+                        'Content-Type' => 'application/json',
+                        'Accept' => 'application/json',
+                    ];
+                    $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getUserInfo', [
+                        'headers' => $headers,
+                        'json' => $data,
+                    ]);
+                    $result = $res->getBody();
+                    $result = json_decode($result);
+                    if ($result->google2fa_active == 1) {
+                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '43')->count();
+                        if ($eventNum == 0) {
+                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',43,'otp綁定')";
+                            $db->disableQueryLog();
+                            $event_info = $db->statement($sql);
+                        }
+                    }
+                    \DB::disconnect('mysql');
+                }
+
+            //四海轉點回饋3
+            if ((date('YmdHis') >= '20231130120000') && (date('YmdHis') <= '20231231235959')) {
+                $db = \DB::connection('mysql');
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-11-30 12:00:00', '2023-12-06 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-11-30 12:00:00', '2023-12-06 23:59:59'])->sum('cb_point');
+                $event_pay = $c_point + $cb_point;
+                if ($user_id == 'xx2digeam01') {
+                    $event_pay = 50000;
+                }
+                if ($event_pay >= 1000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '44')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',44,'1000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 3000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '45')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',45,'3000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 5000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '46')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',46,'5000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 8000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '47')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',47,'8000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 10000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '48')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',48,'10000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 15000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '49')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',49,'15000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 20000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '50')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',50,'20000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 30000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '51')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',51,'30000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 50000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '52')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',52,'50000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                \DB::disconnect('mysql');
+            }
             //仙族榮耀
             if ((date('YmdHis') >= '20231123120000') && (date('YmdHis') <= '20231231235959')) {
                 $fam1 = ['minnn112', 'shineeby2min', 'a1597321', 'zhaiyu2277', 'tedyang1992', 'justgiveme014064', 'easoncck1996', 'zxc3143611', 'enter488807', 'a9874877', 'a147854789', 'e0917222289', 'linda122719', 'yrbo0728', 'kiss1154', 'x11001230', 'qwe17646', 'shen0908', 'q24986418', 'beyine28530', 'kin828007', 'jerry831113', 'hansting185200', 'he01527553', 'sao30503', 's30306s15', 'e570316i', 's0926110738', 'kcy19780307', 'a0933598737', 's0936978827', 'asd870606', 'nice11233', 'momo0315', 'kuso1990030124', 'escaperallen7753', 'cyi94115', 'asd17646', 'yvonne525', 'kyan6218', 'okok999888777', 'sevenwu6668', 'ben108444', 'a7031842', 'diou5209', 'irrevtime14755', 'keven5214', 'xxgamego11', 'mor19830311', 'zx161811', 'a82628068', 'love861365', 'angel800317', 'a7810855', 'a29553969', 'a29553969', 'yelu83123', 'zx26337463', 'j5691273', 'shianhuan621', 'qo4bj680357'];
