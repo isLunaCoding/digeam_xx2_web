@@ -49,6 +49,7 @@ class ShopController extends AdminController
             }
         });
         $grid->disableRowSelector();
+        $grid->disableExport();
 
         return $grid;
     }
