@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Model\Shop;
+use App\Model\shop;
 use App\Model\shopItemList;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Facades\Admin;
