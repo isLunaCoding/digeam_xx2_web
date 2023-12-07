@@ -41,9 +41,17 @@ class ShopController extends Controller
     public function item_desc($request)
     {
         $shop = shop::where('id', $request->item_id)->first();
-        return response()->json([
-            'status' => 1,
-            'item_info' => $shop,
-        ]);
+        if ($shop) {
+            return response()->json([
+                'status' => 1,
+                'item_info' => $shop,
+            ]);
+        } else {
+
+            return response()->json([
+                'status' => -99,
+            ]);
+
+        }
     }
 }
