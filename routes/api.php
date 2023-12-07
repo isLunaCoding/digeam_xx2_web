@@ -23,5 +23,4 @@ Route::post('cbt', 'API\event\CBTController@index');
 Route::post('exchange', 'API\SerialNumberController@index');
 Route::post('digeamIndexNews', 'API\DigeamController@IndexNews')->name('IndexNews');
 Route::post('addReward', 'API\rewardController@myCardEvent')->name('addReward');
-
-
+Route::post('shop', 'API\ShopController@index')->name('Shop');
