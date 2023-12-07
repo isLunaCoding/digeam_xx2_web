@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Model\Shop;
+use App\Model\shop;
 use App\Model\shopItemList;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
@@ -28,7 +28,7 @@ class ShopController extends AdminController
 
     protected function grid()
     {
-        $grid = new Grid(new Shop());
+        $grid = new Grid(new shop());
         $grid->model()->orderBy('status', 'desc')->orderBy('sort', 'desc');
         $grid->column('id', __('編號'));
         $grid->column('title', __('商品名稱'));
@@ -67,7 +67,7 @@ class ShopController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new Shop());
+        $form = new Form(new shop());
         $form->text('id', __('ID'))->readOnly();
         $form->text('title', __('商品名稱'));
         $form->select('cate', __('分類'))->options(['1' => '熱門商品', '2' => '特別販售'])->default(1);
