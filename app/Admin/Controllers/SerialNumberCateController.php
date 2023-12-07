@@ -107,55 +107,7 @@ class SerialNumberCateController extends AdminController
             $footer->disableCreatingCheck();
         });
 
-        $form->saving(function (Form $form) {
-            // 前贅詞檢查
-            if (mb_strlen($form->type) != 3) {
-                $error = new MessageBag([
-                    'title' => '錯誤',
-                    'message' => '前贅詞請設定3個字元',
-                ]);
-                return back()->with(compact('error'));
-            };
-            //大寫檢查
 
-            $type = $form->type;
-            $num = 0;
-            for ($i = 0; $i < mb_strlen($form->type); $i++) {
-                $char = ord($type[$i]);
-                if ($char > 96 && $char < 123) {
-                    $num++;
-                }
-            }
-            if ($num > 0) {
-                $error = new MessageBag([
-                    'title' => '錯誤',
-                    'message' => '含有小寫字母',
-                ]);
-                return back()->with(compact('error'));
-            };
-
-            // 序號產出數量檢查
-            if ($form->all_for_one == 'Y') {
-                if ($form->count != 1) {
-                    $error = new MessageBag([
-                        'title' => '錯誤',
-                        'message' => '一組多人使用序號請設定數量為"1"',
-                    ]);
-                    return back()->with(compact('error'));
-                }
-            }
-            //可兌換次數檢查
-            if ($form->all_for_one == 'N') {
-                if ($form->remainder != 1) {
-                    $error = new MessageBag([
-                        'title' => '錯誤',
-                        'message' => '一組一人序號可用次數為"1"',
-                    ]);
-                    return back()->with(compact('error'));
-                }
-            }
-
-        });
 
         $form->saved(function (Form $form) {
 
