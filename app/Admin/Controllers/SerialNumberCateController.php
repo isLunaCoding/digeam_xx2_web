@@ -27,6 +27,7 @@ class SerialNumberCateController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new serial_number_cate());
+        $grid->model()->orderBy('created_at', 'desc');
 
         $grid->column('title', __('標題'));
         $grid->column('type', __('前贅詞'));
