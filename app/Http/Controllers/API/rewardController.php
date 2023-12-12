@@ -98,11 +98,66 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
-
+            //聖誕節Mycard-3000
+            if ((date('YmdHis') >= '20231213000000') && (date('YmdHis') <= '20240131235959')) {
+                $db = \DB::connection('mysql');
+                $client = new Client();
+                $data = [
+                    'user_id' => $user_id,
+                    'sdate' => '2023-12-13 00:00:00',
+                    'edate' => '2024-01-02 23:59:59',
+                    'PromoCode' => 'E8180',
+                ];
+                $headers = [
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ];
+                $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getMyCardLog', [
+                    'headers' => $headers,
+                    'json' => $data,
+                ]);
+                $result = $res->getBody();
+                $result = json_decode($result);
+                $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '55')->count();
+                while ($eventNum < $result) {
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',55,'聖誕mycard3000')";
+                    $event_info = $db->statement($sql);
+                    $eventNum++;
+                }
+                \DB::disconnect('mysql');
+            }
+            //聖誕節Mycard-1000
+            if ((date('YmdHis') >= '20231213000000') && (date('YmdHis') <= '20240131235959')) {
+                $db = \DB::connection('mysql');
+                $client = new Client();
+                $data = [
+                    'user_id' => $user_id,
+                    'sdate' => '2023-12-13 00:00:00',
+                    'edate' => '2024-01-02 23:59:59',
+                    'PromoCode' => 'E8179',
+                ];
+                $headers = [
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ];
+                $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getMyCardLog', [
+                    'headers' => $headers,
+                    'json' => $data,
+                ]);
+                $result = $res->getBody();
+                $result = json_decode($result);
+                $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '54')->count();
+                while ($eventNum < $result) {
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',54,'聖誕mycard1000')";
+                    $event_info = $db->statement($sql);
+                    $eventNum++;
+                }
+                \DB::disconnect('mysql');
+            }
+            //四海轉點回饋4
             if ((date('YmdHis') >= '20231207120000') && (date('YmdHis') <= '20231231235959')) {
-                //四海轉點回饋4
-                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-07 12:00:00', '2023-12-31 23:59:59'])->sum('c_point');
-                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-07 12:00:00', '2023-12-31 23:59:59'])->sum('cb_point');
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-07 12:00:00', '2023-12-13 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-07 12:00:00', '2023-12-13 23:59:59'])->sum('cb_point');
                 $event_pay = $c_point + $cb_point;
                 $event_cnt = (integer) ($event_pay / 99);
                 $check_cnt = reward_getlog::where('user_id', $user_id)->where('group_id', '53')->count();
