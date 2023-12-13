@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Model\Image;
 use App\Model\item_id;
 use App\Model\shop;
 use App\Model\shopItemList;
@@ -33,6 +34,7 @@ class ShopController extends Controller
     public function login($request)
     {
         $shop = shop::where('status', 1)->orderby('sort', 'desc')->get();
+        $banner = Image::where('type', 'shop')->orderBy('status', 'desc')->orderBy('sort', 'asc')->get();
         if (!$request->user) {
             return response()->json([
                 'status' => -99,
@@ -41,6 +43,7 @@ class ShopController extends Controller
                 'char' => false,
                 'point' => 0,
                 'msg' => '未登入',
+                'banner' => $banner,
             ]);
         } else {
             $depot = shopUserDepot::where('user_id', $request->user)->where('count', '>', 0)->get();
@@ -86,6 +89,7 @@ class ShopController extends Controller
                         'item' => $shop,
                         'point' => $point,
                         'msg' => '已登入',
+                        'banner' => $banner,
                     ]);
                 } else {
                     return response()->json([
@@ -96,6 +100,7 @@ class ShopController extends Controller
                         'item' => $shop,
                         'point' => $point,
                         'msg' => '已登入',
+                        'banner' => $banner,
                     ]);
                 }
             } else {
@@ -107,6 +112,7 @@ class ShopController extends Controller
                     'item' => $shop,
                     'point' => $point,
                     'msg' => '已登入',
+                    'banner' => $banner,
                 ]);
             }
         }
