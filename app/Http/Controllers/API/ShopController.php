@@ -40,6 +40,7 @@ class ShopController extends Controller
                 'point'=>0,
             ]);
         } else {
+            $depot = shopUserDepot::where('user_id', $request->user)->where('count', '>', 0)->get();
             $client = new Client();
             $data = [
                 'user_id' => $request->user,

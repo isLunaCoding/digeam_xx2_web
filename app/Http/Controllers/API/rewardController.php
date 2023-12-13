@@ -98,6 +98,26 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
+
+            //四海轉點回饋5
+            if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-13 17:00:00', '2023-12-20 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-13 17:00:00', '2023-12-20 23:59:59'])->sum('cb_point');
+                $event_pay = $c_point + $cb_point;
+                if($user_id=='xx2digeam03'){
+                    $event_pay=9000;
+                }
+                $event_cnt = (integer) ($event_pay / 300);
+                $check_cnt = reward_getlog::where('user_id', $user_id)->where('group_id', '57')->count();
+                while ($event_cnt > $check_cnt) {
+                    $db = \DB::connection('mysql');
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',57,'四海商團第五巡')";
+                    $db->disableQueryLog();
+                    $event_info = $db->statement($sql);
+                    $check_cnt++;
+                }
+            }
+
             //聖誕節Mycard-3000
             if ((date('YmdHis') >= '20231213000000') && (date('YmdHis') <= '20240131235959')) {
                 $db = \DB::connection('mysql');
@@ -1022,6 +1042,9 @@ class rewardController extends Controller
             $reward_content = reward_content::where('id', $content_id)->first();
             $event_group = reward_group::where('id', $reward_content->group_id)->first();
             $item_name = $reward_content->item_name;
+            if ($content_id == 59) {
+                $item_name = "150000寶珠券x1+靈魂寶石x2+1級裝備寶石包x4+冰墩墩的祝福x1+雪容融的祝福x1";
+            }
             $item_code = $reward_content->item_code;
             $itemcnt = $reward_content->itemcnt;
             $isbind = $reward_content->isbind;
@@ -1029,7 +1052,6 @@ class rewardController extends Controller
             $title = '領獎區';
             $event = reward_event::where('id', $event_group->event_id)->first();
             $event_name = $event->event_name;
-            // $content = "領獎專區";
             $content = $event_name;
         }
 
@@ -1056,6 +1078,7 @@ class rewardController extends Controller
             $uid = $info->uid;
         }
         $status = 0;
+
         if ($is_package == 'N') {
             //發獎API
             $ch = curl_init();
@@ -1083,9 +1106,17 @@ class rewardController extends Controller
                 $createlog->remark = '失敗';
             }
             $createlog->save();
-
         } else {
             $item_lists = package_item::where('package_code', $item_code)->get();
+            if ($content_id == 59) {
+                $random = mt_rand(1, 100);
+                if ($random <= 2) {
+                    $item_name = "150000寶珠券x1+靈魂寶石x2+1級裝備寶石包x4+冰墩墩的祝福x1+雪容融的祝福x1+雙人．無界藍跑x1";
+                    $item_lists1 = package_item::where('package_code', $item_code)->get();
+                    $item_lists2 = package_item::where('package_code', 99999971)->get();
+                    $item_lists = $item_lists1->merge($item_lists2);
+                }
+            }
             foreach ($item_lists as $item) {
                 $ch = curl_init();
                 $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
