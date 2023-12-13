@@ -32,7 +32,7 @@ class ShopController extends Controller
     }
     public function login($request)
     {
-        $shop = shop::where('status', 1)->orderby('sort', 'desc')->get();
+        $shop = shop::where('status', 1)->orderby('sort','desc')->get();
         if (!$request->user) {
             return response()->json([
                 'status' => -99,
@@ -48,12 +48,12 @@ class ShopController extends Controller
             $data = [
                 'user_id' => $request->user,
             ];
-
+    
             $headers = [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
             ];
-
+    
             $res = $client->request('POST', 'https://webapi.digeam.com/xx2/get_point', [
                 'headers' => $headers,
                 'json' => $data,
