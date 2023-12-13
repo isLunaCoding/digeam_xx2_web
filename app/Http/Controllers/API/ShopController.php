@@ -30,27 +30,26 @@ class ShopController extends Controller
     }
     public function login($request)
     {
-        $shop = shop::where('status', 1)->orderby('sort', 'desc')->get();
+        $shop = shop::where('status', 1)->orderby('sort','desc')->get();
         if (!$request->user) {
             return response()->json([
                 'status' => -99,
                 'item' => $shop,
                 'buy_list' => false,
                 'char' => false,
-                'point' => 0,
+                'point'=>0,
             ]);
         } else {
-            $depot = shopUserDepot::where('user_id', $request->user)->where('count', '>', 0)->get();
             $client = new Client();
             $data = [
                 'user_id' => $request->user,
             ];
-
+    
             $headers = [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
             ];
-
+    
             $res = $client->request('POST', 'https://webapi.digeam.com/xx2/get_point', [
                 'headers' => $headers,
                 'json' => $data,
