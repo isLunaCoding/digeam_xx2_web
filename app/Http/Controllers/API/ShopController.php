@@ -56,7 +56,7 @@ class ShopController extends Controller
             ]);
             $result = $res->getBody();
             $point = json_decode($result);
-            
+
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $request->user);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -78,18 +78,18 @@ class ShopController extends Controller
                         'status' => 1,
                         'msg' => $result2->msg,
                         'char_list' => $result2->role_info,
-                        'buy_list' => false,
+                        'buy_list' => $depot,
                         'item' => $shop,
-                        'point'=>$point,
+                        'point' => $point,
                     ]);
                 } else {
                     return response()->json([
                         'status' => 1,
                         'msg' => $result2->msg,
                         'char_list' => [],
-                        'buy_list' => false,
+                        'buy_list' => $depot,
                         'item' => $shop,
-                        'point'=>$point,
+                        'point' => $point,
                     ]);
                 }
             } else {
@@ -97,9 +97,9 @@ class ShopController extends Controller
                     'status' => 1,
                     'msg' => $result->msg,
                     'char_list' => [],
-                    'buy_list' => false,
+                    'buy_list' => $depot,
                     'item' => $shop,
-                    'point'=>$point,
+                    'point' => $point,
                 ]);
             }
         }
