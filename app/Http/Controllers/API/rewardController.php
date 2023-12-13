@@ -98,32 +98,124 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
-                if ((date('YmdHis') >= '20231201120000')) {
-                    $db = \DB::connection('mysql');
-                    $client = new Client();
-                    $data = [
-                        'user_id' => $user_id,
-                    ];
-                    $headers = [
-                        'Content-Type' => 'application/json',
-                        'Accept' => 'application/json',
-                    ];
-                    $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getUserInfo', [
-                        'headers' => $headers,
-                        'json' => $data,
-                    ]);
-                    $result = $res->getBody();
-                    $result = json_decode($result);
-                    if ($result->google2fa_active == 1) {
-                        $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '43')->count();
-                        if ($eventNum == 0) {
-                            $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',43,'otp綁定')";
-                            $db->disableQueryLog();
-                            $event_info = $db->statement($sql);
-                        }
-                    }
-                    \DB::disconnect('mysql');
+
+            //四海轉點回饋5
+            if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-13 17:00:00', '2023-12-20 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-13 17:00:00', '2023-12-20 23:59:59'])->sum('cb_point');
+                $event_pay = $c_point + $cb_point;
+                if($user_id=='xx2digeam03'){
+                    $event_pay=9000;
                 }
+                $event_cnt = (integer) ($event_pay / 300);
+                $check_cnt = reward_getlog::where('user_id', $user_id)->where('group_id', '57')->count();
+                while ($event_cnt > $check_cnt) {
+                    $db = \DB::connection('mysql');
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',57,'四海商團第五巡')";
+                    $db->disableQueryLog();
+                    $event_info = $db->statement($sql);
+                    $check_cnt++;
+                }
+            }
+
+            //聖誕節Mycard-3000
+            if ((date('YmdHis') >= '20231213000000') && (date('YmdHis') <= '20240131235959')) {
+                $db = \DB::connection('mysql');
+                $client = new Client();
+                $data = [
+                    'user_id' => $user_id,
+                    'sdate' => '2023-12-13 00:00:00',
+                    'edate' => '2024-01-02 23:59:59',
+                    'PromoCode' => 'E8180',
+                ];
+                $headers = [
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ];
+                $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getMyCardLog', [
+                    'headers' => $headers,
+                    'json' => $data,
+                ]);
+                $result = $res->getBody();
+                $result = json_decode($result);
+                $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '55')->count();
+                while ($eventNum < $result) {
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',55,'聖誕mycard3000')";
+                    $event_info = $db->statement($sql);
+                    $eventNum++;
+                }
+                \DB::disconnect('mysql');
+            }
+            //聖誕節Mycard-1000
+            if ((date('YmdHis') >= '20231213000000') && (date('YmdHis') <= '20240131235959')) {
+                $db = \DB::connection('mysql');
+                $client = new Client();
+                $data = [
+                    'user_id' => $user_id,
+                    'sdate' => '2023-12-13 00:00:00',
+                    'edate' => '2024-01-02 23:59:59',
+                    'PromoCode' => 'E8179',
+                ];
+                $headers = [
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ];
+                $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getMyCardLog', [
+                    'headers' => $headers,
+                    'json' => $data,
+                ]);
+                $result = $res->getBody();
+                $result = json_decode($result);
+                $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '54')->count();
+                while ($eventNum < $result) {
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',54,'聖誕mycard1000')";
+                    $event_info = $db->statement($sql);
+                    $eventNum++;
+                }
+                \DB::disconnect('mysql');
+            }
+            //四海轉點回饋4
+            if ((date('YmdHis') >= '20231207120000') && (date('YmdHis') <= '20231231235959')) {
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-07 12:00:00', '2023-12-13 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-07 12:00:00', '2023-12-13 23:59:59'])->sum('cb_point');
+                $event_pay = $c_point + $cb_point;
+                $event_cnt = (integer) ($event_pay / 99);
+                $check_cnt = reward_getlog::where('user_id', $user_id)->where('group_id', '53')->count();
+                while ($event_cnt > $check_cnt) {
+                    $db = \DB::connection('mysql');
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',53,'四海商團第四巡')";
+                    $db->disableQueryLog();
+                    $event_info = $db->statement($sql);
+                    $check_cnt++;
+                }
+            }
+
+            if ((date('YmdHis') >= '20231201120000')) {
+                $db = \DB::connection('mysql');
+                $client = new Client();
+                $data = [
+                    'user_id' => $user_id,
+                ];
+                $headers = [
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ];
+                $res = $client->request('POST', 'https://webapi.digeam.com/xx2/getUserInfo', [
+                    'headers' => $headers,
+                    'json' => $data,
+                ]);
+                $result = $res->getBody();
+                $result = json_decode($result);
+                if ($result->google2fa_active == 1) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '43')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',43,'otp綁定')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                \DB::disconnect('mysql');
+            }
 
             //四海轉點回饋3
             if ((date('YmdHis') >= '20231130120000') && (date('YmdHis') <= '20231231235959')) {
@@ -919,10 +1011,40 @@ class rewardController extends Controller
             $event_name = '綁定名士' . $item_name;
             $content = $event_name;
             // $content = "領獎專區";
+        } else if ($content_id == 55) {
+            $name_list = ['6666寶珠券', '30000寶珠券', '流光銀袋', '玲瓏寶珠盒', '琉璃寶珠盒', '家族玉佩', '仁德之佩', '家族玉佩', '仁德之佩', '家族玉佩', '仁德之佩', '聖誕快樂', '乾坤袋(1天)', '乾坤袋(3天)', '乾坤袋(7天)', '乾坤袋(15天)', '乾坤袋(30天)', '乾坤袋(永久)'];
+            $item_code_list = [57057, 57064, 57050, 57051, 57060, 57221, 57216, 57221, 57216, 57221, 57216, 47057, 38306, 38305, 38304, 38303, 38302, 38312];
+            $count_list = [1, 1, 1, 1, 5, 2, 2, 5, 5, 8, 8, 1, 1, 1, 1, 1, 1, 1];
+            $probability = [12.0000, 13.0000, 15.0000, 11.0000, 1.5000, 13.0000, 13.0000, 7.0000, 7.0000, 2.1700, 2.1550, 1.5000, 1.0000, 0.5000, 0.1000, 0.0500, 0.0249, 0.0001];
+            $min = 0;
+            $max = 100;
+            $count = 0;
+            $chance = 0;
+            $target = $min + mt_rand() / mt_getrandmax() * ($max - $min);
+            foreach ($probability as $value) {
+                $chance += $value;
+                $count++;
+                if ($chance > (sprintf("%.5f", $target))) {
+                    break;
+                }
+            }
+            $item_name = $name_list[$count - 1];
+            $item_code = $item_code_list[$count - 1];
+            $itemcnt = $count_list[$count - 1];
+            $isbind = 1;
+            $is_package = 'N';
+            $title = '領獎區';
+            $event = reward_event::where('id', 14)->first();
+            $event_name = '四海第4巡' . $item_name;
+            $content = $event_name;
+            $event_group = reward_group::where('id', 53)->first();
         } else {
             $reward_content = reward_content::where('id', $content_id)->first();
             $event_group = reward_group::where('id', $reward_content->group_id)->first();
             $item_name = $reward_content->item_name;
+            if ($content_id == 59) {
+                $item_name = "150000寶珠券x1+靈魂寶石x2+1級裝備寶石包x4+冰墩墩的祝福x1+雪容融的祝福x1";
+            }
             $item_code = $reward_content->item_code;
             $itemcnt = $reward_content->itemcnt;
             $isbind = $reward_content->isbind;
@@ -930,7 +1052,6 @@ class rewardController extends Controller
             $title = '領獎區';
             $event = reward_event::where('id', $event_group->event_id)->first();
             $event_name = $event->event_name;
-            // $content = "領獎專區";
             $content = $event_name;
         }
 
@@ -957,6 +1078,7 @@ class rewardController extends Controller
             $uid = $info->uid;
         }
         $status = 0;
+
         if ($is_package == 'N') {
             //發獎API
             $ch = curl_init();
@@ -968,33 +1090,33 @@ class rewardController extends Controller
             curl_close($ch);
             $result3 = json_decode($result3);
             $status = $result3->status;
+
+            $createlog = new reward_send_log();
+            $createlog->user_id = $user_id;
+            $createlog->server_id = $server_id;
+            $createlog->char_name = $char_name;
+            $createlog->charid = $charid;
+            $createlog->item_name = $item_name;
+            $createlog->is_send = 'Y';
+            $createlog->item_code = $item_code;
+            $createlog->user_ip = $real_ip;
             if ($result3->status == 0) {
-                $createlog = new reward_send_log();
-                $createlog->user_id = $user_id;
-                $createlog->server_id = $server_id;
-                $createlog->char_name = $char_name;
-                $createlog->charid = $charid;
-                $createlog->item_name = $item_name;
-                $createlog->is_send = 'Y';
-                $createlog->item_code = $item_code;
-                $createlog->user_ip = $real_ip;
                 $createlog->remark = $event_name . "-" . $title;
-                $createlog->save();
             } else {
-                $createlog = new reward_send_log();
-                $createlog->user_id = $user_id;
-                $createlog->server_id = $server_id;
-                $createlog->char_name = $char_name;
-                $createlog->charid = $charid;
-                $createlog->item_name = $item_name;
-                $createlog->is_send = 'Y';
-                $createlog->item_code = $item_code;
-                $createlog->user_ip = $real_ip;
                 $createlog->remark = '失敗';
-                $createlog->save();
             }
+            $createlog->save();
         } else {
             $item_lists = package_item::where('package_code', $item_code)->get();
+            if ($content_id == 59) {
+                $random = mt_rand(1, 100);
+                if ($random <= 2) {
+                    $item_name = "150000寶珠券x1+靈魂寶石x2+1級裝備寶石包x4+冰墩墩的祝福x1+雪容融的祝福x1+雙人．無界藍跑x1";
+                    $item_lists1 = package_item::where('package_code', $item_code)->get();
+                    $item_lists2 = package_item::where('package_code', 99999971)->get();
+                    $item_lists = $item_lists1->merge($item_lists2);
+                }
+            }
             foreach ($item_lists as $item) {
                 $ch = curl_init();
                 $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
@@ -1007,31 +1129,22 @@ class rewardController extends Controller
                 if ($result3->status != 0) {
                     $status = $result3->status;
                 }
+                $createlog = new reward_send_log();
+                $createlog->user_id = $user_id;
+                $createlog->server_id = $server_id;
+                $createlog->char_name = $char_name;
+                $createlog->charid = $charid;
+                $createlog->item_name = $item_name;
+                $createlog->is_send = 'Y';
+                $createlog->user_ip = $real_ip;
                 if ($result3->status == 0) {
-                    $createlog = new reward_send_log();
-                    $createlog->user_id = $user_id;
-                    $createlog->server_id = $server_id;
-                    $createlog->char_name = $char_name;
-                    $createlog->charid = $charid;
-                    $createlog->item_name = $item_name;
-                    $createlog->is_send = 'Y';
                     $createlog->item_code = $item->item_code;
-                    $createlog->user_ip = $real_ip;
                     $createlog->remark = $event_name . "-" . $title;
-                    $createlog->save();
                 } else {
-                    $createlog = new reward_send_log();
-                    $createlog->user_id = $user_id;
-                    $createlog->server_id = $server_id;
-                    $createlog->char_name = $char_name;
-                    $createlog->charid = $charid;
-                    $createlog->item_name = $item_name;
-                    $createlog->is_send = 'Y';
                     $createlog->item_code = $item_code;
-                    $createlog->user_ip = $real_ip;
                     $createlog->remark = '失敗';
-                    $createlog->save();
                 }
+                $createlog->save();
             }
         }
         if ($status == 0) {
@@ -1050,19 +1163,6 @@ class rewardController extends Controller
             $log_info->user_ip = $real_ip;
             $log_info->remark = $event_name . "-" . $title;
             $log_info->save();
-
-            // $createlog = new reward_send_log();
-            // $createlog->user_id=$user_id;
-            // $createlog->server_id = $server_id;
-            // $createlog->char_name = $char_name;
-            // $createlog->charid = $charid;
-            // $createlog->item_name = $item_name;
-            // $createlog->is_send = 'Y';
-            // $createlog->item_code = $item_code;
-            // $createlog->user_ip = $real_ip;
-            // $createlog->remark = $event_name . "-" . $title;
-            // $createlog->save();
-
             return response()->json([
                 'status' => 1,
             ]);

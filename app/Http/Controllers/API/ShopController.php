@@ -51,12 +51,12 @@ class ShopController extends Controller
             $data = [
                 'user_id' => $request->user,
             ];
-
+    
             $headers = [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
             ];
-
+    
             $res = $client->request('POST', 'https://webapi.digeam.com/xx2/get_point', [
                 'headers' => $headers,
                 'json' => $data,
