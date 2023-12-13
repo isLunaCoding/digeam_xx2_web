@@ -34,5 +34,9 @@ Route::group([
     $router->resource('sendItemList', 'sendItemListController');
     $router->resource('sendItemLog', 'sendItemLogController');
     $router->resource('shop', 'ShopController');
+    $router->resource('/shop_banner', 'ShopBannerController');
+    $router->resource('/shop_buy_record', 'ShopBuyRecordController');
+    $router->resource('/shop_user_record', 'ShopUserRecordController');
+    $router->resource('/shop_send_record', 'ShopSendRecordController');
     $router->resource('{id}/shop_item_list', 'ShopItemListController');
 });
