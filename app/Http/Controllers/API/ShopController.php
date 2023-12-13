@@ -30,60 +30,80 @@ class ShopController extends Controller
     }
     public function login($request)
     {
-
-        $shop = shop::where('status', 1)->get();
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $request->user);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $result = curl_exec($ch);
-        curl_close($ch);
-        $result = json_decode($result);
-        if ($result->status == 0) {
-            $info = $result->account_info;
-            $uid = $info->uid;
-            //找角色名單
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?accid=" . $uid . "&zoneid=" . 1801 . "&type=getcharlist_3party");
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            $result2 = curl_exec($ch);
-            curl_close($ch);
-            $result2 = json_decode($result2);
-            dd($result2);
-            if ($result2->status == 0) {
-                return response()->json([
-                    'status' => 1,
-                    'char_list' => $result2->role_info,
-                ]);
-            } else {
-                return response()->json([
-                    'status' => 1,
-                    'msg' => $result2->msg,
-                    'char_list' => [],
-                ]);
-            }
-        } else {
-            return response()->json([
-                'status' => 1,
-                'msg' => $result->msg,
-                'char_list' => [],
-            ]);
-        }
-
-        if ($request->user) {
-            return response()->json([
-                'status' => 1,
-                'item' => $shop,
-                'buy_list' => [],
-                'char' => [],
-            ]);
-        } else {
+        $shop = shop::where('status', 1)->orderby('sort','desc')->get();
+        if (!$request->user) {
             return response()->json([
                 'status' => -99,
                 'item' => $shop,
                 'buy_list' => false,
                 'char' => false,
+                'point'=>0,
             ]);
+        } else {
+            $client = new Client();
+            $data = [
+                'user_id' => $request->user,
+            ];
+    
+            $headers = [
+                'Content-Type' => 'application/json',
+                'Accept' => 'application/json',
+            ];
+    
+            $res = $client->request('POST', 'https://webapi.digeam.com/xx2/get_point', [
+                'headers' => $headers,
+                'json' => $data,
+            ]);
+            $result = $res->getBody();
+            $point = json_decode($result);
+            
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $request->user);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            $result = curl_exec($ch);
+            curl_close($ch);
+            $result = json_decode($result);
+            if ($result->status == 0) {
+                $info = $result->account_info;
+                $uid = $info->uid;
+                //找角色名單
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?accid=" . $uid . "&zoneid=" . 1801 . "&type=getcharlist_3party");
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                $result2 = curl_exec($ch);
+                curl_close($ch);
+                $result2 = json_decode($result2);
+                if ($result2->status == 0) {
+                    return response()->json([
+                        'status' => 1,
+                        'msg' => $result2->msg,
+                        'char_list' => $result2->role_info,
+                        'buy_list' => false,
+                        'item' => $shop,
+                        'point'=>$point,
+                    ]);
+                } else {
+                    return response()->json([
+                        'status' => 1,
+                        'msg' => $result2->msg,
+                        'char_list' => [],
+                        'buy_list' => false,
+                        'item' => $shop,
+                        'point'=>$point,
+                    ]);
+                }
+            } else {
+                return response()->json([
+                    'status' => 1,
+                    'msg' => $result->msg,
+                    'char_list' => [],
+                    'buy_list' => false,
+                    'item' => $shop,
+                    'point'=>$point,
+                ]);
+            }
         }
+
     }
     public function item_desc($request)
     {
@@ -158,7 +178,7 @@ class ShopController extends Controller
             'Accept' => 'application/json',
         ];
 
-        $res = $client->request('POST', 'https://webapi.digeam.com/xx2/get_change_point', [
+        $res = $client->request('POST', 'https://webapi.digeam.com/xx2/shop_buy_item', [
             'headers' => $headers,
             'json' => $data,
         ]);
@@ -201,6 +221,7 @@ class ShopController extends Controller
             }
             return response()->json([
                 'status' => 1,
+                'msg' => '購買成功',
             ]);
         }
     }
