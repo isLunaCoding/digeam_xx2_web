@@ -20,6 +20,14 @@ class ShopController extends Controller
 {
     public function index(Request $request)
     {
+        if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+            $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        } else {
+            $real_ip = $_SERVER["REMOTE_ADDR"];
+        }
+        if($real_ip != '211.23.144.219'){
+            return redirect('index');
+        }
         if ($request->type == 'login') {
             $result = ShopController::login($request);
             return $result;
@@ -40,8 +48,8 @@ class ShopController extends Controller
         $now = date('Y-m-d h:i:s');
         $check_feedback = shopFeedback::where('status', 1)->first();
         if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
-            if ($request->user) {
-                $spend = shopLog::where('user_id', $request->user)->whereBetween('created_at', [$check_feedback->start, $check_feedback->end])->sum('total_price');
+            if ($_COOKIE['StrID']) {
+                $spend = shopLog::where('user_id', $_COOKIE['StrID'])->whereBetween('created_at', [$check_feedback->start, $check_feedback->end])->sum('total_price');
             }
             $feedback = $check_feedback;
             $shopFeedbackItem = shopFeedbackItem::select('price', DB::raw('GROUP_CONCAT(item_name) as item_names'))
@@ -59,7 +67,7 @@ class ShopController extends Controller
         $shop = shop::where('status', 1)->orderby('sort', 'desc')->get();
         // 找出banner
         $banner = Image::where('type', 'shop')->orderBy('status', 'desc')->orderBy('sort', 'asc')->get();
-        if (!$request->user) {
+        if (!$_COOKIE['StrID']) {
             return response()->json([
                 'status' => -99,
                 'item' => $shop,
@@ -73,10 +81,10 @@ class ShopController extends Controller
             ]);
         } else {
 
-            $depot = shopUserDepot::where('user_id', $request->user)->where('count', '>', 0)->get();
+            $depot = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('count', '>', 0)->get();
             $client = new Client();
             $data = [
-                'user_id' => $request->user,
+                'user_id' => $_COOKIE['StrID'],
             ];
 
             $headers = [
@@ -92,7 +100,7 @@ class ShopController extends Controller
             $point = json_decode($result);
 
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $request->user);
+            curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $_COOKIE['StrID']);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             $result = curl_exec($ch);
             curl_close($ch);
@@ -175,7 +183,7 @@ class ShopController extends Controller
             $real_ip = $_SERVER["REMOTE_ADDR"];
         }
         // 沒登入
-        if (!$request->user) {
+        if (!$_COOKIE['StrID']) {
             return response()->json([
                 'status' => -99,
                 'msg' => '請先登入',
@@ -193,7 +201,7 @@ class ShopController extends Controller
                     ]);
                 }
             } else if ($shop_item->limit_type == 2) {
-                $check = shopLog::where('user_id', $request->user)->where('item_id', $request->item_id)->count();
+                $check = shopLog::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id)->count();
                 if ($check >= $shop_item->limit_count) {
                     return response()->json([
                         'status' => -97,
@@ -209,7 +217,7 @@ class ShopController extends Controller
                     ]);
                 }
             } else if ($shop_item->limit_type == 4) {
-                $check = shopLog::where('user_id', $request->user)->where('item_id', $request->item_id)->whereBetween('created_at', [$request->limit_start, $request->limit_end])->count();
+                $check = shopLog::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id)->whereBetween('created_at', [$request->limit_start, $request->limit_end])->count();
                 if ($check >= $shop_item->limit_count) {
                     return response()->json([
                         'status' => -97,
@@ -221,7 +229,7 @@ class ShopController extends Controller
         // 有登入,打api確認款項和扣款
         $client = new Client();
         $data = [
-            'user_id' => $request->user,
+            'user_id' => $_COOKIE['StrID'],
             'price' => $shop_item->price,
             'count' => $request->count,
         ];
@@ -263,7 +271,7 @@ class ShopController extends Controller
                     }
                     // 記錄抽包結果,並且寫入倉庫
                     $newLog = new shopLog();
-                    $newLog->user_id = $request->user;
+                    $newLog->user_id = $_COOKIE['StrID'];
                     $newLog->ip = $real_ip;
                     $newLog->item_id = $request->item_id . '-' . $get['id'];
                     $newLog->item_name = $shop_item->title . '-' . $get['item_name'];
@@ -277,13 +285,13 @@ class ShopController extends Controller
                     $newLog->save();
 
                     //找尋玩家倉庫是否有該道具
-                    $search_depot = shopUserDepot::where('user_id', $request->user)->where('item_id', $request->item_id . '-' . $get['id'])->where('reason', $shop_item->title . '-' . $get['item_name'])->first();
+                    $search_depot = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id . '-' . $get['id'])->where('reason', $shop_item->title . '-' . $get['item_name'])->first();
                     if ($search_depot) {
                         $search_depot->count += $request->count;
                         $search_depot->save();
                     } else {
                         $new_depot_item = new shopUserDepot();
-                        $new_depot_item->user_id = $request->user;
+                        $new_depot_item->user_id = $_COOKIE['StrID'];
                         $new_depot_item->count = 1;
                         $new_depot_item->item_id = $request->item_id . '-' . $get['id'];
                         $new_depot_item->item_name = $shop_item->title . '-' . $get['item_name'];
@@ -298,7 +306,7 @@ class ShopController extends Controller
             }
             // 寫購買紀錄
             $newLog = new shopLog();
-            $newLog->user_id = $request->user;
+            $newLog->user_id = $_COOKIE['StrID'];
             $newLog->ip = $real_ip;
             $newLog->item_id = $request->item_id;
             $newLog->item_name = $shop_item->title;
@@ -312,13 +320,13 @@ class ShopController extends Controller
             $newLog->save();
 
             //找尋玩家倉庫是否有該道具
-            $search_depot = shopUserDepot::where('user_id', $request->user)->where('item_id', $request->item_id)->where('reason', '商城購買')->first();
+            $search_depot = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id)->where('reason', '商城購買')->first();
             if ($search_depot) {
                 $search_depot->count += $request->count;
                 $search_depot->save();
             } else {
                 $new_depot_item = new shopUserDepot();
-                $new_depot_item->user_id = $request->user;
+                $new_depot_item->user_id = $_COOKIE['StrID'];
                 $new_depot_item->count = $request->count;
                 $new_depot_item->item_id = $request->item_id;
                 $new_depot_item->item_name = $shop_item->title;
@@ -338,13 +346,13 @@ class ShopController extends Controller
         } else {
             $real_ip = $_SERVER["REMOTE_ADDR"];
         }
-        if (!$request->user) {
+        if (!$_COOKIE['StrID']) {
             return response()->json([
                 'status' => -99,
                 'msg' => '未登入',
             ]);
         }
-        $check = shopUserDepot::where('user_id', $request->user)->where('item_id', $request->item_id)->first();
+        $check = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id)->first();
         if (!$check) {
             return response()->json([
                 'status' => -97,
@@ -372,7 +380,7 @@ class ShopController extends Controller
         }
         // 找uid
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $request->user);
+        curl_setopt($ch, CURLOPT_URL, "https://xx2.digeam.com/api/service_api?type=getinfo&account=" . $_COOKIE['StrID']);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($ch);
         curl_close($ch);
@@ -410,7 +418,7 @@ class ShopController extends Controller
                 $check->save();
 
                 $newLog = new shopSendItemLog();
-                $newLog->user_id = $request->user;
+                $newLog->user_id = $_COOKIE['StrID'];
                 $newLog->ip = $real_ip;
                 $newLog->count = $request->count;
                 $newLog->item_code = $value['item_code'];

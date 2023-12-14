@@ -22,6 +22,11 @@ Route::middleware(['setReturnUrl'])->group(function () {
     Route::get('/exchange', function () {
         return view('front/exchange');
     })->name('exchange');
+    //商城
+Route::get('/webmall', function () {
+    return view('front.webmall');
+});
+
 
 });
 
@@ -51,10 +56,6 @@ Route::get('/download', function () {
     return view('front.download');
 })->name('download');
 
-//商城
-Route::get('/webmall', function () {
-    return view('front.webmall');
-});
 
 // CBT
 Route::get('/CBT', 'front\CBTController@index');
