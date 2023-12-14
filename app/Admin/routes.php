@@ -38,5 +38,7 @@ Route::group([
     $router->resource('/shop_buy_record', 'ShopBuyRecordController');
     $router->resource('/shop_user_record', 'ShopUserRecordController');
     $router->resource('/shop_send_record', 'ShopSendRecordController');
+    $router->resource('/shop_feedback', 'ShopFeedbackController');
+    $router->resource('{id}/shop_feedback_item_list', 'ShopFeedbackItemController');
     $router->resource('{id}/shop_item_list', 'ShopItemListController');
 });
