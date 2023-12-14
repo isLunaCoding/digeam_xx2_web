@@ -6,10 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Model\Image;
 use App\Model\item_id;
 use App\Model\shop;
+use App\Model\shopFeedback;
+use App\Model\shopFeedbackItem;
 use App\Model\shopItemList;
 use App\Model\shopLog;
 use App\Model\shopSendItemLog;
 use App\Model\shopUserDepot;
+use DB;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -33,7 +36,28 @@ class ShopController extends Controller
     }
     public function login($request)
     {
+        // 消費回饋若有開啟,先進行判斷
+        $now = date('Y-m-d h:i:s');
+        $check_feedback = shopFeedback::where('status', 1)->first();
+        if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
+            if ($request->user) {
+                $spend = shopLog::where('user_id', $request->user)->whereBetween('created_at', [$check_feedback->start, $check_feedback->end])->sum('total_price');
+            }
+            $feedback = $check_feedback;
+            $shopFeedbackItem = shopFeedbackItem::select('price', DB::raw('GROUP_CONCAT(item_name) as item_names'))
+                ->groupBy('price')
+                ->get();
+            foreach ($shopFeedbackItem as $key => $value) {
+                $reset_feedback_item = explode(',', $value['item_names']);
+                $shopFeedbackItem[$key]['item_names'] = $reset_feedback_item;
+            }
+            $feedback['item'] = $shopFeedbackItem;
+        } else {
+            $feedback = false;
+        }
+        // 找出上架商品
         $shop = shop::where('status', 1)->orderby('sort', 'desc')->get();
+        // 找出banner
         $banner = Image::where('type', 'shop')->orderBy('status', 'desc')->orderBy('sort', 'asc')->get();
         if (!$request->user) {
             return response()->json([
@@ -44,19 +68,22 @@ class ShopController extends Controller
                 'point' => 0,
                 'msg' => '未登入',
                 'banner' => $banner,
+                'feedback' => $feedback,
+                'spend' => 0,
             ]);
         } else {
+
             $depot = shopUserDepot::where('user_id', $request->user)->where('count', '>', 0)->get();
             $client = new Client();
             $data = [
                 'user_id' => $request->user,
             ];
-    
+
             $headers = [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
             ];
-    
+
             $res = $client->request('POST', 'https://webapi.digeam.com/xx2/get_point', [
                 'headers' => $headers,
                 'json' => $data,
@@ -90,6 +117,8 @@ class ShopController extends Controller
                         'point' => $point,
                         'msg' => '已登入',
                         'banner' => $banner,
+                        'feedback' => $feedback,
+                        'spend' => $spend,
                     ]);
                 } else {
                     return response()->json([
@@ -101,6 +130,8 @@ class ShopController extends Controller
                         'point' => $point,
                         'msg' => '已登入',
                         'banner' => $banner,
+                        'feedback' => $feedback,
+                        'spend' => $spend,
                     ]);
                 }
             } else {
@@ -113,6 +144,8 @@ class ShopController extends Controller
                     'point' => $point,
                     'msg' => '已登入',
                     'banner' => $banner,
+                    'feedback' => $feedback,
+                    'spend' => $spend,
                 ]);
             }
         }
