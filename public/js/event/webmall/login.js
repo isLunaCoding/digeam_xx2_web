@@ -27,7 +27,7 @@ const app = Vue.createApp({
                 buyList: [],
                 spend: '',
             },
-            navTab: 'depot',
+            navTab: 'produce',
             liTab: 'hot',
             swiper: null,
             carousel: {
@@ -89,7 +89,7 @@ const app = Vue.createApp({
             try {
                 const res = await axios.post(api, {
                     type: 'login',
-                    user: user,
+                    user: this.user.account ,
                 });
                 if (res.data.status == 1) {
                     this.login = 1;
@@ -98,6 +98,7 @@ const app = Vue.createApp({
                     this.user.buyList = res.data.buy_list;
                     this.user.spend = res.data.spend;
                 }
+                this.carousel = res.data.banner;
                 this.feedBack = res.data.feedback;
                 this.produceData = res.data.item;
                 console.log('api傳的', res.data);
@@ -230,7 +231,7 @@ const app = Vue.createApp({
             try {
                 const res = await axios.post(api, {
                     type: 'get_item',
-                    user: user,
+                    user: this.user.account,
                     item_id: id,
                     server_id: serve,
                     char_id: char,
