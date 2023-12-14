@@ -1,0 +1,808 @@
+@charset "UTF-8";
+/* 將大部分標籤的預設樣式重製成以下的內容 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: #000;
+  position: relative;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 將 body 也就是整體的文字行高預設成 1 */
+body {
+  line-height: 1;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* 取消項目列表預設的輔助符號 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 隱藏引用標籤預設的引號(部分瀏覽器有) */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 重置引用標籤的偽元素 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* 將表格初始化 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 將連結初始化 */
+a {
+  text-decoration: none;
+}
+
+.popS .isBuy .numBox,
+.popS .isBuy .totalBox, .popA .isBuy .numBox,
+.popA .isBuy .totalBox, .popB .isBuy .numBox,
+.popB .isBuy .totalBox, .popS .isInfo .itemBox, .popA .isInfo .itemBox, .popB .isInfo .itemBox, .popS .isInfo .itemName, .popA .isInfo .itemName, .popB .isInfo .itemName, .popS .isInfo .itemIconBox, .popA .isInfo .itemIconBox, .popB .isInfo .itemIconBox, .feedBack .feedBackBox, .charBox, .charWrap, .produceList .itemName, .produceList .itemIconBox, .produceList, .produceTab, .nav .user, .nav .list, .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popS .isBuy, .popA .isBuy, .popB .isBuy, .popS .isInfo .itemTxt, .popA .isInfo .itemTxt, .popB .isInfo .itemTxt, .popS .isInfo .item, .popA .isInfo .item, .popB .isInfo .item, .popS .isInfo .up, .popA .isInfo .up, .popB .isInfo .up, .popS .isInfo, .popA .isInfo, .popB .isInfo, .popS, .popA, .popB, .userDepot, .feedBack, .produceList .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .dots {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popS .isInfo .itemIconBox, .popA .isInfo .itemIconBox, .popB .isInfo .itemIconBox, .produceList .itemIconBox, .produceList .item::before, .produceList .item::after, .nav .list li .logo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.popB .useInfo::before, .popB .useInfo::after, .popS, .popA, .popB, .charWrap::before, .produceTab li.active, .wrap .main {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-attachment: fixed;
+  background-image: url(../../../img/event/webmall/bg2.png);
+}
+.wrap .main {
+  width: 100%;
+  height: auto;
+  min-height: 950px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5566a5;
+  border: 1px solid #5566a5;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.appear {
+  transition: 0.5s linear;
+}
+.appear:hover {
+  transition: 0.5s linear;
+}
+
+.popB .useInfo::before, .popB .useInfo::after, .popS, .popA, .popB, .charWrap::before, .produceTab li.active, .wrap .main {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.popS .isInfo .itemIconBox, .popA .isInfo .itemIconBox, .popB .isInfo .itemIconBox, .produceList .itemIconBox, .produceList .item::before, .produceList .item::after, .nav .list li .logo {
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.loading .dots {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.mask,
+.mask2,
+.mask3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  background: rgba(45, 46, 50, 0.9);
+}
+
+.appear {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 192, 203, 0.9);
+  z-index: 9999;
+}
+.loading .dots {
+  width: 3.5em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.loading .dots div {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: fade 0.8s ease-in-out alternate infinite;
+}
+.loading .dots div:nth-of-type(1) {
+  animation-delay: -0.4s;
+}
+.loading .dots div:nth-of-type(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.nav {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 70px;
+  font-weight: 600;
+}
+.nav .list li {
+  margin: 0 10px;
+  color: #083596;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav .list li a {
+  color: #083596;
+}
+.nav .list li .logo {
+  display: block;
+  width: 150px;
+  height: 74px;
+  background-image: url(../../../img/event/webmall/logo.webp);
+}
+.nav .login {
+  color: #083596;
+  border-radius: 26px;
+  border: 2px solid #083596;
+  padding: 8px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nav .user span {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: #083596;
+  font-weight: 600;
+}
+.nav .user button {
+  color: #083596;
+  border-radius: 26px;
+  border: 2px solid #083596;
+  padding: 5px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carousel {
+  width: 100%;
+  height: 360px;
+  background-color: #083596;
+}
+
+.produceWrap {
+  margin: 0 auto;
+  width: 85%;
+}
+.produceTab {
+  margin-top: 2%;
+  justify-content: start;
+}
+.produceTab li {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 70px;
+  border: 2px solid #083596;
+  cursor: pointer;
+  color: #083596;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.produceTab li.active {
+  background-position: center;
+  color: #fff;
+  border: 2px solid #083596;
+  background-image: url(../../../img/event/webmall/tabBg.png);
+}
+.produceList {
+  margin-top: 30px;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.produceList .item {
+  width: 280px;
+  height: 260px;
+  border: 2px double #083596;
+  border-width: 6px;
+  margin: 10px;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.produceList .item::before, .produceList .item::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../../img/event/webmall/sapphire.png);
+}
+.produceList .item::after {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.produceList .itemIconBox {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-image: url(../../../img/event/webmall/IconBox.png);
+}
+.produceList .item .line {
+  width: 90%;
+  border-bottom: 3px dashed #083596;
+}
+.produceList .itemNote, .produceList .itemBuy {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.produceList .itemName {
+  text-align: center;
+  font-weight: 600;
+  height: 35px;
+  font-size: 1.1rem;
+}
+.produceList .itemNote .limit {
+  width: 150px;
+}
+.produceList .itemNote .limitNum {
+  color: #5566a5;
+  font-weight: 500;
+  margin: 0 5px;
+}
+.produceList .itemNote span {
+  color: #5566a5;
+}
+.produceList .itemPoint {
+  color: #083596;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.produceList .itemBuy .buy {
+  background-color: #f15a24;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.produceList .itemBuy label {
+  background-color: #dae1ef;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.produceList .itemBuy select {
+  width: 75px;
+  background: transparent;
+  border: none;
+  padding: 5px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+}
+.produceList .itemBuy select:focus-visible {
+  outline: 0;
+}
+.produce .carousel .swiper-pagination-bullet {
+  background-color: #fff;
+  border: 1px solid #083596;
+}
+.produce .carousel .swiper_btn {
+  width: 52px;
+  height: 56px;
+  background-image: url(../../../img/event/webmall/arrow.png);
+  filter: drop-shadow(0px 0px 2px #083596);
+}
+.produce .carousel .swiper_btn::before, .produce .carousel .swiper_btn::after {
+  content: "";
+}
+.produce .carousel .swiper-button-prev {
+  transform: scaleX(-1);
+}
+
+.charWrap {
+  width: 70%;
+  height: 180px;
+  background-color: #083596;
+  border: 1px solid #083596;
+  margin: 15px auto;
+}
+.charWrap::before {
+  content: "";
+  width: 100%;
+  height: 180px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: 220%;
+  background-position: right 62% bottom 85%;
+  opacity: 0.5;
+  background-image: url(../../../img/event/webmall/charBox.png);
+}
+
+.charBox {
+  position: relative;
+}
+.charBox .user {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin-right: 15px;
+}
+.charBox select {
+  cursor: pointer;
+  margin: 0 10px;
+  color: #083596;
+  font-size: 1.3rem;
+  padding: 0 5px;
+  font-weight: 600;
+}
+
+.depotTitle, .feedBackTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #083596;
+  margin: 10px 0;
+}
+
+.line {
+  width: 95%;
+  height: 3px;
+  background-color: #083596;
+}
+
+sub {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #083596;
+  margin: 10px 0;
+}
+
+.userDepot, .feedBack {
+  padding: 30px 0;
+}
+.userDepot .timeLine, .feedBack .timeLine {
+  background-color: #2c63d8;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 5px 10px;
+}
+.userDepot table, .feedBack table {
+  width: 85%;
+}
+.userDepot table thead, .feedBack table thead {
+  background-color: #083596;
+}
+.userDepot table thead th, .feedBack table thead th {
+  font-weight: 600;
+  color: #fff;
+  padding: 10px;
+}
+.userDepot table tbody tr, .feedBack table tbody tr {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+.userDepot table tbody tr select, .feedBack table tbody tr select {
+  cursor: pointer;
+  width: 50px;
+  text-align: center;
+}
+.userDepot table tbody tr td, .feedBack table tbody tr td {
+  font-size: 1rem;
+  color: #083596;
+  padding: 5px 0;
+  font-weight: 500;
+}
+.userDepot table tbody tr button, .feedBack table tbody tr button {
+  background-color: #f15a24;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.feedBack span {
+  margin: 10px 0px;
+  color: #083596;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.feedBack .spend {
+  color: #f15a24;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.feedBack .feedBackBox {
+  width: 80%;
+}
+.feedBack .feedBackBox .itemBox {
+  border: 2px solid #083596;
+  margin: 0 10px;
+  width: 200px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.feedBack .feedBackBox .itemBox .priceTitle {
+  background-color: #083596;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+}
+.feedBack .feedBackBox .itemBox span {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #083596;
+  margin: 5px 0;
+}
+.feedBack .feedBackBox .itemBox.active {
+  border: 2px solid #f15a24;
+}
+.feedBack .feedBackBox .itemBox.active .priceTitle {
+  background-color: #f15a24;
+}
+.feedBack .feedBackBox .itemBox.active span {
+  color: #f15a24;
+}
+
+.popS, .popA, .popB {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 51;
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 550px;
+  padding: 20px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #082585 0%, #073669 100%);
+  border: 1px solid #fff;
+}
+.popS .isInfo .item, .popA .isInfo .item, .popB .isInfo .item {
+  width: 250px;
+  height: 260px;
+  border: 2px double #083596;
+  border-width: 6px;
+  margin: 10px;
+  justify-content: space-around;
+}
+.popS .isInfo .itemIconBox, .popA .isInfo .itemIconBox, .popB .isInfo .itemIconBox {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  background-image: url(../../../img/event/webmall/IconBox.png);
+}
+.popS .isInfo .itemName, .popA .isInfo .itemName, .popB .isInfo .itemName {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+.popS .isInfo .itemTxt, .popA .isInfo .itemTxt, .popB .isInfo .itemTxt {
+  align-items: flex-start;
+}
+.popS .isInfo .itemTime, .popA .isInfo .itemTime, .popB .isInfo .itemTime {
+  color: #809fcd;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 16px;
+  margin-top: 5px;
+}
+.popS .isInfo .itemInfo, .popA .isInfo .itemInfo, .popB .isInfo .itemInfo {
+  width: 90%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin-top: 5px;
+}
+.popS .isInfo .itemBox, .popA .isInfo .itemBox, .popB .isInfo .itemBox {
+  justify-content: flex-start;
+}
+.popS .isBuy .subTitle, .popA .isBuy .subTitle, .popB .isBuy .subTitle {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+.popS .isBuy .line, .popA .isBuy .line, .popB .isBuy .line {
+  margin: 10px 0;
+  border-bottom: 2px solid #fff;
+  width: 95%;
+  min-width: 250px;
+}
+.popS .isBuy .itemName, .popA .isBuy .itemName, .popB .isBuy .itemName {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  margin: 15px;
+}
+.popS .isBuy .numBox,
+.popS .isBuy .totalBox, .popA .isBuy .numBox,
+.popA .isBuy .totalBox, .popB .isBuy .numBox,
+.popB .isBuy .totalBox {
+  width: 90%;
+  min-width: 230px;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.popS .isBuy .numBox p,
+.popS .isBuy .totalBox p, .popA .isBuy .numBox p,
+.popA .isBuy .totalBox p, .popB .isBuy .numBox p,
+.popB .isBuy .totalBox p {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 500;
+}
+.popS .isBuy .close, .popA .isBuy .close, .popB .isBuy .close {
+  margin: 0 10px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.popS .isBuy .buy, .popA .isBuy .buy, .popB .isBuy .buy {
+  margin: 0 10px;
+  color: #fff;
+  margin-top: 15px;
+  border: none;
+  border: 2px solid #f15a24;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 3px 9px;
+  cursor: pointer;
+  background-color: #f15a24;
+}
+
+.popA {
+  min-width: 250px;
+}
+.popA .msg {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.popB {
+  background-color: #efe6e1;
+  max-width: 600px;
+  height: 400px;
+}
+.popB .useInfo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.popB .useInfo::before, .popB .useInfo::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../../../img/event/webmall/sapphire.png);
+}
+.popB ul {
+  list-style-type: decimal;
+  overflow-x: hidden;
+  height: 340px;
+}
+.popB ul li {
+  margin: 5px 0;
+  line-height: 1.2rem;
+  color: #fff;
+  font-weight: 400;
+  list-style-type: decimal;
+  margin-left: 25px;
+}
+
+.close {
+  margin-top: 15px;
+  border: none;
+  background-color: #fff;
+  color: #083596;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 3px 9px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

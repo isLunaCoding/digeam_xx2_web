@@ -50,6 +50,12 @@ Route::get('/wiki/{id?}', 'front\wikiController@index')->name('wiki');
 Route::get('/download', function () {
     return view('front.download');
 })->name('download');
+
+//商城
+Route::get('/webmall', function () {
+    return view('front.webmall');
+});
+
 // CBT
 Route::get('/CBT', 'front\CBTController@index');
 // Route::get('/CBT', function () {
@@ -69,5 +75,5 @@ Route::get('/prereg', function () {
 Route::get('redis', 'RedisController@index');
 Route::get('/20231116', function () {
         return view('event/20231116_index');
-    });
+});
     

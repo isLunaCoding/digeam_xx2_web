@@ -1,0 +1,183 @@
+.carousel {
+    @include size(100%, 360px);
+    background-color: $blue1;
+}
+
+.produce {
+
+    &Wrap {
+        margin: 0 auto;
+        width: 85%;
+    }
+
+    &Tab {
+        margin-top: 2%;
+        @extend %f-r-c;
+        justify-content: start;
+
+        li {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 20px 70px;
+            border: 2px solid $blue1;
+            cursor: pointer;
+            color: $blue1;
+            background-color: rgba(255, 255, 255, .8);
+
+            &.active {
+                @extend %bg-cover;
+                background-position: center;
+                color: #fff;
+                border: 2px solid $blue1;
+                background-image: url(../../../img/event/webmall/tabBg.png);
+            }
+        }
+    }
+
+    &List {
+        margin-top: 30px;
+        @extend %f-r-c;
+        justify-content: start;
+        flex-wrap: wrap;
+
+        .item {
+            @include size(280px, 260px);
+            border: 2px double $blue1;
+            border-width: 6px;
+            @extend %f-c-c;
+            margin: 10px;
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, .8);
+
+
+            &::before,
+            &::after {
+                content: '';
+                @include ab-rt(0px, 0px);
+                @include size(20px, 20px);
+                @extend %bg-contain;
+                background-image: url(../../../img/event/webmall/sapphire.png);
+            }
+
+            &::after {
+                @include ab-lt(0px, 0px);
+            }
+
+            &IconBox {
+                @include size(100px, 100px);
+                @extend %bg-contain;
+                @extend %f-r-c;
+                cursor: pointer;
+                background-image: url(../../../img/event/webmall/IconBox.png);
+            }
+
+            .line {
+                width: 90%;
+                border-bottom: 3px dashed $blue1;
+            }
+
+            &Note,
+            &Buy {
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-around;
+            }
+
+            &Name {
+                @extend %f-r-c;
+                text-align: center;
+                font-weight: 600;
+                height: 35px;
+                font-size: 1.1rem;
+            }
+
+            &Note {
+                .limit {
+                    width: 150px;
+                }
+
+                .limitNum {
+                    color: $blueNum;
+                    font-weight: 500;
+                    margin: 0 5px;
+                }
+
+                span {
+                    color: $blueNum;
+                }
+            }
+
+            &Point {
+                color: $blue1;
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+
+            &Buy {
+                .buy {
+                    background-color: $orange;
+                    border: none;
+                    color: #fff;
+                    padding: 8px 20px;
+                    border-radius: 10px;
+                    font-weight: 800;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+
+                label {
+                    background-color: $white1;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+
+                }
+
+                select {
+                    width: 75px;
+                    background: transparent;
+                    border: none;
+                    padding: 5px 0;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    font-weight: 600;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                select:focus-visible {
+                    outline: 0;
+                }
+            }
+
+
+        }
+    }
+
+    .carousel {
+        .swiper-pagination-bullet{
+            background-color: #fff;
+            border: 1px solid $blue1;
+        }
+
+        .swiper_btn {
+            @include size(52px, 56px);
+            background-image: url(../../../img/event/webmall/arrow.png);
+
+            &::before,
+            &::after {
+                content: '';
+            }
+
+            filter: drop-shadow(0px 0px 2px $blue1 );
+
+        }
+
+        .swiper-button-prev {
+            transform: scaleX(-1);
+        }
+    }
+
+}

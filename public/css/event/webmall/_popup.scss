@@ -1,0 +1,206 @@
+.pop {}
+
+.popS , .popA , .popB{
+
+    @extend %bg-cover;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 51;
+
+
+    @include size(auto, auto);
+    max-width: 500px;
+    max-height: 550px;
+    padding: 20px;
+    border-radius: 25px;
+    @extend %f-c-c;
+    background: linear-gradient(90deg, #082585 0%, #073669 100%);
+    ;
+    border: 1px solid #fff;
+
+
+    .isInfo {
+        @extend %f-c-c;
+
+        .up {
+            @extend %f-c-c;
+        }
+
+        .item {
+            @include size(250px, 260px);
+            border: 2px double $blue1;
+            border-width: 6px;
+            @extend %f-c-c;
+            margin: 10px;
+            justify-content: space-around;
+
+
+            &IconBox {
+                @include size(120px, 120px);
+                @extend %bg-contain;
+                @extend %f-r-c;
+                background-color: #fff;
+                background-image: url(../../../img/event/webmall/IconBox.png);
+            }
+
+
+            &Name {
+                @extend %f-r-c;
+                color: #fff;
+                font-weight: 600;
+                font-size: 1.6rem;
+                margin-left: 10px;
+            }
+
+            &Txt{
+                @extend %f-c-c;
+                align-items: flex-start;
+            }
+
+            &Time{
+                color: #809fcd;
+                font-weight: 600;
+                font-size: 1rem;
+                margin-left: 16px;
+                margin-top: 5px;
+            }
+
+            &Info {
+                width: 90%;
+                color: #fff;
+                font-weight: 500;
+                font-size: 1.1rem;
+                line-height: 1.5rem;
+                margin-top: 5px;
+            }
+
+            &Box {
+                @extend %f-r-c;
+                justify-content: flex-start;
+            }
+
+        }
+
+    }
+
+    .isBuy {
+        @extend %f-c-c;
+
+        .subTitle {
+            font-size: 1.3rem;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .line {
+            margin: 10px 0;
+            border-bottom: 2px solid #fff;
+            width: 95%;
+            min-width: 250px;
+        }
+
+        .itemName {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            margin: 15px;
+        }
+
+        
+
+        .numBox,
+        .totalBox {
+            width: 90%;
+            @extend %f-r-c;
+            min-width: 230px;
+            justify-content: space-between;
+            padding: 5px;
+            margin: 3px;
+            background-color: rgba(255, 255, 255, .5);
+
+            p {
+                font-size: 1.3rem;
+                color: #fff;
+                font-weight: 500;
+            }
+        }
+
+        .close{
+            margin: 0 10px;
+            background-color: transparent;
+            color:rgba(255, 255, 255, .3);
+            border: 2px solid  rgba(255, 255, 255, .3);
+        }
+
+        .buy {
+            margin: 0 10px;
+            color: #fff;
+            margin-top: 15px;
+            border: none;
+            border: 2px solid $orange;
+            background-color: #fff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 3px 9px;
+            cursor: pointer;
+            background-color: $orange;
+        }
+    }
+
+}
+
+.popA{
+    min-width: 250px;
+    .msg{
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+}
+
+.popB{
+    background-color: #efe6e1;
+    max-width: 600px;
+    height: 400px;
+    .useInfo{
+        font-weight: 800;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        color: #fff;
+        &::before,&::after{
+            content: '';
+            @include size(30px,30px);
+            @extend %bg-cover;
+            background-image: url(../../../img/event/webmall/sapphire.png);
+        }
+    }
+
+    ul{
+        list-style-type:decimal;
+        overflow-x: hidden;
+        height: 340px;
+        li{
+            margin: 5px 0;
+            line-height: 1.2rem;
+            color: #fff;
+            font-weight: 400;
+            list-style-type:decimal;
+            margin-left: 25px;
+        }
+    }
+}
+
+.close {
+    margin-top: 15px;
+    border: none;
+    background-color: #fff;
+    color: $blue1;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 3px 9px;
+    cursor: pointer;
+}

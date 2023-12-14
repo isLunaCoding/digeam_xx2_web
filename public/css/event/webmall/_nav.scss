@@ -1,0 +1,63 @@
+.nav {
+    width: 100%;
+    @extend %f-r-c;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 70px;
+    font-weight: 600;
+
+    .list {
+        @extend %f-r-c;
+
+        li {
+            margin: 0 10px;
+            color: $blue1;
+            font-size: 1.2rem;
+            cursor: pointer;
+
+            a {
+                color: $blue1;
+            }
+
+            .logo {
+                display: block;
+                @include size(150px, 74px);
+                @extend %bg-contain;
+                background-image: url(../../../img/event/webmall/logo.webp);
+            }
+        }
+    }
+
+    .login {
+        color: $blue1;
+        border-radius: 26px;
+        border: 2px solid $blue1;
+        padding: 8px 25px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .user {
+        @extend %f-r-c;
+
+        span{
+            margin: 0 10px;
+            font-size: 1.2rem;
+            color: $blue1;
+            font-weight: 600;
+        }
+
+        button {
+            color: $blue1;
+            border-radius: 26px;
+            border: 2px solid $blue1;
+            padding: 5px 25px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+    }
+
+}
