@@ -176,7 +176,7 @@ a {
   background-size: contain;
 }
 
-.popB .useInfo::before, .popB .useInfo::after, .popS, .popA, .popB, .charWrap::before, .produceTab li.active, .wrap .main {
+.popB .useInfo::before, .popB .useInfo::after, .popS, .popA, .popB, .charWrap::before, .produceTab li.active, .wrap {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,7 +222,7 @@ body {
   transition: 0.5s linear;
 }
 
-.popB .useInfo::before, .popB .useInfo::after, .popS, .popA, .popB, .charWrap::before, .produceTab li.active, .wrap .main {
+.popB .useInfo::before, .popB .useInfo::after, .popS, .popA, .popB, .charWrap::before, .produceTab li.active, .wrap {
   position: relative;
   background-size: cover;
   background-position: center;
@@ -268,7 +268,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 192, 203, 0.9);
+  background: rgba(45, 46, 50, 0.9);
   z-index: 9999;
 }
 .loading .dots {

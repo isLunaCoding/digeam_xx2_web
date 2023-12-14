@@ -31,11 +31,6 @@ const app = Vue.createApp({
             liTab: 'hot',
             swiper: null,
             carousel: {
-                img1: 'https://picsum.photos/1920/360?random=1',
-                img2: 'https://picsum.photos/1920/360?random=2',
-                img3: 'https://picsum.photos/1920/360?random=3',
-                img4: 'https://picsum.photos/1920/360?random=4',
-                img5: 'https://picsum.photos/1920/360?random=5',
             },
             produceData: [],
             buyId: {},
@@ -143,6 +138,7 @@ const app = Vue.createApp({
         },
         changeNav(id) {
             this.navTab = id;
+            this.initSwiper();
             if (id == 'produce') {
                 this.initSwiper();
             }

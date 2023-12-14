@@ -33,20 +33,19 @@
     
             <nav class="nav">
                 <ul class="list">
-                    <li><a href="http://" class="logo"></a></li>
+                    <li><a href="https://xx2.digeam.com/index" class="logo"></a></li>
                     <li @click="changeNav('produce')">商品列表</li>
                     <li @click=" popB = true ">使用說明</li>
                     <li @click="changeNav('depot')">購物倉庫</li>
-                    <li><a href="">點數儲值</a></li>
+                    <li><a href="https://www.digeam.com/member/billing">點數儲值</a></li>
                 </ul>
     
-                <a href="http://" v-if="login == -99" class="login">登入</a>
+                <a href="https://www.digeam.com/login" v-if="login == -99" class="login">登入</a>
     
                 <form id="logout-form" action="https://www.digeam.com/logout" method="POST" class="user"
                     v-else="login == 1">
                     <input type="hidden" name="return_url" id="return_url"
-                        value={{ base64_encode('https://xx2.digeam.com/prereg') }}>
-    
+                        value={{ base64_encode('https://xx2.digeam.com/webmall') }}>
                     <span class="account">帳號：%[user.account]</span>
                     <span class="point">點數：%[user.point]</span>
                     <button class="logout">登出</button>
@@ -57,27 +56,10 @@
                 <article class="carousel">
                     <div class="swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-slide">
-                                <img :src="carousel.img1" alt="">
+                            <div class="swiper-slide swiper-slide" v-for="img in carousel" :key="img.id">
+                                <img :src="img.file_name" alt="">
                             </div>
-    
-                            <div class="swiper-slide swiper-slide">
-                                <img :src="carousel.img2" alt="">
-                            </div>
-    
-                            <div class="swiper-slide swiper-slide">
-                                <img :src="carousel.img3" alt="">
-                            </div>
-    
-                            <div class="swiper-slide swiper-slide">
-                                <img :src="carousel.img4" alt="">
-                            </div>
-    
-                            <div class="swiper-slide swiper-slide">
-                                <img :src="carousel.img5" alt="">
-                            </div>
-    
-    
+
                         </div>
                         <p class="swiper-button-prev swiper_btn"></p>
                         <p class="swiper-button-next swiper_btn"></p>
@@ -309,6 +291,6 @@
 </body>
 <script src="https://unpkg.com/vue@3.2.4/dist/vue.global.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="/js/event/webmall/login.js"></script>
+<script src="/js/event/webmall/login.js?v10.1"></script>
 
 </html>
