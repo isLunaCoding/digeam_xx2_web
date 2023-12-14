@@ -64,27 +64,24 @@ const app = Vue.createApp({
             }
         }
     },
-    create() {
-        const strID = this.getCookie('StrID');
-        if (strID) {
-          this.user.account = strID;
-        }
-    },
     methods: {
-        getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) {
-                return parts.pop().split(';').shift();
+        checkCookie(name) { 
+            const cookies = document.cookie.split(';');
+            const cookieName = `${name}=`;
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.indexOf(cookieName) == 0) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                }
             }
-            return null;
+            return '';
         },
         async getSetting() {
             this.loading = true;
             try {
                 const res = await axios.post(api, {
                     type: 'login',
-                    user: this.user.account ,
+                    user: this.user.account,
                 });
                 if (res.data.status == 1) {
                     this.login = 1;
@@ -252,6 +249,9 @@ const app = Vue.createApp({
         }
     },
     mounted() {
+        if (this.checkCookie('StrID')) {
+            this.user.account = this.checkCookie('StrID');
+        }
         this.getSetting();
     }
 });
