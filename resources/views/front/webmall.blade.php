@@ -14,7 +14,7 @@
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="/css/event/webmall/style.css?v1.0">
+    <link rel="stylesheet" href="/css/event/webmall/style.css?v2.0">
 </head>
 
 <body>
@@ -291,6 +291,6 @@
 </body>
 <script src="https://unpkg.com/vue@3.2.4/dist/vue.global.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="/js/event/webmall/login.js?v10.1"></script>
+<script src="/js/event/webmall/login.js?v10.2"></script>
 
 </html>
