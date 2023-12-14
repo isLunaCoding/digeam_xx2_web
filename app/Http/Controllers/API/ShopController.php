@@ -365,7 +365,7 @@ class ShopController extends Controller
         foreach ($send as $value) {
             $ch = curl_init();
             $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
-            . "&zoneid=" . 1801 . "&charid=" . $request->char_id . "&content=" . '您於商城購買的道具已送達,請盡速領取！' . "&title=" . '網頁商城購買道具' . "&name=" . $char_name . "&itemid=" . $value['item_id'] . "&itemnum=" . $value['item_cnt'] * $request->count . "&isbind=" . $value['is_bind'];
+            . "&zoneid=" . 1801 . "&charid=" . $request->char_id . "&content=" . '您於商城購買的道具已送達,請盡速領取！' . "&title=" . '網頁商城購買道具' . "&name=" . $char_name . "&itemid=" . $value['item_code'] . "&itemnum=" . $value['item_cnt'] * $request->count . "&isbind=" . $value['is_bind'];
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             $result_3 = curl_exec($ch);
