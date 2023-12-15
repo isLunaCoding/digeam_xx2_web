@@ -48,7 +48,7 @@ class ShopController extends Controller
         $now = date('Y-m-d h:i:s');
         $check_feedback = shopFeedback::where('status', 1)->first();
         if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
-            if ($_COOKIE['StrID']) {
+            if (isset($_COOKIE['StrID'])) {
                 $spend = shopLog::where('user_id', $_COOKIE['StrID'])->whereBetween('created_at', [$check_feedback->start, $check_feedback->end])->sum('total_price');
             }
             $feedback = $check_feedback;
@@ -67,7 +67,7 @@ class ShopController extends Controller
         $shop = shop::where('status', 1)->orderby('sort', 'desc')->get();
         // 找出banner
         $banner = Image::where('type', 'shop')->orderBy('status', 'desc')->orderBy('sort', 'asc')->get();
-        if (!$_COOKIE['StrID']) {
+        if (!isset($_COOKIE['StrID'])) {
             return response()->json([
                 'status' => -99,
                 'item' => $shop,
@@ -183,7 +183,7 @@ class ShopController extends Controller
             $real_ip = $_SERVER["REMOTE_ADDR"];
         }
         // 沒登入
-        if (!$_COOKIE['StrID']) {
+        if (!isset($_COOKIE['StrID'])) {
             return response()->json([
                 'status' => -99,
                 'msg' => '請先登入',
@@ -346,7 +346,7 @@ class ShopController extends Controller
         } else {
             $real_ip = $_SERVER["REMOTE_ADDR"];
         }
-        if (!$_COOKIE['StrID']) {
+        if (!isset($_COOKIE['StrID'])) {
             return response()->json([
                 'status' => -99,
                 'msg' => '未登入',
