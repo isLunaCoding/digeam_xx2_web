@@ -20,14 +20,14 @@ class ShopController extends Controller
 {
     public function index(Request $request)
     {
-        if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-            $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
-        } else {
-            $real_ip = $_SERVER["REMOTE_ADDR"];
-        }
-        if($real_ip != '211.23.144.219'){
-            return redirect('index');
-        }
+        // if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+        //     $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        // } else {
+        //     $real_ip = $_SERVER["REMOTE_ADDR"];
+        // }
+        // if ($real_ip != '211.23.144.219') {
+        //     return redirect('index');
+        // }
         if ($request->type == 'login') {
             $result = ShopController::login($request);
             return $result;
@@ -46,7 +46,7 @@ class ShopController extends Controller
     {
         // 消費回饋若有開啟,先進行判斷
         $now = date('Y-m-d h:i:s');
-        $check_feedback = shopFeedback::where('status', 1)->first();
+        $check_feedback = shopFeedback::where('status', 1)->where('start', '<', $now)->where('end', '>', $now)->first();
         if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
             if (isset($_COOKIE['StrID'])) {
                 $spend = shopLog::where('user_id', $_COOKIE['StrID'])->whereBetween('created_at', [$check_feedback->start, $check_feedback->end])->sum('total_price');
@@ -296,9 +296,11 @@ class ShopController extends Controller
                         $new_depot_item->item_id = $request->item_id . '-' . $get['id'];
                         $new_depot_item->item_name = $shop_item->title . '-' . $get['item_name'];
                         $new_depot_item->reason = $shop_item->title . '-' . $get['item_name'];
+                        $new_depot_item->type = 'shop';
                         $new_depot_item->save();
                     }
                 }
+                ShopController::feedback($request);
                 return response()->json([
                     'status' => 1,
                     'msg' => '購買成功',
@@ -331,8 +333,10 @@ class ShopController extends Controller
                 $new_depot_item->item_id = $request->item_id;
                 $new_depot_item->item_name = $shop_item->title;
                 $new_depot_item->reason = '商城購買';
+                $new_depot_item->type = 'shop';
                 $new_depot_item->save();
             }
+            $result = ShopController::feedback($request);
             return response()->json([
                 'status' => 1,
                 'msg' => '購買成功',
@@ -352,7 +356,7 @@ class ShopController extends Controller
                 'msg' => '未登入',
             ]);
         }
-        $check = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id)->first();
+        $check = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('id', $request->item_id)->first();
         if (!$check) {
             return response()->json([
                 'status' => -97,
@@ -372,11 +376,15 @@ class ShopController extends Controller
                 'msg' => '倉庫剩餘道具量不足',
             ]);
         }
-        $check_item_type = explode('-', $request->item_id);
+        $check_item_type = explode('-', $check->item_id);
         if (isset($check_item_type[1])) {
             $send = shopItemList::where('id', $check_item_type[1])->get();
         } else {
-            $send = shopItemList::where('id', $request->item_id)->get();
+            if ($check->type == 'shop') {
+                $send = shopItemList::where('id', $check->item_id)->get();
+            } else {
+                $send = shopFeedbackItem::where('id', $check->item_id)->get();
+            }
         }
         // 找uid
         $ch = curl_init();
@@ -437,6 +445,36 @@ class ShopController extends Controller
                     'status' => -95,
                     'msg' => '發送失敗',
                 ]);
+            }
+        }
+    }
+    public function feedback($request)
+    {
+        // 消費回饋
+        $now = date('Y-m-d h:i:s');
+        $check_feedback = shopFeedback::where('status', 1)->where('start', '<', $now)->where('end', '>', $now)->first();
+        if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
+            if (!isset($_COOKIE['StrID'])) {
+                $spend = shopLog::where('user_id', $_COOKIE['StrID'])->whereBetween('created_at', [$check_feedback->start, $check_feedback->end])->sum('total_price');
+            }
+            // 依照金額替消費回饋增加項目,直到消費總額小於回饋金額
+            $feedBackItem = shopFeedbackItem::where('feedback_id', $check_feedback->id)->orderBy('price', 'desc')->get();
+            foreach ($feedBackItem as $value) {
+                if ($value['price'] < $spend) {
+                    $check_feed_back_item = shopUserDepot::where('user_id', 'jacky0996')->where('item_id', $value['id'])->where('reason', $check_feedback->title . '-' . $value['item_name'])->where('type', 'feedback')->first();
+                    if (!$check_feed_back_item) {
+                        $new_depot_item = new shopUserDepot();
+                        $new_depot_item->user_id = 'jacky0996';
+                        $new_depot_item->count = $value['item_cnt'];
+                        $new_depot_item->item_id = $value['id'];
+                        $new_depot_item->item_name = $value['item_name'];
+                        $new_depot_item->reason = $check_feedback->title . '-' . $value['item_name'];
+                        $new_depot_item->type = 'feedback';
+                        $new_depot_item->save();
+                    }
+                } else {
+                    break;
+                }
             }
         }
     }

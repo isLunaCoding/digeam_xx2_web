@@ -7,6 +7,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\MessageBag;
 
 class ShopFeedbackController extends AdminController
 {
@@ -73,7 +74,24 @@ class ShopFeedbackController extends AdminController
         $form->datetime('start', __('回饋開始時間'));
         $form->datetime('end', __('回饋結束時間'));
         $form->select('status', __('開啟狀態'))->options(['1' => '開啟', '0' => '關閉'])->default('0');
-
+        $form->saving(function (Form $form) {
+            $check_start = shopFeedback::whereBetween('start', [$form->start, $form->end])->first();
+            $check_end = shopFeedback::whereBetween('end', [$form->start, $form->end])->first();
+            // 結束時間比開始時間早
+            if ($form->start >= $form->end) {
+                $error = new MessageBag([
+                    'title' => '錯誤',
+                    'message' => '結束時間比開始時間早',
+                ]);
+                return back()->with(compact('error'));
+            } else if ($check_start || $check_end) {
+                $error = new MessageBag([
+                    'title' => '錯誤',
+                    'message' => '回饋時段與其他項目重疊',
+                ]);
+                return back()->with(compact('error'));
+            }
+        });
         return $form;
     }
 }

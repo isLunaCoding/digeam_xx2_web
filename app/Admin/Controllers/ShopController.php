@@ -5,6 +5,7 @@ namespace App\Admin\Controllers;
 use App\Model\shop;
 use App\Model\shopItemList;
 use Encore\Admin\Controllers\AdminController;
+use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
@@ -84,6 +85,9 @@ class ShopController extends AdminController
         $form->number('sort', __('排序'))->default(0);
         $form->select('status', __('上架狀態'))->options(['1' => '上架', '0' => '下架'])->default('0');
         $form->textarea('description', __('內文'));
+
+        Admin::style('.description {width: 274.8px;}');
+        Admin::style('.description {font-size: 17.6px ;}');
 
         $explodeURL = explode('/', URL::current());
         $count = Count($explodeURL);
