@@ -454,26 +454,26 @@ class ShopController extends Controller
         $now = date('Y-m-d h:i:s');
         $check_feedback = shopFeedback::where('status', 1)->where('start', '<', $now)->where('end', '>', $now)->first();
         if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
-            if (!isset($_COOKIE['StrID'])) {
+            if (isset($_COOKIE['StrID'])) {
                 $spend = shopLog::where('user_id', $_COOKIE['StrID'])->whereBetween('created_at', [$check_feedback->start, $check_feedback->end])->sum('total_price');
-            }
-            // 依照金額替消費回饋增加項目,直到消費總額小於回饋金額
-            $feedBackItem = shopFeedbackItem::where('feedback_id', $check_feedback->id)->orderBy('price', 'desc')->get();
-            foreach ($feedBackItem as $value) {
-                if ($value['price'] < $spend) {
-                    $check_feed_back_item = shopUserDepot::where('user_id', 'jacky0996')->where('item_id', $value['id'])->where('reason', $check_feedback->title . '-' . $value['item_name'])->where('type', 'feedback')->first();
-                    if (!$check_feed_back_item) {
-                        $new_depot_item = new shopUserDepot();
-                        $new_depot_item->user_id = 'jacky0996';
-                        $new_depot_item->count = $value['item_cnt'];
-                        $new_depot_item->item_id = $value['id'];
-                        $new_depot_item->item_name = $value['item_name'];
-                        $new_depot_item->reason = $check_feedback->title . '-' . $value['item_name'];
-                        $new_depot_item->type = 'feedback';
-                        $new_depot_item->save();
+                // 依照金額替消費回饋增加項目,直到消費總額小於回饋金額
+                $feedBackItem = shopFeedbackItem::where('feedback_id', $check_feedback->id)->orderBy('price', 'desc')->get();
+                foreach ($feedBackItem as $value) {
+                    if ($value['price'] < $spend) {
+                        $check_feed_back_item = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('item_id', $value['id'])->where('reason', $check_feedback->title . '-' . $value['item_name'])->where('type', 'feedback')->first();
+                        if (!$check_feed_back_item) {
+                            $new_depot_item = new shopUserDepot();
+                            $new_depot_item->user_id = $_COOKIE['StrID'];
+                            $new_depot_item->count = $value['item_cnt'];
+                            $new_depot_item->item_id = $value['id'];
+                            $new_depot_item->item_name = $value['item_name'];
+                            $new_depot_item->reason = $check_feedback->title . '-' . $value['item_name'];
+                            $new_depot_item->type = 'feedback';
+                            $new_depot_item->save();
+                        }
+                    } else {
+                        break;
                     }
-                } else {
-                    break;
                 }
             }
         }

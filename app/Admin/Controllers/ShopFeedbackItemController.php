@@ -37,8 +37,10 @@ class ShopFeedbackItemController extends AdminController
 
     protected function grid()
     {
+        $explodeURL = explode('/', URL::current());
+        $count = Count($explodeURL);
         $grid = new Grid(new shopFeedbackItem());
-        $grid->model()->where('feedback_id',)->orderBy('price', 'asc');
+        $grid->model()->where('feedback_id',$explodeURL[$count - 2])->orderBy('price', 'asc');
         $grid->column('id', __('編號'));
         $grid->column('item_name', __('道具名稱'));
         $grid->column('price', __('回饋金額'));
