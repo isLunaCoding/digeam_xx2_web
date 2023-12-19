@@ -64,6 +64,11 @@ const app = Vue.createApp({
             }
         }
     },
+    watch:{
+        resetId() {
+            this.resetBuyId();
+        }
+    },
     methods: {
         checkCookie(name) { 
             const cookies = document.cookie.split(';');
@@ -81,7 +86,7 @@ const app = Vue.createApp({
             try {
                 const res = await axios.post(api, {
                     type: 'login',
-                    user: this.user.account,
+                    user: 'jacky0996',
                 });
                 if (res.data.status == 1) {
                     this.login = 1;
@@ -143,9 +148,16 @@ const app = Vue.createApp({
             if (id == 'produce') {
                 this.initSwiper();
             }
+            this.resetBuyId();
         },
         changeLi(id) {
             this.liTab = id;
+            this.resetBuyId();
+        },
+        resetBuyId() {
+            Object.keys(this.buyId).forEach(key => {
+                this.buyId[key] = 1;
+            });
         },
         itemInfo(id) {
             this.mask = true;
@@ -168,6 +180,7 @@ const app = Vue.createApp({
         },
         changeNum(event, id) {
             this.buyId[id] = event.target.value;
+            console.log(this.buyId[id]);
         },
         buyPop(num, id, title, point) {
             this.mask = true;
@@ -178,8 +191,10 @@ const app = Vue.createApp({
             this.pop_buy.num = num;
             this.pop_buy.point = point;
             this.pop_buy.total = num * point;
+            console.log(this.pop_buy);
         },
         async buy(id, num) {
+            console.log(id,num);
             this.loading = true;
             this.popS = false;
             try {
@@ -205,8 +220,6 @@ const app = Vue.createApp({
                 console.log(err);
             } finally {
                 console.log('Buy,end');
-                this.buyId[id] = '';
-                this.pop_buy = '';
                 this.loading = false;
             };
         },
