@@ -1,0 +1,141 @@
+footer {
+    position: relative;
+    background-size: contain;
+    background: #070403;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+
+}
+
+.footerbox {
+    z-index: 5;
+    max-width: 1200px;
+    font-size: 14px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footerbox_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+a.logo_digeam {
+    background: url(../../../img/event/component/footer/digeam_logo.webp) center center no-repeat;
+    width: 190px;
+    height: 56px;
+    background-size: contain;
+    @include xlg(){
+        width: 50%;
+     
+    }
+}
+
+a.logo_rw {
+    background: url(../../../img/event/component/footer/GIANT_logo.webp) center center no-repeat;
+    width: 180px;
+    height: 83px;
+    margin-left: 20px;
+    pointer-events: none;
+    background-size: contain;
+    @include xlg(){
+        width: 50%;
+    }
+}
+
+.spec {
+    line-height: 1.2rem;
+    margin-left: 20px;
+
+    .Copyright {
+        color: #fff;
+    }
+}
+
+.spec a {
+    color: $link;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.spec a:nth-child(odd) {
+    margin-left: 7px;
+}
+
+.spec a:hover {
+    color: #fff;
+}
+
+.classlavel {
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.classlavel img {
+    width: 57px;
+    height: 57px;
+}
+
+.classlavel ul {
+    padding-left: 10px;
+}
+
+.classlavel li {
+    line-height: 1rem;
+    font-size: 15px;
+}
+
+.classlavel li:nth-child(4) {
+    color: $link;
+}
+
+/* ========== footer ========== */
+
+@include lg {
+    .footer {
+        align-items: center;
+    }
+
+    .footerbox {
+        max-width: 90%;
+        font-size: 12px;
+        line-height: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footerbox_logo {
+        width: 100%;
+        align-items: center;
+    }
+
+    .spec {
+        width: 100%;
+        text-align: center;
+        order: 1;
+    }
+
+    .spec,
+    .classlavel {
+        margin: 20px 0;
+    }
+
+    a.logo_rw,
+    .classlavel {
+        margin: 10px auto;
+    }
+
+    .footerbox_logo {
+        flex-direction: column;
+    }
+}
