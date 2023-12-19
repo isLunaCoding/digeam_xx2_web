@@ -100,20 +100,12 @@
                             </div>
                             <div class="itemBuy">
                                 <label for="itemNum">數量
-                                    <select name="itemNum" id="itemNum"
-                                        v-if="item.limit_type == 0 || item.limit_type == 2 || item.limit_type == 4"
-                                        @change="changeNum($event,item.id)">
-                                        <option v-for="num in 10" :value="num" :key="num">%[ num
-                                            ]</option>
-                                    </select>
-
-                                    <select name="itemNum" id="itemNum"
-                                        v-else="item.limit_type == 1 || item.limit_type == 3"
-                                        @change="changeNum($event,item.id)">
-                                        <option v-for="num in 1" :value="num" :key="num">%[ num ]
-                                        </option>
+                                    <select name="itemNum" id="itemNum" @change="changeNum($event,item.id)">
+                                        <option v-for="num in (item.limit_type !== 0 ? 1 : 10)" :value="num"
+                                            :key="num">%[ num ]</option>
                                     </select>
                                 </label>
+                                
                                 <button class="buy"
                                     @click="buyPop(buyId[item.id] || 1 , item.id , item.title ,  item.price )">購買</button>
                             </div>
@@ -146,20 +138,12 @@
                             </div>
                             <div class="itemBuy">
                                 <label for="itemNum">數量
-                                    <select name="itemNum" id="itemNum"
-                                        v-if="item.limit_type == 0 || item.limit_type == 2 || item.limit_type == 4"
-                                        @change="changeNum($event,item.id)">
-                                        <option v-for="num in 10" :value="num" :key="num">%[
-                                            num ]</option>
-                                    </select>
-
-                                    <select name="itemNum" id="itemNum"
-                                        v-else="item.limit_type == 1 || item.limit_type == 3"
-                                        @change="changeNum($event,item.id)">
-                                        <option v-for="num in 1" :value="num" :key="num">%[ num
-                                            ]</option>
+                                    <select name="itemNum" id="itemNum" @change="changeNum($event,item.id)">
+                                        <option v-for="num in (item.limit_type !== 0 ? 1 : 10)" :value="num"
+                                            :key="num">%[ num ]</option>
                                     </select>
                                 </label>
+                                
                                 <button class="buy"
                                     @click="buyPop(buyId[item.id] || 1 , item.id , item.title ,  item.price )">購買</button>
                             </div>
