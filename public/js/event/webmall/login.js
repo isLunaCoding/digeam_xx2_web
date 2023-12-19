@@ -192,8 +192,6 @@ const app = Vue.createApp({
                 this.popA = true;
                 if (res.data.status == 1) {
                     this.getSetting();
-                    this.buyId[id] = '';
-                    this.pop_buy = '';
                     this.isMsg = res.data.msg;
                 } else if (res.data.status == -99) {
                     this.isMsg = '請先登入';
@@ -207,6 +205,8 @@ const app = Vue.createApp({
                 console.log(err);
             } finally {
                 console.log('Buy,end');
+                this.buyId[id] = '';
+                this.pop_buy = '';
                 this.loading = false;
             };
         },
