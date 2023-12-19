@@ -63,8 +63,22 @@ class ShopController extends Controller
         } else {
             $feedback = false;
         }
+        if(!isset($spend)){
+            $spend  = 0;
+        }
         // 找出上架商品
         $shop = shop::where('status', 1)->orderby('sort', 'desc')->get();
+
+    //     $shops = shop::where('status', 1)->where(function ($query) use ($now) {
+    //     $query->whereNull('limit_start')
+    //         ->whereNull('limit_end')
+    //         ->orWhere(function ($query) use ($now) {
+    //             $query->whereNotNull('limit_start')
+    //                 ->whereNotNull('limit_end')
+    //                 ->where('limit_start', '<=', $now)
+    //                 ->where('limit_end', '>=', $now);
+    //         }); 
+    // })->get();
         // 找出banner
         $banner = Image::where('type', 'shop')->orderBy('status', 'desc')->orderBy('sort', 'asc')->get();
         if (!isset($_COOKIE['StrID'])) {
@@ -381,7 +395,7 @@ class ShopController extends Controller
             $send = shopItemList::where('id', $check_item_type[1])->get();
         } else {
             if ($check->type == 'shop') {
-                $send = shopItemList::where('id', $check->item_id)->get();
+                $send = shopItemList::where('shop_id', $check->item_id)->get();
             } else {
                 $send = shopFeedbackItem::where('id', $check->item_id)->get();
             }
@@ -436,10 +450,6 @@ class ShopController extends Controller
                 $newLog->char_id = $request->char_id;
                 $newLog->char_name = $char_name;
                 $newLog->save();
-                return response()->json([
-                    'status' => 1,
-                    'msg' => '發送成功',
-                ]);
             } else {
                 return response()->json([
                     'status' => -95,
@@ -447,6 +457,10 @@ class ShopController extends Controller
                 ]);
             }
         }
+        return response()->json([
+            'status' => 1,
+            'msg' => '發送成功',
+        ]);
     }
     public function feedback($request)
     {
