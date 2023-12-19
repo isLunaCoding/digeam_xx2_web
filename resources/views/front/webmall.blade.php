@@ -37,7 +37,7 @@
                     <li @click="changeNav('produce')">商品列表</li>
                     <li @click=" popB = true ">使用說明</li>
                     <li @click="changeNav('depot')">購物倉庫</li>
-                    <li><a href="https://www.digeam.com/member/billing">點數儲值</a></li>
+                    <li><a href="https://www.digeam.com/member/billing" target="_blank">點數儲值</a></li>
                 </ul>
 
                 <a href="https://www.digeam.com/login" v-if="login == -99" class="login">登入</a>
@@ -57,12 +57,12 @@
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide" v-for="img in carousel" :key="img.id">
-                                <img :src="img.file_name" alt="">
+                                <a :href="img.url"><img :src="img.file_name" alt=""></a>
                             </div>
 
                         </div>
-                        <p class="swiper-button-prev swiper_btn"></p>
-                        <p class="swiper-button-next swiper_btn"></p>
+                        {{-- <p class="swiper-button-prev swiper_btn"></p>
+                        <p class="swiper-button-next swiper_btn"></p> --}}
                         <div class="swiper-pagination"></div>
                     </div>
 
@@ -77,7 +77,7 @@
                     <div class="produceList" v-if="liTab == 'hot'">
                         <div class="item" v-for="item in sortItem.hotItem" :key="item.id">
                             <div class="itemIconBox" @click="itemInfo( item.id )">
-                                <img src="/img/event/webmall/icon1.png" :alt="item.title">
+                                <img :src="item.img" :alt="item.title">
                             </div>
                             <p class="itemName">%[ item.title ]</p>
                             <div class="line"></div>
@@ -123,7 +123,7 @@
                     <div class="produceList" v-if="liTab == 'special'">
                         <div class="item" v-for="item in sortItem.specialItem" :key="item.id">
                             <div class="itemIconBox" @click="itemInfo( item.id )">
-                                <img src="/img/event/webmall/icon1.png" alt=" %[ item.title ]">
+                                <img :src="item.img" alt=" %[ item.title ]">
                             </div>
                             <p class="itemName">%[ item.title ]</p>
                             <div class="line"></div>
@@ -190,21 +190,6 @@
 
                 </article>
 
-                <article class="feedBack" v-if="feedBack !== '' || null ">
-                    <b class="feedBackTitle">%[feedBack.title]</b>
-                    <div class="line"></div>
-                    <sub>達成活動累積消費額度，系統將自動發獎至購物倉庫中。</sub>
-                    <div class="timeLine">%[feedBack.start] - %[feedBack.end]</div>
-                    <span>當前累積消費金額:<span class="spend">%[ user.spend ]</span></span>
-                    <div class="feedBackBox">
-                        <div class="itemBox" v-for="(item , index) in feedBack.item" :key="index"
-                            :class="{ active: user.spend > item.price }">
-                            <p class="priceTitle">累積消費金額 %[item.price]</p>
-                            <span v-for="(item , index) in item.item_names">%[item]</span>
-                        </div>
-                    </div>
-                </article>
-
                 <article class="userDepot">
                     <b class="depotTitle">購物倉庫</b>
                     <div class="line"></div>
@@ -235,6 +220,21 @@
                             </tr>
                         </tbody>
                     </table>
+                </article>
+
+                <article class="feedBack" v-if="feedBack !== false">
+                    <b class="feedBackTitle">%[feedBack.title]</b>
+                    <div class="line"></div>
+                    <sub>達成活動累積消費額度，系統將自動發獎至購物倉庫中。</sub>
+                    <div class="timeLine">%[feedBack.start] - %[feedBack.end]</div>
+                    <span>當前累積消費金額:<span class="spend">%[ user.spend ]</span></span>
+                    <div class="feedBackBox">
+                        <div class="itemBox" v-for="(item , index) in feedBack.item" :key="index"
+                            :class="{ active: user.spend > item.price }">
+                            <p class="priceTitle">累積消費金額 %[item.price]</p>
+                            <span v-for="(item , index) in item.item_names">%[item]</span>
+                        </div>
+                    </div>
                 </article>
             </section>
 
