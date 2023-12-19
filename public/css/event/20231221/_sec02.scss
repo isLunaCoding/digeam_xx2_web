@@ -1,0 +1,207 @@
+.sec02 {
+    @extend %bg-cover;
+    width: 100%;
+    max-width: 1920px;
+    height: 950px;
+    background-image: url(../../../img/event/20231221/sec02/allBg.jpg);
+    position: relative;
+
+    @include md() {
+        height: 825px;
+    }
+
+    @include sm {
+        background-position: center;
+        height: auto;
+    }
+
+    .sec02_title_rwd {
+        display: none;
+        margin: 0 auto;
+
+        @include sm() {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            @include re-lt(0px, 124px);
+        }
+
+        @include xs() {
+            scale: .8;
+        }
+
+        @include xxs() {
+            @include re-lt(13px, 124px);
+        }
+    }
+
+    &_box {
+        @extend %f-r-c;
+        width: 100%;
+
+        @include sm() {
+            flex-direction: column-reverse;
+        }
+
+        .left {
+
+            @extend %f-c-c;
+
+            @include lg() {
+                width: 43%;
+            }
+
+            @include sm() {
+                width: 100%;
+                @include re-lt(0px, -95px);
+            }
+
+            @include xlg() {
+                top: -77px;
+            }
+
+            @include xxs() {
+                top: -49px;
+                padding-bottom: 45px;
+            }
+
+            .sec02_title {
+                @include lg() {
+                    margin-top: 50%;
+                    max-width: 110%;
+                }
+
+                @include sm() {
+                    display: none;
+                }
+            }
+
+            .sec02_idolName{
+                z-index: 1;
+                max-width: 100%;
+                @include sm(){
+                    max-width: 90%;
+                }
+
+                @include xs(){
+                    max-width:70%;
+                }
+            }
+
+            .job_box,
+            .team_box {
+                margin: 4% 0;
+                z-index: 2;
+                background-repeat: no-repeat;
+
+                @include sm() {
+                    width: 95%;
+                    flex-direction: column;
+                }
+
+
+                pre{
+                    background-image: url(../../../img/event/20231221/sec02/s2TextBg.png);
+                    @include size(100%,63px);
+                    padding-top: 15px;
+                    padding-left: 50px;
+                    text-align: center;
+                    // padding-left: 20px;
+                    font-family: 'SourceHanSerifTC-Heavy';
+                    @extend %bg-contain;
+                    color: #fff;
+
+                    @include sm(){
+                        scale: 1.5;
+                        margin: 2%;
+                    }
+
+                    @include xlg(){
+                        scale: 1;
+                    }
+
+                    @include xxs(){
+                        font-size: 18px;
+                    }
+
+                }
+
+
+                p {
+                    color: #000;
+                    line-height: 200%;
+                    font-weight: bold;
+                    text-shadow: 0px 0px 13px #fff, 2px 2px 6px #fff, 2px 2px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff, 0px 0px 6px #fff;
+
+                    @include lg() {
+                        font-size: 16px;
+
+                    }
+
+                    @include sm() {
+                        font-size: 27px;
+                        text-align: center;
+                    }
+
+                    @include xlg() {
+                        font-size: 18px;
+                    }
+
+                    @include xs() {
+                        font-size: 18px;
+                    }
+
+                    @include xxs() {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .job_box {
+                @include size(100%, auto);
+                max-width: 560px;
+                @extend %f-r-c;
+                font-size: 21px;
+            }
+
+            .team_box {
+                @include size(100%, auto);
+                max-width: 560px;
+                @extend %f-r-c;
+                font-size: 21px;
+            }
+        }
+
+        .right {
+            img {
+                padding-top: 10%;
+                max-width: 100%;
+                max-height: 100%;
+                margin: 0 auto;
+
+                @include lg() {
+                    max-width: 108%;
+                    margin: 0 auto;
+                }
+
+                @include sm(){
+                    padding-top: 0;
+                }
+
+                @include xlg(){
+                    max-width: 96%;
+                }
+
+                @include xs() {
+                    padding-top: 30%;
+                    max-width: 140%;
+                }
+
+                @include xxs() {
+                    padding-top: 38%;
+                }
+            }
+        }
+    }
+
+}

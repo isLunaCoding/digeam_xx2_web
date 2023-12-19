@@ -1,0 +1,169 @@
+.menu_toggle {
+    @include size(34px, 23px);
+    @include fixed-rt(13px, 7px);
+    cursor: pointer;
+    z-index: 23;
+    display: none;
+
+    @include sm() {
+        display: block;
+    }
+
+    div {
+        @include size(100%, 8px);
+        background-color: #fff;
+        border-radius: 3px;
+        border: 2px solid #4b0404;
+        margin: 5px auto;
+        backface-visibility: hidden;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+
+    &.on {
+        z-index: 33;
+
+        .one {
+            -moz-transform: rotate(45deg) translate(9px, 7px);
+            -ms-transform: rotate(45deg) translate(9px, 7px);
+            -webkit-transform: rotate(45deg) translate(9px, 7px);
+            transform: rotate(45deg) translate(9px, 7px);
+        }
+
+        .two {
+            opacity: 0;
+        }
+
+        .three {
+            -moz-transform: rotate(-45deg) translate(12px, -10px);
+            -ms-transform: rotate(-45deg) translate(12px, -10px);
+            -webkit-transform: rotate(-45deg) translate(12px, -10px);
+            transform: rotate(-45deg) translate(12px, -10px);
+        }
+
+    }
+}
+
+.menu_section {
+    z-index: 10;
+    @include size(100%, 100%);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 22;
+
+
+    &.on {
+        display: block;
+
+        .menu_wrap {
+            position: fixed;
+            @include size(100%, 100%);
+            top: 0px;
+            left: 0px;
+            color: #fff0ba;
+            padding-top: 13vh;
+            background: linear-gradient(rgba(181, 202, 226,.8), rgba(166, 69, 77,.8));
+            backdrop-filter: blur(5px);
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            text-align: center;
+        }
+
+        .link_list {
+            @extend %f-c-c;
+
+            .logo {
+                @include size(176px, 72px);
+                @extend %bg-cover;
+                background-image: url(/img/event/20231221/header/logo.webp);
+            }
+
+            a {
+                margin: 3vh auto;
+                color: transparent;
+                @extend %hover;
+
+                &.sec_01 {
+                    @include size(57px, 32px);
+                    @extend %bg-contain;
+                    background-image: url(/img/event/20231221/header/menuTitle1.png);
+                }
+    
+                &.sec_02 {
+                    @include size(190px, 31px);
+                    @extend %bg-contain;
+                    background-image: url(/img/event/20231221/header/menuTitle2.png);
+                }
+    
+                &.sec_03 {
+                    @include size(105px, 31px);
+                    @extend %bg-contain;
+                    background-image: url(/img/event/20231221/header/menuTitle3.png);
+                }
+
+                &.sec_04 {
+                    @include size(105px, 31px);
+                    @extend %bg-contain;
+                    background-image: url(/img/event/20231221/header/menuTitle4.png);
+                }
+
+            }
+
+         
+        }
+
+        .link_icon {
+            margin: 5vh auto;
+            width: 60%;
+            @extend %f-r-c;
+
+            @include xlg(){
+                width: 90%;
+            }
+
+            a {
+                margin: 0 10px;
+            }
+
+            .rg {
+                @include size(20%, 51px);
+                @extend %bg-contain;
+                background-image: url(/img/event/20231221/header/registerIcon.png);
+            }
+
+            .fb {
+                @include size(20%, 51px);
+                @extend %bg-contain;
+                background-image: url(/img/event/20231221/header/fbIcon.png);
+            }
+
+            .dc {
+                @include size(20%, 51px);
+                @extend %bg-contain;
+                background-image: url(/img/event/20231221/header/dcIcon.png);
+            }
+
+            // .dl {
+            //     @include size(20%, 51px);
+            //     @extend %bg-contain;
+            //     background-image: url(/img/event/20231221/header/download_icon.png);
+            // }
+        }
+    }
+}
+
+.logo_rwd{
+    @include ab-lt(50%, 7px);
+    transform: translate(-50%, 0%);
+    @include size(154px,100px);
+    @extend %bg-contain;
+    z-index: 5;
+    background-image: url(/img/event/component/big_logo.webp);
+    display: none;
+    @include xlg(){
+        display: block;
+    }
+}
