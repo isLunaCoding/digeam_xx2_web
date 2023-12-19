@@ -77,8 +77,6 @@ const app = Vue.createApp({
             return '';
         },
         async getSetting() {
-       
-            console.log('123');
             this.loading = true;
             try {
                 const res = await axios.post(api, {
@@ -159,7 +157,6 @@ const app = Vue.createApp({
             this.pop_info.info = info[0].description;
             this.pop_info.start = info[0].limit_start;
             this.pop_info.end = info[0].limit_end;
-            console.log(info);
         },
         close() {
             this.mask = false;
@@ -170,15 +167,12 @@ const app = Vue.createApp({
             this.isBuy = false;
         },
         changeNum(event, id) {
-            this.buyId[id] = '';
             this.buyId[id] = event.target.value;
-            console.log(this.buyId);
         },
         buyPop(num, id, title, point) {
             this.mask = true;
             this.popS = true;
             this.isBuy = true;
-
             this.pop_buy.id = id;
             this.pop_buy.name = title;
             this.pop_buy.num = num;
@@ -196,7 +190,6 @@ const app = Vue.createApp({
                     count: num
                 });
                 this.popA = true;
-
                 if (res.data.status == 1) {
                     this.getSetting();
                     this.isMsg = res.data.msg;
@@ -212,6 +205,8 @@ const app = Vue.createApp({
                 console.log(err);
             } finally {
                 console.log('Buy,end');
+                this.buyId[id] = '';
+                this.pop_buy = '';
                 this.loading = false;
             };
         },
