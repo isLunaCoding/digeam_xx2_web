@@ -1293,6 +1293,7 @@ a.logo_rw {
   .sec03_box .childBox p,
   .sec03_box .rockBox p {
     font-size: 16px;
+    width: 90%;
   }
 }
 @media all and (max-width: 768px) {
