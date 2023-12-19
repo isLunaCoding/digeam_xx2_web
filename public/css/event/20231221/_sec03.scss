@@ -1,0 +1,156 @@
+.sec03 {
+    @extend %bg-cover;
+    width: 100%;
+    max-width: 1920px;
+    height: 1010px;
+    background-image: url(../../../img/event/20231221/sec02/allBg.jpg);
+    padding-bottom: 10%;
+
+    @include lg(){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    @include sm() {
+        height: auto;
+        padding-bottom: 25%;
+    }
+
+    &_title {
+        padding-top: 4%;
+        padding-left: 10%;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+
+
+        @include lg() {
+            display: block;
+            max-width: 88%;
+        }
+
+        @include sm(){
+            padding:0 ;
+         
+            padding-top: 15%;
+            padding-bottom: 3%;
+            padding-left: 0%;
+        }
+
+        @include xlg() {
+            max-width: 96%;
+        }
+
+        @include xs() {
+            scale: .8;
+            padding-top: 30%;
+            max-width: 98%;
+        }
+
+        @include xxs() {
+            padding-top: 12%;
+        }
+
+    }
+
+    &_box {
+        @extend %f-r-c;
+
+        @include sm() {
+            flex-direction: column
+        }
+
+        .childBox,
+        .rockBox {
+            @extend %f-c-c;
+            width: 50%;
+
+            @include sm(){
+                width: 95%;
+            }
+
+            img {
+                max-width: 100%;
+
+                @include sm(){
+                    max-width: 90%;
+                }
+            }
+
+            p {
+                margin-top: -19%;
+                text-align: center;
+                font-weight: bold;
+                font-size: 21px;
+
+
+                @include lg() {
+                    font-size: 16px;
+
+                }
+
+                @include sm() {
+                    margin-top: -25%;
+                    font-size: 27px;
+                    text-align: center;
+                }
+
+                @include xlg() {
+                    font-size: 18px;
+                }
+
+                @include xs() {
+                    font-size: 18px;
+                }
+
+                @include xxs() {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .rockBox {
+            @include sm() {
+                margin-top: -5%;
+            }
+        }
+    }
+
+    .severInfo {
+        text-align: center;
+        letter-spacing: 1.3px;
+        font-size: 22px;
+        width: 190px;
+        height: 60px;
+        border: 2px solid #b69542;
+        border-radius: 2px;
+        @extend %f-r-c;
+        margin: 0 auto;
+        cursor: pointer;
+        font-family: 'SourceHanSerifTC-Heavy';
+        color: #fff;
+        box-shadow: 0px 0px 5px #000;
+        background-position: bottom -18px center;
+        background-image: url(../../../img/event/20231221/s4TitleBack.png);
+        transition: all .5s ease-in-out;
+        margin-top: 2%;
+        z-index: 2;
+        position: relative;
+
+        &:hover {
+            background-image: url(../../../img/event/20231221/s4TitleBackHover.png);
+        }
+
+        @include sm(){
+            margin-top: 10%;
+            scale: 1.5;
+        }
+
+        @include xlg(){
+            scale: 1;
+        }
+    }
+
+}
