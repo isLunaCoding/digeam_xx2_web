@@ -67,18 +67,16 @@ class ShopController extends Controller
             $spend  = 0;
         }
         // 找出上架商品
-        $shop = shop::where('status', 1)->orderby('sort', 'desc')->get();
-
-    //     $shops = shop::where('status', 1)->where(function ($query) use ($now) {
-    //     $query->whereNull('limit_start')
-    //         ->whereNull('limit_end')
-    //         ->orWhere(function ($query) use ($now) {
-    //             $query->whereNotNull('limit_start')
-    //                 ->whereNotNull('limit_end')
-    //                 ->where('limit_start', '<=', $now)
-    //                 ->where('limit_end', '>=', $now);
-    //         }); 
-    // })->get();
+        $shop = shop::where('status', 1)->where(function ($query) use ($now) {
+        $query->whereNull('limit_start')
+            ->whereNull('limit_end')
+            ->orWhere(function ($query) use ($now) {
+                $query->whereNotNull('limit_start')
+                    ->whereNotNull('limit_end')
+                    ->where('limit_start', '<=', $now)
+                    ->where('limit_end', '>=', $now);
+                }); 
+            })->get();
         // 找出banner
         $banner = Image::where('type', 'shop')->orderBy('status', 'desc')->orderBy('sort', 'asc')->get();
         if (!isset($_COOKIE['StrID'])) {
@@ -223,7 +221,7 @@ class ShopController extends Controller
                     ]);
                 }
             } else if ($shop_item->limit_type == 3) {
-                $check = shopLog::where('item_id', $request->item_id)->whereBetween('created_at', [$request->limit_start, $request->limit_end])->count();
+                $check = shopLog::where('item_id', $request->item_id)->whereBetween('created_at', [$shop_item->limit_start, $shop_item->limit_end])->count();
                 if ($check >= $shop_item->limit_count) {
                     return response()->json([
                         'status' => -97,
@@ -231,7 +229,7 @@ class ShopController extends Controller
                     ]);
                 }
             } else if ($shop_item->limit_type == 4) {
-                $check = shopLog::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id)->whereBetween('created_at', [$request->limit_start, $request->limit_end])->count();
+                $check = shopLog::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id)->whereBetween('created_at', [$shop_item->limit_start, $shop_item->limit_end])->count();
                 if ($check >= $shop_item->limit_count) {
                     return response()->json([
                         'status' => -97,
