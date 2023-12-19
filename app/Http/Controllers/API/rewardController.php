@@ -98,6 +98,90 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
+            //四海轉點回饋6
+            if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-21 12:00:00', '2023-12-27 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-21 12:00:00', '2023-12-27 23:59:59'])->sum('cb_point');
+                $event_pay = $c_point + $cb_point;
+                $db = \DB::connection('mysql');
+                if ($user_id == 'minnn112') {
+                    $event_pay = 5000;
+                }
+                if ($event_pay >= 1000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '58')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',58,'1000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 3000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '59')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',59,'3000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 5000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '60')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',60,'5000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 8000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '61')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',61,'8000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 10000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '62')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',62,'10000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 15000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '63')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',63,'15000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 20000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '64')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',64,'20000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 30000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '65')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',65,'30000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                if ($event_pay >= 50000) {
+                    $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '66')->count();
+                    if ($eventNum == 0) {
+                        $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',66,'50000')";
+                        $db->disableQueryLog();
+                        $event_info = $db->statement($sql);
+                    }
+                }
+                \DB::disconnect('mysql');
+            }
+
             //四海轉點回饋5
             if ((date('YmdHis') >= '20231214120000') && (date('YmdHis') <= '20240131235959')) {
                 $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-14 12:00:00', '2023-12-20 23:59:59'])->sum('c_point');

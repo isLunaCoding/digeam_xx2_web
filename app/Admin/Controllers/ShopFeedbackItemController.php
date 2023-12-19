@@ -10,7 +10,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 use URL;
-
+use Encore\Admin\Facades\Admin;
 class ShopFeedbackItemController extends AdminController
 {
     /**
@@ -93,5 +93,23 @@ class ShopFeedbackItemController extends AdminController
         $form->number('item_cnt', __('數量'))->default(1);
         $form->radio('is_bind', __('是否綁定'))->options(['1' => '綁定', '0' => '不綁定']);
         return $form;
+    }
+    public function edit($type, Content $content)
+    {
+        // 切開網址,定義id
+        $explodeUrl = explode('/', URL::current());
+        $count = COUNT($explodeUrl);
+        $id = $explodeUrl[$count - 2];
+        return Admin::content(function (Content $content) use ($id) {
+            $content->body($this->form($id)->edit($id));
+        });
+    }
+
+    public function update($type)
+    {
+        $explodeUrl = explode('/', URL::current());
+        $count = COUNT($explodeUrl);
+        $id = $explodeUrl[$count - 1];
+        return $this->form()->update($id);
     }
 }
