@@ -77,6 +77,8 @@ const app = Vue.createApp({
             return '';
         },
         async getSetting() {
+       
+            console.log('123');
             this.loading = true;
             try {
                 const res = await axios.post(api, {
@@ -92,6 +94,8 @@ const app = Vue.createApp({
                 }
                 this.carousel = res.data.banner;
                 this.feedBack = res.data.feedback;
+                console.log(this.feedBack );
+                // this.feedBack = '';
                 this.produceData = res.data.item;
                 console.log('api傳的', res.data);
                 console.log(this.feedBack);
@@ -106,22 +110,25 @@ const app = Vue.createApp({
         initSwiper() {
             // 確保在初始化 Swiper 之前清理掉舊的實例
             if (this.swiper) {
+                console.log('swiper重啟');
                 this.swiper.destroy();
             }
             // 延遲初始化以確保 DOM 正確渲染
             this.$nextTick(() => {
-                this.swiper = new Swiper('.swiper', {
+                this.swiper = new Swiper(".swiper", {
                     slidesPerView: 1,
                     spaceBetween: 24,
                     loop: true,
+                    speed:1000,
+                    autoplay:true,
+                    disableOnInteraction: false,
+                    delay: 1000,
                     breakpoints: {
                         1920: {
                             slidesPerView: 1,
                             slidesPerGroup: 1,
                         },
                     },
-                    prevButton: '.swiper-button-prev',
-                    nextButton: '.swiper-button-next',
                     navigation: {
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
@@ -135,7 +142,6 @@ const app = Vue.createApp({
         },
         changeNav(id) {
             this.navTab = id;
-            this.initSwiper();
             if (id == 'produce') {
                 this.initSwiper();
             }
@@ -164,6 +170,7 @@ const app = Vue.createApp({
             this.isBuy = false;
         },
         changeNum(event, id) {
+            this.buyId[id] = '';
             this.buyId[id] = event.target.value;
             console.log(this.buyId);
         },
@@ -252,6 +259,7 @@ const app = Vue.createApp({
         if (this.checkCookie('StrID')) {
             this.user.account = this.checkCookie('StrID');
         }
+
         this.getSetting();
     }
 });
@@ -263,14 +271,16 @@ const swiper = new Swiper(".swiper", {
     slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
+    speed:1000,
+    autoplay:true,
+    disableOnInteraction: false,
+    delay: 1000,
     breakpoints: {
         1920: {
             slidesPerView: 1,
             slidesPerGroup: 1,
         },
     },
-    prevButton: '.swiper-button-prev',
-    nextButton: '.swiper-button-next',
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
