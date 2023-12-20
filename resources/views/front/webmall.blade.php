@@ -154,6 +154,21 @@
             </section>
 
             <section class="depot" v-if="navTab == 'depot'">
+                <article class="feedBack" v-if="feedBack !== false">
+                    <b class="feedBackTitle">%[feedBack.title]</b>
+                    <div class="line"></div>
+                    <sub>達成活動累積消費額度，系統將自動發獎至購物倉庫中。</sub>
+                    <div class="timeLine">%[feedBack.start] - %[feedBack.end]</div>
+                    <span>當前累積消費金額:<span class="spend">%[ user.spend ]</span></span>
+                    <div class="feedBackBox">
+                        <div class="itemBox" v-for="(item , index) in feedBack.item" :key="index"
+                            :class="{ active: user.spend > item.price }">
+                            <p class="priceTitle">累積消費金額 %[item.price]</p>
+                            <span v-for="(item , index) in item.item_names">%[item]</span>
+                        </div>
+                    </div>
+                </article>
+
                 <article class="charWrap">
                     <div class="charBox">
                         <b class="user" v-if="login == 1">你好，%[user.account]</b>

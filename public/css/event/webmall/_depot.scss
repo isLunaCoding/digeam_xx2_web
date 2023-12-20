@@ -71,10 +71,9 @@ sub{
     @extend %f-c-c;
 
     .timeLine{
-        background-color: $pink;
         font-size: 1.3rem;
-        font-weight: 600;
-        color: #fff;
+        font-weight: 700;
+        color: $pink;
         padding: 5px 10px;
     }
 
