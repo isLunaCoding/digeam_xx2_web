@@ -556,10 +556,9 @@ sub {
   padding: 30px 0;
 }
 .userDepot .timeLine, .feedBack .timeLine {
-  background-color: #f12464;
   font-size: 1.3rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: #f12464;
   padding: 5px 10px;
 }
 .userDepot table, .feedBack table {
