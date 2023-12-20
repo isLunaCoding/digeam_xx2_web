@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="《仙俠世界貳》正式公測" />
+    <meta property="og:title" content="《仙俠世界貳》星羅天啟" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="《仙俠世界貳》群仙聚首，今日盛大公測！多種公測好禮僅此一次，錯過不再！" />
+    <meta property="og:description" content="《仙俠世界貳》重大改版！全新補職、嶄新仙童系統、參加改版活動，獎勵拿到手軟，讓你的修仙繁華熱鬧！" />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
     <meta property="og:locale" content="zh_tw" />
     <meta property="article:author" content="" />
-    <meta property="og:image" content="img/event/" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta property="og:image" content="/img/event/20231221/share_bg.png" />
@@ -88,7 +87,7 @@
 
         <header class="header" id="sec01">
             <article class="header_area">
-                <img src="/img/event/20231221/header/S1Title.png" alt="《仙俠世界貳》- 星芒不滅 羅法譜天" class="title">
+                <img src="/img/event/20231221/header/s1Title.png" alt="《仙俠世界貳》- 星芒不滅 羅法譜天" class="title">
 
                 <div class="link_box">
                     <a href="https://www.digeam.com/register" target="_blank" class="register"></a>
@@ -128,7 +127,7 @@
                 </div>
                 <div class="rockBox">
                     <img src="/img/event/20231221/sec03/s3rock.png" alt="《仙俠世界貳》- 聖石">
-                    <p>潛藏在寶石中的力量終於覺醒，只要上仙細心雕琢，即可激發寶石的真正力量。</p>
+                    <p>潛藏在寶石中的力量終於覺醒，<br>只要上仙細心雕琢，即可激發寶石的真正力量。</p>
                 </div>
             </article>
             <a class="severInfo" href="https://xx2.digeam.com/wiki" target="_blank">系統介紹</a>
@@ -159,9 +158,9 @@
 
                             <div class="txt_box">
                                 <h3 class="sub">活動時間</h3>
-                                <p>永久活動</p>
+                                <p>2023/12/21（四）維護後～2024/01/24（三）23:59</p>
                                 <h3 class="sub">活動說明</h3>
-                                <p>透過完成「仙家聖手」發布的任務將可以獲得「星羅密儀」、「星羅密儀」<br>可以向「仙家聖手」兌換超值好禮！
+                                <p>透過完成「仙家聖手」發布的任務將可以獲得「星羅密儀」、<br>「星羅密儀」可以向「仙家聖手」兌換超值好禮！
                                     詳細兌換內容可以參考「道具說明」。​</p>
 
                             </div>
@@ -174,7 +173,7 @@
                         </div>
                     </article>
 
-                    <article class="tab_content t2" data-tab="tab2">
+                    {{-- <article class="tab_content t2" data-tab="tab2">
                         <div class="title_bg">
                             <h2 class="t2_title"></h2>
                         </div>
@@ -194,6 +193,31 @@
                             </div>
                         </section>
                         <div class="other_box2">
+                            <div class="other pop" data-pop="content_sec2_1">道具說明</div>
+                            <div class="other pop" data-pop="notice_sec2_1">注意事項</div>
+                        </div>
+                    </article> --}}
+
+                    <article class="tab_content t1" data-tab="tab2">
+                        <div class="title_bg">
+                            <h2 class="t2_title"></h2>
+                        </div>
+                        <div class="content_box">
+                            <div class="img_box">
+                                <img src="/img/event/20231221/sec04/s4ch2.png" alt="《仙俠世界貳》- 登峰造極">
+                            </div>
+
+                            <div class="txt_box">
+                                <h3 class="sub">活動時間</h3>
+                                <p>永久活動​</p>
+                                <h3 class="sub">活動說明</h3>
+                                <p>
+                                    角色等級達到95級，​​上仙將獲得豐厚的獎賞！<br>
+                                    歡迎各路豪俠前來挑戰！
+                                </p>
+                            </div>
+                        </div>
+                        <div class="other_box">
                             <div class="other pop" data-pop="content_sec2_1">道具說明</div>
                             <div class="other pop" data-pop="notice_sec2_1">注意事項</div>
                         </div>
@@ -244,7 +268,7 @@
 
                             <div class="txt_box">
                                 <h3 class="sub">活動時間</h3>
-                                <p>2023/12/21（四）維護後～ 2023/12/27（三）23:59​​</p>
+                                <p>2023/12/21（四）維護後 ～ 2023/1/10（三）23:59​​</p>
                                 <h3 class="sub">活動說明</h3>
                                 <p>透過攻略幻境地宮、狩獵場蒐集活動道具上交給NPC 冰雪大使，<br>
                                     可以獲得寶珠並提升冰雪賜福等級。<br>
@@ -264,8 +288,6 @@
                             <h2 class="t5_title"></h2>
                         </div>
                         <div class="content_box">
-                            <h3 class="sub">活動時間</h3>
-                            <p>2023/12/21（四）維護後～2023/1/10（三）23:59​​</p>
                             <h3 class="sub">活動說明</h3>
                             <p>商城上架全新坐騎、翅膀與時裝！<br>
                                 同時限定坐騎「雙人．極地雪橇」開放限時販售，錯過再等一年！​​</p>
@@ -330,9 +352,9 @@
 
                                 <div class="txt_box">
                                     <h3 class="sub">活動時間</h3>
-                                    <p>永久活動</p>
+                                    <p>2023/12/21（四）維護後～<br>2024/01/24（三）23:59</p>
                                     <h3 class="sub">活動說明</h3>
-                                    <p>透過完成「仙家聖手」發布的任務將可以獲得「星羅密儀」、「星羅密儀」<br>可以向「仙家聖手」兌換超值好禮！
+                                    <p>透過完成「仙家聖手」發布的任務將可以獲得「星羅密儀」、<br>「星羅密儀」可以向「仙家聖手」兌換超值好禮！
                                         詳細兌換內容可以參考「道具說明」。​</p>
 
                                 </div>
@@ -353,7 +375,7 @@
 
                             <section class="t2_content" data-t2="tab1">
                                 <div class="img_box">
-                                    <img src="/img/event/20231221/sec04/S3_2Robort.webp" alt="《仙俠世界貳》- 天外奇蹟">
+                                    <img src="/img/event/20231221/sec04/s4ch2.png" alt="《仙俠世界貳》- 登峰造極">
                                 </div>
                                 <div class="txt_box">
                                     <h3 class="sub">活動時間</h3>
@@ -383,6 +405,7 @@
                             <div class="content_box">
                                 <h3 class="sub">活動時間</h3>
                                 <p>2023/12/21（四）維護後～<br>2023/12/27（三）23:59<br>
+                                    <br>
                                     2024/1/11（四）12:00～<br>2024/1/17（三）23:59​</p>
                                 <h3 class="sub">活動說明</h3>
                                 <p>活動時間內線上，若角色等級≧11級即可獲得寶石(戰場除外)​</p>
@@ -419,7 +442,7 @@
 
                                 <div class="txt_box">
                                     <h3 class="sub">活動時間</h3>
-                                    <p>2023/12/21（四）維護後～ 2023/12/27（三）23:59​​</p>
+                                    <p>2023/12/21（四）維護後 ～<br> 2023/1/10（三）23:59​​</p>
                                     <h3 class="sub">活動說明</h3>
                                     <p>透過攻略幻境地宮、狩獵場蒐集活動道具上交給NPC 冰雪大使，<br>
                                         可以獲得寶珠並提升冰雪賜福等級。<br>
@@ -440,8 +463,6 @@
                                 <h2 class="t5_title"></h2>
                             </div>
                             <div class="content_box">
-                                <h3 class="sub">活動時間</h3>
-                                <p>2023/12/21（四）維護後～2023/1/10（三）23:59​​</p>
                                 <h3 class="sub">活動說明</h3>
                                 <p>商城上架全新坐騎、翅膀與時裝！<br>
                                     同時限定坐騎「雙人．極地雪橇」開放限時販售，錯過再等一年！​​</p>

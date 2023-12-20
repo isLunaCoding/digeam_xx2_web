@@ -48,7 +48,7 @@
             @extend %f-c-c;
 
             @include lg() {
-                width: 43%;
+                width: 80%;
             }
 
             @include sm() {
@@ -141,6 +141,7 @@
                     @include sm() {
                         font-size: 27px;
                         text-align: center;
+                        padding: 0 15px;
                     }
 
                     @include xlg() {
@@ -180,7 +181,8 @@
                 margin: 0 auto;
 
                 @include lg() {
-                    max-width: 108%;
+                    max-width: 131%;
+                    padding-top: 30%;
                     margin: 0 auto;
                 }
 

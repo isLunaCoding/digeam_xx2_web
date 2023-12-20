@@ -258,6 +258,7 @@
         .t1 , .t4{
             .content_box {
                 @extend %f-r-c;
+                align-items: flex-start;
                 @include sm(){
                    
                     flex-direction: column;
@@ -286,7 +287,6 @@
             &_content {
                 @extend %f-r-c;
                 flex-wrap: wrap;
-                margin-top: 6%;
 
                 @include lg() {
                     flex-direction: column;
