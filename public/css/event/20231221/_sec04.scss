@@ -130,7 +130,8 @@
             @extend %f-r-c;
 
             @include lg() {
-                margin-left: 27%;
+                scale: .9;
+                margin-left: 7%;
             }
 
             @include sm() {
@@ -177,7 +178,7 @@
         }
 
         .img_box {
-            width: 50%;
+            // width: 50%;
             @extend %f-r-c;
             flex-wrap: wrap;
 
@@ -190,6 +191,7 @@
             width: 100%;
             @extend %f-r-c;
             justify-content: space-around;
+            flex-wrap: wrap;
 
             img{
                 cursor: pointer;
