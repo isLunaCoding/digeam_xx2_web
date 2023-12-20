@@ -59,6 +59,7 @@ Route::get('/download', function () {
 
 // CBT
 Route::get('/CBT', 'front\CBTController@index');
+
 // Route::get('/CBT', function () {
 //     return view('event/CBT');
 // });
@@ -68,6 +69,10 @@ Route::post('filePath', 'CkeditorUploadController@getImage')->name('filePath');
 //obt
 Route::get('/OBT', function () {
     return view('event/OBT');
+});
+
+Route::get('/20231221', function () {
+    return view('event/20231221');
 });
     // 事前預約
 Route::get('/prereg', function () {
