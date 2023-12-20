@@ -844,7 +844,7 @@ a.logo_rw {
 .menu_section.on .link_icon .rg {
   width: 20%;
   height: 51px;
-  background-image: url(/img/event/20231221/header/registerIcon.png);
+  background-image: url(/img/event/20231221/header/RegisterIcon.png);
 }
 .menu_section.on .link_icon .fb {
   width: 20%;
@@ -1024,7 +1024,7 @@ a.logo_rw {
 }
 @media all and (max-width: 1024px) {
   .sec02_box .left {
-    width: 43%;
+    width: 80%;
   }
 }
 @media all and (max-width: 768px) {
@@ -1132,6 +1132,7 @@ a.logo_rw {
   .sec02_box .left .team_box p {
     font-size: 27px;
     text-align: center;
+    padding: 0 15px;
   }
 }
 @media all and (max-width: 500px) {
@@ -1172,7 +1173,8 @@ a.logo_rw {
 }
 @media all and (max-width: 1024px) {
   .sec02_box .right img {
-    max-width: 108%;
+    max-width: 131%;
+    padding-top: 30%;
     margin: 0 auto;
   }
 }
@@ -1293,6 +1295,7 @@ a.logo_rw {
   .sec03_box .childBox p,
   .sec03_box .rockBox p {
     font-size: 16px;
+    width: 90%;
   }
 }
 @media all and (max-width: 768px) {
@@ -1343,7 +1346,7 @@ a.logo_rw {
   background-image: url(../../../img/event/20231221/s4TitleBack.png);
   transition: all 0.5s ease-in-out;
   margin-top: 2%;
-  z-index: 2;
+  z-index: 4;
   position: relative;
 }
 .sec03 .severInfo:hover {
@@ -1613,6 +1616,9 @@ a.logo_rw {
   height: 100%;
   padding: 1% 0;
 }
+.sec04_box .t1 .content_box, .sec04_box .t4 .content_box {
+  align-items: flex-start;
+}
 @media all and (max-width: 768px) {
   .sec04_box .t1 .content_box, .sec04_box .t4 .content_box {
     flex-direction: column;
@@ -1620,7 +1626,6 @@ a.logo_rw {
 }
 .sec04_box .t2_content {
   flex-wrap: wrap;
-  margin-top: 6%;
 }
 @media all and (max-width: 1024px) {
   .sec04_box .t2_content {
