@@ -15,7 +15,7 @@ use App\Model\shopUserDepot;
 use DB;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
-use DateTime;
+use Carbon\Carbon;
 class ShopController extends Controller
 {
     public function index(Request $request)
@@ -45,8 +45,7 @@ class ShopController extends Controller
     public function login($request)
     {
         // 消費回饋若有開啟,先進行判斷
-        // $now = date('Y-m-d h:i:s');
-        $now = new DateTime();
+        $now =Carbon::now();
         $check_feedback = shopFeedback::where('status', 1)->where('start', '<', $now)->where('end', '>', $now)->first();
         if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
             if (isset($_COOKIE['StrID'])) {
@@ -191,7 +190,7 @@ class ShopController extends Controller
     }
     public function buy_item($request)
     {
-        $now = new DateTime();
+        $now =Carbon::now();
         if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
             $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
         } else {
@@ -476,7 +475,7 @@ class ShopController extends Controller
     public function feedback($request)
     {
         // 消費回饋
-        $now = new DateTime();
+        $now = Carbon::now();
         $check_feedback = shopFeedback::where('status', 1)->where('start', '<', $now)->where('end', '>', $now)->first();
         if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
             if (isset($_COOKIE['StrID'])) {

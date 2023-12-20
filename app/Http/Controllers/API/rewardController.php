@@ -99,14 +99,11 @@ class rewardController extends Controller
         $user_id = $request->user_id;
         if ($user_id != '') {
             //四海轉點回饋6
-            if ($_SERVER['HTTP_CF_CONNECTING_IP'] == '211.23.144.219') {
-                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-19 12:00:00', '2023-12-27 23:59:59'])->sum('c_point');
-                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-19 12:00:00', '2023-12-27 23:59:59'])->sum('cb_point');
+            if ((date('YmdHis') >= '20231221120000') && (date('YmdHis') <= '20240131235959')) {
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-21 12:00:00', '2023-12-27 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-21 12:00:00', '2023-12-27 23:59:59'])->sum('cb_point');
                 $event_pay = $c_point + $cb_point;
                 $db = \DB::connection('mysql');
-                if ($user_id == 'minnn112' || $user_id == 'xx2digeam04') {
-                    $event_pay = 50000;
-                }
                 if ($event_pay >= 1000) {
                     $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '58')->count();
                     if ($eventNum == 0) {

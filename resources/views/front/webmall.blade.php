@@ -221,7 +221,7 @@
                     </table>
                 </article>
 
-                <article class="feedBack" v-if="feedBack !== false">
+                <!-- <article class="feedBack" v-if="feedBack !== false">
                     <b class="feedBackTitle">%[feedBack.title]</b>
                     <div class="line"></div>
                     <sub>達成活動累積消費額度，系統將自動發獎至購物倉庫中。</sub>
@@ -234,7 +234,7 @@
                             <span v-for="(item , index) in item.item_names">%[item]</span>
                         </div>
                     </div>
-                </article>
+                </article> -->
             </section>
 
             <div class="popS" v-if="popS == true">

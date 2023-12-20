@@ -73,18 +73,18 @@ class ShopController extends AdminController
     {
         $form = new Form(new shop());
         $form->text('id', __('ID'))->readOnly();
-        $form->text('title', __('商品名稱'));
-        $form->number('price', __('商品價格'));
+        $form->text('title', __('商品名稱'))->required();;
+        $form->number('price', __('商品價格'))->required();;
         $form->select('cate', __('分類'))->options(['1' => '熱門商品', '2' => '特別販售'])->default(1);
         $form->select('item_type', __('道具類型'))->options(['1' => '一般商品', '2' => '禮包', '3' => '機率商品'])->default(1);
         $form->select('limit_type', __('限購'))->options(['0' => '無限購', '1' => '全服限購', '2' => '帳號限購', '3' => '區間內全服限購', '4' => '區間內帳號限購'])->default(0);
         $form->datetime('limit_start', __('區間開始時間'));
         $form->datetime('limit_end', __('區間結束時間'));
         $form->number('limit_count', __('限購數量'))->default(0);
-        $form->image('img', __('圖片'))->move('upload/shop');
+        $form->image('img', __('圖片'))->move('upload/shop')->required();;
         $form->number('sort', __('排序'))->default(0);
         $form->select('status', __('上架狀態'))->options(['1' => '上架', '0' => '下架'])->default('0');
-        $form->textarea('description', __('內文'));
+        $form->textarea('description', __('內文'))->required();;
 
         Admin::style('.description {width: 274.8px;}');
         Admin::style('.description {font-size: 17.6px ;}');
@@ -126,11 +126,12 @@ class ShopController extends AdminController
             }
             // 限購請填非0數字, 一般商品的限購數量請填0
             if ($form->limit_type == 0) {
-                if ($form->limit_start || $form->limit_start) {
+                if ($form->limit_start || $form->limit_end) {
                     $error = new MessageBag([
                         'title' => '錯誤',
                         'message' => '非區間限購請勿輸入區間開始或區間結束時間',
                     ]);
+                    return back()->with(compact('error'));
                 }
                 if ($form->limit_count != 0) {
                     $error = new MessageBag([
@@ -145,6 +146,7 @@ class ShopController extends AdminController
                         'title' => '錯誤',
                         'message' => '非區間限購請勿輸入區間開始或區間結束時間',
                     ]);
+                    return back()->with(compact('error'));
                 }
                 if ($form->limit_count <= 0) {
                     $error = new MessageBag([
