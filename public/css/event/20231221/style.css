@@ -1491,7 +1491,8 @@ a.logo_rw {
 }
 @media all and (max-width: 1024px) {
   .sec04_box .title_bg {
-    margin-left: 27%;
+    scale: 0.9;
+    margin-left: 7%;
   }
 }
 @media all and (max-width: 768px) {
@@ -1531,7 +1532,6 @@ a.logo_rw {
   word-break: break-all;
 }
 .sec04_box .img_box {
-  width: 50%;
   flex-wrap: wrap;
 }
 .sec04_box .img_box img {
@@ -1540,6 +1540,7 @@ a.logo_rw {
 .sec04_box .imgList_box {
   width: 100%;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .sec04_box .imgList_box img {
   cursor: pointer;
