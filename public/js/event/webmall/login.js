@@ -214,6 +214,8 @@ const app = Vue.createApp({
                     this.isMsg = '點數不足，無法購買';
                 } else if (res.data.status == -97) {
                     this.isMsg = '限購商品已售完';
+                } else if (res.data.status == -96) {
+                    this.isMsg = '商品不在可購買時間內';
                 }
                 return res;
             } catch (err) {

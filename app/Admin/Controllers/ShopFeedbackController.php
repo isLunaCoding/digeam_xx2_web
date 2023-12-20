@@ -8,7 +8,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use Illuminate\Support\MessageBag;
-
+use URL;
 class ShopFeedbackController extends AdminController
 {
     /**
@@ -75,8 +75,15 @@ class ShopFeedbackController extends AdminController
         $form->datetime('end', __('回饋結束時間'));
         $form->select('status', __('開啟狀態'))->options(['1' => '開啟', '0' => '關閉'])->default('0');
         $form->saving(function (Form $form) {
-            $check_start = shopFeedback::whereBetween('start', [$form->start, $form->end])->first();
-            $check_end = shopFeedback::whereBetween('end', [$form->start, $form->end])->first();
+            $explodeURL = explode('/', URL::current());
+            $count = Count($explodeURL);
+            if (is_numeric($explodeURL[$count - 1])) {
+                $check_start = shopFeedback::where('id','!=',$explodeURL[$count - 1])->whereBetween('start', [$form->start, $form->end])->first();
+                $check_end = shopFeedback::where('id','!=',$explodeURL[$count - 1])->whereBetween('end', [$form->start, $form->end])->first();
+            } else {
+                $check_start = shopFeedback::whereBetween('start', [$form->start, $form->end])->first();
+                $check_end = shopFeedback::whereBetween('end', [$form->start, $form->end])->first();
+            }
             // 結束時間比開始時間早
             if ($form->start >= $form->end) {
                 $error = new MessageBag([

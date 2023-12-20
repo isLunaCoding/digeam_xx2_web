@@ -15,7 +15,7 @@ use App\Model\shopUserDepot;
 use DB;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
-
+use DateTime;
 class ShopController extends Controller
 {
     public function index(Request $request)
@@ -45,7 +45,8 @@ class ShopController extends Controller
     public function login($request)
     {
         // 消費回饋若有開啟,先進行判斷
-        $now = date('Y-m-d h:i:s');
+        // $now = date('Y-m-d h:i:s');
+        $now = new DateTime();
         $check_feedback = shopFeedback::where('status', 1)->where('start', '<', $now)->where('end', '>', $now)->first();
         if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
             if (isset($_COOKIE['StrID'])) {
@@ -53,6 +54,7 @@ class ShopController extends Controller
             }
             $feedback = $check_feedback;
             $shopFeedbackItem = shopFeedbackItem::select('price', DB::raw('GROUP_CONCAT(item_name) as item_names'))
+            ->where('feedback_id',$check_feedback->id)
                 ->groupBy('price')
                 ->get();
             foreach ($shopFeedbackItem as $key => $value) {
@@ -189,6 +191,7 @@ class ShopController extends Controller
     }
     public function buy_item($request)
     {
+        $now = new DateTime();
         if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
             $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
         } else {
@@ -227,6 +230,11 @@ class ShopController extends Controller
                         'status' => -97,
                         'msg' => '限購道具數量不足',
                     ]);
+                }else if($now <  $shop_item->limit_start || $now > $shop_item->limit_end){
+                    return response()->json([
+                        'status' => -96,
+                        'msg' => '不在購買時間內',
+                    ]);
                 }
             } else if ($shop_item->limit_type == 4) {
                 $check = shopLog::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id)->whereBetween('created_at', [$shop_item->limit_start, $shop_item->limit_end])->count();
@@ -234,6 +242,11 @@ class ShopController extends Controller
                     return response()->json([
                         'status' => -97,
                         'msg' => '限購道具數量不足',
+                    ]);
+                }else if($now <  $shop_item->limit_start || $now > $shop_item->limit_end){
+                    return response()->json([
+                        'status' => -96,
+                        'msg' => '不在購買時間內',
                     ]);
                 }
             }
@@ -299,7 +312,7 @@ class ShopController extends Controller
                     //找尋玩家倉庫是否有該道具
                     $search_depot = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('item_id', $request->item_id . '-' . $get['id'])->where('reason', $shop_item->title . '-' . $get['item_name'])->first();
                     if ($search_depot) {
-                        $search_depot->count += $request->count;
+                        $search_depot->count += 1;
                         $search_depot->save();
                     } else {
                         $new_depot_item = new shopUserDepot();
@@ -312,7 +325,7 @@ class ShopController extends Controller
                         $new_depot_item->save();
                     }
                 }
-                ShopController::feedback($request);
+                $result = ShopController::feedback($request);
                 return response()->json([
                     'status' => 1,
                     'msg' => '購買成功',
@@ -463,7 +476,7 @@ class ShopController extends Controller
     public function feedback($request)
     {
         // 消費回饋
-        $now = date('Y-m-d h:i:s');
+        $now = new DateTime();
         $check_feedback = shopFeedback::where('status', 1)->where('start', '<', $now)->where('end', '>', $now)->first();
         if ($check_feedback && $now > $check_feedback->start && $now < $check_feedback->end) {
             if (isset($_COOKIE['StrID'])) {
@@ -471,7 +484,7 @@ class ShopController extends Controller
                 // 依照金額替消費回饋增加項目,直到消費總額小於回饋金額
                 $feedBackItem = shopFeedbackItem::where('feedback_id', $check_feedback->id)->orderBy('price', 'desc')->get();
                 foreach ($feedBackItem as $value) {
-                    if ($value['price'] < $spend) {
+                    if ($value['price'] <= $spend) {
                         $check_feed_back_item = shopUserDepot::where('user_id', $_COOKIE['StrID'])->where('item_id', $value['id'])->where('reason', $check_feedback->title . '-' . $value['item_name'])->where('type', 'feedback')->first();
                         if (!$check_feed_back_item) {
                             $new_depot_item = new shopUserDepot();
@@ -483,8 +496,6 @@ class ShopController extends Controller
                             $new_depot_item->type = 'feedback';
                             $new_depot_item->save();
                         }
-                    } else {
-                        break;
                     }
                 }
             }

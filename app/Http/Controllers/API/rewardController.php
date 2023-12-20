@@ -104,8 +104,8 @@ class rewardController extends Controller
                 $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-19 12:00:00', '2023-12-27 23:59:59'])->sum('cb_point');
                 $event_pay = $c_point + $cb_point;
                 $db = \DB::connection('mysql');
-                if ($user_id == 'minnn112') {
-                    $event_pay = 5000;
+                if ($user_id == 'minnn112' || $user_id == 'xx2digeam04') {
+                    $event_pay = 50000;
                 }
                 if ($event_pay >= 1000) {
                     $eventNum = reward_getlog::where('user_id', $user_id)->where('group_id', '58')->count();

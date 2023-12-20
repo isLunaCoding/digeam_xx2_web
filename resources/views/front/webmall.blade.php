@@ -214,7 +214,7 @@
                     <span>當前累積消費金額:<span class="spend">%[ user.spend ]</span></span>
                     <div class="feedBackBox">
                         <div class="itemBox" v-for="(item , index) in feedBack.item" :key="index"
-                            :class="{ active: user.spend > item.price }">
+                            :class="{ active: user.spend >= item.price }">
                             <p class="priceTitle">累積消費金額 %[item.price]</p>
                             <span v-for="(item , index) in item.item_names">%[item]</span>
                         </div>
@@ -288,6 +288,6 @@
 </body>
 <script src="https://unpkg.com/vue@3.2.4/dist/vue.global.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="/js/event/webmall/login.js?v10.2"></script>
+<script src="/js/event/webmall/login.js?v10.41"></script>
 
 </html>
