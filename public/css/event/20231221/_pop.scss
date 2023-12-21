@@ -29,7 +29,7 @@
         @include xlg(){
             max-height: 500px;
         }
-        
+
     }
 
 
@@ -166,7 +166,7 @@
                 width: 33%;
             }
 
-        
+
 
             @include xxs() {
                 font-size: 12px;
@@ -179,7 +179,7 @@
         margin-top: 20px;
         overflow-y: auto;
         overflow-x: hidden;
-
+        
         ul {
             li {
                 color: #420d0d;

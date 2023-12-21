@@ -147,7 +147,7 @@
             margin: 0 auto;
             padding-bottom: 6px;
             padding-left: 32px;
-            margin: 11px auto ;
+            margin: 11px auto;
             background-image: url(../../../img/event/20231221/sec04/s4InnerTitleBg2.png);
             font-family: 'SourceHanSerifTC-Heavy';
             letter-spacing: 2px;
@@ -181,29 +181,30 @@
             // width: 50%;
             @extend %f-r-c;
             flex-wrap: wrap;
+            width: 35%;
 
             img {
                 max-width: 100%;
             }
         }
 
-        .imgList_box{
+        .imgList_box {
             width: 100%;
             @extend %f-r-c;
             justify-content: space-around;
             flex-wrap: wrap;
 
-            img{
+            img {
                 cursor: pointer;
             }
 
-            @include sm(){
+            @include sm() {
                 flex-direction: column;
                 justify-content: center;
             }
         }
 
-        .txt_box{
+        .txt_box {
             width: 50%;
         }
 
@@ -247,7 +248,7 @@
             .t#{$i}_title {
                 @include size(458px, 145px);
                 background-image: url('../../../img/event/20231221/sec04/s4InnerTitle' + $i + '.png');
-             
+
             }
         }
 
@@ -257,12 +258,14 @@
             padding: 1% 0;
         }
 
-        .t1 , .t4{
+        .t1,
+        .t4 {
             .content_box {
                 @extend %f-r-c;
                 align-items: flex-start;
-                @include sm(){
-                   
+
+                @include sm() {
+
                     flex-direction: column;
                 }
             }
@@ -384,7 +387,7 @@
 
             }
 
- 
+
         }
 
         .other_box,
@@ -505,7 +508,7 @@
 
             }
 
-       
+
 
             .slick-arrow {
                 border: none;
@@ -679,16 +682,16 @@
             }
         }
 
-        .imgList_box{
+        .imgList_box {
             width: 100%;
             @extend %f-r-c;
             justify-content: space-around;
 
-            img{
+            img {
                 cursor: pointer;
             }
 
-            @include sm(){
+            @include sm() {
                 flex-direction: column;
                 justify-content: center;
             }
