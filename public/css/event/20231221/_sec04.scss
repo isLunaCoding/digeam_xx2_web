@@ -228,7 +228,7 @@
         .content_box {
             margin-top: 20px;
             width: 99%;
-            height: 74%;
+            height: 66%;
             overflow-y: auto;
             overflow-x: hidden;
 
@@ -258,11 +258,15 @@
             padding: 1% 0;
         }
 
+
+
         .t1,
         .t4 {
             .content_box {
                 @extend %f-r-c;
                 align-items: flex-start;
+                width: 99%;
+                height: 76%;
 
                 @include sm() {
 

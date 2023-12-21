@@ -118,7 +118,8 @@ body {
 /* 取消項目列表預設的輔助符號 */
 ol,
 ul {
-  list-style: none;
+  list-style: decimal;
+  list-style-type: decimal;
 }
 
 /* 隱藏引用標籤預設的引號(部分瀏覽器有) */
@@ -953,22 +954,22 @@ a.logo_rw {
   transition: all ease-in-out 0.3s;
 }
 .header_area .link_box .register {
-  background-image: url(../../../img/event/20231221/header/S1Register.png);
+  background-image: url(../../../img/event/20231221/header/s1Register.png);
 }
 .header_area .link_box .register:hover {
-  background-image: url(../../../img/event/20231221/header/S1RegisterHover.png);
+  background-image: url(../../../img/event/20231221/header/s1RegisterHover.png);
 }
 .header_area .link_box .download {
-  background-image: url(../../../img/event/20231221/header/S1Download.png);
+  background-image: url(../../../img/event/20231221/header/s1Download.png);
 }
 .header_area .link_box .download:hover {
-  background-image: url(../../../img/event/20231221/header/S1DownloadHover.png);
+  background-image: url(../../../img/event/20231221/header/s1DownloadHover.png);
 }
 .header_area .link_box .home {
-  background-image: url(../../../img/event/20231221/header/S1Offical.png);
+  background-image: url(../../../img/event/20231221/header/s1Offical.png);
 }
 .header_area .link_box .home:hover {
-  background-image: url(../../../img/event/20231221/header/S1OfficalHover.png);
+  background-image: url(../../../img/event/20231221/header/s1OfficalHover.png);
 }
 
 .sec02 {
@@ -1233,6 +1234,7 @@ a.logo_rw {
   .sec03_title {
     display: block;
     max-width: 88%;
+    padding-left: 3%;
   }
 }
 @media all and (max-width: 768px) {
@@ -1267,7 +1269,13 @@ a.logo_rw {
 }
 .sec03_box .childBox,
 .sec03_box .rockBox {
-  width: 50%;
+  width: 30%;
+}
+@media all and (max-width: 1440px) {
+  .sec03_box .childBox,
+  .sec03_box .rockBox {
+    width: 50%;
+  }
 }
 @media all and (max-width: 768px) {
   .sec03_box .childBox,
@@ -1572,7 +1580,7 @@ a.logo_rw {
 .sec04_box .content_box {
   margin-top: 20px;
   width: 99%;
-  height: 74%;
+  height: 66%;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -1622,6 +1630,8 @@ a.logo_rw {
 .sec04_box .t1 .content_box,
 .sec04_box .t4 .content_box {
   align-items: flex-start;
+  width: 99%;
+  height: 76%;
 }
 @media all and (max-width: 768px) {
   .sec04_box .t1 .content_box,
@@ -2392,10 +2402,15 @@ a.logo_rw {
   overflow-y: auto;
   overflow-x: hidden;
 }
+.pop_b_content ul {
+  list-style-type: decimal;
+}
 .pop_b_content ul li {
   color: #420d0d;
   font-size: 18px;
   margin: 10px 0;
+  list-style-type: decimal;
+  margin-left: 25px;
 }
 @media all and (max-width: 768px) {
   .pop_b_content ul li {
