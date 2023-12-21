@@ -68,16 +68,35 @@ class ShopController extends Controller
             $spend  = 0;
         }
         // 找出上架商品
-        $shop = shop::where('status', 1)->where(function ($query) use ($now) {
-        $query->whereNull('limit_start')
-            ->whereNull('limit_end')
-            ->orWhere(function ($query) use ($now) {
-                $query->whereNotNull('limit_start')
-                    ->whereNotNull('limit_end')
-                    ->where('limit_start', '<=', $now)
-                    ->where('limit_end', '>=', $now);
-                }); 
-            })->get();
+                if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+            $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        } else {
+            $real_ip = $_SERVER["REMOTE_ADDR"];
+        }
+        if ($real_ip != '211.23.144.219') {
+            $shop = shop::where('status', 1)->where(function ($query) use ($now) {
+            $query->whereNull('limit_start')
+                ->whereNull('limit_end')
+                ->orWhere(function ($query) use ($now) {
+                    $query->whereNotNull('limit_start')
+                        ->whereNotNull('limit_end')
+                        ->where('limit_start', '<=', $now)
+                        ->where('limit_end', '>=', $now);
+                    }); 
+                })->orderby('sort','desc')->get();
+            }else{
+            $shop = shop::where(function ($query) use ($now) {
+            $query->whereNull('limit_start')
+                ->whereNull('limit_end')
+                ->orWhere(function ($query) use ($now) {
+                    $query->whereNotNull('limit_start')
+                        ->whereNotNull('limit_end')
+                        ->where('limit_start', '<=', $now)
+                        ->where('limit_end', '>=', $now);
+                    }); 
+                })->orderby('sort','desc')->get();
+
+        }
         // 找出banner
         $banner = Image::where('type', 'shop')->orderBy('status', 'desc')->orderBy('sort', 'asc')->get();
         if (!isset($_COOKIE['StrID'])) {
