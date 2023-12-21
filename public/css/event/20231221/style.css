@@ -149,7 +149,8 @@ a {
 
 .pop_b_tab li, .pop_b_tab, .pop_b_title, .sec04_rwd_box .other_box,
 .sec04_rwd_box .other_box2, .sec04_rwd_box .t2_tab, .sec04_rwd_box .t2_menu, .sec04_rwd_box .t2_content, .sec04_rwd_box .case_box, .sec04_rwd_box .imgList_box, .sec04_rwd_box .img_box, .sec04_rwd_box h3, .sec04_rwd_box .title_bg, .sec04_rwd_box .rwd_menu .slick-slide, .sec04_rwd_box, .sec04_box .other_box,
-.sec04_box .other_box2, .sec04_box .t2_tab, .sec04_box .t2_menu, .sec04_box .t2_content, .sec04_box .t1 .content_box, .sec04_box .t4 .content_box, .sec04_box .case_box, .sec04_box .imgList_box, .sec04_box .img_box, .sec04_box h3, .sec04_box .title_bg, .sec04_box .sec04_menu li, .sec04_box, .sec03 .severInfo, .sec03_box, .sec02_box .left .team_box, .sec02_box .left .job_box, .sec02_box, .menu_section.on .link_icon {
+.sec04_box .other_box2, .sec04_box .t2_tab, .sec04_box .t2_menu, .sec04_box .t2_content, .sec04_box .t1 .content_box,
+.sec04_box .t4 .content_box, .sec04_box .case_box, .sec04_box .imgList_box, .sec04_box .img_box, .sec04_box h3, .sec04_box .title_bg, .sec04_box .sec04_menu li, .sec04_box, .sec03 .severInfo, .sec03_box, .sec02_box .left .team_box, .sec02_box .left .job_box, .sec02_box, .menu_section.on .link_icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1533,6 +1534,7 @@ a.logo_rw {
 }
 .sec04_box .img_box {
   flex-wrap: wrap;
+  width: 35%;
 }
 .sec04_box .img_box img {
   max-width: 100%;
@@ -1617,11 +1619,13 @@ a.logo_rw {
   height: 100%;
   padding: 1% 0;
 }
-.sec04_box .t1 .content_box, .sec04_box .t4 .content_box {
+.sec04_box .t1 .content_box,
+.sec04_box .t4 .content_box {
   align-items: flex-start;
 }
 @media all and (max-width: 768px) {
-  .sec04_box .t1 .content_box, .sec04_box .t4 .content_box {
+  .sec04_box .t1 .content_box,
+  .sec04_box .t4 .content_box {
     flex-direction: column;
   }
 }

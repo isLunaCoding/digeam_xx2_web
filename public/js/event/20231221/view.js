@@ -3,7 +3,7 @@
 let notice = {
     title: `<h2 class="pop_b_title">注意事項</h2>`,
     sec01: `<div class="pop_b_content">
-       <ul>
+       <ul style = "display:list">
           <li>1.活動期間內，於遊戲中達成指定任務後可獲得對應數量的星羅密儀，詳細任務內容可於遊戲內確認。</li>
           <li>2.活動任務限定每天僅可完成一次，每日重置。</li>
           <li>3.星羅密儀可用於活動兌換商店兌換各種實用道具。</li>
@@ -353,7 +353,7 @@ let content = {
                     <td colspan="3">第一家族​</td>
                 </tr>
             </tbody>
-            
+
             <thead class="narrow">
                 <th width="30%">獎勵名稱​</th>
                 <th width="22%">數量</th>
@@ -382,7 +382,7 @@ let content = {
                     <td colspan="3">第二家族​</td>
                 </tr>
             </tbody>
-            
+
             <thead class="narrow">
             <th width="30%">獎勵名稱​</th>
             <th width="22%">數量</th>
@@ -411,7 +411,7 @@ let content = {
                     <td colspan="3">第三家族​</td>
                 </tr>
             </tbody>
-            
+
             <thead class="narrow">
             <th width="30%">獎勵名稱​</th>
             <th width="22%">數量</th>
@@ -440,7 +440,7 @@ let content = {
                     <td colspan="3">參加二級以上家族​</td>
                 </tr>
             </tbody>
-            
+
             <thead class="narrow">
             <th width="30%">獎勵名稱​</th>
             <th width="22%">數量</th>
@@ -474,7 +474,7 @@ let content = {
                 <td colspan="3">參加一級家族​</td>
             </tr>
         </tbody>
-        
+
         <thead class="narrow">
         <th width="30%">獎勵名稱​</th>
         <th width="22%">數量</th>
@@ -729,7 +729,7 @@ let content = {
                 <td colspan="3">此階段獎勵條件達成時，兩個道具擇一獲得，可循環。​</td>
             </tr>
         </tbody>
-        
+
     </table>
         </div>
 
