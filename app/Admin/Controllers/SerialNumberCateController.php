@@ -28,7 +28,7 @@ class SerialNumberCateController extends AdminController
     {
         $grid = new Grid(new serial_number_cate());
         $grid->model()->orderBy('created_at', 'desc');
-        $grid->column('title', __('標題'))->editable();
+        $grid->column('title', __('標題(不可以有/)'))->editable();
         $grid->column('id', __('編號'));
         $grid->column('type', __('前贅詞'));
         $grid->column('all_for_one', __('種類'))->using(['N' => '一組序號一人用', 'Y' => '一組序號多人用']);
@@ -62,7 +62,7 @@ class SerialNumberCateController extends AdminController
         $grid->actions(function ($actions) {
             $actions->disableDelete();
             $actions->disableEdit();
-            $actions->disableView();
+            // $actions->disableView();
         });
         return $grid;
     }
@@ -84,7 +84,10 @@ class SerialNumberCateController extends AdminController
         $show->field('all_for_one', __('All for one'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
+        $show->panel()->tools(function ($tools){
+            $tools->disableEdit();
 
+        });
         return $show;
     }
 
@@ -131,7 +134,7 @@ class SerialNumberCateController extends AdminController
         return $form;
     }
 
-    // public function delete(){
+    // public function destroy($id){
     //     dd('123');
     // }
 

@@ -453,8 +453,8 @@ class ShopController extends Controller
                 break;
             }
         }
-        // 派獎
-        foreach ($send as $value) {
+        // 確認商品是否為禮包,並派獎
+        foreach ($send as $key =>$value) {
             $ch = curl_init();
             $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
             . "&zoneid=" . 1801 . "&charid=" . $request->char_id . "&content=" . '您於商城購買的道具已送達,請盡速領取！' . "&title=" . '網頁商城購買道具' . "&name=" . $char_name . "&itemid=" . $value['item_code'] . "&itemnum=" . $value['item_cnt'] * $request->count . "&isbind=" . $value['is_bind'];
@@ -465,8 +465,10 @@ class ShopController extends Controller
             $result_3 = json_decode($result_3);
             $status = $result_3->status;
             if ($status == 0) {
-                $check->count -= $request->count;
-                $check->save();
+                if($key == 0){
+                    $check->count -= $request->count;
+                    $check->save();
+                }
 
                 $newLog = new shopSendItemLog();
                 $newLog->user_id = $_COOKIE['StrID'];
