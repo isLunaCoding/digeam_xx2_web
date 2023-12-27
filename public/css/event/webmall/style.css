@@ -618,13 +618,15 @@ sub {
   font-weight: 800;
 }
 .feedBack .feedBackBox {
+  align-items: stretch;
+  flex-wrap: wrap;
   width: 80%;
 }
 .feedBack .feedBackBox .itemBox {
   border: 2px solid #083596;
   margin: 0 10px;
   width: 200px;
-  height: 250px;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.5);
 }
 .feedBack .feedBackBox .itemBox .priceTitle {

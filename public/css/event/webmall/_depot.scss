@@ -141,13 +141,15 @@ sub {
 
     .feedBackBox {
         @extend %f-r-c;
+        align-items: stretch;
+        flex-wrap: wrap;
         width: 80%;
 
         .itemBox {
             border: 2px solid $blue1;
             margin: 0 10px;
             width: 200px;
-            height: 250px;
+            height: auto;
             background-color: rgba(255, 255, 255, .5);
 
             .priceTitle {
