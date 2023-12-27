@@ -20,14 +20,6 @@ class ShopController extends Controller
 {
     public function index(Request $request)
     {
-        // if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-        //     $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
-        // } else {
-        //     $real_ip = $_SERVER["REMOTE_ADDR"];
-        // }
-        // if ($real_ip != '211.23.144.219') {
-        //     return redirect('index');
-        // }
         if ($request->type == 'login') {
             $result = ShopController::login($request);
             return $result;
@@ -343,6 +335,7 @@ class ShopController extends Controller
                         $new_depot_item->save();
                     }
                 }
+                $result = ShopController::send_perchase($shop_item->price,$request->count,$shop_item->title);
                 $result = ShopController::feedback($request);
                 return response()->json([
                     'status' => 1,
@@ -379,6 +372,7 @@ class ShopController extends Controller
                 $new_depot_item->type = 'shop';
                 $new_depot_item->save();
             }
+            $result = ShopController::send_perchase($shop_item->price,$request->count,$shop_item->title);
             $result = ShopController::feedback($request);
             return response()->json([
                 'status' => 1,
@@ -520,5 +514,31 @@ class ShopController extends Controller
                 }
             }
         }
+    }
+    public function send_perchase($item_price,$count,$item_name){
+        if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+            $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        } else {
+            $real_ip = $_SERVER["REMOTE_ADDR"];
+        }
+
+        $client = new Client();
+        $data = [
+            'user_id' => $_COOKIE['StrID'],
+            'price' => $item_price,
+            'count' => $count,
+            'item_name' => $item_name,
+            'ip'=>$real_ip,
+        ];
+
+        $headers = [
+            'Content-Type' => 'application/json',
+            'Accept' => 'application/json',
+        ];
+
+        $res = $client->request('POST', 'https://webapi.digeam.com/xx2/add_perchase', [
+            'headers' => $headers,
+            'json' => $data,
+        ]);
     }
 }
