@@ -28,8 +28,8 @@ class SerialNumberCateController extends AdminController
     {
         $grid = new Grid(new serial_number_cate());
         $grid->model()->orderBy('created_at', 'desc');
-
-        $grid->column('title', __('標題'));
+        $grid->column('title', __('標題(不可以有/)'))->editable();
+        $grid->column('id', __('編號'));
         $grid->column('type', __('前贅詞'));
         $grid->column('all_for_one', __('種類'))->using(['N' => '一組序號一人用', 'Y' => '一組序號多人用']);
         $grid->column('count', __('序號產出數量'));
@@ -43,24 +43,27 @@ class SerialNumberCateController extends AdminController
                 return $cate->remainder . "(" . $not_use . ")";
             }
         });
-        $grid->column('limit_times', __('同帳號可領取次數'))->display(function () {
+        $grid->column('limit_times', __('同帳號可領取次數(0為無限)'))->display(function () {
             if ($this->limit_times == 0) {
                 return '無限制';
             } else {
                 return $this->limit_times;
             }
-        });
+        })->editable();
         $grid->column('list', __('序號列表'))->display(function () {
             return '<a href =/admin/' . $this->type . '/serial_number>序號列表</a>';
         });
         $grid->column('list2', __('設定道具'))->display(function () {
             return '<a href =/admin/' . $this->id . '/serial_item>道具列表</a>';
         });
-        $grid->column('start_date', __('開始日期'));
-        $grid->column('end_date', __('截止日期'));
+        $grid->column('start_date', __('開始日期'))->editable();
+        $grid->column('end_date', __('截止日期'))->editable();
         $grid->disableRowSelector();
-        $grid->disableExport();
-        $grid->disableActions();
+        $grid->actions(function ($actions) {
+            $actions->disableDelete();
+            $actions->disableEdit();
+            // $actions->disableView();
+        });
         return $grid;
     }
 
@@ -81,7 +84,10 @@ class SerialNumberCateController extends AdminController
         $show->field('all_for_one', __('All for one'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
+        $show->panel()->tools(function ($tools){
+            $tools->disableEdit();
 
+        });
         return $show;
     }
 
@@ -111,7 +117,6 @@ class SerialNumberCateController extends AdminController
 
 
         $form->saved(function (Form $form) {
-
             for ($i = 1; $i <= $form->count; $i++) {
                 $charid = strtoupper(md5(uniqid(rand(), true)));
                 $uuid = substr($charid, 0, 4)
@@ -128,4 +133,9 @@ class SerialNumberCateController extends AdminController
 
         return $form;
     }
+
+    // public function destroy($id){
+    //     dd('123');
+    // }
+
 }

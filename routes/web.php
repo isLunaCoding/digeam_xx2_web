@@ -25,7 +25,7 @@ Route::middleware(['setReturnUrl'])->group(function () {
     //商城
 Route::get('/webmall', function () {
     return view('front.webmall');
-});
+})->name('webmall');
 
 
 });

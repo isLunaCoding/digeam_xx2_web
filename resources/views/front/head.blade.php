@@ -32,7 +32,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/event/homepage/indexStyle.css?v=1.0.2">
     <link rel="stylesheet" href="/css/event/homepage/pop.css">
-
+<style>
+    .navBox .iconBox{
+        left: 5%;
+    }
+</style>
     {{-- 分頁專用CSS --}}
     @yield('otherCss')
 
@@ -74,6 +78,7 @@
                                 </ul>
                             </li>
                             <li class="menu menu2"><a href={{ route('wiki') }}>遊戲百科</a></li>
+                                <li class="menu menu2"><a href={{ route('webmall') }}>網頁商城</a></li>
                             {{-- <li class="menu menu2"><a>敬請期待</a></li> --}}
                             <li class="menu menu3" data-menuaction="menu3_open">
                                 <a href="https://www.facebook.com/DiGeamXianXia2">玩家社群</a>

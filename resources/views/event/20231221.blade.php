@@ -22,7 +22,7 @@
     <link rel="pingback" href="" />
     <title>《仙俠世界貳》星羅天啟</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="/css/event/20231221/style.css">
+    <link rel="stylesheet" href="/css/event/20231221/style.css?v1.17">
 
 </head>
 
@@ -67,7 +67,7 @@
         <nav class="menu_section">
             <div class="menu_wrap">
                 <ul class="link_list">
-                    <li>
+                    <li style="list-style-type: none">
                         <a class="logo" href="https://xx2.digeam.com/" target="_blank"></a>
                     </li>
                     <a href="#sec01" class="sec_01 sec"></a>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <img src="/img/event/20231221/sec02/s2Ch.png" alt="《仙俠世界貳》- 星羅天" class="idol">
+                    <img src="/img/event/20231221/sec02/s2idol.png" alt="《仙俠世界貳》- 星羅天" class="idol">
                 </div>
             </article>
         </section>
@@ -141,11 +141,10 @@
                     <li class="tab" data-tab="tab2">登峰造極</li>
                     <li class="tab" data-tab="tab3">天降鴻福</li>
                     <li class="tab" data-tab="tab4">雪照凌霄</li>
-                    <li class="tab" data-tab="tab5">仙境祕寶</li>
+                    <li class="tab" data-tab="tab5">仙境秘寶</li>
                 </ul>
 
                 <section class="sec04_main">
-
                     <article class="tab_content t1" data-tab="tab1">
                         <div class="title_bg">
                             <h2 class="t1_title"></h2>
@@ -161,7 +160,8 @@
                                 <p>2023/12/21（四）維護後～2024/01/24（三）23:59</p>
                                 <h3 class="sub">活動說明</h3>
                                 <p>透過完成「仙家聖手」發布的任務將可以獲得「星羅密儀」、<br>「星羅密儀」可以向「仙家聖手」兌換超值好禮！
-                                    <br>詳細兌換內容可以參考「道具說明」。​</p>
+                                    <br>詳細兌換內容可以參考「道具說明」。​
+                                </p>
 
                             </div>
 
@@ -173,30 +173,6 @@
                         </div>
                     </article>
 
-                    {{-- <article class="tab_content t2" data-tab="tab2">
-                        <div class="title_bg">
-                            <h2 class="t2_title"></h2>
-                        </div>
-
-                        <section class="t2_content" data-t2="tab1">
-                            <div class="img_box">
-                                <img src="/img/event/20231221/sec04/S3_2Robort.webp" alt="《仙俠世界貳》- 天外奇蹟">
-                            </div>
-                            <div class="txt_box">
-                                <h3 class="sub">活動時間</h3>
-                                <p>永久活動​</p>
-                                <h3 class="sub">活動說明</h3>
-                                <p>
-                                    角色等級達到95級，​​上仙將獲得豐厚的獎賞！<br>
-                                    歡迎各路豪俠前來挑戰！
-                                </p>
-                            </div>
-                        </section>
-                        <div class="other_box2">
-                            <div class="other pop" data-pop="content_sec2_1">道具說明</div>
-                            <div class="other pop" data-pop="notice_sec2_1">注意事項</div>
-                        </div>
-                    </article> --}}
 
                     <article class="tab_content t1" data-tab="tab2">
                         <div class="title_bg">
@@ -212,8 +188,11 @@
                                 <p>永久活動​</p>
                                 <h3 class="sub">活動說明</h3>
                                 <p>
-                                    角色等級達到95級，​​上仙將獲得豐厚的獎賞！<br>
-                                    歡迎各路豪俠前來挑戰！
+                                    透過完成「開服活動機器人」發佈的任務，<br>
+                                    將​​角色等級達到95級，<br>
+                                    ​​上仙將獲得全新限定時裝「青澀回憶」！<br>
+                                    歡迎各路豪俠前來挑戰！<br>
+                                    時裝展示可以參考「道具說明」。<br>
                                 </p>
                             </div>
                         </div>
@@ -230,20 +209,21 @@
                         <div class="content_box">
                             <h3 class="sub">活動時間</h3>
                             <p>2023/12/21（四）維護後～2023/12/27（三）23:59<br>
-                                2024/1/11（四）12:00～2024/1/17（三）23:59​</p>
+                              
+                                2024/01/11（四）12:00～2024/01/17（三）23:59​</p>
                             <h3 class="sub">活動說明</h3>
-                            <p>活動時間內線上，若角色等級≧11級即可獲得寶石(戰場除外)​</p>
+                            <p>活動時間內角色在線上，若角色等級≧11級即可獲得寶石（戰場除外）​</p>
                             <h3 class="sub">活動規則</h3>
                             <p>每日20:05 、 20:15 、 20:25 、 20:35 、 20:45 、 20:55，<br>
-                                獎勵所有線上≧11級玩家3級防禦寶石*4。
+                                獎勵所有線上≧11級玩家獲得3級防禦寶石*4。
                             </p>
                             <br>
                             <p>每日20:05 、 20:15 、 20:25 、 20:35 、 20:45，<br>
-                                随機抽取10名線上≧25級玩家5級防禦寶石*4。
+                                随機抽取10名線上≧25級玩家獲得5級防禦寶石*4。
                             </p>
                             <br>
                             <p>每日20:55，<br>
-                                隨機抽取2名線上≧25級玩家獲得7級防禦寶石和稱號“財神轉世“。
+                                隨機抽取2名線上≧25級玩家獲得7級防禦寶石和稱號"財神轉世"。
                             </p>
                         </div>
 
@@ -268,11 +248,11 @@
 
                             <div class="txt_box">
                                 <h3 class="sub">活動時間</h3>
-                                <p>2023/12/21（四）維護後 ～ <br>2023/1/10（三）23:59​​</p>
+                                <p>2023/12/21（四）維護後 ～ 2024/01/10（三）23:59​​</p>
                                 <h3 class="sub">活動說明</h3>
                                 <p>透過攻略幻境地宮、狩獵場蒐集活動道具上交給NPC 冰雪大使，<br>
                                     可以獲得寶珠並提升冰雪賜福等級。<br>
-                                    冰雪賜福等級越高，於活動期間內可獲得寶珠愈多。​</p>
+                                    冰雪賜福等級越高，於活動期間內可獲得寶珠越多。​</p>
                             </div>
                         </div>
 
@@ -333,7 +313,7 @@
                         雪照凌霄
                     </li>
                     <li>
-                        仙境祕寶
+                        仙境秘寶
                     </li>
                 </div>
 
@@ -382,8 +362,11 @@
                                     <p>永久活動​</p>
                                     <h3 class="sub">活動說明</h3>
                                     <p>
-                                        角色等級達到95級，​​上仙將獲得豐厚的獎賞！<br>
+                                        透過完成「開服活動機器人」發佈的任務，
+                                        將​​角色等級達到95級，
+                                        ​​上仙將獲得全新限定時裝「青澀回憶」！
                                         歡迎各路豪俠前來挑戰！
+                                        時裝展示可以參考「道具說明」。
                                     </p>
                                 </div>
                             </section>
@@ -406,20 +389,21 @@
                                 <h3 class="sub">活動時間</h3>
                                 <p>2023/12/21（四）維護後～<br>2023/12/27（三）23:59<br>
                                     <br>
-                                    2024/1/11（四）12:00～<br>2024/1/17（三）23:59​</p>
+                                    2024/01/11（四）12:00～<br>2024/01/17（三）23:59​
+                                </p>
                                 <h3 class="sub">活動說明</h3>
-                                <p>活動時間內線上，若角色等級≧11級即可獲得寶石(戰場除外)​</p>
+                                <p>活動時間內角色在線上，若角色等級≧11級即可獲得寶石（戰場除外）​</p>
                                 <h3 class="sub">活動規則</h3>
                                 <p>每日20:05 、 20:15 、 20:25 、 20:35 、 20:45 、 20:55，<br>
-                                    獎勵所有線上≧11級玩家3級防禦寶石*4。
+                                    獎勵所有線上≧11級玩家獲得3級防禦寶石*4。
                                 </p>
                                 <br>
                                 <p>每日20:05 、 20:15 、 20:25 、 20:35 、 20:45，<br>
-                                    随機抽取10名線上≧25級玩家5級防禦寶石*4。
+                                    随機抽取10名線上≧25級玩家獲得5級防禦寶石*4。
                                 </p>
                                 <br>
                                 <p>每日20:55，<br>
-                                    隨機抽取2名線上≧25級玩家獲得7級防禦寶石和稱號“財神轉世“。
+                                    隨機抽取2名線上≧25級玩家獲得7級防禦寶石和稱號"財神轉世"。
                                 </p>
                             </div>
                             <div class="other_box">
@@ -442,7 +426,7 @@
 
                                 <div class="txt_box">
                                     <h3 class="sub">活動時間</h3>
-                                    <p>2023/12/21（四）維護後 ～<br> 2023/1/10（三）23:59​​</p>
+                                    <p>2023/12/21（四）維護後 ～<br> 2024/01/10（三）23:59​​</p>
                                     <h3 class="sub">活動說明</h3>
                                     <p>透過攻略幻境地宮、狩獵場蒐集活動道具上交給NPC 冰雪大使，<br>
                                         可以獲得寶珠並提升冰雪賜福等級。<br>
@@ -456,7 +440,7 @@
 
                         </article>
                     </div>
-                    {{-- 仙境祕寶 --}}
+                    {{-- 仙境秘寶 --}}
                     <div>
                         <article class="t5 rwd_content" data-tab="tab5">
                             <div class="title_bg">
@@ -518,7 +502,7 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/event/20231221/plug/particles.min.js" crossorigin="anonymous"></script>
 <script src="js/event/20231221/plug/fire.js" crossorigin="anonymous"></script>
-<script src="js/event/20231221/view.js?v1.1" crossorigin="anonymous"></script>
+<script src="js/event/20231221/view.js?v1.17" crossorigin="anonymous"></script>
 <script src="js/event/20231221/main.js" crossorigin="anonymous"></script>
 
 </html>

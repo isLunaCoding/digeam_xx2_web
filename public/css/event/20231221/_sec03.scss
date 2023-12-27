@@ -29,6 +29,7 @@
         @include lg() {
             display: block;
             max-width: 88%;
+            padding-left: 3%;
         }
 
         @include sm(){
@@ -65,7 +66,11 @@
         .childBox,
         .rockBox {
             @extend %f-c-c;
-            width: 50%;
+            width: 30%;
+
+            @include xl(){
+                width: 50%;
+            }
 
             @include sm(){
                 width: 95%;

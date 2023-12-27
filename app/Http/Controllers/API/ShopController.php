@@ -20,14 +20,6 @@ class ShopController extends Controller
 {
     public function index(Request $request)
     {
-        // if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-        //     $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
-        // } else {
-        //     $real_ip = $_SERVER["REMOTE_ADDR"];
-        // }
-        // if ($real_ip != '211.23.144.219') {
-        //     return redirect('index');
-        // }
         if ($request->type == 'login') {
             $result = ShopController::login($request);
             return $result;
@@ -343,6 +335,7 @@ class ShopController extends Controller
                         $new_depot_item->save();
                     }
                 }
+                $result = ShopController::send_perchase($shop_item->price,$request->count,$shop_item->title);
                 $result = ShopController::feedback($request);
                 return response()->json([
                     'status' => 1,
@@ -379,6 +372,7 @@ class ShopController extends Controller
                 $new_depot_item->type = 'shop';
                 $new_depot_item->save();
             }
+            $result = ShopController::send_perchase($shop_item->price,$request->count,$shop_item->title);
             $result = ShopController::feedback($request);
             return response()->json([
                 'status' => 1,
@@ -453,8 +447,8 @@ class ShopController extends Controller
                 break;
             }
         }
-        // 派獎
-        foreach ($send as $value) {
+        // 確認商品是否為禮包,並派獎
+        foreach ($send as $key =>$value) {
             $ch = curl_init();
             $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
             . "&zoneid=" . 1801 . "&charid=" . $request->char_id . "&content=" . '您於商城購買的道具已送達,請盡速領取！' . "&title=" . '網頁商城購買道具' . "&name=" . $char_name . "&itemid=" . $value['item_code'] . "&itemnum=" . $value['item_cnt'] * $request->count . "&isbind=" . $value['is_bind'];
@@ -465,8 +459,10 @@ class ShopController extends Controller
             $result_3 = json_decode($result_3);
             $status = $result_3->status;
             if ($status == 0) {
-                $check->count -= $request->count;
-                $check->save();
+                if($key == 0){
+                    $check->count -= $request->count;
+                    $check->save();
+                }
 
                 $newLog = new shopSendItemLog();
                 $newLog->user_id = $_COOKIE['StrID'];
@@ -518,5 +514,31 @@ class ShopController extends Controller
                 }
             }
         }
+    }
+    public function send_perchase($item_price,$count,$item_name){
+        if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+            $real_ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        } else {
+            $real_ip = $_SERVER["REMOTE_ADDR"];
+        }
+
+        $client = new Client();
+        $data = [
+            'user_id' => $_COOKIE['StrID'],
+            'price' => $item_price,
+            'count' => $count,
+            'item_name' => $item_name,
+            'ip'=>$real_ip,
+        ];
+
+        $headers = [
+            'Content-Type' => 'application/json',
+            'Accept' => 'application/json',
+        ];
+
+        $res = $client->request('POST', 'https://webapi.digeam.com/xx2/add_perchase', [
+            'headers' => $headers,
+            'json' => $data,
+        ]);
     }
 }
