@@ -628,6 +628,7 @@ sub {
   width: 200px;
   height: auto;
   background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
 }
 .feedBack .feedBackBox .itemBox .priceTitle {
   background-color: #083596;

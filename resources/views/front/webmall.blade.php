@@ -14,7 +14,7 @@
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="/css/event/webmall/style.css?v2.2">
+    <link rel="stylesheet" href="/css/event/webmall/style.css?v2.3">
 </head>
 
 <body>
