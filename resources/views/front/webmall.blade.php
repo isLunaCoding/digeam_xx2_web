@@ -14,7 +14,7 @@
     <link rel="icon" href="/img/event/prereg/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="/css/event/webmall/style.css?v2.0">
+    <link rel="stylesheet" href="/css/event/webmall/style.css?v2.1">
 </head>
 
 <body>
@@ -105,7 +105,7 @@
                                             :key="num">%[ num ]</option>
                                     </select>
                                 </label>
-                                
+
                                 <button class="buy"
                                     @click="buyPop(buyId[item.id] || 1 , item.id , item.title ,  item.price )">購買</button>
                             </div>
@@ -143,7 +143,7 @@
                                             :key="num">%[ num ]</option>
                                     </select>
                                 </label>
-                                
+
                                 <button class="buy"
                                     @click="buyPop(buyId[item.id] || 1 , item.id , item.title ,  item.price )">購買</button>
                             </div>

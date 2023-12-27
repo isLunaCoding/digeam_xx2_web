@@ -1,13 +1,13 @@
-
-.charWrap{
+.charWrap {
     width: 70%;
     height: 180px;
     background-color: $blue1;
     border: 1px solid $blue1;
     margin: 15px auto;
     @extend %f-r-c;
-    &::before{
-        content:'';
+
+    &::before {
+        content: '';
         width: 100%;
         height: 180px;
         display: block;
@@ -24,18 +24,19 @@
     }
 }
 
-.charBox{
+.charBox {
     @extend %f-r-c;
-    
+
     position: relative;
-    .user{
+
+    .user {
         font-size: 1.3rem;
         font-weight: 600;
         color: #fff;
         margin-right: 15px;
     }
 
-    select{
+    select {
         cursor: pointer;
         margin: 0 10px;
         color: $blue1;
@@ -45,101 +46,111 @@
     }
 }
 
-.depotTitle , .feedBackTitle{
+.depotTitle,
+.feedBackTitle {
     font-size: 1.8rem;
     font-weight: 800;
     color: $blue1;
     margin: 10px 0;
 }
 
-.line{
+.line {
     width: 95%;
     height: 3px;
     margin: 10px 0;
     background-color: $blue1;
 }
 
-sub{
+sub {
     font-size: 1.2rem;
     font-weight: 500;
     color: $blue1;
     margin: 10px 0;
 }
 
-.userDepot , .feedBack{
+.userDepot,
+.feedBack {
     padding: 30px 0;
     @extend %f-c-c;
 
-    .timeLine{
+    .timeLine {
         font-size: 1.3rem;
         font-weight: 700;
         color: $pink;
         padding: 5px 10px;
     }
 
-    table{
+    table {
         width: 85%;
-        thead{
+
+        thead {
             background-color: $blue1;
-            th{
+
+            th {
                 font-weight: 600;
                 color: #fff;
                 padding: 10px;
             }
         }
-        tbody{
-            tr{
-                background-color: rgba(255,255,255,.8);
+
+        tbody {
+            tr {
+                background-color: rgba(255, 255, 255, .8);
                 text-align: center;
-                select{
+
+                select {
                     cursor: pointer;
                     width: 50px;
                     text-align: center;
                 }
-                td{
+
+                td {
                     font-size: 1rem;
                     color: $blue1;
                     padding: 5px 0;
                     font-weight: 500;
                 }
-                button{
+
+                button {
                     background-color: $orange;
                     color: #fff;
                     border: none;
                     padding: 5px 10px;
                     cursor: pointer;
                 }
-         
+
             }
         }
     }
 }
 
-.feedBack{
-    span{
+.feedBack {
+    span {
         margin: 10px 0px;
         color: $blue1;
         font-size: 1.2rem;
         font-weight: 500;
 
     }
-    .spend{
+
+    .spend {
         color: $orange;
         font-size: 1.3rem;
         font-weight: 800;
     }
-    
-    .feedBackBox{
+
+    .feedBackBox {
         @extend %f-r-c;
         width: 80%;
-        .itemBox{
+
+        .itemBox {
             border: 2px solid $blue1;
             margin: 0 10px;
             width: 200px;
-            height: 150px;
-            background-color: rgba(255,255,255,.5);
+            height: 250px;
+            background-color: rgba(255, 255, 255, .5);
 
-            .priceTitle{
+            .priceTitle {
                 background-color: $blue1;
                 text-align: center;
                 color: #fff;
@@ -148,7 +159,7 @@ sub{
                 font-size: 1.2rem;
             }
 
-            span{
+            span {
                 display: block;
                 text-align: center;
                 font-size: 1.2rem;
@@ -157,14 +168,15 @@ sub{
                 margin: 5px 0;
             }
         }
-        .itemBox.active{
+
+        .itemBox.active {
             border: 2px solid $orange;
 
-            .priceTitle{
+            .priceTitle {
                 background-color: $orange;
             }
 
-            span{
+            span {
                 color: $orange;
             }
         }
