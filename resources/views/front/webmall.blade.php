@@ -162,7 +162,7 @@
                     <span>當前累積消費金額:<span class="spend">%[ user.spend ]</span></span>
                     <div class="feedBackBox">
                         <div class="itemBox" v-for="(item , index) in feedBack.item" :key="index"
-                            :class="{ active: user.spend > item.price }">
+                            :class="{ active: user.spend >= item.price }">
                             <p class="priceTitle">累積消費金額 %[item.price]</p>
                             <span v-for="(item , index) in item.item_names">%[item]</span>
                         </div>
