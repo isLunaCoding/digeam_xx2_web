@@ -1,0 +1,14 @@
+.webmallBtn {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../../img/event/homepage/webmallBtn.png");
+  width: 250px;
+  height: 250px;
+  position: fixed;
+  right: 0px;
+  bottom: 35px;
+  transition: all 0.3s ease-in-out;
+}
+.webmallBtn:hover {
+  filter: brightness(1.1);
+}/*# sourceMappingURL=webmallBtn.css.map */

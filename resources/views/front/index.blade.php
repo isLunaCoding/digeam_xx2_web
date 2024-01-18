@@ -15,6 +15,7 @@
 @section('otherCss')
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="/css/event/homepage/webmallBtn.css">
 @endsection
 
 
@@ -180,6 +181,7 @@
             </div>
         </div>
     </div>
+    <a href="https://xx2.digeam.com/webmall" class="webmallBtn"></a>
 @endsection
 
 
@@ -294,7 +296,7 @@
 
 
 
-@section('section3')
+ @section('section3')
     <div class="section3">
         <div class="sectionBG">
             <div class="container">
@@ -322,11 +324,11 @@
                     <button class="prev"><img src="/img/event/homepage/arrowL.png"></button>
                     <button class="next"><img src="/img/event/homepage/arrowR.png"></button>
                 </div>
-                {{-- <a href="{{ route('wiki') }}"><img src="/img/event/homepage/section3moreBtn.jpg"></a> --}}
+               <a href="{{ route('wiki') }}"><img src="/img/event/homepage/section3moreBtn.jpg"></a> 
             </div>
         </div>
     </div>
-@endsection
+@endsection 
 
 
 

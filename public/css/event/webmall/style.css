@@ -642,6 +642,10 @@ sub {
   color: #f15a24;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .popS, .popA, .popB {
   position: fixed;
   top: 50%;

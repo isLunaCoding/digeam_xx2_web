@@ -237,7 +237,7 @@
                 </article> -->
             </section>
 
-            <div class="popS" v-if="popS == true">
+            <div class="popS" v-if="popS == true" v-cloak>
                 <div class="isInfo" v-if="isInfo == true">
                     <div class="up">
                         <div class="itemBox">
@@ -272,7 +272,7 @@
                 </div>
             </div>
 
-            <div class="popB" v-if="popB == true">
+            <div class="popB" v-if="popB == true" v-cloak>
                 <b class="useInfo">使用說明</b>
                 <ul>
                     <li>商品購買完成後，需至購物倉庫點選領取，才會發放至帳號內的郵件中。​</li>
@@ -294,7 +294,7 @@
                 </ul>
             </div>
 
-            <div class="popA" v-if="popA == true">
+            <div class="popA" v-if="popA == true" v-cloak>
                 <b class="msg">%[ isMsg ]</b>
                 <button class="close" @click="close()">關閉</button>
             </div>
