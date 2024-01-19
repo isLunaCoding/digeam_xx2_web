@@ -98,6 +98,41 @@ class rewardController extends Controller
         $list = '';
         $user_id = $request->user_id;
         if ($user_id != '') {
+            //四海轉點回饋9
+            if ((date('YmdHis') >= '20240111120000') && (date('YmdHis') <= '20240229235959')) {
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2024-01-11 12:00:00', '2024-01-17 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2024-01-11 12:00:00', '2024-01-17 23:59:59'])->sum('cb_point');
+                $event_pay = $c_point + $cb_point;
+                $event_cnt = (integer) ($event_pay / 300);
+                $check_cnt = reward_getlog::where('user_id', $user_id)->where('group_id', '71')->count();
+                while ($event_cnt > $check_cnt) {
+                    $db = \DB::connection('mysql');
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',71,'四海商團第九巡')";
+                    $db->disableQueryLog();
+                    $event_info = $db->statement($sql);
+                    $check_cnt++;
+                }
+            }
+
+            //四海轉點回饋8
+            if ((date('YmdHis') >= '20240104120000') && (date('YmdHis') <= '20240131235959')) {
+                $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2024-01-04 12:00:00', '2024-01-10 23:59:59'])->sum('c_point');
+                $cb_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2024-01-04 12:00:00', '2024-01-10 23:59:59'])->sum('cb_point');
+                $event_pay = $c_point + $cb_point;
+                if ($user_id == 'xx2digeam01') {
+                    $event_pay = 19800;
+                }
+                $event_cnt = (integer) ($event_pay / 99);
+                $check_cnt = reward_getlog::where('user_id', $user_id)->where('group_id', '67')->count();
+                while ($event_cnt > $check_cnt) {
+                    $db = \DB::connection('mysql');
+                    $sql = "insert into reward_getlog(user_id,group_id,remark) values ('" . $user_id . "',67,'四海商團第八巡')";
+                    $db->disableQueryLog();
+                    $event_info = $db->statement($sql);
+                    $check_cnt++;
+                }
+            }
+
             //四海轉點回饋6
             if ((date('YmdHis') >= '20231221120000') && (date('YmdHis') <= '20240131235959')) {
                 $c_point = change_point_log::where('user_id', $user_id)->whereBetween('created_at', ['2023-12-21 12:00:00', '2023-12-27 23:59:59'])->sum('c_point');
@@ -1115,12 +1150,40 @@ class rewardController extends Controller
             $event_name = '四海第4巡' . $item_name;
             $content = $event_name;
             $event_group = reward_group::where('id', 53)->first();
+        } else if ($content_id == 69) {
+            $name_list = ['6666寶珠券', '30000寶珠券', '流光銀袋', '玲瓏寶珠盒', '琉璃寶珠盒', '家族玉佩', '仁德之佩', '家族玉佩', '仁德之佩', '家族玉佩', '仁德之佩', '青蔥歲月', '生死簿(1天)', '生死簿(3天)', '生死簿(7天)', '生死簿(15天)', '生死簿(30天)', '生死簿(永久)'];
+            $item_code_list = [57057, 57064, 57050, 57051, 57060, 57221, 57216, 57221, 57216, 57221, 57216, 47046, 38506, 38505, 38504, 38503, 38502, 38512];
+            $count_list = [1, 1, 1, 1, 5, 2, 2, 5, 5, 8, 8, 1, 1, 1, 1, 1, 1, 1];
+            $probability = [12.0000, 13.0000, 15.0000, 11.0000, 1.5000, 13.0000, 13.0000, 7.0000, 7.0000, 2.1700, 2.1550, 1.5000, 1.0000, 0.5000, 0.1000, 0.0500, 0.0249, 0.0001];
+            $count = 0;
+            $chance = 0;
+            $target = mt_rand() / mt_getrandmax() * (100);
+            foreach ($probability as $value) {
+                $chance += $value;
+                $count++;
+                if ($chance > (sprintf("%.5f", $target))) {
+                    break;
+                }
+            }
+            $item_name = $name_list[$count - 1];
+            $item_code = $item_code_list[$count - 1];
+            $itemcnt = $count_list[$count - 1];
+            $isbind = 1;
+            $is_package = 'N';
+            $title = '領獎區';
+            $event = reward_event::where('id', 18)->first();
+            $event_name = '四海第8巡' . $item_name;
+            $content = $event_name;
+            $event_group = reward_group::where('id', 67)->first();
         } else {
             $reward_content = reward_content::where('id', $content_id)->first();
             $event_group = reward_group::where('id', $reward_content->group_id)->first();
             $item_name = $reward_content->item_name;
             if ($content_id == 59) {
                 $item_name = "150000寶珠券x1+靈魂寶石x2+1級裝備寶石包x4+冰墩墩的祝福x1+雪容融的祝福x1";
+            }
+            if ($content_id == 73) {
+                $item_name = "150000寶珠券x1+靈魂寶石x2+1級裝備寶石包x4+1級坐騎靈石包x4+仙童摯愛x50";
             }
             $item_code = $reward_content->item_code;
             $itemcnt = $reward_content->itemcnt;
@@ -1194,6 +1257,15 @@ class rewardController extends Controller
                     $item_lists = $item_lists1->merge($item_lists2);
                 }
             }
+            if ($content_id == 73) {
+                $random = mt_rand(1, 100);
+                if ($random <= 2) {
+                    $item_name = "150000寶珠券x1+靈魂寶石x2+1級裝備寶石包x4+1級坐騎靈石包x4+仙童摯愛x50+忍者龍劍x1";
+                    $item_lists1 = package_item::where('package_code', $item_code)->get();
+                    $item_lists2 = package_item::where('package_code', 99999960)->get();
+                    $item_lists = $item_lists1->merge($item_lists2);
+                }
+            }
             foreach ($item_lists as $item) {
                 $ch = curl_init();
                 $url = "https://xx2.digeam.com/api/service_api?type=athena_email&uid=" . $uid
@@ -1251,6 +1323,8 @@ class rewardController extends Controller
         }
 
     }
+
+    //後台發獎
     public function send(Request $request)
     {
         $user_id = $request->user_id;

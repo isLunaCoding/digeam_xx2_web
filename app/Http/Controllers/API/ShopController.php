@@ -503,7 +503,7 @@ class ShopController extends Controller
                         if (!$check_feed_back_item) {
                             $new_depot_item = new shopUserDepot();
                             $new_depot_item->user_id = $_COOKIE['StrID'];
-                            $new_depot_item->count = $value['item_cnt'];
+                            $new_depot_item->count = 1;
                             $new_depot_item->item_id = $value['id'];
                             $new_depot_item->item_name = $value['item_name'];
                             $new_depot_item->reason = $check_feedback->title . '-' . $value['item_name'];
