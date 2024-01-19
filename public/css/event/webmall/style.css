@@ -156,7 +156,8 @@ a {
   align-items: center;
 }
 
-.popS .isBuy, .popA .isBuy, .popB .isBuy, .popS .isInfo .itemTxt, .popA .isInfo .itemTxt, .popB .isInfo .itemTxt, .popS .isInfo .item, .popA .isInfo .item, .popB .isInfo .item, .popS .isInfo .up, .popA .isInfo .up, .popB .isInfo .up, .popS .isInfo, .popA .isInfo, .popB .isInfo, .popS, .popA, .popB, .userDepot, .feedBack, .produceList .item {
+.popS .isBuy, .popA .isBuy, .popB .isBuy, .popS .isInfo .itemTxt, .popA .isInfo .itemTxt, .popB .isInfo .itemTxt, .popS .isInfo .item, .popA .isInfo .item, .popB .isInfo .item, .popS .isInfo .up, .popA .isInfo .up, .popB .isInfo .up, .popS .isInfo, .popA .isInfo, .popB .isInfo, .popS, .popA, .popB, .userDepot,
+.feedBack, .produceList .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -531,7 +532,8 @@ body {
   font-weight: 600;
 }
 
-.depotTitle, .feedBackTitle {
+.depotTitle,
+.feedBackTitle {
   font-size: 1.8rem;
   font-weight: 800;
   color: #083596;
@@ -552,42 +554,51 @@ sub {
   margin: 10px 0;
 }
 
-.userDepot, .feedBack {
+.userDepot,
+.feedBack {
   padding: 30px 0;
 }
-.userDepot .timeLine, .feedBack .timeLine {
+.userDepot .timeLine,
+.feedBack .timeLine {
   font-size: 1.3rem;
   font-weight: 700;
   color: #f12464;
   padding: 5px 10px;
 }
-.userDepot table, .feedBack table {
+.userDepot table,
+.feedBack table {
   width: 85%;
 }
-.userDepot table thead, .feedBack table thead {
+.userDepot table thead,
+.feedBack table thead {
   background-color: #083596;
 }
-.userDepot table thead th, .feedBack table thead th {
+.userDepot table thead th,
+.feedBack table thead th {
   font-weight: 600;
   color: #fff;
   padding: 10px;
 }
-.userDepot table tbody tr, .feedBack table tbody tr {
+.userDepot table tbody tr,
+.feedBack table tbody tr {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
-.userDepot table tbody tr select, .feedBack table tbody tr select {
+.userDepot table tbody tr select,
+.feedBack table tbody tr select {
   cursor: pointer;
   width: 50px;
   text-align: center;
 }
-.userDepot table tbody tr td, .feedBack table tbody tr td {
+.userDepot table tbody tr td,
+.feedBack table tbody tr td {
   font-size: 1rem;
   color: #083596;
   padding: 5px 0;
   font-weight: 500;
 }
-.userDepot table tbody tr button, .feedBack table tbody tr button {
+.userDepot table tbody tr button,
+.feedBack table tbody tr button {
   background-color: #f15a24;
   color: #fff;
   border: none;
@@ -607,14 +618,17 @@ sub {
   font-weight: 800;
 }
 .feedBack .feedBackBox {
+  align-items: stretch;
+  flex-wrap: wrap;
   width: 80%;
 }
 .feedBack .feedBackBox .itemBox {
   border: 2px solid #083596;
   margin: 0 10px;
   width: 200px;
-  height: 150px;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
 }
 .feedBack .feedBackBox .itemBox .priceTitle {
   background-color: #083596;

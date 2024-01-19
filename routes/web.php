@@ -26,6 +26,8 @@ Route::middleware(['setReturnUrl'])->group(function () {
 Route::get('/webmall', function () {
     return view('front.webmall');
 })->name('webmall');
+// 維護時使用
+// Route::get('/webmall', 'front\indexController@index')->name('webmall');
 
 
 });
